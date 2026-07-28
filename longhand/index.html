@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marit Halvorsen — Free Bootstrap 6 Personal &amp; CV Website Template</title>
+<meta name="description" content="Longhand is a free Bootstrap 6 personal site and CV template with a print stylesheet that produces a real one-page résumé, not a screenshot of a web page.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header no-print">
+  <div class="wrap head-in">
+    <a class="wordmark" href="index.html">Marit Halvorsen</a>
+    <nav class="head-nav" aria-label="Main">
+      <a class="head-link is-active" href="index.html#work">Work</a>
+      <a class="head-link is-active" href="index.html#writing">Writing</a>
+      <a class="head-link" href="project.html">Case study</a>
+      <a class="head-link" href="index.html#contact">Contact</a>
+    </nav>
+    <div class="d-flex align-items-center gap-2">
+      <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+      <button class="btn-solid theme-primary btn-sm" type="button" data-print>Print CV</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Identity. Doubles as the CV letterhead when printed. -->
+  <section class="intro">
+    <div class="wrap">
+      <div class="intro-grid">
+        <div>
+          <h1 class="intro-name mb-2">Marit Halvorsen</h1>
+          <p class="intro-role mb-4">Interface engineer &middot; Manchester, UK</p>
+          <p class="intro-lede mb-4">
+            Twelve years making interfaces that hold up: type that stays readable
+            at 13px, layouts that survive 400% zoom, and front ends that load on
+            the phone somebody actually owns.
+          </p>
+          <p class="intro-lede mb-0 no-print">
+            Currently at Palisade Health. Not looking, but always glad to talk
+            about typography, performance budgets, or why your line height is
+            wrong.
+          </p>
+        </div>
+        <ul class="vcard mb-0">
+          <li><span class="vcard-k">Email</span><a href="mailto:marit@longhand.example">marit@longhand.example</a></li>
+          <li><span class="vcard-k">Phone</span><a href="tel:+441614960100">+44 161 496 0100</a></li>
+          <li><span class="vcard-k">Site</span><a href="index.html">longhand.example</a></li>
+          <li><span class="vcard-k">Based</span>Manchester, UK</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="band" id="work">
+    <div class="wrap">
+      <h2 class="band-title">Experience</h2>
+      <div class="roles">
+        <article class="role">
+          <p class="role-when mb-0"><span>2022</span><span class="role-dash" aria-hidden="true">–</span><span>Present</span></p>
+          <div class="role-body">
+            <h3 class="role-title mb-1">Principal engineer</h3>
+            <p class="role-org mb-2">Palisade Health<span class="fg-3"> · Manchester</span></p>
+            <p class="fg-2 mb-2">Own the design system and the front end of a banking-grade patient portal used by 9 million people.</p>
+            <ul class="role-points mb-0"><li>Cut first-contentful paint from 4.1s to 1.2s on the slowest tenth of devices, which is where the users actually are.</li><li>Wrote the type and spacing layer three teams now build against, and the migration guide that got them there.</li><li>Took the portal from a 61 to a 98 on axe with no visual redesign — most of it was heading order and focus management.</li></ul>
+          </div>
+        </article>
+        <article class="role">
+          <p class="role-when mb-0"><span>2019</span><span class="role-dash" aria-hidden="true">–</span><span>2022</span></p>
+          <div class="role-body">
+            <h3 class="role-title mb-1">Senior front-end engineer</h3>
+            <p class="role-org mb-2">Ordinal Systems<span class="fg-3"> · Remote</span></p>
+            <p class="fg-2 mb-2">Built the reporting product from an internal tool into something sold separately.</p>
+            <ul class="role-points mb-0"><li>Replaced a 340KB charting dependency with 6KB of SVG, and nobody noticed except the bundle.</li><li>Introduced visual regression tests that caught 40-odd layout breaks before release in the first year.</li></ul>
+          </div>
+        </article>
+        <article class="role">
+          <p class="role-when mb-0"><span>2016</span><span class="role-dash" aria-hidden="true">–</span><span>2019</span></p>
+          <div class="role-body">
+            <h3 class="role-title mb-1">Front-end engineer</h3>
+            <p class="role-org mb-2">Kettle & Co<span class="fg-3"> · Leeds</span></p>
+            <p class="fg-2 mb-2">Second engineer at a twelve-person retailer. Did whatever the week needed.</p>
+            <ul class="role-points mb-0"><li>Rebuilt checkout; completion went from 61% to 74% over two quarters.</li><li>Ran the move off jQuery a page at a time, with no freeze and no rewrite.</li></ul>
+          </div>
+        </article>
+        <article class="role">
+          <p class="role-when mb-0"><span>2014</span><span class="role-dash" aria-hidden="true">–</span><span>2016</span></p>
+          <div class="role-body">
+            <h3 class="role-title mb-1">Junior developer</h3>
+            <p class="role-org mb-2">Trent & Vale<span class="fg-3"> · Nottingham</span></p>
+            <p class="fg-2 mb-0">Agency work: brochure sites, campaign pages, occasional emergency CMS surgery.</p>
+            
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="band band-alt" id="skills">
+    <div class="wrap">
+      <h2 class="band-title">What I actually use</h2>
+      <div class="skills">
+          <div class="skill-group">
+            <p class="skill-k mb-2">Languages</p>
+            <ul class="skill-list mb-0"><li>TypeScript</li><li>JavaScript</li><li>CSS</li><li>HTML</li><li>Python</li><li>SQL</li></ul>
+          </div>
+          <div class="skill-group">
+            <p class="skill-k mb-2">Practice</p>
+            <ul class="skill-list mb-0"><li>Design systems</li><li>Accessibility (WCAG 2.2)</li><li>Performance budgets</li><li>Progressive enhancement</li></ul>
+          </div>
+          <div class="skill-group">
+            <p class="skill-k mb-2">Tooling</p>
+            <ul class="skill-list mb-0"><li>Vite</li><li>Playwright</li><li>Storybook</li><li>Figma</li><li>Git</li></ul>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="band" id="projects">
+    <div class="wrap">
+      <h2 class="band-title">Things I made on my own time</h2>
+      <ul class="proj-list">
+          <li class="proj">
+            <div>
+              <h3 class="proj-name mb-1"><a href="project.html">Squint</a></h3>
+              <p class="fg-2 fs-sm mb-0">A browser extension that blurs a page so you can judge its typographic colour without reading it.</p>
+            </div>
+            <p class="proj-meta mb-0">TypeScript, CSS Houdini<span class="fg-3 d-block">4,100 users</span></p>
+          </li>
+          <li class="proj">
+            <div>
+              <h3 class="proj-name mb-1"><a href="project.html">Hairline</a></h3>
+              <p class="fg-2 fs-sm mb-0">A 2KB CSS layer that makes 1px borders behave the same on every display density.</p>
+            </div>
+            <p class="proj-meta mb-0">CSS<span class="fg-3 d-block">MIT, 1.2k stars</span></p>
+          </li>
+          <li class="proj">
+            <div>
+              <h3 class="proj-name mb-1"><a href="project.html">Set in Stone</a></h3>
+              <p class="fg-2 fs-sm mb-0">A weekly newsletter pulling apart the typography of one real interface.</p>
+            </div>
+            <p class="proj-meta mb-0">Writing<span class="fg-3 d-block">2,800 subscribers</span></p>
+          </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Writing. Screen only: a CV is not the place for a reading list. -->
+  <section class="band band-alt no-print" id="writing">
+    <div class="wrap">
+      <h2 class="band-title">Writing</h2>
+      <ul class="post-list">
+          <li class="post">
+            <a class="post-title" href="project.html">Line height is a ratio, not a number</a>
+            <p class="fg-2 fs-sm mb-0">Why the CSS you inherited breaks at 13px</p>
+            <span class="post-time fg-3">12 min</span>
+          </li>
+          <li class="post">
+            <a class="post-title" href="project.html">Everything I know about optical sizing</a>
+            <p class="fg-2 fs-sm mb-0">And the two places it genuinely matters</p>
+            <span class="post-time fg-3">9 min</span>
+          </li>
+          <li class="post">
+            <a class="post-title" href="project.html">The accessibility work that is actually typography</a>
+            <p class="fg-2 fs-sm mb-0">Contrast is about strokes, not boxes</p>
+            <span class="post-time fg-3">15 min</span>
+          </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="band no-print" id="contact">
+    <div class="wrap contact">
+      <h2 class="band-title mb-3">Say hello</h2>
+      <p class="fg-2 mb-4" style="max-width:34rem">
+        The fastest way to reach me is email. I reply to everything that is not
+        a recruiter template, and to about half of those.
+      </p>
+      <div class="d-flex flex-wrap gap-3">
+        <a class="btn-solid theme-primary btn-lg" href="mailto:marit@longhand.example">marit@longhand.example</a>
+        <button class="btn-outline theme-secondary btn-lg" type="button" data-print>Print this as a CV</button>
+      </div>
+      <p class="fs-sm fg-3 mt-4 mb-0">
+        That button opens your browser's print dialogue. The page has a print
+        stylesheet, so what comes out is a one-page CV — not a screenshot of a
+        website with a navigation bar across the top.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer no-print">
+  <div class="wrap">
+    <p class="fs-sm fg-3 mb-0">
+      &copy; <span data-year>2026</span> Marit Halvorsen &mdash; a free Bootstrap 6 template.
+      The person, the roles and every project here are fictional.
+    </p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/*!
+ * Longhand — print stylesheet
+ *
+ * This is the point of the template. Résumé templates are built to be looked
+ * at, so printing one gives you a screenshot of a web page: navigation bar
+ * across the top, dark backgrounds eating a cartridge, a hero that takes half
+ * of page one, and roles split across a page break mid-sentence.
+ *
+ * The same markup here produces a filed document — a one-page CV with a proper
+ * letterhead, tight leading, ink-cheap black on white, and break rules that
+ * keep a job and its bullets together.
+ *
+ * Loaded with media="print", so it costs a screen reader nothing and never
+ * touches the on-screen layout.
+ */
+
+@page {
+  size: A4;
+  margin: 14mm 15mm;
+}
+
+/* Colour is set on :root rather than * so v6's custom properties resolve to
+   print values everywhere, including inside components we do not name here. */
+:root,
+[data-bs-theme="light"],
+[data-bs-theme="dark"] {
+  --bs-bg-body: #fff;
+  --bs-bg-2: #fff;
+  --bs-fg-body: #111;
+  --bs-fg-2: #333;
+  --bs-fg-3: #666;
+  --brand: #333;
+  --lh-rule: #ccc;
+}
+
+html, body {
+  background: #fff !important;
+  color: #111 !important;
+  font-size: 9.6pt;
+  line-height: 1.4;
+}
+
+/* Anything that is navigation, decoration or an invitation to click. A CV has
+   no theme toggle and no "get in touch" button. */
+.no-print,
+.site-header,
+.site-footer,
+button,
+.btn-solid,
+.btn-outline,
+.btn-icon { display: none !important; }
+
+.wrap { max-width: none; padding-inline: 0; margin-inline: 0; }
+
+/* ---------------------------------------------------------------
+   Letterhead
+   --------------------------------------------------------------- */
+
+.intro { padding-block: 0 0.6rem; border-bottom: 1.5pt solid #111; margin-bottom: 0.9rem; }
+
+.intro-grid { grid-template-columns: 1fr auto; gap: 1.5rem; align-items: end; }
+
+.intro-name { font-size: 21pt; line-height: 1.05; margin-bottom: 1mm; }
+.intro-role { font-size: 10pt; color: #444; font-weight: 600; margin-bottom: 2mm; }
+
+/* The lede is worth one sentence on paper, not three paragraphs. */
+.intro-lede { font-size: 9.4pt; color: #333; max-width: 125mm; margin-bottom: 0; }
+
+.vcard { border: 0; text-align: right; }
+.vcard li { border: 0; padding-block: 0.4mm; font-size: 8.6pt; flex-direction: row; gap: 0.5rem; justify-content: flex-end; }
+.vcard-k { display: none; }
+.vcard a { text-decoration: none; color: #111; }
+
+/* ---------------------------------------------------------------
+   Bands
+   --------------------------------------------------------------- */
+
+.band { padding-block: 0 0.55rem; border-top: 0; background: none !important; }
+
+.band-title {
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: inherit;
+  color: #111;
+  border-bottom: 0.5pt solid #999;
+  padding-bottom: 1mm;
+  margin-bottom: 2.5mm;
+}
+
+/* ---------------------------------------------------------------
+   Roles — the part that goes wrong without break rules
+   --------------------------------------------------------------- */
+
+.roles { gap: 3.5mm; }
+
+.role {
+  grid-template-columns: 22mm 1fr;
+  gap: 0 5mm;
+  /* Keep a job title with its bullets. A role split across a page break is the
+     single most common way a printed CV looks careless. */
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.role-when { font-size: 8.4pt; color: #555; }
+.role-title { font-size: 10.5pt; font-family: inherit; font-weight: 700; margin-bottom: 0.3mm; }
+.role-org { font-size: 9pt; margin-bottom: 1mm; }
+.role-body > p { margin-bottom: 1mm; }
+
+.role-points li { font-size: 9pt; margin-bottom: 0.8mm; padding-left: 3.5mm; }
+.role-points li::before { background: #666; top: 1.55mm; width: 2mm; }
+
+/* ---------------------------------------------------------------
+   Skills + projects
+   --------------------------------------------------------------- */
+
+.skills { grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+.skill-k { font-size: 7.6pt; margin-bottom: 1mm; }
+.skill-list { gap: 1mm; }
+.skill-list li { border: 0; padding: 0; font-size: 8.8pt; }
+
+/* Chips make no sense in print — set them as a comma list instead. */
+.skill-list li:not(:last-child)::after { content: ","; }
+
+.proj-list { border-top: 0; }
+.proj { grid-template-columns: 1fr 38mm; padding-block: 1.2mm; border-bottom: 0; break-inside: avoid; }
+.proj-name { font-size: 9.6pt; font-family: inherit; font-weight: 700; margin-bottom: 0.3mm; }
+.proj-name a { color: #111; text-decoration: none; }
+.proj-meta { font-size: 8.4pt; text-align: right; }
+.proj p { font-size: 8.8pt; }
+
+/* ---------------------------------------------------------------
+   Case study, if that is what is being printed
+   --------------------------------------------------------------- */
+
+.case { padding-block: 0; }
+.case-title { font-size: 17pt; }
+.case .prose { max-width: none; }
+.case .prose h2 { font-size: 11pt; font-weight: 700; font-family: inherit; }
+.case-foot { display: none; }
+
+/* A printed page cannot be clicked, so an inline link needs its destination
+   spelled out — but only where the text does not already say it. */
+.prose a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; color: #555; }
+
+/* Widows and orphans left at the browser default are how a single line of a
+   paragraph ends up alone at the top of page two. */
+p, li { orphans: 3; widows: 3; }
+h1, h2, h3 { break-after: avoid; page-break-after: avoid; }

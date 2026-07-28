@@ -125,7 +125,8 @@ await browser.close()
    that the dot follow a non-word character — that would drop the second half of
    every compound selector like `.top-link.is-active`. */
 const classesIn = (css) => new Set(
-  [...css.matchAll(/\.((?:[A-Za-z_-]|\\:)(?:[A-Za-z0-9_-]|\\:)*)/g)]
+  // Strip comments first: a filename like `print.css` inside one reads as a class.
+  [...css.replace(/\/\*[\s\S]*?\*\//g, ' ').matchAll(/\.((?:[A-Za-z_-]|\\:)(?:[A-Za-z0-9_-]|\\:)*)/g)]
     .map((m) => m[1].replace(/\\:/g, ':')))
 
 /* --------------------------------------------------- undefined classes ---
@@ -134,7 +135,7 @@ const classesIn = (css) => new Set(
    so it does nothing and the layout is subtly wrong. Same for any typo. Compare
    every class used against every class any loaded stylesheet defines. */
 const stylesheets = []
-for (const rel of ['assets/vendor/bootstrap6/css/bootstrap.min.css', 'assets/css/base.css', 'assets/css/style.css']) {
+for (const rel of ['assets/vendor/bootstrap6/css/bootstrap.min.css', 'assets/css/base.css', 'assets/css/style.css', 'assets/css/print.css']) {
   if (existsSync(join(DIR, rel))) stylesheets.push(readFileSync(join(DIR, rel), 'utf8'))
 }
 // Sub-page templates keep their stylesheets one level up.

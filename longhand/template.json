@@ -1,0 +1,27 @@
+{
+  "slug": "longhand",
+  "title": "Longhand — Free Bootstrap 6 Personal Website &amp; CV Template",
+  "excerpt": "A free two-page Bootstrap 6 personal site whose print stylesheet produces a genuine one-page CV — not a screenshot of a web page with a navigation bar across the top.",
+  "yoastTitle": "Longhand — Free Bootstrap 6 Personal Website &amp; CV Template",
+  "yoastDesc": "Free Bootstrap 6 personal and résumé website template with a real print stylesheet: A4 page setup, break rules that keep a job with its bullets, and a Print CV button that needs no PDF library.",
+  "intro": "Longhand is a free, premium <strong>Bootstrap 6</strong> personal website and CV template. A personal homepage — identity, experience, skills, side projects, writing and contact — plus a worked case-study page, in a warm editorial design with full light and dark mode.",
+  "note": "Résumé templates are built to be looked at, so printing one gives you a screenshot of a web page: a navigation bar across the top, dark backgrounds eating a cartridge, and a job title split from its bullet points by a page break. Longhand ships a real <strong>print stylesheet</strong>. The same markup produces a filed document — <code>@page</code> at A4 with proper margins, the hero reflowed into a letterhead, screen-only sections dropped, skill chips reset as comma lists, black on white throughout, and <code>break-inside: avoid</code> on every role so a job stays with its achievements. The Print CV button is <code>window.print()</code> and nothing else: no PDF library, no canvas screenshot, so “Save as PDF” in the browser dialogue gives a real text PDF a recruiter's system can parse rather than an image of one.",
+  "summary": "Longhand is a free, premium two-page Bootstrap 6 personal website and CV template. The homepage carries an identity block that doubles as a printed letterhead, a dated experience list with achievement bullets, grouped skills, side projects, writing and a contact section. A second page is a worked case study — problem, what changed, what it moved, and an honest section on what did not work. Its distinguishing feature is a genuine print stylesheet: A4 page setup, screen-only sections removed, chips reset as comma lists, ink-cheap black on white, orphan and widow control, and break rules that keep each role intact across a page break. Warm editorial design with a display serif, full light and dark mode, ESM-only vanilla JavaScript, no build step.",
+  "features": [
+    "Two pages — personal homepage and a worked case study",
+    "A real print stylesheet: the page prints as a one-page CV, not a screenshot",
+    "@page A4 with proper margins, and a hero that reflows into a letterhead",
+    "break-inside: avoid on every role, so a job stays with its bullet points",
+    "Screen-only sections drop out of print; skill chips become comma lists",
+    "Print CV button is window.print() — no PDF library, no canvas screenshot",
+    "Saves as a real text PDF that applicant tracking systems can parse",
+    "Orphan and widow control, so no single line strands on page two",
+    "Warm editorial design with a display serif, full light and dark mode",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "resumecv"
+  ],
+  "images": []
+}
