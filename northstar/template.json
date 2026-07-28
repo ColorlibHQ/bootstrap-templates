@@ -1,0 +1,27 @@
+{
+  "slug": "northstar",
+  "title": "Northstar — Free Bootstrap 6 SaaS Analytics Dashboard Template",
+  "excerpt": "A free five-page Bootstrap 6 SaaS analytics dashboard whose date-range control actually works — every KPI, delta, chart and MRR waterfall is recomputed from one 90-day dataset.",
+  "yoastTitle": "Northstar — Free Bootstrap 6 SaaS Analytics Dashboard Template",
+  "yoastDesc": "Free Bootstrap 6 SaaS analytics dashboard with a working 7/30/90-day range control, an MRR movement waterfall that reconciles, a cohort retention heat map and customer health scores. No chart library.",
+  "intro": "Northstar is a free, premium <strong>Bootstrap 6</strong> SaaS analytics dashboard template. Five pages — overview, revenue, cohorts, customers and settings — on a top-bar layout rather than a sidebar, with full light and dark mode.",
+  "note": "Every dashboard template ships a “Last 30 days” control that is decorative, because the numbers beside it are typed into the markup. Here a <strong>90-day dataset</strong> travels on the page and everything is derived from it, so switching to 7, 30 or 90 days recomputes the KPIs, their deltas, the SVG chart path, the axis labels and the MRR waterfall together — they cannot end up describing different periods. Deltas compare against the immediately preceding window of equal length, and at 90 days, where no earlier window exists, the card says <em>“no earlier period to compare”</em> rather than inventing a 0%. The <strong>MRR movement waterfall reconciles</strong>: opening plus new, expansion, reactivation, contraction and churn must equal closing, and the card states the sum so you can check it. Charts are hand-built SVG — no chart library to strip out.",
+  "summary": "Northstar is a free, premium five-page Bootstrap 6 SaaS analytics dashboard. A top-bar layout rather than a sidebar, built around a date-range control that genuinely recomputes the page: KPIs, period-over-period deltas, the SVG revenue chart and the MRR movement waterfall all derive from a single 90-day dataset. The revenue page adds annual run rate, quick ratio and a plan table; cohorts renders a retention triangle as a heat map with a deliberately ragged edge where a cohort is too young to have a figure; customers is a filterable table with health scores; settings exposes the MRR counting rules that change every number in the product. Hand-built SVG charts, no chart library, full light and dark mode, ESM-only vanilla JavaScript, no build step.",
+  "features": [
+    "Five pages — overview, revenue, cohorts, customers, settings",
+    "The 7/30/90-day range control genuinely recomputes every figure on the page",
+    "One 90-day dataset drives KPIs, deltas, the chart path and the waterfall",
+    "Deltas compare the preceding window of equal length, not a fixed month",
+    "Says “no earlier period to compare” instead of inventing a 0% change",
+    "MRR waterfall reconciles: opening + movements = closing, stated on the card",
+    "Cohort retention heat map, ragged where a cohort is too young to have data",
+    "Top-bar layout, so it does not read as a recoloured sidebar dashboard",
+    "Charts hand-built in SVG — no chart library to strip out",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "admin-dashboard"
+  ],
+  "images": []
+}

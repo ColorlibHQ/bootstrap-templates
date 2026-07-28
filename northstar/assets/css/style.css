@@ -1,0 +1,384 @@
+/*!
+ * Northstar — Bootstrap 6 SaaS analytics dashboard
+ *
+ * Layout is deliberately not a sidebar: a top bar with product nav, and a
+ * centred measure below it. Analytics tools read wide, and it keeps this
+ * template from being a recoloured version of the sidebar dashboards.
+ *
+ * The structural idea carrying the identity is the date range. Every dashboard
+ * template ships a "Last 30 days" control that is decorative, because the
+ * numbers beside it are typed into the markup. Here the whole page derives from
+ * one 90-day series on <body>, so changing the range recomputes the KPIs, their
+ * deltas, the chart path, the axis and the MRR waterfall together.
+ */
+
+:root {
+  --brand: oklch(53% 0.19 292);
+  --ns-rule: color-mix(in oklab, var(--bs-fg-body), transparent 90%);
+  --ns-up: oklch(60% 0.13 155);
+  --ns-down: oklch(60% 0.17 25);
+}
+
+[data-bs-theme="light"] {
+  --bs-bg-body: oklch(99% 0.003 290);
+  --bs-bg-2: oklch(96.5% 0.007 290);
+}
+
+[data-bs-theme="dark"] {
+  --bs-bg-body: oklch(17.5% 0.012 290);
+  --bs-bg-2: oklch(21% 0.014 290);
+}
+
+.tabular,
+.kpi-figure,
+.wf-v,
+.bar-v,
+.heat { font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------
+   Top bar
+   --------------------------------------------------------------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: color-mix(in oklab, var(--bs-bg-body), transparent 12%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ns-rule);
+}
+
+.topbar-in {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 84rem;
+  margin-inline: auto;
+  padding: 0.6rem 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--bs-fg-body);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  flex: none;
+}
+
+.brand-mark { color: var(--bs-primary-base); display: inline-flex; }
+
+.top-nav { display: flex; gap: 0.15rem; margin-left: 0.75rem; }
+
+.top-link,
+.drawer-link {
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--bs-radius-4);
+  color: var(--bs-fg-2, inherit);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.top-link:hover,
+.drawer-link:hover { background-color: color-mix(in oklab, var(--bs-fg-body), transparent 94%); }
+
+.top-link.is-active,
+.drawer-link.is-active {
+  background-color: color-mix(in oklab, var(--bs-primary-base), transparent 88%);
+  color: var(--bs-primary-fg-emphasis);
+  font-weight: 650;
+}
+
+.drawer-link { display: block; margin-bottom: 0.2rem; }
+
+.search-field { max-width: 15rem; }
+
+/* ---------------------------------------------------------------
+   Page
+   --------------------------------------------------------------- */
+
+.page { padding: 1.5rem 1rem 4rem; }
+.wrap { max-width: 84rem; margin-inline: auto; }
+
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.page-title { font-size: 1.55rem; font-weight: 650; letter-spacing: -0.028em; margin-bottom: 0.15rem; }
+.page-sub { color: var(--bs-fg-3, inherit); font-size: 0.9rem; }
+
+.ranger {
+  display: inline-flex;
+  padding: 0.2rem;
+  border: 1px solid var(--ns-rule);
+  border-radius: 100px;
+  background-color: var(--bs-bg-2);
+}
+
+.range-btn {
+  padding: 0.35rem 0.85rem;
+  border: 0;
+  border-radius: 100px;
+  background-color: transparent;
+  color: var(--bs-fg-2, inherit);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.range-btn:hover { color: var(--bs-fg-body); }
+
+.range-btn.is-on {
+  background-color: var(--bs-primary-base);
+  color: var(--bs-white);
+}
+
+/* ---------------------------------------------------------------
+   Cards + KPIs
+   --------------------------------------------------------------- */
+
+.card {
+  border: 1px solid var(--ns-rule);
+  border-radius: var(--bs-radius-6);
+  background-color: var(--bs-bg-body);
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+.card-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--ns-rule);
+}
+
+.card-title { font-size: 1rem; font-weight: 650; margin-bottom: 0.1rem; }
+.card-sub { font-size: 0.8rem; color: var(--bs-fg-3, inherit); }
+
+/* .card / .card-body / .card-title are Bootstrap 6 COMPONENTS, not free names.
+   v6's card-body is a flex column with `align-items: flex-start`, so a block
+   child shrinks to its content width instead of filling — which silently
+   collapsed a chart to its 640px viewBox and a `1fr` bar track to 0px. Restate
+   stretch for the layout children; the component keeps everything else. */
+.card-body { align-items: stretch; padding: 1.25rem; }
+.card-foot { padding: 0.85rem 1.25rem; border-top: 1px solid var(--ns-rule); background-color: var(--bs-bg-2); }
+
+.grid-2 { display: grid; gap: 1.25rem; }
+@media (width >= 992px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+.kpi-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  margin-bottom: 1.25rem;
+}
+
+.kpi {
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--ns-rule);
+  border-radius: var(--bs-radius-6);
+  background-color: var(--bs-bg-body);
+}
+
+.kpi-label { font-size: 0.76rem; font-weight: 650; color: var(--bs-fg-3, inherit); }
+.kpi-figure { font-size: 1.8rem; font-weight: 650; letter-spacing: -0.035em; line-height: 1.05; }
+.kpi-delta { font-size: 0.76rem; font-weight: 650; }
+.kpi-delta.is-up { color: var(--ns-up); }
+.kpi-delta.is-down { color: var(--ns-down); }
+.kpi-delta.is-flat { color: var(--bs-fg-3, inherit); font-weight: 500; }
+.kpi-note { font-size: 0.72rem; color: var(--bs-fg-3, inherit); opacity: 0.8; margin-top: 0.2rem; }
+
+/* ---------------------------------------------------------------
+   Chart
+   --------------------------------------------------------------- */
+
+.chart { display: block; width: 100%; height: 12.5rem; }
+
+.chart-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  color: var(--bs-fg-3, inherit);
+}
+
+/* ---------------------------------------------------------------
+   MRR waterfall
+   --------------------------------------------------------------- */
+
+.wf { list-style: none; padding-left: 0; margin-bottom: 0; }
+
+.wf-row {
+  display: grid;
+  grid-template-columns: 8rem 1fr 6rem;
+  gap: 0.85rem;
+  align-items: center;
+  padding-block: 0.5rem;
+  font-size: 0.86rem;
+}
+
+.wf-row.is-total,
+.wf-row[data-wf="opening"] {
+  font-weight: 700;
+  border-block: 1px solid var(--ns-rule);
+}
+
+.wf-row.is-total { border-bottom: 0; }
+.wf-row[data-wf="opening"] { border-top: 0; }
+
+.wf-k { color: var(--bs-fg-2, inherit); }
+.wf-row.is-total .wf-k,
+.wf-row[data-wf="opening"] .wf-k { color: var(--bs-fg-body); }
+
+.wf-bar { height: 0.5rem; border-radius: 100px; background-color: color-mix(in oklab, var(--bs-fg-body), transparent 94%); overflow: hidden; }
+.wf-row.is-total .wf-bar,
+.wf-row[data-wf="opening"] .wf-bar { background-color: transparent; }
+
+.wf-bar i { display: block; width: var(--w, 0%); height: 100%; border-radius: inherit; }
+.wf-row.is-pos .wf-bar i { background-color: var(--ns-up); }
+.wf-row.is-neg .wf-bar i { background-color: var(--ns-down); }
+
+.wf-v { text-align: right; font-weight: 650; }
+.wf-row.is-pos .wf-v { color: var(--ns-up); }
+.wf-row.is-neg .wf-v { color: var(--ns-down); }
+
+.wf-check {
+  margin-top: 0.9rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--bs-radius-4);
+  background-color: color-mix(in oklab, var(--ns-up), transparent 92%);
+  color: color-mix(in oklab, var(--ns-up), black 25%);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.wf-check.is-bad {
+  background-color: color-mix(in oklab, var(--ns-down), transparent 90%);
+  color: color-mix(in oklab, var(--ns-down), black 15%);
+}
+
+[data-bs-theme="dark"] .wf-check { color: var(--ns-up); }
+[data-bs-theme="dark"] .wf-check.is-bad { color: var(--ns-down); }
+
+/* ---------------------------------------------------------------
+   Bars
+   --------------------------------------------------------------- */
+
+.bars { display: grid; gap: 0.9rem; }
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 10rem 1fr 5rem 3rem;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+@media (width < 768px) {
+  .bar-row { grid-template-columns: 1fr auto; }
+  .bar-track { grid-column: 1 / -1; order: 3; }
+  .bar-x { display: none; }
+}
+
+.bar-k { font-weight: 600; }
+.bar-track { height: 0.55rem; border-radius: 100px; background-color: color-mix(in oklab, var(--bs-fg-body), transparent 93%); overflow: hidden; }
+.bar-fill { width: var(--w, 0%); height: 100%; border-radius: inherit; background-color: var(--bs-primary-base); }
+.bar-v { text-align: right; font-weight: 650; }
+.bar-x { text-align: right; font-size: 0.78rem; }
+
+/* ---------------------------------------------------------------
+   Cohort heat map
+   --------------------------------------------------------------- */
+
+.cohort th[scope="row"] { font-weight: 650; white-space: nowrap; }
+.cohort td { text-align: center; }
+
+.heat {
+  display: inline-block;
+  min-width: 3.1rem;
+  padding: 0.25rem 0.35rem;
+  border-radius: var(--bs-radius-4);
+  background-color: color-mix(in oklab, var(--bs-primary-base), transparent calc(100% - var(--v) * 85%));
+  color: light-dark(
+    color-mix(in oklab, var(--bs-primary-base), black 45%),
+    var(--bs-white));
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.heat-empty { color: var(--bs-fg-3, inherit); opacity: 0.4; }
+
+/* ---------------------------------------------------------------
+   Health, chips, misc
+   --------------------------------------------------------------- */
+
+.health { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; }
+.health-track { width: 3.5rem; height: 0.4rem; border-radius: 100px; background-color: color-mix(in oklab, var(--bs-fg-body), transparent 92%); overflow: hidden; flex: none; }
+.health-fill { display: block; width: var(--w, 0%); height: 100%; border-radius: inherit; background-color: var(--bs-primary-base); }
+
+.chip {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 100px;
+  background-color: color-mix(in oklab, var(--bs-fg-body), transparent 92%);
+  font-size: 0.72rem;
+  font-weight: 650;
+}
+
+.chip-healthy, .chip-ok { background-color: color-mix(in oklab, var(--ns-up), transparent 87%); color: color-mix(in oklab, var(--ns-up), black 22%); }
+.chip-atrisk, .chip-warn { background-color: color-mix(in oklab, var(--ns-down), transparent 88%); color: color-mix(in oklab, var(--ns-down), black 12%); }
+.chip-new { background-color: color-mix(in oklab, var(--bs-primary-base), transparent 88%); color: var(--bs-primary-fg-emphasis); }
+
+[data-bs-theme="dark"] .chip-healthy,
+[data-bs-theme="dark"] .chip-ok { color: var(--ns-up); }
+[data-bs-theme="dark"] .chip-atrisk,
+[data-bs-theme="dark"] .chip-warn { color: var(--ns-down); }
+
+.tick-list { list-style: none; padding-left: 0; margin-bottom: 0; }
+
+.tick-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.7rem;
+  color: var(--bs-fg-2, inherit);
+  font-size: 0.9rem;
+}
+
+.tick-list li:last-child { margin-bottom: 0; }
+
+.tick-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 0.75rem;
+  height: 0.4rem;
+  border-left: 1.8px solid var(--bs-primary-base);
+  border-bottom: 1.8px solid var(--bs-primary-base);
+  transform: rotate(-45deg);
+}
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 0.9rem;
+  border-bottom: 1px solid var(--ns-rule);
+}
+
+.switch-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.switch-row:first-child { padding-top: 0; }

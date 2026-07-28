@@ -118,6 +118,16 @@ for (const page of pages) {
 }
 await browser.close()
 
+/* Class names out of a stylesheet.
+   The first character must be a letter, underscore or hyphen. A CSS class
+   cannot start with a digit, and that single guard is what keeps the decimal in
+   `padding: 0.05rem` from being read as a class called `05`. Do NOT also demand
+   that the dot follow a non-word character — that would drop the second half of
+   every compound selector like `.top-link.is-active`. */
+const classesIn = (css) => new Set(
+  [...css.matchAll(/\.((?:[A-Za-z_-]|\\:)(?:[A-Za-z0-9_-]|\\:)*)/g)]
+    .map((m) => m[1].replace(/\\:/g, ':')))
+
 /* --------------------------------------------------- undefined classes ---
    v6 changed the responsive prefix from a suffix to a prefix: `gap-lg-3` became
    `lg:gap-3`. The v5 form is not an error, it is simply a class nobody defines,
@@ -134,9 +144,7 @@ for (const sub of readdirSync(DIR, { withFileTypes: true }).filter((d) => d.isDi
 }
 
 if (stylesheets.length) {
-  const defined = new Set(
-    [...stylesheets.join('\n').matchAll(/\.((?:[A-Za-z0-9_-]|\\:)+)/g)]
-      .map((m) => m[1].replace(/\\:/g, ':')))
+  const defined = classesIn(stylesheets.join('\n'))
 
   const used = new Set()
   for (const page of pages) {
@@ -155,6 +163,30 @@ if (stylesheets.length) {
     suspicious.slice(0, 6).forEach((c) => log(`      ${c}`))
   } else if (undef.length) {
     log(`  · ${undef.length} unstyled class(es), assumed to be hooks: ${undef.slice(0, 6).join(', ')}`)
+  }
+}
+
+/* ------------------------------------------------ component collisions ---
+   A generic-sounding class name is often already a v6 component. `.card`,
+   `.prose` and `kbd` each cost real debugging time this way: the template's own
+   rules land on top of a real component, the half that was not overridden keeps
+   applying, and the result is wrong in a way nothing reports. `.card-body` is a
+   flex column with align-items:flex-start, so block children silently shrink to
+   their content width.
+
+   Informational, not fatal — overriding a component on purpose is legitimate.
+   The point is to know you are doing it. */
+const own = existsSync(join(DIR, 'assets/css/style.css'))
+  ? readFileSync(join(DIR, 'assets/css/style.css'), 'utf8') : ''
+const vendor = existsSync(join(DIR, 'assets/vendor/bootstrap6/css/bootstrap.min.css'))
+  ? readFileSync(join(DIR, 'assets/vendor/bootstrap6/css/bootstrap.min.css'), 'utf8') : ''
+
+if (own && vendor) {
+  const bs = classesIn(vendor)
+  const mine = classesIn(own)
+  const clash = [...mine].filter((c) => bs.has(c)).sort()
+  if (clash.length) {
+    log(`  · ${clash.length} class(es) also defined by Bootstrap — you are restyling components, not naming your own: ${clash.slice(0, 10).join(', ')}${clash.length > 10 ? ' …' : ''}`)
   }
 }
 

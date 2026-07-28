@@ -224,7 +224,13 @@ body.is-rail .side-foot { justify-content: center; padding-inline: 0; }
 
 .card-title { font-size: 1rem; font-weight: 650; margin-bottom: 0.1rem; }
 .card-sub { font-size: 0.8rem; color: var(--bs-fg-3, inherit); }
-.card-body { padding: 1.25rem; }
+
+/* .card / .card-body / .card-title are Bootstrap 6 COMPONENTS, not free names.
+   v6's card-body is a flex column with `align-items: flex-start`, so a block
+   child shrinks to its content width instead of filling — which silently
+   collapsed a chart to its 640px viewBox and a `1fr` bar track to 0px. Restate
+   stretch for the layout children; the component keeps everything else. */
+.card-body { align-items: stretch; padding: 1.25rem; }
 .card-foot { padding: 0.85rem 1.25rem; border-top: 1px solid var(--cad-rule); background-color: var(--bs-bg-2); }
 
 .grid-2 { display: grid; gap: 1.25rem; }

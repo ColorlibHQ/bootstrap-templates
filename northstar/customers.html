@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customers — Northstar Bootstrap 6 SaaS Analytics Dashboard</title>
+<meta name="description" content="A filterable SaaS customer table with health scores and plan chips, stacking properly on small screens.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-series='{"opening":214800,"days":[{"n":1951,"e":1074,"r":117,"c":-541,"k":-1320,"s":67,"m":216081,"a":8257},{"n":1791,"e":684,"r":202,"c":-501,"k":-1431,"s":54,"m":216826,"a":8332},{"n":953,"e":518,"r":75,"c":-214,"k":-582,"s":65,"m":217576,"a":8354},{"n":461,"e":266,"r":39,"c":-168,"k":-262,"s":18,"m":217912,"a":8368},{"n":525,"e":352,"r":32,"c":-410,"k":-318,"s":18,"m":218093,"a":8248},{"n":949,"e":809,"r":166,"c":-605,"k":-1465,"s":51,"m":217947,"a":8415},{"n":1430,"e":736,"r":29,"c":-501,"k":-1209,"s":51,"m":218432,"a":8474},{"n":1136,"e":340,"r":133,"c":-368,"k":-1050,"s":88,"m":218623,"a":8561},{"n":1215,"e":386,"r":75,"c":-389,"k":-522,"s":78,"m":219388,"a":8533},{"n":1899,"e":758,"r":93,"c":-240,"k":-344,"s":59,"m":221554,"a":8622},{"n":638,"e":428,"r":210,"c":-201,"k":-568,"s":28,"m":222061,"a":8407},{"n":774,"e":466,"r":5,"c":-543,"k":-372,"s":26,"m":222391,"a":8427},{"n":1088,"e":1019,"r":51,"c":-592,"k":-949,"s":64,"m":223008,"a":8765},{"n":1632,"e":518,"r":199,"c":-234,"k":-1103,"s":54,"m":224020,"a":8681},{"n":1904,"e":452,"r":157,"c":-298,"k":-1435,"s":60,"m":224800,"a":8584},{"n":1306,"e":577,"r":223,"c":-320,"k":-1374,"s":47,"m":225212,"a":8625},{"n":1745,"e":529,"r":192,"c":-570,"k":-546,"s":66,"m":226562,"a":8742},{"n":408,"e":414,"r":121,"c":-122,"k":-161,"s":30,"m":227222,"a":8911},{"n":868,"e":200,"r":151,"c":-240,"k":-311,"s":17,"m":227890,"a":8970},{"n":1254,"e":410,"r":217,"c":-529,"k":-1436,"s":82,"m":227806,"a":8752},{"n":1464,"e":995,"r":20,"c":-469,"k":-416,"s":39,"m":229400,"a":8952},{"n":1829,"e":653,"r":240,"c":-290,"k":-696,"s":57,"m":231136,"a":8957},{"n":1655,"e":596,"r":75,"c":-479,"k":-362,"s":53,"m":232621,"a":8851},{"n":1695,"e":581,"r":241,"c":-466,"k":-1405,"s":35,"m":233267,"a":8913},{"n":513,"e":537,"r":20,"c":-554,"k":-140,"s":14,"m":233643,"a":8958},{"n":759,"e":297,"r":230,"c":-332,"k":-432,"s":42,"m":234165,"a":9210},{"n":2081,"e":868,"r":256,"c":-225,"k":-1483,"s":42,"m":235662,"a":9013},{"n":907,"e":441,"r":174,"c":-448,"k":-1366,"s":67,"m":235370,"a":9140},{"n":1411,"e":374,"r":180,"c":-313,"k":-966,"s":74,"m":236056,"a":9147},{"n":1655,"e":892,"r":86,"c":-340,"k":-876,"s":45,"m":237473,"a":9223},{"n":1957,"e":512,"r":239,"c":-490,"k":-643,"s":73,"m":239048,"a":9365},{"n":523,"e":396,"r":175,"c":-379,"k":-305,"s":36,"m":239458,"a":9134},{"n":897,"e":165,"r":251,"c":-373,"k":-375,"s":43,"m":240023,"a":9398},{"n":2028,"e":465,"r":172,"c":-257,"k":-1238,"s":67,"m":241193,"a":9411},{"n":2085,"e":919,"r":154,"c":-330,"k":-769,"s":77,"m":243252,"a":9387},{"n":1890,"e":322,"r":123,"c":-390,"k":-1371,"s":94,"m":243826,"a":9435},{"n":1636,"e":1096,"r":186,"c":-333,"k":-1212,"s":70,"m":245199,"a":9459},{"n":1467,"e":978,"r":219,"c":-450,"k":-735,"s":45,"m":246678,"a":9568},{"n":682,"e":155,"r":137,"c":-353,"k":-522,"s":35,"m":246777,"a":9495},{"n":829,"e":210,"r":165,"c":-169,"k":-255,"s":47,"m":247557,"a":9599},{"n":1922,"e":1073,"r":162,"c":-270,"k":-720,"s":83,"m":249724,"a":9722},{"n":1067,"e":1081,"r":87,"c":-494,"k":-619,"s":78,"m":250846,"a":9504},{"n":1826,"e":632,"r":144,"c":-241,"k":-449,"s":93,"m":252758,"a":9495},{"n":1304,"e":631,"r":249,"c":-342,"k":-540,"s":69,"m":254060,"a":9692},{"n":2040,"e":566,"r":215,"c":-597,"k":-1299,"s":94,"m":254985,"a":9642},{"n":644,"e":410,"r":243,"c":-407,"k":-327,"s":36,"m":255548,"a":9770},{"n":656,"e":278,"r":10,"c":-312,"k":-508,"s":18,"m":255672,"a":9848},{"n":1789,"e":582,"r":82,"c":-583,"k":-950,"s":80,"m":256592,"a":9831},{"n":1823,"e":612,"r":168,"c":-381,"k":-908,"s":65,"m":257906,"a":9743},{"n":1679,"e":948,"r":100,"c":-395,"k":-1025,"s":31,"m":259213,"a":9744},{"n":2002,"e":350,"r":3,"c":-612,"k":-524,"s":92,"m":260432,"a":9831},{"n":1021,"e":582,"r":165,"c":-541,"k":-1268,"s":47,"m":260391,"a":9926},{"n":674,"e":324,"r":233,"c":-408,"k":-377,"s":33,"m":260837,"a":9825},{"n":743,"e":332,"r":121,"c":-605,"k":-141,"s":45,"m":261287,"a":9890},{"n":1677,"e":390,"r":156,"c":-160,"k":-409,"s":93,"m":262941,"a":10199},{"n":1130,"e":1044,"r":199,"c":-374,"k":-1434,"s":85,"m":263506,"a":10235},{"n":1499,"e":1073,"r":91,"c":-493,"k":-1153,"s":72,"m":264523,"a":9977},{"n":1659,"e":975,"r":129,"c":-257,"k":-1225,"s":68,"m":265804,"a":10203},{"n":1325,"e":372,"r":42,"c":-252,"k":-430,"s":90,"m":266861,"a":10213},{"n":733,"e":162,"r":28,"c":-377,"k":-153,"s":15,"m":267254,"a":10372},{"n":473,"e":177,"r":35,"c":-314,"k":-191,"s":23,"m":267434,"a":10069},{"n":1715,"e":577,"r":64,"c":-167,"k":-583,"s":58,"m":269040,"a":10423},{"n":1172,"e":797,"r":253,"c":-420,"k":-946,"s":61,"m":269896,"a":10410},{"n":1156,"e":403,"r":234,"c":-148,"k":-1324,"s":77,"m":270217,"a":10240},{"n":1631,"e":369,"r":249,"c":-412,"k":-793,"s":86,"m":271261,"a":10205},{"n":1056,"e":870,"r":191,"c":-218,"k":-1386,"s":62,"m":271774,"a":10439},{"n":734,"e":198,"r":84,"c":-452,"k":-374,"s":24,"m":271964,"a":10561},{"n":808,"e":529,"r":84,"c":-384,"k":-190,"s":20,"m":272811,"a":10434},{"n":1864,"e":491,"r":77,"c":-204,"k":-519,"s":81,"m":274520,"a":10616},{"n":1961,"e":1050,"r":235,"c":-506,"k":-1496,"s":59,"m":275764,"a":10588},{"n":1978,"e":517,"r":102,"c":-401,"k":-1397,"s":45,"m":276563,"a":10671},{"n":1711,"e":872,"r":84,"c":-302,"k":-969,"s":32,"m":277959,"a":10543},{"n":1377,"e":570,"r":205,"c":-322,"k":-611,"s":83,"m":279178,"a":10607},{"n":453,"e":175,"r":246,"c":-456,"k":-575,"s":14,"m":279021,"a":10626},{"n":944,"e":360,"r":225,"c":-332,"k":-504,"s":19,"m":279714,"a":10794},{"n":1638,"e":769,"r":37,"c":-290,"k":-1455,"s":87,"m":280413,"a":10590},{"n":919,"e":1011,"r":242,"c":-414,"k":-396,"s":77,"m":281775,"a":10828},{"n":1425,"e":667,"r":97,"c":-561,"k":-725,"s":75,"m":282678,"a":10719},{"n":1583,"e":904,"r":242,"c":-222,"k":-865,"s":48,"m":284320,"a":10964},{"n":1615,"e":524,"r":163,"c":-539,"k":-354,"s":34,"m":285729,"a":10949},{"n":883,"e":284,"r":237,"c":-219,"k":-509,"s":43,"m":286405,"a":10851},{"n":558,"e":351,"r":43,"c":-434,"k":-441,"s":45,"m":286482,"a":10955},{"n":1770,"e":757,"r":239,"c":-299,"k":-1012,"s":65,"m":287937,"a":10993},{"n":1689,"e":401,"r":42,"c":-156,"k":-830,"s":36,"m":289083,"a":11177},{"n":2056,"e":980,"r":46,"c":-609,"k":-889,"s":42,"m":290667,"a":10966},{"n":1504,"e":589,"r":130,"c":-291,"k":-325,"s":63,"m":292274,"a":10973},{"n":1711,"e":707,"r":243,"c":-156,"k":-1449,"s":76,"m":293330,"a":11085},{"n":704,"e":406,"r":89,"c":-303,"k":-430,"s":24,"m":293796,"a":11179},{"n":783,"e":489,"r":64,"c":-288,"k":-435,"s":28,"m":294409,"a":11287},{"n":1959,"e":395,"r":244,"c":-145,"k":-326,"s":38,"m":296536,"a":11203}]}'>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.5 9.9 6l4.6.4-3.5 3 1.1 4.5L8 11.6 3.9 13.9 5 9.4l-3.5-3L6.1 6z"/></svg>
+      </span>
+      <span>Northstar</span>
+    </a>
+
+    <nav class="top-nav d-none lg:d-flex" aria-label="Main">
+        <a class="top-link" href="index.html">Overview</a>
+        <a class="top-link" href="revenue.html">Revenue</a>
+        <a class="top-link" href="cohorts.html">Cohorts</a>
+        <a class="top-link is-active" href="customers.html" aria-current="page">Customers</a>
+        <a class="top-link" href="settings.html">Settings</a>
+    </nav>
+
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="form-control form-adorn search-field d-none md:d-flex">
+        <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14" stroke-linecap="round"/></svg></div>
+        <input type="search" class="form-ghost" placeholder="Search customers…" aria-label="Search">
+      </div>
+      <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+      <button class="btn-icon" type="button" aria-label="Notifications"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6.5a4 4 0 0 1 8 0c0 3 1 4 1 4H3s1-1 1-4Z"/><path d="M6.5 13a1.6 1.6 0 0 0 3 0"/></svg></button>
+      <button class="btn-icon p-0" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Account menu">
+        <span class="avatar avatar-sm"><span class="avatar-initials">RW</span></span>
+      </button>
+      <div class="menu">
+        <a class="menu-item" href="settings.html">Settings</a>
+        <a class="menu-item" href="customers.html">Customers</a>
+        <hr class="menu-divider">
+        <a class="menu-item" href="index.html">Sign out</a>
+      </div>
+      <button class="btn-icon lg:d-none" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <div class="wrap">
+    <div class="page-head">
+      <div>
+        <h1 class="page-title">Customers</h1>
+        <p class="page-sub mb-0">12 accounts, sorted by nothing in particular.</p>
+      </div>
+
+    </div>
+
+      <section class="card">
+        <header class="card-head">
+          <div class="form-control form-adorn" style="max-width:20rem">
+            <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14" stroke-linecap="round"/></svg></div>
+            <input type="search" class="form-ghost" placeholder="Filter customers…" aria-label="Filter customers" data-filter="#custTable">
+          </div>
+          <button class="btn-outline theme-secondary btn-sm" type="button">Export CSV</button>
+        </header>
+        <div class="table-responsive">
+          <table class="table lg:table-stacked align-middle" id="custTable">
+            <thead><tr><th scope="col">Customer</th><th scope="col">Plan</th><th scope="col">MRR</th><th scope="col">Months</th><th scope="col">Health</th><th scope="col">Status</th></tr></thead>
+            <tbody>
+              <tr>
+                <th scope="row">Northwind Logistics</th>
+                <td data-cell="Plan"><span class="chip">Business</span></td>
+                <td data-cell="MRR" class="tabular">£249</td>
+                <td data-cell="Months" class="tabular">14</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:92%"></span></span>
+                    <span class="tabular">92</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-healthy">Healthy</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Palisade Health</th>
+                <td data-cell="Plan"><span class="chip">Enterprise</span></td>
+                <td data-cell="MRR" class="tabular">£1,450</td>
+                <td data-cell="Months" class="tabular">26</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:88%"></span></span>
+                    <span class="tabular">88</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-healthy">Healthy</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Kettle & Co</th>
+                <td data-cell="Plan"><span class="chip">Team</span></td>
+                <td data-cell="MRR" class="tabular">£79</td>
+                <td data-cell="Months" class="tabular">3</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:74%"></span></span>
+                    <span class="tabular">74</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-healthy">Healthy</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Brightsea Marine</th>
+                <td data-cell="Plan"><span class="chip">Team</span></td>
+                <td data-cell="MRR" class="tabular">£79</td>
+                <td data-cell="Months" class="tabular">9</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:41%"></span></span>
+                    <span class="tabular">41</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-atrisk">At risk</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Ordinal Systems</th>
+                <td data-cell="Plan"><span class="chip">Business</span></td>
+                <td data-cell="MRR" class="tabular">£249</td>
+                <td data-cell="Months" class="tabular">18</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:81%"></span></span>
+                    <span class="tabular">81</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-healthy">Healthy</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Meridian Labs</th>
+                <td data-cell="Plan"><span class="chip">Enterprise</span></td>
+                <td data-cell="MRR" class="tabular">£980</td>
+                <td data-cell="Months" class="tabular">31</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:95%"></span></span>
+                    <span class="tabular">95</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-healthy">Healthy</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Halden Brewing</th>
+                <td data-cell="Plan"><span class="chip">Starter</span></td>
+                <td data-cell="MRR" class="tabular">£19</td>
+                <td data-cell="Months" class="tabular">1</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:28%"></span></span>
+                    <span class="tabular">28</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-atrisk">At risk</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Fenwick Partners</th>
+                <td data-cell="Plan"><span class="chip">Business</span></td>
+                <td data-cell="MRR" class="tabular">£249</td>
+                <td data-cell="Months" class="tabular">22</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:77%"></span></span>
+                    <span class="tabular">77</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-healthy">Healthy</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Cobalt Interiors</th>
+                <td data-cell="Plan"><span class="chip">Starter</span></td>
+                <td data-cell="MRR" class="tabular">£19</td>
+                <td data-cell="Months" class="tabular">2</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:63%"></span></span>
+                    <span class="tabular">63</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-new">New</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Latimer Retail</th>
+                <td data-cell="Plan"><span class="chip">Team</span></td>
+                <td data-cell="MRR" class="tabular">£79</td>
+                <td data-cell="Months" class="tabular">7</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:70%"></span></span>
+                    <span class="tabular">70</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-healthy">Healthy</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Silverbrook Foods</th>
+                <td data-cell="Plan"><span class="chip">Business</span></td>
+                <td data-cell="MRR" class="tabular">£249</td>
+                <td data-cell="Months" class="tabular">11</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:36%"></span></span>
+                    <span class="tabular">36</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-atrisk">At risk</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Windmill Studios</th>
+                <td data-cell="Plan"><span class="chip">Starter</span></td>
+                <td data-cell="MRR" class="tabular">£19</td>
+                <td data-cell="Months" class="tabular">4</td>
+                <td data-cell="Health">
+                  <span class="health">
+                    <span class="health-track"><span class="health-fill" style="--w:68%"></span></span>
+                    <span class="tabular">68</span>
+                  </span>
+                </td>
+                <td data-cell="Status"><span class="chip chip-healthy">Healthy</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="card-foot">
+          <p class="fs-sm fg-3 mb-0"><span data-filter-count>12</span> of 12 customers</p>
+        </footer>
+      </section>
+
+  </div>
+</main>
+
+<dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="navDrawerLabel">Northstar</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+        <a class="drawer-link" href="index.html">Overview</a>
+        <a class="drawer-link" href="revenue.html">Revenue</a>
+        <a class="drawer-link" href="cohorts.html">Cohorts</a>
+        <a class="drawer-link is-active" href="customers.html" aria-current="page">Customers</a>
+        <a class="drawer-link" href="settings.html">Settings</a>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
