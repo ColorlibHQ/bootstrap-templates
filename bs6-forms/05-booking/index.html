@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appointment booking — Bootstrap 6 Forms</title>
+<meta name="description" content="Datepicker plus time-slot toggles — the shape almost every clinic, salon and studio needs. A free Bootstrap 6 form example.">
+<link rel="stylesheet" href="../assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="variant-bar">
+  <a class="btn-text btn-sm" href="../index.html">&#8592; All forms</a>
+  <span class="fs-sm fw-semibold ms-2">Appointment booking</span>
+  <span class="fs-xs fg-3 d-none md:d-inline">5 of 10</span>
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <a class="btn-icon btn-sm" href="../04-toolbar/index.html" aria-label="Previous form">&#8249;</a>
+    <a class="btn-icon btn-sm" href="../06-strength/index.html" aria-label="Next form">&#8250;</a>
+    <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+  </div>
+</div>
+
+<main class="variant-stage">
+  <div class="variant-inner">
+    <div class="form-shell">
+  <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Book an appointment</h1>
+  <p class="fg-2 mb-5">Same-week slots, cancel free up to 24 hours before.</p>
+  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+    <div>
+      <label class="form-label">Service</label>
+      <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="service" data-bs-placeholder="Choose a service…">
+      <span class="combobox-value">Choose a service…</span>
+      <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+    </button>
+    <div class="menu">
+      <button class="menu-item" type="button" data-bs-value="con">Consultation — 30 min</button>
+      <button class="menu-item" type="button" data-bs-value="rev">Review — 45 min</button>
+      <button class="menu-item" type="button" data-bs-value="full">Full assessment — 90 min</button>
+    </div>
+    </div>
+    <div class="form-field">
+      <label class="form-label" for="s5date">Date</label>
+      <input type="text" class="form-control" id="s5date" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…" required>
+      <div class="invalid-feedback">Please pick a date.</div>
+    </div>
+    <div>
+      <label class="form-label d-block">Available times</label>
+      <div class="slots">
+        <label class="btn-check btn-outline theme-primary btn-sm"><input type="radio" name="slot"> 09:20</label>
+        <label class="btn-check btn-outline theme-primary btn-sm"><input type="radio" name="slot" checked> 10:40</label>
+        <label class="btn-check btn-outline theme-primary btn-sm"><input type="radio" name="slot"> 13:15</label>
+        <label class="btn-check btn-outline theme-primary btn-sm"><input type="radio" name="slot"> 16:30</label>
+      </div>
+    </div>
+    <div class="form-field">
+      <div class="switch"><input type="checkbox" value="" id="s5remind" role="switch" switch checked></div>
+      <label for="s5remind">Text me a reminder the day before</label>
+    </div>
+    <div><button class="btn-solid theme-primary w-100 btn-lg" type="submit" data-done-text="Booked &#10003;">Confirm booking</button></div>
+  </form>
+</div>
+  </div>
+</main>
+
+<script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

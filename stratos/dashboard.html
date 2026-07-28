@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — Stratos | Bootstrap 6 showcase</title>
+<meta name="description" content="An application shell built with Bootstrap 6: sidebar navigation, nav overflow, stat cards, data tables, progress meters and toasts.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="app">
+
+  <!-- Sidebar (desktop) -->
+  <aside class="app-aside">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold mb-5" href="index.html">
+      <span class="brand-mark" aria-hidden="true">S</span> Stratos
+    </a>
+
+    <p class="eyebrow fs-xs fg-3 mb-2">Workspace</p>
+    <ul class="app-nav mb-5">
+      <li><a class="active" href="#" aria-current="page">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg>
+        Overview</a></li>
+      <li><a href="#">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h7"/></svg>
+        Roadmap</a></li>
+      <li><a href="#">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.5 14 5v6l-6 3.5L2 11V5z"/></svg>
+        Releases</a></li>
+      <li><a href="#">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M11 2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4z"/><path d="M6 7h4M6 10h4" stroke-linecap="round"/></svg>
+        Documents</a></li>
+      <li><a href="#">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2 12V7m4 5V4m4 8V6m4 6V2"/></svg>
+        Analytics</a></li>
+    </ul>
+
+    <p class="eyebrow fs-xs fg-3 mb-2">Account</p>
+    <ul class="app-nav">
+      <li><a href="#">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="5" r="2.5"/><path d="M3 13.5c0-2.2 2.2-3.5 5-3.5s5 1.3 5 3.5"/></svg>
+        Members</a></li>
+      <li><a href="pricing.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5"/><path d="M1.5 6.5h13" stroke-linecap="round"/></svg>
+        Billing</a></li>
+      <li><a href="#">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.6M8 12.9v1.6M14.5 8h-1.6M3.1 8H1.5m11-4.6-1.1 1.1M4.6 11.4l-1.1 1.1m0-9.1 1.1 1.1m6.8 6.8 1.1 1.1" stroke-linecap="round"/></svg>
+        Settings</a></li>
+    </ul>
+
+    <div class="mt-6 p-3 rounded-5 bg-3">
+      <p class="fs-xs fw-semibold mb-1">Trial ends in 3 days</p>
+      <p class="fs-xs fg-2 mb-3">Upgrade to keep automatic release notes.</p>
+      <a class="btn-solid theme-primary btn-sm w-100" href="pricing.html">Choose a plan</a>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="app-main">
+
+    <!-- Topbar -->
+    <div class="d-flex flex-wrap align-items-center gap-3 mb-5">
+      <button class="btn-icon lg:d-none" type="button" data-bs-toggle="drawer" data-bs-target="#appDrawer" aria-controls="appDrawer" aria-label="Open navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+
+      <div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb fs-xs mb-1">
+            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Stratos</a></li>
+            <li class="breadcrumb-divider">/</li>
+            <li class="breadcrumb-item" aria-current="page"><a class="breadcrumb-link active" href="#">Overview</a></li>
+          </ol>
+        </nav>
+        <h1 class="fs-2xl fw-bold mb-0">Overview</h1>
+      </div>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <div class="form-control form-adorn d-none md:d-flex" style="width:16rem">
+          <div class="form-adorn-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 4 4" stroke-linecap="round"/></svg>
+          </div>
+          <input type="search" class="form-ghost" placeholder="Search…" aria-label="Search">
+        </div>
+
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+
+        <button class="btn-icon" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Account menu">
+          <span class="avatar avatar-sm"><span class="avatar-initials">PN</span></span>
+        </button>
+        <div class="menu">
+          <a class="menu-item" href="#">Profile</a>
+          <a class="menu-item" href="#">Preferences</a>
+          <hr class="menu-divider">
+          <a class="menu-item" href="index.html">Sign out</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section nav with overflow collapsing -->
+    <ul class="nav nav-pills mb-5" data-bs-toggle="nav-overflow">
+      <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Overview</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Throughput</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Cycle time</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Review latency</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Carryover</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Deployments</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Incidents</a></li>
+    </ul>
+
+    <main id="main">
+
+      <!-- Stat cards -->
+      <div class="row g-4 mb-5">
+        <div class="sm:col-6 xl:col-3">
+          <div class="stat-card">
+            <p class="fs-xs fg-3 eyebrow mb-2">Shipped this week</p>
+            <p class="stat-value mb-1">38</p>
+            <p class="fs-xs mb-0"><span class="fg-success fw-semibold">▲ 12%</span> <span class="fg-3">vs. last week</span></p>
+          </div>
+        </div>
+        <div class="sm:col-6 xl:col-3">
+          <div class="stat-card">
+            <p class="fs-xs fg-3 eyebrow mb-2">Median cycle time</p>
+            <p class="stat-value mb-1">2.1<span class="fs-md fw-normal fg-3"> days</span></p>
+            <p class="fs-xs mb-0"><span class="fg-success fw-semibold">▼ 0.4d</span> <span class="fg-3">faster</span></p>
+          </div>
+        </div>
+        <div class="sm:col-6 xl:col-3">
+          <div class="stat-card">
+            <p class="fs-xs fg-3 eyebrow mb-2">Review latency</p>
+            <p class="stat-value mb-1">6.5<span class="fs-md fw-normal fg-3"> hrs</span></p>
+            <p class="fs-xs mb-0"><span class="fg-danger fw-semibold">▲ 1.2h</span> <span class="fg-3">slower</span></p>
+          </div>
+        </div>
+        <div class="sm:col-6 xl:col-3">
+          <div class="stat-card">
+            <p class="fs-xs fg-3 eyebrow mb-2">Open incidents</p>
+            <p class="stat-value mb-1">0</p>
+            <p class="fs-xs mb-0"><span class="fg-3">14 days without one</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+
+        <!-- Chart card -->
+        <div class="lg:col-8">
+          <div class="stat-card is-chart h-100">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+              <h2 class="fs-lg fw-semibold mb-0">Throughput</h2>
+              <button class="btn-outline theme-secondary btn-sm" type="button" data-bs-toggle="menu" aria-expanded="false">Last 7 days</button>
+              <div class="menu">
+                <a class="menu-item" href="#">Last 7 days</a>
+                <a class="menu-item" href="#">Last 30 days</a>
+                <a class="menu-item" href="#">This quarter</a>
+              </div>
+            </div>
+            <div class="mockup-chart mb-4">
+              <span class="mockup-col" style="--v:38%"><i></i><em>M</em></span>
+              <span class="mockup-col" style="--v:55%"><i></i><em>T</em></span>
+              <span class="mockup-col" style="--v:46%"><i></i><em>W</em></span>
+              <span class="mockup-col is-peak" style="--v:78%"><i></i><em>T</em></span>
+              <span class="mockup-col" style="--v:62%"><i></i><em>F</em></span>
+              <span class="mockup-col" style="--v:70%"><i></i><em>S</em></span>
+              <span class="mockup-col is-peak" style="--v:92%"><i></i><em>S</em></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Usage card -->
+        <div class="lg:col-4">
+          <div class="stat-card h-100">
+            <h2 class="fs-lg fw-semibold mb-4">Plan usage</h2>
+
+            <div class="mb-4">
+              <div class="d-flex justify-content-between fs-sm mb-2">
+                <span>Seats <button type="button" class="btn-icon btn-sm" data-bs-toggle="tooltip" data-bs-title="Guests don't count toward seats" aria-label="About seats">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1M7.25 4.5h1.5V6h-1.5zm0 3h1.5v4h-1.5z"/></svg>
+                </button></span>
+                <span class="fg-2">36 / 50</span>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Seats used" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width:72%"></div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="d-flex justify-content-between fs-sm mb-2"><span>Storage</span><span class="fg-2">38 GB / 100 GB</span></div>
+              <div class="progress" role="progressbar" aria-label="Storage used" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar theme-success" style="width:38%"></div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="d-flex justify-content-between fs-sm mb-2"><span>API calls</span><span class="fg-2">910k / 1M</span></div>
+              <div class="progress" role="progressbar" aria-label="API calls used" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar theme-danger" style="width:91%"></div>
+              </div>
+            </div>
+
+            <button class="btn-outline theme-secondary w-100" type="button" id="toastBtn">Request more capacity</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Releases table -->
+      <div class="stat-card">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+          <h2 class="fs-lg fw-semibold mb-0">Recent releases</h2>
+          <div class="d-flex gap-2">
+            <button class="btn-outline theme-secondary btn-sm" type="button" data-bs-toggle="drawer" data-bs-target="#filterDrawer">Filters</button>
+            <button class="btn-solid theme-primary btn-sm" type="button" data-bs-toggle="dialog" data-bs-target="#newReleaseDialog">New release</button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
+            <thead>
+              <tr>
+                <th scope="col">Release</th><th scope="col">Owner</th>
+                <th scope="col">Scope</th><th scope="col">Cycle time</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">v2.4.0</th>
+                <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">PN</span></span> Priya N.</span></td>
+                <td><span class="chip">payments</span></td>
+                <td>2.1 days</td>
+                <td><span class="badge badge-subtle theme-success">Shipped</span></td>
+                <td class="text-end">
+                  <button class="btn-icon btn-sm" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Actions for v2.4.0">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="3" cy="8" r="1.3"/><circle cx="8" cy="8" r="1.3"/><circle cx="13" cy="8" r="1.3"/></svg>
+                  </button>
+                  <div class="menu">
+                    <a class="menu-item" href="#">View notes</a>
+                    <a class="menu-item" href="#">Duplicate</a>
+                    <hr class="menu-divider">
+                    <a class="menu-item" href="#">Roll back</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">v2.3.9</th>
+                <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">ML</span></span> Marcus L.</span></td>
+                <td><span class="chip">search</span></td>
+                <td>3.4 days</td>
+                <td><span class="badge badge-subtle theme-warning">In review</span></td>
+                <td class="text-end">
+                  <button class="btn-icon btn-sm" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Actions for v2.3.9">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="3" cy="8" r="1.3"/><circle cx="8" cy="8" r="1.3"/><circle cx="13" cy="8" r="1.3"/></svg>
+                  </button>
+                  <div class="menu">
+                    <a class="menu-item" href="#">View notes</a>
+                    <a class="menu-item" href="#">Request review</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">v2.3.8</th>
+                <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">DR</span></span> Dana R.</span></td>
+                <td><span class="chip">billing</span></td>
+                <td>1.8 days</td>
+                <td><span class="badge badge-subtle theme-success">Shipped</span></td>
+                <td class="text-end">
+                  <button class="btn-icon btn-sm" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Actions for v2.3.8">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="3" cy="8" r="1.3"/><circle cx="8" cy="8" r="1.3"/><circle cx="13" cy="8" r="1.3"/></svg>
+                  </button>
+                  <div class="menu">
+                    <a class="menu-item" href="#">View notes</a>
+                    <a class="menu-item" href="#">Duplicate</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">v2.3.7</th>
+                <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">TB</span></span> Tomas B.</span></td>
+                <td><span class="chip">infra</span></td>
+                <td>5.2 days</td>
+                <td><span class="badge badge-subtle theme-danger">Blocked</span></td>
+                <td class="text-end">
+                  <button class="btn-icon btn-sm" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Actions for v2.3.7">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="3" cy="8" r="1.3"/><circle cx="8" cy="8" r="1.3"/><circle cx="13" cy="8" r="1.3"/></svg>
+                  </button>
+                  <div class="menu">
+                    <a class="menu-item" href="#">View blocker</a>
+                    <a class="menu-item" href="#">Escalate</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <nav aria-label="Release history" class="mt-4">
+          <ul class="pagination mb-0">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link active" aria-current="page" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- Mobile sidebar -->
+<dialog class="drawer drawer-start" tabindex="-1" id="appDrawer" aria-labelledby="appDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="appDrawerLabel">Stratos</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <ul class="app-nav">
+      <li><a class="active" href="#" aria-current="page">Overview</a></li>
+      <li><a href="#">Roadmap</a></li>
+      <li><a href="#">Releases</a></li>
+      <li><a href="#">Documents</a></li>
+      <li><a href="#">Analytics</a></li>
+      <li><a href="#">Members</a></li>
+      <li><a href="pricing.html">Billing</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </div>
+</dialog>
+
+<!-- Filters -->
+<dialog class="drawer drawer-end" tabindex="-1" id="filterDrawer" aria-labelledby="filterDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="filterDrawerLabel">Filters</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <div class="mb-4">
+      <label class="form-label">Status</label>
+      <div class="form-field"><input type="checkbox" class="check" id="fSh" checked><label for="fSh">Shipped</label></div>
+      <div class="form-field"><input type="checkbox" class="check" id="fRe" checked><label for="fRe">In review</label></div>
+      <div class="form-field"><input type="checkbox" class="check" id="fBl"><label for="fBl">Blocked</label></div>
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="fDate">Shipped after</label>
+      <input type="text" class="form-control" id="fDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose date…">
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="fCycle">Max cycle time</label>
+      <div class="form-range" data-bs-bubble>
+        <input type="range" class="form-range-input" id="fCycle" min="1" max="14" value="7">
+      </div>
+    </div>
+    <button class="btn-solid theme-primary w-100" type="button" data-bs-dismiss="drawer">Apply filters</button>
+  </div>
+</dialog>
+
+<!-- New release dialog -->
+<dialog class="dialog dialog-lg" id="newReleaseDialog" aria-labelledby="newReleaseTitle">
+  <div class="dialog-header">
+    <h1 class="dialog-title fs-lg" id="newReleaseTitle">New release</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <form class="dialog-body row g-4" novalidate data-bs-validate id="newReleaseForm">
+    <div class="md:col-6">
+      <div class="form-field">
+        <label class="form-label" for="nrVersion">Version</label>
+        <input type="text" class="form-control" id="nrVersion" placeholder="v2.4.1" required>
+        <div class="invalid-feedback">Required.</div>
+      </div>
+    </div>
+    <div class="md:col-6">
+      <div class="form-field">
+        <label class="form-label" for="nrDate">Ship date</label>
+        <input type="text" class="form-control" id="nrDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose date…">
+      </div>
+    </div>
+    <div class="col-12">
+      <label class="form-label">Repository</label>
+      <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="nrRepo" data-bs-placeholder="Select a repository…">
+        <span class="combobox-value">Select a repository…</span>
+        <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+      </button>
+      <div class="menu">
+        <button class="menu-item" type="button" data-bs-value="core">stratos/core</button>
+        <button class="menu-item" type="button" data-bs-value="web">stratos/web</button>
+        <button class="menu-item" type="button" data-bs-value="api">stratos/api</button>
+      </div>
+    </div>
+    <div class="col-12">
+      <label class="form-label" for="nrReviewers">Reviewers</label>
+      <div class="chip-input" data-bs-chips>
+        <span class="chip">priya</span>
+        <input type="text" class="form-ghost" id="nrReviewers" placeholder="Add reviewer…">
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-field">
+        <div class="switch"><input type="checkbox" value="" id="nrAnnounce" role="switch" switch checked></div>
+        <label for="nrAnnounce">Announce in #releases</label>
+      </div>
+    </div>
+  </form>
+  <div class="dialog-footer">
+    <button type="button" class="btn-text" data-bs-dismiss="dialog">Cancel</button>
+    <button type="submit" form="newReleaseForm" class="btn-solid theme-primary">Create release</button>
+  </div>
+</dialog>
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div class="toast" id="demoToast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <span class="badge theme-success me-2">✓</span>
+      <strong class="me-auto">Stratos</strong>
+      <small class="fg-3">just now</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">Capacity request sent to your account manager.</div>
+  </div>
+</div>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

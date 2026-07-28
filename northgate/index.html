@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus — Free Bootstrap 6 School Website Template</title>
+<meta name="description" content="Campus is a free Bootstrap 6 school and college website template — programmes, admissions stepper, key dates, staff and an enquiry form.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navScroll" data-bs-top-margin="110px" data-bs-smooth-scroll="true">
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="util-bar">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <span class="fg-3">Northgate Academy &middot; Established 1912</span>
+    <div class="d-flex flex-wrap gap-3">
+      <a href="#">Parent portal</a>
+      <a href="#">Staff login</a>
+      <a href="#contact">+44 20 7000 0000</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">N</span> Northgate
+      </a>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto" id="navScroll">
+            <li class="nav-item"><a class="nav-link" href="#programmes">Programmes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+            <li class="nav-item"><a class="nav-link" href="#life">School life</a></li>
+            <li class="nav-item"><a class="nav-link" href="#staff">Staff</a></li>
+            <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </dialog>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <a class="btn-solid theme-primary d-none md:d-inline-flex" href="#admissions">Apply now</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center g-6">
+        <div class="lg:col-6">
+          <span class="badge badge-subtle theme-primary mb-4">Applications open for September 2027</span>
+          <h1 class="hero-title fs-6xl fw-bold mb-4">An education that fits the child</h1>
+          <p class="hero-lede fs-lg fg-2 mb-6">
+            Northgate is a co-educational day school for ages 4–18 in north London.
+            Small classes, broad curriculum, and a stubborn belief that children
+            learn best when they are known.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-6">
+            <a class="btn-solid theme-primary btn-lg" href="#admissions">Start an application</a>
+            <a class="btn-outline theme-secondary btn-lg" href="#visit">Book a visit</a>
+          </div>
+          <div class="notice">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" class="flex-shrink-0" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1M7.25 4.5h1.5V6h-1.5zm0 3h1.5v4h-1.5z"/></svg>
+            <span><strong>Open Morning:</strong> Saturday 14 November, 9:30am. <a href="#visit">Reserve a place →</a></span>
+          </div>
+        </div>
+        <div class="lg:col-6">
+          <div class="row g-3">
+            <div class="col-7"><div class="ph ph-3x4 rounded-6"><img src="img/hero-science.jpg" alt="Pupils working in a school science laboratory" width="700" height="933" loading="eager"></div></div>
+            <div class="col-5">
+              <div class="ph ph-1x1 rounded-6 mb-3"><img src="img/hero-library.jpg" alt="School library reading room" width="500" height="500" loading="eager"></div>
+              <div class="ph ph-1x1 rounded-6"><img src="img/hero-sports.jpg" alt="School sports hall" width="500" height="500" loading="eager"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facts -->
+  <section class="pb-9">
+    <div class="container">
+      <dl class="stat-band">
+        <div><dt>1,240</dt><dd>pupils, ages 4–18</dd></div>
+        <div><dt>1:9</dt><dd>teacher to pupil ratio</dd></div>
+        <div><dt>94%</dt><dd>to first-choice university</dd></div>
+        <div><dt>38</dt><dd>clubs and societies</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Programmes -->
+  <section class="section bg-2" id="programmes">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+        <div>
+          <p class="eyebrow fs-sm fg-primary mb-2">Programmes</p>
+          <h2 class="fs-4xl fw-bold mb-0" style="letter-spacing:-.03em">Find the right stage</h2>
+        </div>
+        <div style="min-width:16rem">
+          <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="stage" data-bs-placeholder="Filter by stage">
+            <span class="combobox-value">Filter by stage</span>
+            <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+          </button>
+          <div class="menu">
+            <button class="menu-item" type="button" data-bs-value="prep">Prep (4–11)</button>
+            <button class="menu-item" type="button" data-bs-value="senior">Senior (11–16)</button>
+            <button class="menu-item" type="button" data-bs-value="sixth">Sixth Form (16–18)</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="md:col-6 lg:col-4">
+          <article class="programme surface lift">
+            <div class="ph ph-16x9">Prep School</div>
+            <div class="programme-body">
+              <span class="chip mb-3">Ages 4–11</span>
+              <h3 class="programme-title"><a href="programme.html">Prep School</a></h3>
+              <p class="fg-2 fs-sm mb-0">Reading, curiosity and outdoor learning. Specialist teaching in music, languages and sport from Year 3.</p>
+              <div class="programme-facts">
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="5" r="2.5"/><path d="M3 13.5c0-2.2 2.2-3.5 5-3.5s5 1.3 5 3.5"/></svg>18 per class</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M2 6.5h12M5.5 2v2M10.5 2v2" stroke-linecap="round"/></svg>Sep &amp; Jan intake</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <article class="programme surface lift">
+            <div class="ph ph-16x9">Senior School</div>
+            <div class="programme-body">
+              <span class="chip mb-3">Ages 11–16</span>
+              <h3 class="programme-title"><a href="programme.html">Senior School</a></h3>
+              <p class="fg-2 fs-sm mb-0">A broad GCSE offer with 24 subjects, including three sciences taught separately from Year 9.</p>
+              <div class="programme-facts">
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="5" r="2.5"/><path d="M3 13.5c0-2.2 2.2-3.5 5-3.5s5 1.3 5 3.5"/></svg>22 per class</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M2 6.5h12M5.5 2v2M10.5 2v2" stroke-linecap="round"/></svg>September intake</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <article class="programme surface lift">
+            <div class="ph ph-16x9">Sixth Form</div>
+            <div class="programme-body">
+              <span class="chip mb-3">Ages 16–18</span>
+              <h3 class="programme-title"><a href="programme.html">Sixth Form</a></h3>
+              <p class="fg-2 fs-sm mb-0">A-levels and the IB Diploma side by side, with a dedicated university and apprenticeships team.</p>
+              <div class="programme-facts">
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="5" r="2.5"/><path d="M3 13.5c0-2.2 2.2-3.5 5-3.5s5 1.3 5 3.5"/></svg>12 per class</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M2 6.5h12M5.5 2v2M10.5 2v2" stroke-linecap="round"/></svg>September intake</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions -->
+  <section class="section" id="admissions">
+    <div class="container">
+      <div class="section-narrow text-center mb-7">
+        <p class="eyebrow fs-sm fg-primary mb-2">Admissions</p>
+        <h2 class="fs-4xl fw-bold mb-3" style="letter-spacing:-.03em">Four steps, no mystery</h2>
+        <p class="fs-lg fg-2 mb-0">We publish everything: the timeline, the assessment format and what we're actually looking for.</p>
+      </div>
+
+      <div class="contains-inline mb-7">
+        <ol class="stepper md:stepper-horizontal">
+          <li class="stepper-item active">Register interest</li>
+          <li class="stepper-item active">Visit the school</li>
+          <li class="stepper-item">Assessment day</li>
+          <li class="stepper-item">Offer &amp; place</li>
+        </ol>
+      </div>
+
+      <div class="row g-4 mb-7">
+        <div class="md:col-6 lg:col-3">
+          <h3 class="fs-md fw-semibold mb-2">1. Register interest</h3>
+          <p class="fg-2 fs-sm mb-0">Two minutes online. You'll get the prospectus and the current fee schedule immediately.</p>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <h3 class="fs-md fw-semibold mb-2">2. Visit the school</h3>
+          <p class="fg-2 fs-sm mb-0">An Open Morning or a private tour on a normal working day — we recommend the latter.</p>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <h3 class="fs-md fw-semibold mb-2">3. Assessment day</h3>
+          <p class="fg-2 fs-sm mb-0">Age-appropriate papers plus a conversation. No tutoring required, and we mean it.</p>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <h3 class="fs-md fw-semibold mb-2">4. Offer &amp; place</h3>
+          <p class="fg-2 fs-sm mb-0">Offers go out in February. Bursary decisions arrive at the same time, never later.</p>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="lg:col-7">
+          <div class="accordion">
+            <details class="accordion-item" name="adm" open>
+              <summary class="accordion-header">
+                What are the fees, and are bursaries available?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body">Fees for 2027–28 run from £4,850 per term in Prep to £6,420 in Sixth Form, including lunches and most trips. Around one pupil in six holds a means-tested bursary, up to 100% of fees.</div>
+            </details>
+            <details class="accordion-item" name="adm">
+              <summary class="accordion-header">
+                Do you require tutoring before assessment?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body">No — and heavily tutored candidates are usually obvious to us. The papers are designed to show how a child thinks, not what they have been drilled on.</div>
+            </details>
+            <details class="accordion-item" name="adm">
+              <summary class="accordion-header">
+                Can we join mid-year?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body">Occasionally, where a place comes free. Register your interest and we will contact you if one opens in your child's year group.</div>
+            </details>
+            <details class="accordion-item" name="adm">
+              <summary class="accordion-header">
+                What support is there for SEN?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body">We have four full-time specialists and support around 90 pupils with identified needs. Talk to us early so we can be honest about whether we're the right setting.</div>
+            </details>
+          </div>
+        </div>
+
+        <div class="lg:col-5">
+          <div class="surface surface-pad">
+            <h3 class="fs-lg fw-semibold mb-4">Key dates</h3>
+            <div class="date-item">
+              <span class="date-badge"><b>14</b><span>Nov</span></span>
+              <div><p class="fw-semibold fs-sm mb-1">Open Morning</p><p class="fg-2 fs-xs mb-0">9:30am–12:30pm, whole school</p></div>
+            </div>
+            <div class="date-item">
+              <span class="date-badge"><b>05</b><span>Dec</span></span>
+              <div><p class="fw-semibold fs-sm mb-1">Registration closes</p><p class="fg-2 fs-xs mb-0">For September 2027 entry</p></div>
+            </div>
+            <div class="date-item">
+              <span class="date-badge"><b>17</b><span>Jan</span></span>
+              <div><p class="fw-semibold fs-sm mb-1">Assessment day</p><p class="fg-2 fs-xs mb-0">Years 7 and 12 entry</p></div>
+            </div>
+            <div class="date-item">
+              <span class="date-badge"><b>13</b><span>Feb</span></span>
+              <div><p class="fw-semibold fs-sm mb-1">Offers released</p><p class="fg-2 fs-xs mb-0">By 4pm, with bursary outcomes</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- School life -->
+  <section class="section bg-2" id="life">
+    <div class="container">
+      <div class="section-narrow text-center mb-7">
+        <p class="eyebrow fs-sm fg-primary mb-2">School life</p>
+        <h2 class="fs-4xl fw-bold mb-0" style="letter-spacing:-.03em">More than the timetable</h2>
+      </div>
+
+      <ul class="nav nav-tabs justify-content-center border-0 mb-6" role="tablist">
+        <li class="nav-item" role="presentation"><button class="nav-link active" id="sp-tab" data-bs-toggle="tab" data-bs-target="#sp" type="button" role="tab" aria-controls="sp" aria-selected="true">Sport</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" id="ar-tab" data-bs-toggle="tab" data-bs-target="#ar" type="button" role="tab" aria-controls="ar" aria-selected="false">Arts</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" id="ou-tab" data-bs-toggle="tab" data-bs-target="#ou" type="button" role="tab" aria-controls="ou" aria-selected="false">Outdoor</button></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="sp" role="tabpanel" aria-labelledby="sp-tab" tabindex="0">
+          <div class="row g-4">
+            <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Rowing</div><div class="surface-pad"><h3 class="fs-lg fw-semibold mb-2">Rowing</h3><p class="fg-2 fs-sm mb-0">On the Lea four mornings a week, from Year 9 up.</p></div></article></div>
+            <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Netball</div><div class="surface-pad"><h3 class="fs-lg fw-semibold mb-2">Netball &amp; hockey</h3><p class="fg-2 fs-sm mb-0">Sixteen teams across the school, and everyone gets a fixture.</p></div></article></div>
+            <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Athletics</div><div class="surface-pad"><h3 class="fs-lg fw-semibold mb-2">Athletics</h3><p class="fg-2 fs-sm mb-0">Track and field on site, with county-level coaching in the summer term.</p></div></article></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="ar" role="tabpanel" aria-labelledby="ar-tab" tabindex="0">
+          <div class="row g-4">
+            <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Orchestra</div><div class="surface-pad"><h3 class="fs-lg fw-semibold mb-2">Music</h3><p class="fg-2 fs-sm mb-0">Two orchestras, a jazz band and 340 individual lessons a week.</p></div></article></div>
+            <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Drama</div><div class="surface-pad"><h3 class="fs-lg fw-semibold mb-2">Drama</h3><p class="fg-2 fs-sm mb-0">Three productions a year in a 220-seat theatre run largely by pupils.</p></div></article></div>
+            <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Studio</div><div class="surface-pad"><h3 class="fs-lg fw-semibold mb-2">Art &amp; design</h3><p class="fg-2 fs-sm mb-0">Open studio access, kilns, and a print room that runs until six.</p></div></article></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="ou" role="tabpanel" aria-labelledby="ou-tab" tabindex="0">
+          <div class="row g-4">
+            <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Expeditions</div><div class="surface-pad"><h3 class="fs-lg fw-semibold mb-2">Duke of Edinburgh</h3><p class="fg-2 fs-sm mb-0">Bronze through Gold, with expeditions in Snowdonia and the Cairngorms.</p></div></article></div>
+            <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Forest</div><div class="surface-pad"><h3 class="fs-lg fw-semibold mb-2">Forest School</h3><p class="fg-2 fs-sm mb-0">Every Prep class, every week, in all but the worst weather.</p></div></article></div>
+            <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Garden</div><div class="surface-pad"><h3 class="fs-lg fw-semibold mb-2">Kitchen garden</h3><p class="fg-2 fs-sm mb-0">Pupil-run, and it supplies the school kitchen for most of the summer.</p></div></article></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Staff -->
+  <section class="section" id="staff">
+    <div class="container">
+      <div class="section-narrow text-center mb-7">
+        <p class="eyebrow fs-sm fg-primary mb-2">Staff</p>
+        <h2 class="fs-4xl fw-bold mb-0" style="letter-spacing:-.03em">Who you'll be dealing with</h2>
+      </div>
+      <div class="row g-4">
+        <div class="sm:col-6 lg:col-3">
+          <div class="staff-photo"><div class="ph ph-1x1">Head</div></div>
+          <h3 class="fs-md fw-semibold mb-1">Dr Aline Okonjo</h3>
+          <p class="fg-3 fs-sm mb-0">Head Teacher</p>
+        </div>
+        <div class="sm:col-6 lg:col-3">
+          <div class="staff-photo"><div class="ph ph-1x1">Deputy</div></div>
+          <h3 class="fs-md fw-semibold mb-1">Peter Halloran</h3>
+          <p class="fg-3 fs-sm mb-0">Deputy Head, Academic</p>
+        </div>
+        <div class="sm:col-6 lg:col-3">
+          <div class="staff-photo"><div class="ph ph-1x1">Pastoral</div></div>
+          <h3 class="fs-md fw-semibold mb-1">Nadia Rashid</h3>
+          <p class="fg-3 fs-sm mb-0">Head of Pastoral Care</p>
+        </div>
+        <div class="sm:col-6 lg:col-3">
+          <div class="staff-photo"><div class="ph ph-1x1">Admissions</div></div>
+          <h3 class="fs-md fw-semibold mb-1">Grace Whitfield</h3>
+          <p class="fg-3 fs-sm mb-0">Registrar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="section bg-2" id="news">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+        <div>
+          <p class="eyebrow fs-sm fg-primary mb-2">News</p>
+          <h2 class="fs-3xl fw-bold mb-0" style="letter-spacing:-.02em">From the school</h2>
+        </div>
+        <a class="btn-text" href="#">All news →</a>
+      </div>
+      <div class="row g-4">
+        <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Results</div><div class="surface-pad"><p class="fs-xs fg-3 mb-2">22 August 2026</p><h3 class="fs-lg fw-semibold mb-2">A-level results: 68% at A*–A</h3><p class="fg-2 fs-sm mb-0">And, more importantly, 94% to their first-choice destination.</p></div></article></div>
+        <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Theatre</div><div class="surface-pad"><p class="fs-xs fg-3 mb-2">11 July 2026</p><h3 class="fs-lg fw-semibold mb-2">The new theatre opens</h3><p class="fg-2 fs-sm mb-0">220 seats, a proper fly tower, and a lighting rig run by Year 12.</p></div></article></div>
+        <div class="md:col-4"><article class="surface lift h-100 overflow-hidden"><div class="ph ph-16x9">Bursary</div><div class="surface-pad"><p class="fs-xs fg-3 mb-2">3 June 2026</p><h3 class="fs-lg fw-semibold mb-2">Bursary fund passes £2m</h3><p class="fg-2 fs-sm mb-0">Enough to fund 40 full places a year in perpetuity.</p></div></article></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit / contact -->
+  <section class="section" id="visit">
+    <div class="container">
+      <div class="row g-6 align-items-start" id="contact">
+        <div class="lg:col-5">
+          <p class="eyebrow fs-sm fg-primary mb-2">Visit us</p>
+          <h2 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.02em">Come and see a normal Tuesday</h2>
+          <p class="fg-2 mb-5">Open Mornings are useful, but a private tour on a working day tells you far more. Pick a date and we'll arrange it.</p>
+          <ul class="vstack gap-3 list-unstyled mb-0">
+            <li class="d-flex align-items-center gap-3">
+              <span class="icon-tile"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="7" r="2.5"/><path d="M8 1.5c2.5 0 4.5 2 4.5 4.5 0 3.2-4.5 8.5-4.5 8.5S3.5 9.2 3.5 6c0-2.5 2-4.5 4.5-4.5" stroke-linejoin="round"/></svg></span>
+              <span><span class="d-block fs-xs fg-3">Address</span><span class="fw-semibold fs-sm">14 Northgate Road, London N4 2QP</span></span>
+            </li>
+            <li class="d-flex align-items-center gap-3">
+              <span class="icon-tile"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="m2 4 6 4.5L14 4"/></svg></span>
+              <span><span class="d-block fs-xs fg-3">Admissions</span><span class="fw-semibold fs-sm">admissions@northgate.example</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:col-7">
+          <form class="surface surface-pad row g-4" id="visitForm" data-demo-form data-bs-validate novalidate>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="vName">Parent or guardian name</label>
+                <input type="text" class="form-control" id="vName" required>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="vEmail">Email</label>
+                <div class="form-control form-adorn">
+                  <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="m2 4 6 4.5L14 4"/></svg></div>
+                  <input type="email" class="form-ghost" id="vEmail" required>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <label class="form-label">Entry point</label>
+              <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-name="entry" data-bs-placeholder="Select…">
+                <span class="combobox-value">Select…</span>
+                <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+              </button>
+              <div class="menu">
+                <button class="menu-item" type="button" data-bs-value="reception">Reception (age 4)</button>
+                <button class="menu-item" type="button" data-bs-value="y3">Year 3 (age 7)</button>
+                <button class="menu-item" type="button" data-bs-value="y7">Year 7 (age 11)</button>
+                <button class="menu-item" type="button" data-bs-value="y12">Year 12 (age 16)</button>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="vDate">Preferred visit date</label>
+                <input type="text" class="form-control" id="vDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…">
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="vTopics">Interests</label>
+              <div class="chip-input" data-bs-chips>
+                <span class="chip">music</span>
+                <span class="chip">bursaries</span>
+                <input type="text" class="form-ghost" id="vTopics" placeholder="Add a topic…">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-field">
+                <label class="form-label" for="vMsg">Anything we should know?</label>
+                <textarea class="form-control" id="vMsg" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-field">
+                <input type="checkbox" class="check" id="vConsent" required>
+                <label for="vConsent">I'm happy to be contacted about admissions</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Request sent ✓">Request a visit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer bg-2 pt-9 pb-6">
+  <div class="container">
+    <div class="row g-6 mb-7">
+      <div class="lg:col-4">
+        <a class="navbar-brand d-inline-flex align-items-center gap-2 fw-semibold mb-3" href="index.html"><span class="brand-mark" aria-hidden="true">N</span> Northgate</a>
+        <p class="fg-2 fs-sm mb-0" style="max-width:22rem">A co-educational day school for ages 4–18 in north London. Established 1912.</p>
+      </div>
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">School</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#programmes">Programmes</a></li>
+          <li><a class="fg-2" href="#life">School life</a></li>
+          <li><a class="fg-2" href="#staff">Staff</a></li>
+          <li><a class="fg-2" href="#news">News</a></li>
+        </ul>
+      </div>
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">Admissions</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#admissions">How to apply</a></li>
+          <li><a class="fg-2" href="#visit">Book a visit</a></li>
+          <li><a class="fg-2" href="#">Fees</a></li>
+          <li><a class="fg-2" href="#">Bursaries</a></li>
+        </ul>
+      </div>
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">Parents</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#">Term dates</a></li>
+          <li><a class="fg-2" href="#">Uniform</a></li>
+          <li><a class="fg-2" href="#">Catering</a></li>
+          <li><a class="fg-2" href="#">Portal</a></li>
+        </ul>
+      </div>
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">Policies</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#">Safeguarding</a></li>
+          <li><a class="fg-2" href="#">Privacy</a></li>
+          <li><a class="fg-2" href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 pt-4">
+      <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Northgate Academy. A free template for uicookies.</p>
+      <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

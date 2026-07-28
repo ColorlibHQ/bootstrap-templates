@@ -1,0 +1,35 @@
+{
+  "slug": "ironworks",
+  "title": "Ironworks — Free Bootstrap 6 Gym &amp; Fitness Website Template",
+  "excerpt": "A free Bootstrap 6 gym template with a vertical rail navigation, full class timetable, coach profiles, membership plans and a free-trial booking form.",
+  "yoastTitle": "Ironworks — Free Bootstrap 6 Gym &amp; Fitness Website Template",
+  "yoastDesc": "Free Bootstrap 6 gym and fitness template with a fixed vertical rail nav, a real weekly class timetable, coach profiles, membership plans and trial booking with Datepicker and Combobox.",
+  "intro": "Ironworks is a free, premium <strong>Bootstrap 6</strong> template for gyms, studios and strength &amp; conditioning coaches. Its navigation is a fixed vertical rail down the left edge rather than a top bar, which leaves the full width of the page for the thing members actually come for: the timetable.",
+  "note": "The weekly timetable is a genuine accessible table with row and column scopes and live remaining-space counts, filtered by a Bootstrap 6 Combobox. The trial form pairs the new Datepicker with a Combobox class picker and Chip input goals.",
+  "summary": "Ironworks is a free, premium Bootstrap 6 gym and fitness template. A fixed vertical rail navigation on desktop, heavy uppercase display type, numbered section markers, a real weekly class timetable with live space counts, coach profiles, three membership plans and a free-trial form built on Datepicker, Combobox and Chip input. Dark by default with light mode included. ESM-only vanilla JavaScript, no build step.",
+  "features": [
+    "Fixed vertical rail navigation on desktop, with a compact sticky bar on mobile",
+    "Weekly class timetable as a real accessible table with scopes, captions and live space counts",
+    "Combobox class filter above the timetable",
+    "Numbered section markers and heavy uppercase display type",
+    "Coach profiles with gradient name overlays",
+    "Three membership plans with a highlighted recommendation",
+    "Free-trial form using the new Datepicker, a Combobox class picker and Chip input goals",
+    "Accordion FAQ on native <details> — zero JavaScript",
+    "ScrollSpy drives the rail navigation as you scroll",
+    "Dark by default, light mode included via data-bs-theme",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "business-services"
+  ],
+  "images": [
+    {
+      "name": "hero",
+      "q": "gym barbell weights training floor",
+      "w": 1800,
+      "h": 1000
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+Placeholder photography
+=======================
+
+Every photograph here is CC0 / Public Domain Mark, sourced via the
+Openverse API — no attribution required, commercial use fine. Where no
+public-domain photograph matched a slot, the file is a generated gradient
+instead; those are marked below and carry no rights at all.
+
+Either way these are placeholders: replace them with your own photography
+before launch. Provenance for each file follows.
+
+stage.jpg
+  Woman; inscribed 'Miss S. Moodie'
+  CC0 1.0
+  https://www.rawpixel.com/image/9951125/woman-inscribed-miss-moodie-february-1936-spencer-digby-studios
+
+frame-1.jpg
+  Medieval street Alfama, Lisbon, Portugal
+  CC0 1.0
+  https://www.rawpixel.com/image/6741777/medieval-street-alfama-lisbon-portugal
+
+frame-2.jpg
+  SIRT Penn Maritime Inc jeh
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=10367035
+
+frame-3.jpg
+  <div class='fn'> [Studio Portrait of Plains Indian]</div>
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=84617558
+
+frame-4.jpg
+  (already present — see previous CREDITS.txt entry)
+
+frame-5.jpg
+  Outside a market stall
+  CC0 1.0
+  https://www.rawpixel.com/image/8779868/outside-market-stall
+
+frame-6.jpg
+  A bright orange sunrise behind dark trees, with city rooftops in the distance.
+  CC0 1.0
+  https://wordpress.org/photos/photo/61769901d9/
+
+frame-7.jpg
+  man cooking macaroni sale street
+  CC0 1.0
+  https://www.rawpixel.com/image/13966959/man-cooking-macaroni-for-sale-the-street-coloured-lithograph
+
+frame-8.jpg
+  Ferry Boat Harbour Louis Fleckenstein
+  CC0 1.0
+  https://www.rawpixel.com/image/14275595/ferry-boat-harbour-louis-fleckenstein
+
+frame-9.jpg
+  File:Sand mining san diego.jpg
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=61532090
+
+frame-10.jpg
+  Rehearsal for 'Fairy Hour,' 4/11/25
+  CC0 1.0
+  https://www.rawpixel.com/image/6909463/rehearsal-for-fairy-hour-41125

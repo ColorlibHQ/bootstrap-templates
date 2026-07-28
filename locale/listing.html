@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mokka Bar — Locale | Bootstrap 6 directory template</title>
+<meta name="description" content="Directory listing detail page built with Bootstrap 6 — tabs, reviews, opening hours, map rail and a review form.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">L</span> Locale
+      </a>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#results">Browse</a></li>
+            <li class="nav-item">
+              <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                Categories
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg>
+              </button>
+              <div class="menu">
+                <a class="menu-item" href="index.html#results">Coffee &amp; bakeries</a>
+                <a class="menu-item" href="index.html#results">Restaurants</a>
+                <a class="menu-item" href="index.html#results">Bars</a>
+                <a class="menu-item" href="index.html#results">Shops</a>
+                <hr class="menu-divider">
+                <a class="menu-item" href="index.html#results">Services</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="listing.html">Example listing</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#guides">Guides</a></li>
+          </ul>
+        </div>
+      </dialog>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <a class="btn-solid theme-primary d-none md:d-inline-flex" href="#">Add a listing</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="section">
+  <div class="container">
+
+    <nav aria-label="breadcrumb" class="mb-5">
+      <ol class="breadcrumb fs-sm">
+        <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html">Home</a></li>
+        <li class="breadcrumb-divider">/</li>
+        <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html#results">Coffee</a></li>
+        <li class="breadcrumb-divider">/</li>
+        <li class="breadcrumb-item" aria-current="page"><a class="breadcrumb-link active" href="listing.html">Mokka Bar</a></li>
+      </ol>
+    </nav>
+
+    <div class="ph ph-16x9 detail-hero fs-2xl mb-6" style="max-height:380px">Mokka Bar</div>
+
+    <div class="row g-6">
+      <div class="lg:col-8">
+
+        <div class="d-flex flex-wrap align-items-start gap-3 mb-4">
+          <div class="me-auto">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+              <span class="badge theme-primary">Editor&#8217;s pick</span>
+              <span class="badge badge-subtle theme-success">Claimed</span>
+            </div>
+            <h1 class="fs-4xl fw-bold mb-2" style="letter-spacing:-.03em">Mokka Bar</h1>
+            <div class="listing-meta">
+              <span class="rating"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>4.8</span>
+              <span>(312 reviews)</span><span aria-hidden="true">&#183;</span><span>Coffee</span><span aria-hidden="true">&#183;</span><span>Patershol</span><span aria-hidden="true">&#183;</span><span>&#8364;&#8364;</span>
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn-icon" type="button" aria-label="Save this place"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+            <button class="btn-icon" type="button" data-bs-toggle="tooltip" data-bs-title="Copy link" aria-label="Share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="3.5" r="1.8"/><circle cx="4" cy="8" r="1.8"/><circle cx="12" cy="12.5" r="1.8"/><path d="m10.4 4.4-4.8 2.7m0 1.8 4.8 2.7"/></svg></button>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mb-6">
+          <span class="chip">specialty</span><span class="chip">dog friendly</span><span class="chip">cash only</span><span class="chip">outdoor seating</span>
+        </div>
+
+        <ul class="nav nav-tabs mb-4" id="listingTab" role="tablist">
+          <li class="nav-item" role="presentation"><button class="nav-link active" id="ov-tab" data-bs-toggle="tab" data-bs-target="#ov" type="button" role="tab" aria-controls="ov" aria-selected="true">Overview</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" id="rv-tab" data-bs-toggle="tab" data-bs-target="#rv" type="button" role="tab" aria-controls="rv" aria-selected="false">Reviews</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" id="ph-tab" data-bs-toggle="tab" data-bs-target="#phts" type="button" role="tab" aria-controls="phts" aria-selected="false">Photos</button></li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ov" role="tabpanel" aria-labelledby="ov-tab" tabindex="0">
+            <div class="prose" style="max-width:44rem">
+              <p>Three seats, one grinder and a roaster in the back that has been running since 2011. Kasper roasts on Mondays, which is the day to come if you want to talk about it, and the day to avoid if you want somewhere quiet.</p>
+              <p>The filter menu changes weekly and is written on a card by the till. There is no oat milk debate here — they have it, they will not comment on it.</p>
+              <h3>Good to know</h3>
+              <ul><li>Cash only, there is an ATM two doors down</li><li>No laptops after 11:00 on weekends</li><li>Bags of the current roast are &#8364;14</li></ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="rv" role="tabpanel" aria-labelledby="rv-tab" tabindex="0">
+            <div class="vstack gap-4" style="max-width:44rem">
+              <figure class="surface surface-pad mb-0">
+                <div class="stars mb-3" role="img" aria-label="5 out of 5"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg></div>
+                <blockquote class="mb-3">&quot;Best filter in Ghent and it isn&#8217;t close. Bring cash, bring patience, don&#8217;t bring a laptop on Saturday.&quot;</blockquote>
+                <figcaption class="d-flex align-items-center gap-3"><span class="avatar"><span class="avatar-initials">JW</span></span><span><span class="d-block fw-semibold fs-sm">Joris W.</span><span class="d-block fg-3 fs-xs">42 reviews</span></span></figcaption>
+              </figure>
+              <figure class="surface surface-pad mb-0">
+                <div class="stars mb-3" role="img" aria-label="4 out of 5"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg></div>
+                <blockquote class="mb-3">&quot;Genuinely excellent coffee, genuinely three seats. Factor in a wait or take it away.&quot;</blockquote>
+                <figcaption class="d-flex align-items-center gap-3"><span class="avatar"><span class="avatar-initials">ML</span></span><span><span class="d-block fw-semibold fs-sm">Maren L.</span><span class="d-block fg-3 fs-xs">7 reviews</span></span></figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="phts" role="tabpanel" aria-labelledby="ph-tab" tabindex="0">
+            <div class="row g-3" style="max-width:44rem">
+              <div class="col-6 md:col-4"><div class="ph ph-1x1 rounded-5">Bar</div></div>
+              <div class="col-6 md:col-4"><div class="ph ph-1x1 rounded-5">Roaster</div></div>
+              <div class="col-6 md:col-4"><div class="ph ph-1x1 rounded-5">Filter</div></div>
+              <div class="col-6 md:col-4"><div class="ph ph-1x1 rounded-5">Terrace</div></div>
+              <div class="col-6 md:col-4"><div class="ph ph-1x1 rounded-5">Beans</div></div>
+              <div class="col-6 md:col-4"><div class="ph ph-1x1 rounded-5">Street</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="lg:col-4">
+        <div class="surface surface-pad" style="position:sticky;top:5.5rem">
+          <div class="map-canvas rounded-5 mb-4" style="aspect-ratio:4/3"><span class="map-pin is-active" style="left:50%;top:50%">1</span></div>
+
+          <p class="fw-semibold fs-sm mb-1">Sluizeken 14</p>
+          <p class="fg-2 fs-sm mb-4">9000 Ghent, Belgium</p>
+
+          <div class="d-grid gap-2 mb-5">
+            <a class="btn-solid theme-primary" href="#">Get directions</a>
+            <a class="btn-outline theme-secondary" href="#">+32 9 000 00 00</a>
+          </div>
+
+          <h2 class="fs-sm fw-semibold mb-2">Opening hours</h2>
+          <div class="mb-4">
+            <div class="hours-row is-today"><span>Monday</span><span>08:00 &#8211; 18:00</span></div>
+            <div class="hours-row"><span>Tuesday</span><span>08:00 &#8211; 18:00</span></div>
+            <div class="hours-row"><span>Wednesday</span><span>08:00 &#8211; 18:00</span></div>
+            <div class="hours-row"><span>Thursday</span><span>08:00 &#8211; 18:00</span></div>
+            <div class="hours-row"><span>Friday</span><span>08:00 &#8211; 19:00</span></div>
+            <div class="hours-row"><span>Saturday</span><span>09:00 &#8211; 19:00</span></div>
+            <div class="hours-row"><span>Sunday</span><span class="fg-3">Closed</span></div>
+          </div>
+
+          <hr class="mb-4">
+
+          <h2 class="fs-sm fw-semibold mb-3">Leave a review</h2>
+          <form id="reviewForm" data-demo-form data-bs-validate novalidate>
+            <div class="form-field mb-3">
+              <label class="form-label" for="rvName">Name</label>
+              <input type="text" class="form-control" id="rvName" required>
+              <div class="invalid-feedback">Required.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="rvScore">Rating</label>
+              <div class="form-range" data-bs-bubble>
+                <input type="range" class="form-range-input" id="rvScore" min="1" max="5" step="1" value="5" aria-label="Your rating">
+              </div>
+            </div>
+            <div class="form-field mb-3">
+              <label class="form-label" for="rvText">Your review</label>
+              <textarea class="form-control" id="rvText" rows="3" required></textarea>
+              <div class="invalid-feedback">Tell people what it&#8217;s like.</div>
+            </div>
+            <button class="btn-solid theme-primary w-100" type="submit" data-done-text="Review posted &#10003;">Post review</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+
+    <section class="mt-9">
+      <h2 class="fs-2xl fw-bold mb-5">Nearby</h2>
+      <div class="row g-4">
+        <div class="md:col-4"><article class="listing surface lift"><div class="listing-media"><div class="ph ph-16x9">Papier</div></div><div class="listing-body"><h3 class="listing-title"><a href="listing.html">Papier Bookshop</a></h3><div class="listing-meta"><span class="rating"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>4.7</span><span aria-hidden="true">&#183;</span><span>250 m</span></div></div></article></div>
+        <div class="md:col-4"><article class="listing surface lift"><div class="listing-media"><div class="ph ph-16x9">Wielen</div></div><div class="listing-body"><h3 class="listing-title"><a href="listing.html">Wielen Bike Repair</a></h3><div class="listing-meta"><span class="rating"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>4.9</span><span aria-hidden="true">&#183;</span><span>600 m</span></div></div></article></div>
+        <div class="md:col-4"><article class="listing surface lift"><div class="listing-media"><div class="ph ph-16x9">De Vier Tafels</div></div><div class="listing-body"><h3 class="listing-title"><a href="listing.html">De Vier Tafels</a></h3><div class="listing-meta"><span class="rating"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>4.6</span><span aria-hidden="true">&#183;</span><span>800 m</span></div></div></article></div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer bg-2 py-6">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Locale. A free template for uicookies.</p>
+    <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

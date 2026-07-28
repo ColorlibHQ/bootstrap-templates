@@ -1,0 +1,35 @@
+{
+  "slug": "summit-conf",
+  "title": "Summit — Free Bootstrap 6 Conference &amp; Event Website Template",
+  "excerpt": "A free Bootstrap 6 conference template — oversized marquee hero, live countdown, day-tabbed schedule table, speakers, tickets and a fixed booking bar.",
+  "yoastTitle": "Summit — Free Bootstrap 6 Conference &amp; Event Website Template",
+  "yoastDesc": "Free Bootstrap 6 conference and event template with a live countdown, day-tabbed schedule table, speaker grid, ticket tiers and a checkout dialog using Combobox and Chip input.",
+  "intro": "Summit is a free, premium <strong>Bootstrap 6</strong> template for conferences, meetups and multi-day events. It leads with an oversized marquee headline and a live countdown, then gets straight to the two things attendees came for: who is speaking and what is on when.",
+  "note": "The signature detail is the booking bar: instead of a header button that scrolls away, the primary call to action is fixed to the bottom of the viewport with live ticket counts. The schedule is a real accessible table tabbed by day, and the checkout dialog uses Combobox for ticket and workshop selection plus Chip input for dietary requirements.",
+  "summary": "Summit is a free, premium Bootstrap 6 conference template. Near-black canvas with a single electric accent, an oversized marquee hero, a live JavaScript countdown, a speaker grid, a day-tabbed accessible schedule table, ticket tiers, venue and accessibility detail, and an FAQ. The primary CTA is a fixed bottom booking bar, and the checkout dialog uses Combobox and Chip input. ESM-only vanilla JavaScript, no build step.",
+  "features": [
+    "Oversized marquee hero with a bordered date block and live countdown",
+    "Fixed bottom ticket bar as the primary CTA, with live remaining count",
+    "Day-tabbed schedule built as a real accessible <table> with captions and scopes",
+    "Speaker grid with gradient name overlays",
+    "Three ticket tiers with a highlighted recommendation",
+    "Checkout dialog using Combobox for ticket and workshop choice, Chip input for dietary needs",
+    "Venue section with genuine accessibility detail, and an FAQ on native <details>",
+    "Dark by default, light mode included via data-bs-theme",
+    "ScrollSpy navigation offset for the sticky header",
+    "Native form validation with data-bs-validate and :user-invalid",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "business-services"
+  ],
+  "images": [
+    {
+      "name": "hero",
+      "q": "conference audience auditorium stage",
+      "w": 1800,
+      "h": 1000
+    }
+  ]
+}

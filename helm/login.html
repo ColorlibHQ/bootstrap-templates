@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in — Helm | Free Bootstrap 6 Admin Dashboard</title>
+<meta name="description" content="Sign-in page from the Helm Bootstrap 6 admin dashboard template.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<main class="auth-stage">
+  <div class="auth-card">
+    <div class="text-center mb-4">
+      <span class="side-mark mx-auto mb-3" aria-hidden="true">H</span>
+      <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Sign in to Helm</h1>
+      <p class="fg-3 fs-sm mb-0">Welcome back. Use your work account.</p>
+    </div>
+    <div class="panel"><form class="panel-body vstack gap-3" data-demo-form data-bs-validate novalidate>
+      <div class="form-field">
+        <label class="form-label" for="liEmail">Email</label>
+        <input type="email" class="form-control" id="liEmail" required>
+        <div class="invalid-feedback">A valid email, please.</div>
+      </div>
+      <div class="form-field">
+        <label class="form-label" for="liPass">Password</label>
+        <input type="password" class="form-control" id="liPass" required>
+        <div class="invalid-feedback">Required.</div>
+      </div>
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="form-field mb-0">
+          <input type="checkbox" class="check" id="liRemember" checked>
+          <label for="liRemember">Remember me</label>
+        </div>
+        <a class="fs-sm" href="#">Forgot password?</a>
+      </div>
+      <button class="btn-solid theme-primary w-100" type="submit" data-done-text="Signed in &#10003;">Sign in</button>
+    </form></div>
+    <p class="text-center fs-sm fg-3 mt-4 mb-0">Not registered? <a href="#">Create an account</a></p>
+    <p class="text-center fs-sm mt-3 mb-0"><a href="index.html">&#8592; Back to the dashboard</a></p>
+  </div>
+</main>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

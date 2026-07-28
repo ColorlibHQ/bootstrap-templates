@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# Source maps
+*.map
+
+# Generated hero screenshots — reproducible with `_kit/verify.mjs <dir> --hero <slug>`
+*-hd-1.png
+*-hd-1.jpg
+
+# Distribution pipeline for colorlib.com / uicookies.com. These name our own
+# servers, buckets and credential paths, so they stay out of the public repo.
+# The reusable half of the kit — base.css, base.js, verify.mjs, fetch-images.mjs,
+# new-template.sh, upgrade.sh — is committed.
+_kit/publish.mjs
+_kit/demo-index.mjs
+_kit/unsplash.mjs
+_kit/check-slug.sh
+
+# Per-template artefacts of that pipeline
+*/unsplash.json
+*/ENRICH.json

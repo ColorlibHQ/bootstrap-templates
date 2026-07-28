@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clickable card — Bootstrap 6 Cards</title>
+<meta name="description" content="The entire surface is clickable, but only the title is in the tab order &#8212; one link, stretched with a pseudo-element. A free Bootstrap 6 card example.">
+<link rel="stylesheet" href="../assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="variant-bar">
+  <a class="btn-text btn-sm" href="../index.html">&#8592; All cards</a>
+  <span class="fs-sm fw-semibold ms-2">Clickable card</span>
+  <span class="fs-xs fg-3 d-none md:d-inline">9 of 10</span>
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <a class="btn-icon btn-sm" href="../08-article/index.html" aria-label="Previous card">&#8249;</a>
+    <a class="btn-icon btn-sm" href="../10-grid/index.html" aria-label="Next card">&#8250;</a>
+    <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+  </div>
+</div>
+
+<main class="variant-stage">
+  <div class="variant-inner is-wide">
+    <div class="row g-4">
+  <div class="md:col-6">
+    <div class="card card-linked h-100">
+      <div class="card-body">
+        <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Documentation</p>
+        <h2 class="fs-lg fw-semibold mb-2">
+          <a class="stretched-title" href="#" style="color:inherit;text-decoration:none">Getting started with the API</a>
+        </h2>
+        <p class="fg-2 fs-sm mb-0">Authentication, your first request, and the three mistakes everyone makes on day one.</p>
+      </div>
+    </div>
+  </div>
+  <div class="md:col-6">
+    <div class="card card-linked h-100">
+      <div class="card-body">
+        <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Documentation</p>
+        <h2 class="fs-lg fw-semibold mb-2">
+          <a class="stretched-title" href="#" style="color:inherit;text-decoration:none">Webhooks and retries</a>
+        </h2>
+        <p class="fg-2 fs-sm mb-0">Delivery guarantees, signature verification and what happens when your endpoint is down.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="fs-sm fg-3 mt-4 mb-0">
+  Wrapping the whole card in an anchor would swallow any button inside it and
+  read the entire card as one enormous link name. Stretching a single title link
+  with <code>::after</code> keeps the accessible name short and leaves room for
+  other controls.
+</p>
+  </div>
+</main>
+
+<script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

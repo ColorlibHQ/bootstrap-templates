@@ -1,0 +1,125 @@
+/*!
+ * Bootstrap 6 Forms — component pack
+ * Shared chrome for the pack index and each variant page.
+ */
+
+:root {
+  --brand: oklch(52% 0.15 262);
+}
+
+/* --------------------------------------------------------------- Pack index */
+
+.pack-head {
+  padding-block: 3.5rem 2.5rem;
+  border-bottom: 1px solid var(--bs-border-color);
+  background: var(--bs-bg-2);
+}
+
+.pack-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+}
+
+.pack-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-6);
+  background: var(--bs-bg-body);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pack-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--brand), transparent 55%);
+  box-shadow: 0 1.25rem 2.5rem -1.25rem rgb(0 0 0 / 22%);
+}
+
+.pack-thumb {
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background:
+    linear-gradient(135deg,
+      color-mix(in oklab, var(--brand), transparent 88%),
+      color-mix(in oklab, var(--brand), transparent 97%));
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* Miniature form sketch drawn in CSS — no screenshots to keep in sync */
+.sketch { width: min(100%, 15rem); display: grid; gap: 0.4rem; }
+.sketch i { display: block; height: 0.5rem; border-radius: var(--bs-radius-pill); background: color-mix(in oklab, var(--bs-fg-body), transparent 86%); }
+.sketch i.w40 { width: 40%; }
+.sketch i.w60 { width: 60%; }
+.sketch i.w75 { width: 75%; }
+.sketch i.tall { height: 1.6rem; border-radius: var(--bs-radius-3); }
+.sketch i.cta { height: 1.4rem; width: 45%; border-radius: var(--bs-radius-pill); background: var(--brand); }
+.sketch .row2 { display: flex; gap: 0.4rem; }
+.sketch .row2 i { flex: 1; }
+
+.pack-card-body { padding: 1.125rem 1.25rem 1.25rem; display: flex; flex-direction: column; flex: 1; }
+.pack-card-title { font-size: 1rem; font-weight: 650; letter-spacing: -0.01em; margin-bottom: 0.25rem; }
+
+/* --------------------------------------------------------------- Variant page */
+
+.variant-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: color-mix(in oklab, var(--bs-bg-body), transparent 8%);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.variant-stage {
+  min-height: calc(100svh - 4rem);
+  display: grid;
+  place-items: center;
+  padding: clamp(1.5rem, 5vw, 4rem) 1rem;
+}
+
+.variant-inner { width: 100%; max-width: 34rem; }
+.variant-inner.is-wide { max-width: 52rem; }
+
+.form-shell {
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-7);
+  background: var(--bs-bg-body);
+  box-shadow: 0 1.5rem 3rem -1.75rem rgb(0 0 0 / 22%);
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+/* Split variant */
+.split-form { display: grid; overflow: hidden; border-radius: var(--bs-radius-7); border: 1px solid var(--bs-border-color); }
+@media (width >= 768px) { .split-form { grid-template-columns: 0.85fr 1fr; } }
+.split-brand {
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--bs-white);
+  background: linear-gradient(150deg, var(--brand), color-mix(in oklab, var(--brand), black 32%));
+  display: flex; flex-direction: column; justify-content: space-between; gap: 2rem;
+}
+.split-body { padding: clamp(1.5rem, 4vw, 2.25rem); background: var(--bs-bg-body); }
+
+/* Inline / toolbar variant */
+.toolbar {
+  display: grid; gap: 0.75rem; padding: 0.75rem;
+  border: 1px solid var(--bs-border-color); border-radius: var(--bs-radius-6); background: var(--bs-bg-body);
+}
+@media (width >= 992px) { .toolbar { grid-template-columns: 1.4fr 1fr 1fr auto; align-items: center; } }
+
+/* Slot picker */
+.slots { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pack-card, .pack-card:hover { transition: none; transform: none; }
+}

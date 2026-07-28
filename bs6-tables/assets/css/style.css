@@ -1,0 +1,196 @@
+/*!
+ * Bootstrap 6 Tables — component pack
+ * Shared chrome for the pack index and each variant page, then the table bits.
+ */
+
+:root {
+  --brand: oklch(55% 0.13 200);
+}
+
+/* --------------------------------------------------------------- Pack index */
+
+.pack-head {
+  padding-block: 3.5rem 2.5rem;
+  border-bottom: 1px solid var(--bs-border-color);
+  background: var(--bs-bg-2);
+}
+
+.pack-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+}
+
+.pack-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-6);
+  background: var(--bs-bg-body);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pack-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--brand), transparent 55%);
+  box-shadow: 0 1.25rem 2.5rem -1.25rem rgb(0 0 0 / 22%);
+}
+
+.pack-thumb {
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background:
+    linear-gradient(135deg,
+      color-mix(in oklab, var(--brand), transparent 88%),
+      color-mix(in oklab, var(--brand), transparent 97%));
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* Miniature table sketch drawn in CSS — no screenshots to keep in sync. */
+.sketch { width: min(100%, 15rem); display: grid; gap: 0.4rem; }
+.sketch i { display: block; height: 0.5rem; border-radius: var(--bs-radius-pill); background: color-mix(in oklab, var(--bs-fg-body), transparent 86%); }
+.sketch i.w40 { width: 40%; }
+.sketch i.w60 { width: 60%; }
+.sketch i.w75 { width: 75%; }
+.sketch i.tall { height: 1.6rem; border-radius: var(--bs-radius-3); }
+.sketch i.cta { height: 1.4rem; width: 45%; border-radius: var(--bs-radius-pill); background: var(--brand); }
+.sketch i.head { background: color-mix(in oklab, var(--brand), transparent 45%); }
+.sketch .row2 { display: flex; gap: 0.4rem; }
+.sketch .row2 i { flex: 1; }
+.sketch .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.3rem; }
+.sketch .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.3rem; }
+
+.pack-card-body { padding: 1.125rem 1.25rem 1.25rem; display: flex; flex-direction: column; flex: 1; }
+.pack-card-title { font-size: 1rem; font-weight: 650; letter-spacing: -0.01em; margin-bottom: 0.25rem; }
+
+/* ------------------------------------------------------------- Variant page */
+
+.variant-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: color-mix(in oklab, var(--bs-bg-body), transparent 8%);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.variant-stage {
+  min-height: calc(100svh - 4rem);
+  display: grid;
+  /* Tables are tall — start them at the top rather than centring vertically. */
+  place-items: start center;
+  padding: clamp(1.5rem, 5vw, 4rem) 1rem;
+}
+
+/* Tables need considerably more width than the forms pack does. */
+.variant-inner { width: 100%; max-width: 60rem; }
+.variant-inner.is-wide { max-width: 76rem; }
+
+/* ------------------------------------------------------------------ Tables */
+
+.table-shell {
+  width: 100%;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-6);
+  background: var(--bs-bg-body);
+  overflow: hidden;
+}
+
+.table-shell > .table-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.table-shell > .table-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  border-top: 1px solid var(--bs-border-color);
+  background: var(--bs-bg-2);
+}
+
+/* The shell already draws the outer border and radius. */
+.table-shell .table { margin-bottom: 0; }
+
+/* Sortable headers. The button fills the cell so the hit area is sane. */
+.th-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.th-sort .caret { opacity: 0.3; transition: opacity 0.15s ease, transform 0.15s ease; }
+.th-sort[aria-sort="ascending"] .caret { opacity: 1; }
+.th-sort[aria-sort="descending"] .caret { opacity: 1; transform: rotate(180deg); }
+
+/* Money and quantity columns only line up with tabular figures. */
+.num { font-variant-numeric: tabular-nums; text-align: right; }
+
+/* Bulk-action bar for the selection variant. */
+.bulk-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  background: color-mix(in oklab, var(--brand), transparent 90%);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* Sticky header for the tall/wide variant. */
+.table-scroll { max-height: 26rem; overflow: auto; }
+
+.table-scroll thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bs-bg-2);
+}
+
+/* First column pinned too, so the reference stays visible while scrolling across. */
+.table-pin tbody th[scope="row"] {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--bs-bg-body);
+}
+
+.table-pin thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  background: var(--bs-bg-2);
+}
+
+/* Comparison matrix */
+.cmp-tick { color: var(--bs-fg-success); }
+.cmp-cross { color: var(--bs-fg-3); }
+.cmp-featured { background: color-mix(in oklab, var(--brand), transparent 93%); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pack-card, .pack-card:hover { transition: none; transform: none; }
+  .th-sort .caret { transition: none; }
+}

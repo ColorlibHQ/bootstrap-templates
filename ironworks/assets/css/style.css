@@ -1,0 +1,144 @@
+/*!
+ * Ironworks — Bootstrap 6 gym / fitness template
+ *
+ * Design language: the navigation is a fixed VERTICAL rail down the left edge on
+ * desktop, not a top bar. Heavy uppercase type, a real timetable grid, and
+ * numbered section markers instead of eyebrow labels.
+ */
+
+:root {
+  --brand: oklch(68% 0.2 42);
+  --rail: 15rem;
+  --kit-section-y: 4.5rem;
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 6rem; } }
+
+/* --------------------------------------------------------------- Rail nav */
+
+/* Neutralise the kit's sticky top bar — this template puts nav on the side. */
+.site-header {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: var(--rail);
+  display: none;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  border-inline-end: 1px solid var(--bs-border-color);
+  border-bottom: 0;
+  background: var(--bs-bg-2);
+  backdrop-filter: none;
+  z-index: 1040;
+}
+
+@media (width >= 992px) {
+  .site-header { display: flex; }
+  .page { margin-inline-start: var(--rail); }
+}
+
+.site-header.is-stuck { background: var(--bs-bg-2); border-bottom: 0; }
+
+.rail-nav { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; gap: 0.25rem; }
+
+.rail-nav a {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bs-fg-3);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.rail-nav a:hover { color: var(--bs-fg-1); }
+.rail-nav a.active { color: var(--bs-primary-base); border-bottom-color: var(--bs-primary-base); }
+
+/* Mobile bar, only below lg */
+.mobile-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--bs-bg-2);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+@media (width >= 992px) { .mobile-bar { display: none; } }
+
+/* --------------------------------------------------------------- Type */
+
+.slab {
+  font-size: clamp(2.5rem, 1rem + 7vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.marker {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bs-fg-3);
+  margin-bottom: 1.25rem;
+}
+
+.marker b { color: var(--bs-primary-base); font-size: 0.875rem; }
+
+/* --------------------------------------------------------------- Timetable */
+
+.timetable { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+
+.timetable th,
+.timetable td {
+  padding: 0.75rem;
+  border: 1px solid var(--bs-border-color);
+  text-align: left;
+  vertical-align: top;
+}
+
+.timetable thead th {
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bs-fg-3);
+  background: var(--bs-bg-2);
+  white-space: nowrap;
+}
+
+.timetable .time { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+
+.slot { display: block; font-weight: 650; }
+.slot small { display: block; font-weight: 400; color: var(--bs-fg-3); }
+
+.slot-full { opacity: 0.45; }
+
+/* --------------------------------------------------------------- Coaches */
+
+.coach { position: relative; overflow: hidden; border-radius: var(--bs-radius-6); }
+.coach .ph { transition: transform 0.45s ease; }
+.coach:hover .ph { transform: scale(1.05); }
+.coach-name { position: absolute; inset: auto 0 0 0; padding: 1.25rem 1rem 1rem;
+  background: linear-gradient(to top, rgb(0 0 0 / 80%), transparent); color: #fff; }
+
+/* --------------------------------------------------------------- Plans */
+
+.plan { height: 100%; display: flex; flex-direction: column; padding: 2rem;
+  border: 1px solid var(--bs-border-color); border-radius: var(--bs-radius-6); }
+.plan.is-featured { border-color: var(--bs-primary-base); box-shadow: 0 0 0 1px var(--bs-primary-base); }
+.plan-price { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .coach .ph { transition: none; }
+  .coach:hover .ph { transform: none; }
+}

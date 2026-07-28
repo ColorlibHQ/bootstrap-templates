@@ -1,0 +1,217 @@
+/*!
+ * Forecourt — Bootstrap 6 car dealership template
+ *
+ * Design language: showroom. Deep graphite ground, one signal-orange accent,
+ * and a card that leads with the monthly figure rather than the cash price.
+ *
+ * The structural idea carrying the identity: people buy cars on £/month, not on
+ * list price, so the monthly payment is the largest number on every listing and
+ * the cash price sits under it as the secondary figure. The finance calculator
+ * is live — move the deposit or the term and every quoted monthly updates,
+ * because a calculator that does not change the listings is just decoration.
+ */
+
+:root {
+  --brand: oklch(68% 0.18 45);
+  --kit-section-y: 4.5rem;
+  --fc-rule: var(--bs-border-color);
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 6rem; } }
+
+[data-bs-theme="dark"] {
+  --bs-bg-body: oklch(17% 0.008 250);
+  --bs-bg-2: oklch(21% 0.01 250);
+}
+
+/* ---------------------------------------------------------------
+   Hero + search
+   --------------------------------------------------------------- */
+
+.showroom {
+  position: relative;
+  isolation: isolate;
+  padding-block: clamp(3.5rem, 8vw, 6rem) clamp(2rem, 5vw, 3rem);
+  overflow: hidden;
+}
+
+.showroom > .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+}
+
+.showroom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--bs-bg-body), transparent 3%) 0%,
+    color-mix(in oklab, var(--bs-bg-body), transparent 18%) 48%,
+    color-mix(in oklab, var(--bs-bg-body), transparent 52%) 100%);
+}
+
+.showroom-title {
+  font-size: clamp(2.25rem, 1.2rem + 3.8vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.find-bar {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.6rem;
+  border-radius: var(--bs-radius-4);
+  background: var(--bs-bg-body);
+  border: 1px solid var(--fc-rule);
+}
+
+@media (width >= 992px) { .find-bar { grid-template-columns: repeat(3, 1fr) auto; align-items: center; } }
+
+/* ---------------------------------------------------------------
+   Vehicle cards — monthly figure leads
+   --------------------------------------------------------------- */
+
+.car {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--fc-rule);
+  border-radius: var(--bs-radius-4);
+  background: var(--bs-bg-body);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.car:hover { border-color: color-mix(in oklab, var(--brand), transparent 50%); }
+
+.car-media { position: relative; }
+.car-media .ph { aspect-ratio: 4 / 3; }
+
+.car-flag {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--bs-radius-2);
+  background: var(--bs-primary-base);
+  color: oklch(20% 0.02 45);
+}
+
+.car-body { padding: 1.1rem 1.25rem 1.25rem; display: flex; flex-direction: column; flex: 1; }
+.car-name { font-size: 1.05rem; font-weight: 650; letter-spacing: -0.015em; }
+.car-trim { color: var(--bs-fg-3); font-size: 0.85rem; }
+
+/* Specs as a compact three-up row of icon-free facts. */
+.car-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 0.85rem 0;
+  padding: 0.75rem 0;
+  border-block: 1px solid var(--fc-rule);
+  font-size: 0.78rem;
+  color: var(--bs-fg-3);
+  text-align: center;
+}
+
+/* The monthly figure is the biggest thing on the card, deliberately. */
+.car-pm {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--bs-fg-primary);
+  line-height: 1;
+}
+
+.car-cash { font-size: 0.85rem; color: var(--bs-fg-3); font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------
+   Finance calculator
+   --------------------------------------------------------------- */
+
+.calc {
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  border: 1px solid var(--fc-rule);
+  border-radius: var(--bs-radius-5);
+  background: var(--bs-bg-body);
+}
+
+.calc-figure {
+  font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--bs-fg-primary);
+}
+
+.calc-row { display: flex; justify-content: space-between; gap: 1rem; padding: 0.55rem 0; border-bottom: 1px solid var(--fc-rule); }
+.calc-row:last-child { border-bottom: 0; }
+.calc-row span:last-child { font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------
+   Trust, locations, sub page
+   --------------------------------------------------------------- */
+
+.trust-cell {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--fc-rule);
+}
+
+.trust-cell svg { flex-shrink: 0; color: var(--bs-fg-primary); margin-top: 0.15rem; }
+
+.branch {
+  padding: 1.25rem;
+  border: 1px solid var(--fc-rule);
+  border-radius: var(--bs-radius-4);
+  height: 100%;
+}
+
+.sub-head { padding-block: 2.5rem; background: var(--bs-bg-2); border-bottom: 1px solid var(--fc-rule); }
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--fc-rule);
+}
+
+.spec-row:last-child { border-bottom: 0; }
+
+.buy-rail {
+  position: sticky;
+  top: 5.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--fc-rule);
+  border-top: 3px solid var(--bs-primary-base);
+  border-radius: var(--bs-radius-4);
+  background: var(--bs-bg-body);
+}
+
+.gallery-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.gallery-strip .ph { aspect-ratio: 4 / 3; border-radius: var(--bs-radius-2); }

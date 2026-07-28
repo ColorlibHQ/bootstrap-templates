@@ -1,0 +1,187 @@
+/*!
+ * Openhands — Bootstrap 6 charity & NGO template
+ *
+ * Design language: warm and plain. Charities lose donations to sites that look
+ * expensive, so this one is deliberately unfussy — generous type, one warm
+ * accent, no gradients, no glass.
+ *
+ * The structural idea carrying the identity is the donate widget: choosing an
+ * amount immediately says what that amount buys. "£50" means nothing on its own;
+ * "£50 pays for a week of hot meals for a family of four" is the entire
+ * fundraising argument, so the design puts it where the decision happens.
+ */
+
+:root {
+  --brand: oklch(58% 0.15 30);
+  --kit-section-y: 4.5rem;
+  --oh-rule: var(--bs-border-color);
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 6rem; } }
+
+[data-bs-theme="light"] {
+  --bs-bg-body: oklch(98% 0.006 60);
+  --bs-bg-2: oklch(95% 0.01 60);
+}
+
+/* ---------------------------------------------------------------
+   Hero
+   --------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+  overflow: hidden;
+}
+
+.hero > .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--bs-bg-body), transparent 4%) 0%,
+    color-mix(in oklab, var(--bs-bg-body), transparent 20%) 50%,
+    color-mix(in oklab, var(--bs-bg-body), transparent 55%) 100%);
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 1.2rem + 4vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+/* ---------------------------------------------------------------
+   Donate widget — the identity piece
+   --------------------------------------------------------------- */
+
+.donate {
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  border: 1px solid var(--oh-rule);
+  border-top: 4px solid var(--bs-primary-base);
+  border-radius: var(--bs-radius-5);
+  background: var(--bs-bg-body);
+}
+
+.amount-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+/* What the chosen amount actually buys. This is the whole argument, so it gets
+   real estate rather than a footnote. */
+.buys {
+  padding: 1rem 1.25rem;
+  border-radius: var(--bs-radius-4);
+  background: color-mix(in oklab, var(--brand), transparent 92%);
+  border: 1px solid color-mix(in oklab, var(--brand), transparent 82%);
+}
+
+.buys-amount { font-weight: 700; color: var(--bs-fg-primary); }
+
+/* ---------------------------------------------------------------
+   Impact, allocation
+   --------------------------------------------------------------- */
+
+.impact-figure {
+  font-size: clamp(2rem, 1.4rem + 2.2vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--bs-fg-primary);
+}
+
+.alloc-row { padding: 0.85rem 0; border-bottom: 1px solid var(--oh-rule); }
+.alloc-row:last-child { border-bottom: 0; }
+
+/* ---------------------------------------------------------------
+   Programmes, stories
+   --------------------------------------------------------------- */
+
+.prog {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--oh-rule);
+  border-radius: var(--bs-radius-4);
+  overflow: hidden;
+  background: var(--bs-bg-body);
+  text-decoration: none;
+  color: inherit;
+}
+
+.prog:hover { border-color: color-mix(in oklab, var(--brand), transparent 55%); }
+.prog .ph { aspect-ratio: 16 / 10; }
+.prog-body { padding: 1.25rem; display: flex; flex-direction: column; flex: 1; }
+
+.story {
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  border-left: 4px solid var(--bs-primary-base);
+  background: var(--bs-bg-2);
+  border-radius: 0 var(--bs-radius-4) var(--bs-radius-4) 0;
+}
+
+.story-quote { font-size: clamp(1.1rem, 1rem + 0.6vw, 1.4rem); line-height: 1.55; }
+
+/* ---------------------------------------------------------------
+   Trust, governance
+   --------------------------------------------------------------- */
+
+.trust-row {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-top: 1px solid var(--oh-rule);
+}
+
+.trust-row svg { flex-shrink: 0; color: var(--bs-fg-success); margin-top: 0.15rem; }
+
+.reg-note {
+  padding: 1rem 1.25rem;
+  border: 1px dashed var(--oh-rule);
+  border-radius: var(--bs-radius-4);
+  font-size: 0.875rem;
+}
+
+/* ---------------------------------------------------------------
+   Sub page
+   --------------------------------------------------------------- */
+
+.sub-head { padding-block: 3rem; background: var(--bs-bg-2); border-bottom: 1px solid var(--oh-rule); }
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--oh-rule);
+}
+
+.spec-row:last-child { border-bottom: 0; }
+
+.appeal-rail {
+  position: sticky;
+  top: 5.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--oh-rule);
+  border-top: 4px solid var(--bs-primary-base);
+  border-radius: var(--bs-radius-4);
+  background: var(--bs-bg-body);
+}

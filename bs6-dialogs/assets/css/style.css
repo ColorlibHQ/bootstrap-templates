@@ -1,0 +1,143 @@
+/*!
+ * Bootstrap 6 Dialogs & Drawers — component pack
+ * Shared chrome for the pack index and each variant page.
+ */
+
+:root {
+  --brand: oklch(56% 0.15 25);
+}
+
+/* --------------------------------------------------------------- Pack index */
+
+.pack-head {
+  padding-block: 3.5rem 2.5rem;
+  border-bottom: 1px solid var(--bs-border-color);
+  background: var(--bs-bg-2);
+}
+
+.pack-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+}
+
+.pack-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-6);
+  background: var(--bs-bg-body);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pack-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--brand), transparent 55%);
+  box-shadow: 0 1.25rem 2.5rem -1.25rem rgb(0 0 0 / 22%);
+}
+
+.pack-thumb {
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background:
+    linear-gradient(135deg,
+      color-mix(in oklab, var(--brand), transparent 88%),
+      color-mix(in oklab, var(--brand), transparent 97%));
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* Miniature sketch: a dimmed page with a panel over it, which is what every
+   variant in this pack is a version of. */
+.sketch { width: min(100%, 15rem); }
+
+.sketch .page {
+  position: relative;
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  border-radius: var(--bs-radius-3);
+  border: 1px solid color-mix(in oklab, var(--bs-fg-body), transparent 88%);
+  min-height: 5.5rem;
+}
+
+.sketch i { display: block; height: 0.4rem; border-radius: var(--bs-radius-pill); background: color-mix(in oklab, var(--bs-fg-body), transparent 90%); }
+.sketch i.w40 { width: 40%; }
+.sketch i.w60 { width: 60%; }
+
+.sketch .panel {
+  position: absolute;
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.45rem;
+  border-radius: var(--bs-radius-2);
+  background: var(--bs-bg-body);
+  border: 1px solid color-mix(in oklab, var(--brand), transparent 55%);
+  box-shadow: 0 0.5rem 1rem -0.5rem rgb(0 0 0 / 30%);
+}
+
+.sketch .panel i { background: color-mix(in oklab, var(--brand), transparent 62%); }
+.sketch .panel i.mute { background: color-mix(in oklab, var(--bs-fg-body), transparent 85%); }
+
+/* Panel placements matching each variant */
+.sketch .p-centre { inset: 25% 18%; }
+.sketch .p-tall   { inset: 12% 18%; }
+.sketch .p-end    { inset: 6% 6% 6% 52%; }
+.sketch .p-start  { inset: 6% 52% 6% 6%; }
+.sketch .p-bottom { inset: 55% 8% 6% 8%; }
+.sketch .p-top    { inset: 6% 8% 55% 8%; }
+.sketch .p-full   { inset: 4%; }
+.sketch .p-corner { inset: 6% 6% auto auto; width: 45%; }
+.sketch .p-small  { inset: 32% 30%; }
+
+.pack-card-body { padding: 1.125rem 1.25rem 1.25rem; display: flex; flex-direction: column; flex: 1; }
+.pack-card-title { font-size: 1rem; font-weight: 650; letter-spacing: -0.01em; margin-bottom: 0.25rem; }
+
+/* ------------------------------------------------------------- Variant page */
+
+.variant-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: color-mix(in oklab, var(--bs-bg-body), transparent 8%);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.variant-stage {
+  min-height: calc(100svh - 4rem);
+  display: grid;
+  place-items: center;
+  padding: clamp(1.5rem, 5vw, 4rem) 1rem;
+}
+
+.variant-inner { width: 100%; max-width: 44rem; }
+.variant-inner.is-wide { max-width: 62rem; }
+
+/* ------------------------------------------------------ Dialog pack specific */
+
+/* Each variant is a set of trigger buttons over a short explanation. */
+.trigger-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+}
+
+.note {
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--bs-primary-base);
+  background: var(--bs-bg-2);
+  border-radius: 0 var(--bs-radius-3) var(--bs-radius-3) 0;
+}
+
+/* Sample body copy used to make scrollable dialogs actually scroll. */
+.filler p:last-child { margin-bottom: 0; }

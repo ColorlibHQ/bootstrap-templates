@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liftoff — Free Bootstrap 6 Coming Soon Template</title>
+<meta name="description" content="Liftoff is a free Bootstrap 6 coming-soon template in three layouts — full-bleed countdown, split screen and minimal. Live countdown, notify form and build progress.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="screen screen-photo">
+  <img class="backdrop" src="img/backdrop.jpg" alt="" width="1800" height="1200" loading="eager">
+
+  <header class="screen-head">
+    <a class="wordmark" href="index.html"><span class="wordmark-mark" aria-hidden="true">L</span> Liftoff</a>
+    <div class="ms-auto d-flex align-items-center gap-2">
+      <nav class="variant-switch" aria-label="Layout variants"><a class="active" href="index.html">Full bleed</a><a class="" href="split.html">Split</a><a class="" href="minimal.html">Minimal</a></nav>
+      <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+    </div>
+  </header>
+
+  <main class="screen-body">
+    <div class="text-center" style="max-width:44rem">
+      <span class="badge badge-subtle theme-primary mb-4">Launching 1 October</span>
+      <h1 class="headline mb-4">Something worth the wait</h1>
+      <p class="fs-lg mb-5 fg-2">
+        We are rebuilding from the ground up. Same team, same prices, considerably
+        fewer things that annoy you.
+      </p>
+      <div class="countdown" role="timer" aria-live="off" data-countdown="2026-10-01T09:00:00Z"><div class="count-cell"><span class="count-value" id="cdD">--</span><span class="count-label">Days</span></div><div class="count-cell"><span class="count-value" id="cdH">--</span><span class="count-label">Hours</span></div><div class="count-cell"><span class="count-value" id="cdM">--</span><span class="count-label">Minutes</span></div><div class="count-cell"><span class="count-value" id="cdS">--</span><span class="count-label">Seconds</span></div></div>
+      <div class="mt-5 mb-4">
+        <form class="notify" data-demo-form data-bs-validate novalidate>
+        <div class="form-field">
+          <label class="visually-hidden" for="fbEmail">Email address</label>
+          <input type="email" class="form-control" id="fbEmail" placeholder="you@example.com" required>
+          <div class="invalid-feedback">A valid email, please.</div>
+        </div>
+        <button class="btn-solid theme-primary" type="submit" data-done-text="You&#8217;re on the list &#10003;">Notify me</button>
+      </form>
+      </div>
+      <p class="fs-xs fg-3 mb-0">No launch spam. One email when we go live, and that is it.</p>
+    </div>
+  </main>
+
+  <footer class="screen-foot">
+    <p class="fs-xs fg-3 mb-0">&copy; <span data-year></span> Liftoff. A free Bootstrap 6 template.</p>
+    <span class="ms-auto"><span class="social"><a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="11" rx="3.2"/><circle cx="8" cy="8" r="2.6"/><circle cx="11.4" cy="4.6" r=".7" fill="currentColor" stroke="none"/></svg></a><a href="#" aria-label="X"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M12.6 1.5h2.2l-4.8 5.5 5.7 7.5h-4.5l-3.5-4.6-4 4.6H1.5l5.2-5.9L1.2 1.5h4.6l3.2 4.2zm-.8 11.7h1.2L4.9 2.7H3.6z"/></svg></a><a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3.4 5.5h2.2V13H3.4zM4.5 2.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6M7.2 5.5h2.1v1c.3-.6 1.1-1.2 2.2-1.2 2 0 2.5 1.3 2.5 3.1V13h-2.2V8.9c0-1-.2-1.7-1.2-1.7s-1.3.7-1.3 1.6V13H7.2z"/></svg></a></span></span>
+  </footer>
+</div>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

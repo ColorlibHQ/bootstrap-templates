@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing — Stratos | Bootstrap 6 showcase</title>
+<meta name="description" content="Stratos pricing: plan cards, a full feature comparison table with tooltips, and billing FAQ built with Bootstrap 6.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header" id="siteHeader">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">S</span> Stratos
+      </a>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
+            <li class="nav-item"><a class="nav-link" href="forms.html">Forms</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog-post.html">Blog</a></li>
+          </ul>
+        </div>
+      </dialog>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <button class="btn-solid theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#signupDialog">Start free</button>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="section pb-0">
+    <div class="container">
+      <div class="section-narrow text-center mb-7">
+        <p class="eyebrow fs-sm fg-primary mb-2">Pricing</p>
+        <h1 class="fs-5xl fw-bold mb-3">Priced per seat, not per surprise</h1>
+        <p class="fs-lg fg-2 mb-0">Every plan includes unlimited projects and a 14-day trial. No card to start.</p>
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center gap-3 mb-7">
+        <span class="fs-sm fw-medium billing-label is-active" id="billMonthly">Monthly</span>
+        <div class="switch">
+          <input type="checkbox" value="" id="billingToggle" role="switch" switch aria-labelledby="billMonthly billYearly">
+        </div>
+        <span class="fs-sm fw-medium billing-label" id="billYearly">
+          Yearly <span class="badge badge-subtle theme-success ms-1">Save 20%</span>
+        </span>
+      </div>
+
+      <div class="row g-4 pricing" id="pricingGrid">
+        <div class="md:col-6 lg:col-4">
+          <div class="price-card">
+            <h2 class="fs-lg fw-semibold mb-1">Starter</h2>
+            <p class="fg-2 fs-sm mb-4">For small teams finding their rhythm.</p>
+            <p class="mb-1"><span class="price-amount fs-4xl">$<span data-price-monthly>12</span><span data-price-yearly>10</span></span> <span class="fg-3 fs-sm">/ seat / mo</span></p>
+            <p class="fg-3 fs-xs mb-5">Billed <span data-price-monthly>monthly</span><span data-price-yearly>annually</span></p>
+            <ul class="price-list fs-sm">
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Up to 10 seats</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Unlimited projects</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> GitHub &amp; Slack sync</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Community support</li>
+            </ul>
+            <button class="btn-outline theme-secondary w-100 mt-auto" type="button" data-bs-toggle="dialog" data-bs-target="#signupDialog">Start free trial</button>
+          </div>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <div class="price-card is-featured">
+            <div class="d-flex justify-content-between align-items-start">
+              <h2 class="fs-lg fw-semibold mb-1">Team</h2>
+              <span class="badge theme-primary">Most popular</span>
+            </div>
+            <p class="fg-2 fs-sm mb-4">For teams shipping every week.</p>
+            <p class="mb-1"><span class="price-amount fs-4xl">$<span data-price-monthly>28</span><span data-price-yearly>22</span></span> <span class="fg-3 fs-sm">/ seat / mo</span></p>
+            <p class="fg-3 fs-xs mb-5">Billed <span data-price-monthly>monthly</span><span data-price-yearly>annually</span></p>
+            <ul class="price-list fs-sm">
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Everything in Starter</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Unlimited seats</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Automatic release notes</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> SAML SSO &amp; audit logs</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Priority support</li>
+            </ul>
+            <button class="btn-solid theme-primary w-100 mt-auto" type="button" data-bs-toggle="dialog" data-bs-target="#signupDialog">Start free trial</button>
+          </div>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <div class="price-card">
+            <h2 class="fs-lg fw-semibold mb-1">Business</h2>
+            <p class="fg-2 fs-sm mb-4">For orgs with compliance to answer to.</p>
+            <p class="mb-1"><span class="price-amount fs-4xl">$<span data-price-monthly>49</span><span data-price-yearly>39</span></span> <span class="fg-3 fs-sm">/ seat / mo</span></p>
+            <p class="fg-3 fs-xs mb-5">Billed <span data-price-monthly>monthly</span><span data-price-yearly>annually</span></p>
+            <ul class="price-list fs-sm">
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Everything in Team</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> SCIM provisioning</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Data residency options</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> 99.9% uptime SLA</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Dedicated CSM</li>
+            </ul>
+            <a class="btn-outline theme-secondary w-100 mt-auto" href="#">Talk to sales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison table -->
+  <section class="section">
+    <div class="container">
+      <div class="section-narrow text-center mb-7">
+        <h2 class="fs-3xl fw-bold mb-2">Compare every plan</h2>
+        <p class="fg-2 mb-0">Hover the <span class="fg-3">ⓘ</span> icons for detail — those are Bootstrap 6 tooltips, now positioned by Floating UI.</p>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table compare align-middle">
+          <thead>
+            <tr>
+              <th scope="col" style="min-width:16rem">Feature</th>
+              <th scope="col">Starter</th>
+              <th scope="col" class="compare-ours">Team</th>
+              <th scope="col">Business</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Seats</th>
+              <td>Up to 10</td><td class="compare-ours">Unlimited</td><td>Unlimited</td>
+            </tr>
+            <tr>
+              <th scope="row">Projects</th>
+              <td>Unlimited</td><td class="compare-ours">Unlimited</td><td>Unlimited</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                Guest seats
+                <button type="button" class="btn-icon btn-sm" data-bs-toggle="tooltip" data-bs-title="Guests are read-plus-comment only and never count toward billing." aria-label="About guest seats">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1M7.25 4.5h1.5V6h-1.5zm0 3h1.5v4h-1.5z"/></svg>
+                </button>
+              </th>
+              <td>5 / project</td><td class="compare-ours">5 / project</td><td>Unlimited</td>
+            </tr>
+            <tr>
+              <th scope="row">Automatic release notes</th>
+              <td><span class="no">—</span></td>
+              <td class="compare-ours"><span class="yes">✓</span></td>
+              <td><span class="yes">✓</span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                Throughput analytics
+                <button type="button" class="btn-icon btn-sm" data-bs-toggle="tooltip" data-bs-title="Cycle time, review latency and carryover, measured from real repository events." aria-label="About analytics">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1M7.25 4.5h1.5V6h-1.5zm0 3h1.5v4h-1.5z"/></svg>
+                </button>
+              </th>
+              <td>Basic</td><td class="compare-ours">Full</td><td>Full + export</td>
+            </tr>
+            <tr>
+              <th scope="row">SAML SSO</th>
+              <td><span class="no">—</span></td>
+              <td class="compare-ours"><span class="yes">✓</span></td>
+              <td><span class="yes">✓</span></td>
+            </tr>
+            <tr>
+              <th scope="row">SCIM provisioning</th>
+              <td><span class="no">—</span></td>
+              <td class="compare-ours"><span class="no">—</span></td>
+              <td><span class="yes">✓</span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                Data residency
+                <button type="button" class="btn-icon btn-sm" data-bs-toggle="tooltip" data-bs-title="US and EU on every plan; Business adds Australia and Canada." aria-label="About data residency">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1M7.25 4.5h1.5V6h-1.5zm0 3h1.5v4h-1.5z"/></svg>
+                </button>
+              </th>
+              <td>US / EU</td><td class="compare-ours">US / EU</td><td>4 regions</td>
+            </tr>
+            <tr>
+              <th scope="row">Uptime SLA</th>
+              <td><span class="no">—</span></td>
+              <td class="compare-ours">99.5%</td>
+              <td>99.9%</td>
+            </tr>
+            <tr>
+              <th scope="row">Support</th>
+              <td>Community</td><td class="compare-ours">Priority</td><td>Dedicated CSM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Billing FAQ -->
+  <section class="section bg-2">
+    <div class="container">
+      <div class="section-narrow">
+        <h2 class="fs-3xl fw-bold text-center mb-7">Billing questions</h2>
+        <div class="accordion">
+          <details class="accordion-item" name="billfaq" open>
+            <summary class="accordion-header">
+              How does per-seat billing prorate?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+            </summary>
+            <div class="accordion-body">Adding a seat mid-cycle is charged pro rata to the day. Removing one credits the remainder against your next invoice.</div>
+          </details>
+          <details class="accordion-item" name="billfaq">
+            <summary class="accordion-header">
+              Can we pay by invoice?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+            </summary>
+            <div class="accordion-body">Annual Business plans can pay by invoice on NET 30 terms. Everything else is card or ACH.</div>
+          </details>
+          <details class="accordion-item" name="billfaq">
+            <summary class="accordion-header">
+              What happens when the trial ends?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+            </summary>
+            <div class="accordion-body">The workspace drops to the free tier. Nothing is deleted and you keep read access to everything.</div>
+          </details>
+          <details class="accordion-item" name="billfaq">
+            <summary class="accordion-header">
+              Do you offer nonprofit or education pricing?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+            </summary>
+            <div class="accordion-body">Yes — 50% off any plan for registered nonprofits and accredited institutions. Email billing@stratos.app.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container">
+      <div class="cta-panel">
+        <h2 class="fs-3xl fw-bold mb-3">Still deciding?</h2>
+        <p class="fs-lg fg-2 section-narrow mb-6">Start the trial — no card, cancel from settings in two clicks.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <button class="btn-solid theme-primary btn-lg" type="button" data-bs-toggle="dialog" data-bs-target="#signupDialog">Start free</button>
+          <a class="btn-outline theme-secondary btn-lg" href="#">Book a demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer bg-2 py-6">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="fg-3 fs-xs mb-0">&copy; <span id="year">2026</span> Stratos. A free template for uicookies.</p>
+    <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+  </div>
+</footer>
+
+<dialog class="dialog" id="signupDialog" aria-labelledby="signupTitle">
+  <div class="dialog-header">
+    <h1 class="dialog-title fs-lg" id="signupTitle">Start your free trial</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <form class="dialog-body vstack gap-4" id="signupForm" data-bs-validate novalidate>
+    <div class="form-field">
+      <label class="form-label" for="suName">Full name</label>
+      <input type="text" class="form-control" id="suName" required>
+      <div class="invalid-feedback">Please tell us your name.</div>
+    </div>
+    <div class="form-field">
+      <label class="form-label" for="suEmail">Work email</label>
+      <div class="form-control form-adorn">
+        <div class="form-adorn-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="m2 4 6 4.5L14 4"/></svg>
+        </div>
+        <input type="email" class="form-ghost" id="suEmail" required>
+      </div>
+    </div>
+    <div class="form-field">
+      <input type="checkbox" class="check" id="suTerms" required>
+      <label for="suTerms">I agree to the terms of service</label>
+    </div>
+  </form>
+  <div class="dialog-footer">
+    <button type="button" class="btn-text" data-bs-dismiss="dialog">Cancel</button>
+    <button type="submit" form="signupForm" class="btn-solid theme-primary">Create workspace</button>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

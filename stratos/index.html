@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stratos — Ship faster with one workspace | Bootstrap 6 SaaS Template</title>
+<meta name="description" content="Stratos is a free SaaS landing page template built on Bootstrap 6.0.0-alpha1 — native dialog, drawer navigation, theme tokens, and the new stepper, avatar, and chip components.">
+
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<!-- ScrollSpy (rebuilt on IntersectionObserver in v6). `top-margin` puts the
+     activation line below the sticky header; it replaces v5's removed `offset`. -->
+<body data-bs-spy="scroll" data-bs-target="#navScroll" data-bs-top-margin="96px" data-bs-smooth-scroll="true">
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<!-- ============================================================
+     Header
+     Bootstrap 6: no .navbar-collapse. Mobile nav is a <dialog class="drawer">
+     toggled with data-bs-toggle="drawer".
+     ============================================================ -->
+<header class="site-header" id="siteHeader">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="#">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        Stratos
+      </a>
+
+      <!-- The nav is declared ONCE, inside the drawer. Bootstrap 6's
+           .lg:navbar-expand rules un-hide the drawer's contents at ≥lg so they
+           render inline as the expanded navbar, and hide .drawer-header there.
+           Duplicating the links outside the drawer would show both on desktop. -->
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto" id="navScroll">
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#usecases">Use cases</a></li>
+            <li class="nav-item"><a class="nav-link" href="#integrations">Integrations</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item">
+              <!-- Menu (was Dropdown in v5): no .dropdown wrapper, no
+                   .dropdown-toggle. Toggle and .menu are siblings. -->
+              <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                Showcase
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg>
+              </button>
+              <div class="menu">
+                <a class="menu-item" href="components.html">Components</a>
+                <a class="menu-item" href="forms.html">Forms</a>
+                <a class="menu-item" href="dashboard.html">Dashboard</a>
+                <a class="menu-item" href="pricing.html">Pricing page</a>
+                <a class="menu-item" href="blog-post.html">Blog post</a>
+                <hr class="menu-divider">
+                <a class="menu-item" href="404.html">404 page</a>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Mobile-only; "Start free" stays in the header at every width -->
+          <div class="mt-4 lg:d-none">
+            <a class="btn-outline theme-secondary w-100" href="#">Sign in</a>
+          </div>
+        </div>
+      </dialog>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+            <circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/>
+          </svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+          </svg>
+        </button>
+
+        <a class="btn-text d-none lg:d-inline-flex" href="#">Sign in</a>
+
+        <button class="btn-solid theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#signupDialog">
+          Start free
+        </button>
+
+        <!-- .navbar-expand hides this automatically at ≥lg -->
+        <button class="btn-icon navbar-toggler" type="button"
+                data-bs-toggle="drawer" data-bs-target="#navDrawer"
+                aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============================================================
+       Hero
+       ============================================================ -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center g-6">
+
+        <div class="lg:col-6">
+          <span class="badge badge-subtle theme-primary mb-4">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0 6 6 0 8l6 2 2 6 2-6 6-2-6-2z"/></svg>
+            Now with AI-assisted planning
+          </span>
+
+          <h1 class="hero-title fs-6xl fw-bold mb-4">
+            Ship faster with one calm workspace
+          </h1>
+
+          <p class="hero-lede fs-lg fg-2 mb-6">
+            Stratos brings your roadmap, docs, and releases together — so your team
+            stops hunting for context and starts shipping. No more tab sprawl.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-6">
+            <button class="btn-solid theme-primary btn-lg" type="button"
+                    data-bs-toggle="dialog" data-bs-target="#signupDialog">
+              Start free — no card
+            </button>
+            <a class="btn-outline theme-secondary btn-lg" href="#how">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 3.5v9l7-4.5z"/></svg>
+              See how it works
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <div class="avatar-stack avatar-stack-sm">
+              <span class="avatar" title="Priya N."><span class="avatar-initials">PN</span></span>
+              <span class="avatar" title="Marcus L."><span class="avatar-initials">ML</span></span>
+              <span class="avatar" title="Dana R."><span class="avatar-initials">DR</span></span>
+              <span class="avatar" title="Tomas B."><span class="avatar-initials">TB</span></span>
+            </div>
+            <p class="fs-sm fg-2 mb-0">
+              <strong class="fg-1">2,400+ teams</strong> shipped with Stratos this quarter
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-6">
+          <div class="mockup" role="img" aria-label="Stratos dashboard preview showing a release timeline and weekly throughput chart">
+            <div class="mockup-bar">
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="ms-3 fs-xs fg-3">stratos.app / releases</span>
+            </div>
+            <div class="mockup-body">
+
+              <div class="d-flex justify-content-between align-items-start mb-4">
+                <div>
+                  <p class="fs-xs fg-3 eyebrow mb-2">Releases shipped</p>
+                  <p class="mockup-figure mb-0">
+                    38
+                    <span class="mockup-delta">
+                      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 3 5 6H3z"/></svg>
+                      12%
+                    </span>
+                  </p>
+                  <p class="fs-xs fg-3 mb-0">vs. 34 last week</p>
+                </div>
+                <span class="mockup-pill">
+                  This week
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+                </span>
+              </div>
+
+              <div class="mockup-chart mb-4">
+                <span class="mockup-col" style="--v:38%"><i></i><em>M</em></span>
+                <span class="mockup-col" style="--v:55%"><i></i><em>T</em></span>
+                <span class="mockup-col" style="--v:46%"><i></i><em>W</em></span>
+                <span class="mockup-col is-peak" style="--v:78%"><i></i><em>T</em></span>
+                <span class="mockup-col" style="--v:62%"><i></i><em>F</em></span>
+                <span class="mockup-col" style="--v:70%"><i></i><em>S</em></span>
+                <span class="mockup-col is-peak" style="--v:92%"><i></i><em>S</em></span>
+              </div>
+
+              <p class="fs-xs fg-3 eyebrow mb-3">Recent</p>
+
+              <ul class="mockup-list">
+                <li>
+                  <span class="avatar avatar-sm"><span class="avatar-initials">PN</span></span>
+                  <span class="mockup-list-main">
+                    <strong>v2.4.0</strong>
+                    <span class="fg-3">Payments rewrite</span>
+                  </span>
+                  <span class="badge badge-subtle theme-success">Shipped</span>
+                </li>
+                <li>
+                  <span class="avatar avatar-sm"><span class="avatar-initials">ML</span></span>
+                  <span class="mockup-list-main">
+                    <strong>v2.3.9</strong>
+                    <span class="fg-3">Search filters</span>
+                  </span>
+                  <span class="badge badge-subtle theme-warning">In review</span>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Logo strip
+       ============================================================ -->
+  <section class="pb-9">
+    <div class="container">
+      <p class="text-center fs-sm fg-3 eyebrow mb-5">Trusted by product teams at</p>
+      <!-- Placeholder logo lockups: SVG mark + wordmark, all currentColor.
+           Swap the <svg> and the name for real client logos. -->
+      <div class="logo-strip">
+
+        <span class="logo-item">
+          <svg class="logo-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 17 8 7l4 6 4-6 6 10"/>
+          </svg>
+          <span class="logo-name">Northwind</span>
+        </span>
+
+        <span class="logo-item">
+          <svg class="logo-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2 3 20h6l3-6 3 6h6z" opacity=".55"/>
+            <path d="M12 2 8 20h8z"/>
+          </svg>
+          <span class="logo-name">Kestrel</span>
+        </span>
+
+        <span class="logo-item">
+          <svg class="logo-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v3M12 20v3M23 12h-3M4 12H1m16.5-5.5-2 2m-7 7-2 2m0-11 2 2m7 7 2 2" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-name">Lumen</span>
+        </span>
+
+        <span class="logo-item">
+          <svg class="logo-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 1.5 21.5 7v10L12 22.5 2.5 17V7z" opacity=".35"/>
+            <path d="M12 6.5 17 9.5v5L12 17.5 7 14.5v-5z"/>
+          </svg>
+          <span class="logo-name">Fieldstone</span>
+        </span>
+
+        <span class="logo-item">
+          <svg class="logo-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <circle cx="12" cy="8.5" r="6.5" opacity=".4"/>
+            <circle cx="12" cy="8.5" r="3"/>
+            <path d="M11 15h2v7h-2z"/>
+          </svg>
+          <span class="logo-name">Arbor</span>
+        </span>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Stats band
+       ============================================================ -->
+  <section class="pb-9">
+    <div class="container">
+      <dl class="stat-band">
+        <div><dt>2,400+</dt><dd>teams shipping on Stratos</dd></div>
+        <div><dt>38M</dt><dd>releases tracked to date</dd></div>
+        <div><dt>41%</dt><dd>median cycle-time reduction</dd></div>
+        <div><dt>99.98%</dt><dd>uptime over the last year</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Features
+       ============================================================ -->
+  <section class="section bg-2" id="features">
+    <div class="container">
+
+      <div class="section-narrow text-center mb-9">
+        <p class="eyebrow fs-sm fg-primary mb-2">Features</p>
+        <h2 class="fs-4xl fw-bold mb-3">Everything your team already needs</h2>
+        <p class="fs-lg fg-2 mb-0">
+          Not another tool to babysit. Stratos replaces the four you're already paying for.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="md:col-6 lg:col-4">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h7"/></svg>
+            </div>
+            <h3 class="fs-lg fw-semibold mb-2">Unified roadmap</h3>
+            <p class="fg-2 mb-0">
+              Every initiative, epic, and release on one timeline your whole company can read
+              without asking what "in progress" means.
+            </p>
+          </article>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.5 14 5v6l-6 3.5L2 11V5z"/><path d="M8 8v6.5M2 5l6 3 6-3"/></svg>
+            </div>
+            <h3 class="fs-lg fw-semibold mb-2">Docs that stay current</h3>
+            <p class="fg-2 mb-0">
+              Specs link straight to the work. When a ticket closes, the doc updates —
+              so nobody ships against a stale spec.
+            </p>
+          </article>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12V7m4 5V4m4 8V6m4 6V2"/></svg>
+            </div>
+            <h3 class="fs-lg fw-semibold mb-2">Throughput you can trust</h3>
+            <p class="fg-2 mb-0">
+              Cycle time, review latency, and carryover — measured from real events,
+              not from whatever someone dragged across a board.
+            </p>
+          </article>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4z"/><path d="M6 7h4M6 10h4"/></svg>
+            </div>
+            <h3 class="fs-lg fw-semibold mb-2">Release notes, automatic</h3>
+            <p class="fg-2 mb-0">
+              Draft notes assemble themselves from merged work. Edit the tone,
+              publish to your changelog in a click.
+            </p>
+          </article>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.5 2.5 4v4c0 3.2 2.3 5.6 5.5 6.5 3.2-.9 5.5-3.3 5.5-6.5V4z"/><path d="m6 8 1.5 1.5L10.5 6.5"/></svg>
+            </div>
+            <h3 class="fs-lg fw-semibold mb-2">Enterprise-grade access</h3>
+            <p class="fg-2 mb-0">
+              SAML SSO, SCIM provisioning, audit logs, and per-project roles —
+              on every plan above Starter.
+            </p>
+          </article>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v12M2 8h12"/><circle cx="8" cy="8" r="6.25"/></svg>
+            </div>
+            <h3 class="fs-lg fw-semibold mb-2">Connects to your stack</h3>
+            <p class="fg-2 mb-0">
+              GitHub, GitLab, Slack, Figma, and Linear sync both directions.
+              Webhooks and a typed API for everything else.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Use cases â Tab component
+       ============================================================ -->
+  <section class="section" id="usecases">
+    <div class="container">
+      <div class="section-narrow text-center mb-7">
+        <p class="eyebrow fs-sm fg-primary mb-2">Use cases</p>
+        <h2 class="fs-4xl fw-bold mb-3">One workspace, three jobs</h2>
+        <p class="fs-lg fg-2 mb-0">The same data, framed for whoever is looking at it.</p>
+      </div>
+
+      <ul class="nav nav-tabs justify-content-center border-0 mb-6" id="useTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="ucEng-tab" data-bs-toggle="tab" data-bs-target="#ucEng" type="button" role="tab" aria-controls="ucEng" aria-selected="true">Engineering</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="ucProd-tab" data-bs-toggle="tab" data-bs-target="#ucProd" type="button" role="tab" aria-controls="ucProd" aria-selected="false">Product</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="ucLead-tab" data-bs-toggle="tab" data-bs-target="#ucLead" type="button" role="tab" aria-controls="ucLead" aria-selected="false">Leadership</button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="ucEng" role="tabpanel" aria-labelledby="ucEng-tab" tabindex="0">
+          <div class="row g-4">
+            <div class="md:col-4"><article class="feature-card"><h3 class="fs-lg fw-semibold mb-2">Stop status meetings</h3><p class="fg-2 mb-0">Work syncs from the repo, so nobody re-types what the commits already say.</p></article></div>
+            <div class="md:col-4"><article class="feature-card"><h3 class="fs-lg fw-semibold mb-2">Review latency, visible</h3><p class="fg-2 mb-0">See exactly where PRs are waiting, and for whom.</p></article></div>
+            <div class="md:col-4"><article class="feature-card"><h3 class="fs-lg fw-semibold mb-2">Release notes for free</h3><p class="fg-2 mb-0">Merged work drafts the changelog. Edit the tone, hit publish.</p></article></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="ucProd" role="tabpanel" aria-labelledby="ucProd-tab" tabindex="0">
+          <div class="row g-4">
+            <div class="md:col-4"><article class="feature-card"><h3 class="fs-lg fw-semibold mb-2">Specs that stay true</h3><p class="fg-2 mb-0">Docs link to the tickets that implement them and update when they close.</p></article></div>
+            <div class="md:col-4"><article class="feature-card"><h3 class="fs-lg fw-semibold mb-2">One roadmap</h3><p class="fg-2 mb-0">Initiatives, epics and releases on a timeline the whole company can read.</p></article></div>
+            <div class="md:col-4"><article class="feature-card"><h3 class="fs-lg fw-semibold mb-2">Customer signal</h3><p class="fg-2 mb-0">Attach requests to initiatives and see what shipping actually unblocks.</p></article></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="ucLead" role="tabpanel" aria-labelledby="ucLead-tab" tabindex="0">
+          <div class="row g-4">
+            <div class="md:col-4"><article class="feature-card"><h3 class="fs-lg fw-semibold mb-2">Throughput, not vibes</h3><p class="fg-2 mb-0">Cycle time and carryover measured from events, not from board columns.</p></article></div>
+            <div class="md:col-4"><article class="feature-card"><h3 class="fs-lg fw-semibold mb-2">Where work stalls</h3><p class="fg-2 mb-0">Find the bottleneck before the quarter ends, not in the retro.</p></article></div>
+            <div class="md:col-4"><article class="feature-card"><h3 class="fs-lg fw-semibold mb-2">Board-ready exports</h3><p class="fg-2 mb-0">Quarterly summaries that don’t need a week of spreadsheet work.</p></article></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       How it works — Stepper (new in v6)
+       ============================================================ -->
+  <section class="section" id="how">
+    <div class="container">
+
+      <div class="section-narrow text-center mb-9">
+        <p class="eyebrow fs-sm fg-primary mb-2">How it works</p>
+        <h2 class="fs-4xl fw-bold mb-3">Live in an afternoon</h2>
+        <p class="fs-lg fg-2 mb-0">
+          Most teams import, invite, and ship their first release the same day.
+        </p>
+      </div>
+
+      <div class="contains-inline mb-9">
+        <ol class="stepper md:stepper-horizontal">
+          <li class="stepper-item active">Connect your repo</li>
+          <li class="stepper-item active">Import open work</li>
+          <li class="stepper-item">Invite the team</li>
+          <li class="stepper-item">Ship release 1</li>
+        </ol>
+      </div>
+
+      <div class="row g-4">
+        <div class="md:col-6 lg:col-3">
+          <h3 class="fs-md fw-semibold mb-2">1. Connect your repo</h3>
+          <p class="fg-2 fs-sm mb-0">One OAuth click for GitHub or GitLab. Read-only until you say otherwise.</p>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <h3 class="fs-md fw-semibold mb-2">2. Import open work</h3>
+          <p class="fg-2 fs-sm mb-0">Issues, labels, and milestones map across automatically. Review before it commits.</p>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <h3 class="fs-md fw-semibold mb-2">3. Invite the team</h3>
+          <p class="fg-2 fs-sm mb-0">Bulk-invite by domain, or sync your directory over SCIM on Business plans.</p>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <h3 class="fs-md fw-semibold mb-2">4. Ship release 1</h3>
+          <p class="fg-2 fs-sm mb-0">Cut a release, let the notes draft themselves, publish to your changelog.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Integrations — Combobox (new in v6)
+       ============================================================ -->
+  <section class="section bg-2" id="integrations">
+    <div class="container">
+      <div class="section-narrow text-center mb-6">
+        <p class="eyebrow fs-sm fg-primary mb-2">Integrations</p>
+        <h2 class="fs-4xl fw-bold mb-3">Connects to what you already run</h2>
+        <p class="fs-lg fg-2 mb-0">
+          Sync both directions, or build your own on a typed API.
+        </p>
+      </div>
+
+      <div class="d-flex justify-content-center mb-6">
+        <div style="width:min(24rem,100%)">
+          <button class="form-control combobox-toggle" type="button"
+                  data-bs-toggle="combobox" data-bs-search="true" data-bs-name="integration"
+                  data-bs-placeholder="Search integrations…">
+            <span class="combobox-value">Search integrations…</span>
+            <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+          </button>
+          <div class="menu">
+            <button class="menu-item" type="button" data-bs-value="github">GitHub</button>
+            <button class="menu-item" type="button" data-bs-value="gitlab">GitLab</button>
+            <button class="menu-item" type="button" data-bs-value="slack">Slack</button>
+            <button class="menu-item" type="button" data-bs-value="figma">Figma</button>
+            <button class="menu-item" type="button" data-bs-value="linear">Linear</button>
+            <button class="menu-item" type="button" data-bs-value="sentry">Sentry</button>
+            <button class="menu-item" type="button" data-bs-value="datadog">Datadog</button>
+            <button class="menu-item" type="button" data-bs-value="notion">Notion</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="sm:col-6 lg:col-3"><div class="integration-card"><span class="integration-logo">GH</span><span><strong class="d-block fs-sm">GitHub</strong><span class="fg-3 fs-xs">Two-way issue sync</span></span></div></div>
+        <div class="sm:col-6 lg:col-3"><div class="integration-card"><span class="integration-logo">GL</span><span><strong class="d-block fs-sm">GitLab</strong><span class="fg-3 fs-xs">Merge requests</span></span></div></div>
+        <div class="sm:col-6 lg:col-3"><div class="integration-card"><span class="integration-logo">SL</span><span><strong class="d-block fs-sm">Slack</strong><span class="fg-3 fs-xs">Release alerts</span></span></div></div>
+        <div class="sm:col-6 lg:col-3"><div class="integration-card"><span class="integration-logo">FG</span><span><strong class="d-block fs-sm">Figma</strong><span class="fg-3 fs-xs">Design attachments</span></span></div></div>
+        <div class="sm:col-6 lg:col-3"><div class="integration-card"><span class="integration-logo">LN</span><span><strong class="d-block fs-sm">Linear</strong><span class="fg-3 fs-xs">Issue mirroring</span></span></div></div>
+        <div class="sm:col-6 lg:col-3"><div class="integration-card"><span class="integration-logo">SN</span><span><strong class="d-block fs-sm">Sentry</strong><span class="fg-3 fs-xs">Error to ticket</span></span></div></div>
+        <div class="sm:col-6 lg:col-3"><div class="integration-card"><span class="integration-logo">DD</span><span><strong class="d-block fs-sm">Datadog</strong><span class="fg-3 fs-xs">Deploy markers</span></span></div></div>
+        <div class="sm:col-6 lg:col-3"><div class="integration-card"><span class="integration-logo">NO</span><span><strong class="d-block fs-sm">Notion</strong><span class="fg-3 fs-xs">Doc embeds</span></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Pricing — Switch (v6: .switch on the input)
+       ============================================================ -->
+  <section class="section bg-2" id="pricing">
+    <div class="container">
+
+      <div class="section-narrow text-center mb-7">
+        <p class="eyebrow fs-sm fg-primary mb-2">Pricing</p>
+        <h2 class="fs-4xl fw-bold mb-3">Priced per seat, not per surprise</h2>
+        <p class="fs-lg fg-2 mb-0">Every plan includes unlimited projects and a 14-day trial.</p>
+      </div>
+
+      <!-- v6 switch: .switch goes on a WRAPPER div and the input takes the
+           `switch` attribute — unlike .check, which goes on the input itself. -->
+      <div class="d-flex justify-content-center align-items-center gap-3 mb-7">
+        <span class="fs-sm fw-medium billing-label is-active" id="billMonthly">Monthly</span>
+        <div class="switch">
+          <input type="checkbox" value="" id="billingToggle" role="switch" switch
+                 aria-labelledby="billMonthly billYearly">
+        </div>
+        <span class="fs-sm fw-medium billing-label" id="billYearly">
+          Yearly
+          <span class="badge badge-subtle theme-success ms-1">Save 20%</span>
+        </span>
+      </div>
+
+      <div class="row g-4 pricing" id="pricingGrid">
+
+        <div class="md:col-6 lg:col-4">
+          <div class="price-card">
+            <h3 class="fs-lg fw-semibold mb-1">Starter</h3>
+            <p class="fg-2 fs-sm mb-4">For small teams finding their rhythm.</p>
+            <p class="mb-1">
+              <span class="price-amount fs-4xl">$<span data-price-monthly>12</span><span data-price-yearly>10</span></span>
+              <span class="fg-3 fs-sm">/ seat / mo</span>
+            </p>
+            <p class="fg-3 fs-xs mb-5">Billed <span data-price-monthly>monthly</span><span data-price-yearly>annually</span></p>
+            <ul class="price-list fs-sm">
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Up to 10 seats</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Unlimited projects</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> GitHub &amp; Slack sync</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Community support</li>
+            </ul>
+            <button class="btn-outline theme-secondary w-100 mt-auto" type="button"
+                    data-bs-toggle="dialog" data-bs-target="#signupDialog">Start free trial</button>
+          </div>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <div class="price-card is-featured">
+            <div class="d-flex justify-content-between align-items-start">
+              <h3 class="fs-lg fw-semibold mb-1">Team</h3>
+              <span class="badge theme-primary">Most popular</span>
+            </div>
+            <p class="fg-2 fs-sm mb-4">For teams shipping every week.</p>
+            <p class="mb-1">
+              <span class="price-amount fs-4xl">$<span data-price-monthly>28</span><span data-price-yearly>22</span></span>
+              <span class="fg-3 fs-sm">/ seat / mo</span>
+            </p>
+            <p class="fg-3 fs-xs mb-5">Billed <span data-price-monthly>monthly</span><span data-price-yearly>annually</span></p>
+            <ul class="price-list fs-sm">
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Everything in Starter</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Unlimited seats</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Automatic release notes</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> SAML SSO &amp; audit logs</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Priority support</li>
+            </ul>
+            <button class="btn-solid theme-primary w-100 mt-auto" type="button"
+                    data-bs-toggle="dialog" data-bs-target="#signupDialog">Start free trial</button>
+          </div>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <div class="price-card">
+            <h3 class="fs-lg fw-semibold mb-1">Business</h3>
+            <p class="fg-2 fs-sm mb-4">For orgs with compliance to answer to.</p>
+            <p class="mb-1">
+              <span class="price-amount fs-4xl">$<span data-price-monthly>49</span><span data-price-yearly>39</span></span>
+              <span class="fg-3 fs-sm">/ seat / mo</span>
+            </p>
+            <p class="fg-3 fs-xs mb-5">Billed <span data-price-monthly>monthly</span><span data-price-yearly>annually</span></p>
+            <ul class="price-list fs-sm">
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Everything in Team</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> SCIM provisioning</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Data residency options</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> 99.9% uptime SLA</li>
+              <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 3.5 3.5L13 5"/></svg> Dedicated CSM</li>
+            </ul>
+            <a class="btn-outline theme-secondary w-100 mt-auto" href="#">Talk to sales</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Comparison table
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-narrow text-center mb-7">
+        <p class="eyebrow fs-sm fg-primary mb-2">Comparison</p>
+        <h2 class="fs-4xl fw-bold mb-0">How we stack up</h2>
+      </div>
+      <div class="table-responsive">
+        <table class="table compare align-middle">
+          <thead>
+            <tr><th scope="col" style="min-width:15rem">Capability</th><th scope="col" class="compare-ours">Stratos</th><th scope="col">Jira</th><th scope="col">Linear</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Roadmap, docs and releases in one tool</th><td class="compare-ours"><span class="yes">✓</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td></tr>
+            <tr><th scope="row">Release notes drafted automatically</th><td class="compare-ours"><span class="yes">✓</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td></tr>
+            <tr><th scope="row">Throughput from repo events</th><td class="compare-ours"><span class="yes">✓</span></td><td>Add-on</td><td><span class="yes">✓</span></td></tr>
+            <tr><th scope="row">Free guest seats</th><td class="compare-ours">5 / project</td><td><span class="no">—</span></td><td>Limited</td></tr>
+            <tr><th scope="row">Setup time</th><td class="compare-ours">An afternoon</td><td>Weeks</td><td>A day</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fs-xs fg-3 text-center mt-3 mb-0">Comparison is illustrative placeholder content for this template.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Testimonials
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-narrow text-center mb-9">
+        <p class="eyebrow fs-sm fg-primary mb-2">Customers</p>
+        <h2 class="fs-4xl fw-bold mb-0">What changed for them</h2>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="md:col-6 lg:col-4">
+          <figure class="quote-card">
+            <div class="stars" role="img" aria-label="Rated 5 out of 5">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+            </div>
+            <blockquote class="fg-1">
+              "We cut our release prep from a full day to about twenty minutes.
+              The notes draft themselves and they're actually readable."
+            </blockquote>
+            <figcaption class="d-flex align-items-center gap-3">
+              <span class="avatar"><span class="avatar-initials">PN</span></span>
+              <span>
+                <span class="d-block fw-semibold fs-sm">Priya Nadkarni</span>
+                <span class="d-block fg-3 fs-xs">VP Engineering, Northwind</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <figure class="quote-card">
+            <div class="stars" role="img" aria-label="Rated 5 out of 5">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+            </div>
+            <blockquote class="fg-1">
+              "The throughput numbers ended a two-year argument about where work
+              was actually stalling. It was code review, not planning."
+            </blockquote>
+            <figcaption class="d-flex align-items-center gap-3">
+              <span class="avatar"><span class="avatar-initials">ML</span></span>
+              <span>
+                <span class="d-block fw-semibold fs-sm">Marcus Leclerc</span>
+                <span class="d-block fg-3 fs-xs">Director of Product, Kestrel</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <figure class="quote-card">
+            <div class="stars" role="img" aria-label="Rated 5 out of 5">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+            </div>
+            <blockquote class="fg-1">
+              "We replaced three tools and still came out cheaper. Onboarding
+              a new engineer went from a week of links to one workspace."
+            </blockquote>
+            <figcaption class="d-flex align-items-center gap-3">
+              <span class="avatar"><span class="avatar-initials">DR</span></span>
+              <span>
+                <span class="d-block fw-semibold fs-sm">Dana Reyes</span>
+                <span class="d-block fg-3 fs-xs">CTO, Fieldstone</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ — native <details> accordion (no Collapse JS in v6)
+       ============================================================ -->
+  <section class="section bg-2" id="faq">
+    <div class="container">
+      <div class="section-narrow">
+
+        <div class="text-center mb-9">
+          <p class="eyebrow fs-sm fg-primary mb-2">FAQ</p>
+          <h2 class="fs-4xl fw-bold mb-0">Questions we get a lot</h2>
+        </div>
+
+        <div class="accordion">
+
+          <details class="accordion-item" name="faq" open>
+            <summary class="accordion-header">
+              Do we need a credit card to start?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+            </summary>
+            <div class="accordion-body">
+              No. The 14-day trial starts on signup with no card. If you don't upgrade,
+              the workspace drops to the free tier — nothing is deleted.
+            </div>
+          </details>
+
+          <details class="accordion-item" name="faq">
+            <summary class="accordion-header">
+              Can we migrate from Jira or Linear?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+            </summary>
+            <div class="accordion-body">
+              Yes. The importer maps issues, labels, milestones, and comment history,
+              and shows you a full diff before anything is written. Most migrations
+              under 5,000 issues finish in about ten minutes.
+            </div>
+          </details>
+
+          <details class="accordion-item" name="faq">
+            <summary class="accordion-header">
+              How does per-seat billing handle contractors?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+            </summary>
+            <div class="accordion-body">
+              Guest seats are free for up to 5 people per project and are read-plus-comment
+              only. Convert a guest to a full seat any time; billing prorates to the day.
+            </div>
+          </details>
+
+          <details class="accordion-item" name="faq">
+            <summary class="accordion-header">
+              Where is our data stored?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+            </summary>
+            <div class="accordion-body">
+              US and EU regions are available on every plan; Business adds Australia and
+              Canada. Data never leaves the region you pick, including backups.
+            </div>
+          </details>
+
+          <details class="accordion-item" name="faq">
+            <summary class="accordion-header">
+              What happens if we cancel?
+              <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+            </summary>
+            <div class="accordion-body">
+              You keep read access indefinitely and can export everything to JSON or
+              Markdown at any point — no support ticket required.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Newsletter — Chip input (new in v6)
+       ============================================================ -->
+  <section class="section bg-2">
+    <div class="container">
+      <div class="section-narrow text-center">
+        <p class="eyebrow fs-sm fg-primary mb-2">Stay posted</p>
+        <h2 class="fs-3xl fw-bold mb-3">Monthly notes on shipping software</h2>
+        <p class="fs-lg fg-2 mb-6">One email a month. Pick the topics you actually want.</p>
+
+        <form class="vstack gap-3" onsubmit="return false">
+          <div class="form-control form-adorn">
+            <div class="form-adorn-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="m2 4 6 4.5L14 4"/></svg>
+            </div>
+            <input type="email" class="form-ghost" placeholder="you@company.com" aria-label="Email address">
+          </div>
+
+          <div class="chip-input" data-bs-chips>
+            <label class="chip-input-label" for="topicsInput">Topics:</label>
+            <span class="chip">engineering</span>
+            <span class="chip">product</span>
+            <input type="text" class="form-ghost" id="topicsInput" placeholder="Add a topic…">
+          </div>
+
+          <div><button class="btn-solid theme-primary" type="submit">Subscribe</button></div>
+          <p class="fs-xs fg-3 mb-0">No spam. Unsubscribe in one click.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-panel">
+        <h2 class="fs-4xl fw-bold mb-3">Give your team one place to look</h2>
+        <p class="fs-lg fg-2 section-narrow mb-6">
+          Start free, invite the team, and ship your first release today.
+          No card, no sales call.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <button class="btn-solid theme-primary btn-lg" type="button"
+                  data-bs-toggle="dialog" data-bs-target="#signupDialog">Start free</button>
+          <a class="btn-outline theme-secondary btn-lg" href="#">Book a demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     Footer
+     ============================================================ -->
+<footer class="site-footer bg-2 pt-9 pb-6">
+  <div class="container">
+    <div class="row g-6 mb-7">
+
+      <div class="lg:col-4">
+        <a class="navbar-brand d-inline-flex align-items-center gap-2 fw-semibold mb-3" href="#">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          Stratos
+        </a>
+        <p class="fg-2 fs-sm mb-4" style="max-width:22rem">
+          One calm workspace for roadmap, docs, and releases.
+          Built for teams who'd rather ship than coordinate.
+        </p>
+        <div class="d-flex gap-2">
+          <a class="btn-icon" href="#" aria-label="Stratos on X">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M12.6 1h2.3l-5 5.7L15.8 15h-4.6l-3.6-4.7L3.4 15H1.1l5.4-6.1L1 1h4.7l3.3 4.3zm-.8 12.6h1.3L5.2 2.3H3.8z"/></svg>
+          </a>
+          <a class="btn-icon" href="#" aria-label="Stratos on GitHub">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+          </a>
+          <a class="btn-icon" href="#" aria-label="Stratos on LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.15C0 .52.53 0 1.18 0h13.64C15.47 0 16 .52 16 1.15v13.7c0 .63-.53 1.15-1.18 1.15H1.18C.53 16 0 15.48 0 14.85zm4.94 12.22V6.17H2.54v7.2zm-1.2-8.18c.84 0 1.36-.55 1.36-1.24-.02-.71-.52-1.25-1.34-1.25s-1.36.54-1.36 1.25c0 .69.52 1.24 1.32 1.24zm4.31 8.18V9.36c0-.22.02-.43.08-.58.17-.43.56-.87 1.21-.87.86 0 1.2.65 1.2 1.6v3.86h2.4V9.23c0-2.22-1.18-3.25-2.76-3.25-1.28 0-1.85.7-2.17 1.2v.02h-.02l.02-.02V6.17h-2.4c.03.68 0 7.2 0 7.2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">Product</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#features">Features</a></li>
+          <li><a class="fg-2" href="#pricing">Pricing</a></li>
+          <li><a class="fg-2" href="#">Integrations</a></li>
+          <li><a class="fg-2" href="#">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">Company</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#">About</a></li>
+          <li><a class="fg-2" href="#">Careers</a></li>
+          <li><a class="fg-2" href="#">Blog</a></li>
+          <li><a class="fg-2" href="#">Press</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">Resources</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#">Documentation</a></li>
+          <li><a class="fg-2" href="#">API reference</a></li>
+          <li><a class="fg-2" href="#">Status</a></li>
+          <li><a class="fg-2" href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">Legal</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#">Privacy</a></li>
+          <li><a class="fg-2" href="#">Terms</a></li>
+          <li><a class="fg-2" href="#">Security</a></li>
+          <li><a class="fg-2" href="#">DPA</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 pt-4">
+      <p class="fg-3 fs-xs mb-0">&copy; <span id="year">2026</span> Stratos. A free template for uicookies.</p>
+      <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     Signup dialog — native <dialog> in v6
+     ============================================================ -->
+<dialog class="dialog" id="signupDialog" aria-labelledby="signupTitle">
+  <div class="dialog-header">
+    <h1 class="dialog-title fs-lg" id="signupTitle">Start your free trial</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+
+  <form class="dialog-body vstack gap-4" id="signupForm" data-bs-validate novalidate>
+
+    <div class="form-field">
+      <label class="form-label" for="suName">Full name</label>
+      <input type="text" class="form-control" id="suName" name="name" placeholder="Ada Lovelace" required>
+      <div class="invalid-feedback">Please tell us your name.</div>
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="suEmail">Work email</label>
+      <!-- form-adorn: wrapper carries .form-control, the input carries .form-ghost -->
+      <div class="form-control form-adorn">
+        <div class="form-adorn-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="m2 4 6 4.5L14 4"/></svg>
+        </div>
+        <input type="email" class="form-ghost" id="suEmail" name="email" placeholder="you@company.com" required>
+      </div>
+      <div class="form-text">We'll only email you about your workspace.</div>
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="suTeam">Team size</label>
+      <select class="form-control" id="suTeam" name="team" required>
+        <option value="">Choose one…</option>
+        <option value="1-9">1–9 people</option>
+        <option value="10-49">10–49 people</option>
+        <option value="50-199">50–199 people</option>
+        <option value="200+">200+ people</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <input type="checkbox" class="check" id="suTerms" name="terms" required>
+      <div class="form-field-content">
+        <label for="suTerms">I agree to the terms of service</label>
+        <small class="form-text">You can cancel at any time from your workspace settings.</small>
+      </div>
+    </div>
+
+  </form>
+
+  <div class="dialog-footer">
+    <button type="button" class="btn-text" data-bs-dismiss="dialog">Cancel</button>
+    <button type="submit" form="signupForm" class="btn-solid theme-primary">Create workspace</button>
+  </div>
+</dialog>
+
+<!-- Bootstrap 6 is ESM-only — type="module" is required, and there is no window.bootstrap -->
+<script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>

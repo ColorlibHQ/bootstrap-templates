@@ -1,0 +1,27 @@
+{
+  "slug": "bs6-forms",
+  "kind": "pack",
+  "title": "Bootstrap 6 Forms — 10 Free Form Templates",
+  "excerpt": "Ten free Bootstrap 6 form templates — contact, sign-up, booking, multi-step, OTP verification, chips, range and floating labels.",
+  "yoastTitle": "Bootstrap 6 Forms — 10 Free Bootstrap 6 Form Templates",
+  "yoastDesc": "Ten free Bootstrap 6 form templates covering contact, sign-up, booking, multi-step, OTP verification, tag input, range calculators and floating labels. Copy-paste, no build step.",
+  "intro": "A pack of ten <strong>Bootstrap 6</strong> form layouts covering the shapes real projects actually need &#8212; contact, sign-up, appointment booking, multi-step, verification, filtering and billing. Each one is a standalone page you can copy the markup straight out of.",
+  "note": "Between them they use every form component Bootstrap 6 added over v5: Combobox (searchable and multi-select), Datepicker, OTP input, password Strength, Chip input, Range with live value bubbles, and form adorns. There is no equivalent to any of these in Bootstrap 5 without a third-party plugin.",
+  "summary": "Bootstrap 6 Forms is a pack of ten form templates for Bootstrap 6: stacked contact, split brand panel, multi-step with Stepper, inline filter toolbar, appointment booking with Datepicker, sign-up with password Strength, OTP verification, chip and tag pickers, a Range-driven quote calculator, and floating labels. Each variant is its own page with shared chrome, and all of them use native :user-invalid validation via data-bs-validate. ESM-only, no build step, full light and dark mode.",
+  "features": [
+    "Ten distinct form layouts, each on its own page with prev/next navigation",
+    "Stacked contact form with form adorn and native :user-invalid validation",
+    "Split brand-panel sign-up, the standard SaaS pattern",
+    "Multi-step form using Bootstrap 6's new Stepper component",
+    "Inline filter toolbar built from searchable and multi-select Comboboxes",
+    "Appointment booking with the new Datepicker and time-slot toggles",
+    "Sign-up with the password Strength meter",
+    "Verification screen using the new OTP input, with one-time-code autofill",
+    "Tag and interest pickers built on Chip input",
+    "Quote calculator driven by Range sliders with live value bubbles",
+    "Floating labels with adorned inputs and a native select",
+    "Full dark mode via data-bs-theme, remembered across visits",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": ["bootstrap-6", "ui-packs"]
+}

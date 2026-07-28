@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Form dialog — Bootstrap 6 Dialogs & Drawers</title>
+<meta name="description" content="A form inside a dialog, submitted from the footer using form= so the button can live outside the form element. A free Bootstrap 6 dialog example.">
+<link rel="stylesheet" href="../assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="variant-bar">
+  <a class="btn-text btn-sm" href="../index.html">&#8592; All dialogs</a>
+  <span class="fs-sm fw-semibold ms-2">Form dialog</span>
+  <span class="fs-xs fg-3 d-none md:d-inline">4 of 10</span>
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <a class="btn-icon btn-sm" href="../03-sizes/index.html" aria-label="Previous">&#8249;</a>
+    <a class="btn-icon btn-sm" href="../05-confirm/index.html" aria-label="Next">&#8250;</a>
+    <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+  </div>
+</div>
+
+<main class="variant-stage">
+  <div class="variant-inner">
+    <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Form dialog</h1>
+<p class="fg-2 mb-4">The submit button sits in the footer, outside the form, wired up with <code>form="…"</code>.</p>
+<div class="trigger-grid mb-4">
+  <button class="btn-solid theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#dlgForm">Invite a teammate</button>
+</div>
+<div class="note fs-sm">
+  <p class="mb-0">Keep <code>novalidate</code> plus <code>data-bs-validate</code>
+  on the form. v6 dropped <code>.needs-validation</code> and
+  <code>.was-validated</code> in favour of native <code>:user-invalid</code>, so
+  errors only appear once someone has actually interacted with a field.</p>
+</div>
+<dialog class="dialog" id="dlgForm" aria-labelledby="dlgFormLabel">
+  <div class="dialog-header">
+    <h2 class="dialog-title fs-lg" id="dlgFormLabel">Invite a teammate</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <form class="dialog-body vstack gap-3" id="inviteForm" data-demo-form data-bs-validate novalidate>
+    <div class="form-field">
+      <label class="form-label" for="invEmail">Email address</label>
+      <input type="email" class="form-control" id="invEmail" required>
+      <div class="invalid-feedback">A valid work email, please.</div>
+    </div>
+    <div class="form-field">
+      <label class="form-label" for="invRole">Role</label>
+      <select class="form-select" id="invRole">
+        <option>Viewer</option>
+        <option selected>Editor</option>
+        <option>Admin</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <div class="switch"><input type="checkbox" id="invNotify" role="switch" switch checked></div>
+      <label for="invNotify">Email them an invitation now</label>
+    </div>
+  </form>
+  <div class="dialog-footer">
+    <button type="button" class="btn-text" data-bs-dismiss="dialog">Cancel</button>
+    <button type="submit" form="inviteForm" class="btn-solid theme-primary" data-done-text="Invited &#10003;">Send invite</button>
+  </div>
+</dialog>
+  </div>
+</main>
+
+<script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

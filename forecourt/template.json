@@ -1,0 +1,77 @@
+{
+  "slug": "forecourt",
+  "title": "Forecourt \u2014 Free Bootstrap 6 Car Dealership Website Template",
+  "excerpt": "A free two-page Bootstrap 6 car dealership template \u2014 vehicle cards led by the monthly payment, a live finance calculator that updates every listing, part exchange and a full vehicle page.",
+  "yoastTitle": "Forecourt \u2014 Free Bootstrap 6 Car Dealership Website Template",
+  "yoastDesc": "Free Bootstrap 6 car dealership and automotive website template with monthly-payment-led vehicle cards, a live finance calculator using Range sliders, part-exchange valuation form, branch hours and a full vehicle listing page.",
+  "intro": "Forecourt is a free, premium <strong>Bootstrap 6</strong> website template for car dealerships, used-car forecourts, vehicle brokers and garages. It pairs a full dealership homepage \u2014 stock search, vehicle grid, finance calculator, part exchange and branches \u2014 with a vehicle listing page carrying a complete specification and a sticky finance rail.",
+  "note": "The design leads with the number people actually shop on: <strong>the monthly payment is the largest figure on every card</strong> and the cash price sits beneath it. The finance calculator is genuinely live \u2014 move the deposit, term or APR sliders and every quoted monthly on the page updates with them, including all six cards in the grid, because a calculator that does not change the listings is decoration. The figures are flat-rate illustrations and the template says so in three places rather than dressing an approximation up as a quotation.",
+  "summary": "Forecourt is a free, premium two-page Bootstrap 6 template for car dealerships and used-car forecourts. The homepage runs a photographic showroom hero with a three-field stock search, a vehicle grid where every card leads with the monthly payment, a live finance calculator built on three Range sliders that recalculates every quoted figure on the page, a part-exchange valuation form using Combobox and Datepicker, and branch opening hours. The vehicle page adds a gallery strip, full specification in two columns, honest condition notes and a sticky finance rail with a booking dialog. Showroom design language: deep graphite, one signal-orange accent. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages \u2014 dealership homepage and a vehicle listing page",
+    "Every vehicle card leads with the monthly payment, cash price secondary",
+    "Live finance calculator \u2014 deposit, term and APR sliders update every quoted figure on the page",
+    "Same formula runs at build and at runtime, so nothing jumps on first paint",
+    "Flat-rate figures labelled as illustrations, not dressed up as quotations",
+    "Part-exchange valuation form with Combobox condition and Datepicker",
+    "Vehicle page with gallery strip, two-column specification and a sticky finance rail",
+    "Booking dialog built on a native &lt;dialog&gt;",
+    "Branch opening hours and FCA regulatory footer",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "business-services"
+  ],
+  "images": [
+    {
+      "name": "hero",
+      "q": "classic car showroom",
+      "fallback": "classic car",
+      "w": 1800,
+      "h": 1000
+    },
+    {
+      "name": "car-1",
+      "q": "silver suv",
+      "fallback": "sports car",
+      "w": 800,
+      "h": 600
+    },
+    {
+      "name": "car-2",
+      "q": "blue car side",
+      "fallback": "classic car",
+      "w": 800,
+      "h": 600
+    },
+    {
+      "name": "car-3",
+      "q": "black saloon car",
+      "fallback": "sports car",
+      "w": 800,
+      "h": 600
+    },
+    {
+      "name": "car-4",
+      "q": "red sports car",
+      "fallback": "sports car",
+      "w": 800,
+      "h": 600
+    },
+    {
+      "name": "car-5",
+      "q": "small car parked",
+      "fallback": "classic car",
+      "w": 800,
+      "h": 600
+    },
+    {
+      "name": "car-6",
+      "q": "white car front",
+      "fallback": "sports car",
+      "w": 800,
+      "h": 600
+    }
+  ]
+}

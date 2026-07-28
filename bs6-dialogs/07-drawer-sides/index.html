@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drawers, four sides — Bootstrap 6 Dialogs & Drawers</title>
+<meta name="description" content=".drawer-start, -end, -top and -bottom. Offcanvas is gone; a drawer is a &lt;dialog&gt; too. A free Bootstrap 6 dialog example.">
+<link rel="stylesheet" href="../assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="variant-bar">
+  <a class="btn-text btn-sm" href="../index.html">&#8592; All dialogs</a>
+  <span class="fs-sm fw-semibold ms-2">Drawers, four sides</span>
+  <span class="fs-xs fg-3 d-none md:d-inline">7 of 10</span>
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <a class="btn-icon btn-sm" href="../06-nonmodal/index.html" aria-label="Previous">&#8249;</a>
+    <a class="btn-icon btn-sm" href="../08-sheet/index.html" aria-label="Next">&#8250;</a>
+    <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+  </div>
+</div>
+
+<main class="variant-stage">
+  <div class="variant-inner is-wide">
+    <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Drawers</h1>
+<p class="fg-2 mb-4">Same element, same JavaScript, four positions.</p>
+<div class="trigger-grid mb-4">
+  <button class="btn-outline theme-secondary" type="button" data-bs-toggle="drawer" data-bs-target="#drwStart">From the start</button>
+  <button class="btn-solid theme-primary" type="button" data-bs-toggle="drawer" data-bs-target="#drwEnd">From the end</button>
+  <button class="btn-outline theme-secondary" type="button" data-bs-toggle="drawer" data-bs-target="#drwTop">From the top</button>
+  <button class="btn-outline theme-secondary" type="button" data-bs-toggle="drawer" data-bs-target="#drwBottom">From the bottom</button>
+</div>
+<div class="note fs-sm">
+  <p class="mb-0"><strong>A drawer must also be a <code>&lt;dialog&gt;</code>.</strong>
+  Porting an offcanvas div across is the second most common v5 mistake — and if
+  you leave it as a div inside a <code>navbar-expand</code> ancestor, its contents
+  render inline on desktop instead of staying hidden.</p>
+</div>
+<dialog class="drawer drawer-start" id="drwStart" aria-labelledby="drwStartLabel">
+  <div class="drawer-header">
+    <h2 class="drawer-title fs-lg" id="drwStartLabel">Filters</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <p class='fg-2 mb-0'>Faceted filters usually belong on the start edge, near the results they modify.</p>
+  </div>
+</dialog>
+<dialog class="drawer drawer-end" id="drwEnd" aria-labelledby="drwEndLabel">
+  <div class="drawer-header">
+    <h2 class="drawer-title fs-lg" id="drwEndLabel">Basket</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <p class='fg-2 mb-0'>Baskets, notifications and detail panels read better from the end edge.</p>
+  </div>
+</dialog>
+<dialog class="drawer drawer-top" id="drwTop" aria-labelledby="drwTopLabel">
+  <div class="drawer-header">
+    <h2 class="drawer-title fs-lg" id="drwTopLabel">Announcement</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <p class='fg-2 mb-0'>Top drawers suit site-wide notices. Use them sparingly.</p>
+  </div>
+</dialog>
+<dialog class="drawer drawer-bottom" id="drwBottom" aria-labelledby="drwBottomLabel">
+  <div class="drawer-header">
+    <h2 class="drawer-title fs-lg" id="drwBottomLabel">Quick actions</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <p class='fg-2 mb-0'>Bottom is the natural place on a phone — it is where thumbs are.</p>
+  </div>
+</dialog>
+  </div>
+</main>
+
+<script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

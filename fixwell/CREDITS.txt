@@ -1,0 +1,15 @@
+Placeholder photography
+=======================
+
+Every photograph here is CC0 / Public Domain Mark, sourced via the
+Openverse API — no attribution required, commercial use fine. Where no
+public-domain photograph matched a slot, the file is a generated gradient
+instead; those are marked below and carry no rights at all.
+
+Either way these are placeholders: replace them with your own photography
+before launch. Provenance for each file follows.
+
+hero.jpg
+  Plane (1937) Lloyd Charles Lemcke
+  CC0 1.0
+  https://www.rawpixel.com/image/3369031/free-illustration-image-antique-art-artwork

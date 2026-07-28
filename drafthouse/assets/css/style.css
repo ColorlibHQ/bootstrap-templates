@@ -1,0 +1,222 @@
+/*!
+ * Drafthouse — Bootstrap 6 architecture & interior design template
+ *
+ * Design language: drawing sheet. Warm paper ground, hairline rules everywhere,
+ * and metadata set the way a drawing title block sets it — label above value, in
+ * small caps, aligned to a grid. Nothing is rounded and nothing is shadowed.
+ *
+ * The structural idea carrying the identity is the title block: every project
+ * carries area, year, location and status as data rather than prose, because
+ * that is the first thing anyone commissioning a building actually looks for.
+ */
+
+:root {
+  --brand: oklch(48% 0.09 232);
+  --kit-section-y: 5rem;
+  --dh-rule: color-mix(in oklab, var(--bs-fg-body), transparent 84%);
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 7rem; } }
+
+[data-bs-theme="light"] {
+  --bs-bg-body: oklch(97% 0.007 85);
+  --bs-bg-2: oklch(94% 0.009 85);
+}
+
+[data-bs-theme="dark"] {
+  --bs-bg-body: oklch(18% 0.008 232);
+  --bs-bg-2: oklch(22% 0.01 232);
+}
+
+/* Nothing on a drawing sheet has rounded corners. */
+.sheet,
+.sheet .ph,
+.proj-media,
+.proj-media .ph,
+.title-block {
+  border-radius: 0;
+}
+
+/* ---------------------------------------------------------------
+   Annotation type — the drawing-sheet voice
+   --------------------------------------------------------------- */
+
+.anno {
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bs-fg-3);
+}
+
+.anno-value {
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+  margin-top: 0.15rem;
+}
+
+.rule-top { border-top: 1px solid var(--dh-rule); padding-top: 0.75rem; }
+
+/* ---------------------------------------------------------------
+   Header + hero
+   --------------------------------------------------------------- */
+
+.wordmark {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.plate {
+  position: relative;
+  min-height: min(78svh, 44rem);
+  display: grid;
+  place-items: end start;
+  padding: 5rem clamp(1.25rem, 4vw, 3rem) clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--bs-white);
+  background: linear-gradient(150deg, #2a3138, #414d57 60%, #58666f);
+  overflow: hidden;
+}
+
+.plate > .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.plate::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to top, rgb(20 24 28 / 78%) 0%, rgb(20 24 28 / 25%) 45%, transparent 75%);
+}
+
+.plate-inner { position: relative; z-index: 2; width: 100%; }
+
+.plate-title {
+  font-size: clamp(2rem, 1.2rem + 3.4vw, 3.75rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+/* The title block: metadata in a row of labelled cells, like a drawing sheet. */
+.title-block {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 35%);
+}
+
+@media (width >= 768px) { .title-block { grid-template-columns: repeat(4, 1fr); } }
+
+.plate .anno { color: rgb(255 255 255 / 62%); }
+.plate .anno-value { color: var(--bs-white); }
+
+/* ---------------------------------------------------------------
+   Projects
+   --------------------------------------------------------------- */
+
+.proj {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-top: 1px solid var(--dh-rule);
+  padding-top: 1.25rem;
+}
+
+.proj-media { overflow: hidden; margin-bottom: 1rem; }
+.proj-media .ph { aspect-ratio: 4 / 3; }
+.proj-media img { transition: scale 0.5s ease; }
+.proj:hover .proj-media img { scale: 1.04; }
+
+@media (prefers-reduced-motion: reduce) { .proj-media img { transition: none; } }
+
+.proj-name { font-size: 1.35rem; font-weight: 500; letter-spacing: -0.02em; }
+
+.proj-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+/* ---------------------------------------------------------------
+   Practice, services
+   --------------------------------------------------------------- */
+
+.principle {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--dh-rule);
+}
+
+.principle-no {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.8125rem;
+  color: var(--bs-fg-primary);
+  padding-top: 0.2rem;
+}
+
+.service-cell {
+  padding: 1.5rem;
+  border: 1px solid var(--dh-rule);
+  height: 100%;
+}
+
+.award-row {
+  display: grid;
+  gap: 0.25rem 1.5rem;
+  grid-template-columns: 1fr;
+  padding: 1rem 0;
+  border-top: 1px solid var(--dh-rule);
+}
+
+@media (width >= 768px) { .award-row { grid-template-columns: 6rem 1fr 12rem; } }
+
+/* ---------------------------------------------------------------
+   People, contact, sub page
+   --------------------------------------------------------------- */
+
+.person .ph { aspect-ratio: 1; margin-bottom: 0.85rem; }
+.person-role { color: var(--bs-fg-3); font-size: 0.8125rem; }
+
+.contact-sheet {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--dh-rule);
+  background: var(--bs-bg-2);
+}
+
+.sub-head {
+  padding-block: 3.5rem;
+  border-bottom: 1px solid var(--dh-rule);
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--dh-rule);
+}
+
+.spec-row:last-child { border-bottom: 0; }
+
+.fact-sheet {
+  position: sticky;
+  top: 6rem;
+  padding: 1.5rem;
+  border: 1px solid var(--dh-rule);
+  border-top: 3px solid var(--bs-primary-base);
+}

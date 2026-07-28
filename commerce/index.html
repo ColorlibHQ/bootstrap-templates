@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commerce — Free Bootstrap 6 E-commerce Website Template</title>
+<meta name="description" content="Commerce is a free Bootstrap 6 online store template with a filterable product grid, product detail page and a multi-step checkout.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="announce">
+  Free shipping over $75 &middot; <a href="#">30-day returns</a>
+</div>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">C</span> Commerce
+      </a>
+
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+            <li class="nav-item">
+              <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                Collections
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg>
+              </button>
+              <div class="menu">
+                <a class="menu-item" href="#shop">New arrivals</a>
+                <a class="menu-item" href="#shop">Best sellers</a>
+                <a class="menu-item" href="#shop">Kitchen</a>
+                <a class="menu-item" href="#shop">Home textiles</a>
+                <hr class="menu-divider">
+                <a class="menu-item" href="#shop">Sale</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="product.html">Product page</a></li>
+            <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+            <li class="nav-item"><a class="nav-link" href="#journal">Journal</a></li>
+          </ul>
+        </div>
+      </dialog>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" data-bs-toggle="drawer" data-bs-target="#searchDrawer" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 4 4" stroke-linecap="round"/></svg>
+        </button>
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <button class="btn-icon" type="button" data-bs-toggle="drawer" data-bs-target="#cartDrawer" aria-label="Open cart (3 items)">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 2h1.6l1.7 8.2h7.3l1.4-6H4.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="13.5" r="1.1"/><circle cx="12" cy="13.5" r="1.1"/></svg>
+          <span class="badge theme-primary ms-1">3</span>
+        </button>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero pt-6">
+    <div class="container">
+      <div class="row align-items-center g-6">
+        <div class="lg:col-6">
+          <span class="badge badge-subtle theme-primary mb-4">New season · Autumn</span>
+          <h1 class="hero-title fs-6xl fw-bold mb-4">Objects made to be kept</h1>
+          <p class="hero-lede fs-lg fg-2 mb-6">
+            Small-batch kitchen and home goods from independent makers.
+            Built to outlast trends, and to be repaired rather than replaced.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-6">
+            <a class="btn-solid theme-primary btn-lg" href="#shop">Shop the collection</a>
+            <a class="btn-outline theme-secondary btn-lg" href="product.html">See a product page</a>
+          </div>
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <div class="stars" role="img" aria-label="Rated 4.9 out of 5">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+            </div>
+            <p class="fs-sm fg-2 mb-0"><strong class="fg-1">4.9</strong> from 2,180 reviews</p>
+          </div>
+        </div>
+        <div class="lg:col-6">
+          <div class="row g-3">
+            <div class="col-7">
+              <div class="ph ph-3x4 rounded-6"><img src="img/hero-kettle.jpg" alt="A copper kettle on a stovetop" width="700" height="933" loading="eager"></div>
+            </div>
+            <div class="col-5">
+              <div class="ph ph-1x1 rounded-6 mb-3"><img src="img/hero-linen.jpg" alt="Folded linen textiles" width="500" height="500" loading="eager"></div>
+              <div class="ph ph-1x1 rounded-6"><img src="img/hero-stoneware.jpg" alt="Stoneware bowls stacked" width="500" height="500" loading="eager"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="pb-9">
+    <div class="container">
+      <div class="trust">
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1.5 4.5h9v7h-9zM10.5 7h2.6l1.4 2v2.5h-4" stroke-linejoin="round"/><circle cx="4.5" cy="12" r="1.2"/><circle cx="11.5" cy="12" r="1.2"/></svg>
+          <div><p class="fw-semibold fs-sm mb-1">Free shipping over $75</p><p class="fg-3 fs-xs mb-0">2–4 working days, tracked</p></div>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 8A6 6 0 1 1 8 2v3" stroke-linecap="round"/><path d="m5.5 2 2.5 3-2.5 2" stroke-linejoin="round"/></svg>
+          <div><p class="fw-semibold fs-sm mb-1">30-day returns</p><p class="fg-3 fs-xs mb-0">No questions, prepaid label</p></div>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 1.5 2.5 4v4c0 3.2 2.3 5.6 5.5 6.5 3.2-.9 5.5-3.3 5.5-6.5V4z" stroke-linejoin="round"/><path d="m6 8 1.5 1.5L10.5 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><p class="fw-semibold fs-sm mb-1">5-year guarantee</p><p class="fg-3 fs-xs mb-0">Repairs before replacements</p></div>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 4.5v3.8l2.5 1.5" stroke-linecap="round"/></svg>
+          <div><p class="fw-semibold fs-sm mb-1">Real humans</p><p class="fg-3 fs-xs mb-0">Replies within 4 hours</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+        <div>
+          <p class="eyebrow fs-sm fg-primary mb-2">Collections</p>
+          <h2 class="fs-3xl fw-bold mb-0">Shop by room</h2>
+        </div>
+        <a class="btn-text" href="#shop">All collections →</a>
+      </div>
+      <div class="row g-3">
+        <div class="sm:col-6 lg:col-3"><a class="cat-tile" href="#shop"><div class="ph ph-4x3">Kitchen</div><span class="cat-tile-label">Kitchen</span></a></div>
+        <div class="sm:col-6 lg:col-3"><a class="cat-tile" href="#shop"><div class="ph ph-4x3">Dining</div><span class="cat-tile-label">Dining</span></a></div>
+        <div class="sm:col-6 lg:col-3"><a class="cat-tile" href="#shop"><div class="ph ph-4x3">Textiles</div><span class="cat-tile-label">Textiles</span></a></div>
+        <div class="sm:col-6 lg:col-3"><a class="cat-tile" href="#shop"><div class="ph ph-4x3">Storage</div><span class="cat-tile-label">Storage</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop -->
+  <section class="section bg-2" id="shop">
+    <div class="container">
+      <div class="mb-6">
+        <p class="eyebrow fs-sm fg-primary mb-2">Shop</p>
+        <h2 class="fs-3xl fw-bold mb-2">Everything in stock</h2>
+        <p class="fg-2 mb-0">Filters below use Bootstrap 6's new Combobox, Chip input and Range components.</p>
+      </div>
+
+      <div class="row g-5">
+
+        <!-- Filters -->
+        <aside class="lg:col-3">
+          <div class="filter-rail">
+            <div class="filter-group">
+              <h3>Sort</h3>
+              <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-name="sort" data-bs-placeholder="Most popular">
+                <span class="combobox-value">Most popular</span>
+                <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+              </button>
+              <div class="menu">
+                <button class="menu-item" type="button" data-bs-value="popular">Most popular</button>
+                <button class="menu-item" type="button" data-bs-value="new">Newest first</button>
+                <button class="menu-item" type="button" data-bs-value="low">Price: low to high</button>
+                <button class="menu-item" type="button" data-bs-value="high">Price: high to low</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h3>Category</h3>
+              <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-multiple="true" data-bs-name="category" data-bs-placeholder="All categories">
+                <span class="combobox-value">All categories</span>
+                <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+              </button>
+              <div class="menu">
+                <button class="menu-item" type="button" data-bs-value="kitchen">Kitchen</button>
+                <button class="menu-item" type="button" data-bs-value="dining">Dining</button>
+                <button class="menu-item" type="button" data-bs-value="textiles">Textiles</button>
+                <button class="menu-item" type="button" data-bs-value="storage">Storage</button>
+                <button class="menu-item" type="button" data-bs-value="lighting">Lighting</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h3>Max price</h3>
+              <div class="form-range" data-bs-bubble>
+                <input type="range" class="form-range-input" id="priceRange" min="10" max="300" step="5" value="180" aria-label="Maximum price">
+              </div>
+              <p class="fs-xs fg-3 mb-0">Up to <strong class="fg-1" id="priceOut">$180</strong></p>
+            </div>
+
+            <div class="filter-group">
+              <h3>Material</h3>
+              <div class="chip-input" data-bs-chips>
+                <label class="chip-input-label visually-hidden" for="materialInput">Materials</label>
+                <span class="chip">stoneware</span>
+                <span class="chip">linen</span>
+                <input type="text" class="form-ghost" id="materialInput" placeholder="Add…">
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h3>Availability</h3>
+              <div class="form-field mb-2">
+                <input type="checkbox" class="check" id="fStock" checked>
+                <label for="fStock">In stock</label>
+              </div>
+              <div class="form-field">
+                <input type="checkbox" class="check" id="fSale">
+                <label for="fSale">On sale</label>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Grid -->
+        <div class="lg:col-9">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-4">
+            <p class="fs-sm fg-2 mb-0 me-auto">Showing <strong class="fg-1">8</strong> of 124 products</p>
+            <span class="chip">stoneware <button type="button" class="chip-dismiss" aria-label="Remove stoneware filter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg></button></span>
+            <span class="chip">under $180 <button type="button" class="chip-dismiss" aria-label="Remove price filter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg></button></span>
+          </div>
+
+          <div class="row g-4">
+
+            <div class="sm:col-6 xl:col-4">
+              <article class="product">
+                <div class="product-media">
+                  <span class="badge theme-primary product-flag">New</span>
+                  <button class="btn-icon btn-sm product-fav" type="button" aria-label="Save Ridge kettle"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+                  <div class="ph ph-1x1">Ridge kettle</div>
+                </div>
+                <h3 class="product-title"><a href="product.html">Ridge copper kettle</a></h3>
+                <p class="fs-xs fg-3 mb-1">Kitchen</p>
+                <p class="product-price mb-0">$148</p>
+                <div class="swatches" aria-hidden="true"><span class="swatch" style="background:#b06a3f"></span><span class="swatch" style="background:#2f3437"></span><span class="swatch" style="background:#d9d2c7"></span></div>
+              </article>
+            </div>
+
+            <div class="sm:col-6 xl:col-4">
+              <article class="product">
+                <div class="product-media">
+                  <button class="btn-icon btn-sm product-fav" type="button" aria-label="Save Marl bowls"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+                  <div class="ph ph-1x1">Marl bowls</div>
+                </div>
+                <h3 class="product-title"><a href="product.html">Marl stoneware bowls, set of 4</a></h3>
+                <p class="fs-xs fg-3 mb-1">Dining</p>
+                <p class="product-price mb-0">$96</p>
+                <div class="swatches" aria-hidden="true"><span class="swatch" style="background:#8f8578"></span><span class="swatch" style="background:#f0ebe3"></span></div>
+              </article>
+            </div>
+
+            <div class="sm:col-6 xl:col-4">
+              <article class="product">
+                <div class="product-media">
+                  <span class="badge badge-subtle theme-danger product-flag">-25%</span>
+                  <button class="btn-icon btn-sm product-fav" type="button" aria-label="Save Flax throw"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+                  <div class="ph ph-1x1">Flax throw</div>
+                </div>
+                <h3 class="product-title"><a href="product.html">Flax washed linen throw</a></h3>
+                <p class="fs-xs fg-3 mb-1">Textiles</p>
+                <p class="product-price mb-0">$89 <span class="product-was">$119</span></p>
+                <div class="swatches" aria-hidden="true"><span class="swatch" style="background:#c8bfae"></span><span class="swatch" style="background:#6d7b73"></span></div>
+              </article>
+            </div>
+
+            <div class="sm:col-6 xl:col-4">
+              <article class="product">
+                <div class="product-media">
+                  <button class="btn-icon btn-sm product-fav" type="button" aria-label="Save Pitch board"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+                  <div class="ph ph-1x1">Pitch board</div>
+                </div>
+                <h3 class="product-title"><a href="product.html">Pitch end-grain board</a></h3>
+                <p class="fs-xs fg-3 mb-1">Kitchen</p>
+                <p class="product-price mb-0">$132</p>
+              </article>
+            </div>
+
+            <div class="sm:col-6 xl:col-4">
+              <article class="product">
+                <div class="product-media">
+                  <button class="btn-icon btn-sm product-fav" type="button" aria-label="Save Ember carafe"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+                  <div class="ph ph-1x1">Ember carafe</div>
+                </div>
+                <h3 class="product-title"><a href="product.html">Ember glass carafe</a></h3>
+                <p class="fs-xs fg-3 mb-1">Dining</p>
+                <p class="product-price mb-0">$54</p>
+              </article>
+            </div>
+
+            <div class="sm:col-6 xl:col-4">
+              <article class="product">
+                <div class="product-media">
+                  <span class="badge badge-subtle theme-warning product-flag">Low stock</span>
+                  <button class="btn-icon btn-sm product-fav" type="button" aria-label="Save Crate basket"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+                  <div class="ph ph-1x1">Crate basket</div>
+                </div>
+                <h3 class="product-title"><a href="product.html">Crate woven basket</a></h3>
+                <p class="fs-xs fg-3 mb-1">Storage</p>
+                <p class="product-price mb-0">$68</p>
+              </article>
+            </div>
+
+          </div>
+
+          <nav aria-label="Product pages" class="mt-6">
+            <ul class="pagination mb-0">
+              <li class="page-item"><a class="page-link" href="#shop">Previous</a></li>
+              <li class="page-item"><a class="page-link active" aria-current="page" href="#shop">1</a></li>
+              <li class="page-item"><a class="page-link" href="#shop">2</a></li>
+              <li class="page-item"><a class="page-link" href="#shop">3</a></li>
+              <li class="page-item"><a class="page-link" href="#shop">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section">
+    <div class="container">
+      <div class="section-narrow text-center mb-7">
+        <p class="eyebrow fs-sm fg-primary mb-2">Reviews</p>
+        <h2 class="fs-3xl fw-bold mb-0">What people keep saying</h2>
+      </div>
+      <div class="row g-4">
+        <div class="md:col-4">
+          <figure class="surface surface-pad">
+            <div class="stars mb-3" role="img" aria-label="5 out of 5"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg></div>
+            <blockquote class="mb-4">"The kettle has been on the hob every morning for two years. Still looks better than the day it arrived."</blockquote>
+            <figcaption class="d-flex align-items-center gap-3">
+              <span class="avatar"><span class="avatar-initials">RK</span></span>
+              <span><span class="d-block fw-semibold fs-sm">Rachel K.</span><span class="d-block fg-3 fs-xs">Verified buyer</span></span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="md:col-4">
+          <figure class="surface surface-pad">
+            <div class="stars mb-3" role="img" aria-label="5 out of 5"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg></div>
+            <blockquote class="mb-4">"I chipped a bowl and they sent a replacement plus a repair kit for the set. That's not normal any more."</blockquote>
+            <figcaption class="d-flex align-items-center gap-3">
+              <span class="avatar"><span class="avatar-initials">DM</span></span>
+              <span><span class="d-block fw-semibold fs-sm">Daniel M.</span><span class="d-block fg-3 fs-xs">Verified buyer</span></span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="md:col-4">
+          <figure class="surface surface-pad">
+            <div class="stars mb-3" role="img" aria-label="4 out of 5"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg></div>
+            <blockquote class="mb-4">"Delivery took a day longer than promised, but the packaging was all paper and card. Worth the wait."</blockquote>
+            <figcaption class="d-flex align-items-center gap-3">
+              <span class="avatar"><span class="avatar-initials">SO</span></span>
+              <span><span class="d-block fw-semibold fs-sm">Sofia O.</span><span class="d-block fg-3 fs-xs">Verified buyer</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journal -->
+  <section class="section bg-2" id="journal">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+        <div>
+          <p class="eyebrow fs-sm fg-primary mb-2">Journal</p>
+          <h2 class="fs-3xl fw-bold mb-0">Care and repair</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="md:col-4">
+          <article class="surface lift h-100 overflow-hidden">
+            <div class="ph ph-16x9">Seasoning</div>
+            <div class="surface-pad">
+              <span class="chip mb-3">Kitchen</span>
+              <h3 class="fs-lg fw-semibold mb-2">How to season a board so it lasts</h3>
+              <p class="fg-2 fs-sm mb-0">Four coats, one week, and it will outlive the rest of your kitchen.</p>
+            </div>
+          </article>
+        </div>
+        <div class="md:col-4">
+          <article class="surface lift h-100 overflow-hidden">
+            <div class="ph ph-16x9">Linen</div>
+            <div class="surface-pad">
+              <span class="chip mb-3">Textiles</span>
+              <h3 class="fs-lg fw-semibold mb-2">Washing linen without wrecking it</h3>
+              <p class="fg-2 fs-sm mb-0">Cool water, no softener, and why line drying matters more than detergent.</p>
+            </div>
+          </article>
+        </div>
+        <div class="md:col-4">
+          <article class="surface lift h-100 overflow-hidden">
+            <div class="ph ph-16x9">Repair</div>
+            <div class="surface-pad">
+              <span class="chip mb-3">Repair</span>
+              <h3 class="fs-lg fw-semibold mb-2">Kintsugi for people in a hurry</h3>
+              <p class="fg-2 fs-sm mb-0">A chipped rim is not the end. Here's the 20-minute version.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section">
+    <div class="container">
+      <div class="section-narrow text-center">
+        <p class="eyebrow fs-sm fg-primary mb-2">Newsletter</p>
+        <h2 class="fs-3xl fw-bold mb-3">First look at new drops</h2>
+        <p class="fs-lg fg-2 mb-6">One email a month. Restocks, seconds sales, and nothing else.</p>
+        <form class="vstack gap-3" id="newsletterForm" data-demo-form novalidate>
+          <div class="form-control form-adorn">
+            <div class="form-adorn-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="m2 4 6 4.5L14 4"/></svg>
+            </div>
+            <input type="email" class="form-ghost" placeholder="you@example.com" aria-label="Email address" required>
+          </div>
+          <div><button class="btn-solid theme-primary" type="submit" data-done-text="Subscribed ✓">Subscribe</button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer bg-2 pt-9 pb-6">
+  <div class="container">
+    <div class="row g-6 mb-7">
+      <div class="lg:col-4">
+        <a class="navbar-brand d-inline-flex align-items-center gap-2 fw-semibold mb-3" href="index.html">
+          <span class="brand-mark" aria-hidden="true">C</span> Commerce
+        </a>
+        <p class="fg-2 fs-sm mb-0" style="max-width:22rem">Small-batch kitchen and home goods from independent makers. Built to be kept.</p>
+      </div>
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">Shop</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#shop">All products</a></li>
+          <li><a class="fg-2" href="#shop">New arrivals</a></li>
+          <li><a class="fg-2" href="#shop">Sale</a></li>
+          <li><a class="fg-2" href="product.html">Gift cards</a></li>
+        </ul>
+      </div>
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">Help</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#">Shipping</a></li>
+          <li><a class="fg-2" href="#">Returns</a></li>
+          <li><a class="fg-2" href="#">Track order</a></li>
+          <li><a class="fg-2" href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">About</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#">Our makers</a></li>
+          <li><a class="fg-2" href="#journal">Journal</a></li>
+          <li><a class="fg-2" href="#">Repairs</a></li>
+          <li><a class="fg-2" href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="col-6 lg:col-2">
+        <h3 class="fs-sm fw-semibold mb-3">Legal</h3>
+        <ul class="vstack gap-2 fs-sm list-unstyled mb-0">
+          <li><a class="fg-2" href="#">Privacy</a></li>
+          <li><a class="fg-2" href="#">Terms</a></li>
+          <li><a class="fg-2" href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 pt-4">
+      <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Commerce. A free template for uicookies.</p>
+      <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Search drawer -->
+<dialog class="drawer drawer-top" tabindex="-1" id="searchDrawer" aria-labelledby="searchDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="searchDrawerLabel">Search</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <div class="form-control form-adorn mb-4">
+      <div class="form-adorn-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 4 4" stroke-linecap="round"/></svg>
+      </div>
+      <input type="search" class="form-ghost" placeholder="Search products…" aria-label="Search products">
+    </div>
+    <p class="eyebrow fs-xs fg-3 mb-2">Popular</p>
+    <div class="d-flex flex-wrap gap-2">
+      <a class="chip" href="#shop">kettle</a>
+      <a class="chip" href="#shop">linen</a>
+      <a class="chip" href="#shop">stoneware</a>
+      <a class="chip" href="#shop">board</a>
+    </div>
+  </div>
+</dialog>
+
+<!-- Cart drawer -->
+<dialog class="drawer drawer-end" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="cartDrawerLabel">Your cart (3)</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <div class="vstack gap-4">
+      <div class="mini-item">
+        <div class="ph ph-1x1">Kettle</div>
+        <div class="flex-grow-1">
+          <p class="fw-semibold fs-sm mb-1">Ridge copper kettle</p>
+          <p class="fg-3 fs-xs mb-0">Copper · Qty 1</p>
+        </div>
+        <p class="fw-semibold fs-sm mb-0">$148</p>
+      </div>
+      <div class="mini-item">
+        <div class="ph ph-1x1">Bowls</div>
+        <div class="flex-grow-1">
+          <p class="fw-semibold fs-sm mb-1">Marl stoneware bowls</p>
+          <p class="fg-3 fs-xs mb-0">Clay · Qty 1</p>
+        </div>
+        <p class="fw-semibold fs-sm mb-0">$96</p>
+      </div>
+      <div class="mini-item">
+        <div class="ph ph-1x1">Throw</div>
+        <div class="flex-grow-1">
+          <p class="fw-semibold fs-sm mb-1">Flax linen throw</p>
+          <p class="fg-3 fs-xs mb-0">Oat · Qty 1</p>
+        </div>
+        <p class="fw-semibold fs-sm mb-0">$89</p>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="summary-line"><span class="fg-2">Subtotal</span><span>$333</span></div>
+    <div class="summary-line"><span class="fg-2">Shipping</span><span class="fg-success">Free</span></div>
+    <div class="summary-line summary-total"><span>Total</span><span>$333</span></div>
+    <a class="btn-solid theme-primary w-100 mt-4" href="checkout.html">Checkout</a>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

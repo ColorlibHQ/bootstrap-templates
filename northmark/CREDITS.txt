@@ -1,0 +1,60 @@
+Placeholder photography
+=======================
+
+Every photograph here is CC0 / Public Domain Mark, sourced via the
+Openverse API — no attribution required, commercial use fine. Where no
+public-domain photograph matched a slot, the file is a generated gradient
+instead; those are marked below and carry no rights at all.
+
+Either way these are placeholders: replace them with your own photography
+before launch. Provenance for each file follows.
+
+work-1.jpg
+  Program Evaluation & Design June 2013 Workshop 24
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=26898100
+
+work-2.jpg
+  1970 Holden Torana GTR-X @ National Motor Museum, Birdwood 20250109-130132
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=157733128
+
+work-3.jpg
+  Free man designing website layout
+  CC0 1.0
+  https://www.rawpixel.com/image/5926264/photo-image-background-public-domain-person
+
+work-4.jpg
+  Minimalist workspace with a large screen, tripods, web design graphics, and pendant lights.
+  CC0 1.0
+  https://wordpress.org/photos/photo/6369c7ef5a/
+
+work-5.jpg
+  Vienna, Austria: showroom paintings furniture
+  CC0 1.0
+  https://www.rawpixel.com/image/13969182/photo-image-frame-person-book
+
+work-6.jpg
+  Rocky Mountain Philatelic Library
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=188405277
+
+person-1.jpg
+  Portrait of Queen Juliana, 1973
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=147332514
+
+person-2.jpg
+  <div class='fn'> <div style='font-weight:bold;display:inline-block;'><div style='display:inline-block' dir='ltr' lang='en'><i>Melencolia I <span class='mw-valign-text-top' typeof='mw:File/Frameless'><a href='https://www.wikidata.org/wiki/Q1362177#P1476' title='Edit this at Wikidata'><img alt='Edit this at Wikidata' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png' decoding='async' width='10' height='10' class='mw-file-element' srcset='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x' data-file-width='20' data-file-height='20'></a></span></i></div></div><div style='display: none;'>title QS:P1476,en:'Melencolia I <span class='mw-valign-text-top' typeof='mw:File/Frameless'><a href='https://www.wikidata.org/wiki/Q1362177#P1476' title='Edit this at Wikidata'><img alt='Edit this at Wikidata' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png' decoding='async' width='10' height='10' class='mw-file-element' srcset='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x' data-file-width='20' data-file-height='20'></a></span>'</div> <div style='display: none;'>label QS:Len,'Melencolia I <span class='mw-valign-text-top' typeof='mw:File/Frameless'><a href='https://www.wikidata.org/wiki/Q1362177#P1476' title='Edit this at Wikidata'><img alt='Edit this at Wikidata' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png' decoding='async' width='10' height='10' class='mw-file-element' srcset='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x' data-file-width='20' data-file-height='20'></a></span>'</div> <div style='display: none;'>label QS:Les,'Melancolía I'</div> <div style='display: none;'>label QS:Lru,'Меланхолия'</div> <div style='display: none;'>label QS:Lde,'Melencolia I'</div> <div style='display: none;'>label QS:Lhy,'Մելանխոլիա I'</div> <div style='display: none;'>label QS:Lzh,'忧郁 I'</div> <div style='display: none;'>label QS:Lda,'Melencolia I'</div> <div style='display: none;'>label QS:Ltr,'Melencolia I'</div> <div style='display: none;'>label QS:Lja,'メランコリア I'</div> <div style='display: none;'>label QS:Lsv,'Melankolien'</div> <div style='display: none;'>label QS:Lhe,'מלנכוליה'</div> <div style='display: none;'>label QS:Lla,'Melencolia I'</div> <div style='display: none;'>label QS:Lzh-hant,'梅倫科利亞一世'</div> <div style='display: none;'>label QS:Lzh-cn,'梅伦科利亚一世'</div> <div style='display: none;'>label QS:Lfi,'Melankolia I'</div> <div style='display: none;'>label QS:Leo,'Melankolio I'</div> <div style='display: none;'>label QS:Lit,'Melencolia I'</div> <div style='display: none;'>label QS:Lfr,'Melencolia'</div> <div style='display: none;'>label QS:Lhr,'Melenkolija I'</div> <div style='display: none;'>label QS:Lvi,'Melencolia I'</div> <div style='display: none;'>label QS:Lsl,'Melancholia I'</div> <div style='display: none;'>label QS:Lpt-br,'Melancolia I'</div> <div style='display: none;'>label QS:Lko,'멜랑콜리아 I'</div> <div style='display: none;'>label QS:Lmk,'Меланхолија I'</div> <div style='display: none;'>label QS:Lpl,'Melancholia I'</div> <div style='display: none;'>label QS:Lnb,'Melencolia I'</div> <div style='display: none;'>label QS:Lnl,'Melencolia I'</div> <div style='display: none;'>label QS:Lpt,'Melancolia I'</div> <div style='display: none;'>label QS:Lfa,'ملانکولیا ۱'</div> <div style='display: none;'>label QS:Let,'Melencolia I'</div> <div style='display: none;'>label QS:Luk,'Меланхолія'</div> <div style='display: none;'>label QS:Laz,'Melanxoliya I'</div> <div style='display: none;'>label QS:Lar,'سوداوية 1 (ملنخوليا)'</div> <div style='display: none;'>label QS:Lzh-hans,'梅伦科利亚一世'</div> <div style='display: none;'>label QS:Lcs,'Melancholie I'</div></div>
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=76010144
+
+person-3.jpg
+  <div class='fn'> Composite Photograph of South Australian Northern Pioneers 1850 to 1859</div>
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=86720056
+
+person-4.jpg
+  Portrait of Frederic Thesiger, Lord Chelmsford
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=177524950

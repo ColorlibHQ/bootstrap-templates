@@ -1,0 +1,243 @@
+/*!
+ * Helm — Bootstrap 6 admin dashboard
+ *
+ * A fixed sidebar that collapses to a rail on tablet and becomes a Drawer on
+ * phones, a sticky topbar, and a content area that never scrolls horizontally.
+ *
+ * Charts are hand-built: inline SVG for lines and areas, CSS for bars. That is
+ * deliberate — a dashboard template that drags in Chart.js stops being a
+ * Bootstrap template and becomes a Chart.js template, and the first thing most
+ * buyers do is rip the chart library out for whichever one they already use.
+ */
+
+:root {
+  --brand: oklch(58% 0.15 264);
+  --helm-side: 16rem;
+  --helm-rail: 4.5rem;
+  --helm-top: 3.75rem;
+}
+
+/* ---------------------------------------------------------------
+   Shell
+   --------------------------------------------------------------- */
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100svh;
+}
+
+@media (width >= 992px) {
+  .app { grid-template-columns: var(--helm-side) minmax(0, 1fr); }
+  .app.is-railed { grid-template-columns: var(--helm-rail) minmax(0, 1fr); }
+}
+
+/* minmax(0, 1fr) above is load-bearing: without it a wide table inside the
+   content column blows the grid out and the whole page scrolls sideways. */
+
+.side {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: var(--bs-bg-2);
+  border-right: 1px solid var(--bs-border-color);
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow-y: auto;
+}
+
+@media (width >= 992px) { .side { display: flex; } }
+
+.side-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.5rem 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.side-mark {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: var(--bs-radius-3);
+  background: var(--bs-primary-base);
+  color: var(--bs-white);
+  font-weight: 800;
+}
+
+.side-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bs-fg-3);
+  padding: 1rem 0.6rem 0.4rem;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0.6rem;
+  border-radius: var(--bs-radius-3);
+  text-decoration: none;
+  color: var(--bs-fg-2);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.side-link:hover { background: color-mix(in oklab, var(--bs-fg-body), transparent 94%); color: var(--bs-fg-body); }
+
+.side-link.active {
+  background: color-mix(in oklab, var(--brand), transparent 88%);
+  color: var(--bs-fg-primary);
+  font-weight: 600;
+}
+
+.side-link svg { flex-shrink: 0; }
+.side-link .count { margin-left: auto; font-size: 0.75rem; color: var(--bs-fg-3); }
+
+/* Rail mode: icons only. Labels are hidden rather than removed so the markup
+   and the accessible name stay identical in both states. */
+.is-railed .side-label,
+.is-railed .side-link span:not(.count),
+.is-railed .side-brand span:not(.side-mark),
+.is-railed .side-link .count { display: none; }
+.is-railed .side-link { justify-content: center; padding-inline: 0; }
+.is-railed .side-brand { justify-content: center; }
+
+/* ---------------------------------------------------------------
+   Topbar
+   --------------------------------------------------------------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: var(--helm-top);
+  padding-inline: clamp(0.75rem, 2vw, 1.5rem);
+  background: color-mix(in oklab, var(--bs-bg-body), transparent 8%);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.search-field {
+  max-width: 22rem;
+  flex: 1 1 10rem;
+}
+
+/* ---------------------------------------------------------------
+   Content
+   --------------------------------------------------------------- */
+
+.content { padding: clamp(1rem, 2.5vw, 1.75rem); }
+
+.page-title { font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.75rem); font-weight: 700; letter-spacing: -0.02em; }
+
+.panel {
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-5);
+  background: var(--bs-bg-body);
+  height: 100%;
+}
+
+.panel-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.panel-body { padding: 1.25rem; }
+.panel-body-flush { padding: 0; }
+
+/* Stat tiles */
+.stat-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bs-fg-3); }
+.stat-figure { font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat-delta { font-size: 0.8125rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.2rem; }
+.up { color: var(--bs-fg-success); }
+.down { color: var(--bs-fg-danger); }
+
+/* ---------------------------------------------------------------
+   Charts — inline SVG and CSS, no library
+   --------------------------------------------------------------- */
+
+.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.chart .grid-line { stroke: var(--bs-border-color); stroke-width: 1; }
+.chart .series { fill: none; stroke: var(--bs-primary-base); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.chart .series-2 { stroke: color-mix(in oklab, var(--bs-fg-body), transparent 65%); stroke-dasharray: 4 4; }
+.chart .area { fill: url(#helmArea); stroke: none; }
+.chart .dot { fill: var(--bs-primary-base); }
+.chart text { fill: var(--bs-fg-3); font-size: 10px; }
+
+/* Bars are a flex row of divs — simpler than SVG and reflows for free.
+   align-items must stay `stretch` (the default): with `flex-end` the columns
+   shrink to their content, the inner bar's percentage height has no definite
+   parent to resolve against, and every bar collapses to nothing. */
+.bars { display: flex; gap: 0.5rem; height: 9rem; }
+.bars > div { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; gap: 0.35rem; align-items: center; }
+.bars .bar { width: 100%; border-radius: var(--bs-radius-2) var(--bs-radius-2) 0 0; background: color-mix(in oklab, var(--brand), transparent 25%); }
+.bars .bar-muted { background: color-mix(in oklab, var(--bs-fg-body), transparent 88%); }
+.bars .tick { font-size: 0.7rem; color: var(--bs-fg-3); }
+
+/* Donut built from a single conic-gradient. */
+.donut {
+  --value: 68;
+  width: 8.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(
+    var(--bs-primary-base) calc(var(--value) * 1%),
+    color-mix(in oklab, var(--bs-fg-body), transparent 90%) 0);
+  margin-inline: auto;
+}
+
+.donut::after {
+  content: "";
+  grid-area: 1 / 1;
+  width: 68%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--bs-bg-body);
+}
+
+.donut-value { grid-area: 1 / 1; z-index: 1; font-weight: 700; font-size: 1.35rem; font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------
+   Misc
+   --------------------------------------------------------------- */
+
+.num { font-variant-numeric: tabular-nums; text-align: right; }
+
+.activity { display: flex; gap: 0.85rem; padding: 0.85rem 0; border-bottom: 1px solid var(--bs-border-color); }
+.activity:last-child { border-bottom: 0; }
+.activity-dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; margin-top: 0.4rem; flex-shrink: 0; background: var(--bs-primary-base); }
+
+.auth-stage { min-height: 100svh; display: grid; place-items: center; padding: 1.5rem; }
+.auth-card { width: 100%; max-width: 24rem; }
+
+/* Bulk-action bar above a selectable table. Hidden until something is ticked,
+   so the panel header does not jump on first load. */
+.bulk-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  background: color-mix(in oklab, var(--brand), transparent 90%);
+  border-bottom: 1px solid var(--bs-border-color);
+}

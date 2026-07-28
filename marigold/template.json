@@ -1,0 +1,77 @@
+{
+  "slug": "marigold",
+  "title": "Marigold — Free Bootstrap 6 Wedding Website Template",
+  "excerpt": "A free two-page Bootstrap 6 wedding template — countdown, day schedule, gift list and an RSVP that handles a whole party, each guest with their own meal choice and dietary note.",
+  "yoastTitle": "Marigold — Free Bootstrap 6 Wedding Website Template",
+  "yoastDesc": "Free Bootstrap 6 wedding website template with a party RSVP handling multiple named guests with individual meal choices, a day schedule timeline, countdown, gift list, gallery and a travel and accommodation page with FAQ.",
+  "intro": "Marigold is a free, premium <strong>Bootstrap 6</strong> wedding website template. It pairs a full wedding homepage — countdown, the couple's story, a schedule for the day, gallery, gift list and RSVP — with a travel and accommodation page carrying directions, taxi numbers, where to stay and an FAQ.",
+  "note": "Almost every wedding template ships an RSVP that handles <strong>one person</strong>, so a family of four either submits it four times or gives up and emails — and the couple reconciles a spreadsheet either way. This one takes a party: each named guest gets their own attendance answer, main course and dietary note, added and removed on the page up to eight. Guest blocks are cloned from a <code>&lt;template&gt;</code> rather than built from strings, so they can be restyled without touching JavaScript, and field names are re-indexed on every add so a normal form POST arrives as a usable array rather than four fields sharing a name.",
+  "summary": "Marigold is a free, premium two-page Bootstrap 6 wedding template. The homepage runs a full-viewport photographic hero with the couple's names and a quiet days-hours-minutes countdown, their story, a seven-item schedule for the day set as a timeline, a photo mosaic, a party RSVP and an honest gift list. The RSVP is the centrepiece: add up to eight named guests, each with their own attendance radio, main-course Combobox and dietary note, with unique field ids and indexed names throughout. The travel page adds directions, transport times, taxi numbers, four places to stay and a native details FAQ covering children, dress, accessibility and dietary requirements. Soft warm design with a display serif and hairline rules. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — wedding homepage and a travel &amp; stay page",
+    "Party RSVP: up to eight named guests, each with attendance, meal and dietary note",
+    "Guest blocks cloned from a &lt;template&gt;, restylable without touching JavaScript",
+    "Field names re-indexed on add, so a form POST arrives as a usable array",
+    "First guest cannot be removed; add button disables at the party limit",
+    "Unique ids generated per block so every label still points at its own control",
+    "Day schedule as a seven-item timeline with times",
+    "Quiet countdown reading its date from data-countdown, aria-live off by design",
+    "Travel page with transport times, taxi numbers, accommodation and a details FAQ",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "wedding"
+  ],
+  "images": [
+    {
+      "name": "hero",
+      "q": "wedding couple field golden hour",
+      "fallback": "wedding",
+      "w": 1800,
+      "h": 1200
+    },
+    {
+      "name": "story",
+      "q": "couple walking countryside",
+      "fallback": "couple",
+      "w": 700,
+      "h": 933
+    },
+    {
+      "name": "gal-1",
+      "q": "wedding flowers table",
+      "fallback": "flowers",
+      "w": 900,
+      "h": 900
+    },
+    {
+      "name": "gal-2",
+      "q": "rustic barn",
+      "fallback": "barn",
+      "w": 600,
+      "h": 600
+    },
+    {
+      "name": "gal-3",
+      "q": "dog in countryside",
+      "fallback": "dog",
+      "w": 600,
+      "h": 600
+    },
+    {
+      "name": "gal-4",
+      "q": "wild flowers meadow",
+      "fallback": "meadow",
+      "w": 600,
+      "h": 600
+    },
+    {
+      "name": "gal-5",
+      "q": "green valley hills",
+      "fallback": "valley",
+      "w": 600,
+      "h": 600
+    }
+  ]
+}

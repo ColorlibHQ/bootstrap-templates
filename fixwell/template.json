@@ -1,0 +1,35 @@
+{
+  "slug": "fixwell",
+  "title": "Fixwell — Free Bootstrap 6 Handyman &amp; Home Services Website Template",
+  "excerpt": "A free Bootstrap 6 home services template — phone-forward call bar, inline quote card, working postcode coverage checker, pricing and booking.",
+  "yoastTitle": "Fixwell — Free Bootstrap 6 Handyman &amp; Home Services Website Template",
+  "yoastDesc": "Free Bootstrap 6 handyman and home services template with a call bar, inline fixed-price quote card, postcode coverage checker, service pricing, reviews and booking forms.",
+  "intro": "Fixwell is a free, premium <strong>Bootstrap 6</strong> template for handymen, trades and home-services businesses. It is built the way these sites actually convert: a high-contrast call bar with the phone number set large above everything else, and a fixed-price quote card sitting inside the hero rather than a button that scrolls away.",
+  "note": "The quote card uses a multi-select Combobox for trades, the new Datepicker for preferred dates and a Range slider with a live value bubble to size the job. The coverage section includes a working postcode checker in about twenty lines of vanilla JavaScript.",
+  "summary": "Fixwell is a free, premium Bootstrap 6 template for handymen, trades and home-services businesses. A phone-forward call bar, an inline fixed-price quote card in the hero built on multi-select Combobox, Datepicker and Range, a working postcode coverage checker, six service cards with pricing, a four-step process, before-and-after work, local reviews and an FAQ. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "High-contrast call bar with the phone number set large above the header",
+    "Fixed-price quote card inside the hero rather than a scroll-away CTA",
+    "Multi-select Combobox trade picker, Datepicker and a job-size Range slider with live bubble",
+    "Working postcode coverage checker in plain vanilla JavaScript",
+    "Six service cards with from-prices, and a four-step numbered process",
+    "Before-and-after work grid plus local reviews with star ratings",
+    "Trust row: insured, DBS checked and a 12-month guarantee",
+    "Accordion FAQ on native <details> — zero JavaScript",
+    "Retheme the whole site by changing a single --brand token",
+    "Full dark mode via data-bs-theme, remembered across visits",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "business-services"
+  ],
+  "images": [
+    {
+      "name": "hero",
+      "q": "carpenter tools workbench home repair",
+      "w": 1800,
+      "h": 1000
+    }
+  ]
+}

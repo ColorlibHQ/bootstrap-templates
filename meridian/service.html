@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardiology — Meridian Clinic | Bootstrap 6 medical template</title>
+<meta name="description" content="Medical service detail page built with Bootstrap 6 — prose typography, costs, preparation notes and a booking rail with datepicker and combobox.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="info-bar">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <span><strong>Emergency:</strong> call 999 &middot; <strong>NHS 111</strong> for urgent advice</span>
+    <div class="d-flex flex-wrap gap-3">
+      <a href="index.html#contact">020 7000 0000</a>
+      <button class="btn-text btn-sm p-0" type="button" data-bs-toggle="dialog" data-bs-target="#portalDialog" style="color:inherit">Patient portal</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">M</span> Meridian
+      </a>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#doctors">Our team</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#booking">Book</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#faq">Patient info</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </dialog>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <a class="btn-solid theme-primary d-none md:d-inline-flex" href="index.html#booking">Book appointment</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="section">
+  <div class="container">
+    <nav aria-label="breadcrumb" class="mb-5">
+      <ol class="breadcrumb fs-sm">
+        <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html">Home</a></li>
+        <li class="breadcrumb-divider">/</li>
+        <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html#services">Services</a></li>
+        <li class="breadcrumb-divider">/</li>
+        <li class="breadcrumb-item" aria-current="page"><a class="breadcrumb-link active" href="service.html">Cardiology</a></li>
+      </ol>
+    </nav>
+
+    <div class="row g-6 mb-9">
+      <div class="lg:col-7">
+        <span class="chip mb-3">Diagnostics on site</span>
+        <h1 class="fs-5xl fw-bold mb-4" style="letter-spacing:-.035em;text-wrap:balance">Cardiology</h1>
+        <p class="fs-lg fg-2 mb-0">Consultant-led assessment with ECG, 24-hour monitoring and echocardiography under one roof. Most patients are seen, scanned and given a plan within a single visit.</p>
+      </div>
+      <div class="lg:col-5"><div class="ph ph-4x3 rounded-6 fs-lg">Cardiology suite</div></div>
+    </div>
+
+    <div class="row g-6">
+      <div class="lg:col-8">
+        <div class="prose">
+          <h2>What to expect</h2>
+          <p>Your first appointment is 30 minutes with a consultant cardiologist. They will take a history, examine you, and in most cases perform an ECG in the same room. If further imaging is needed we will usually do it the same morning rather than bringing you back.</p>
+
+          <h2>Tests we offer</h2>
+          <ul>
+            <li><strong>ECG</strong> &#8212; resting and exercise, reported immediately</li>
+            <li><strong>24-hour and 7-day monitoring</strong> &#8212; fitted on site, posted back when you&#8217;re done</li>
+            <li><strong>Echocardiography</strong> &#8212; consultant-performed, reported within 48 hours</li>
+            <li><strong>CT calcium scoring</strong> &#8212; referred to our partner imaging centre, results back to us directly</li>
+          </ul>
+
+          <h2>Preparing for your visit</h2>
+          <p>Bring a list of your current medication, including anything over the counter. Avoid caffeine for four hours before an exercise ECG. Wear something that makes it straightforward to place electrodes on your chest.</p>
+
+          <blockquote><p>If you are having chest pain right now, do not book an appointment. Call 999.</p></blockquote>
+
+          <h2>Costs</h2>
+          <p>Initial consultation is &#163;220 self-pay, or covered in full by Bupa, AXA Health, Vitality, Aviva and WPA. Diagnostics are quoted before they are booked &#8212; you will never receive an invoice you have not already seen.</p>
+        </div>
+      </div>
+
+      <aside class="lg:col-4">
+        <div class="surface surface-pad" style="position:sticky;top:5.5rem">
+          <h2 class="fs-lg fw-semibold mb-1">Book cardiology</h2>
+          <p class="fg-2 fs-sm mb-4">Next available: Thursday 09:20</p>
+          <form id="svcForm" data-demo-form data-bs-validate novalidate>
+            <div class="form-field mb-3">
+              <label class="form-label" for="svName">Full name</label>
+              <input type="text" class="form-control" id="svName" required>
+              <div class="invalid-feedback">Required.</div>
+            </div>
+            <div class="form-field mb-3">
+              <label class="form-label" for="svDate">Preferred date</label>
+              <input type="text" class="form-control" id="svDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date&#8230;">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Insurer</label>
+              <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="insurer" data-bs-placeholder="Select&#8230;">
+                <span class="combobox-value">Select&#8230;</span>
+                <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+              </button>
+              <div class="menu">
+                <button class="menu-item" type="button" data-bs-value="bupa">Bupa</button>
+                <button class="menu-item" type="button" data-bs-value="axa">AXA Health</button>
+                <button class="menu-item" type="button" data-bs-value="vitality">Vitality</button>
+                <button class="menu-item" type="button" data-bs-value="aviva">Aviva</button>
+                <button class="menu-item" type="button" data-bs-value="self">Self-pay</button>
+              </div>
+            </div>
+            <button class="btn-solid theme-primary w-100" type="submit" data-done-text="Requested &#10003;">Request appointment</button>
+          </form>
+          <hr class="my-4">
+          <p class="fs-xs fg-3 mb-0">Or call reception on <strong class="fg-1">020 7000 0000</strong>, Monday to Friday.</p>
+        </div>
+      </aside>
+    </div>
+
+    <section class="mt-9">
+      <h2 class="fs-2xl fw-bold mb-5">Other services</h2>
+      <div class="row g-4">
+        <div class="md:col-4"><article class="service surface surface-pad lift"><h3 class="service-title"><a href="service.html">General practice</a></h3><p class="fg-2 fs-sm mb-0">Routine and urgent GP appointments.</p></article></div>
+        <div class="md:col-4"><article class="service surface surface-pad lift"><h3 class="service-title"><a href="service.html">Diagnostics</a></h3><p class="fg-2 fs-sm mb-0">Bloods, ultrasound and X-ray on site.</p></article></div>
+        <div class="md:col-4"><article class="service surface surface-pad lift"><h3 class="service-title"><a href="service.html">Physiotherapy</a></h3><p class="fg-2 fs-sm mb-0">MSK assessment and rehab.</p></article></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer bg-2 py-6">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Meridian Clinic. A free template for uicookies.</p>
+    <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+  </div>
+</footer>
+
+<!-- Patient portal — OTP + password strength -->
+<dialog class="dialog" id="portalDialog" aria-labelledby="portalTitle">
+  <div class="dialog-header">
+    <h1 class="dialog-title fs-lg" id="portalTitle">Patient portal</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <div class="dialog-body">
+    <ul class="nav nav-tabs mb-4" role="tablist">
+      <li class="nav-item" role="presentation"><button class="nav-link active" id="si-tab" data-bs-toggle="tab" data-bs-target="#si" type="button" role="tab" aria-controls="si" aria-selected="true">Sign in</button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link" id="su-tab" data-bs-toggle="tab" data-bs-target="#su" type="button" role="tab" aria-controls="su" aria-selected="false">Register</button></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="si" role="tabpanel" aria-labelledby="si-tab" tabindex="0">
+        <form class="vstack gap-3" id="portalSignin" data-demo-form data-bs-validate novalidate>
+          <div class="form-field">
+            <label class="form-label" for="ptEmail">Email</label>
+            <input type="email" class="form-control" id="ptEmail" required>
+            <div class="invalid-feedback">Required.</div>
+          </div>
+          <div>
+            <label class="form-label" for="ptOtp">We texted you a six-digit code</label>
+            <div class="otp" data-bs-otp>
+              <input type="text" class="otp-input" maxlength="6" id="ptOtp" aria-label="Verification code" autocomplete="one-time-code">
+            </div>
+          </div>
+          <button class="btn-solid theme-primary" type="submit" data-done-text="Signed in ✓">Sign in</button>
+        </form>
+      </div>
+      <div class="tab-pane fade" id="su" role="tabpanel" aria-labelledby="su-tab" tabindex="0">
+        <form class="vstack gap-3" id="portalRegister" data-demo-form data-bs-validate novalidate>
+          <div class="form-field">
+            <label class="form-label" for="rgName">Full name</label>
+            <input type="text" class="form-control" id="rgName" required>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="rgDob">Date of birth</label>
+            <input type="text" class="form-control" id="rgDob" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…">
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="rgPw">Choose a password</label>
+            <input type="password" class="form-control" id="rgPw" required>
+            <div class="strength" data-bs-strength>
+              <div class="strength-segment"></div><div class="strength-segment"></div>
+              <div class="strength-segment"></div><div class="strength-segment"></div>
+            </div>
+          </div>
+          <button class="btn-solid theme-primary" type="submit" data-done-text="Registered ✓">Create account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

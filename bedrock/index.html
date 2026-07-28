@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bedrock — Free Bootstrap 6 Construction &amp; Civil Engineering Template</title>
+<meta name="description" content="Bedrock is a free Bootstrap 6 construction template — capabilities, sectors, a project grid, a Stepper-driven process section, accreditations and a tender request form.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navScroll" data-bs-top-margin="110px" data-bs-smooth-scroll="true">
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="top-strip">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <span>CHAS · Constructionline Gold · ISO 9001 / 14001 / 45001</span>
+    <span>Tenders: <a href="mailto:tenders@bedrock.example">tenders@bedrock.example</a> · <a href="tel:01142000000">0114 200 0000</a></span>
+  </div>
+</div>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">B</span> BEDROCK
+      </a>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto" id="navScroll">
+            <li class="nav-item"><a class="nav-link" href="#capabilities">Capabilities</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sectors">Sectors</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tender">Tender</a></li>
+          </ul>
+        </div>
+      </dialog>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <a class="btn-solid theme-primary d-none md:d-inline-flex" href="#tender">Request a tender</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="site-hero">
+  <img class="hero-bg" src="img/hero.jpg" alt="" width="1800" height="1000" loading="eager">
+  <div class="container">
+    <div class="row">
+      <div class="lg:col-8">
+        <div class="hero-copy">
+          <p class="eyebrow fs-sm fg-primary mb-3">Groundworks · Civils · Structures</p>
+          <h1 class="slab hero-slab mb-4">We build the<br>parts nobody<br>photographs</h1>
+          <p class="fs-lg fg-2 mb-5" style="max-width:38rem">
+            Bedrock is a civil engineering and groundworks contractor working
+            across Yorkshire and the North Midlands. Foundations, drainage,
+            retaining structures and the bits that hold up everything else.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a class="btn-solid theme-primary btn-lg" href="#tender">Request a tender</a>
+            <a class="btn-outline theme-secondary btn-lg" href="#projects">See recent work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-strip">
+    <div class="container">
+      <div class="row g-0 text-center">
+        <div class="col-6 lg:col-3"><p class="stat-figure fg-primary mb-1">38</p><p class="fs-xs fg-3 mb-0 text-uppercase" style="letter-spacing:.12em">Years trading</p></div>
+        <div class="col-6 lg:col-3"><p class="stat-figure fg-primary mb-1">£42m</p><p class="fs-xs fg-3 mb-0 text-uppercase" style="letter-spacing:.12em">Turnover 2026</p></div>
+        <div class="col-6 lg:col-3"><p class="stat-figure fg-primary mb-1">210</p><p class="fs-xs fg-3 mb-0 text-uppercase" style="letter-spacing:.12em">People employed</p></div>
+        <div class="col-6 lg:col-3"><p class="stat-figure fg-primary mb-1">0.41</p><p class="fs-xs fg-3 mb-0 text-uppercase" style="letter-spacing:.12em">AFR per 100k hrs</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+
+  <!-- Capabilities -->
+  <section class="section" id="capabilities">
+    <div class="container">
+      <div class="row g-5 mb-6">
+        <div class="lg:col-5">
+          <p class="eyebrow fs-sm fg-primary mb-2">Capabilities</p>
+          <h2 class="slab section-title fs-4xl mb-0">What we<br>self-deliver</h2>
+        </div>
+        <div class="lg:col-7">
+          <p class="fg-2 fs-lg mb-0">
+            We own our plant and employ our operatives, which is why our programmes
+            hold. Nothing on this list is subcontracted out as a matter of course.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="md:col-6 lg:col-4">
+          <div class="cap-card">
+            <h3 class="fs-xl fw-bold mb-3">Groundworks</h3>
+            <p class="fg-2 fs-sm mb-3">Bulk earthworks, muck-away, piling mats, foundations and substructure to DPC.</p>
+            <p class="fs-xs fg-3 mb-0">Typical value £150k — £4m</p>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <div class="cap-card">
+            <h3 class="fs-xl fw-bold mb-3">Drainage &amp; utilities</h3>
+            <p class="fg-2 fs-sm mb-3">Foul and surface water, attenuation, SuDS, pumping stations and Section 104 adoption.</p>
+            <p class="fs-xs fg-3 mb-0">Typical value £80k — £2.2m</p>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <div class="cap-card">
+            <h3 class="fs-xl fw-bold mb-3">Reinforced concrete</h3>
+            <p class="fg-2 fs-sm mb-3">Retaining walls, cores, ground beams, slabs and in-situ structures to 12m lift.</p>
+            <p class="fs-xs fg-3 mb-0">Typical value £200k — £6m</p>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <div class="cap-card">
+            <h3 class="fs-xl fw-bold mb-3">Highways</h3>
+            <p class="fg-2 fs-sm mb-3">Estate roads, junction improvements, kerbing and surfacing to Section 278/38.</p>
+            <p class="fs-xs fg-3 mb-0">Typical value £120k — £3m</p>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <div class="cap-card">
+            <h3 class="fs-xl fw-bold mb-3">Remediation</h3>
+            <p class="fg-2 fs-sm mb-3">Brownfield treatment, capping, gas protection and validation reporting.</p>
+            <p class="fs-xs fg-3 mb-0">Typical value £90k — £2.8m</p>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <div class="cap-card">
+            <h3 class="fs-xl fw-bold mb-3">External works</h3>
+            <p class="fg-2 fs-sm mb-3">Hard landscaping, retaining features, car parks and adoptable finishes.</p>
+            <p class="fs-xs fg-3 mb-0">Typical value £60k — £1.4m</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sectors -->
+  <section class="section bg-2" id="sectors">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-5">
+          <p class="eyebrow fs-sm fg-primary mb-2">Sectors</p>
+          <h2 class="slab section-title fs-4xl mb-4">Where the<br>work comes from</h2>
+          <p class="fg-2 mb-0">Framework positions in four of these. We do not chase work outside them.</p>
+        </div>
+        <div class="lg:col-7">
+          <div class="sector-row"><span class="num">01</span><div><p class="fw-bold mb-1">Residential</p><p class="fg-3 fs-sm mb-0">Volume housebuilders and registered providers — 40 to 400 plot sites</p></div></div>
+          <div class="sector-row"><span class="num">02</span><div><p class="fw-bold mb-1">Industrial &amp; logistics</p><p class="fg-3 fs-sm mb-0">Distribution sheds, yards and service infrastructure up to 800,000 ft²</p></div></div>
+          <div class="sector-row"><span class="num">03</span><div><p class="fw-bold mb-1">Education</p><p class="fg-3 fs-sm mb-0">DfE framework — primary, secondary and SEN, mostly occupied-site phasing</p></div></div>
+          <div class="sector-row"><span class="num">04</span><div><p class="fw-bold mb-1">Health</p><p class="fg-3 fs-sm mb-0">Acute and community estates, including live-hospital enabling works</p></div></div>
+          <div class="sector-row"><span class="num">05</span><div><p class="fw-bold mb-1">Water &amp; environment</p><p class="fg-3 fs-sm mb-0">AMP8 capital delivery, flood alleviation and watercourse works</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-6">
+        <div>
+          <p class="eyebrow fs-sm fg-primary mb-2">Projects</p>
+          <h2 class="slab section-title fs-4xl mb-0">Recently completed</h2>
+        </div>
+        <a class="btn-outline theme-secondary" href="project.html">See a full case study</a>
+      </div>
+
+      <div class="row g-4">
+        <div class="md:col-6 lg:col-4">
+          <a class="proj-card" href="project.html">
+            <div class="proj-media"><div class="ph"><img src="img/proj-1.jpg" alt="Excavation and foundations on a housing site" width="900" height="600" loading="lazy"></div></div>
+            <div class="proj-body">
+              <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Residential · Doncaster</p>
+              <h3 class="fs-lg fw-bold mb-2">Carr Lane, 218 plots</h3>
+              <p class="fg-2 fs-sm mb-3">Bulk earthworks, foundations and adoptable drainage across a phased handover.</p>
+              <p class="proj-value fs-sm mb-0">£3.9m · 74 weeks</p>
+            </div>
+          </a>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <a class="proj-card" href="project.html">
+            <div class="proj-media"><div class="ph"><img src="img/proj-2.jpg" alt="Steel frame rising over a concrete slab" width="900" height="600" loading="lazy"></div></div>
+            <div class="proj-body">
+              <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Logistics · Wakefield</p>
+              <h3 class="fs-lg fw-bold mb-2">Junction 30 distribution</h3>
+              <p class="fg-2 fs-sm mb-3">340,000 ft² unit — piling mat, slab, service yard and estate road.</p>
+              <p class="proj-value fs-sm mb-0">£5.4m · 52 weeks</p>
+            </div>
+          </a>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <a class="proj-card" href="project.html">
+            <div class="proj-media"><div class="ph"><img src="img/proj-3.jpg" alt="New school building under construction" width="900" height="600" loading="lazy"></div></div>
+            <div class="proj-body">
+              <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Education · Barnsley</p>
+              <h3 class="fs-lg fw-bold mb-2">Hoyland Academy</h3>
+              <p class="fg-2 fs-sm mb-3">Occupied-site enabling, substructure and external works over two summers.</p>
+              <p class="proj-value fs-sm mb-0">£2.1m · 38 weeks</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process — the Stepper as a page section, not a form control -->
+  <section class="section bg-2" id="process">
+    <div class="container">
+      <div class="row g-6 mb-6">
+        <div class="lg:col-5">
+          <p class="eyebrow fs-sm fg-primary mb-2">Process</p>
+          <h2 class="slab section-title fs-4xl mb-0">From enquiry<br>to handover</h2>
+        </div>
+        <div class="lg:col-7">
+          <p class="fg-2 fs-lg mb-0">
+            Five stages, and we will tell you at stage two if we think the
+            programme in the tender documents is undeliverable.
+          </p>
+        </div>
+      </div>
+
+      <ol class="stepper md:stepper-horizontal mb-6">
+        <li class="stepper-item active">Enquiry &amp; site visit</li>
+        <li class="stepper-item active">Buildability review</li>
+        <li class="stepper-item active">Tender submission</li>
+        <li class="stepper-item">Mobilisation</li>
+        <li class="stepper-item">Handover &amp; validation</li>
+      </ol>
+
+      <div class="row g-4">
+        <div class="md:col-4">
+          <p class="fw-bold mb-2">Buildability review comes before price</p>
+          <p class="fg-2 fs-sm mb-0">We mark up the drawings and come back with what we would change. Roughly a third of our tenders include a compliant bid and an alternative.</p>
+        </div>
+        <div class="md:col-4">
+          <p class="fw-bold mb-2">One team, start to finish</p>
+          <p class="fg-2 fs-sm mb-0">The estimator who priced it attends the pre-start. The agent who ran the groundworks signs off the validation report.</p>
+        </div>
+        <div class="md:col-4">
+          <p class="fw-bold mb-2">Weekly cost and programme</p>
+          <p class="fg-2 fs-sm mb-0">Applications go in on the same day each month and progress photos are shared on Fridays whether or not anyone asks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accreditations -->
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow fs-sm fg-primary mb-2">Accreditation</p>
+      <h2 class="slab section-title fs-3xl mb-5">Audited, not self-declared</h2>
+      <div class="row g-3">
+        <div class="sm:col-6 lg:col-3">
+          <div class="accred"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 1.5 2.5 4v4c0 3.2 2.3 5.6 5.5 6.5 3.2-.9 5.5-3.3 5.5-6.5V4z" stroke-linejoin="round"/><path d="m6 8 1.5 1.5L10.5 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>CHAS Advanced</div>
+        </div>
+        <div class="sm:col-6 lg:col-3">
+          <div class="accred"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 1.5 2.5 4v4c0 3.2 2.3 5.6 5.5 6.5 3.2-.9 5.5-3.3 5.5-6.5V4z" stroke-linejoin="round"/><path d="m6 8 1.5 1.5L10.5 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Constructionline Gold</div>
+        </div>
+        <div class="sm:col-6 lg:col-3">
+          <div class="accred"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 1.5 2.5 4v4c0 3.2 2.3 5.6 5.5 6.5 3.2-.9 5.5-3.3 5.5-6.5V4z" stroke-linejoin="round"/><path d="m6 8 1.5 1.5L10.5 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>ISO 9001 / 14001 / 45001</div>
+        </div>
+        <div class="sm:col-6 lg:col-3">
+          <div class="accred"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 1.5 2.5 4v4c0 3.2 2.3 5.6 5.5 6.5 3.2-.9 5.5-3.3 5.5-6.5V4z" stroke-linejoin="round"/><path d="m6 8 1.5 1.5L10.5 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Considerate Constructors</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tender request -->
+  <section class="section bg-2" id="tender">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-5">
+          <p class="eyebrow fs-sm fg-primary mb-2">Tender</p>
+          <h2 class="slab section-title fs-4xl mb-4">Send us the<br>drawings</h2>
+          <p class="fg-2 mb-4">
+            We acknowledge every enquiry within one working day and confirm
+            bid/no-bid within three. If we are not going to price it, you will
+            hear that quickly rather than late.
+          </p>
+          <div class="spec-row"><span class="fg-3 fs-sm">Typical contract value</span><span class="fs-sm">£60k — £6m</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Working radius</span><span class="fs-sm">90 miles of Sheffield</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Forms of contract</span><span class="fs-sm">JCT, NEC4 options A &amp; C</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Bid team</span><span class="fs-sm">Six estimators</span></div>
+        </div>
+
+        <div class="lg:col-7">
+          <div class="tender">
+            <form id="tenderForm" data-demo-form data-bs-validate novalidate>
+              <div class="row g-3">
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="tdName">Your name</label>
+                    <input type="text" class="form-control" id="tdName" required>
+                    <div class="invalid-feedback">Required.</div>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="tdCo">Company</label>
+                    <input type="text" class="form-control" id="tdCo" required>
+                    <div class="invalid-feedback">Required.</div>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="tdEmail">Email</label>
+                    <input type="email" class="form-control" id="tdEmail" required>
+                    <div class="invalid-feedback">A valid email, please.</div>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="tdReturn">Return date</label>
+                    <input type="text" class="form-control" id="tdReturn" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…" required>
+                    <div class="invalid-feedback">When do you need the price?</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Packages required</label>
+                  <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-multiple="true" data-bs-name="packages" data-bs-placeholder="Select one or more…">
+                    <span class="combobox-value">Select one or more…</span>
+                    <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+                  </button>
+                  <div class="menu">
+                    <button class="menu-item" type="button" data-bs-value="ground">Groundworks</button>
+                    <button class="menu-item" type="button" data-bs-value="drain">Drainage &amp; utilities</button>
+                    <button class="menu-item" type="button" data-bs-value="rc">Reinforced concrete</button>
+                    <button class="menu-item" type="button" data-bs-value="highways">Highways</button>
+                    <button class="menu-item" type="button" data-bs-value="remed">Remediation</button>
+                    <button class="menu-item" type="button" data-bs-value="ext">External works</button>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-field">
+                    <label class="form-label" for="tdNotes">Scope notes</label>
+                    <textarea class="form-control" id="tdNotes" rows="4" placeholder="Site address, contract form, anything unusual about access or ground conditions…"></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-field">
+                    <div class="switch"><input type="checkbox" id="tdNda" role="switch" switch></div>
+                    <label for="tdNda">Documents are under NDA — send us yours to sign first</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Enquiry received ✓">Submit enquiry</button>
+                  <p class="fs-xs fg-3 mt-3 mb-0">Or send drawings straight to <a href="mailto:tenders@bedrock.example">tenders@bedrock.example</a></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer section pb-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="md:col-4">
+        <p class="fw-bold fs-lg mb-3">BEDROCK</p>
+        <p class="fg-3 fs-sm mb-0">Unit 6, Attercliffe Works<br>Sheffield S9 3XT<br>United Kingdom</p>
+      </div>
+      <div class="md:col-2">
+        <p class="fw-semibold fs-sm mb-3">Company</p>
+        <ul class="list-unstyled fs-sm fg-3 mb-0">
+          <li class="mb-2"><a href="#capabilities">Capabilities</a></li>
+          <li class="mb-2"><a href="#sectors">Sectors</a></li>
+          <li class="mb-2"><a href="project.html">Case study</a></li>
+        </ul>
+      </div>
+      <div class="md:col-2">
+        <p class="fw-semibold fs-sm mb-3">Work with us</p>
+        <ul class="list-unstyled fs-sm fg-3 mb-0">
+          <li class="mb-2"><a href="#tender">Tender enquiry</a></li>
+          <li class="mb-2"><a href="#process">Our process</a></li>
+        </ul>
+      </div>
+      <div class="md:col-4">
+        <p class="fw-semibold fs-sm mb-3">Contact</p>
+        <p class="fs-sm fg-3 mb-1"><a href="tel:01142000000">0114 200 0000</a></p>
+        <p class="fs-sm fg-3 mb-0"><a href="mailto:tenders@bedrock.example">tenders@bedrock.example</a></p>
+      </div>
+    </div>
+    <hr class="my-5">
+    <p class="fs-xs fg-3 mb-0">&copy; <span data-year></span> Bedrock Civil Engineering. A free Bootstrap 6 template — the company is fictional.</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

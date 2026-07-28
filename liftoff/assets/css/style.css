@@ -1,0 +1,234 @@
+/*!
+ * Liftoff — Bootstrap 6 coming-soon template
+ *
+ * Three single-screen variants sharing one stylesheet: a full-bleed photographic
+ * countdown, a split-screen with the form on a solid panel, and a stripped-back
+ * centred one. Coming-soon is a niche where people pick by layout rather than by
+ * feature list, so shipping one layout would be shipping a third of the product.
+ *
+ * Every variant is built to fit 100svh without scrolling on a laptop, which is
+ * the whole point of the format — a page that scrolls has already failed at it.
+ */
+
+:root {
+  --brand: oklch(70% 0.17 195);
+}
+
+/* ---------------------------------------------------------------
+   Shared shell
+   --------------------------------------------------------------- */
+
+.screen {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+}
+
+.screen-body {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.screen-head,
+.screen-foot {
+  padding: clamp(1rem, 2.5vw, 1.75rem) clamp(1.5rem, 4vw, 3rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.wordmark-mark {
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: var(--bs-radius-3);
+  background: var(--bs-primary-base);
+  color: oklch(18% 0.02 195);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+/* Photographic backdrop shared by the full-bleed variant. */
+.screen-photo { color: var(--bs-white); }
+
+.screen-photo > .backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.screen-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    rgb(10 14 18 / 72%) 0%,
+    rgb(10 14 18 / 52%) 45%,
+    rgb(10 14 18 / 82%) 100%);
+}
+
+.screen-photo .fg-2,
+.screen-photo .fg-3 { color: rgb(255 255 255 / 72%); }
+
+/* ---------------------------------------------------------------
+   Countdown
+   --------------------------------------------------------------- */
+
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.75rem, 2.5vw, 2rem);
+  justify-content: center;
+}
+
+.count-cell {
+  min-width: 4.5rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid color-mix(in oklab, currentcolor, transparent 78%);
+  border-radius: var(--bs-radius-4);
+  text-align: center;
+}
+
+.count-value {
+  display: block;
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.count-label {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.headline {
+  font-size: clamp(2.25rem, 1.2rem + 4.4vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+/* ---------------------------------------------------------------
+   Notify form
+   --------------------------------------------------------------- */
+
+.notify {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.notify .form-field { flex: 1 1 16rem; min-width: 0; margin-bottom: 0; }
+.notify .form-field .invalid-feedback { text-align: left; }
+
+/* Build-progress bar, because "coming soon" with a number is more convincing
+   than "coming soon" on its own. */
+.build-bar { max-width: 26rem; margin-inline: auto; }
+
+/* ---------------------------------------------------------------
+   Split variant
+   --------------------------------------------------------------- */
+
+.split { display: grid; grid-template-columns: 1fr; min-height: 100svh; }
+
+@media (width >= 992px) { .split { grid-template-columns: 1.05fr 1fr; } }
+
+.split-media { position: relative; min-height: 16rem; isolation: isolate; }
+
+.split-media > img {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-panel {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.75rem, 4vw, 3.5rem);
+  background: var(--bs-bg-body);
+}
+
+.split-panel-body { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+/* ---------------------------------------------------------------
+   Social + misc
+   --------------------------------------------------------------- */
+
+.social { display: inline-flex; gap: 0.4rem; }
+
+.social a {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1px solid color-mix(in oklab, currentcolor, transparent 78%);
+  color: inherit;
+  text-decoration: none;
+}
+
+.social a:hover { background: color-mix(in oklab, currentcolor, transparent 88%); }
+
+.variant-switch {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: var(--bs-radius-pill, 999px);
+  border: 1px solid color-mix(in oklab, currentcolor, transparent 80%);
+  font-size: 0.8125rem;
+}
+
+.variant-switch a {
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--bs-radius-pill, 999px);
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.variant-switch a.active { background: color-mix(in oklab, currentcolor, transparent 86%); opacity: 1; font-weight: 600; }
+
+/* Left-aligned notify row for the split layout. A wrapper cannot do this: the
+   form itself carries justify-content:center, so the modifier has to land on
+   the form rather than on something around it. */
+.notify.notify-start { justify-content: flex-start; }
+
+/* Four countdown cells must sit on one line wherever there is room for them —
+   a wrapped "seconds" cell on its own row reads as a layout bug, because it is. */
+@media (width >= 380px) {
+  .count-cell { min-width: 4rem; }
+}

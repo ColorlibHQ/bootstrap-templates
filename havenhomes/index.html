@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haven Homes — Free Bootstrap 6 Real Estate Website Template</title>
+<meta name="description" content="Haven Homes is a free Bootstrap 6 real estate template — split hero with a straddling search panel, property grid with specs, agents and a valuation request.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#listings">Skip to listings</a>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">H</span> Haven Homes
+      </a>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="#listings">Buy</a></li>
+            <li class="nav-item"><a class="nav-link" href="#listings">Rent</a></li>
+            <li class="nav-item"><a class="nav-link" href="#valuation">Sell</a></li>
+            <li class="nav-item"><a class="nav-link" href="#agents">Our agents</a></li>
+            <li class="nav-item"><a class="nav-link" href="property.html">Example listing</a></li>
+          </ul>
+        </div>
+      </dialog>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <a class="btn-solid theme-primary d-none md:d-inline-flex" href="#valuation">Free valuation</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Split hero: copy left, full-height media right -->
+<section class="split">
+  <div class="split-copy">
+    <span class="badge badge-subtle theme-primary mb-4 align-self-start">412 homes across the valley</span>
+    <h1 class="split-title mb-4">A house you'll still like in ten years</h1>
+    <p class="fs-lg fg-2 mb-5" style="max-width:32rem">
+      Independent estate agents covering the Calder Valley since 1994.
+      We turn down instructions we don't believe in — which is why our
+      average sale completes in 47 days.
+    </p>
+    <div class="d-flex flex-wrap gap-3">
+      <a class="btn-solid theme-primary btn-lg" href="#listings">Browse homes</a>
+      <a class="btn-outline theme-secondary btn-lg" href="#valuation">Book a valuation</a>
+    </div>
+  </div>
+  <div class="split-media"><div class="ph"><img src="img/hero-cottage.jpg" alt="A stone cottage on a hillside" width="1200" height="1400" loading="eager"></div></div>
+</section>
+
+<div class="container">
+  <!-- Search panel straddling the seam -->
+  <form class="search-panel" role="search" onsubmit="return false">
+    <div class="form-control form-adorn">
+      <div class="form-adorn-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 4 4" stroke-linecap="round"/></svg>
+      </div>
+      <input type="search" class="form-ghost" placeholder="Town, postcode or street" aria-label="Location">
+    </div>
+
+    <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-multiple="true" data-bs-name="ptype" data-bs-placeholder="Any type">
+      <span class="combobox-value">Any type</span>
+      <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+    </button>
+    <div class="menu">
+      <button class="menu-item" type="button" data-bs-value="house">House</button>
+      <button class="menu-item" type="button" data-bs-value="flat">Flat</button>
+      <button class="menu-item" type="button" data-bs-value="cottage">Cottage</button>
+      <button class="menu-item" type="button" data-bs-value="barn">Barn conversion</button>
+      <button class="menu-item" type="button" data-bs-value="land">Land</button>
+    </div>
+
+    <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-name="beds" data-bs-placeholder="Any beds">
+      <span class="combobox-value">Any beds</span>
+      <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+    </button>
+    <div class="menu">
+      <button class="menu-item" type="button" data-bs-value="1">1+ bed</button>
+      <button class="menu-item" type="button" data-bs-value="2">2+ beds</button>
+      <button class="menu-item" type="button" data-bs-value="3">3+ beds</button>
+      <button class="menu-item" type="button" data-bs-value="4">4+ beds</button>
+    </div>
+
+    <button class="btn-solid theme-primary btn-lg" type="submit">Search</button>
+  </form>
+</div>
+
+<main id="main">
+
+  <!-- Listings -->
+  <section class="section" id="listings">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-5">
+        <div>
+          <p class="eyebrow fs-sm fg-primary mb-2">For sale</p>
+          <h2 class="fs-3xl fw-bold mb-0" style="letter-spacing:-.02em">Recently listed</h2>
+        </div>
+        <button class="btn-outline theme-secondary btn-sm" type="button" data-bs-toggle="drawer" data-bs-target="#filterDrawer">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M4 8h8M6 12h4"/></svg>
+          Refine
+        </button>
+      </div>
+
+      <div class="row g-4">
+        <div class="md:col-6 lg:col-4">
+          <article class="property surface lift">
+            <div class="property-media">
+              <span class="badge theme-primary property-tag">New</span>
+              <button class="btn-icon btn-sm property-fav" type="button" aria-label="Save Mill House"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+              <div class="ph ph-4x3">Mill House</div>
+            </div>
+            <div class="property-body">
+              <p class="property-price mb-1">£465,000</p>
+              <p class="property-address mb-3"><a class="fg-3" href="property.html" style="text-decoration:none">Mill House, Hebden Bridge HX7</a></p>
+              <div class="specs">
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 11V6h12v5M2 11h12v2M4 6V4h8v2" stroke-linejoin="round"/></svg>4 beds</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 9h12v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" stroke-linejoin="round"/><path d="M4 9V4a1.5 1.5 0 0 1 3 0" stroke-linecap="round"/></svg>2 baths</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="11"/></svg>1,840 sq ft</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <article class="property surface lift">
+            <div class="property-media">
+              <button class="btn-icon btn-sm property-fav" type="button" aria-label="Save Weavers Row"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+              <div class="ph ph-4x3">Weavers Row</div>
+            </div>
+            <div class="property-body">
+              <p class="property-price mb-1">£289,500</p>
+              <p class="property-address mb-3"><a class="fg-3" href="property.html" style="text-decoration:none">12 Weavers Row, Todmorden OL14</a></p>
+              <div class="specs">
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 11V6h12v5M2 11h12v2M4 6V4h8v2" stroke-linejoin="round"/></svg>3 beds</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 9h12v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" stroke-linejoin="round"/><path d="M4 9V4a1.5 1.5 0 0 1 3 0" stroke-linecap="round"/></svg>1 bath</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="11"/></svg>1,120 sq ft</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <article class="property surface lift">
+            <div class="property-media">
+              <span class="badge badge-subtle theme-warning property-tag">Under offer</span>
+              <button class="btn-icon btn-sm property-fav" type="button" aria-label="Save Fold Barn"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+              <div class="ph ph-4x3">Fold Barn</div>
+            </div>
+            <div class="property-body">
+              <p class="property-price mb-1">£720,000</p>
+              <p class="property-address mb-3"><a class="fg-3" href="property.html" style="text-decoration:none">Fold Barn, Cragg Vale HX7</a></p>
+              <div class="specs">
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 11V6h12v5M2 11h12v2M4 6V4h8v2" stroke-linejoin="round"/></svg>5 beds</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 9h12v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" stroke-linejoin="round"/><path d="M4 9V4a1.5 1.5 0 0 1 3 0" stroke-linecap="round"/></svg>3 baths</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="11"/></svg>2,610 sq ft</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <article class="property surface lift">
+            <div class="property-media">
+              <button class="btn-icon btn-sm property-fav" type="button" aria-label="Save Canal View"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+              <div class="ph ph-4x3">Canal View</div>
+            </div>
+            <div class="property-body">
+              <p class="property-price mb-1">£198,000</p>
+              <p class="property-address mb-3"><a class="fg-3" href="property.html" style="text-decoration:none">Flat 4, Canal View, Sowerby HX6</a></p>
+              <div class="specs">
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 11V6h12v5M2 11h12v2M4 6V4h8v2" stroke-linejoin="round"/></svg>2 beds</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 9h12v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" stroke-linejoin="round"/><path d="M4 9V4a1.5 1.5 0 0 1 3 0" stroke-linecap="round"/></svg>1 bath</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="11"/></svg>680 sq ft</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <article class="property surface lift">
+            <div class="property-media">
+              <button class="btn-icon btn-sm property-fav" type="button" aria-label="Save Hollins End"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+              <div class="ph ph-4x3">Hollins End</div>
+            </div>
+            <div class="property-body">
+              <p class="property-price mb-1">£372,500</p>
+              <p class="property-address mb-3"><a class="fg-3" href="property.html" style="text-decoration:none">Hollins End, Mytholmroyd HX7</a></p>
+              <div class="specs">
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 11V6h12v5M2 11h12v2M4 6V4h8v2" stroke-linejoin="round"/></svg>3 beds</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 9h12v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" stroke-linejoin="round"/><path d="M4 9V4a1.5 1.5 0 0 1 3 0" stroke-linecap="round"/></svg>2 baths</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="11"/></svg>1,390 sq ft</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="md:col-6 lg:col-4">
+          <article class="property surface lift">
+            <div class="property-media">
+              <span class="badge badge-subtle theme-success property-tag">Chain free</span>
+              <button class="btn-icon btn-sm property-fav" type="button" aria-label="Save Stubbing Holme"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+              <div class="ph ph-4x3">Stubbing Holme</div>
+            </div>
+            <div class="property-body">
+              <p class="property-price mb-1">£540,000</p>
+              <p class="property-address mb-3"><a class="fg-3" href="property.html" style="text-decoration:none">Stubbing Holme, Hebden Bridge HX7</a></p>
+              <div class="specs">
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 11V6h12v5M2 11h12v2M4 6V4h8v2" stroke-linejoin="round"/></svg>4 beds</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 9h12v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" stroke-linejoin="round"/><path d="M4 9V4a1.5 1.5 0 0 1 3 0" stroke-linecap="round"/></svg>2 baths</span>
+                <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="11"/></svg>1,720 sq ft</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <nav aria-label="Listing pages" class="mt-6">
+        <ul class="pagination mb-0">
+          <li class="page-item"><a class="page-link" href="#listings">Previous</a></li>
+          <li class="page-item"><a class="page-link active" aria-current="page" href="#listings">1</a></li>
+          <li class="page-item"><a class="page-link" href="#listings">2</a></li>
+          <li class="page-item"><a class="page-link" href="#listings">3</a></li>
+          <li class="page-item"><a class="page-link" href="#listings">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Valuation -->
+  <section class="section pt-0" id="valuation">
+    <div class="container">
+      <div class="valuation">
+        <div class="row g-6 align-items-center">
+          <div class="lg:col-5">
+            <p class="eyebrow fs-sm fg-primary mb-2">Selling</p>
+            <h2 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.02em">What's it actually worth?</h2>
+            <p class="fg-2 mb-4">A real valuation from someone who has walked the street, not an algorithm. Free, no obligation, and we'll tell you if now is a bad time to sell.</p>
+            <dl class="stat-band text-start" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+              <div><dt>47</dt><dd>days average to complete</dd></div>
+              <div><dt>98.4%</dt><dd>of asking price achieved</dd></div>
+            </dl>
+          </div>
+          <div class="lg:col-7">
+            <form class="row g-4" id="valForm" data-demo-form data-bs-validate novalidate>
+              <div class="md:col-6">
+                <div class="form-field">
+                  <label class="form-label" for="vlName">Your name</label>
+                  <input type="text" class="form-control" id="vlName" required>
+                  <div class="invalid-feedback">Required.</div>
+                </div>
+              </div>
+              <div class="md:col-6">
+                <div class="form-field">
+                  <label class="form-label" for="vlPhone">Phone</label>
+                  <input type="tel" class="form-control" id="vlPhone" required>
+                  <div class="invalid-feedback">Required.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-field">
+                  <label class="form-label" for="vlAddr">Property address</label>
+                  <input type="text" class="form-control" id="vlAddr" required>
+                  <div class="invalid-feedback">Required.</div>
+                </div>
+              </div>
+              <div class="md:col-6">
+                <div class="form-field">
+                  <label class="form-label" for="vlDate">Preferred visit</label>
+                  <input type="text" class="form-control" id="vlDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…">
+                </div>
+              </div>
+              <div class="md:col-6">
+                <label class="form-label" for="vlGuide">Rough guide price</label>
+                <div class="form-range" data-bs-bubble>
+                  <input type="range" class="form-range-input" id="vlGuide" min="100" max="900" step="25" value="400" aria-label="Guide price in thousands">
+                </div>
+                <p class="fs-xs fg-3 mb-0">Around <strong class="fg-1" id="vlGuideOut">£400k</strong></p>
+              </div>
+              <div class="col-12">
+                <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Requested ✓">Book my valuation</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agents -->
+  <section class="section pt-0" id="agents">
+    <div class="container">
+      <div class="section-narrow text-center mb-6">
+        <p class="eyebrow fs-sm fg-primary mb-2">The team</p>
+        <h2 class="fs-3xl fw-bold mb-0" style="letter-spacing:-.02em">Five people, one office</h2>
+      </div>
+      <div class="row g-4">
+        <div class="md:col-6 lg:col-3">
+          <div class="agent surface surface-pad h-100" style="padding:1.25rem">
+            <div class="ph ph-1x1">RM</div>
+            <div><p class="fw-semibold fs-sm mb-1">Ruth Marsden</p><p class="fg-3 fs-xs mb-2">Director</p><p class="fs-xs fg-2 mb-0">Valuations, Hebden Bridge</p></div>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <div class="agent surface surface-pad h-100" style="padding:1.25rem">
+            <div class="ph ph-1x1">OA</div>
+            <div><p class="fw-semibold fs-sm mb-1">Omar Aziz</p><p class="fg-3 fs-xs mb-2">Sales</p><p class="fs-xs fg-2 mb-0">Todmorden &amp; Walsden</p></div>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <div class="agent surface surface-pad h-100" style="padding:1.25rem">
+            <div class="ph ph-1x1">JC</div>
+            <div><p class="fw-semibold fs-sm mb-1">Jen Crowther</p><p class="fg-3 fs-xs mb-2">Lettings</p><p class="fs-xs fg-2 mb-0">Whole valley</p></div>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <div class="agent surface surface-pad h-100" style="padding:1.25rem">
+            <div class="ph ph-1x1">SB</div>
+            <div><p class="fw-semibold fs-sm mb-1">Sam Byrne</p><p class="fg-3 fs-xs mb-2">Conveyancing liaison</p><p class="fs-xs fg-2 mb-0">Chasing solicitors</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer bg-2 py-6">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Haven Homes. A free template for uicookies.</p>
+    <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+  </div>
+</footer>
+
+<!-- Refine drawer -->
+<dialog class="drawer drawer-end" tabindex="-1" id="filterDrawer" aria-labelledby="filterDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="filterDrawerLabel">Refine search</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <div class="mb-5">
+      <h3 class="fs-sm fw-semibold mb-3">Maximum price</h3>
+      <div class="form-range" data-bs-bubble>
+        <input type="range" class="form-range-input" id="maxPrice" min="100" max="900" step="25" value="500" aria-label="Maximum price">
+      </div>
+      <p class="fs-xs fg-3 mb-0">Up to <strong class="fg-1" id="maxPriceOut">£500k</strong></p>
+    </div>
+    <div class="mb-5">
+      <h3 class="fs-sm fw-semibold mb-3">Must have</h3>
+      <div class="chip-input" data-bs-chips>
+        <label class="chip-input-label visually-hidden" for="mustInput">Must have</label>
+        <span class="chip">garden</span><span class="chip">parking</span>
+        <input type="text" class="form-ghost" id="mustInput" placeholder="Add…">
+      </div>
+    </div>
+    <div class="mb-5">
+      <h3 class="fs-sm fw-semibold mb-3">Status</h3>
+      <div class="form-field mb-2"><input type="checkbox" class="check" id="fAvail" checked><label for="fAvail">Available</label></div>
+      <div class="form-field mb-2"><input type="checkbox" class="check" id="fOffer"><label for="fOffer">Under offer</label></div>
+      <div class="form-field"><input type="checkbox" class="check" id="fChain"><label for="fChain">Chain free only</label></div>
+    </div>
+    <button class="btn-solid theme-primary w-100" type="button" data-bs-dismiss="drawer">Show homes</button>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

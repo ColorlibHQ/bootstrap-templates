@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silver Halide — Free Bootstrap 6 Photography Website Template</title>
+<meta name="description" content="Silver Halide is a free dark, full-bleed Bootstrap 6 photography portfolio template — mosaic gallery, native dialog lightbox, series carousel and a booking enquiry.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#work">Skip to the work</a>
+
+<!-- Centred wordmark, nav split either side, floating over the hero -->
+<header class="site-header">
+  <div class="container-fluid px-4 lg:px-5">
+    <div class="masthead">
+
+      <div class="masthead-left">
+        <ul class="nav navbar-nav d-none lg:d-flex gap-3">
+          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#series">Series</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        </ul>
+      </div>
+
+      <a class="wordmark" href="index.html">Silver Halide</a>
+
+      <div class="masthead-right d-flex align-items-center gap-2">
+        <ul class="nav navbar-nav d-none lg:d-flex gap-3 me-2">
+          <li class="nav-item"><a class="nav-link" href="#rates">Rates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
+        </ul>
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <button class="btn-icon lg:d-none" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- Full-viewport stage -->
+<section class="stage">
+  <img class="hero-bg" src="img/stage.jpg" alt="" width="1800" height="1200" loading="eager">
+  <div class="stage-inner">
+    <p class="stage-meta mb-4"><span>Reportage</span><span>Portrait</span><span>Editorial</span></p>
+    <h1 class="stage-title mb-4">Light, and what it does to a face</h1>
+    <p class="fs-lg mb-0" style="max-width:34rem;opacity:.85">
+      Nadia Berger — documentary and portrait photography, based in Lisbon,
+      working anywhere the flight is worth it.
+    </p>
+  </div>
+  <a class="scroll-cue" href="#work">Scroll</a>
+</section>
+
+<main id="main">
+
+  <!-- Mosaic, full-bleed -->
+  <section id="work" class="pt-9">
+    <div class="container-fluid px-4 lg:px-5 mb-6">
+      <p class="rule-label mb-0">Selected work — 2024 to 2026</p>
+    </div>
+
+    <div class="mosaic">
+      <button class="frame" type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Alfama, 06:40">
+        <span class="ph"><img src="img/frame-1.jpg" alt="Alfama, 06:40" width="800" height="800" loading="eager"></span><span class="frame-cap">Alfama, 06:40</span>
+      </button>
+      <button class="frame" type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Boatyard, Setúbal">
+        <span class="ph"><img src="img/frame-2.jpg" alt="Boatyard, Setúbal" width="800" height="800" loading="eager"></span><span class="frame-cap">Boatyard, Setúbal</span>
+      </button>
+      <button class="frame" type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Ana, studio">
+        <span class="ph"><img src="img/frame-3.jpg" alt="Ana, studio" width="800" height="800" loading="eager"></span><span class="frame-cap">Ana, studio</span>
+      </button>
+      <button class="frame" type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Salt flats, Aveiro">
+        <span class="ph"><img src="img/frame-4.jpg" alt="Salt flats, Aveiro" width="800" height="800" loading="eager"></span><span class="frame-cap">Salt flats, Aveiro</span>
+      </button>
+      <button class="frame" type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Market, 05:15">
+        <span class="ph"><img src="img/frame-5.jpg" alt="Market, 05:15" width="800" height="800" loading="lazy"></span><span class="frame-cap">Market, 05:15</span>
+      </button>
+      <button class="frame" type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Rooftops, winter">
+        <span class="ph"><img src="img/frame-6.jpg" alt="Rooftops, winter" width="800" height="800" loading="lazy"></span><span class="frame-cap">Rooftops, winter</span>
+      </button>
+      <button class="frame" type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Tomás, kitchen">
+        <span class="ph"><img src="img/frame-7.jpg" alt="Tomás, kitchen" width="800" height="800" loading="lazy"></span><span class="frame-cap">Tomás, kitchen</span>
+      </button>
+      <button class="frame" type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Ferry, last light">
+        <span class="ph"><img src="img/frame-8.jpg" alt="Ferry, last light" width="800" height="800" loading="lazy"></span><span class="frame-cap">Ferry, last light</span>
+      </button>
+      <button class="frame" type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Quarry road">
+        <span class="ph"><img src="img/frame-9.jpg" alt="Quarry road" width="800" height="800" loading="lazy"></span><span class="frame-cap">Quarry road</span>
+      </button>
+      <button class="frame" type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Rehearsal">
+        <span class="ph"><img src="img/frame-10.jpg" alt="Rehearsal" width="800" height="800" loading="lazy"></span><span class="frame-cap">Rehearsal</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Series — horizontal scroll strip -->
+  <section id="series" class="section">
+    <div class="container-fluid px-4 lg:px-5 mb-6">
+      <p class="rule-label mb-0">Series</p>
+    </div>
+    <div class="strip">
+      <article>
+        <div class="ph ph-4x3 mb-3">Tide</div>
+        <h2 class="fs-lg fw-normal mb-1">Tide</h2>
+        <p class="fg-3 fs-sm mb-0">Eighteen months on the Setúbal peninsula · 42 frames</p>
+      </article>
+      <article>
+        <div class="ph ph-4x3 mb-3">Nightshift</div>
+        <h2 class="fs-lg fw-normal mb-1">Nightshift</h2>
+        <p class="fg-3 fs-sm mb-0">Lisbon's markets between 3am and 7am · 31 frames</p>
+      </article>
+      <article>
+        <div class="ph ph-4x3 mb-3">Kin</div>
+        <h2 class="fs-lg fw-normal mb-1">Kin</h2>
+        <p class="fg-3 fs-sm mb-0">Four families, one room each · 24 frames</p>
+      </article>
+      <article>
+        <div class="ph ph-4x3 mb-3">Salt</div>
+        <h2 class="fs-lg fw-normal mb-1">Salt</h2>
+        <p class="fg-3 fs-sm mb-0">The last working pans in Aveiro · 19 frames</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row g-6 align-items-start">
+        <div class="lg:col-4">
+          <p class="rule-label mb-4">About</p>
+          <div class="ph ph-3x4 rounded-6">Nadia</div>
+        </div>
+        <div class="lg:col-8">
+          <p class="lede-xl mb-5">
+            I photograph people doing the thing they would be doing anyway. Fifteen
+            years of it, mostly at hours nobody else wants.
+          </p>
+          <div class="prose" style="max-width:40rem">
+            <p>My work sits between documentary and portraiture. I spend a long time not taking photographs — the first morning of a shoot is usually a write-off, and that is deliberate. People stop performing around the third hour.</p>
+            <p>Clients include Monocle, the Guardian Weekend, Zeit Magazin and a number of people who simply wanted a decent picture of their grandmother while there was still time.</p>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <span class="chip">Reportage</span><span class="chip">Portrait</span>
+            <span class="chip">Editorial</span><span class="chip">Analogue &amp; digital</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rates -->
+  <section id="rates" class="section">
+    <div class="container">
+      <p class="rule-label mb-6">Rates</p>
+      <div class="row g-4">
+        <div class="md:col-4">
+          <div class="tier">
+            <h2 class="fs-lg fw-normal mb-1">Portrait sitting</h2>
+            <p class="fg-3 fs-sm mb-4">Two hours, one location</p>
+            <p class="tier-price mb-4">€480</p>
+            <ul class="vstack gap-2 fs-sm list-unstyled mb-5">
+              <li>15 edited frames</li><li>Studio or on location</li><li>Personal licence included</li>
+            </ul>
+            <a class="btn-outline theme-secondary w-100 mt-auto" href="#book">Enquire</a>
+          </div>
+        </div>
+        <div class="md:col-4">
+          <div class="tier" style="border-color:var(--bs-primary-base)">
+            <div class="d-flex justify-content-between align-items-start">
+              <h2 class="fs-lg fw-normal mb-1">Editorial day</h2>
+              <span class="badge theme-primary">Most booked</span>
+            </div>
+            <p class="fg-3 fs-sm mb-4">Full day, travel within Portugal</p>
+            <p class="tier-price mb-4">€1,650</p>
+            <ul class="vstack gap-2 fs-sm list-unstyled mb-5">
+              <li>40+ edited frames</li><li>Assistant included</li><li>One year press licence</li><li>72-hour turnaround</li>
+            </ul>
+            <a class="btn-solid theme-primary w-100 mt-auto" href="#book">Enquire</a>
+          </div>
+        </div>
+        <div class="md:col-4">
+          <div class="tier">
+            <h2 class="fs-lg fw-normal mb-1">Documentary project</h2>
+            <p class="fg-3 fs-sm mb-4">Multi-day, quoted per brief</p>
+            <p class="tier-price mb-4">From €6k</p>
+            <ul class="vstack gap-2 fs-sm list-unstyled mb-5">
+              <li>Research and access included</li><li>Print-ready edit and sequencing</li><li>Exhibition or book support</li>
+            </ul>
+            <a class="btn-outline theme-secondary w-100 mt-auto" href="#book">Enquire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="book" class="section">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-5">
+          <p class="rule-label mb-4">Book</p>
+          <h2 class="fs-3xl fw-normal mb-4" style="letter-spacing:-.02em">Tell me what you're making</h2>
+          <p class="fg-2 mb-5">I take on roughly two commissions a month. The more specific the brief, the faster I can say yes or point you at someone better suited.</p>
+          <p class="fs-sm fg-3 mb-1">Direct</p>
+          <p class="fs-lg mb-0">nadia@aperture.example</p>
+        </div>
+
+        <div class="lg:col-7">
+          <form class="row g-4" id="bookForm" data-demo-form data-bs-validate novalidate>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="bkName">Name</label>
+                <input type="text" class="form-control" id="bkName" required>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="bkEmail">Email</label>
+                <div class="form-control form-adorn">
+                  <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="m2 4 6 4.5L14 4"/></svg></div>
+                  <input type="email" class="form-ghost" id="bkEmail" required>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <label class="form-label">Commission type</label>
+              <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-name="ctype" data-bs-placeholder="Select…">
+                <span class="combobox-value">Select…</span>
+                <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+              </button>
+              <div class="menu">
+                <button class="menu-item" type="button" data-bs-value="portrait">Portrait sitting</button>
+                <button class="menu-item" type="button" data-bs-value="editorial">Editorial day</button>
+                <button class="menu-item" type="button" data-bs-value="doc">Documentary project</button>
+                <button class="menu-item" type="button" data-bs-value="print">Print licensing</button>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="bkDate">Shoot date</label>
+                <input type="text" class="form-control" id="bkDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…">
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="bkTags">Usage</label>
+              <div class="chip-input" data-bs-chips>
+                <span class="chip">print</span><span class="chip">web</span>
+                <input type="text" class="form-ghost" id="bkTags" placeholder="Add usage…">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-field">
+                <label class="form-label" for="bkBrief">The brief</label>
+                <textarea class="form-control" id="bkBrief" rows="4" required></textarea>
+                <div class="invalid-feedback">A paragraph is plenty.</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Sent ✓">Send enquiry</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer py-6" style="border-top:1px solid var(--bs-border-color)">
+  <div class="container-fluid px-4 lg:px-5 d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Nadia Berger. A free template for uicookies.</p>
+    <div class="d-flex gap-3 fs-xs">
+      <a class="fg-3" href="#">Instagram</a><a class="fg-3" href="#">Behance</a><a class="fg-3" href="#">Prints</a>
+    </div>
+    <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+  </div>
+</footer>
+
+<!-- Mobile nav -->
+<dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="navDrawerLabel">Silver Halide</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <ul class="nav navbar-nav vstack gap-1">
+      <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+      <li class="nav-item"><a class="nav-link" href="#series">Series</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#rates">Rates</a></li>
+      <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
+    </ul>
+  </div>
+</dialog>
+
+<!-- Lightbox -->
+<dialog class="dialog dialog-xl dialog-instant" id="lightbox" aria-label="Enlarged photograph">
+  <div class="dialog-body">
+    <div class="ph" id="lightboxImage">Alfama</div>
+  </div>
+  <div class="dialog-footer justify-content-between">
+    <p class="fs-sm fg-3 mb-0" id="lightboxCap">Alfama, 06:40</p>
+    <button type="button" class="btn-text" data-bs-dismiss="dialog">Close</button>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

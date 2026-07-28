@@ -1,0 +1,522 @@
+/*!
+ * Stonebridge — Bootstrap 6 church template
+ *
+ * Design language: limestone and lead. Warm off-white ground, a deep green
+ * borrowed from old churchyard railings, a display serif for headings and
+ * hairline rules instead of cards wherever a rule will do.
+ *
+ * The structural idea carrying the identity is time. Church websites state
+ * their services statically — "Sundays, 10.30am" — which is correct and no help
+ * at all to somebody checking their phone on a Wednesday evening wondering
+ * whether there is anything on tonight. Every gathering here declares a
+ * recurring rule in data-when, and the page works out its own next occurrence:
+ * "On now", "Starts in 40 min", "Today, 6.00pm", "Sunday, 10.30am". The static
+ * line stays put underneath, so nothing is lost with JavaScript off.
+ */
+
+:root {
+  --brand: oklch(43% 0.055 168);
+  --kit-section-y: 4.5rem;
+  --sb-rule: color-mix(in oklab, var(--bs-fg-body), transparent 88%);
+  --sb-gold: oklch(66% 0.115 76);
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 6rem; } }
+
+[data-bs-theme="light"] {
+  --bs-bg-body: oklch(97.6% 0.006 90);
+  --bs-bg-2: oklch(95% 0.009 90);
+}
+
+[data-bs-theme="dark"] {
+  --bs-bg-body: oklch(21% 0.008 160);
+  --bs-bg-2: oklch(25% 0.01 160);
+}
+
+.display-serif,
+.section-title,
+.hero-title,
+.week-day-name {
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.012em;
+}
+
+.section-title,
+.hero-title { text-wrap: balance; }
+
+/* ---------------------------------------------------------------
+   Header
+   --------------------------------------------------------------- */
+
+.site-header {
+  border-bottom: 1px solid var(--sb-rule);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--bs-fg-body);
+  text-decoration: none;
+  font-family: ui-serif, Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+
+.wordmark small {
+  display: block;
+  font-family: var(--bs-font-sans-serif, system-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bs-fg-3, currentcolor);
+  opacity: 0.65;
+}
+
+.brand-glyph { color: var(--bs-primary-base); flex: none; }
+
+.site-header .nav-link { text-decoration: none; }
+
+.give-btn { text-decoration: none; }
+
+@media (width < 480px) { .give-btn { display: none; } }
+
+/* ---------------------------------------------------------------
+   Hero
+   --------------------------------------------------------------- */
+
+.welcome-hero {
+  position: relative;
+  display: grid;
+  align-items: end;
+  min-height: min(78vh, 44rem);
+  padding-block: 6rem 3.5rem;
+  overflow: hidden;
+  color: var(--bs-white);
+  isolation: isolate;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.welcome-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    oklch(18% 0.02 165 / 55%) 0%,
+    oklch(18% 0.02 165 / 32%) 42%,
+    oklch(14% 0.02 165 / 88%) 100%
+  );
+}
+
+.welcome-hero-inner { max-width: 44rem; }
+
+.welcome-hero .eyebrow { color: color-mix(in oklab, var(--bs-white), transparent 22%); }
+
+.welcome-hero .hero-title { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.03; }
+
+.welcome-hero .hero-lede { color: color-mix(in oklab, var(--bs-white), transparent 12%); }
+
+.welcome-hero .btn-outline {
+  border-color: color-mix(in oklab, var(--bs-white), transparent 55%);
+  color: var(--bs-white);
+  text-decoration: none;
+}
+
+.welcome-hero .btn-outline:hover {
+  border-color: var(--bs-white);
+  background-color: color-mix(in oklab, var(--bs-white), transparent 88%);
+}
+
+.welcome-hero .btn-solid { text-decoration: none; }
+
+/* Live "next up" line. Hidden until the script has something true to say. */
+.next-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.75rem;
+  padding-block: 0.6rem;
+  padding-inline: 1rem 1.25rem;
+  border: 1px solid color-mix(in oklab, var(--bs-white), transparent 74%);
+  border-radius: 100px;
+  background-color: oklch(18% 0.02 165 / 45%);
+  backdrop-filter: blur(6px);
+  font-size: 0.95rem;
+}
+
+.next-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--sb-gold);
+  box-shadow: 0 0 0 0 color-mix(in oklab, var(--sb-gold), transparent 30%);
+  animation: sb-pulse 2.6s ease-out infinite;
+  flex: none;
+}
+
+@keyframes sb-pulse {
+  70% { box-shadow: 0 0 0 0.55rem color-mix(in oklab, var(--sb-gold), transparent 100%); }
+  100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--sb-gold), transparent 100%); }
+}
+
+@media (prefers-reduced-motion: reduce) { .next-dot { animation: none; } }
+
+/* ---------------------------------------------------------------
+   Shared bits
+   --------------------------------------------------------------- */
+
+.eyebrow-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--bs-primary-base);
+}
+
+.eyebrow-rule::before {
+  content: "";
+  width: 1.75rem;
+  height: 1px;
+  background-color: currentcolor;
+  flex: none;
+}
+
+.framed {
+  border-radius: var(--bs-radius-6);
+  outline: 1px solid var(--sb-rule);
+  outline-offset: 0.6rem;
+}
+
+.facts {
+  margin-bottom: 0;
+  border-top: 1px solid var(--sb-rule);
+}
+
+.facts > div {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-block: 0.7rem;
+  border-bottom: 1px solid var(--sb-rule);
+}
+
+.facts dt { font-weight: 600; margin-bottom: 0; }
+.facts dd { margin-bottom: 0; text-align: right; color: var(--bs-fg-2, inherit); }
+
+/* ---------------------------------------------------------------
+   Gatherings
+   --------------------------------------------------------------- */
+
+.gathering-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.gathering { position: relative; }
+
+.gathering-when {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* The computed line. Quiet by default — it only earns colour when the thing is
+   actually happening. */
+.gathering-status {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  padding-block: 0.2rem;
+  padding-inline: 0.6rem;
+  border-radius: 100px;
+  border: 1px solid var(--sb-rule);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: var(--bs-fg-3, inherit);
+}
+
+.gathering-status[data-state="now"],
+.gathering-status[data-state="soon"] {
+  border-color: transparent;
+  background-color: var(--bs-primary-base);
+  color: var(--bs-white);
+}
+
+.gathering-status[data-state="today"] {
+  border-color: color-mix(in oklab, var(--sb-gold), transparent 40%);
+  color: color-mix(in oklab, var(--sb-gold), black 22%);
+}
+
+.gathering.is-next {
+  border-color: color-mix(in oklab, var(--bs-primary-base), transparent 45%);
+  box-shadow: 0 1rem 2.5rem -1.25rem color-mix(in oklab, var(--bs-primary-base), transparent 40%);
+}
+
+/* ---------------------------------------------------------------
+   FAQ — v6 accordions are native <details>
+   --------------------------------------------------------------- */
+
+.faq { border-top: 1px solid var(--sb-rule); }
+
+.faq details { border-bottom: 1px solid var(--sb-rule); }
+
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-right: 1.5px solid currentcolor;
+  border-bottom: 1.5px solid currentcolor;
+  transform: rotate(45deg) translate(-0.15rem, -0.15rem);
+  transition: transform 0.2s ease;
+  flex: none;
+  opacity: 0.55;
+}
+
+.faq details[open] summary::after { transform: rotate(-135deg) translate(-0.1rem, -0.1rem); }
+
+.faq summary:hover { color: var(--bs-primary-fg); }
+
+.faq-body { padding-bottom: 1.2rem; max-width: 44rem; }
+
+/* ---------------------------------------------------------------
+   Life cards
+   --------------------------------------------------------------- */
+
+.life-card { overflow: hidden; }
+
+.life-card .ph { border-radius: 0; }
+
+/* ---------------------------------------------------------------
+   Talks
+   --------------------------------------------------------------- */
+
+.talk-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.talk-filter {
+  padding-block: 0.4rem;
+  padding-inline: 0.9rem;
+  border: 1px solid var(--sb-rule);
+  border-radius: 100px;
+  background-color: transparent;
+  color: var(--bs-fg-2, inherit);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.talk-filter:hover { border-color: color-mix(in oklab, var(--bs-primary-base), transparent 50%); }
+
+.talk-filter.is-on {
+  border-color: transparent;
+  background-color: var(--bs-primary-base);
+  color: var(--bs-white);
+}
+
+.talk-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-top: 1px solid var(--sb-rule);
+}
+
+.talk {
+  display: grid;
+  gap: 0.5rem 1.75rem;
+  align-items: center;
+  padding-block: 1.35rem;
+  border-bottom: 1px solid var(--sb-rule);
+}
+
+@media (width >= 768px) {
+  .talk { grid-template-columns: 13rem 1fr auto; }
+}
+
+.talk-series { color: var(--bs-primary-base); margin-bottom: 0.25rem; }
+
+.talk-play { text-decoration: none; white-space: nowrap; justify-self: start; }
+
+/* ---------------------------------------------------------------
+   Giving split
+   --------------------------------------------------------------- */
+
+.split-row + .split-row { margin-top: 1.1rem; }
+
+.split-bar {
+  height: 0.4rem;
+  border-radius: 100px;
+  background-color: color-mix(in oklab, var(--bs-fg-body), transparent 92%);
+  overflow: hidden;
+}
+
+.split-bar::before {
+  content: "";
+  display: block;
+  width: var(--pct, 0%);
+  height: 100%;
+  border-radius: inherit;
+  background-color: var(--bs-primary-base);
+}
+
+.split-row:last-of-type .split-bar::before { background-color: var(--sb-gold); }
+
+.split-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+}
+
+.split-label span { color: var(--bs-fg-2, inherit); }
+
+/* ---------------------------------------------------------------
+   What's on
+   --------------------------------------------------------------- */
+
+.page-head {
+  padding-block: 3.5rem 2.5rem;
+  border-bottom: 1px solid var(--sb-rule);
+  background-color: var(--bs-bg-2);
+}
+
+.page-head .hero-title { font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.05; }
+.page-head .eyebrow a { color: inherit; }
+
+.week-day + .week-day { margin-top: 3rem; }
+
+.week-day-name {
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--bs-primary-base);
+  margin-bottom: 0;
+}
+
+.week-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.week-item {
+  display: grid;
+  gap: 0.35rem 1.75rem;
+  padding-block: 1.25rem;
+  border-bottom: 1px solid var(--sb-rule);
+}
+
+@media (width >= 768px) {
+  .week-item { grid-template-columns: 7rem 1fr 11rem; align-items: baseline; }
+  .week-where { text-align: right; }
+}
+
+.week-time { font-weight: 650; font-variant-numeric: tabular-nums; }
+
+.week-flag {
+  display: none;
+  padding-block: 0.1rem;
+  padding-inline: 0.5rem;
+  border-radius: 100px;
+  background-color: var(--bs-primary-base);
+  color: var(--bs-white);
+  font-family: var(--bs-font-sans-serif, system-ui);
+  font-size: 0.7rem;
+  font-weight: 650;
+  vertical-align: middle;
+}
+
+/* Only shout on the what's-on page when it is genuinely happening now or next —
+   a badge against all thirty rows is wallpaper. */
+.week-item.is-now .week-flag,
+.week-item.is-soon .week-flag { display: inline-block; }
+
+.week-item.is-now { background-color: color-mix(in oklab, var(--bs-primary-base), transparent 94%); }
+
+/* ---------------------------------------------------------------
+   Dated events
+   --------------------------------------------------------------- */
+
+.event-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-top: 1px solid var(--sb-rule);
+}
+
+.event {
+  display: grid;
+  gap: 0.75rem 1.75rem;
+  grid-template-columns: 4.5rem 1fr;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--sb-rule);
+}
+
+.event-date {
+  display: grid;
+  place-content: center;
+  align-content: center;
+  padding-block: 0.6rem;
+  border: 1px solid var(--sb-rule);
+  border-radius: var(--bs-radius-4);
+  text-align: center;
+  line-height: 1.1;
+  height: fit-content;
+}
+
+.event-day { font-size: 1.5rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+.event-mon { font-size: 0.75rem; font-weight: 650; text-transform: uppercase; letter-spacing: 0.06em; color: var(--bs-primary-base); }
+.event-year { font-size: 0.7rem; opacity: 0.55; }
+
+.event-flag {
+  padding-block: 0.1rem;
+  padding-inline: 0.5rem;
+  border-radius: 100px;
+  border: 1px solid var(--sb-rule);
+  font-family: var(--bs-font-sans-serif, system-ui);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+.event.is-passed { opacity: 0.5; }
+.event.is-passed .event-mon { color: var(--bs-fg-3, inherit); }
+
+/* ---------------------------------------------------------------
+   Footer
+   --------------------------------------------------------------- */
+
+.site-footer a { color: inherit; }

@@ -1,0 +1,32 @@
+{
+  "slug": "bedrock",
+  "title": "Bedrock — Free Bootstrap 6 Construction &amp; Civil Engineering Template",
+  "excerpt": "A free two-page Bootstrap 6 construction template — capabilities, sectors, a project grid, a Stepper-driven process section, accreditations and a tender request form.",
+  "yoastTitle": "Bedrock — Free Bootstrap 6 Construction &amp; Civil Engineering Template",
+  "yoastDesc": "Free Bootstrap 6 construction and civil engineering website template with a tender enquiry form using Datepicker and Combobox, a Stepper process section, project case study page and animated statistics.",
+  "intro": "Bedrock is a free, premium <strong>Bootstrap 6</strong> website template for construction firms, civil engineering contractors, groundworks companies and trades operating at commercial scale. It pairs a full contractor homepage — capabilities, sectors, projects, process, accreditations and a tender enquiry — with a project case study page.",
+  "note": "Contractors get judged on whether the site looks like it belongs to people who deliver, so this one is deliberately hard-edged: no rounded corners anywhere, a safety-yellow accent on dark slate, and a full-width statistics strip that counts up when it scrolls into view. The Bootstrap 6 showpiece is the <strong>Stepper</strong> used as a page section rather than inside a form — five stages from enquiry to handover — alongside a tender enquiry built on Datepicker and a multi-select Combobox. Stepper, Datepicker and Combobox have no Bootstrap 5 equivalent.",
+  "summary": "Bedrock is a free, premium two-page Bootstrap 6 template for construction and civil engineering firms. The homepage runs a photographic hero with a keyline-marked copy block, a full-width statistics strip that counts up on scroll, six capability cards, a numbered sector list, a project grid, a five-stage process Stepper, audited accreditations and a tender enquiry form using Datepicker and a multi-select Combobox. The project page adds a case study with problem, scope and outcome sections plus a sticky facts rail. Hard-edged dark design with a safety-yellow accent, ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — contractor homepage and a project case study",
+    "Bootstrap 6 Stepper used as a page section, not a form control — five delivery stages",
+    "Tender enquiry form with Datepicker return date and multi-select Combobox packages",
+    "Full-width statistics strip that counts up when scrolled into view",
+    "Hard-edged design language — no rounded corners, safety-yellow on dark slate",
+    "Six capability cards with typical contract values",
+    "Numbered sector list and audited accreditation strip",
+    "Project grid linking to a full case study with a sticky facts rail",
+    "Respects prefers-reduced-motion — the counter simply doesn't run",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "construction"
+  ],
+  "images": [
+    { "name": "hero",   "q": "construction site excavator groundworks", "fallback": "construction", "w": 1800, "h": 1000 },
+    { "name": "proj-1", "q": "excavator digging foundations site",      "fallback": "excavator",    "w": 900,  "h": 600 },
+    { "name": "proj-2", "q": "steel frame building construction",       "fallback": "steel frame",  "w": 900,  "h": 600 },
+    { "name": "proj-3", "q": "new road construction paving",            "fallback": "road works",   "w": 900,  "h": 600 }
+  ]
+}

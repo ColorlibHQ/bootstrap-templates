@@ -1,0 +1,258 @@
+/*!
+ * Soundstage — Bootstrap 6 band & musician template
+ *
+ * Design language: gig-poster. Near-black canvas, one acid accent, oversized
+ * condensed type set tight, and hard-ruled rows instead of cards. Deliberately
+ * loud where Lantern is quiet and Caseworth is typographic.
+ *
+ * The structural idea carrying the identity is the tour list: a real table of
+ * dates set like a poster back, with sold-out rows struck through rather than
+ * hidden — because a sold-out show is proof, not an absence.
+ */
+
+:root {
+  --brand: oklch(80% 0.19 108);
+  --kit-section-y: 5rem;
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 7rem; } }
+
+[data-bs-theme="dark"] {
+  --bs-bg-body: oklch(15% 0.008 280);
+  --bs-bg-2: oklch(19% 0.01 280);
+}
+
+.slab {
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------------
+   Header + hero
+   --------------------------------------------------------------- */
+
+.site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 30;
+  background: transparent;
+  backdrop-filter: none;
+  border: 0;
+  padding-block: 1rem;
+}
+
+.site-header .navbar { background: transparent; border: 0; }
+.site-header .nav-link,
+.site-header .wordmark,
+.site-header .btn-icon { color: var(--bs-white); }
+
+.wordmark {
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.stage {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: end start;
+  padding: 6rem clamp(1.25rem, 5vw, 4rem) clamp(3rem, 8vw, 6rem);
+  color: var(--bs-white);
+  background: linear-gradient(160deg, #14121c, #241f33 55%, #3a2f4d);
+  overflow: hidden;
+}
+
+.stage > .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgb(12 10 18 / 55%) 0%, transparent 22%),
+    linear-gradient(to top, rgb(12 10 18 / 88%) 0%, rgb(12 10 18 / 40%) 42%, transparent 74%);
+}
+
+.stage-inner { position: relative; z-index: 2; max-width: 52rem; }
+
+.stage-title { font-size: clamp(3rem, 1rem + 10vw, 9rem); }
+
+.stage-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* ---------------------------------------------------------------
+   Release + tracklist
+   --------------------------------------------------------------- */
+
+.sleeve { aspect-ratio: 1; border-radius: 0; overflow: hidden; }
+
+.track {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.track:last-child { border-bottom: 0; }
+.track-no { font-variant-numeric: tabular-nums; font-size: 0.8125rem; color: var(--bs-fg-3); }
+.track-len { font-variant-numeric: tabular-nums; font-size: 0.8125rem; color: var(--bs-fg-3); }
+
+.track-play {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--brand), transparent 82%);
+  color: var(--bs-fg-primary);
+  cursor: pointer;
+}
+
+.track-play:hover { background: var(--bs-primary-base); color: oklch(18% 0.02 108); }
+.track.is-playing .track-play { background: var(--bs-primary-base); color: oklch(18% 0.02 108); }
+.track.is-playing .track-name { color: var(--bs-fg-primary); font-weight: 600; }
+
+/* ---------------------------------------------------------------
+   Tour — the identity piece
+   --------------------------------------------------------------- */
+
+.gig {
+  display: grid;
+  gap: 0.35rem 1.5rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+@media (width >= 768px) {
+  .gig { grid-template-columns: 8rem 1fr 10rem auto; gap: 1.5rem; }
+}
+
+.gig-date {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 1.05rem;
+}
+
+.gig-city { font-weight: 700; letter-spacing: -0.015em; font-size: 1.15rem; }
+.gig-venue { color: var(--bs-fg-3); font-size: 0.875rem; }
+
+/* Sold-out shows stay on the list, struck through. They are evidence. */
+.gig.is-gone { opacity: 0.55; }
+.gig.is-gone .gig-city { text-decoration: line-through; text-decoration-thickness: 2px; }
+
+/* ---------------------------------------------------------------
+   Video, merch, misc
+   --------------------------------------------------------------- */
+
+.video-tile {
+  position: relative;
+  display: block;
+  border: 0;
+  padding: 0;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.video-tile .ph { aspect-ratio: 16 / 9; }
+
+.video-tile::after {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  translate: -50% -50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--bs-primary-base);
+  clip-path: polygon(38% 28%, 38% 72%, 72% 50%);
+  scale: 1;
+  transition: scale 0.2s ease;
+}
+
+.video-tile:hover::after { scale: 1.12; }
+
+@media (prefers-reduced-motion: reduce) { .video-tile::after { transition: none; } }
+
+.merch-item { text-decoration: none; color: inherit; display: block; }
+.merch-item .ph { aspect-ratio: 1; margin-bottom: 0.75rem; }
+.merch-price { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--bs-fg-primary); }
+
+.rule-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bs-fg-3);
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--bs-fg-body);
+}
+
+.sub-head {
+  padding-block: 8rem 3rem;
+  background: var(--bs-bg-2);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.sub-head-page .site-header .nav-link,
+.sub-head-page .site-header .wordmark,
+.sub-head-page .site-header .btn-icon { color: var(--bs-fg-body); }
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.spec-row:last-child { border-bottom: 0; }
+
+/* Formats and pre-order rail on the album page. */
+.format-rail {
+  position: sticky;
+  top: 6rem;
+  padding: 1.5rem;
+  border: 1px solid var(--bs-border-color);
+  border-top: 3px solid var(--bs-primary-base);
+}
+
+/* The secondary CTA sits on a photograph, where theme-secondary's grey border
+   and text all but disappear. Force it to the white the hero copy already uses. */
+.stage .btn-outline.theme-secondary {
+  color: var(--bs-white);
+  border-color: rgb(255 255 255 / 55%);
+}
+
+.stage .btn-outline.theme-secondary:hover {
+  background: rgb(255 255 255 / 12%);
+  border-color: var(--bs-white);
+}

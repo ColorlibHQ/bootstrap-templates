@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Components — Stratos | Bootstrap 6 showcase</title>
+<meta name="description" content="Every Bootstrap 6 component rendered live: Dialog, Drawer, Menu, Carousel, Stepper, Avatar, Chip, Toast, Nav overflow, Toggler and more.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#tocNav" data-bs-top-margin="120px" data-bs-smooth-scroll="true">
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header" id="siteHeader">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">S</span> Stratos
+      </a>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="components.html">Components</a></li>
+            <li class="nav-item"><a class="nav-link" href="forms.html">Forms</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog-post.html">Blog</a></li>
+          </ul>
+        </div>
+      </dialog>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <span class="badge badge-subtle theme-primary mb-3">Bootstrap 6.0.0-alpha1</span>
+    <h1 class="fs-4xl fw-bold mb-2">Components</h1>
+    <p class="fs-lg fg-2 mb-0" style="max-width:44rem">
+      Every component in the alpha, rendered live. Renamed ones are flagged, and
+      the six that didn't exist in Bootstrap 5 are marked <span class="badge badge-subtle theme-success">New</span>.
+    </p>
+  </div>
+</div>
+
+<main id="main" class="section">
+  <div class="container">
+    <div class="shell">
+
+      <aside class="shell-aside">
+        <p class="eyebrow fs-xs fg-3 mb-2">On this page</p>
+        <ul class="shell-nav nav" id="tocNav">
+          <li><a class="nav-link" href="#buttons">Buttons</a></li>
+          <li><a class="nav-link" href="#badges">Badges</a></li>
+          <li><a class="nav-link" href="#alerts">Alerts</a></li>
+          <li><a class="nav-link" href="#avatars">Avatars</a></li>
+          <li><a class="nav-link" href="#chips">Chips</a></li>
+          <li><a class="nav-link" href="#cards">Cards</a></li>
+          <li><a class="nav-link" href="#accordion">Accordion</a></li>
+          <li><a class="nav-link" href="#dialog">Dialog</a></li>
+          <li><a class="nav-link" href="#drawer">Drawer</a></li>
+          <li><a class="nav-link" href="#menu">Menu</a></li>
+          <li><a class="nav-link" href="#tabs">Nav &amp; tabs</a></li>
+          <li><a class="nav-link" href="#navoverflow">Nav overflow</a></li>
+          <li><a class="nav-link" href="#stepper">Stepper</a></li>
+          <li><a class="nav-link" href="#carousel">Carousel</a></li>
+          <li><a class="nav-link" href="#collapse">Collapse</a></li>
+          <li><a class="nav-link" href="#toast">Toasts</a></li>
+          <li><a class="nav-link" href="#tooltip">Tooltip &amp; popover</a></li>
+          <li><a class="nav-link" href="#toggler">Toggler</a></li>
+          <li><a class="nav-link" href="#progress">Progress</a></li>
+          <li><a class="nav-link" href="#spinner">Spinners</a></li>
+          <li><a class="nav-link" href="#listgroup">List group</a></li>
+          <li><a class="nav-link" href="#breadcrumb">Breadcrumb</a></li>
+          <li><a class="nav-link" href="#pagination">Pagination</a></li>
+          <li><a class="nav-link" href="#placeholder">Placeholders</a></li>
+          <li><a class="nav-link" href="#tables">Tables</a></li>
+          <li><a class="nav-link" href="#typography">Typography</a></li>
+        </ul>
+      </aside>
+
+      <div>
+
+        <!-- BUTTONS -->
+        <section class="demo-group" id="buttons">
+          <h2>Buttons</h2>
+          <p class="demo-intro">
+            v5's per-colour classes are gone. A button now composes a <em>variant</em>
+            (<code>.btn-solid</code>, <code>.btn-outline</code>, <code>.btn-subtle</code>,
+            <code>.btn-text</code>) with a <em>theme token</em> (<code>.theme-primary</code>).
+          </p>
+          <div class="demo">
+            <span class="demo-label">Variants</span>
+            <div class="demo-row">
+              <button type="button" class="btn-solid theme-primary">Solid</button>
+              <button type="button" class="btn-outline theme-primary">Outline</button>
+              <button type="button" class="btn-subtle theme-primary">Subtle</button>
+              <button type="button" class="btn-text theme-primary">Text</button>
+              <button type="button" class="btn-link">Link</button>
+              <button type="button" class="btn">Base</button>
+            </div>
+          </div>
+          <div class="demo">
+            <span class="demo-label">Theme tokens</span>
+            <div class="demo-row">
+              <button type="button" class="btn-solid theme-primary">Primary</button>
+              <button type="button" class="btn-solid theme-secondary">Secondary</button>
+              <button type="button" class="btn-solid theme-success">Success</button>
+              <button type="button" class="btn-solid theme-danger">Danger</button>
+              <button type="button" class="btn-solid theme-warning">Warning</button>
+              <button type="button" class="btn-solid theme-info">Info</button>
+              <button type="button" class="btn-solid theme-inverse">Inverse</button>
+            </div>
+          </div>
+          <div class="demo">
+            <span class="demo-label">Sizes, icons, states &amp; groups</span>
+            <div class="demo-row mb-3">
+              <button type="button" class="btn-solid theme-primary btn-sm">Small</button>
+              <button type="button" class="btn-solid theme-primary">Default</button>
+              <button type="button" class="btn-solid theme-primary btn-lg">Large</button>
+              <button type="button" class="btn-icon" aria-label="Settings">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.6M8 12.9v1.6M14.5 8h-1.6M3.1 8H1.5m11-4.6-1.1 1.1M4.6 11.4l-1.1 1.1m0-9.1 1.1 1.1m6.8 6.8 1.1 1.1"/></svg>
+              </button>
+              <button type="button" class="btn-solid theme-primary" disabled>Disabled</button>
+              <button class="btn-subtle theme-primary" type="button" disabled>
+                <span class="spinner-border" aria-hidden="true"></span>
+                <span role="status">Loading…</span>
+              </button>
+            </div>
+            <div class="demo-row">
+              <div class="btn-group" role="group" aria-label="Text alignment">
+                <button type="button" class="btn-outline theme-secondary">Left</button>
+                <button type="button" class="btn-outline theme-secondary">Center</button>
+                <button type="button" class="btn-outline theme-secondary">Right</button>
+              </div>
+              <label class="btn-check btn-outline theme-primary">
+                <input type="checkbox" autocomplete="off"> Toggle me
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- BADGES -->
+        <section class="demo-group" id="badges">
+          <h2>Badges</h2>
+          <p class="demo-intro">Three variants, composed with the same theme tokens.</p>
+          <div class="demo">
+            <div class="demo-row mb-3">
+              <span class="badge theme-primary">Solid</span>
+              <span class="badge badge-subtle theme-primary">Subtle</span>
+              <span class="badge badge-outline theme-primary">Outline</span>
+            </div>
+            <div class="demo-row">
+              <span class="badge badge-subtle theme-success">Shipped</span>
+              <span class="badge badge-subtle theme-warning">In review</span>
+              <span class="badge badge-subtle theme-danger">Blocked</span>
+              <span class="badge badge-subtle theme-info">Draft</span>
+              <span class="badge theme-primary">
+                <span class="spinner-border" aria-hidden="true"></span>
+                <span role="status">Building</span>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ALERTS -->
+        <section class="demo-group" id="alerts">
+          <h2>Alerts</h2>
+          <p class="demo-intro"><code>.alert-primary</code> is gone — use <code>.alert</code> plus a theme token.</p>
+          <div class="demo demo-stack">
+            <div class="alert theme-info" role="alert">
+              <strong>Heads up.</strong> This template runs on an unreleased Bootstrap alpha.
+            </div>
+            <div class="alert theme-success" role="alert">
+              Your workspace was created successfully.
+            </div>
+            <div class="alert theme-warning" role="alert">
+              Your trial ends in 3 days. <a href="pricing.html" class="alert-link">Choose a plan</a>.
+            </div>
+            <div class="alert theme-danger d-flex align-items-start gap-2" role="alert">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" class="flex-shrink-0 mt-1" aria-hidden="true"><path d="M8 1.5 15 14H1zM7.25 6v3.5h1.5V6zm0 4.75v1.5h1.5v-1.5z"/></svg>
+              <div>
+                <strong>Deploy failed.</strong> The build exited with code 1 on step <code>test:e2e</code>.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- AVATARS -->
+        <section class="demo-group" id="avatars">
+          <h2>Avatars <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">CSS-only. Sizes, status dots, and overlapping stacks.</p>
+          <div class="demo">
+            <span class="demo-label">Sizes &amp; status</span>
+            <div class="demo-row mb-4">
+              <span class="avatar avatar-sm"><span class="avatar-initials">SM</span></span>
+              <span class="avatar"><span class="avatar-initials">MD</span></span>
+              <span class="avatar avatar-lg"><span class="avatar-initials">LG</span></span>
+              <span class="avatar">
+                <span class="avatar-initials">PN</span>
+                <span class="avatar-status theme-success"></span>
+              </span>
+            </div>
+            <span class="demo-label">Stack</span>
+            <div class="avatar-stack">
+              <span class="avatar"><span class="avatar-initials">PN</span></span>
+              <span class="avatar"><span class="avatar-initials">ML</span></span>
+              <span class="avatar"><span class="avatar-initials">DR</span></span>
+              <span class="avatar"><span class="avatar-initials">TB</span></span>
+              <span class="avatar"><span class="avatar-initials">+9</span></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- CHIPS -->
+        <section class="demo-group" id="chips">
+          <h2>Chips <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">Tags and tokens, with optional icons and a dismiss button.</p>
+          <div class="demo">
+            <div class="demo-row">
+              <span class="chip">Basic</span>
+              <span class="chip">
+                <span class="chip-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
+                </span>
+                With icon
+              </span>
+              <span class="chip theme-primary">Themed</span>
+              <span class="chip">
+                Dismissible
+                <button type="button" class="chip-dismiss" aria-label="Remove">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- CARDS -->
+        <section class="demo-group" id="cards">
+          <h2>Cards</h2>
+          <div class="demo">
+            <div class="row g-4">
+              <div class="md:col-6">
+                <section class="card h-100">
+                  <div class="card-body">
+                    <h4 class="card-title">Roadmap</h4>
+                    <p class="card-text fg-2">Every initiative and release on one timeline the whole company can read.</p>
+                    <a href="#" class="btn-solid theme-primary">Open roadmap</a>
+                  </div>
+                </section>
+              </div>
+              <div class="md:col-6">
+                <section class="card h-100">
+                  <div class="card-body">
+                    <h4 class="card-title">Changelog</h4>
+                    <p class="card-text fg-2">Release notes assemble themselves from merged work.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      v2.4.0 <span class="badge badge-subtle theme-success">Shipped</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      v2.3.9 <span class="badge badge-subtle theme-warning">In review</span>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ACCORDION -->
+        <section class="demo-group" id="accordion">
+          <h2>Accordion</h2>
+          <p class="demo-intro">
+            Rebuilt on native <code>&lt;details&gt;</code>/<code>&lt;summary&gt;</code>. The
+            <code>name</code> attribute gives you exclusive groups — no Collapse JS at all.
+          </p>
+          <div class="demo">
+            <div class="accordion">
+              <details class="accordion-item" name="demoAccordion" open>
+                <summary class="accordion-header">
+                  Zero JavaScript
+                  <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">
+                  The browser handles show/hide. Nothing to initialise, and it works before your bundle loads.
+                </div>
+              </details>
+              <details class="accordion-item" name="demoAccordion">
+                <summary class="accordion-header">
+                  Exclusive by name
+                  <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">
+                  Sharing a <code>name</code> makes opening one close the others — this replaces <code>data-bs-parent</code>.
+                </div>
+              </details>
+              <details class="accordion-item" name="demoAccordion">
+                <summary class="accordion-header">
+                  Searchable and linkable
+                  <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">
+                  Browser find-in-page can open a closed <code>&lt;details&gt;</code>, which a div-based accordion never could.
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <!-- DIALOG -->
+        <section class="demo-group" id="dialog">
+          <h2>Dialog <span class="badge badge-subtle theme-info">was Modal</span></h2>
+          <p class="demo-intro">
+            Built on the native <code>&lt;dialog&gt;</code> element — the browser supplies the
+            backdrop, focus trap and inert top layer, so <code>.modal-dialog</code> and
+            <code>.modal-content</code> are gone.
+          </p>
+          <div class="demo">
+            <div class="demo-row">
+              <button type="button" class="btn-solid theme-primary" data-bs-toggle="dialog" data-bs-target="#demoDialog">Default</button>
+              <button type="button" class="btn-outline theme-secondary" data-bs-toggle="dialog" data-bs-target="#demoDialogLg">Large</button>
+              <button type="button" class="btn-outline theme-secondary" data-bs-toggle="dialog" data-bs-target="#demoDialogSlide">Slide up</button>
+              <button type="button" class="btn-outline theme-secondary" data-bs-toggle="dialog" data-bs-target="#demoDialogDark">Dark</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- DRAWER -->
+        <section class="demo-group" id="drawer">
+          <h2>Drawer <span class="badge badge-subtle theme-info">was Offcanvas</span></h2>
+          <p class="demo-intro">Also a native <code>&lt;dialog&gt;</code>. Four edges.</p>
+          <div class="demo">
+            <div class="demo-row">
+              <button class="btn-outline theme-secondary" type="button" data-bs-toggle="drawer" data-bs-target="#drawerStart">Start</button>
+              <button class="btn-outline theme-secondary" type="button" data-bs-toggle="drawer" data-bs-target="#drawerEnd">End</button>
+              <button class="btn-outline theme-secondary" type="button" data-bs-toggle="drawer" data-bs-target="#drawerTop">Top</button>
+              <button class="btn-outline theme-secondary" type="button" data-bs-toggle="drawer" data-bs-target="#drawerBottom">Bottom</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- MENU -->
+        <section class="demo-group" id="menu">
+          <h2>Menu <span class="badge badge-subtle theme-info">was Dropdown</span></h2>
+          <p class="demo-intro">
+            No <code>.dropdown</code> wrapper and no <code>.dropdown-toggle</code> — the toggle
+            and the <code>.menu</code> are siblings. Positioned by Floating UI.
+          </p>
+          <div class="demo">
+            <div class="demo-row">
+              <button class="btn-solid theme-primary" type="button" data-bs-toggle="menu" aria-expanded="false">Actions</button>
+              <div class="menu">
+                <a class="menu-item" href="#">Duplicate</a>
+                <a class="menu-item" href="#">Move to…</a>
+                <a class="menu-item" href="#">Archive</a>
+                <hr class="menu-divider">
+                <a class="menu-item" href="#">Delete</a>
+              </div>
+
+              <button class="btn-outline theme-secondary" type="button" data-bs-toggle="menu" data-bs-placement="top" aria-expanded="false">Opens up</button>
+              <div class="menu">
+                <a class="menu-item" href="#">Above the toggle</a>
+                <a class="menu-item" href="#">Via data-bs-placement</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- NAV & TABS -->
+        <section class="demo-group" id="tabs">
+          <h2>Nav &amp; tabs</h2>
+          <div class="demo">
+            <span class="demo-label">Pills</span>
+            <ul class="nav nav-pills mb-4">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Overview</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Activity</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+              <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Billing</a></li>
+            </ul>
+
+            <span class="demo-label">Tabs</span>
+            <ul class="nav nav-tabs" id="demoTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="t1-tab" data-bs-toggle="tab" data-bs-target="#t1" type="button" role="tab" aria-controls="t1" aria-selected="true">Engineering</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="t2-tab" data-bs-toggle="tab" data-bs-target="#t2" type="button" role="tab" aria-controls="t2" aria-selected="false">Product</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="t3-tab" data-bs-toggle="tab" data-bs-target="#t3" type="button" role="tab" aria-controls="t3" aria-selected="false">Design</button>
+              </li>
+            </ul>
+            <div class="tab-content pt-4">
+              <div class="tab-pane fade show active" id="t1" role="tabpanel" aria-labelledby="t1-tab" tabindex="0">
+                <p class="fg-2 mb-0">Cycle time, review latency and carryover — measured from real events rather than board columns.</p>
+              </div>
+              <div class="tab-pane fade" id="t2" role="tabpanel" aria-labelledby="t2-tab" tabindex="0">
+                <p class="fg-2 mb-0">Specs link straight to the work, so a closed ticket updates the doc that describes it.</p>
+              </div>
+              <div class="tab-pane fade" id="t3" role="tabpanel" aria-labelledby="t3-tab" tabindex="0">
+                <p class="fg-2 mb-0">Figma frames attach to initiatives and version alongside the release they ship in.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- NAV OVERFLOW -->
+        <section class="demo-group" id="navoverflow">
+          <h2>Nav overflow <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">
+            Items that don't fit collapse into a menu automatically. Narrow the window to watch it work.
+          </p>
+          <div class="demo">
+            <ul class="nav nav-pills" data-bs-toggle="nav-overflow">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Overview</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Roadmap</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Releases</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Documents</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Analytics</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Integrations</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Members</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- STEPPER -->
+        <section class="demo-group" id="stepper">
+          <h2>Stepper <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">CSS-only. Vertical by default, horizontal from a breakpoint up.</p>
+          <div class="demo">
+            <div class="contains-inline">
+              <ol class="stepper md:stepper-horizontal">
+                <li class="stepper-item active">Connect repo</li>
+                <li class="stepper-item active">Import work</li>
+                <li class="stepper-item">Invite team</li>
+                <li class="stepper-item">Ship release</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <!-- CAROUSEL -->
+        <section class="demo-group" id="carousel">
+          <h2>Carousel</h2>
+          <p class="demo-intro">
+            Rebuilt on CSS scroll-snap. <code>data-bs-ride</code> became
+            <code>data-bs-autoplay</code> and now defaults to <strong>off</strong> — a v5
+            carousel that auto-advanced will sit still until you opt in.
+          </p>
+          <div class="demo">
+            <div id="demoCarousel" class="carousel slide">
+              <div class="carousel-inner rounded-5">
+                <div class="carousel-item active">
+                  <div class="d-flex align-items-center justify-content-center fs-2xl fw-bold text-white" style="height:260px;background:linear-gradient(135deg,#0b63f6,#5b9dff)">Roadmap</div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex align-items-center justify-content-center fs-2xl fw-bold text-white" style="height:260px;background:linear-gradient(135deg,#7a3ff2,#c07dfb)">Documents</div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex align-items-center justify-content-center fs-2xl fw-bold text-white" style="height:260px;background:linear-gradient(135deg,#0e9f6e,#5fd6ab)">Releases</div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end gap-2 mt-3">
+                <button class="btn-icon" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
+                  <span class="carousel-icon-prev" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="btn-icon" type="button" data-bs-target="#demoCarousel" data-bs-slide="next">
+                  <span class="carousel-icon-next" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- COLLAPSE -->
+        <section class="demo-group" id="collapse">
+          <h2>Collapse</h2>
+          <div class="demo">
+            <button class="btn-outline theme-secondary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#demoCollapse" aria-expanded="false" aria-controls="demoCollapse">
+              Toggle details
+            </button>
+            <div class="collapse" id="demoCollapse">
+              <div class="card card-body fg-2">
+                Collapse still exists for arbitrary content. For accordions, reach for
+                <code>&lt;details&gt;</code> instead — it needs no JavaScript.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TOASTS -->
+        <section class="demo-group" id="toast">
+          <h2>Toasts</h2>
+          <div class="demo">
+            <button class="btn-solid theme-primary" type="button" id="toastBtn">Show toast</button>
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+              <div class="toast" id="demoToast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <span class="badge theme-success me-2">✓</span>
+                  <strong class="me-auto">Stratos</strong>
+                  <small class="fg-3">just now</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">Release v2.4.0 shipped to production.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TOOLTIP & POPOVER -->
+        <section class="demo-group" id="tooltip">
+          <h2>Tooltip &amp; popover</h2>
+          <p class="demo-intro">
+            Both moved from Popper to Floating UI; the <code>popperConfig</code> option is now
+            <code>floatingConfig</code>. Both are opt-in and initialised in <code>main.js</code>.
+          </p>
+          <div class="demo">
+            <div class="demo-row">
+              <button type="button" class="btn-outline theme-secondary" data-bs-toggle="tooltip" data-bs-title="Tooltip on top">Hover me</button>
+              <button type="button" class="btn-outline theme-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Placed to the right">Right</button>
+              <button type="button" class="btn-solid theme-primary" data-bs-toggle="popover" data-bs-title="Seat pricing" data-bs-content="Guests are free for up to 5 people per project and are read-plus-comment only.">Toggle popover</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- TOGGLER -->
+        <section class="demo-group" id="toggler">
+          <h2>Toggler <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">A generic class/attribute toggler — no custom JavaScript needed.</p>
+          <div class="demo">
+            <div class="w-100 p-4 rounded-5 border" data-bs-toggle="toggler" data-bs-value="theme-primary" data-bs-attribute="class" role="button" tabindex="0">
+              Click to toggle <code>theme-primary</code> on this box.
+            </div>
+          </div>
+        </section>
+
+        <!-- PROGRESS -->
+        <section class="demo-group" id="progress">
+          <h2>Progress</h2>
+          <div class="demo demo-stack">
+            <div class="progress" role="progressbar" aria-label="Seats used" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width:72%"></div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Storage used" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar theme-success" style="width:38%"></div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Quota" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar theme-danger" style="width:91%"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SPINNERS -->
+        <section class="demo-group" id="spinner">
+          <h2>Spinners</h2>
+          <div class="demo">
+            <div class="demo-row">
+              <div class="spinner-border" role="status"><span class="visually-hidden">Loading…</span></div>
+              <div class="spinner-border fg-primary" role="status"><span class="visually-hidden">Loading…</span></div>
+              <div class="spinner-grow" role="status"><span class="visually-hidden">Loading…</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LIST GROUP -->
+        <section class="demo-group" id="listgroup">
+          <h2>List group</h2>
+          <div class="demo">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Payments rewrite <span class="badge badge-subtle theme-success">Shipped</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Search filters <span class="badge badge-subtle theme-warning">In review</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Billing portal <span class="badge badge-subtle theme-info">Planned</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- BREADCRUMB -->
+        <section class="demo-group" id="breadcrumb">
+          <h2>Breadcrumb</h2>
+          <p class="demo-intro">
+            Links now take <code>.breadcrumb-link</code>, and separators are real
+            <code>.breadcrumb-divider</code> elements rather than <code>::before</code> pseudo-elements.
+          </p>
+          <div class="demo">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html">Home</a></li>
+                <li class="breadcrumb-divider">/</li>
+                <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Workspace</a></li>
+                <li class="breadcrumb-divider">/</li>
+                <li class="breadcrumb-item" aria-current="page"><a class="breadcrumb-link active" href="#">Releases</a></li>
+              </ol>
+            </nav>
+          </div>
+        </section>
+
+        <!-- PAGINATION -->
+        <section class="demo-group" id="pagination">
+          <h2>Pagination</h2>
+          <div class="demo">
+            <nav aria-label="Release history">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link active" aria-current="page" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+
+        <!-- PLACEHOLDERS -->
+        <section class="demo-group" id="placeholder">
+          <h2>Placeholders</h2>
+          <div class="demo">
+            <div class="row g-4">
+              <div class="md:col-6">
+                <div class="card" aria-hidden="true">
+                  <div class="card-body">
+                    <h5 class="card-title placeholder-glow"><span class="placeholder col-6"></span></h5>
+                    <p class="card-text placeholder-glow">
+                      <span class="placeholder col-7"></span>
+                      <span class="placeholder col-4"></span>
+                      <span class="placeholder col-6"></span>
+                    </p>
+                    <span class="placeholder col-4 btn-solid theme-primary disabled"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TABLES -->
+        <section class="demo-group" id="tables">
+          <h2>Tables</h2>
+          <div class="demo">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle">
+                <thead>
+                  <tr><th scope="col">Release</th><th scope="col">Owner</th><th scope="col">Cycle time</th><th scope="col">Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">v2.4.0</th>
+                    <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">PN</span></span> Priya N.</span></td>
+                    <td>2.1 days</td>
+                    <td><span class="badge badge-subtle theme-success">Shipped</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">v2.3.9</th>
+                    <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">ML</span></span> Marcus L.</span></td>
+                    <td>3.4 days</td>
+                    <td><span class="badge badge-subtle theme-warning">In review</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">v2.3.8</th>
+                    <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">DR</span></span> Dana R.</span></td>
+                    <td>1.8 days</td>
+                    <td><span class="badge badge-subtle theme-success">Shipped</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TYPOGRAPHY -->
+        <section class="demo-group" id="typography">
+          <h2>Typography</h2>
+          <p class="demo-intro">
+            The numeric <code>.fs-1</code>–<code>.fs-6</code> scale is replaced by t-shirt sizes.
+            <code>lg</code> and above are fluid <code>clamp()</code> values that scale with the viewport.
+          </p>
+          <div class="demo">
+            <p class="fs-6xl fw-bold mb-2">fs-6xl</p>
+            <p class="fs-5xl fw-bold mb-2">fs-5xl</p>
+            <p class="fs-4xl fw-bold mb-2">fs-4xl</p>
+            <p class="fs-3xl fw-semibold mb-2">fs-3xl</p>
+            <p class="fs-2xl fw-semibold mb-2">fs-2xl</p>
+            <p class="fs-xl mb-2">fs-xl</p>
+            <p class="fs-lg mb-2">fs-lg</p>
+            <p class="fs-md mb-2">fs-md</p>
+            <p class="fs-sm mb-2">fs-sm</p>
+            <p class="fs-xs mb-0">fs-xs</p>
+          </div>
+          <div class="demo">
+            <span class="demo-label">Surface &amp; text scales</span>
+            <div class="demo-row">
+              <span class="fg-1">fg-1</span><span class="fg-2">fg-2</span>
+              <span class="fg-3">fg-3</span><span class="fg-4">fg-4</span>
+              <span class="badge theme-primary">fg-primary →</span>
+              <span class="fg-primary">fg-primary</span>
+              <span class="fg-danger">fg-danger</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer bg-2 py-6 mt-9">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="fg-3 fs-xs mb-0">&copy; <span id="year">2026</span> Stratos. A free template for uicookies.</p>
+    <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+  </div>
+</footer>
+
+<!-- Dialogs -->
+<dialog class="dialog" id="demoDialog" aria-labelledby="demoDialogTitle">
+  <div class="dialog-header">
+    <h1 class="dialog-title fs-lg" id="demoDialogTitle">Default dialog</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <div class="dialog-body"><p class="fg-2 mb-0">The backdrop is the native <code>::backdrop</code> pseudo-element, blurred with <code>backdrop-filter</code>. Focus is trapped by the browser.</p></div>
+  <div class="dialog-footer">
+    <button type="button" class="btn-text" data-bs-dismiss="dialog">Cancel</button>
+    <button type="button" class="btn-solid theme-primary" data-bs-dismiss="dialog">Got it</button>
+  </div>
+</dialog>
+
+<dialog class="dialog dialog-lg" id="demoDialogLg" aria-labelledby="demoDialogLgTitle">
+  <div class="dialog-header">
+    <h1 class="dialog-title fs-lg" id="demoDialogLgTitle">Large dialog</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <div class="dialog-body"><p class="fg-2 mb-0">Sizes are <code>.dialog-sm</code>, <code>.dialog-lg</code>, <code>.dialog-xl</code> and <code>.dialog-fullscreen</code>.</p></div>
+  <div class="dialog-footer"><button type="button" class="btn-solid theme-primary" data-bs-dismiss="dialog">Close</button></div>
+</dialog>
+
+<dialog class="dialog dialog-slide-up" id="demoDialogSlide" aria-labelledby="demoDialogSlideTitle">
+  <div class="dialog-header">
+    <h1 class="dialog-title fs-lg" id="demoDialogSlideTitle">Slide up</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <div class="dialog-body"><p class="fg-2 mb-0">Animation variants: <code>.dialog-slide-up</code>, <code>.dialog-slide-down</code>, <code>.dialog-instant</code>.</p></div>
+  <div class="dialog-footer"><button type="button" class="btn-solid theme-primary" data-bs-dismiss="dialog">Close</button></div>
+</dialog>
+
+<dialog class="dialog" id="demoDialogDark" data-bs-theme="dark" aria-labelledby="demoDialogDarkTitle">
+  <div class="dialog-header">
+    <h1 class="dialog-title fs-lg" id="demoDialogDarkTitle">Dark dialog</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <div class="dialog-body"><p class="fg-2 mb-0">Any element can carry its own <code>data-bs-theme</code>, independent of the page.</p></div>
+  <div class="dialog-footer"><button type="button" class="btn-solid theme-primary" data-bs-dismiss="dialog">Close</button></div>
+</dialog>
+
+<!-- Drawers -->
+<dialog class="drawer drawer-start" tabindex="-1" id="drawerStart" aria-labelledby="drawerStartLabel">
+  <div class="drawer-header"><h5 class="drawer-title" id="drawerStartLabel">Start</h5><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button></div>
+  <div class="drawer-body fg-2">Slides in from the inline start edge.</div>
+</dialog>
+<dialog class="drawer drawer-end" tabindex="-1" id="drawerEnd" aria-labelledby="drawerEndLabel">
+  <div class="drawer-header"><h5 class="drawer-title" id="drawerEndLabel">End</h5><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button></div>
+  <div class="drawer-body fg-2">The usual choice for navigation and filters.</div>
+</dialog>
+<dialog class="drawer drawer-top" tabindex="-1" id="drawerTop" aria-labelledby="drawerTopLabel">
+  <div class="drawer-header"><h5 class="drawer-title" id="drawerTopLabel">Top</h5><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button></div>
+  <div class="drawer-body fg-2">Good for search and command palettes.</div>
+</dialog>
+<dialog class="drawer drawer-bottom" tabindex="-1" id="drawerBottom" aria-labelledby="drawerBottomLabel">
+  <div class="drawer-header"><h5 class="drawer-title" id="drawerBottomLabel">Bottom</h5><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button></div>
+  <div class="drawer-body fg-2">Reads as a mobile action sheet.</div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

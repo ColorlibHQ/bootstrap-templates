@@ -1,0 +1,63 @@
+{
+  "slug": "openhands",
+  "title": "Openhands — Free Bootstrap 6 Charity &amp; NGO Website Template",
+  "excerpt": "A free two-page Bootstrap 6 charity template — a donate widget that says what each amount buys, transparent fund allocation from real accounts, programmes, stories and a volunteer form.",
+  "yoastTitle": "Openhands — Free Bootstrap 6 Charity &amp; NGO Website Template",
+  "yoastDesc": "Free Bootstrap 6 charity, NGO and nonprofit website template with a donation widget showing what each amount buys, Gift Aid switch, transparent fund allocation, appeal progress bar, volunteer form and a full appeal page.",
+  "intro": "Openhands is a free, premium <strong>Bootstrap 6</strong> website template for charities, NGOs, nonprofits, foundations and community organisations. It pairs a full charity homepage — donate widget, impact figures, fund allocation, programmes, a story and a volunteer enquiry — with an appeal page carrying target progress and a sticky donate rail.",
+  "note": "The donate widget is the whole template. Choosing an amount immediately says <strong>what that amount buys</strong> — because \"&pound;50\" means nothing on its own, while \"&pound;50 pays for a week of hot meals\" is the entire fundraising argument, and it belongs where the decision is being made rather than in a footnote. The tiers carry their own copy in <code>data-buys</code>, so adding one is an HTML edit with no script change. A custom amount deliberately stops claiming a specific outcome rather than inventing one. The fund-allocation section publishes real percentages including fundraising cost, because \"the majority goes to the cause\" is not a number.",
+  "summary": "Openhands is a free, premium two-page Bootstrap 6 template for charities and NGOs. The homepage pairs a photographic hero with a donate widget where the amount selection updates a live statement of what that gift buys, plus frequency radios, a custom amount field and a Gift Aid switch. Below: impact figures, a transparent fund-allocation breakdown built from progress bars including fundraising cost, three programme cards, a beneficiary story and a volunteer enquiry form using multi-select Combobox and Datepicker. The appeal page adds target progress, a cost breakdown and a sticky donate rail listing every tier. Warm, plain design with no gradients. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — charity homepage and an appeal page",
+    "Donate widget where choosing an amount says what that amount buys",
+    "Tier copy lives in data-buys, so adding a tier needs no script change",
+    "Custom amounts stop claiming a specific outcome rather than inventing one",
+    "Amount choice is a radio group, so it is one form value with real keyboard semantics",
+    "Gift Aid switch and once/monthly frequency toggle",
+    "Transparent fund allocation including fundraising cost, not just the flattering number",
+    "Appeal page with target progress bar and a sticky donate rail",
+    "Volunteer enquiry with multi-select Combobox and Datepicker",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "charity"
+  ],
+  "images": [
+    {
+      "name": "hero",
+      "q": "volunteers community helping",
+      "fallback": "volunteers",
+      "w": 1800,
+      "h": 1000
+    },
+    {
+      "name": "prog-1",
+      "q": "food bank volunteers serving",
+      "fallback": "food bank",
+      "w": 800,
+      "h": 500
+    },
+    {
+      "name": "prog-2",
+      "q": "advice meeting two people talking",
+      "fallback": "meeting",
+      "w": 800,
+      "h": 500
+    },
+    {
+      "name": "prog-3",
+      "q": "bunk beds dormitory",
+      "fallback": "beds",
+      "w": 800,
+      "h": 500
+    },
+    {
+      "name": "story",
+      "q": "community kitchen people",
+      "fallback": "community",
+      "w": 900,
+      "h": 675
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Locale — Free Bootstrap 6 Directory Website Template</title>
+<meta name="description" content="Locale is a free Bootstrap 6 directory and listings template — searchable filters, map rail, listing grid and a full detail page.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#results">Skip to results</a>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">L</span> Locale
+      </a>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="#results">Browse</a></li>
+            <li class="nav-item">
+              <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                Categories
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg>
+              </button>
+              <div class="menu">
+                <a class="menu-item" href="#results">Coffee &amp; bakeries</a>
+                <a class="menu-item" href="#results">Restaurants</a>
+                <a class="menu-item" href="#results">Bars</a>
+                <a class="menu-item" href="#results">Shops</a>
+                <hr class="menu-divider">
+                <a class="menu-item" href="#results">Services</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="listing.html">Example listing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#guides">Guides</a></li>
+          </ul>
+        </div>
+      </dialog>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <a class="btn-solid theme-primary d-none md:d-inline-flex" href="#">Add a listing</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Search hero -->
+<section class="search-hero has-hero-img" style="--hero-scrim:linear-gradient(to bottom, color-mix(in oklab, var(--bs-bg-body), transparent 34%), color-mix(in oklab, var(--bs-bg-body), transparent 10%))">
+  <img class="hero-bg" src="img/hero.jpg" alt="" width="1800" height="900" loading="eager">
+  <div class="container">
+    <div class="text-center mb-6">
+      <h1 class="fs-5xl fw-bold mb-3" style="letter-spacing:-.035em;text-wrap:balance">Find the good places in Ghent</h1>
+      <p class="fs-lg fg-2 mb-0">1,240 independent businesses, reviewed by people who actually live here.</p>
+    </div>
+
+    <form class="search-bar" role="search" onsubmit="return false">
+      <div class="form-control form-adorn">
+        <div class="form-adorn-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 4 4" stroke-linecap="round"/></svg>
+        </div>
+        <input type="search" class="form-ghost" placeholder="Coffee, bike repair, ramen…" aria-label="What are you looking for">
+      </div>
+
+      <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="area" data-bs-placeholder="Any area">
+        <span class="combobox-value">Any area</span>
+        <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+      </button>
+      <div class="menu">
+        <button class="menu-item" type="button" data-bs-value="centrum">Centrum</button>
+        <button class="menu-item" type="button" data-bs-value="patershol">Patershol</button>
+        <button class="menu-item" type="button" data-bs-value="dampoort">Dampoort</button>
+        <button class="menu-item" type="button" data-bs-value="ledeberg">Ledeberg</button>
+        <button class="menu-item" type="button" data-bs-value="rabot">Rabot</button>
+      </div>
+
+      <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-multiple="true" data-bs-name="category" data-bs-placeholder="All categories">
+        <span class="combobox-value">All categories</span>
+        <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+      </button>
+      <div class="menu">
+        <button class="menu-item" type="button" data-bs-value="coffee">Coffee &amp; bakeries</button>
+        <button class="menu-item" type="button" data-bs-value="restaurants">Restaurants</button>
+        <button class="menu-item" type="button" data-bs-value="bars">Bars</button>
+        <button class="menu-item" type="button" data-bs-value="shops">Shops</button>
+        <button class="menu-item" type="button" data-bs-value="services">Services</button>
+      </div>
+
+      <button class="btn-solid theme-primary btn-lg" type="submit">Search</button>
+    </form>
+
+    <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+      <span class="fs-sm fg-3 me-1">Popular:</span>
+      <a class="chip" href="#results">specialty coffee</a>
+      <a class="chip" href="#results">natural wine</a>
+      <a class="chip" href="#results">open late</a>
+      <a class="chip" href="#results">dog friendly</a>
+      <a class="chip" href="#results">bike repair</a>
+    </div>
+  </div>
+</section>
+
+<main id="main" class="section">
+  <div class="container">
+
+    <!-- Category nav that collapses overflow into a menu -->
+    <ul class="nav nav-pills mb-5" data-bs-toggle="nav-overflow">
+      <li class="nav-item"><a class="nav-link active" aria-current="page" href="#results">All</a></li>
+      <li class="nav-item"><a class="nav-link" href="#results">Coffee</a></li>
+      <li class="nav-item"><a class="nav-link" href="#results">Bakeries</a></li>
+      <li class="nav-item"><a class="nav-link" href="#results">Restaurants</a></li>
+      <li class="nav-item"><a class="nav-link" href="#results">Bars</a></li>
+      <li class="nav-item"><a class="nav-link" href="#results">Bookshops</a></li>
+      <li class="nav-item"><a class="nav-link" href="#results">Bike repair</a></li>
+      <li class="nav-item"><a class="nav-link" href="#results">Barbers</a></li>
+      <li class="nav-item"><a class="nav-link" href="#results">Studios</a></li>
+      <li class="nav-item"><a class="nav-link" href="#results">Markets</a></li>
+    </ul>
+
+    <div class="row g-5">
+
+      <!-- Results -->
+      <div class="lg:col-8" id="results">
+
+        <div class="d-flex flex-wrap align-items-center gap-2 mb-4">
+          <p class="fs-sm fg-2 mb-0 me-auto"><strong class="fg-1">86</strong> places in Ghent</p>
+
+          <button class="btn-outline theme-secondary btn-sm" type="button" data-bs-toggle="drawer" data-bs-target="#filterDrawer">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M4 8h8M6 12h4"/></svg>
+            Filters
+          </button>
+
+          <button class="btn-outline theme-secondary btn-sm" type="button" data-bs-toggle="menu" aria-expanded="false">Top rated</button>
+          <div class="menu">
+            <a class="menu-item" href="#results">Top rated</a>
+            <a class="menu-item" href="#results">Most reviewed</a>
+            <a class="menu-item" href="#results">Nearest</a>
+            <a class="menu-item" href="#results">Recently added</a>
+          </div>
+        </div>
+
+        <div class="filter-bar mb-4">
+          <span class="chip">open now <button type="button" class="chip-dismiss" aria-label="Remove open now filter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg></button></span>
+          <span class="chip">4★ and up <button type="button" class="chip-dismiss" aria-label="Remove rating filter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg></button></span>
+          <button class="btn-text btn-sm" type="button">Clear all</button>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="md:col-6">
+            <article class="listing surface lift">
+              <div class="listing-media">
+                <span class="badge theme-primary listing-flag">Editor's pick</span>
+                <button class="btn-icon btn-sm listing-save" type="button" aria-label="Save Mokka Bar"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+                <div class="ph ph-16x9">Mokka Bar</div>
+              </div>
+              <div class="listing-body">
+                <h3 class="listing-title"><a href="listing.html">Mokka Bar</a></h3>
+                <div class="listing-meta mb-2">
+                  <span class="rating"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>4.8</span>
+                  <span>(312)</span><span aria-hidden="true">·</span><span>Coffee</span><span aria-hidden="true">·</span><span>Patershol</span>
+                </div>
+                <p class="fg-2 fs-sm mb-3">Tiny roastery with three seats and the best filter coffee in the city. Cash only.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="chip">specialty</span><span class="chip">dog friendly</span>
+                </div>
+                <p class="listing-meta mb-0 mt-auto"><span class="open-now">Open now</span> <span aria-hidden="true">·</span> until 18:00 <span aria-hidden="true">·</span> €€</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="md:col-6">
+            <article class="listing surface lift">
+              <div class="listing-media">
+                <button class="btn-icon btn-sm listing-save" type="button" aria-label="Save De Vier Tafels"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+                <div class="ph ph-16x9">De Vier Tafels</div>
+              </div>
+              <div class="listing-body">
+                <h3 class="listing-title"><a href="listing.html">De Vier Tafels</a></h3>
+                <div class="listing-meta mb-2">
+                  <span class="rating"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>4.6</span>
+                  <span>(548)</span><span aria-hidden="true">·</span><span>Restaurant</span><span aria-hidden="true">·</span><span>Centrum</span>
+                </div>
+                <p class="fg-2 fs-sm mb-3">Four tables, one menu, whatever the market had that morning. Book two weeks out.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="chip">seasonal</span><span class="chip">booking only</span>
+                </div>
+                <p class="listing-meta mb-0 mt-auto"><span class="closed-now">Closed</span> <span aria-hidden="true">·</span> opens 18:30 <span aria-hidden="true">·</span> €€€</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="md:col-6">
+            <article class="listing surface lift">
+              <div class="listing-media">
+                <span class="badge badge-subtle theme-success listing-flag">New</span>
+                <button class="btn-icon btn-sm listing-save" type="button" aria-label="Save Wielen"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+                <div class="ph ph-16x9">Wielen</div>
+              </div>
+              <div class="listing-body">
+                <h3 class="listing-title"><a href="listing.html">Wielen Bike Repair</a></h3>
+                <div class="listing-meta mb-2">
+                  <span class="rating"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>4.9</span>
+                  <span>(96)</span><span aria-hidden="true">·</span><span>Services</span><span aria-hidden="true">·</span><span>Dampoort</span>
+                </div>
+                <p class="fg-2 fs-sm mb-3">Same-day repairs, honest quotes, and they'll teach you to do it yourself if you ask.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="chip">same day</span><span class="chip">workshop</span>
+                </div>
+                <p class="listing-meta mb-0 mt-auto"><span class="open-now">Open now</span> <span aria-hidden="true">·</span> until 17:30 <span aria-hidden="true">·</span> €</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="md:col-6">
+            <article class="listing surface lift">
+              <div class="listing-media">
+                <button class="btn-icon btn-sm listing-save" type="button" aria-label="Save Papier"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></button>
+                <div class="ph ph-16x9">Papier</div>
+              </div>
+              <div class="listing-body">
+                <h3 class="listing-title"><a href="listing.html">Papier Bookshop</a></h3>
+                <div class="listing-meta mb-2">
+                  <span class="rating"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>4.7</span>
+                  <span>(204)</span><span aria-hidden="true">·</span><span>Shops</span><span aria-hidden="true">·</span><span>Centrum</span>
+                </div>
+                <p class="fg-2 fs-sm mb-3">Art books, small-press poetry and a reading room upstairs that nobody tells you about.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="chip">independent</span><span class="chip">events</span>
+                </div>
+                <p class="listing-meta mb-0 mt-auto"><span class="open-now">Open now</span> <span aria-hidden="true">·</span> until 19:00 <span aria-hidden="true">·</span> €€</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <nav aria-label="Results pages" class="mt-6">
+          <ul class="pagination mb-0">
+            <li class="page-item"><a class="page-link" href="#results">Previous</a></li>
+            <li class="page-item"><a class="page-link active" aria-current="page" href="#results">1</a></li>
+            <li class="page-item"><a class="page-link" href="#results">2</a></li>
+            <li class="page-item"><a class="page-link" href="#results">3</a></li>
+            <li class="page-item"><a class="page-link" href="#results">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Map -->
+      <aside class="lg:col-4 d-none lg:d-block">
+        <div class="map-rail">
+          <div class="map-canvas">
+            <span class="map-pin is-active" style="left:38%;top:32%">1</span>
+            <span class="map-pin" style="left:62%;top:46%">2</span>
+            <span class="map-pin" style="left:28%;top:64%">3</span>
+            <span class="map-pin" style="left:71%;top:72%">4</span>
+          </div>
+          <div class="p-3 bg-2 d-flex align-items-center gap-2">
+            <div class="form-field flex-grow-1">
+              <div class="switch"><input type="checkbox" value="" id="mapMove" role="switch" switch checked></div>
+              <label for="mapMove" class="fs-sm">Search as I move the map</label>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- Guides -->
+<section class="section bg-2" id="guides">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+      <div>
+        <p class="eyebrow fs-sm fg-primary mb-2">Guides</p>
+        <h2 class="fs-3xl fw-bold mb-0" style="letter-spacing:-.02em">Where to start</h2>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="md:col-4">
+        <article class="surface lift h-100 overflow-hidden">
+          <div class="ph ph-16x9">Coffee</div>
+          <div class="surface-pad">
+            <span class="chip mb-3">12 places</span>
+            <h3 class="fs-lg fw-semibold mb-2">The specialty coffee crawl</h3>
+            <p class="fg-2 fs-sm mb-0">A walkable route through the six roasters worth queuing for.</p>
+          </div>
+        </article>
+      </div>
+      <div class="md:col-4">
+        <article class="surface lift h-100 overflow-hidden">
+          <div class="ph ph-16x9">Late</div>
+          <div class="surface-pad">
+            <span class="chip mb-3">18 places</span>
+            <h3 class="fs-lg fw-semibold mb-2">Open after midnight</h3>
+            <p class="fg-2 fs-sm mb-0">Kitchens, bars and one bakery that starts as the others finish.</p>
+          </div>
+        </article>
+      </div>
+      <div class="md:col-4">
+        <article class="surface lift h-100 overflow-hidden">
+          <div class="ph ph-16x9">Rain</div>
+          <div class="surface-pad">
+            <span class="chip mb-3">9 places</span>
+            <h3 class="fs-lg fw-semibold mb-2">Somewhere to sit out the rain</h3>
+            <p class="fg-2 fs-sm mb-0">Long tables, good light and nobody rushing you along.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="section-narrow text-center">
+      <p class="eyebrow fs-sm fg-primary mb-2">For business owners</p>
+      <h2 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.02em">Claim your listing</h2>
+      <p class="fs-lg fg-2 mb-6">Free to list, free to update. We don't sell placement — rankings come from reviews only.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a class="btn-solid theme-primary btn-lg" href="#">Add your business</a>
+        <a class="btn-outline theme-secondary btn-lg" href="listing.html">See an example</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer bg-2 py-6">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Locale. A free template for uicookies.</p>
+    <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+  </div>
+</footer>
+
+<!-- Filter drawer -->
+<dialog class="drawer drawer-end" tabindex="-1" id="filterDrawer" aria-labelledby="filterDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="filterDrawerLabel">Filters</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+
+    <div class="filter-drawer-group">
+      <h3 class="fs-sm fw-semibold mb-3">Minimum rating</h3>
+      <div class="form-range" data-bs-bubble>
+        <input type="range" class="form-range-input" id="ratingRange" min="1" max="5" step="0.5" value="4" aria-label="Minimum rating">
+      </div>
+      <p class="fs-xs fg-3 mb-0"><strong class="fg-1" id="ratingOut">4.0</strong> stars and up</p>
+    </div>
+
+    <div class="filter-drawer-group">
+      <h3 class="fs-sm fw-semibold mb-3">Price</h3>
+      <div class="option-row d-flex flex-wrap gap-2">
+        <label class="btn-check btn-outline theme-primary"><input type="checkbox"> €</label>
+        <label class="btn-check btn-outline theme-primary"><input type="checkbox" checked> €€</label>
+        <label class="btn-check btn-outline theme-primary"><input type="checkbox"> €€€</label>
+      </div>
+    </div>
+
+    <div class="filter-drawer-group">
+      <h3 class="fs-sm fw-semibold mb-3">Features</h3>
+      <div class="chip-input" data-bs-chips>
+        <label class="chip-input-label visually-hidden" for="featureInput">Features</label>
+        <span class="chip">outdoor seating</span>
+        <span class="chip">wheelchair access</span>
+        <input type="text" class="form-ghost" id="featureInput" placeholder="Add…">
+      </div>
+    </div>
+
+    <div class="filter-drawer-group">
+      <h3 class="fs-sm fw-semibold mb-3">Open on</h3>
+      <input type="text" class="form-control" id="openDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…">
+    </div>
+
+    <div class="filter-drawer-group">
+      <h3 class="fs-sm fw-semibold mb-3">Other</h3>
+      <div class="form-field mb-2"><input type="checkbox" class="check" id="fOpen" checked><label for="fOpen">Open now</label></div>
+      <div class="form-field mb-2"><input type="checkbox" class="check" id="fDog"><label for="fDog">Dog friendly</label></div>
+      <div class="form-field"><input type="checkbox" class="check" id="fCard"><label for="fCard">Takes cards</label></div>
+    </div>
+
+    <button class="btn-solid theme-primary w-100 mt-5" type="button" data-bs-dismiss="drawer">Show 86 places</button>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

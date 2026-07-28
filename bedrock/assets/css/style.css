@@ -1,0 +1,233 @@
+/*!
+ * Bedrock — Bootstrap 6 construction & civil engineering template
+ *
+ * Design language: dark slate canvas, safety-yellow accent, heavy condensed
+ * headings and hard right angles — no rounded cards anywhere. Deliberately the
+ * opposite of the soft cream hospitality look, and distinct from Fixwell (light,
+ * domestic, form-in-hero) and Ironworks (sidebar rail, orange).
+ *
+ * The structural idea carrying the identity is a full-width data strip under the
+ * hero, and a process Stepper used as a page section rather than inside a form.
+ */
+
+:root {
+  --brand: oklch(78% 0.17 88);
+  --kit-section-y: 5rem;
+  --bedrock-edge: oklch(32% 0.015 250);
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 7rem; } }
+
+[data-bs-theme="dark"] {
+  --bs-bg-body: oklch(19% 0.012 250);
+  --bs-bg-2: oklch(23% 0.014 250);
+}
+
+.slab,
+.section-title {
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+/* Nothing in this template is rounded — the whole point of the look. */
+.hard,
+.hard .ph,
+.stat-strip,
+.cap-card,
+.proj-card,
+.accred {
+  border-radius: 0;
+}
+
+/* ---------------------------------------------------------------
+   Header
+   --------------------------------------------------------------- */
+
+.top-strip {
+  background: var(--bs-fg-body);
+  color: var(--bs-bg-body);
+  font-size: 0.8125rem;
+  padding-block: 0.45rem;
+}
+
+.top-strip a { color: inherit; font-weight: 600; }
+
+.brand-mark {
+  border-radius: 0;
+  background: var(--bs-primary-base);
+  color: oklch(20% 0.02 88);
+}
+
+/* ---------------------------------------------------------------
+   Hero
+   --------------------------------------------------------------- */
+
+.site-hero {
+  position: relative;
+  isolation: isolate;
+  padding-block: clamp(4rem, 9vw, 7rem) 0;
+  overflow: hidden;
+}
+
+.site-hero > .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+.site-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    100deg,
+    color-mix(in oklab, var(--bs-bg-body), transparent 4%) 0%,
+    color-mix(in oklab, var(--bs-bg-body), transparent 16%) 48%,
+    color-mix(in oklab, var(--bs-bg-body), transparent 46%) 100%
+  );
+}
+
+.hero-slab {
+  font-size: clamp(2.6rem, 1rem + 7vw, 6.25rem);
+}
+
+/* A yellow keyline down the left of the hero copy — cheap, and it reads as
+   site marking rather than decoration. */
+.hero-copy {
+  border-left: 5px solid var(--bs-primary-base);
+  padding-left: clamp(1rem, 2.5vw, 2rem);
+}
+
+/* Full-width data strip riding the bottom edge of the hero. */
+.stat-strip {
+  margin-top: clamp(3rem, 7vw, 5rem);
+  border-top: 1px solid var(--bs-border-color);
+  background: color-mix(in oklab, var(--bs-bg-body), transparent 6%);
+}
+
+.stat-strip .row > * {
+  padding-block: 1.5rem;
+  border-right: 1px solid var(--bs-border-color);
+}
+
+.stat-strip .row > *:last-child { border-right: 0; }
+
+.stat-figure {
+  font-size: clamp(1.75rem, 1rem + 2vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+/* ---------------------------------------------------------------
+   Capabilities / sectors
+   --------------------------------------------------------------- */
+
+.cap-card {
+  height: 100%;
+  padding: 1.75rem;
+  border: 1px solid var(--bs-border-color);
+  border-top: 3px solid var(--bs-primary-base);
+  background: var(--bs-bg-body);
+}
+
+.cap-card h3 { letter-spacing: -0.02em; }
+
+.sector-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.sector-row .num {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.8125rem;
+  color: var(--bs-fg-3);
+  min-width: 2.5rem;
+}
+
+/* ---------------------------------------------------------------
+   Projects
+   --------------------------------------------------------------- */
+
+.proj-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--bs-border-color);
+  height: 100%;
+}
+
+.proj-media { overflow: hidden; }
+.proj-media .ph { aspect-ratio: 3 / 2; }
+.proj-media img { transition: transform 0.5s ease; }
+.proj-card:hover .proj-media img { transform: scale(1.05); }
+
+@media (prefers-reduced-motion: reduce) { .proj-media img { transition: none; } }
+
+.proj-body { padding: 1.25rem 1.5rem 1.5rem; }
+
+.proj-value {
+  font-variant-numeric: tabular-nums;
+  color: var(--bs-fg-primary);
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------
+   Accreditations
+   --------------------------------------------------------------- */
+
+.accred {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--bs-border-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.accred svg { color: var(--bs-fg-primary); flex-shrink: 0; }
+
+/* ---------------------------------------------------------------
+   Tender form + sub page
+   --------------------------------------------------------------- */
+
+.tender {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--bs-border-color);
+  background: var(--bs-bg-body);
+}
+
+.sub-head {
+  padding-block: 3.5rem;
+  background: var(--bs-bg-2);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.spec-row:last-child { border-bottom: 0; }
+
+.fact-rail {
+  position: sticky;
+  top: 6rem;
+  padding: 1.5rem;
+  border: 1px solid var(--bs-border-color);
+  border-top: 3px solid var(--bs-primary-base);
+}

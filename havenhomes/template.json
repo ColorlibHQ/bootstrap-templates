@@ -1,0 +1,35 @@
+{
+  "slug": "havenhomes",
+  "title": "Haven Homes — Free Bootstrap 6 Real Estate Website Template",
+  "excerpt": "A free two-page Bootstrap 6 real estate template — split hero with a straddling search panel, property grid with specs, valuation form and a full listing page.",
+  "yoastTitle": "Haven Homes — Free Bootstrap 6 Real Estate Website Template",
+  "yoastDesc": "Free Bootstrap 6 real estate template with a split hero, multi-select Combobox property search, Range price filters, Datepicker viewings and a full property detail page.",
+  "intro": "Haven Homes is a free, premium <strong>Bootstrap 6</strong> template for estate agents and property portals. The layout leads with a split hero — copy on one side, a full-height image on the other — and a search panel that straddles the seam between the hero and the page, so search is the first thing in reach rather than an afterthought.",
+  "note": "Property search is exactly what Bootstrap 6's new form components were built for: a multi-select Combobox for property types, a searchable Combobox for bedrooms, Range sliders with live value bubbles for price, Chip input for must-haves, and the Datepicker for viewings and valuations.",
+  "summary": "Haven Homes is a free, premium two-page Bootstrap 6 real estate template. A split hero with a straddling search panel, a property grid where each card leads with its specs, a refine drawer built from Range and Chip input, a valuation form with Datepicker, and agent profiles. The property page adds a gallery, tabbed description, room dimensions and a sticky viewing-request rail. ESM-only vanilla JavaScript, no build step.",
+  "features": [
+    "Two pages — search and listings page, plus a full property detail page",
+    "Split hero with a search panel straddling the seam into the page",
+    "Multi-select Combobox for property type and a Combobox bedroom filter",
+    "Refine drawer combining Range price sliders with live bubbles and Chip input must-haves",
+    "Property cards that lead with beds, baths and floor area rather than marketing copy",
+    "Valuation form with Datepicker and a guide-price Range slider",
+    "Property page with gallery, tabbed description, room dimensions and area info",
+    "Sticky viewing-request rail with the agent attached",
+    "Header is transparent over the hero and turns solid on scroll",
+    "Full dark mode via data-bs-theme, remembered across visits",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "realestate"
+  ],
+  "images": [
+    {
+      "name": "hero-cottage",
+      "q": "stone cottage hillside countryside",
+      "w": 1200,
+      "h": 1400
+    }
+  ]
+}

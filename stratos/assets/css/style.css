@@ -1,0 +1,840 @@
+/*!
+ * Stratos — SaaS landing template
+ * Custom styles for Bootstrap 6.0.0-alpha1
+ *
+ * NOTE: Bootstrap 6 wraps all of its own CSS in @layer. This file is
+ * deliberately NOT in a layer, so every rule here beats Bootstrap
+ * regardless of source order or specificity. Do not wrap it in @layer.
+ */
+
+:root {
+  --stratos-hero-glow: radial-gradient(
+    60% 60% at 50% 0%,
+    color-mix(in oklab, var(--bs-primary-base), transparent 82%) 0%,
+    transparent 70%
+  );
+  --stratos-section-y: 5rem;
+}
+
+@media (width >= 768px) {
+  :root {
+    --stratos-section-y: 7rem;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Layout helpers
+   --------------------------------------------------------------- */
+
+.section {
+  padding-block: var(--stratos-section-y);
+}
+
+/* Keep anchored sections clear of the sticky header when jumped to */
+:where(section[id], main[id]) {
+  scroll-margin-top: 5rem;
+}
+
+.section-narrow {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------
+   Header
+   --------------------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  backdrop-filter: blur(12px);
+  background: color-mix(in oklab, var(--bs-bg-body), transparent 20%);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.site-header.is-stuck {
+  border-bottom-color: var(--bs-border-color);
+  background: color-mix(in oklab, var(--bs-bg-body), transparent 8%);
+}
+
+/* Show one theme icon at a time, driven by data-bs-theme on <html> */
+.theme-icon-dark {
+  display: none;
+}
+
+[data-bs-theme="dark"] .theme-icon-light {
+  display: none;
+}
+
+[data-bs-theme="dark"] .theme-icon-dark {
+  display: block;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--bs-radius-4);
+  background: var(--bs-primary-base);
+  color: var(--bs-white);
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------
+   Hero
+   --------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  padding-block: 4.5rem 5rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -20% 0 auto;
+  height: 40rem;
+  background: var(--stratos-hero-glow);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-title {
+  text-wrap: balance;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.hero-lede {
+  text-wrap: pretty;
+  max-width: 38rem;
+}
+
+/* App mockup — pure CSS/SVG, no image dependency */
+.mockup {
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-6);
+  background: var(--bs-bg-body);
+  box-shadow: 0 2.5rem 5rem -1.5rem rgb(0 0 0 / 35%);
+  overflow: hidden;
+}
+
+.mockup-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--bs-border-color);
+  background: var(--bs-bg-2);
+}
+
+.mockup-dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: var(--bs-radius-pill);
+  background: color-mix(in oklab, var(--bs-fg-body), transparent 78%);
+}
+
+.mockup-body {
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+
+/* Headline figure + delta */
+.mockup-figure {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.mockup-delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--bs-radius-pill);
+  background: color-mix(in oklab, var(--bs-success-base), transparent 88%);
+  color: var(--bs-success-base);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.mockup-delta svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.mockup-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.3125rem 0.625rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-pill);
+  color: var(--bs-fg-2);
+  font-size: 0.75rem;
+  font-weight: 550;
+  white-space: nowrap;
+}
+
+.mockup-pill svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+/* Bar chart with weekday axis */
+.mockup-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  height: 8rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.mockup-col {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.mockup-col > i {
+  width: 100%;
+  height: var(--v);
+  border-radius: var(--bs-radius-2) var(--bs-radius-2) 0 0;
+  background: color-mix(in oklab, var(--bs-primary-base), transparent 72%);
+}
+
+.mockup-col.is-peak > i {
+  background: var(--bs-primary-base);
+}
+
+.mockup-col > em {
+  position: absolute;
+  bottom: -1.375rem;
+  inset-inline: 0;
+  text-align: center;
+  font-style: normal;
+  font-size: 0.6875rem;
+  color: var(--bs-fg-3);
+}
+
+/* Recent releases list */
+.mockup-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.mockup-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.8125rem;
+}
+
+.mockup-list-main {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-right: auto;
+  min-width: 0;
+}
+
+.mockup-list-main > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------
+   Closed <dialog> fix
+
+   Bootstrap 6.0.0-alpha1 sets `.dialog { display: flex }` with no
+   `:not([open])` guard anywhere in the dist, so a closed dialog beats the
+   UA's `dialog:not([open]) { display: none }` and keeps ~500px of layout
+   space at the bottom of the page. Scoped to `.dialog` only — `.drawer`
+   deliberately stays in flow so navbar-expand can inline it on desktop.
+   --------------------------------------------------------------- */
+
+dialog.dialog:not([open]) {
+  display: none;
+}
+
+/* ---------------------------------------------------------------
+   Logo strip
+   --------------------------------------------------------------- */
+
+.logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem 3rem;
+}
+
+.logo-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--bs-fg-3);
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.logo-item:hover {
+  color: var(--bs-fg-1);
+}
+
+.logo-mark {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.logo-name {
+  font-size: 1.0625rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------
+   Feature cards
+   --------------------------------------------------------------- */
+
+.feature-card {
+  height: 100%;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-6);
+  padding: 1.75rem;
+  background: var(--bs-bg-body);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--bs-primary-base), transparent 60%);
+  box-shadow: 0 1.5rem 2.5rem -1rem rgb(0 0 0 / 18%);
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--bs-radius-4);
+  background: color-mix(in oklab, var(--bs-primary-base), transparent 88%);
+  color: var(--bs-primary-base);
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------------------------
+   Pricing
+   --------------------------------------------------------------- */
+
+.price-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-6);
+  padding: 2rem;
+  background: var(--bs-bg-body);
+}
+
+.price-card.is-featured {
+  border-color: var(--bs-primary-base);
+  box-shadow: 0 0 0 1px var(--bs-primary-base),
+    0 2rem 4rem -1.5rem color-mix(in oklab, var(--bs-primary-base), transparent 65%);
+}
+
+.price-amount {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+/* NOTE: this file is unlayered, so a shorthand `margin: 0` here silently beats
+   Bootstrap's `.mb-6` utility (which lives in @layer utilities). Set the bottom
+   margin explicitly instead — it's the floor that keeps the CTA off the last
+   feature when `mt-auto` collapses on a full card. */
+.price-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.price-list li {
+  display: flex;
+  gap: 0.625rem;
+  align-items: flex-start;
+}
+
+.price-list svg {
+  flex: none;
+  margin-top: 0.2em;
+  color: var(--bs-success-base);
+}
+
+/* Billing toggle labels — the inactive side recedes */
+.billing-label {
+  color: var(--bs-fg-3);
+  transition: color 0.15s ease;
+}
+
+.billing-label.is-active {
+  color: var(--bs-fg-1);
+}
+
+/* Yearly/monthly price swap, driven by JS toggling .is-yearly */
+[data-price-yearly] {
+  display: none;
+}
+
+.pricing.is-yearly [data-price-yearly] {
+  display: inline;
+}
+
+.pricing.is-yearly [data-price-monthly] {
+  display: none;
+}
+
+/* ---------------------------------------------------------------
+   Testimonials
+   --------------------------------------------------------------- */
+
+.quote-card {
+  height: 100%;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-6);
+  padding: 1.75rem;
+  background: var(--bs-bg-body);
+}
+
+.quote-card blockquote {
+  margin: 0 0 1.25rem;
+  text-wrap: pretty;
+}
+
+.stars {
+  display: flex;
+  gap: 0.125rem;
+  margin-bottom: 1rem;
+  color: var(--bs-warning-base, #f5a524);
+}
+
+.stars svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Initials-based avatars — swap for <img class="avatar-img"> in production */
+.avatar-initials {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: color-mix(in oklab, var(--bs-primary-base), transparent 82%);
+  color: var(--bs-primary-base);
+  font-weight: 650;
+  font-size: 0.8em;
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------------------------------------------------
+   CTA
+   --------------------------------------------------------------- */
+
+.cta-panel {
+  border-radius: var(--bs-radius-7);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--bs-primary-base), transparent 88%),
+    color-mix(in oklab, var(--bs-primary-base), transparent 96%)
+  );
+  border: 1px solid color-mix(in oklab, var(--bs-primary-base), transparent 78%);
+}
+
+@media (width >= 768px) {
+  .cta-panel {
+    padding: 4rem 3rem;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Footer
+   --------------------------------------------------------------- */
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------
+   Motion preferences
+   --------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-card,
+  .site-header {
+    transition: none;
+  }
+
+  .feature-card:hover {
+    transform: none;
+  }
+}
+
+/* ===============================================================
+   SHOWCASE PAGES
+   Shared styles for components.html, forms.html, dashboard.html,
+   pricing.html, blog-post.html and 404.html.
+   =============================================================== */
+
+/* Sub-page hero */
+.page-head {
+  padding-block: 3.5rem 2.5rem;
+  border-bottom: 1px solid var(--bs-border-color);
+  background: var(--bs-bg-2);
+}
+
+.page-head h1 {
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+/* Docs-style two column shell */
+.shell {
+  display: grid;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (width >= 1024px) {
+  .shell {
+    grid-template-columns: 15rem minmax(0, 1fr);
+  }
+}
+
+.shell-aside {
+  position: sticky;
+  top: 5.5rem;
+  display: none;
+}
+
+@media (width >= 1024px) {
+  .shell-aside {
+    display: block;
+  }
+}
+
+.shell-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.125rem;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+}
+
+.shell-nav a {
+  display: block;
+  padding: 0.3125rem 0.75rem;
+  border-radius: var(--bs-radius-4);
+  border-left: 2px solid transparent;
+  color: var(--bs-fg-3);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.shell-nav a:hover {
+  color: var(--bs-fg-1);
+  background: var(--bs-bg-2);
+}
+
+.shell-nav a.active {
+  color: var(--bs-primary-base);
+  border-left-color: var(--bs-primary-base);
+  font-weight: 600;
+}
+
+/* Demo block — a labelled surface each example sits on */
+.demo-group {
+  scroll-margin-top: 6rem;
+  margin-bottom: 3.5rem;
+}
+
+.demo-group > h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.demo-group > .demo-intro {
+  color: var(--bs-fg-2);
+  margin-bottom: 1.25rem;
+  max-width: 46rem;
+}
+
+.demo {
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-6);
+  padding: 1.75rem;
+  background: var(--bs-bg-body);
+  margin-bottom: 1rem;
+}
+
+.demo + .demo {
+  margin-top: -0.25rem;
+}
+
+.demo-label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bs-fg-3);
+}
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.demo-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Dashboard shell */
+.app {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+}
+
+@media (width >= 1024px) {
+  .app {
+    grid-template-columns: 16rem minmax(0, 1fr);
+  }
+}
+
+.app-aside {
+  display: none;
+  border-right: 1px solid var(--bs-border-color);
+  background: var(--bs-bg-2);
+  padding: 1.25rem;
+}
+
+@media (width >= 1024px) {
+  .app-aside {
+    display: block;
+  }
+}
+
+.app-main {
+  min-width: 0;
+  padding: 1.5rem;
+}
+
+@media (width >= 768px) {
+  .app-main {
+    padding: 2rem;
+  }
+}
+
+.app-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.125rem;
+}
+
+.app-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--bs-radius-4);
+  color: var(--bs-fg-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.app-nav a:hover {
+  background: var(--bs-bg-3);
+  color: var(--bs-fg-1);
+}
+
+.app-nav a.active {
+  background: color-mix(in oklab, var(--bs-primary-base), transparent 88%);
+  color: var(--bs-primary-base);
+}
+
+.app-nav svg {
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+}
+
+.stat-card {
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-5);
+  padding: 1.25rem;
+  background: var(--bs-bg-body);
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+/* Stats band on the landing page */
+.stat-band {
+  display: grid;
+  gap: 2rem 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  text-align: center;
+}
+
+@media (width >= 768px) {
+  .stat-band {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.stat-band dt {
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--bs-primary-base);
+}
+
+.stat-band dd {
+  margin: 0.375rem 0 0;
+  font-size: 0.875rem;
+  color: var(--bs-fg-2);
+}
+
+/* Comparison table */
+.compare th,
+.compare td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.compare th:first-child,
+.compare td:first-child {
+  text-align: left;
+}
+
+.compare .yes {
+  color: var(--bs-success-base);
+}
+
+.compare .no {
+  color: var(--bs-fg-4);
+}
+
+.compare-ours {
+  background: color-mix(in oklab, var(--bs-primary-base), transparent 94%);
+}
+
+/* Integrations */
+.integration-card {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  height: 100%;
+  padding: 1rem 1.125rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-5);
+  background: var(--bs-bg-body);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.integration-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--bs-primary-base), transparent 60%);
+}
+
+.integration-logo {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--bs-radius-4);
+  background: var(--bs-bg-3);
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+
+/* 404 */
+.error-code {
+  font-size: clamp(5rem, 3rem + 12vw, 10rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  background: linear-gradient(180deg, var(--bs-primary-base), color-mix(in oklab, var(--bs-primary-base), transparent 55%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .integration-card,
+  .integration-card:hover {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Chart card stretches its chart instead of leaving dead space */
+.stat-card.is-chart {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card.is-chart .mockup-chart {
+  flex: 1;
+  height: auto;
+  min-height: 9rem;
+}

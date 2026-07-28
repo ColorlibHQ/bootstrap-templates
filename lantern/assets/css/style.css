@@ -1,0 +1,376 @@
+/*!
+ * Lantern — Bootstrap 6 hotel & resort template
+ *
+ * Design language: warm cream canvas, ink text, a single ochre accent, and a
+ * display serif for headings — deliberately editorial rather than the sans-only
+ * look the other templates in this set use.
+ *
+ * Two structural ideas carry the identity:
+ *   1. a vertical meta rail running up the left edge of the hero
+ *   2. a booking bar straddling the seam between hero and page, which docks to
+ *      the top as a compact bar once you scroll past it
+ */
+
+:root {
+  --brand: oklch(66% 0.13 62);
+  --kit-section-y: 5rem;
+  --lantern-ink: oklch(24% 0.02 62);
+  --lantern-rail: 3.25rem;
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 7rem; } }
+
+[data-bs-theme="light"] {
+  --bs-bg-body: oklch(97.5% 0.012 78);
+  --bs-bg-2: oklch(94.5% 0.016 76);
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.display-serif,
+.stay-title,
+.room-name,
+.section-title {
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+/* ---------------------------------------------------------------
+   Header — transparent over the hero, solid once stuck
+   --------------------------------------------------------------- */
+
+.site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 30;
+  padding-block: 1.25rem;
+  background: transparent;
+  border: 0;
+  /* base.css frosts the header for the sticky treatment. Over a photograph that
+     blur turns the sky into a flat band that reads as a solid bar, so the
+     transparent variant has to switch it off explicitly — background alone
+     is not enough. */
+  backdrop-filter: none;
+}
+
+/* .navbar paints --bs-bg-body itself, so clearing the header is not enough —
+   the bar inside it is what shows up as a solid band over the photograph. */
+.site-header .navbar {
+  background: transparent;
+  border: 0;
+}
+
+.site-header .nav-link,
+.site-header .navbar-brand,
+.site-header .wordmark,
+.site-header .btn-icon {
+  color: var(--bs-white);
+}
+
+.site-header .nav-link:hover { opacity: 0.72; }
+
+.wordmark {
+  font-family: ui-serif, Georgia, serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------------
+   Hero — full bleed photo, copy bottom-left, meta rail up the side
+   --------------------------------------------------------------- */
+
+.stay {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: end start;
+  padding: 6rem var(--lantern-rail) clamp(6rem, 12vw, 9rem) clamp(1.5rem, 5vw, 5rem);
+  color: var(--bs-white);
+  background: linear-gradient(150deg, #2c2317, #4d3a22 60%, #6b502c);
+  overflow: hidden;
+}
+
+/* The photograph. A real <img> rather than a background-image: a relative url()
+   inside a custom property resolves against this stylesheet, not the document,
+   so the CSS route silently asks for assets/css/img/. */
+.stay > .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  /* Two scrims: one along the top so white nav stays legible against a bright
+     sky, one up from the bottom for the headline. */
+  background:
+    linear-gradient(to bottom, rgb(28 22 14 / 46%) 0%, rgb(28 22 14 / 12%) 14%, transparent 26%),
+    linear-gradient(
+      to top,
+      rgb(28 22 14 / 82%) 0%,
+      rgb(28 22 14 / 52%) 34%,   /* the copy block sits in here — a bright
+                                    photo behind it washed the eyebrow out */
+      rgb(28 22 14 / 16%) 62%,
+      transparent 82%
+    );
+}
+
+.stay-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 44rem;
+}
+
+.stay-title {
+  font-size: clamp(2.6rem, 1.1rem + 6.4vw, 5.75rem);
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.stay-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.82;
+}
+
+/* Vertical meta rail up the right edge. Hidden on small screens where the
+   rotation would eat the viewport. */
+.stay-rail {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--lantern-rail);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgb(255 255 255 / 18%);
+}
+
+.stay-rail span {
+  writing-mode: vertical-rl;
+  font-size: 0.72rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+@media (width >= 992px) { .stay-rail { display: flex; } }
+
+/* ---------------------------------------------------------------
+   Booking bar — straddles the hero seam, docks on scroll
+   --------------------------------------------------------------- */
+
+.book-bar-wrap {
+  position: relative;
+  z-index: 20;
+  margin-top: clamp(-5.5rem, -6vw, -4rem);
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.book-bar {
+  max-width: 68rem;
+  margin-inline: auto;
+  padding: 1.25rem;
+  border-radius: var(--bs-radius-4);
+  background: var(--bs-bg-body);
+  border: 1px solid var(--bs-border-color);
+  box-shadow: 0 24px 60px -28px rgb(28 22 14 / 45%);
+}
+
+.book-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+
+@media (width >= 768px) { .book-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (width >= 992px) { .book-grid { grid-template-columns: 1.1fr 1.1fr 1.2fr 0.9fr auto; align-items: end; } }
+
+.book-field > .form-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bs-fg-3);
+  margin-bottom: 0.35rem;
+}
+
+/* The docked state: JS toggles .is-docked once the bar scrolls out of view. */
+.book-dock {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 40;
+  padding: 0.6rem clamp(1rem, 4vw, 2rem);
+  background: color-mix(in oklab, var(--bs-bg-body), transparent 8%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--bs-border-color);
+  transform: translateY(-100%);
+  transition: transform 0.25s ease;
+}
+
+.book-dock.is-docked { transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) { .book-dock { transition: none; } }
+
+/* ---------------------------------------------------------------
+   Rooms — horizontal scroll-snap strip
+   --------------------------------------------------------------- */
+
+.room-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(88vw, 23rem);
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-inline: clamp(1rem, 5vw, 5rem);
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+}
+
+.room-strip > * { scroll-snap-align: start; }
+
+.room-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.room-media {
+  position: relative;
+  border-radius: var(--bs-radius-4);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.room-media .ph { aspect-ratio: 4 / 3; }
+
+.room-card:hover .room-media img { transform: scale(1.04); }
+.room-media img { transition: transform 0.5s ease; }
+
+@media (prefers-reduced-motion: reduce) { .room-media img { transition: none; } }
+
+.room-price {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--bs-radius-pill, 999px);
+  background: color-mix(in oklab, var(--bs-bg-body), transparent 8%);
+  backdrop-filter: blur(6px);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.room-name { font-size: 1.3rem; }
+
+/* ---------------------------------------------------------------
+   Amenities, dining, gallery
+   --------------------------------------------------------------- */
+
+.amenity {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--bs-border-color);
+}
+
+.amenity svg { flex-shrink: 0; color: var(--bs-fg-primary); margin-top: 0.15rem; }
+
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+
+@media (width >= 768px) { .mosaic { grid-template-columns: repeat(4, 1fr); } }
+
+.mosaic > button {
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: zoom-in;
+  border-radius: var(--bs-radius-3);
+  overflow: hidden;
+}
+
+.mosaic .ph { aspect-ratio: 1; }
+.mosaic > button:first-child { grid-column: span 2; grid-row: span 2; }
+.mosaic > button:first-child .ph { aspect-ratio: 1; }
+
+.quote-card {
+  height: 100%;
+  padding: 1.75rem;
+  border-radius: var(--bs-radius-4);
+  background: var(--bs-bg-2);
+  border: 1px solid var(--bs-border-color);
+}
+
+.offer {
+  padding: 1.75rem;
+  border-radius: var(--bs-radius-4);
+  border: 1px solid var(--bs-border-color);
+  height: 100%;
+}
+
+.offer-flag {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bs-fg-primary);
+}
+
+/* ---------------------------------------------------------------
+   Room detail page
+   --------------------------------------------------------------- */
+
+.sub-head {
+  padding-block: 7.5rem 3rem;
+  background: var(--bs-bg-2);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* The sub-page header is not over a photo, so it needs ink-coloured nav. */
+.sub-head-page .site-header .nav-link,
+.sub-head-page .site-header .navbar-brand,
+.sub-head-page .site-header .btn-icon {
+  color: var(--bs-fg-body);
+}
+
+.book-rail {
+  position: sticky;
+  top: 6rem;
+  padding: 1.5rem;
+  border-radius: var(--bs-radius-4);
+  border: 1px solid var(--bs-border-color);
+  background: var(--bs-bg-body);
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.spec-row:last-child { border-bottom: 0; }

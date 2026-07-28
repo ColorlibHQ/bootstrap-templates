@@ -1,0 +1,45 @@
+Placeholder photography
+=======================
+
+Every photograph here is CC0 / Public Domain Mark, sourced via the
+Openverse API — no attribution required, commercial use fine. Where no
+public-domain photograph matched a slot, the file is a generated gradient
+instead; those are marked below and carry no rights at all.
+
+Either way these are placeholders: replace them with your own photography
+before launch. Provenance for each file follows.
+
+hero.jpg
+  The Auto Collections at the Linq
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=65159527
+
+car-1.jpg
+  Cadillac Lyriq Sport L233 Argent Silver Metallic (3)
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=162172388
+
+car-2.jpg
+  Echo Lake Elementary
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=160818207
+
+car-3.jpg
+  Daimler 2.5 V8 (or 2½-litre
+  CC0 1.0
+  https://www.rawpixel.com/image/4026357/photo-image-person-car
+
+car-4.jpg
+  1977 AMC Hornet AMX at 2021 PA show finished in 6P Firecracker Red 2of8
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=112193256
+
+car-5.jpg
+  Small town America street. 8th Street in Holland Michigan. Storefronts, cars parked along the street, people walking.
+  CC0 1.0
+  https://wordpress.org/photos/photo/883663fa9c/
+
+car-6.jpg
+  Grey Sports Car, Tokyo, Japan
+  CC0 1.0
+  https://www.rawpixel.com/image/11176350/image-road-public-domain-sports-car

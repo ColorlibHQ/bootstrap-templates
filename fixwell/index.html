@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fixwell — Free Bootstrap 6 Handyman &amp; Home Services Website Template</title>
+<meta name="description" content="Fixwell is a free Bootstrap 6 home services template — phone-forward call bar, inline quote card, postcode coverage checker, pricing and booking.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navScroll" data-bs-top-margin="110px" data-bs-smooth-scroll="true">
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<!-- Phone-forward call bar -->
+<div class="call-bar">
+  <div class="container d-flex flex-wrap align-items-center justify-content-center md:justify-content-between gap-2">
+    <span class="fs-sm">Same-day callouts across South Manchester · No call-out fee</span>
+    <span class="d-flex align-items-center gap-2">
+      <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 2.5h2.5l1 3-1.6 1.2a9 9 0 0 0 4.4 4.4l1.2-1.6 3 1V13a1.5 1.5 0 0 1-1.6 1.5A11.5 11.5 0 0 1 1.5 4.1 1.5 1.5 0 0 1 3 2.5" stroke-linejoin="round"/></svg>
+      <a class="call-number" href="tel:01610000000">0161 000 0000</a>
+    </span>
+  </div>
+</div>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">F</span> Fixwell
+      </a>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto" id="navScroll">
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#coverage">Areas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#work">Recent work</a></li>
+            <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
+          </ul>
+        </div>
+      </dialog>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <a class="btn-solid theme-primary d-none md:d-inline-flex" href="#book">Get a quote</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Hero with inline quote card -->
+  <section class="hero has-hero-img" style="--hero-pos:center 35%">
+  <img class="hero-bg" src="img/hero.jpg" alt="" width="1800" height="1000" loading="eager">
+    <div class="container">
+      <div class="row g-6 align-items-center">
+        <div class="lg:col-6">
+          <span class="badge badge-subtle theme-success mb-4">Available today · 3 slots left</span>
+          <h1 class="hero-title fs-6xl fw-bold mb-4">The odd jobs you've been putting off</h1>
+          <p class="hero-lede fs-lg fg-2 mb-5">
+            Plumbing, joinery, electrics and the shelf that has been leaning
+            against the wall since March. Fixed-price quotes before we start,
+            and we tidy up after ourselves.
+          </p>
+          <div class="badge-row mb-5">
+            <span class="trust-pill"><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6l3.47-3.47z"/></svg>Fully insured</span>
+            <span class="trust-pill"><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6l3.47-3.47z"/></svg>DBS checked</span>
+            <span class="trust-pill"><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6l3.47-3.47z"/></svg>12-month guarantee</span>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <div class="stars" role="img" aria-label="Rated 4.9 out of 5">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+            </div>
+            <p class="fs-sm fg-2 mb-0"><strong class="fg-1">4.9</strong> from 840 local reviews</p>
+          </div>
+        </div>
+
+        <div class="lg:col-6">
+          <div class="hero-quote">
+            <h2 class="fs-lg fw-semibold mb-1">Get a fixed-price quote</h2>
+            <p class="fg-2 fs-sm mb-4">Usually back within two hours, weekdays.</p>
+
+            <form id="quoteForm" data-demo-form data-bs-validate novalidate>
+              <div class="mb-3">
+                <label class="form-label">What do you need doing?</label>
+                <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-multiple="true" data-bs-name="jobs" data-bs-placeholder="Select one or more…">
+                  <span class="combobox-value">Select one or more…</span>
+                  <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+                </button>
+                <div class="menu">
+                  <button class="menu-item" type="button" data-bs-value="plumbing">Plumbing</button>
+                  <button class="menu-item" type="button" data-bs-value="electrics">Electrics</button>
+                  <button class="menu-item" type="button" data-bs-value="joinery">Joinery &amp; carpentry</button>
+                  <button class="menu-item" type="button" data-bs-value="decorating">Decorating</button>
+                  <button class="menu-item" type="button" data-bs-value="tiling">Tiling</button>
+                  <button class="menu-item" type="button" data-bs-value="flatpack">Flat-pack assembly</button>
+                  <button class="menu-item" type="button" data-bs-value="garden">Garden &amp; fencing</button>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="qPost">Postcode</label>
+                    <input type="text" class="form-control" id="qPost" placeholder="M20" required>
+                    <div class="invalid-feedback">Required.</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="qDate">Preferred date</label>
+                    <input type="text" class="form-control" id="qDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Any day…">
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="qHours">Rough size of job</label>
+                <div class="form-range" data-bs-bubble>
+                  <input type="range" class="form-range-input" id="qHours" min="1" max="16" step="1" value="3" aria-label="Estimated hours">
+                </div>
+                <p class="fs-xs fg-3 mb-0">About <strong class="fg-1" id="qHoursOut">3 hours</strong> — we'll confirm on site</p>
+              </div>
+
+              <div class="form-field mb-3">
+                <label class="form-label" for="qPhone">Phone</label>
+                <div class="form-control form-adorn">
+                  <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 2.5h2.5l1 3-1.6 1.2a9 9 0 0 0 4.4 4.4l1.2-1.6 3 1V13a1.5 1.5 0 0 1-1.6 1.5A11.5 11.5 0 0 1 1.5 4.1 1.5 1.5 0 0 1 3 2.5" stroke-linejoin="round"/></svg></div>
+                  <input type="tel" class="form-ghost" id="qPhone" required>
+                </div>
+              </div>
+
+              <button class="btn-solid theme-primary w-100 btn-lg" type="submit" data-done-text="Quote requested ✓">Get my quote</button>
+              <p class="fs-xs fg-3 text-center mt-3 mb-0">No obligation. We'll never pass your number on.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-narrow text-center mb-6">
+        <p class="eyebrow fs-sm fg-primary mb-2">Services</p>
+        <h2 class="fs-4xl fw-bold mb-3" style="letter-spacing:-.03em">One number, most jobs</h2>
+        <p class="fs-lg fg-2 mb-0">If we can't do it, we'll tell you who can — usually someone we've worked alongside for years.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="md:col-6 lg:col-4">
+          <div class="svc">
+            <span class="icon-tile"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2v5a4 4 0 0 0 8 0V2" stroke-linecap="round"/><path d="M8 11v3" stroke-linecap="round"/></svg></span>
+            <div><h3>Plumbing</h3><p class="fg-2 fs-sm mb-2">Leaks, taps, radiators, toilets, outside taps and burst-pipe emergencies.</p><p class="svc-price mb-0">From £75</p></div>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <div class="svc">
+            <span class="icon-tile"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 1.5 4 8.5h4l-1 6 5-7H8z" stroke-linejoin="round"/></svg></span>
+            <div><h3>Electrics</h3><p class="fg-2 fs-sm mb-2">Sockets, lighting, extractor fans, consumer units and EICR certificates.</p><p class="svc-price mb-0">From £90</p></div>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <div class="svc">
+            <span class="icon-tile"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 12 8-8 2 2-8 8H2z" stroke-linejoin="round"/><path d="m10.5 3.5 2-2 2 2-2 2" stroke-linejoin="round"/></svg></span>
+            <div><h3>Joinery</h3><p class="fg-2 fs-sm mb-2">Shelving, doors, skirting, decking, fitted wardrobes and the wonky gate.</p><p class="svc-price mb-0">From £85</p></div>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <div class="svc">
+            <span class="icon-tile"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 13V6l5-3 5 3v7z" stroke-linejoin="round"/><path d="M6.5 13V9h3v4" stroke-linejoin="round"/></svg></span>
+            <div><h3>Decorating</h3><p class="fg-2 fs-sm mb-2">Prep done properly, dust sheets everywhere, and we fill before we paint.</p><p class="svc-price mb-0">From £220/day</p></div>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <div class="svc">
+            <span class="icon-tile"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="5" height="5"/><rect x="9" y="2" width="5" height="5"/><rect x="2" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/></svg></span>
+            <div><h3>Tiling</h3><p class="fg-2 fs-sm mb-2">Bathrooms, splashbacks and floors. Straight lines, sealed properly.</p><p class="svc-price mb-0">From £45/m²</p></div>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-4">
+          <div class="svc">
+            <span class="icon-tile"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 6h12v8H2z" stroke-linejoin="round"/><path d="M2 6 8 2l6 4" stroke-linejoin="round"/></svg></span>
+            <div><h3>Flat-pack &amp; odd jobs</h3><p class="fg-2 fs-sm mb-2">The wardrobe, the curtain pole, the four pictures. Minimum one hour.</p><p class="svc-price mb-0">From £55</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coverage -->
+  <section class="section pt-0" id="coverage">
+    <div class="container">
+      <div class="coverage">
+        <div class="row g-5 align-items-center">
+          <div class="lg:col-6">
+            <p class="eyebrow fs-sm fg-primary mb-2">Coverage</p>
+            <h2 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.02em">Are you in our patch?</h2>
+            <p class="fg-2 mb-4">We cover South Manchester and Trafford, roughly within eight miles of Didsbury. Anything further and we'll be honest about it rather than turning up late.</p>
+            <form class="postcode-check mb-4" onsubmit="return false">
+              <div class="form-control form-adorn">
+                <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="7" r="2.5"/><path d="M8 1.5c2.5 0 4.5 2 4.5 4.5 0 3.2-4.5 8.5-4.5 8.5S3.5 9.2 3.5 6c0-2.5 2-4.5 4.5-4.5" stroke-linejoin="round"/></svg></div>
+                <input type="text" class="form-ghost" id="coverPost" placeholder="Enter your postcode" aria-label="Postcode">
+              </div>
+              <button class="btn-solid theme-primary" type="submit" id="coverCheck">Check</button>
+            </form>
+            <p class="fs-sm mb-0" id="coverResult" aria-live="polite"></p>
+          </div>
+          <div class="lg:col-6">
+            <p class="fs-sm fw-semibold mb-3">Areas we cover</p>
+            <div class="area-list">
+              <span class="chip">Didsbury</span><span class="chip">Chorlton</span><span class="chip">Withington</span>
+              <span class="chip">Sale</span><span class="chip">Altrincham</span><span class="chip">Stretford</span>
+              <span class="chip">Urmston</span><span class="chip">Levenshulme</span><span class="chip">Heaton Moor</span>
+              <span class="chip">Northenden</span><span class="chip">Cheadle</span><span class="chip">Gatley</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section pt-0" id="pricing">
+    <div class="container">
+      <div class="section-narrow text-center mb-6">
+        <p class="eyebrow fs-sm fg-primary mb-2">How it works</p>
+        <h2 class="fs-3xl fw-bold mb-0" style="letter-spacing:-.02em">No surprises on the invoice</h2>
+      </div>
+      <div class="row g-5">
+        <div class="md:col-6 lg:col-3">
+          <div class="step-card"><span class="step-num">1</span>
+            <h3 class="fs-md fw-semibold mb-2">Tell us the job</h3>
+            <p class="fg-2 fs-sm mb-0">Photos help. Two minutes on the form or a phone call, whichever you prefer.</p>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <div class="step-card"><span class="step-num">2</span>
+            <h3 class="fs-md fw-semibold mb-2">Fixed quote</h3>
+            <p class="fg-2 fs-sm mb-0">Back within two hours on weekdays. The number we give is the number you pay.</p>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <div class="step-card"><span class="step-num">3</span>
+            <h3 class="fs-md fw-semibold mb-2">We turn up</h3>
+            <p class="fg-2 fs-sm mb-0">Two-hour window, and we text when we're twenty minutes away.</p>
+          </div>
+        </div>
+        <div class="md:col-6 lg:col-3">
+          <div class="step-card"><span class="step-num">4</span>
+            <h3 class="fs-md fw-semibold mb-2">Done and tidied</h3>
+            <p class="fg-2 fs-sm mb-0">Waste taken away, floor hoovered, twelve-month guarantee on the work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent work -->
+  <section class="section bg-2" id="work">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+        <div>
+          <p class="eyebrow fs-sm fg-primary mb-2">Recent work</p>
+          <h2 class="fs-3xl fw-bold mb-0" style="letter-spacing:-.02em">Last month around here</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="md:col-4">
+          <figure class="mb-0">
+            <div class="ba"><div class="ph ph-1x1">Before</div><div class="ph ph-1x1">After</div></div>
+            <figcaption>Bathroom retile · Chorlton</figcaption>
+          </figure>
+        </div>
+        <div class="md:col-4">
+          <figure class="mb-0">
+            <div class="ba"><div class="ph ph-1x1">Before</div><div class="ph ph-1x1">After</div></div>
+            <figcaption>Alcove shelving · Didsbury</figcaption>
+          </figure>
+        </div>
+        <div class="md:col-4">
+          <figure class="mb-0">
+            <div class="ba"><div class="ph ph-1x1">Before</div><div class="ph ph-1x1">After</div></div>
+            <figcaption>Fence replacement · Sale</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-4">
+        <div class="md:col-4">
+          <figure class="surface surface-pad h-100">
+            <div class="stars mb-3" role="img" aria-label="5 out of 5"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg></div>
+            <blockquote class="mb-3">"Quoted £340, charged £340. Turned up when they said. I have no other notes."</blockquote>
+            <figcaption class="d-flex align-items-center gap-3"><span class="avatar"><span class="avatar-initials">HB</span></span><span><span class="d-block fw-semibold fs-sm">Helen B.</span><span class="d-block fg-3 fs-xs">Chorlton</span></span></figcaption>
+          </figure>
+        </div>
+        <div class="md:col-4">
+          <figure class="surface surface-pad h-100">
+            <div class="stars mb-3" role="img" aria-label="5 out of 5"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg></div>
+            <blockquote class="mb-3">"Found a leak the last two plumbers missed, then showed me the pipe so I'd believe it."</blockquote>
+            <figcaption class="d-flex align-items-center gap-3"><span class="avatar"><span class="avatar-initials">DA</span></span><span><span class="d-block fw-semibold fs-sm">Dev A.</span><span class="d-block fg-3 fs-xs">Sale</span></span></figcaption>
+          </figure>
+        </div>
+        <div class="md:col-4">
+          <figure class="surface surface-pad h-100">
+            <div class="stars mb-3" role="img" aria-label="4 out of 5"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg></div>
+            <blockquote class="mb-3">"A day later than planned because of a parts delay, but they rang to tell me rather than leaving me guessing."</blockquote>
+            <figcaption class="d-flex align-items-center gap-3"><span class="avatar"><span class="avatar-initials">MO</span></span><span><span class="d-block fw-semibold fs-sm">Marta O.</span><span class="d-block fg-3 fs-xs">Urmston</span></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book / FAQ -->
+  <section class="section" id="book">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-6">
+          <p class="eyebrow fs-sm fg-primary mb-2">Questions</p>
+          <h2 class="fs-3xl fw-bold mb-5" style="letter-spacing:-.02em">Before you call</h2>
+          <div class="accordion">
+            <details class="accordion-item" name="hfaq" open>
+              <summary class="accordion-header">Do you charge a call-out fee?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body">No. Quotes are free and there is no charge for coming out to look. Minimum charge once work starts is one hour.</div>
+            </details>
+            <details class="accordion-item" name="hfaq">
+              <summary class="accordion-header">Are you insured and qualified?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body">£5m public liability, all trades DBS checked, and our electricians are Part P registered. Certificates are on the van and we'll show them without being asked.</div>
+            </details>
+            <details class="accordion-item" name="hfaq">
+              <summary class="accordion-header">What if something goes wrong afterwards?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body">Twelve-month guarantee on labour. Ring us and we'll come back and fix it, no argument and no charge.</div>
+            </details>
+            <details class="accordion-item" name="hfaq">
+              <summary class="accordion-header">Can you do emergencies?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body">Burst pipes and total power loss, yes — usually within two hours during the day. Call rather than use the form for anything urgent.</div>
+            </details>
+          </div>
+        </div>
+
+        <div class="lg:col-6">
+          <div class="surface surface-pad">
+            <h2 class="fs-lg fw-semibold mb-1">Prefer to talk?</h2>
+            <p class="fg-2 fs-sm mb-4">Weekdays 07:30–18:00, Saturdays until 13:00.</p>
+            <a class="btn-solid theme-primary btn-lg w-100 mb-4" href="tel:01610000000">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 2.5h2.5l1 3-1.6 1.2a9 9 0 0 0 4.4 4.4l1.2-1.6 3 1V13a1.5 1.5 0 0 1-1.6 1.5A11.5 11.5 0 0 1 1.5 4.1 1.5 1.5 0 0 1 3 2.5" stroke-linejoin="round"/></svg>
+              0161 000 0000
+            </a>
+            <hr class="mb-4">
+            <h3 class="fs-sm fw-semibold mb-3">Or send photos of the job</h3>
+            <form id="photoForm" data-demo-form data-bs-validate novalidate>
+              <div class="form-field mb-3">
+                <label class="form-label" for="pfName">Name</label>
+                <input type="text" class="form-control" id="pfName" required>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="form-field mb-3">
+                <label class="form-label" for="pfEmail">Email</label>
+                <input type="email" class="form-control" id="pfEmail" required>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="form-field mb-4">
+                <label class="form-label" for="pfNotes">What needs doing?</label>
+                <textarea class="form-control" id="pfNotes" rows="3" required></textarea>
+                <div class="invalid-feedback">A sentence is plenty.</div>
+              </div>
+              <button class="btn-outline theme-secondary w-100" type="submit" data-done-text="Sent ✓">Send it over</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer bg-2 py-6">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Fixwell. A free template for uicookies.</p>
+    <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

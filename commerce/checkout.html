@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — Commerce | Bootstrap 6 template</title>
+<meta name="description" content="Multi-step Bootstrap 6 checkout using the new Stepper, OTP input and native form validation.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Checkout">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">C</span> Commerce
+      </a>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <span class="d-none md:d-inline-flex align-items-center gap-2 fs-xs fg-3">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>
+          Secure checkout
+        </span>
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="section">
+  <div class="container">
+
+    <h1 class="fs-3xl fw-bold mb-6">Checkout</h1>
+
+    <div class="contains-inline mb-7">
+      <ol class="stepper md:stepper-horizontal" id="checkoutStepper">
+        <li class="stepper-item">Delivery</li>
+        <li class="stepper-item">Payment</li>
+        <li class="stepper-item">Confirm</li>
+      </ol>
+    </div>
+
+    <div class="row g-6">
+      <div class="lg:col-7">
+
+        <!-- Step 1 -->
+        <section class="checkout-step">
+          <h2 class="fs-xl fw-semibold mb-4">Delivery address</h2>
+          <form class="row g-4" id="deliveryForm" data-bs-validate novalidate>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="ckFirst">First name</label>
+                <input type="text" class="form-control" id="ckFirst" autocomplete="given-name" required>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="ckLast">Last name</label>
+                <input type="text" class="form-control" id="ckLast" autocomplete="family-name" required>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-field">
+                <label class="form-label" for="ckEmail">Email</label>
+                <div class="form-control form-adorn">
+                  <div class="form-adorn-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="m2 4 6 4.5L14 4"/></svg>
+                  </div>
+                  <input type="email" class="form-ghost" id="ckEmail" autocomplete="email" required>
+                </div>
+                <div class="form-text">We'll send the receipt and tracking here.</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-field">
+                <label class="form-label" for="ckAddr">Address</label>
+                <input type="text" class="form-control" id="ckAddr" autocomplete="street-address" required>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="ckCity">City</label>
+                <input type="text" class="form-control" id="ckCity" autocomplete="address-level2" required>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="ckPost">Postcode</label>
+                <input type="text" class="form-control" id="ckPost" autocomplete="postal-code" required>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Country</label>
+              <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="country" data-bs-placeholder="Select a country…">
+                <span class="combobox-value">Select a country…</span>
+                <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+              </button>
+              <div class="menu">
+                <button class="menu-item" type="button" data-bs-value="uk">United Kingdom</button>
+                <button class="menu-item" type="button" data-bs-value="ie">Ireland</button>
+                <button class="menu-item" type="button" data-bs-value="de">Germany</button>
+                <button class="menu-item" type="button" data-bs-value="fr">France</button>
+                <button class="menu-item" type="button" data-bs-value="nl">Netherlands</button>
+                <button class="menu-item" type="button" data-bs-value="us">United States</button>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-field">
+                <label class="form-label" for="ckDate">Preferred delivery date</label>
+                <input type="text" class="form-control" id="ckDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…">
+                <div class="form-text">Optional — we'll aim for this where the carrier allows it.</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-field">
+                <div class="switch"><input type="checkbox" value="" id="ckSaved" role="switch" switch checked></div>
+                <label for="ckSaved">Save this address for next time</label>
+              </div>
+            </div>
+          </form>
+          <div class="d-flex flex-wrap gap-2 mt-5">
+            <button class="btn-solid theme-primary" type="button" data-checkout-next>Continue to payment</button>
+            <a class="btn-text" href="index.html#shop">Keep shopping</a>
+          </div>
+        </section>
+
+        <!-- Step 2 -->
+        <section class="checkout-step" hidden>
+          <h2 class="fs-xl fw-semibold mb-4">Payment</h2>
+          <form class="row g-4" id="paymentForm" data-bs-validate novalidate>
+            <div class="col-12">
+              <p class="fw-semibold fs-sm mb-2">Method</p>
+              <div class="option-row">
+                <label class="btn-check btn-outline theme-primary"><input type="radio" name="pay" checked> Card</label>
+                <label class="btn-check btn-outline theme-primary"><input type="radio" name="pay"> PayPal</label>
+                <label class="btn-check btn-outline theme-primary"><input type="radio" name="pay"> Bank transfer</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-field">
+                <label class="form-label" for="ckCard">Card number</label>
+                <div class="form-control form-adorn">
+                  <div class="form-adorn-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5"/><path d="M1.5 6.5h13" stroke-linecap="round"/></svg>
+                  </div>
+                  <input type="text" class="form-ghost" id="ckCard" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" required>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="ckExp">Expiry</label>
+                <input type="text" class="form-control" id="ckExp" placeholder="MM / YY" autocomplete="cc-exp" required>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="form-field">
+                <label class="form-label" for="ckCvc">CVC</label>
+                <input type="text" class="form-control" id="ckCvc" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="surface surface-pad">
+                <p class="fw-semibold fs-sm mb-1">Verify it's you</p>
+                <p class="fg-2 fs-sm mb-3">Your bank sent a six-digit code. This is Bootstrap 6's new OTP input.</p>
+                <div class="otp" data-bs-otp>
+                  <input type="text" class="otp-input" maxlength="6" id="ckOtp" aria-label="Verification code" autocomplete="one-time-code">
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-field">
+                <input type="checkbox" class="check" id="ckTerms" required>
+                <label for="ckTerms">I agree to the terms of sale</label>
+              </div>
+            </div>
+          </form>
+          <div class="d-flex flex-wrap gap-2 mt-5">
+            <button class="btn-solid theme-primary" type="button" data-checkout-next>Review order</button>
+            <button class="btn-text" type="button" data-checkout-back>Back</button>
+          </div>
+        </section>
+
+        <!-- Step 3 -->
+        <section class="checkout-step" hidden>
+          <h2 class="fs-xl fw-semibold mb-4">Confirm your order</h2>
+
+          <div class="alert theme-success mb-5" role="alert">
+            Everything checks out. Nothing is charged in this template — it's frontend only.
+          </div>
+
+          <div class="surface surface-pad mb-4">
+            <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+              <div>
+                <p class="fw-semibold fs-sm mb-1">Delivery</p>
+                <p class="fg-2 fs-sm mb-0">18 Kiln Lane, Sheffield S1 4TG<br>United Kingdom</p>
+              </div>
+              <button class="btn-text btn-sm" type="button" data-checkout-back>Edit</button>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between align-items-start gap-3">
+              <div>
+                <p class="fw-semibold fs-sm mb-1">Payment</p>
+                <p class="fg-2 fs-sm mb-0">Card ending 4242</p>
+              </div>
+              <button class="btn-text btn-sm" type="button" data-checkout-back>Edit</button>
+            </div>
+          </div>
+
+          <form id="placeOrderForm" data-demo-form novalidate>
+            <button class="btn-solid theme-primary btn-lg w-100" type="submit" data-done-text="Order placed ✓">Place order · $333</button>
+          </form>
+          <p class="fs-xs fg-3 text-center mt-3 mb-0">You'll get a receipt by email. Returns are free for 30 days.</p>
+        </section>
+
+      </div>
+
+      <!-- Summary -->
+      <aside class="lg:col-5">
+        <div class="summary surface surface-pad">
+          <h2 class="fs-lg fw-semibold mb-4">Order summary</h2>
+
+          <div class="vstack gap-4 mb-4">
+            <div class="mini-item">
+              <div class="ph ph-1x1">Kettle</div>
+              <div class="flex-grow-1">
+                <p class="fw-semibold fs-sm mb-1">Ridge copper kettle</p>
+                <p class="fg-3 fs-xs mb-0">Copper · 1.7 L · Qty 1</p>
+              </div>
+              <p class="fw-semibold fs-sm mb-0">$148</p>
+            </div>
+            <div class="mini-item">
+              <div class="ph ph-1x1">Bowls</div>
+              <div class="flex-grow-1">
+                <p class="fw-semibold fs-sm mb-1">Marl stoneware bowls</p>
+                <p class="fg-3 fs-xs mb-0">Set of 4 · Qty 1</p>
+              </div>
+              <p class="fw-semibold fs-sm mb-0">$96</p>
+            </div>
+            <div class="mini-item">
+              <div class="ph ph-1x1">Throw</div>
+              <div class="flex-grow-1">
+                <p class="fw-semibold fs-sm mb-1">Flax linen throw</p>
+                <p class="fg-3 fs-xs mb-0">Oat · Qty 1</p>
+              </div>
+              <p class="fw-semibold fs-sm mb-0">$89</p>
+            </div>
+          </div>
+
+          <div class="chip-input mb-4" data-bs-chips>
+            <label class="chip-input-label" for="promoInput">Promo:</label>
+            <span class="chip">AUTUMN10</span>
+            <input type="text" class="form-ghost" id="promoInput" placeholder="Add code…">
+          </div>
+
+          <div class="summary-line"><span class="fg-2">Subtotal</span><span>$333</span></div>
+          <div class="summary-line"><span class="fg-2">Discount (AUTUMN10)</span><span class="fg-success">−$33</span></div>
+          <div class="summary-line"><span class="fg-2">Shipping</span><span class="fg-success">Free</span></div>
+          <div class="summary-line"><span class="fg-2">Tax</span><span>$33</span></div>
+          <div class="summary-line summary-total"><span>Total</span><span>$333</span></div>
+
+          <div class="d-flex align-items-start gap-2 mt-4 fs-xs fg-3">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" class="flex-shrink-0 mt-1" aria-hidden="true"><path d="M8 1.5 2.5 4v4c0 3.2 2.3 5.6 5.5 6.5 3.2-.9 5.5-3.3 5.5-6.5V4z" stroke-linejoin="round"/></svg>
+            Payments are encrypted end to end. We never store card details.
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer bg-2 py-6 mt-9">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Commerce. A free template for uicookies.</p>
+    <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironworks — Free Bootstrap 6 Gym &amp; Fitness Website Template</title>
+<meta name="description" content="Ironworks is a free Bootstrap 6 gym template with a vertical rail navigation, a full class timetable, coach profiles, membership plans and trial booking.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#railNav" data-bs-top-margin="20%" data-bs-smooth-scroll="true">
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<!-- Vertical rail navigation (desktop) -->
+<header class="site-header">
+  <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+    <span class="brand-mark" aria-hidden="true">I</span> Ironworks
+  </a>
+
+  <ul class="rail-nav nav" id="railNav">
+    <li><a class="nav-link" href="#classes">Classes</a></li>
+    <li><a class="nav-link" href="#timetable">Timetable</a></li>
+    <li><a class="nav-link" href="#coaches">Coaches</a></li>
+    <li><a class="nav-link" href="#plans">Membership</a></li>
+    <li><a class="nav-link" href="#trial">Free trial</a></li>
+  </ul>
+
+  <div class="mt-auto d-grid gap-2">
+    <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+      <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+      <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+    </button>
+    <a class="btn-solid theme-primary" href="#trial">Book a trial</a>
+    <p class="fs-xs fg-3 mb-0 mt-2">Unit 4, Foundry Yard<br>Sheffield S3 8PL</p>
+  </div>
+</header>
+
+<div class="page">
+
+  <!-- Mobile bar -->
+  <div class="mobile-bar">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold me-auto" href="index.html">
+      <span class="brand-mark" aria-hidden="true">I</span> Ironworks
+    </a>
+    <button class="btn-icon" type="button" id="themeToggleMobile" aria-label="Toggle color mode">
+      <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+    </button>
+    <button class="btn-icon" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="section pt-9 has-hero-img" style="--hero-pos:center 40%;--hero-scrim:linear-gradient(to right, color-mix(in oklab, var(--bs-bg-body), transparent 14%) 0%, color-mix(in oklab, var(--bs-bg-body), transparent 32%) 55%, color-mix(in oklab, var(--bs-bg-body), transparent 58%) 100%)">
+  <img class="hero-bg" src="img/hero.jpg" alt="" width="1800" height="1000" loading="eager">
+      <div class="container-fluid px-4 lg:px-6">
+        <p class="marker"><b>01</b> Strength &amp; conditioning · Sheffield</p>
+        <h1 class="slab mb-5">Get strong<br>in a shed<br>that smells<br>like chalk</h1>
+        <p class="fs-lg fg-2 mb-6" style="max-width:34rem">
+          No mirrors, no music policy arguments, no monthly upsell.
+          A barbell gym with coaches who watch every set, capped at
+          14 people a class.
+        </p>
+        <div class="d-flex flex-wrap gap-3 mb-7">
+          <a class="btn-solid theme-primary btn-lg" href="#trial">Claim a free week</a>
+          <a class="btn-outline theme-secondary btn-lg" href="#timetable">See the timetable</a>
+        </div>
+        <dl class="stat-band text-start" style="max-width:46rem">
+          <div><dt>14</dt><dd>max per class</dd></div>
+          <div><dt>34</dt><dd>classes a week</dd></div>
+          <div><dt>6</dt><dd>coaches, all L3+</dd></div>
+          <div><dt>05:30</dt><dd>doors open</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Classes -->
+    <section class="section" id="classes">
+      <div class="container-fluid px-4 lg:px-6">
+        <p class="marker"><b>02</b> What we run</p>
+        <div class="row g-4">
+          <div class="md:col-6 lg:col-3">
+            <article class="surface surface-pad h-100">
+              <h2 class="fs-lg fw-bold text-uppercase mb-2" style="letter-spacing:-.01em">Barbell club</h2>
+              <p class="fg-2 fs-sm mb-3">Squat, bench, deadlift and press on a twelve-week block. Numbers written on the wall, whether you like it or not.</p>
+              <p class="fs-xs fg-3 mb-0">60 min · All levels</p>
+            </article>
+          </div>
+          <div class="md:col-6 lg:col-3">
+            <article class="surface surface-pad h-100">
+              <h2 class="fs-lg fw-bold text-uppercase mb-2" style="letter-spacing:-.01em">Conditioning</h2>
+              <p class="fg-2 fs-sm mb-3">Assault bikes, sleds and carries. Forty minutes that will ruin your afternoon in a useful way.</p>
+              <p class="fs-xs fg-3 mb-0">40 min · All levels</p>
+            </article>
+          </div>
+          <div class="md:col-6 lg:col-3">
+            <article class="surface surface-pad h-100">
+              <h2 class="fs-lg fw-bold text-uppercase mb-2" style="letter-spacing:-.01em">Olympic lifting</h2>
+              <p class="fg-2 fs-sm mb-3">Snatch and clean &amp; jerk, taught properly and slowly. Expect to spend a month on an empty bar.</p>
+              <p class="fs-xs fg-3 mb-0">75 min · Intermediate</p>
+            </article>
+          </div>
+          <div class="md:col-6 lg:col-3">
+            <article class="surface surface-pad h-100">
+              <h2 class="fs-lg fw-bold text-uppercase mb-2" style="letter-spacing:-.01em">Open gym</h2>
+              <p class="fg-2 fs-sm mb-3">Your own programme, our racks, a coach on the floor if you want eyes on a lift.</p>
+              <p class="fs-xs fg-3 mb-0">Unlimited · Members</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timetable -->
+    <section class="section bg-2" id="timetable">
+      <div class="container-fluid px-4 lg:px-6">
+        <p class="marker"><b>03</b> Week at a glance</p>
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+          <h2 class="fs-3xl fw-bold text-uppercase mb-0" style="letter-spacing:-.03em">Timetable</h2>
+          <div style="min-width:14rem">
+            <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-name="class" data-bs-placeholder="All classes">
+              <span class="combobox-value">All classes</span>
+              <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+            </button>
+            <div class="menu">
+              <button class="menu-item" type="button" data-bs-value="all">All classes</button>
+              <button class="menu-item" type="button" data-bs-value="barbell">Barbell club</button>
+              <button class="menu-item" type="button" data-bs-value="cond">Conditioning</button>
+              <button class="menu-item" type="button" data-bs-value="oly">Olympic lifting</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="timetable">
+            <caption class="visually-hidden">Weekly class timetable</caption>
+            <thead>
+              <tr><th scope="col">Time</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th><th scope="col">Sat</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="time">06:00</th>
+                <td><span class="slot">Barbell<small>3 left</small></span></td>
+                <td><span class="slot">Conditioning<small>7 left</small></span></td>
+                <td><span class="slot">Barbell<small>1 left</small></span></td>
+                <td><span class="slot">Conditioning<small>9 left</small></span></td>
+                <td><span class="slot">Barbell<small>5 left</small></span></td>
+                <td class="fg-3">—</td>
+              </tr>
+              <tr>
+                <th scope="row" class="time">07:15</th>
+                <td><span class="slot slot-full">Conditioning<small>Full</small></span></td>
+                <td><span class="slot">Olympic<small>4 left</small></span></td>
+                <td><span class="slot slot-full">Conditioning<small>Full</small></span></td>
+                <td><span class="slot">Olympic<small>6 left</small></span></td>
+                <td><span class="slot">Conditioning<small>2 left</small></span></td>
+                <td><span class="slot">Barbell<small>8 left</small></span></td>
+              </tr>
+              <tr>
+                <th scope="row" class="time">12:30</th>
+                <td><span class="slot">Open gym</span></td>
+                <td><span class="slot">Open gym</span></td>
+                <td><span class="slot">Open gym</span></td>
+                <td><span class="slot">Open gym</span></td>
+                <td><span class="slot">Open gym</span></td>
+                <td><span class="slot">Open gym</span></td>
+              </tr>
+              <tr>
+                <th scope="row" class="time">17:30</th>
+                <td><span class="slot">Barbell<small>2 left</small></span></td>
+                <td><span class="slot slot-full">Conditioning<small>Full</small></span></td>
+                <td><span class="slot">Barbell<small>6 left</small></span></td>
+                <td><span class="slot slot-full">Olympic<small>Full</small></span></td>
+                <td><span class="slot">Conditioning<small>4 left</small></span></td>
+                <td class="fg-3">—</td>
+              </tr>
+              <tr>
+                <th scope="row" class="time">18:45</th>
+                <td><span class="slot">Conditioning<small>5 left</small></span></td>
+                <td><span class="slot">Barbell<small>3 left</small></span></td>
+                <td><span class="slot">Olympic<small>7 left</small></span></td>
+                <td><span class="slot">Barbell<small>1 left</small></span></td>
+                <td class="fg-3">—</td>
+                <td class="fg-3">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fs-xs fg-3 mt-3 mb-0">Classes cap at 14. Members can book 14 days ahead, trial guests 3 days ahead.</p>
+      </div>
+    </section>
+
+    <!-- Coaches -->
+    <section class="section" id="coaches">
+      <div class="container-fluid px-4 lg:px-6">
+        <p class="marker"><b>04</b> Who's on the floor</p>
+        <div class="row g-4">
+          <div class="sm:col-6 lg:col-3"><article class="coach"><div class="ph ph-3x4">DH</div><div class="coach-name"><p class="fw-bold text-uppercase mb-0">Dee Hartley</p><p class="fs-xs mb-0" style="opacity:.75">Head coach · L4 S&amp;C</p></div></article></div>
+          <div class="sm:col-6 lg:col-3"><article class="coach"><div class="ph ph-3x4">RS</div><div class="coach-name"><p class="fw-bold text-uppercase mb-0">Rob Sillitoe</p><p class="fs-xs mb-0" style="opacity:.75">Olympic lifting · BWL2</p></div></article></div>
+          <div class="sm:col-6 lg:col-3"><article class="coach"><div class="ph ph-3x4">NK</div><div class="coach-name"><p class="fw-bold text-uppercase mb-0">Nour Khalil</p><p class="fs-xs mb-0" style="opacity:.75">Conditioning · L3</p></div></article></div>
+          <div class="sm:col-6 lg:col-3"><article class="coach"><div class="ph ph-3x4">GM</div><div class="coach-name"><p class="fw-bold text-uppercase mb-0">Gemma Moss</p><p class="fs-xs mb-0" style="opacity:.75">Rehab &amp; return to lifting</p></div></article></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans -->
+    <section class="section bg-2" id="plans">
+      <div class="container-fluid px-4 lg:px-6">
+        <p class="marker"><b>05</b> Membership</p>
+        <h2 class="fs-3xl fw-bold text-uppercase mb-5" style="letter-spacing:-.03em">No contracts, ever</h2>
+        <div class="row g-4">
+          <div class="md:col-4">
+            <div class="plan">
+              <h3 class="fs-lg fw-bold text-uppercase mb-1">Open gym</h3>
+              <p class="fg-3 fs-sm mb-4">Your programme, our kit</p>
+              <p class="plan-price mb-4">£38<span class="fs-md fw-normal fg-3">/mo</span></p>
+              <ul class="vstack gap-2 fs-sm list-unstyled mb-5">
+                <li>Unlimited open gym</li><li>05:30–21:00 access</li><li>Coach on the floor</li>
+              </ul>
+              <a class="btn-outline theme-secondary w-100 mt-auto" href="#trial">Start</a>
+            </div>
+          </div>
+          <div class="md:col-4">
+            <div class="plan is-featured">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="fs-lg fw-bold text-uppercase mb-1">Full</h3>
+                <span class="badge theme-primary">Most join this</span>
+              </div>
+              <p class="fg-3 fs-sm mb-4">Classes and open gym</p>
+              <p class="plan-price mb-4">£64<span class="fs-md fw-normal fg-3">/mo</span></p>
+              <ul class="vstack gap-2 fs-sm list-unstyled mb-5">
+                <li>Everything in Open gym</li><li>All 34 weekly classes</li><li>Programme reviews</li><li>Pause any month, free</li>
+              </ul>
+              <a class="btn-solid theme-primary w-100 mt-auto" href="#trial">Start</a>
+            </div>
+          </div>
+          <div class="md:col-4">
+            <div class="plan">
+              <h3 class="fs-lg fw-bold text-uppercase mb-1">1-to-1</h3>
+              <p class="fg-3 fs-sm mb-4">Coached, weekly</p>
+              <p class="plan-price mb-4">£180<span class="fs-md fw-normal fg-3">/mo</span></p>
+              <ul class="vstack gap-2 fs-sm list-unstyled mb-5">
+                <li>Everything in Full</li><li>Four private sessions</li><li>Written programme</li><li>Video feedback between sessions</li>
+              </ul>
+              <a class="btn-outline theme-secondary w-100 mt-auto" href="#trial">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trial -->
+    <section class="section" id="trial">
+      <div class="container-fluid px-4 lg:px-6">
+        <div class="row g-6">
+          <div class="lg:col-5">
+            <p class="marker"><b>06</b> Free trial</p>
+            <h2 class="fs-3xl fw-bold text-uppercase mb-4" style="letter-spacing:-.03em">One week, no card</h2>
+            <p class="fg-2 mb-4">Come to as many classes as you like for seven days. If it isn't for you, tell us and that's the end of it — we won't chase you.</p>
+            <div class="accordion">
+              <details class="accordion-item" name="gfaq" open>
+                <summary class="accordion-header">I've never touched a barbell
+                  <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">Good. Barbell club runs a beginners block every six weeks and you will spend the first fortnight on an empty bar learning to move. Nobody here started knowing what they were doing.</div>
+              </details>
+              <details class="accordion-item" name="gfaq">
+                <summary class="accordion-header">Is there parking?
+                  <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">Twelve free spaces in the yard, plus covered bike storage for about twenty bikes. Sheffield station is a fifteen-minute walk.</div>
+              </details>
+              <details class="accordion-item" name="gfaq">
+                <summary class="accordion-header">Can I pause my membership?
+                  <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">Any month, free, from your account. Injured, travelling, skint — we don't ask which.</div>
+              </details>
+            </div>
+          </div>
+
+          <div class="lg:col-7">
+            <form class="surface surface-pad row g-4" id="trialForm" data-demo-form data-bs-validate novalidate>
+              <div class="md:col-6">
+                <div class="form-field">
+                  <label class="form-label" for="trName">Name</label>
+                  <input type="text" class="form-control" id="trName" required>
+                  <div class="invalid-feedback">Required.</div>
+                </div>
+              </div>
+              <div class="md:col-6">
+                <div class="form-field">
+                  <label class="form-label" for="trEmail">Email</label>
+                  <input type="email" class="form-control" id="trEmail" required>
+                  <div class="invalid-feedback">Required.</div>
+                </div>
+              </div>
+              <div class="md:col-6">
+                <div class="form-field">
+                  <label class="form-label" for="trStart">First class</label>
+                  <input type="text" class="form-control" id="trStart" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…">
+                </div>
+              </div>
+              <div class="md:col-6">
+                <label class="form-label">Which class?</label>
+                <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-name="firstclass" data-bs-placeholder="Select…">
+                  <span class="combobox-value">Select…</span>
+                  <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+                </button>
+                <div class="menu">
+                  <button class="menu-item" type="button" data-bs-value="barbell">Barbell club</button>
+                  <button class="menu-item" type="button" data-bs-value="cond">Conditioning</button>
+                  <button class="menu-item" type="button" data-bs-value="oly">Olympic lifting</button>
+                  <button class="menu-item" type="button" data-bs-value="open">Open gym</button>
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="trGoals">Goals</label>
+                <div class="chip-input" data-bs-chips>
+                  <span class="chip">get stronger</span>
+                  <input type="text" class="form-ghost" id="trGoals" placeholder="Add a goal…">
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-field">
+                  <label class="form-label" for="trInjury">Injuries or anything we should know</label>
+                  <textarea class="form-control" id="trInjury" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-field">
+                  <input type="checkbox" class="check" id="trPar" required>
+                  <label for="trPar">I'll complete a health questionnaire before my first session</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Booked ✓">Claim my free week</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer py-6" style="border-top:1px solid var(--bs-border-color)">
+    <div class="container-fluid px-4 lg:px-6 d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Ironworks Gym. A free template for uicookies.</p>
+      <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+    </div>
+  </footer>
+</div>
+
+<!-- Mobile nav -->
+<dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="navDrawerLabel">Ironworks</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <ul class="nav navbar-nav vstack gap-1">
+      <li class="nav-item"><a class="nav-link" href="#classes">Classes</a></li>
+      <li class="nav-item"><a class="nav-link" href="#timetable">Timetable</a></li>
+      <li class="nav-item"><a class="nav-link" href="#coaches">Coaches</a></li>
+      <li class="nav-item"><a class="nav-link" href="#plans">Membership</a></li>
+      <li class="nav-item"><a class="nav-link" href="#trial">Free trial</a></li>
+    </ul>
+    <a class="btn-solid theme-primary w-100 mt-4" href="#trial">Book a trial</a>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

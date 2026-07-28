@@ -1,0 +1,39 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+
+      # Every template folder is verified independently. The gate loads each
+      # page in a real browser, so it catches console errors, dead links,
+      # trailing gaps from alpha1's unguarded .dialog, classes that exist in no
+      # stylesheet (which is how v5's gap-lg-3 ordering shows up), and
+      # btn-outline with no theme-* companion.
+      - name: Verify every template
+        run: |
+          fails=0
+          for dir in */; do
+            [ -f "${dir}template.json" ] || continue
+            node _kit/verify.mjs "${dir%/}" || fails=$((fails + 1))
+          done
+          echo "----"
+          if [ "$fails" -ne 0 ]; then
+            echo "$fails template(s) failed verification"
+            exit 1
+          fi
+          echo "all templates passed"

@@ -1,0 +1,63 @@
+{
+  "slug": "caseworth",
+  "title": "Caseworth — Free Bootstrap 6 Law Firm &amp; Accountancy Website Template",
+  "excerpt": "A free two-page Bootstrap 6 template for solicitors and accountants — numbered practice index, people with credentials, a filterable published fee table and an enquiry form.",
+  "yoastTitle": "Caseworth — Free Bootstrap 6 Law Firm &amp; Accountancy Website Template",
+  "yoastDesc": "Free Bootstrap 6 law firm and accountancy website template with a filterable fee table, numbered practice index, partner profiles, native details accordions and an enquiry form using Combobox and Datepicker.",
+  "intro": "Caseworth is a free, premium <strong>Bootstrap 6</strong> website template for law firms, solicitors, chartered accountants, tax advisers and professional-services practices generally. It pairs a full firm homepage — practice index, people, published fees, insights and an enquiry form — with a practice area detail page.",
+  "note": "Professional-services sites trade on typography and credibility rather than photography, so this one is set in a serif on paper-white with hairline rules instead of cards. The Bootstrap 6 pieces doing the work are the new <strong>table</strong> variants — <code>.table-stacked</code> reflows the published fee table into readable blocks on a phone instead of forcing a horizontal scroll — plus a searchable Combobox for practice area, a Datepicker for deadlines, and native <code>&lt;details&gt;</code> accordions, which replaced the JavaScript accordion entirely in v6.",
+  "summary": "Caseworth is a free, premium two-page Bootstrap 6 template for law firms, accountants and professional-services practices. The homepage runs a typographic masthead with a plate-style photograph, a ten-item numbered practice index set as a two-column table of contents, partner profiles with credentials, a published fee table with live filtering and .table-stacked mobile reflow, an insights list and an enquiry form using a searchable Combobox and Datepicker. The practice page adds scope, a staged fee table, native details accordions and a sticky contact rail. Serif design language, hairline rules, ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — firm homepage and a practice area detail page",
+    "Published fee table using the new .table-stacked, which reflows to blocks on mobile instead of scrolling",
+    "Live fee-table filtering that degrades to a static readable table without JavaScript",
+    "Ten-item numbered practice index set as a two-column table of contents",
+    "Partner profiles carrying real credentials — SRA, FCA, CTA",
+    "Enquiry form with searchable Combobox practice picker and optional Datepicker deadline",
+    "Native &lt;details&gt; accordions — v6 removed the JavaScript accordion entirely",
+    "Typographic design language: serif throughout, hairline rules, no cards",
+    "Staged fee table on the practice page plus a sticky contact rail",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "business-services"
+  ],
+  "images": [
+    {
+      "name": "office",
+      "q": "office bookshelf",
+      "fallback": "law books",
+      "w": 700,
+      "h": 875
+    },
+    {
+      "name": "person-1",
+      "q": "professional woman portrait",
+      "fallback": "portrait",
+      "w": 500,
+      "h": 500
+    },
+    {
+      "name": "person-2",
+      "q": "professional man portrait",
+      "fallback": "portrait",
+      "w": 500,
+      "h": 500
+    },
+    {
+      "name": "person-3",
+      "q": "businesswoman portrait office",
+      "fallback": "portrait",
+      "w": 500,
+      "h": 500
+    },
+    {
+      "name": "person-4",
+      "q": "businessman portrait suit",
+      "fallback": "portrait",
+      "w": 500,
+      "h": 500
+    }
+  ]
+}

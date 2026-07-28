@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing cards — Bootstrap 6 Cards</title>
+<meta name="description" content="Three tiers with the middle one marked. The featured card is outlined rather than scaled, so nothing shifts on hover. A free Bootstrap 6 card example.">
+<link rel="stylesheet" href="../assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="variant-bar">
+  <a class="btn-text btn-sm" href="../index.html">&#8592; All cards</a>
+  <span class="fs-sm fw-semibold ms-2">Pricing cards</span>
+  <span class="fs-xs fg-3 d-none md:d-inline">4 of 10</span>
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <a class="btn-icon btn-sm" href="../03-horizontal/index.html" aria-label="Previous card">&#8249;</a>
+    <a class="btn-icon btn-sm" href="../05-profile/index.html" aria-label="Next card">&#8250;</a>
+    <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+  </div>
+</div>
+
+<main class="variant-stage">
+  <div class="variant-inner is-wide">
+    <div class="row g-4">
+  <div class="md:col-4">
+    <div class="card h-100">
+      <div class="card-body d-flex flex-column">
+        <p class="fw-semibold mb-1">Starter</p>
+        <p class="fg-3 fs-sm mb-4">For one person and a side project.</p>
+        <p class="price-figure mb-1">&pound;12<span class="fs-sm fg-3 fw-normal">/mo</span></p>
+        <p class="fg-3 fs-xs mb-4">billed annually</p>
+        <ul class="price-list fs-sm fg-2 mb-4">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg> Three projects</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg> 7-day history</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg> Community support</li>
+        </ul>
+        <button class="btn-outline theme-secondary w-100 mt-auto" type="button">Choose Starter</button>
+      </div>
+    </div>
+  </div>
+  <div class="md:col-4">
+    <div class="card card-featured h-100">
+      <div class="card-body d-flex flex-column">
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <p class="fw-semibold mb-0">Team</p>
+          <span class="badge badge-subtle theme-primary">Most chosen</span>
+        </div>
+        <p class="fg-3 fs-sm mb-4">For a team that ships together.</p>
+        <p class="price-figure mb-1">&pound;29<span class="fs-sm fg-3 fw-normal">/mo</span></p>
+        <p class="fg-3 fs-xs mb-4">billed annually</p>
+        <ul class="price-list fs-sm fg-2 mb-4">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg> Unlimited projects</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg> 90-day history</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg> Custom domains</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg> Priority support</li>
+        </ul>
+        <button class="btn-solid theme-primary w-100 mt-auto" type="button">Choose Team</button>
+      </div>
+    </div>
+  </div>
+  <div class="md:col-4">
+    <div class="card h-100">
+      <div class="card-body d-flex flex-column">
+        <p class="fw-semibold mb-1">Scale</p>
+        <p class="fg-3 fs-sm mb-4">When procurement gets involved.</p>
+        <p class="price-figure mb-1">&pound;79<span class="fs-sm fg-3 fw-normal">/mo</span></p>
+        <p class="fg-3 fs-xs mb-4">billed annually</p>
+        <ul class="price-list fs-sm fg-2 mb-4">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg> Everything in Team</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg> SSO &amp; SCIM</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg> Audit log</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg> 99.9% SLA</li>
+        </ul>
+        <button class="btn-outline theme-secondary w-100 mt-auto" type="button">Talk to sales</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</main>
+
+<script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

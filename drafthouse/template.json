@@ -1,0 +1,34 @@
+{
+  "slug": "drafthouse",
+  "title": "Drafthouse — Free Bootstrap 6 Architecture &amp; Interior Design Template",
+  "excerpt": "A free two-page Bootstrap 6 architecture template — drawing-sheet design language, projects carrying area, location and RIBA status as data, practice principles, awards and an enquiry sheet.",
+  "yoastTitle": "Drafthouse — Free Bootstrap 6 Architecture &amp; Interior Design Template",
+  "yoastDesc": "Free Bootstrap 6 architecture, architect and interior design website template with a drawing-sheet title block, project metadata, RIBA stage services, awards, team and an enquiry form using Combobox and Datepicker.",
+  "intro": "Drafthouse is a free, premium <strong>Bootstrap 6</strong> website template for architecture practices, interior designers, structural consultants and design-and-build studios. It pairs a full practice homepage — projects, principles, RIBA-staged services, awards, people and enquiries — with a project page carrying a complete data sheet.",
+  "note": "The whole template is set like a drawing sheet: warm paper ground, hairline rules, nothing rounded, nothing shadowed, and metadata in small-caps labels above tabular values. That last detail is the point — <strong>every project carries area, location and RIBA stage as data rather than prose</strong>, because those are the first three things anyone commissioning a building looks for, and most practice websites bury them in a paragraph. The enquiry form uses a searchable Combobox for project type and a Datepicker for the hoped-for start.",
+  "summary": "Drafthouse is a free, premium two-page Bootstrap 6 template for architects and interior designers. The homepage opens with a full-bleed project plate carrying a drawing-style title block — area, completion, sector, status — then a project grid where each entry repeats that metadata, four numbered practice principles, services mapped to RIBA stages 0 through 6, an awards list, team profiles and an enquiry sheet built on Combobox and Datepicker. The project page adds the brief, approach, current status and a sticky project data sheet. Drawing-sheet design language throughout: warm paper, hairline rules, no rounded corners. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — practice homepage and a project page",
+    "Drawing-sheet design language: hairline rules, no rounded corners, no shadows",
+    "Title block on the hero — area, completion, sector and status as labelled data",
+    "Every project repeats that metadata rather than burying it in prose",
+    "Services mapped to RIBA stages 0—1, 2—3, 4 and 5—6",
+    "Four numbered practice principles and an awards list",
+    "Enquiry form with searchable Combobox project type and Datepicker start date",
+    "Sticky project data sheet on the project page",
+    "Project page chrome generated from the homepage so nav and footer cannot drift",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": ["bootstrap-6", "architecture"],
+  "images": [
+    { "name": "plate",    "q": "modern stone house architecture",   "fallback": "architecture", "w": 1800, "h": 1100 },
+    { "name": "proj-1",   "q": "stone house hillside modern",       "fallback": "house",        "w": 900,  "h": 675 },
+    { "name": "proj-2",   "q": "converted mill industrial interior","fallback": "warehouse",    "w": 900,  "h": 675 },
+    { "name": "proj-3",   "q": "library interior shelves",          "fallback": "library",      "w": 900,  "h": 675 },
+    { "name": "proj-4",   "q": "kitchen extension glass",           "fallback": "kitchen",      "w": 900,  "h": 675 },
+    { "name": "person-1", "q": "architect portrait woman",          "fallback": "portrait",     "w": 500,  "h": 500 },
+    { "name": "person-2", "q": "architect portrait man",            "fallback": "portrait",     "w": 500,  "h": 500 },
+    { "name": "person-3", "q": "designer portrait woman office",    "fallback": "portrait",     "w": 500,  "h": 500 },
+    { "name": "person-4", "q": "man portrait workshop",             "fallback": "portrait",     "w": 500,  "h": 500 }
+  ]
+}

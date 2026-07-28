@@ -1,0 +1,26 @@
+{
+  "slug": "helm",
+  "title": "Helm — Free Bootstrap 6 Admin Dashboard Template",
+  "excerpt": "A free eight-page Bootstrap 6 admin dashboard — collapsible sidebar, SVG charts with no chart library, selectable data tables, a full form set, profile, tabbed settings, sign-in and 404.",
+  "yoastTitle": "Helm — Free Bootstrap 6 Admin Dashboard Template",
+  "yoastDesc": "Free Bootstrap 6 admin dashboard template with a collapsible sidebar, hand-built SVG and CSS charts, selectable data tables with bulk actions, Combobox and Datepicker forms, OTP and password strength, tabbed settings, sign-in and 404 pages. No chart library, no build step.",
+  "intro": "Helm is a free, premium <strong>Bootstrap 6</strong> admin dashboard template for SaaS back-offices, internal tools, e-commerce administration and analytics panels. Eight pages — overview, analytics, orders, forms, profile, settings, sign-in and 404 — sharing one shell with a sidebar that collapses to an icon rail and becomes a Drawer on phones.",
+  "note": "<strong>There is no chart library.</strong> The line and area charts are inline SVG, the bar charts are flex rows, and the donut is a single <code>conic-gradient</code> — because a dashboard template that depends on Chart.js is really a Chart.js template, and the first thing most people do is swap it for whatever their stack already uses. Everything else leans on components that genuinely did not exist in Bootstrap 5: the mobile navigation is a native <code>&lt;dialog&gt;</code> Drawer, the forms page exercises Combobox, Datepicker, the OTP input and the password Strength meter, and the orders table uses the new <code>.table-stacked</code> so it reflows to labelled blocks on a phone rather than scrolling sideways.",
+  "summary": "Helm is a free, premium eight-page Bootstrap 6 admin dashboard. The overview pairs stat tiles with an SVG revenue chart, a conic-gradient conversion donut, a weekday bar chart and a recent-orders table. Analytics adds a sessions chart, an acquisition breakdown built from progress bars and a top-pages table. Orders is a searchable, selectable table with an indeterminate select-all and a bulk-action bar. Forms covers every Bootstrap 6 control including Combobox, Datepicker, OTP, password strength and range. Profile, tabbed settings with a static destructive dialog, sign-in and 404 complete the set. The sidebar collapses to an icon rail and remembers the choice; on phones it becomes a Drawer. No chart library, no build step, ESM-only vanilla JavaScript, full light and dark mode.",
+  "features": [
+    "Eight pages — overview, analytics, orders, forms, profile, settings, sign-in, 404",
+    "No chart library — inline SVG line/area charts, CSS bar charts, conic-gradient donut",
+    "Sidebar collapses to an icon rail and remembers the choice across pages",
+    "Mobile navigation is a native &lt;dialog&gt; Drawer, not a hand-rolled panel",
+    "Orders table with search, select-all indeterminate state and a bulk-action bar",
+    "Uses .table-stacked so tables reflow to labelled blocks on phones",
+    "Forms page exercises Combobox, Datepicker, OTP input, password Strength and Range",
+    "Tabbed settings with a static destructive confirmation dialog",
+    "Content grid uses minmax(0, 1fr) so wide tables never blow out the layout",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "admin-dashboard"
+  ]
+}

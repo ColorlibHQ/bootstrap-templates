@@ -1,0 +1,186 @@
+/*!
+ * Caseworth — Bootstrap 6 law & accountancy template
+ *
+ * Design language: ink on paper. A serif face for everything structural, a deep
+ * navy accent, hairline rules instead of cards, and generous measure. Where the
+ * other templates in this set lean on photography and colour, this one leans on
+ * typography — which is what professional-services sites actually trade on.
+ *
+ * The structural idea carrying the identity is a numbered practice index set as
+ * a two-column table of contents, and a fee table published in the open.
+ */
+
+:root {
+  --brand: oklch(42% 0.09 255);
+  --kit-section-y: 5rem;
+  --cw-rule: color-mix(in oklab, var(--bs-fg-body), transparent 86%);
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 7rem; } }
+
+[data-bs-theme="light"] {
+  --bs-bg-body: oklch(98.5% 0.004 90);
+  --bs-bg-2: oklch(96% 0.006 90);
+}
+
+.serif,
+.section-title,
+.lede,
+.practice-name {
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.012em;
+}
+
+.lede { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); line-height: 1.6; }
+
+/* ---------------------------------------------------------------
+   Header
+   --------------------------------------------------------------- */
+
+.util-bar {
+  background: var(--bs-bg-2);
+  border-bottom: 1px solid var(--cw-rule);
+  font-size: 0.8125rem;
+  padding-block: 0.5rem;
+}
+
+.wordmark {
+  font-family: ui-serif, Georgia, serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.wordmark span { color: var(--bs-fg-primary); }
+
+/* ---------------------------------------------------------------
+   Hero
+   --------------------------------------------------------------- */
+
+.masthead {
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+  border-bottom: 1px solid var(--cw-rule);
+}
+
+.masthead-title {
+  font-size: clamp(2.4rem, 1.2rem + 4.6vw, 4.5rem);
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.masthead-figure .ph {
+  aspect-ratio: 4 / 5;
+  border-radius: 0;
+}
+
+/* A hairline caption rule under the photograph, like a plate in a book. */
+.figure-note {
+  border-top: 1px solid var(--cw-rule);
+  padding-top: 0.6rem;
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--bs-fg-3);
+}
+
+/* ---------------------------------------------------------------
+   Practice index — set as a table of contents
+   --------------------------------------------------------------- */
+
+.practice-index { border-top: 1px solid var(--cw-rule); }
+
+.practice-item {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--cw-rule);
+  text-decoration: none;
+  color: inherit;
+}
+
+.practice-item:hover { background: var(--bs-bg-2); }
+
+.practice-item .idx {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.8125rem;
+  color: var(--bs-fg-3);
+}
+
+.practice-name { font-size: 1.35rem; }
+
+.practice-item .go {
+  font-size: 0.8125rem;
+  color: var(--bs-fg-primary);
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------
+   People
+   --------------------------------------------------------------- */
+
+.person { border-top: 1px solid var(--cw-rule); padding-top: 1.25rem; }
+.person .ph { aspect-ratio: 1; border-radius: 0; margin-bottom: 1rem; }
+.person-role { font-size: 0.8125rem; color: var(--bs-fg-3); }
+
+.cred {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bs-fg-primary);
+}
+
+/* ---------------------------------------------------------------
+   Fees table + enquiry
+   --------------------------------------------------------------- */
+
+.fee-note {
+  border-left: 3px solid var(--bs-primary-base);
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.enquiry {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--cw-rule);
+  background: var(--bs-bg-body);
+}
+
+/* ---------------------------------------------------------------
+   Insights + sub page
+   --------------------------------------------------------------- */
+
+.insight {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--cw-rule);
+}
+
+.insight:hover .insight-title { color: var(--bs-fg-primary); }
+.insight-title { font-family: ui-serif, Georgia, serif; font-size: 1.2rem; }
+
+.sub-head {
+  padding-block: 3.5rem;
+  border-bottom: 1px solid var(--cw-rule);
+}
+
+.contact-rail {
+  position: sticky;
+  top: 6rem;
+  padding: 1.5rem;
+  border: 1px solid var(--cw-rule);
+  background: var(--bs-bg-2);
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--cw-rule);
+}
+
+.spec-row:last-child { border-bottom: 0; }

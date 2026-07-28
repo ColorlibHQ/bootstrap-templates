@@ -1,0 +1,25 @@
+{
+  "slug": "bs6-navigation",
+  "kind": "pack",
+  "title": "Bootstrap 6 Navigation — 8 Free Navbar, Menu &amp; Sidebar Examples",
+  "excerpt": "Eight free Bootstrap 6 navigation examples — navbar with drawer, menus, nav overflow, tabs, sidebar rail, centered masthead, breadcrumbs and ScrollSpy.",
+  "yoastTitle": "Bootstrap 6 Navigation — 8 Free Navbar &amp; Menu Examples",
+  "yoastDesc": "Eight free Bootstrap 6 navigation examples covering navbars, menus, the new Nav overflow, tabs, sidebar rails, breadcrumbs and the rebuilt ScrollSpy. Doubles as a v5 migration reference.",
+  "intro": "Eight <strong>Bootstrap 6</strong> navigation patterns, each on its own page. Navigation changed more between v5 and v6 than any other area of the framework, so this pack doubles as a migration reference &#8212; every example calls out what moved and why.",
+  "note": "The headline changes: <code>.navbar-collapse</code> no longer exists and the mobile menu is a native <code>&lt;dialog class=&quot;drawer&quot;&gt;</code>; Dropdown became Menu with no wrapper and no toggle class; Nav overflow is entirely new; breadcrumb separators are real elements; and ScrollSpy was rebuilt on IntersectionObserver with <code>offset</code> replaced by <code>top-margin</code>.",
+  "summary": "Bootstrap 6 Navigation is a pack of eight navigation examples: a standard navbar with drawer mobile menu, dropdown menus built on the new Menu component, the new Nav overflow that folds items into a menu automatically, tabs and pills, an application sidebar rail, a centered editorial masthead, breadcrumbs with pagination, and a working ScrollSpy table of contents. Each page explains what changed from Bootstrap 5. ESM-only, no build step, full light and dark mode.",
+  "features": [
+    "Eight navigation patterns, each on its own page with prev/next navigation",
+    "Standard navbar showing the v6 drawer pattern that replaces .navbar-collapse",
+    "Dropdown menus using the new Menu component, positioned by Floating UI",
+    "Nav overflow — items fold into a menu automatically, new in v6",
+    "Tabs with fade panels, plus the pill variant",
+    "Application sidebar rail, with the .navbar-nav column-by-default gotcha explained",
+    "Centered editorial masthead using a three-column grid",
+    "Breadcrumbs with the new .breadcrumb-link and real divider elements, plus pagination",
+    "Working ScrollSpy contents rebuilt on IntersectionObserver, with top-margin",
+    "Every example notes what changed from Bootstrap 5 — a migration reference as much as a pack",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": ["bootstrap-6", "ui-packs"]
+}

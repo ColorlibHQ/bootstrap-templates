@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern — Free Bootstrap 6 Hotel &amp; Resort Website Template</title>
+<meta name="description" content="Lantern is a free Bootstrap 6 hotel template — full-bleed stay hero, a date-range booking bar that docks on scroll, room strip, gallery lightbox and a room detail page.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navScroll" data-bs-top-margin="96px" data-bs-smooth-scroll="true">
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container-fluid px-4 lg:px-5">
+      <a class="wordmark" href="index.html">Lantern</a>
+
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-3" id="navScroll">
+            <li class="nav-item"><a class="nav-link" href="#rooms">Rooms</a></li>
+            <li class="nav-item"><a class="nav-link" href="#dining">Dining</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#find">Find us</a></li>
+          </ul>
+        </div>
+      </dialog>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Full-viewport stay hero -->
+<section class="stay">
+  <img class="hero-bg" src="img/stay.jpg" alt="" width="1800" height="1200" loading="eager">
+  <div class="stay-inner">
+    <p class="stay-eyebrow mb-4"><span>Amalfi Coast</span><span>Est. 1927</span><span>34 rooms</span></p>
+    <h1 class="stay-title mb-4">Somewhere the evening takes its time</h1>
+    <p class="fs-lg mb-0" style="max-width:34rem;opacity:.88">
+      A restored cliffside villa above Praiano — sea-facing rooms, a kitchen
+      that shops at the harbour each morning, and nowhere in particular to be.
+    </p>
+  </div>
+  <div class="stay-rail" aria-hidden="true"><span>Praiano · Salerno · Italia</span></div>
+</section>
+
+<!-- Booking bar straddling the seam -->
+<div class="book-bar-wrap">
+  <form class="book-bar" id="bookBar" data-demo-form data-bs-validate novalidate>
+    <div class="book-grid">
+
+      <div class="book-field form-field">
+        <label class="form-label" for="bkIn">Check in</label>
+        <input type="text" class="form-control" id="bkIn" data-bs-toggle="datepicker" autocomplete="off" placeholder="Add date" required>
+        <div class="invalid-feedback">Pick an arrival date.</div>
+      </div>
+
+      <div class="book-field form-field">
+        <label class="form-label" for="bkOut">Check out</label>
+        <input type="text" class="form-control" id="bkOut" data-bs-toggle="datepicker" autocomplete="off" placeholder="Add date" required>
+        <div class="invalid-feedback">Pick a departure date.</div>
+      </div>
+
+      <div class="book-field">
+        <label class="form-label" for="bkRoom">Room</label>
+        <button class="form-control combobox-toggle" type="button" id="bkRoom" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="room" data-bs-placeholder="Any room">
+          <span class="combobox-value">Any room</span>
+          <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+        </button>
+        <div class="menu">
+          <button class="menu-item" type="button" data-bs-value="garden">Garden double</button>
+          <button class="menu-item" type="button" data-bs-value="sea">Sea-view double</button>
+          <button class="menu-item" type="button" data-bs-value="terrace">Terrace suite</button>
+          <button class="menu-item" type="button" data-bs-value="tower">Tower room</button>
+        </div>
+      </div>
+
+      <div class="book-field">
+        <label class="form-label" for="bkGuests">Guests</label>
+        <div class="input-group">
+          <button class="btn-outline theme-secondary" type="button" data-guest-step="-1" aria-label="One fewer guest">−</button>
+          <input type="text" class="form-control text-center" id="bkGuests" value="2" readonly aria-live="polite">
+          <button class="btn-outline theme-secondary" type="button" data-guest-step="1" aria-label="One more guest">+</button>
+        </div>
+      </div>
+
+      <div class="book-field d-grid">
+        <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Checking ✓">Check availability</button>
+      </div>
+
+    </div>
+    <p class="fs-xs fg-3 mb-0 mt-3" id="bkNights">Best rate guaranteed when you book direct · free cancellation up to 7 days before arrival</p>
+  </form>
+</div>
+
+<!-- Compact docked copy of the booking CTA -->
+<div class="book-dock" id="bookDock">
+  <div class="container-fluid px-0 d-flex flex-wrap align-items-center justify-content-between gap-3">
+    <span class="fs-sm fw-semibold">Lantern · Praiano</span>
+    <span class="fs-sm fg-2 d-none md:d-inline" id="dockSummary">Add dates for live rates</span>
+    <a class="btn-solid theme-primary btn-sm" href="#top" data-scroll-top>Check availability</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- Welcome -->
+  <section class="section">
+    <div class="container">
+      <div class="row g-6 align-items-center">
+        <div class="lg:col-6">
+          <p class="eyebrow fs-sm fg-primary mb-3">The house</p>
+          <h2 class="section-title fs-4xl mb-4">Thirty-four rooms, one very long lunch</h2>
+          <p class="fg-2 mb-4">
+            Lantern was a lemon farmer's house before it was a hotel, and it still
+            behaves like one. Breakfast runs until eleven because nobody has the
+            heart to clear it. The terrace faces west, which is the only defensible
+            direction for a terrace to face.
+          </p>
+          <p class="fg-2 mb-5">
+            We are ten minutes above the water by the old stair, and forty minutes
+            from Amalfi by boat when the sea allows it.
+          </p>
+          <div class="row g-4">
+            <div class="col-6 md:col-3"><p class="fs-2xl fw-semibold mb-0 fg-primary">1927</p><p class="fs-xs fg-3 mb-0">the house was built</p></div>
+            <div class="col-6 md:col-3"><p class="fs-2xl fw-semibold mb-0 fg-primary">34</p><p class="fs-xs fg-3 mb-0">rooms and suites</p></div>
+            <div class="col-6 md:col-3"><p class="fs-2xl fw-semibold mb-0 fg-primary">9.4</p><p class="fs-xs fg-3 mb-0">guest rating</p></div>
+            <div class="col-6 md:col-3"><p class="fs-2xl fw-semibold mb-0 fg-primary">2</p><p class="fs-xs fg-3 mb-0">minutes to the sea</p></div>
+          </div>
+        </div>
+        <div class="lg:col-6">
+          <div class="row g-3">
+            <div class="col-7">
+              <div class="ph ph-3x4 rounded-4"><img src="img/house-1.jpg" alt="The terrace at golden hour" width="700" height="933" loading="lazy"></div>
+            </div>
+            <div class="col-5">
+              <div class="ph ph-1x1 rounded-4 mb-3"><img src="img/house-2.jpg" alt="Lemon trees in the garden" width="500" height="500" loading="lazy"></div>
+              <div class="ph ph-1x1 rounded-4"><img src="img/house-3.jpg" alt="A quiet reading corner" width="500" height="500" loading="lazy"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms -->
+  <section class="section bg-2" id="rooms">
+    <div class="container mb-6">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3">
+        <div>
+          <p class="eyebrow fs-sm fg-primary mb-2">Rooms</p>
+          <h2 class="section-title fs-4xl mb-0">Every one of them faces something</h2>
+        </div>
+        <p class="fg-2 fs-sm mb-0">Rates shown are per night, breakfast included</p>
+      </div>
+    </div>
+
+    <div class="room-strip">
+      <a class="room-card" href="room.html">
+        <div class="room-media">
+          <div class="ph"><img src="img/room-1.jpg" alt="Sea-view double with shuttered windows" width="800" height="600" loading="lazy"></div>
+          <span class="room-price">from €240</span>
+        </div>
+        <h3 class="room-name mb-1">Sea-view double</h3>
+        <p class="fg-3 fs-sm mb-0">28 m² · terrace · king bed</p>
+      </a>
+      <a class="room-card" href="room.html">
+        <div class="room-media">
+          <div class="ph"><img src="img/room-2.jpg" alt="Garden double opening onto the lemon terrace" width="800" height="600" loading="lazy"></div>
+          <span class="room-price">from €180</span>
+        </div>
+        <h3 class="room-name mb-1">Garden double</h3>
+        <p class="fg-3 fs-sm mb-0">24 m² · garden access · twin or king</p>
+      </a>
+      <a class="room-card" href="room.html">
+        <div class="room-media">
+          <div class="ph"><img src="img/room-3.jpg" alt="Terrace suite with a private pergola" width="800" height="600" loading="lazy"></div>
+          <span class="room-price">from €390</span>
+        </div>
+        <h3 class="room-name mb-1">Terrace suite</h3>
+        <p class="fg-3 fs-sm mb-0">46 m² · pergola · separate sitting room</p>
+      </a>
+      <a class="room-card" href="room.html">
+        <div class="room-media">
+          <div class="ph"><img src="img/room-4.jpg" alt="Tower room under the eaves" width="800" height="600" loading="lazy"></div>
+          <span class="room-price">from €310</span>
+        </div>
+        <h3 class="room-name mb-1">Tower room</h3>
+        <p class="fg-3 fs-sm mb-0">32 m² · 360° outlook · one flight up</p>
+      </a>
+    </div>
+
+    <div class="container text-center mt-5">
+      <a class="btn-outline theme-secondary btn-lg" href="room.html">See a full room page</a>
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <section class="section">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-4">
+          <p class="eyebrow fs-sm fg-primary mb-2">Included</p>
+          <h2 class="section-title fs-4xl mb-3">What comes with the room</h2>
+          <p class="fg-2 mb-0">No resort fee, no charge for the sun loungers, and the coffee downstairs is free all day.</p>
+        </div>
+        <div class="lg:col-8">
+          <div class="row g-0 lg:gx-5">
+            <div class="md:col-6">
+              <div class="amenity">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1.5 11.5c1.6 0 1.6 1 3.25 1s1.65-1 3.25-1 1.65 1 3.25 1 1.65-1 3.25-1M1.5 8c1.6 0 1.6 1 3.25 1S6.4 8 8 8s1.65 1 3.25 1S12.9 8 14.5 8" stroke-linecap="round"/></svg>
+                <div><p class="fw-semibold mb-1">Sea pool &amp; loungers</p><p class="fg-3 fs-sm mb-0">Open 7am to sunset, towels on the rail</p></div>
+              </div>
+              <div class="amenity">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3.5 14V5.5a4.5 4.5 0 0 1 9 0V14M6 14V8m4 6V8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div><p class="fw-semibold mb-1">Breakfast until eleven</p><p class="fg-3 fs-sm mb-0">On the terrace, or brought to the room</p></div>
+              </div>
+              <div class="amenity">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 4.5v3.8l2.5 1.5" stroke-linecap="round"/></svg>
+                <div><p class="fw-semibold mb-1">Late checkout on Sundays</p><p class="fg-3 fs-sm mb-0">Until 4pm, no charge, no asking</p></div>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="amenity">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 13h12M4 13V6l4-3.5L12 6v7" stroke-linejoin="round"/><path d="M6.75 13v-3h2.5v3"/></svg>
+                <div><p class="fw-semibold mb-1">Harbour transfer</p><p class="fg-3 fs-sm mb-0">Twice daily, free for stays over three nights</p></div>
+              </div>
+              <div class="amenity">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 14s5.5-3.2 5.5-7a5.5 5.5 0 0 0-11 0c0 3.8 5.5 7 5.5 7" stroke-linejoin="round"/><circle cx="8" cy="7" r="2"/></svg>
+                <div><p class="fw-semibold mb-1">Walking notes</p><p class="fg-3 fs-sm mb-0">Hand-drawn, for the paths the maps miss</p></div>
+              </div>
+              <div class="amenity">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2 6.5h12" /></svg>
+                <div><p class="fw-semibold mb-1">Dogs, gladly</p><p class="fg-3 fs-sm mb-0">Bowl and bed in the room, no extra charge</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dining -->
+  <section class="section bg-2" id="dining">
+    <div class="container">
+      <div class="row g-6 align-items-center">
+        <div class="lg:col-6 lg:order-2">
+          <p class="eyebrow fs-sm fg-primary mb-3">Dining</p>
+          <h2 class="section-title fs-4xl mb-4">The menu is short because the boat was</h2>
+          <p class="fg-2 mb-4">
+            Chef Lucia writes the card at nine each morning, after the harbour.
+            Four antipasti, three primi, two secondi, and whatever the lemon
+            trees are doing that week. Dinner is served from seven.
+          </p>
+          <ul class="fg-2 mb-5">
+            <li class="mb-2">Terrace restaurant — open to non-residents, book ahead</li>
+            <li class="mb-2">Cellar bar — 90 bottles, most of them from Campania</li>
+            <li>Packed lunches for the coast path, ordered the night before</li>
+          </ul>
+          <button class="btn-solid theme-primary btn-lg" type="button" data-bs-toggle="dialog" data-bs-target="#tableDialog">Reserve a table</button>
+        </div>
+        <div class="lg:col-6 lg:order-1">
+          <div class="ph ph-4x3 rounded-4"><img src="img/dining.jpg" alt="A table laid on the terrace at dusk" width="900" height="675" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <div class="container mb-5">
+      <p class="eyebrow fs-sm fg-primary mb-2">Gallery</p>
+      <h2 class="section-title fs-4xl mb-0">The house, mostly at the good hour</h2>
+    </div>
+    <div class="container-fluid px-4 lg:px-5">
+      <div class="mosaic">
+        <button type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="The terrace, seven o'clock">
+          <div class="ph"><img src="img/gal-1.jpg" alt="The terrace at seven o'clock" width="900" height="900" loading="lazy"></div>
+        </button>
+        <button type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Stair down to the water">
+          <div class="ph"><img src="img/gal-2.jpg" alt="The stair down to the water" width="600" height="600" loading="lazy"></div>
+        </button>
+        <button type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Room 12, morning">
+          <div class="ph"><img src="img/gal-3.jpg" alt="Room 12 in the morning" width="600" height="600" loading="lazy"></div>
+        </button>
+        <button type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="The cellar bar">
+          <div class="ph"><img src="img/gal-4.jpg" alt="The cellar bar" width="600" height="600" loading="lazy"></div>
+        </button>
+        <button type="button" data-bs-toggle="dialog" data-bs-target="#lightbox" data-cap="Lemon terrace after rain">
+          <div class="ph"><img src="img/gal-5.jpg" alt="The lemon terrace after rain" width="600" height="600" loading="lazy"></div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offers -->
+  <section class="section bg-2" id="offers">
+    <div class="container">
+      <p class="eyebrow fs-sm fg-primary mb-2">Offers</p>
+      <h2 class="section-title fs-4xl mb-6">Reasons to stay a little longer</h2>
+      <div class="row g-4">
+        <div class="md:col-4">
+          <div class="offer">
+            <p class="offer-flag mb-3">Four nights</p>
+            <h3 class="fs-xl fw-semibold mb-2">The fourth is ours</h3>
+            <p class="fg-2 fs-sm mb-4">Stay four nights between October and April and we take the last one off the bill.</p>
+            <p class="fs-sm fg-3 mb-0">Available 1 Oct — 30 Apr</p>
+          </div>
+        </div>
+        <div class="md:col-4">
+          <div class="offer">
+            <p class="offer-flag mb-3">Out of season</p>
+            <h3 class="fs-xl fw-semibold mb-2">Lemons and nobody else</h3>
+            <p class="fg-2 fs-sm mb-4">November rates, harbour transfer included, and the terrace largely to yourself.</p>
+            <p class="fs-sm fg-3 mb-0">From €140 per night</p>
+          </div>
+        </div>
+        <div class="md:col-4">
+          <div class="offer">
+            <p class="offer-flag mb-3">Table &amp; room</p>
+            <h3 class="fs-xl fw-semibold mb-2">Dinner, then bed</h3>
+            <p class="fg-2 fs-sm mb-4">A five-course tasting for two on the terrace, and a sea-view room to fall into afterwards.</p>
+            <p class="fs-sm fg-3 mb-0">From €310 for two</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <div class="lg:col-4">
+          <p class="eyebrow fs-sm fg-primary mb-2">Guests</p>
+          <h2 class="section-title fs-4xl mb-3">9.4 from 612 stays</h2>
+          <div class="stars mb-3" role="img" aria-label="Rated 4.7 out of 5">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m8 1.5 1.9 4 4.35.6-3.15 3.05.76 4.35L8 11.45 4.14 13.5l.76-4.35L1.75 6.1 6.1 5.5z"/></svg>
+          </div>
+          <p class="fg-2 fs-sm mb-0">Collected after checkout, published unedited.</p>
+        </div>
+        <div class="lg:col-8">
+          <div class="row g-4">
+            <div class="md:col-6">
+              <div class="quote-card">
+                <p class="mb-4">"We came for three nights and rebooked from the terrace on the second morning. The staff remember what you drink by day two, which sounds small and isn't."</p>
+                <div class="d-flex align-items-center gap-3">
+                  <span class="avatar"><span class="avatar-initials">HM</span></span>
+                  <div><p class="fw-semibold fs-sm mb-0">Hannah M.</p><p class="fg-3 fs-xs mb-0">Terrace suite · September</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="quote-card">
+                <p class="mb-4">"The stair down to the water is genuinely steep and genuinely worth it. Ask for the walking notes — they sent us up a path we'd never have found."</p>
+                <div class="d-flex align-items-center gap-3">
+                  <span class="avatar"><span class="avatar-initials">PT</span></span>
+                  <div><p class="fw-semibold fs-sm mb-0">Piet T.</p><p class="fg-3 fs-xs mb-0">Garden double · June</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="quote-card">
+                <p class="mb-4">"Dinner was four courses of things we couldn't pronounce and all of it was right. The cellar bar afterwards is the actual reason to stay in rather than go out."</p>
+                <div class="d-flex align-items-center gap-3">
+                  <span class="avatar"><span class="avatar-initials">RA</span></span>
+                  <div><p class="fw-semibold fs-sm mb-0">Rosa A.</p><p class="fg-3 fs-xs mb-0">Sea-view double · May</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="quote-card">
+                <p class="mb-4">"Brought the dog, which nobody blinked at. Bed and bowl were waiting in the room. Small thing, made the whole trip possible."</p>
+                <div class="d-flex align-items-center gap-3">
+                  <span class="avatar"><span class="avatar-initials">DK</span></span>
+                  <div><p class="fw-semibold fs-sm mb-0">Dana K.</p><p class="fg-3 fs-xs mb-0">Tower room · October</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Find us + FAQ -->
+  <section class="section bg-2" id="find">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-5">
+          <p class="eyebrow fs-sm fg-primary mb-2">Find us</p>
+          <h2 class="section-title fs-4xl mb-4">Getting here</h2>
+          <p class="fg-2 mb-4">
+            Via Terramare 4, 84010 Praiano SA, Italy
+          </p>
+          <div class="spec-row"><span class="fg-3 fs-sm">Naples airport</span><span class="fs-sm">75 min by car</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Salerno station</span><span class="fs-sm">55 min by car</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Amalfi</span><span class="fs-sm">40 min by boat</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Nearest beach</span><span class="fs-sm">2 min down the stair</span></div>
+          <p class="fs-sm fg-3 mt-4 mb-0">Parking is on the road above; we carry the bags down.</p>
+        </div>
+        <div class="lg:col-7">
+          <p class="eyebrow fs-sm fg-primary mb-2">Before you book</p>
+          <h2 class="section-title fs-4xl mb-4">Questions we get</h2>
+          <div class="accordion">
+            <details class="accordion-item" name="hfaq" open>
+              <summary class="accordion-header">Is the hotel suitable if stairs are difficult?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body fg-2">Partly. The main house has a lift serving every floor, and eight ground-floor rooms open directly onto the garden. The stair to the beach has 187 steps and no alternative — tell us when you book and we'll arrange the boat instead.</div>
+            </details>
+            <details class="accordion-item" name="hfaq">
+              <summary class="accordion-header">What is the cancellation policy?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body fg-2">Free cancellation up to seven days before arrival on direct bookings. Inside seven days we charge the first night. Non-refundable rates are marked as such and are about 12% cheaper.</div>
+            </details>
+            <details class="accordion-item" name="hfaq">
+              <summary class="accordion-header">Are children welcome?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body fg-2">Yes, at any age. Cots are free, extra beds are €35 a night, and the kitchen will cook off-menu for small people without being asked twice. The pool has no shallow end, so under-8s need an adult in the water.</div>
+            </details>
+            <details class="accordion-item" name="hfaq">
+              <summary class="accordion-header">When is the hotel closed?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body fg-2">From the second week of January until the first of March, while the terrace gets rebuilt each year and the family goes somewhere colder.</div>
+            </details>
+          </div>        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="lg:col-7 text-center">
+          <h2 class="section-title fs-3xl mb-3">Two letters a year, both about lemons</h2>
+          <p class="fg-2 mb-5">When rates change and when we reopen. Nothing else.</p>
+          <form class="d-flex flex-wrap justify-content-center gap-3" data-demo-form data-bs-validate novalidate>
+            <div class="form-field" style="min-width:min(100%,22rem)">
+              <label class="visually-hidden" for="nlEmail">Email address</label>
+              <input type="email" class="form-control" id="nlEmail" placeholder="you@example.com" required>
+              <div class="invalid-feedback">A valid email, please.</div>
+            </div>
+            <button class="btn-solid theme-primary" type="submit" data-done-text="Subscribed ✓">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer section pb-5 bg-2">
+  <div class="container">
+    <div class="row g-5">
+      <div class="md:col-4">
+        <p class="wordmark fg-1 d-inline-block mb-3">Lantern</p>
+        <p class="fg-3 fs-sm mb-0">Via Terramare 4<br>84010 Praiano SA<br>Italy</p>
+      </div>
+      <div class="md:col-2">
+        <p class="fw-semibold fs-sm mb-3">Stay</p>
+        <ul class="list-unstyled fs-sm fg-3 mb-0">
+          <li class="mb-2"><a href="#rooms">Rooms</a></li>
+          <li class="mb-2"><a href="#offers">Offers</a></li>
+          <li class="mb-2"><a href="room.html">Room detail</a></li>
+        </ul>
+      </div>
+      <div class="md:col-2">
+        <p class="fw-semibold fs-sm mb-3">House</p>
+        <ul class="list-unstyled fs-sm fg-3 mb-0">
+          <li class="mb-2"><a href="#dining">Dining</a></li>
+          <li class="mb-2"><a href="#gallery">Gallery</a></li>
+          <li class="mb-2"><a href="#find">Find us</a></li>
+        </ul>
+      </div>
+      <div class="md:col-4">
+        <p class="fw-semibold fs-sm mb-3">Reception</p>
+        <p class="fs-sm fg-3 mb-1"><a href="tel:+390890000000">+39 089 000 0000</a></p>
+        <p class="fs-sm fg-3 mb-3"><a href="mailto:stay@lantern.example">stay@lantern.example</a></p>
+        <p class="fs-xs fg-3 mb-0">Open 7am–11pm daily · closed mid-January to March</p>
+      </div>
+    </div>
+    <hr class="my-5">
+    <p class="fs-xs fg-3 mb-0">&copy; <span data-year></span> Lantern. A free Bootstrap 6 template — the hotel is fictional.</p>
+  </div>
+</footer>
+
+<!-- Gallery lightbox -->
+<dialog class="dialog dialog-lg" id="lightbox" aria-labelledby="lightboxCap">
+  <div class="dialog-header">
+    <h5 class="dialog-title" id="lightboxCap">Gallery</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <div class="dialog-body">
+    <div class="ph ph-4x3 rounded-3"><img id="lightboxImg" src="img/gal-1.jpg" alt="" width="900" height="675"></div>
+  </div>
+</dialog>
+
+<!-- Table reservation -->
+<dialog class="dialog" id="tableDialog" aria-labelledby="tableTitle">
+  <div class="dialog-header">
+    <h5 class="dialog-title" id="tableTitle">Reserve a table</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <form class="dialog-body vstack gap-3" id="tableForm" data-demo-form data-bs-validate novalidate>
+    <div class="form-field">
+      <label class="form-label" for="tbDate">Date</label>
+      <input type="text" class="form-control" id="tbDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…" required>
+      <div class="invalid-feedback">Pick a date.</div>
+    </div>
+    <div>
+      <label class="form-label" for="tbTime">Sitting</label>
+      <button class="form-control combobox-toggle" type="button" id="tbTime" data-bs-toggle="combobox" data-bs-name="sitting" data-bs-placeholder="Choose a time…">
+        <span class="combobox-value">Choose a time…</span>
+        <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+      </button>
+      <div class="menu">
+        <button class="menu-item" type="button" data-bs-value="1900">19:00</button>
+        <button class="menu-item" type="button" data-bs-value="1930">19:30</button>
+        <button class="menu-item" type="button" data-bs-value="2000">20:00</button>
+        <button class="menu-item" type="button" data-bs-value="2100">21:00</button>
+      </div>
+    </div>
+    <div class="form-field">
+      <label class="form-label" for="tbName">Name</label>
+      <input type="text" class="form-control" id="tbName" placeholder="Your name" required>
+      <div class="invalid-feedback">We need a name for the book.</div>
+    </div>
+    <div class="form-field">
+      <div class="switch"><input type="checkbox" id="tbDietary" role="switch" switch></div>
+      <label for="tbDietary">Someone in the party has a dietary requirement</label>
+    </div>
+  </form>
+  <div class="dialog-footer">
+    <button type="button" class="btn-text" data-bs-dismiss="dialog">Cancel</button>
+    <button type="submit" form="tableForm" class="btn-solid theme-primary" data-done-text="Reserved ✓">Request the table</button>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

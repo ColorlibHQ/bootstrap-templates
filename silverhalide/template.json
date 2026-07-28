@@ -1,0 +1,96 @@
+{
+  "slug": "silverhalide",
+  "title": "Silver Halide — Free Bootstrap 6 Photography Website Template",
+  "excerpt": "A free dark, full-bleed Bootstrap 6 photography portfolio — mosaic gallery, native dialog lightbox, horizontal series strip and a booking enquiry.",
+  "yoastTitle": "Silver Halide — Free Bootstrap 6 Photography Website Template",
+  "yoastDesc": "Free dark Bootstrap 6 photography portfolio template with a full-bleed mosaic gallery, native <dialog> lightbox, scroll-snap series strip and an enquiry form using Combobox, Datepicker and Chip input.",
+  "intro": "Silver Halide is a free, premium <strong>Bootstrap 6</strong> portfolio template for photographers. It is deliberately dark and chrome-free: a full-viewport hero, a centred wordmark floating over it with the navigation split either side, and a full-bleed mosaic gallery that never sits inside a container.",
+  "note": "The lightbox is the native <code>&lt;dialog&gt;</code> element rather than a plugin — the browser supplies the backdrop, the focus trap and the Escape handling, so the whole feature costs about fifteen lines of JavaScript. The enquiry form adds Combobox, Datepicker and Chip input, none of which exist in Bootstrap 5.",
+  "summary": "Silver Halide is a free, premium Bootstrap 6 photography portfolio template. Dark by default, with a full-viewport hero, a centred wordmark header floating over it, a full-bleed mosaic gallery, a scroll-snap series strip and a native <dialog> lightbox. Rates tiers, an about section with prose typography, and a booking enquiry built on Combobox, Datepicker and Chip input. ESM-only vanilla JavaScript, no build step.",
+  "features": [
+    "Dark-first design with a full-viewport hero and almost no page chrome",
+    "Centred wordmark header with navigation split either side, floating over the hero",
+    "Full-bleed mosaic gallery with asymmetric spans — no container, no .row grid",
+    "Lightbox built on the native <dialog> element: browser backdrop, focus trap and Escape for free",
+    "Horizontal scroll-snap series strip",
+    "Rates tiers and an about section using .prose typography",
+    "Booking enquiry with Combobox commission type, Datepicker and Chip input usage tags",
+    "Retheme the whole site by changing a single --brand token",
+    "Light mode included via data-bs-theme, remembered across visits",
+    "Native form validation with data-bs-validate and :user-invalid",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "photography"
+  ],
+  "images": [
+    {
+      "name": "stage",
+      "q": "moody portrait dramatic window light",
+      "w": 1800,
+      "h": 1200
+    },
+    {
+      "name": "frame-1",
+      "q": "lisbon alfama narrow street morning",
+      "w": 800,
+      "h": 800
+    },
+    {
+      "name": "frame-2",
+      "q": "boatyard wooden fishing boat repair",
+      "w": 800,
+      "h": 800
+    },
+    {
+      "name": "frame-3",
+      "q": "studio portrait woman black backdrop",
+      "w": 800,
+      "h": 800
+    },
+    {
+      "name": "frame-4",
+      "q": "salt flats evaporation ponds",
+      "w": 800,
+      "h": 800
+    },
+    {
+      "name": "frame-5",
+      "q": "market stall",
+      "w": 800,
+      "h": 800,
+      "fallback": "market"
+    },
+    {
+      "name": "frame-6",
+      "q": "city rooftops winter fog",
+      "w": 800,
+      "h": 800
+    },
+    {
+      "name": "frame-7",
+      "q": "man cooking home kitchen candid",
+      "w": 800,
+      "h": 800
+    },
+    {
+      "name": "frame-8",
+      "q": "ferry boat harbour last light",
+      "w": 800,
+      "h": 800
+    },
+    {
+      "name": "frame-9",
+      "q": "quarry gravel road landscape",
+      "w": 800,
+      "h": 800
+    },
+    {
+      "name": "frame-10",
+      "q": "dance rehearsal studio movement",
+      "w": 800,
+      "h": 800
+    }
+  ]
+}

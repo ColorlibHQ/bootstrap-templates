@@ -1,0 +1,83 @@
+{
+  "slug": "pressroom",
+  "title": "Pressroom \u2014 Free Bootstrap 6 Blog &amp; Magazine Website Template",
+  "excerpt": "A free two-page Bootstrap 6 magazine template \u2014 featured lead, section rails, author pages and a full article layout with prose typography.",
+  "yoastTitle": "Pressroom \u2014 Free Bootstrap 6 Blog &amp; Magazine Website Template",
+  "yoastDesc": "Free Bootstrap 6 blog and magazine template with a featured lead story, category rails, author bylines, newsletter capture and a full long-form article layout.",
+  "intro": "Pressroom is a free, premium <strong>Bootstrap 6</strong> template for blogs, magazines and editorial sites. The homepage is built like a real front page &#8212; a lead story, a secondary rail, section blocks and a most-read list &#8212; rather than an endless grid of identical cards.",
+  "note": "The article page uses Bootstrap 6&#8217;s <code>.prose</code> scope for rich typography without touching the rest of the page, with a sticky table of contents driven by the rebuilt IntersectionObserver ScrollSpy. Category filtering uses the new Combobox and Chip input.",
+  "summary": "Pressroom is a free, premium two-page Bootstrap 6 blog and magazine template. The front page carries a featured lead story, a secondary rail, category sections, a most-read list and newsletter capture; the article page adds .prose typography, a sticky ScrollSpy table of contents, author byline, share row and related posts. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages \u2014 magazine front page and a full long-form article layout",
+    "Featured lead story with a secondary rail, not a uniform card grid",
+    "Category sections, most-read list and author bylines with avatars",
+    "Article page using Bootstrap 6's .prose typography scope",
+    "Sticky table of contents driven by the rebuilt IntersectionObserver ScrollSpy",
+    "Category filtering with the new Combobox and Chip input",
+    "Newsletter capture with native :user-invalid validation",
+    "Real CC0 placeholder photography included, with provenance in CREDITS.txt",
+    "Retheme the whole site by changing a single --brand token",
+    "Full dark mode via data-bs-theme, remembered across visits",
+    "ESM-only vanilla JavaScript \u2014 no jQuery, no bundler, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "blog"
+  ],
+  "images": [
+    {
+      "name": "lead",
+      "q": "city street architecture",
+      "w": 1400,
+      "h": 840
+    },
+    {
+      "name": "post-1",
+      "q": "books library",
+      "w": 800,
+      "h": 500
+    },
+    {
+      "name": "post-2",
+      "q": "cafe interior",
+      "w": 800,
+      "h": 500
+    },
+    {
+      "name": "post-4",
+      "q": "workshop tools",
+      "w": 800,
+      "h": 500
+    },
+    {
+      "name": "post-5",
+      "q": "garden flowers",
+      "w": 800,
+      "h": 500
+    },
+    {
+      "name": "post-6",
+      "q": "bicycle",
+      "w": 800,
+      "h": 500
+    },
+    {
+      "name": "article",
+      "q": "railway station platform",
+      "w": 1400,
+      "h": 840
+    },
+    {
+      "name": "author-1",
+      "q": "man portrait",
+      "w": 200,
+      "h": 200
+    },
+    {
+      "name": "author-2",
+      "q": "woman portrait",
+      "w": 200,
+      "h": 200
+    }
+  ]
+}

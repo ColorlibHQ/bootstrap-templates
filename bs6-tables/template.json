@@ -1,0 +1,29 @@
+{
+  "slug": "bs6-tables",
+  "kind": "pack",
+  "title": "Bootstrap 6 Tables — 10 Free Table Templates",
+  "excerpt": "Ten free Bootstrap 6 table templates — striped, bordered, mobile-reflowing, sortable, filterable, paginated, selectable, rich cells, sticky header and a comparison matrix. No datatable library.",
+  "yoastTitle": "Bootstrap 6 Tables — 10 Free Table Templates",
+  "yoastDesc": "Ten free Bootstrap 6 table templates with sorting, filtering, pagination, row selection, sticky headers and pinned columns — plus the new .table-stacked mobile reflow. Vanilla JavaScript, no datatable library, no build step.",
+  "intro": "Ten <strong>Bootstrap 6</strong> table layouts covering what real admin, billing and reporting screens actually need — sorting, filtering, pagination, row selection, sticky headers, pinned columns and a pricing comparison matrix. Every variant renders the same invoice dataset, so what changes between them is the treatment rather than the content.",
+  "note": "The headline v6 addition here is <code>.table-stacked</code>: below the breakpoint each row becomes a labelled block instead of forcing a horizontal scroll, and the header cells supply the labels so there is no <code>data-label</code> duplication to maintain. The interactive variants — sorting, filtering, pagination, selection — are a few dozen lines of vanilla JavaScript operating on the rows already in the DOM, not a datatable library. That is a deliberate ceiling: it keeps the tables readable with JavaScript off and fast to a few hundred rows.",
+  "summary": "Ten free Bootstrap 6 table templates in one pack. Striped and bordered basics, the new .table-stacked mobile reflow, click-to-sort headers that set aria-sort correctly, a search and Combobox filter toolbar with an empty state, client-side pagination with real nav markup, row selection with an indeterminate select-all and a bulk-action bar, rich cells combining avatars badges and progress bars, a sticky header with a pinned first column, and a feature comparison matrix with accessible ticks and crosses. Every variant renders the same dataset. ESM-only vanilla JavaScript, no datatable library, no build step, full light and dark mode.",
+  "features": [
+    "Ten standalone table pages plus an index gallery",
+    "The new .table-stacked — rows reflow to labelled blocks on mobile, no horizontal scroll",
+    "Click-to-sort headers that set aria-sort so the direction is announced",
+    "Search and Combobox status filter with a live count and empty state",
+    "Client-side pagination with real &lt;nav&gt; markup and disabled end states",
+    "Row selection with an indeterminate select-all and a bulk-action bar",
+    "Rich cells — avatar stacks, status badges and inline progress bars",
+    "Sticky header with a pinned first column, scrolling in both directions",
+    "Feature comparison matrix with visually-hidden text on every tick and cross",
+    "Semantic markup throughout — th scope=row, captions, tabular figures",
+    "Vanilla JavaScript operating on DOM rows — no datatable library",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "ui-packs"
+  ]
+}

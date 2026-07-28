@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forecourt — Free Bootstrap 6 Car Dealership Website Template</title>
+<meta name="description" content="Forecourt is a free Bootstrap 6 car dealership template — vehicle cards led by the monthly payment, a live finance calculator with Range sliders, part exchange and a full vehicle page.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html" style="letter-spacing:-.02em">Forecourt</a>
+
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-3">
+            <li class="nav-item"><a class="nav-link" href="#stock">Used cars</a></li>
+            <li class="nav-item"><a class="nav-link" href="#finance">Finance</a></li>
+            <li class="nav-item"><a class="nav-link" href="#partex">Part exchange</a></li>
+            <li class="nav-item"><a class="nav-link" href="#branches">Branches</a></li>
+          </ul>
+        </div>
+      </dialog>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+        <a class="btn-solid theme-primary d-none md:d-inline-flex" href="tel:01138000000">0113 800 0000</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="showroom">
+  <img class="hero-bg" src="img/hero.jpg" alt="" width="1800" height="1000" loading="eager">
+  <div class="container">
+    <div class="row">
+      <div class="lg:col-7">
+        <p class="fs-sm fg-primary mb-3" style="letter-spacing:.14em;text-transform:uppercase">218 cars in stock</p>
+        <h1 class="showroom-title mb-4">The price you see is the price you pay</h1>
+        <p class="fs-lg fg-2 mb-5" style="max-width:34rem">
+          No admin fee, no delivery fee, no "preparation" line appearing at
+          signing. Every car HPI-checked and priced against the market weekly.
+        </p>
+      </div>
+    </div>
+
+    <form class="find-bar" role="search" onsubmit="return false">
+      <div class="form-control form-adorn">
+        <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 4 4" stroke-linecap="round"/></svg></div>
+        <input type="search" class="form-ghost" placeholder="Make or model" aria-label="Make or model">
+      </div>
+      <div>
+        <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-name="budget" data-bs-placeholder="Monthly budget">
+          <span class="combobox-value">Monthly budget</span>
+          <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+        </button>
+        <div class="menu">
+          <button class="menu-item" type="button" data-bs-value="150">Up to &pound;150</button>
+          <button class="menu-item" type="button" data-bs-value="250">Up to &pound;250</button>
+          <button class="menu-item" type="button" data-bs-value="400">Up to &pound;400</button>
+          <button class="menu-item" type="button" data-bs-value="600">Up to &pound;600</button>
+          <button class="menu-item" type="button" data-bs-value="any">Any</button>
+        </div>
+      </div>
+      <div>
+        <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="fuel" data-bs-placeholder="Any fuel">
+          <span class="combobox-value">Any fuel</span>
+          <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+        </button>
+        <div class="menu">
+          <button class="menu-item" type="button" data-bs-value="petrol">Petrol</button>
+          <button class="menu-item" type="button" data-bs-value="diesel">Diesel</button>
+          <button class="menu-item" type="button" data-bs-value="hybrid">Hybrid</button>
+          <button class="menu-item" type="button" data-bs-value="ev">Electric</button>
+        </div>
+      </div>
+      <button class="btn-solid theme-primary btn-lg" type="submit">Search stock</button>
+    </form>
+  </div>
+</section>
+
+<main id="main">
+
+  <!-- Stock -->
+  <section class="section" id="stock">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+        <div>
+          <h2 class="fs-3xl fw-bold mb-1" style="letter-spacing:-.03em">Latest arrivals</h2>
+          <p class="fg-3 fs-sm mb-0">Monthly figures assume 10% deposit over 48 months at 9.9% APR.</p>
+        </div>
+        <a class="btn-outline theme-secondary" href="#stock">View all 218</a>
+      </div>
+
+      <div class="row g-4">
+        <div class="sm:col-6 lg:col-4">
+          <a class="car" href="vehicle.html">
+            <div class="car-media">
+              <div class="ph"><img src="img/car-1.jpg" alt="Volvo XC40 B4 Plus Dark" width="800" height="600" loading="lazy"></div>
+              <span class="car-flag">Just in</span>
+            </div>
+            <div class="car-body">
+              <p class="car-name mb-1">Volvo XC40</p>
+              <p class="car-trim mb-0">B4 Plus Dark</p>
+              <div class="car-specs">
+                <span>2023</span><span>18,400 mi</span><span>Automatic</span>
+              </div>
+              <div class="mt-auto">
+                <p class="car-pm mb-1" data-cash="27995">&pound;733<span class="fs-xs fg-3 fw-normal">/mo</span></p>
+                <p class="car-cash mb-0">&pound;27,995 cash &middot; Mild hybrid</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sm:col-6 lg:col-4">
+          <a class="car" href="vehicle.html">
+            <div class="car-media">
+              <div class="ph"><img src="img/car-2.jpg" alt="Škoda Octavia 1.5 TSI SE L" width="800" height="600" loading="lazy"></div>
+              
+            </div>
+            <div class="car-body">
+              <p class="car-name mb-1">Škoda Octavia</p>
+              <p class="car-trim mb-0">1.5 TSI SE L</p>
+              <div class="car-specs">
+                <span>2022</span><span>31,200 mi</span><span>Manual</span>
+              </div>
+              <div class="mt-auto">
+                <p class="car-pm mb-1" data-cash="17450">&pound;457<span class="fs-xs fg-3 fw-normal">/mo</span></p>
+                <p class="car-cash mb-0">&pound;17,450 cash &middot; Petrol</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sm:col-6 lg:col-4">
+          <a class="car" href="vehicle.html">
+            <div class="car-media">
+              <div class="ph"><img src="img/car-3.jpg" alt="BMW 3 Series 320d M Sport" width="800" height="600" loading="lazy"></div>
+              
+            </div>
+            <div class="car-body">
+              <p class="car-name mb-1">BMW 3 Series</p>
+              <p class="car-trim mb-0">320d M Sport</p>
+              <div class="car-specs">
+                <span>2022</span><span>27,850 mi</span><span>Automatic</span>
+              </div>
+              <div class="mt-auto">
+                <p class="car-pm mb-1" data-cash="24990">&pound;654<span class="fs-xs fg-3 fw-normal">/mo</span></p>
+                <p class="car-cash mb-0">&pound;24,990 cash &middot; Diesel</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sm:col-6 lg:col-4">
+          <a class="car" href="vehicle.html">
+            <div class="car-media">
+              <div class="ph"><img src="img/car-4.jpg" alt="Kia EV6 GT-Line S" width="800" height="600" loading="lazy"></div>
+              <span class="car-flag">Low mileage</span>
+            </div>
+            <div class="car-body">
+              <p class="car-name mb-1">Kia EV6</p>
+              <p class="car-trim mb-0">GT-Line S</p>
+              <div class="car-specs">
+                <span>2024</span><span>9,100 mi</span><span>Automatic</span>
+              </div>
+              <div class="mt-auto">
+                <p class="car-pm mb-1" data-cash="34495">&pound;903<span class="fs-xs fg-3 fw-normal">/mo</span></p>
+                <p class="car-cash mb-0">&pound;34,495 cash &middot; Electric</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sm:col-6 lg:col-4">
+          <a class="car" href="vehicle.html">
+            <div class="car-media">
+              <div class="ph"><img src="img/car-5.jpg" alt="Ford Puma 1.0 EcoBoost ST-Line" width="800" height="600" loading="lazy"></div>
+              
+            </div>
+            <div class="car-body">
+              <p class="car-name mb-1">Ford Puma</p>
+              <p class="car-trim mb-0">1.0 EcoBoost ST-Line</p>
+              <div class="car-specs">
+                <span>2023</span><span>22,600 mi</span><span>Manual</span>
+              </div>
+              <div class="mt-auto">
+                <p class="car-pm mb-1" data-cash="16995">&pound;445<span class="fs-xs fg-3 fw-normal">/mo</span></p>
+                <p class="car-cash mb-0">&pound;16,995 cash &middot; Petrol</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sm:col-6 lg:col-4">
+          <a class="car" href="vehicle.html">
+            <div class="car-media">
+              <div class="ph"><img src="img/car-6.jpg" alt="Toyota Corolla 1.8 Hybrid Design" width="800" height="600" loading="lazy"></div>
+              
+            </div>
+            <div class="car-body">
+              <p class="car-name mb-1">Toyota Corolla</p>
+              <p class="car-trim mb-0">1.8 Hybrid Design</p>
+              <div class="car-specs">
+                <span>2023</span><span>19,300 mi</span><span>Automatic</span>
+              </div>
+              <div class="mt-auto">
+                <p class="car-pm mb-1" data-cash="20950">&pound;548<span class="fs-xs fg-3 fw-normal">/mo</span></p>
+                <p class="car-cash mb-0">&pound;20,950 cash &middot; Hybrid</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finance calculator -->
+  <section class="section bg-2" id="finance">
+    <div class="container">
+      <div class="row g-6 align-items-center">
+        <div class="lg:col-5">
+          <h2 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.03em">What it actually costs</h2>
+          <p class="fg-2 mb-4">
+            Move the sliders and every monthly figure on this page updates with
+            them — including the cards above. A calculator that does not change
+            the listings is decoration.
+          </p>
+          <p class="fs-sm fg-3 mb-0">
+            These are flat-rate illustrations for comparison, not a quotation. A
+            real agreement is calculated on a reducing balance and depends on
+            your credit profile.
+          </p>
+        </div>
+
+        <div class="lg:col-7">
+          <div class="calc">
+            <div class="row g-4">
+              <div class="md:col-7">
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between mb-1">
+                    <label class="form-label mb-0" for="cDep">Deposit</label>
+                    <strong id="cDepOut">10%</strong>
+                  </div>
+                  <div class="form-range">
+                    <input type="range" class="form-range-input" id="cDep" min="0" max="40" step="5" value="10" aria-label="Deposit percentage">
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between mb-1">
+                    <label class="form-label mb-0" for="cTerm">Term</label>
+                    <strong id="cTermOut">48 months</strong>
+                  </div>
+                  <div class="form-range">
+                    <input type="range" class="form-range-input" id="cTerm" min="12" max="60" step="12" value="48" aria-label="Term in months">
+                  </div>
+                </div>
+
+                <div>
+                  <div class="d-flex justify-content-between mb-1">
+                    <label class="form-label mb-0" for="cApr">APR</label>
+                    <strong id="cAprOut">9.9%</strong>
+                  </div>
+                  <div class="form-range">
+                    <input type="range" class="form-range-input" id="cApr" min="4.9" max="19.9" step="1" value="9.9" aria-label="Annual percentage rate">
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:col-5">
+                <p class="fs-xs fg-3 mb-1" style="letter-spacing:.12em;text-transform:uppercase">BMW 3 Series, &pound;24,990</p>
+                <p class="calc-figure mb-4" id="cMonthly" data-cash="24990">&pound;654<span class="fs-sm fg-3 fw-normal">/mo</span></p>
+                <div class="calc-row"><span class="fg-3 fs-sm">Deposit</span><span class="fs-sm" id="cDepAmt">&pound;2,499</span></div>
+                <div class="calc-row"><span class="fg-3 fs-sm">Amount financed</span><span class="fs-sm" id="cFin">&pound;22,491</span></div>
+                <div class="calc-row"><span class="fg-3 fs-sm">Total payable</span><span class="fs-sm" id="cTotal">&pound;31,388</span></div>
+                <a class="btn-solid theme-primary w-100 mt-4" href="vehicle.html">See this car</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Part exchange -->
+  <section class="section" id="partex">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-5">
+          <h2 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.03em">Part exchange</h2>
+          <p class="fg-2 mb-4">
+            Give us the registration and we will come back with a figure inside
+            two hours during opening times. If we cannot beat the online buyers
+            we will tell you that too.
+          </p>
+          <div class="trust-cell"><svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg><div><p class="fw-semibold mb-1">Valuation held for 7 days</p><p class="fg-3 fs-sm mb-0">Not "subject to inspection" and then dropped on the day.</p></div></div>
+          <div class="trust-cell"><svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg><div><p class="fw-semibold mb-1">Outstanding finance settled</p><p class="fg-3 fs-sm mb-0">We handle the settlement directly with your lender.</p></div></div>
+          <div class="trust-cell"><svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1m3.2 5.2-4 4a.75.75 0 0 1-1.06 0l-2-2 1.06-1.06L7.67 8.6z"/></svg><div><p class="fw-semibold mb-1">We will buy it outright</p><p class="fg-3 fs-sm mb-0">You do not have to buy a car from us to sell one to us.</p></div></div>
+        </div>
+
+        <div class="lg:col-7">
+          <div class="calc">
+            <form data-demo-form data-bs-validate novalidate>
+              <div class="row g-3">
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="pxReg">Registration</label>
+                    <input type="text" class="form-control text-uppercase" id="pxReg" placeholder="AB12 CDE" required>
+                    <div class="invalid-feedback">We need the reg to value it.</div>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="pxMiles">Mileage</label>
+                    <input type="text" class="form-control" id="pxMiles" placeholder="42,000" required>
+                    <div class="invalid-feedback">Roughly is fine.</div>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <label class="form-label">Condition</label>
+                  <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-name="cond" data-bs-placeholder="Choose one…">
+          <span class="combobox-value">Choose one…</span>
+          <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+        </button>
+        <div class="menu">
+          <button class="menu-item" type="button" data-bs-value="ex">Excellent</button>
+          <button class="menu-item" type="button" data-bs-value="good">Good, a few marks</button>
+          <button class="menu-item" type="button" data-bs-value="fair">Fair, needs work</button>
+          <button class="menu-item" type="button" data-bs-value="poor">Poor</button>
+        </div>
+                </div>
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="pxWhen">When are you looking to change?</label>
+                    <input type="text" class="form-control" id="pxWhen" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-field">
+                    <div class="switch"><input type="checkbox" id="pxFinance" role="switch" switch></div>
+                    <label for="pxFinance">There is outstanding finance on the car</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Valuation requested ✓">Get a valuation</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Branches -->
+  <section class="section bg-2" id="branches">
+    <div class="container">
+      <h2 class="fs-3xl fw-bold mb-5" style="letter-spacing:-.03em">Three branches</h2>
+      <div class="row g-4">
+        <div class="md:col-4">
+          <div class="branch">
+            <p class="fw-semibold mb-1">Leeds</p>
+            <p class="fg-3 fs-sm mb-3">Kirkstall Road, LS4 2AZ</p>
+            <div class="spec-row"><span class="fg-3 fs-sm">Mon — Fri</span><span class="fs-sm">08:30 — 18:00</span></div>
+            <div class="spec-row"><span class="fg-3 fs-sm">Saturday</span><span class="fs-sm">09:00 — 17:00</span></div>
+            <div class="spec-row"><span class="fg-3 fs-sm">Sunday</span><span class="fs-sm">11:00 — 16:00</span></div>
+            <p class="fs-sm mt-3 mb-0"><a href="tel:01138000000">0113 800 0000</a></p>
+          </div>
+        </div>
+        <div class="md:col-4">
+          <div class="branch">
+            <p class="fw-semibold mb-1">Bradford</p>
+            <p class="fg-3 fs-sm mb-3">Canal Road, BD1 4SG</p>
+            <div class="spec-row"><span class="fg-3 fs-sm">Mon — Fri</span><span class="fs-sm">08:30 — 18:00</span></div>
+            <div class="spec-row"><span class="fg-3 fs-sm">Saturday</span><span class="fs-sm">09:00 — 17:00</span></div>
+            <div class="spec-row"><span class="fg-3 fs-sm">Sunday</span><span class="fs-sm">Closed</span></div>
+            <p class="fs-sm mt-3 mb-0"><a href="tel:01274000000">01274 000 000</a></p>
+          </div>
+        </div>
+        <div class="md:col-4">
+          <div class="branch">
+            <p class="fw-semibold mb-1">Wakefield</p>
+            <p class="fg-3 fs-sm mb-3">Denby Dale Road, WF2 7AW</p>
+            <div class="spec-row"><span class="fg-3 fs-sm">Mon — Fri</span><span class="fs-sm">09:00 — 18:00</span></div>
+            <div class="spec-row"><span class="fg-3 fs-sm">Saturday</span><span class="fs-sm">09:00 — 17:00</span></div>
+            <div class="spec-row"><span class="fg-3 fs-sm">Sunday</span><span class="fs-sm">11:00 — 16:00</span></div>
+            <p class="fs-sm mt-3 mb-0"><a href="tel:01924000000">01924 000 000</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer section pb-5 bg-2">
+  <div class="container">
+    <div class="row g-5">
+      <div class="md:col-4">
+        <p class="fw-bold fs-lg mb-3" style="letter-spacing:-.02em">Forecourt</p>
+        <p class="fg-3 fs-sm mb-0">Three branches across West Yorkshire. Every car HPI-checked, every price the price.</p>
+      </div>
+      <div class="md:col-2">
+        <p class="fw-semibold fs-sm mb-3">Buying</p>
+        <ul class="list-unstyled fs-sm fg-3 mb-0">
+          <li class="mb-2"><a href="index.html#stock">Used cars</a></li>
+          <li class="mb-2"><a href="vehicle.html">Example listing</a></li>
+          <li class="mb-2"><a href="index.html#finance">Finance</a></li>
+        </ul>
+      </div>
+      <div class="md:col-2">
+        <p class="fw-semibold fs-sm mb-3">Selling</p>
+        <ul class="list-unstyled fs-sm fg-3 mb-0">
+          <li class="mb-2"><a href="index.html#partex">Part exchange</a></li>
+          <li class="mb-2"><a href="index.html#branches">Branches</a></li>
+        </ul>
+      </div>
+      <div class="md:col-4">
+        <p class="fw-semibold fs-sm mb-3">Regulatory</p>
+        <p class="fs-xs fg-3 mb-0">
+          Forecourt Motor Group is authorised and regulated by the Financial Conduct Authority.
+          Finance subject to status. Figures shown are illustrative flat-rate estimates, not a quotation.
+        </p>
+      </div>
+    </div>
+    <hr class="my-5">
+    <p class="fs-xs fg-3 mb-0">&copy; <span data-year></span> Forecourt. A free Bootstrap 6 template — the dealership is fictional.</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

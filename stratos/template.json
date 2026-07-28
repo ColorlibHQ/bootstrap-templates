@@ -1,0 +1,24 @@
+{
+  "slug": "stratos",
+  "title": "Stratos — Free Bootstrap 6 SaaS Website Template",
+  "excerpt": "A free seven-page Bootstrap 6 template for SaaS and product teams — landing page, component gallery, forms, dashboard, pricing, blog and 404.",
+  "yoastTitle": "Stratos — Free Bootstrap 6 SaaS Website Template",
+  "yoastDesc": "Stratos is a free seven-page Bootstrap 6 template for SaaS and product teams — landing page, component gallery, forms, dashboard, pricing, blog and 404.",
+  "intro": "Stratos is a free, premium seven-page <strong>Bootstrap 6</strong> website template for SaaS and product teams. It pairs a full marketing landing page with a complete component gallery, a forms showcase, an application dashboard, a pricing page, a long-form blog layout and a 404 page — so you get both the sales site and the product UI in one download.",
+  "note": "Because Bootstrap 6 is still in alpha and has not been published to npm, the framework is vendored directly into the template at a pinned commit. Nothing to install, no build step, and no dependencies beyond the files in the zip.",
+  "summary": "Stratos is a free, premium seven-page Bootstrap 6 template for SaaS and product teams: landing page, component gallery, forms showcase, application dashboard, pricing, long-form blog post and 404. It exercises every component in the alpha, including Combobox, Datepicker, OTP input, password strength, chip input and nav overflow, none of which exist in Bootstrap 5. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Seven pages — landing, components gallery, forms, dashboard, pricing, blog post and 404",
+    "Built on Bootstrap 6.0.0-alpha1, vendored at a pinned commit so the template can't drift",
+    "Dialog and Drawer use the native <dialog> element — browser-supplied backdrop, focus trap and top layer",
+    "Accordion built on native <details> with exclusive groups and zero JavaScript",
+    "Six components with no Bootstrap 5 equivalent — Combobox, Datepicker, Chip input, OTP input, password Strength and the enhanced Range slider",
+    "Nav overflow, Toggler, Stepper, Avatar stacks, Form adorn and Prose typography",
+    "Composable theme tokens — .btn-solid .theme-primary replaces .btn-primary",
+    "Full dark mode via data-bs-theme, remembered across visits",
+    "ScrollSpy rebuilt on IntersectionObserver, with a sticky-header offset",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step",
+    "Verified to render with zero console errors across all seven pages"
+  ],
+  "categories": ["bootstrap-6", "landing-page"]
+}

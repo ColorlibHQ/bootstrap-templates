@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's on — Stonebridge Bootstrap 6 Church Template</title>
+<meta name="description" content="The full week at Stonebridge: regular gatherings grouped by day, dated events that mark themselves as passed, and room hire rates.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="wordmark" href="index.html">
+        <svg class="brand-glyph" width="26" height="30" viewBox="0 0 26 30" fill="none" aria-hidden="true">
+  <path d="M13 1.5 24.5 9v19.5h-23V9L13 1.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M13 11v10M9 15h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+        <span>Stonebridge<small>Church, Market Street</small></span>
+      </a>
+
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-4">
+            <li class="nav-item"><a class="nav-link" href="index.html#times">Times</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#visiting">First visit</a></li>
+            <li class="nav-item"><a class="nav-link" href="whats-on.html">What's on</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#talks">Talks</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#find-us">Find us</a></li>
+          </ul>
+        </div>
+      </dialog>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+        <a class="btn-solid theme-primary give-btn" href="index.html#giving">Give</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow fs-xs mb-3"><a href="index.html">Stonebridge</a> &middot; What's on</p>
+    <h1 class="display-serif hero-title mb-4">The whole week,<br>as it actually runs</h1>
+    <p class="hero-lede fs-lg mb-0">
+      Everything below happens every week without needing to be announced. Dated
+      one-offs are further down, and anything that has already happened says so.
+    </p>
+  </div>
+</section>
+
+<main id="main">
+
+  <!-- Weekly rhythm -->
+  <section class="section">
+    <div class="container">
+      <section class="week-day">
+        <h2 class="display-serif fs-2xl week-day-name">Sunday</h2>
+        <ul class="week-list">
+          <li class="week-item" data-when="sun 10:30 75">
+            <p class="week-time mb-0"><time datetime="10:30">10.30am</time></p>
+            <div>
+              <h3 class="fs-lg display-serif mb-1">Sunday Morning <span class="week-flag" data-status hidden></span></h3>
+              <p class="fg-2 fs-sm mb-0">Our main gathering. Songs, a talk, coffee afterwards that goes on longer than the service. Kids' groups leave after fifteen minutes.</p>
+            </div>
+            <p class="week-where fg-3 fs-sm mb-0">Main church</p>
+          </li>
+          <li class="week-item" data-when="sun 18:30 60">
+            <p class="week-time mb-0"><time datetime="18:30">6.30pm</time></p>
+            <div>
+              <h3 class="fs-lg display-serif mb-1">Sunday Evening <span class="week-flag" data-status hidden></span></h3>
+              <p class="fg-2 fs-sm mb-0">Quieter and mostly sung, with communion every week. Around forty of us, and nobody minds which seat you take.</p>
+            </div>
+            <p class="week-where fg-3 fs-sm mb-0">Side chapel</p>
+          </li>
+        </ul>
+      </section>
+      <section class="week-day">
+        <h2 class="display-serif fs-2xl week-day-name">Tuesday</h2>
+        <ul class="week-list">
+          <li class="week-item" data-when="tue 10:00 120">
+            <p class="week-time mb-0"><time datetime="10:00">10.00am</time></p>
+            <div>
+              <h3 class="fs-lg display-serif mb-1">Community Pantry <span class="week-flag" data-status hidden></span></h3>
+              <p class="fg-2 fs-sm mb-0">Food, toiletries and a cup of tea. No referral needed and no questions asked.</p>
+            </div>
+            <p class="week-where fg-3 fs-sm mb-0">Church hall</p>
+          </li>
+          <li class="week-item" data-when="tue 13:30 90">
+            <p class="week-time mb-0"><time datetime="13:30">1.30pm</time></p>
+            <div>
+              <h3 class="fs-lg display-serif mb-1">Bereavement Café <span class="week-flag" data-status hidden></span></h3>
+              <p class="fg-2 fs-sm mb-0">For anyone who has lost someone, however long ago. Tea, cake, and no pressure to speak.</p>
+            </div>
+            <p class="week-where fg-3 fs-sm mb-0">Meeting room</p>
+          </li>
+        </ul>
+      </section>
+      <section class="week-day">
+        <h2 class="display-serif fs-2xl week-day-name">Wednesday</h2>
+        <ul class="week-list">
+          <li class="week-item" data-when="wed 10:00 90">
+            <p class="week-time mb-0"><time datetime="10:00">10.00am</time></p>
+            <div>
+              <h3 class="fs-lg display-serif mb-1">Little Steps <span class="week-flag" data-status hidden></span></h3>
+              <p class="fg-2 fs-sm mb-0">Toddler group — toys out, songs at eleven, toast for everyone at quarter past.</p>
+            </div>
+            <p class="week-where fg-3 fs-sm mb-0">Church hall</p>
+          </li>
+          <li class="week-item" data-when="wed 18:00 90">
+            <p class="week-time mb-0"><time datetime="18:00">6.00pm</time></p>
+            <div>
+              <h3 class="fs-lg display-serif mb-1">The Wednesday Table <span class="week-flag" data-status hidden></span></h3>
+              <p class="fg-2 fs-sm mb-0">A free hot meal for anyone who wants one, then twenty minutes of something worth talking about. No sign-up, no collection.</p>
+            </div>
+            <p class="week-where fg-3 fs-sm mb-0">Church hall</p>
+          </li>
+        </ul>
+      </section>
+      <section class="week-day">
+        <h2 class="display-serif fs-2xl week-day-name">Thursday</h2>
+        <ul class="week-list">
+          <li class="week-item" data-when="thu 08:00 30">
+            <p class="week-time mb-0"><time datetime="08:00">8.00am</time></p>
+            <div>
+              <h3 class="fs-lg display-serif mb-1">Morning Prayer <span class="week-flag" data-status hidden></span></h3>
+              <p class="fg-2 fs-sm mb-0">Half an hour, said not sung, done by half eight so you can still get to work.</p>
+            </div>
+            <p class="week-where fg-3 fs-sm mb-0">Side chapel</p>
+          </li>
+          <li class="week-item" data-when="thu 19:30 90">
+            <p class="week-time mb-0"><time datetime="19:30">7.30pm</time></p>
+            <div>
+              <h3 class="fs-lg display-serif mb-1">Choir Practice <span class="week-flag" data-status hidden></span></h3>
+              <p class="fg-2 fs-sm mb-0">We rehearse for Sunday and for the carol service. You do not need to read music.</p>
+            </div>
+            <p class="week-where fg-3 fs-sm mb-0">Main church</p>
+          </li>
+        </ul>
+      </section>
+      <section class="week-day">
+        <h2 class="display-serif fs-2xl week-day-name">Friday</h2>
+        <ul class="week-list">
+          <li class="week-item" data-when="fri 19:00 120">
+            <p class="week-time mb-0"><time datetime="19:00">7.00pm</time></p>
+            <div>
+              <h3 class="fs-lg display-serif mb-1">Youth (school years 7–13) <span class="week-flag" data-status hidden></span></h3>
+              <p class="fg-2 fs-sm mb-0">Games, food, and a short discussion. Ends at nine, and we walk everyone to the bus stop.</p>
+            </div>
+            <p class="week-where fg-3 fs-sm mb-0">Church hall</p>
+          </li>
+        </ul>
+      </section>
+      <section class="week-day">
+        <h2 class="display-serif fs-2xl week-day-name">Saturday</h2>
+        <ul class="week-list">
+          <li class="week-item" data-when="sat 09:30 120">
+            <p class="week-time mb-0"><time datetime="09:30">9.30am</time></p>
+            <div>
+              <h3 class="fs-lg display-serif mb-1">Churchyard Working Party <span class="week-flag" data-status hidden></span></h3>
+              <p class="fg-2 fs-sm mb-0">Tools provided, bacon sandwiches at eleven. Come for an hour or the whole morning.</p>
+            </div>
+            <p class="week-where fg-3 fs-sm mb-0">Churchyard</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <!-- Dated events -->
+  <section class="section bg-2" id="events">
+    <div class="container">
+      <div class="row g-5 mb-5 align-items-end">
+        <div class="lg:col-7">
+          <p class="eyebrow-rule mb-3">Coming up</p>
+          <h2 class="display-serif section-title fs-4xl mb-0">One-offs, festivals and the fête</h2>
+        </div>
+        <div class="lg:col-5">
+          <p class="fg-2 mb-0">
+            These carry real dates, so anything in the past greys itself out
+            rather than sitting here pretending to be news.
+          </p>
+        </div>
+      </div>
+
+      <ul class="event-list">
+        <li class="event" data-date="2026-09-27T10:30">
+          <div class="event-date">
+            <span class="event-day">27</span>
+            <span class="event-mon">Sep</span>
+            <span class="event-year">2026</span>
+          </div>
+          <div>
+            <h3 class="display-serif fs-xl mb-1">Harvest Festival <span class="event-flag" data-passed hidden>Passed</span></h3>
+            <p class="fg-3 fs-sm mb-2">10.30am &middot; Main church</p>
+            <p class="fg-2 fs-sm mb-0">Bring tinned goods if you can. Everything collected goes to the pantry that week.</p>
+          </div>
+        </li>
+        <li class="event" data-date="2026-12-24T16:00">
+          <div class="event-date">
+            <span class="event-day">24</span>
+            <span class="event-mon">Dec</span>
+            <span class="event-year">2026</span>
+          </div>
+          <div>
+            <h3 class="display-serif fs-xl mb-1">Crib Service <span class="event-flag" data-passed hidden>Passed</span></h3>
+            <p class="fg-3 fs-sm mb-2">4.00pm &middot; Main church</p>
+            <p class="fg-2 fs-sm mb-0">Thirty minutes, aimed squarely at under-sevens. Costumes strongly encouraged.</p>
+          </div>
+        </li>
+        <li class="event" data-date="2027-03-26T19:30">
+          <div class="event-date">
+            <span class="event-day">26</span>
+            <span class="event-mon">Mar</span>
+            <span class="event-year">2027</span>
+          </div>
+          <div>
+            <h3 class="display-serif fs-xl mb-1">Good Friday: The Cross in Music <span class="event-flag" data-passed hidden>Passed</span></h3>
+            <p class="fg-3 fs-sm mb-2">7.30pm &middot; Main church</p>
+            <p class="fg-2 fs-sm mb-0">Our choir and a string quartet. Free, no ticket needed, doors from seven.</p>
+          </div>
+        </li>
+        <li class="event" data-date="2027-03-28T06:15">
+          <div class="event-date">
+            <span class="event-day">28</span>
+            <span class="event-mon">Mar</span>
+            <span class="event-year">2027</span>
+          </div>
+          <div>
+            <h3 class="display-serif fs-xl mb-1">Easter Sunrise on Bridge Hill <span class="event-flag" data-passed hidden>Passed</span></h3>
+            <p class="fg-3 fs-sm mb-2">6.15am &middot; Bridge Hill</p>
+            <p class="fg-2 fs-sm mb-0">Twenty minutes at first light, then breakfast back at the hall. Wear boots.</p>
+          </div>
+        </li>
+        <li class="event" data-date="2027-05-16T12:30">
+          <div class="event-date">
+            <span class="event-day">16</span>
+            <span class="event-mon">May</span>
+            <span class="event-year">2027</span>
+          </div>
+          <div>
+            <h3 class="display-serif fs-xl mb-1">Parish Lunch <span class="event-flag" data-passed hidden>Passed</span></h3>
+            <p class="fg-3 fs-sm mb-2">12.30pm &middot; Church hall</p>
+            <p class="fg-2 fs-sm mb-0">Roast, pudding, and the annual meeting nobody can escape. £6, under-12s free.</p>
+          </div>
+        </li>
+        <li class="event" data-date="2027-06-26T14:00">
+          <div class="event-date">
+            <span class="event-day">26</span>
+            <span class="event-mon">Jun</span>
+            <span class="event-year">2027</span>
+          </div>
+          <div>
+            <h3 class="display-serif fs-xl mb-1">Summer Fair <span class="event-flag" data-passed hidden>Passed</span></h3>
+            <p class="fg-3 fs-sm mb-2">2.00pm &middot; Churchyard</p>
+            <p class="fg-2 fs-sm mb-0">Stalls, cakes, a very competitive tombola. All proceeds to the pantry.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Room hire -->
+  <section class="section" id="hire">
+    <div class="container">
+      <div class="row g-5 mb-5 align-items-end">
+        <div class="lg:col-7">
+          <p class="eyebrow-rule mb-3">Room hire</p>
+          <h2 class="display-serif section-title fs-4xl mb-0">The building is for the town, not just for Sundays</h2>
+        </div>
+        <div class="lg:col-5">
+          <p class="fg-2 mb-0">
+            Rehearsals, AGMs, birthday parties, polling. Community groups pay
+            half, and nobody has ever been charged for a wake.
+          </p>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table md:table-stacked align-middle">
+          <caption class="fs-sm fg-3">A session is a morning, afternoon or evening. Rates held since 2025.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Space</th>
+              <th scope="col">Capacity</th>
+              <th scope="col">Rate</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Main church</th>
+              <td data-cell="Capacity">180 seated</td>
+              <td data-cell="Rate">£45 / session</td>
+              <td data-cell="Notes">Piano, sound system, induction loop. No catering.</td>
+            </tr>
+            <tr>
+              <th scope="row">Church hall</th>
+              <td data-cell="Capacity">90 seated, 120 standing</td>
+              <td data-cell="Rate">£30 / session</td>
+              <td data-cell="Notes">Kitchen, tables and chairs, level access from Market Street.</td>
+            </tr>
+            <tr>
+              <th scope="row">Meeting room</th>
+              <td data-cell="Capacity">16 around a table</td>
+              <td data-cell="Rate">£15 / session</td>
+              <td data-cell="Notes">Screen, kettle, quiet. Upstairs — no lift.</td>
+            </tr>
+            <tr>
+              <th scope="row">Churchyard</th>
+              <td data-cell="Capacity">Outdoor</td>
+              <td data-cell="Rate">By arrangement</td>
+              <td data-cell="Notes">For fairs and fêtes. Talk to the office first.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="fs-sm fg-2 mt-4 mb-0">
+        To book anything, ring the office on <a href="tel:+441632960117">01632 960117</a>
+        or email <a href="mailto:office@stonebridge.example">office@stonebridge.example</a>.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer section pb-5 bg-2">
+  <div class="container">
+    <div class="row g-5">
+      <div class="lg:col-5">
+        <p class="display-serif fs-2xl mb-2">Stonebridge Church</p>
+        <p class="fg-2 mb-0">
+          Market Street, Stonebridge STB1 2QA<br>
+          <a href="tel:+441632960117">01632 960117</a> &middot;
+          <a href="mailto:office@stonebridge.example">office@stonebridge.example</a>
+        </p>
+      </div>
+      <div class="md:col-6 lg:col-3">
+        <p class="eyebrow fs-xs fg-3 mb-3">Church office</p>
+        <p class="fg-2 mb-0">Tuesday to Friday, 9.30am&ndash;2.30pm.<br>Otherwise leave a message — we do return them.</p>
+      </div>
+      <div class="md:col-6 lg:col-4">
+        <p class="eyebrow fs-xs fg-3 mb-3">Safeguarding</p>
+        <p class="fg-2 mb-0">
+          Our safeguarding officer is Priya Raman, reachable directly on
+          <a href="tel:+441632960118">01632 960118</a>. Concerns are taken seriously
+          and you can raise one without going through the office.
+        </p>
+      </div>
+    </div>
+
+    <hr class="my-5">
+
+    <p class="fs-xs fg-3 mb-0">
+      &copy; <span data-year>2027</span> Stonebridge Church &mdash; a free Bootstrap 6 template.
+      The church, its people and every event on this site are fictional.
+    </p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

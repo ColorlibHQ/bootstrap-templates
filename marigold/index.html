@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marigold — Free Bootstrap 6 Wedding Website Template</title>
+<meta name="description" content="Marigold is a free Bootstrap 6 wedding template — countdown, day schedule, travel page and an RSVP that handles a whole party with meal choices, not just one guest.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="wordmark" href="index.html">R &amp; J</a>
+
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-4">
+            <li class="nav-item"><a class="nav-link" href="#story">Our story</a></li>
+            <li class="nav-item"><a class="nav-link" href="#day">The day</a></li>
+            <li class="nav-item"><a class="nav-link" href="travel.html">Travel &amp; stay</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gifts">Gifts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+          </ul>
+        </div>
+      </dialog>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="vows">
+  <img class="hero-bg" src="img/hero.jpg" alt="" width="1800" height="1200" loading="eager">
+  <div class="vows-inner">
+    <p class="vows-rule mb-4">Saturday 12 June 2027</p>
+    <h1 class="names mb-4">Rowan<br>&amp; Jae</h1>
+    <p class="fs-lg mb-5" style="opacity:.9">Hardcastle Barn, Hebden Bridge</p>
+
+    <div class="days" role="timer" aria-live="off" data-countdown="2027-06-12T13:00:00Z">
+      <div><p class="days-value mb-0" id="cdD">--</p><p class="days-label mb-0">Days</p></div>
+      <div><p class="days-value mb-0" id="cdH">--</p><p class="days-label mb-0">Hours</p></div>
+      <div><p class="days-value mb-0" id="cdM">--</p><p class="days-label mb-0">Minutes</p></div>
+    </div>
+
+    <a class="btn-solid theme-primary btn-lg mt-5" href="#rsvp">RSVP</a>
+  </div>
+</section>
+
+<main id="main">
+
+  <!-- Story -->
+  <section class="section" id="story">
+    <div class="container">
+      <div class="row g-6 align-items-center">
+        <div class="lg:col-6">
+          <div class="ph ph-3x4"><img src="img/story.jpg" alt="Rowan and Jae" width="700" height="933" loading="lazy"></div>
+        </div>
+        <div class="lg:col-6">
+          <p class="eyebrow-rule mb-3">How we got here</p>
+          <h2 class="display-serif section-title fs-4xl mb-4">Eleven years, one very slow decision</h2>
+          <p class="fg-2 mb-4">
+            We met in 2016 queuing for a fire door at a gig neither of us
+            especially wanted to be at. Jae was holding two coats. Rowan was
+            holding a pint of something that had gone warm.
+          </p>
+          <p class="fg-2 mb-4">
+            There was a flat in Sheffield, then a dog called Biscuit, then a
+            slightly bigger flat because of the dog. Jae proposed on a walk above
+            Hardcastle Crags in the rain, which is why we are getting married
+            about a mile from that spot.
+          </p>
+          <p class="fg-2 mb-0">
+            We would love you to be there. There is a barn, there is a long
+            table, and there is more food than is strictly sensible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The day -->
+  <section class="section bg-2" id="day">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-4">
+          <p class="eyebrow-rule mb-3">The day</p>
+          <h2 class="display-serif section-title fs-4xl mb-4">Saturday,<br>from one</h2>
+          <p class="fg-2 mb-0">
+            Hardcastle Barn, Midgehole Road, Hebden Bridge HX7 7AA. Parking on
+            site, and the last bus back into town is at 23:40.
+          </p>
+        </div>
+
+        <div class="lg:col-8">
+          <div class="schedule">
+            <div class="schedule-item">
+              <span class="schedule-time">1:00</span>
+              <div><p class="fw-semibold mb-1">Guests arrive</p><p class="fg-2 fs-sm mb-0">Drinks in the courtyard. Please be seated by 1:20 — we are told the registrar is strict about this.</p></div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">1:30</span>
+              <div><p class="fw-semibold mb-1">Ceremony</p><p class="fg-2 fs-sm mb-0">In the barn. About thirty minutes, one reading, no hymns.</p></div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">2:15</span>
+              <div><p class="fw-semibold mb-1">Photographs &amp; drinks</p><p class="fg-2 fs-sm mb-0">Outside if it is dry, in the hay barn if it is not. It will not be dry.</p></div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">4:00</span>
+              <div><p class="fw-semibold mb-1">Sitting down to eat</p><p class="fg-2 fs-sm mb-0">One long table. Your main course is whatever you chose on the RSVP.</p></div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">6:30</span>
+              <div><p class="fw-semibold mb-1">Speeches</p><p class="fg-2 fs-sm mb-0">Three, all of them short, all of them checked.</p></div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">8:00</span>
+              <div><p class="fw-semibold mb-1">Band, then dancing</p><p class="fg-2 fs-sm mb-0">Evening guests arrive at eight. Bacon sandwiches at ten.</p></div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">12:00</span>
+              <div><p class="fw-semibold mb-1">Carriages</p><p class="fg-2 fs-sm mb-0">Taxis need booking in advance — numbers are on the travel page.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section">
+    <div class="container mb-5">
+      <p class="eyebrow-rule mb-3">Us, mostly outdoors</p>
+      <h2 class="display-serif section-title fs-4xl mb-0">A few photographs</h2>
+    </div>
+    <div class="container-fluid px-4 lg:px-5">
+      <div class="mosaic">
+        <div class="ph"><img src="img/gal-1.jpg" alt="Rowan and Jae on a hillside" width="900" height="900" loading="lazy"></div>
+        <div class="ph"><img src="img/gal-2.jpg" alt="The barn" width="600" height="600" loading="lazy"></div>
+        <div class="ph"><img src="img/gal-3.jpg" alt="Biscuit the dog" width="600" height="600" loading="lazy"></div>
+        <div class="ph"><img src="img/gal-4.jpg" alt="Wild flowers" width="600" height="600" loading="lazy"></div>
+        <div class="ph"><img src="img/gal-5.jpg" alt="The valley" width="600" height="600" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section bg-2" id="rsvp">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-4">
+          <p class="eyebrow-rule mb-3">RSVP</p>
+          <h2 class="display-serif section-title fs-4xl mb-4">Please reply<br>by 1 March</h2>
+          <p class="fg-2 mb-4">
+            Add everyone in your party — each person gets their own answer and
+            their own meal, so nobody has to submit this twice.
+          </p>
+          <div class="spec-row"><span class="fg-3 fs-sm">Reply by</span><span class="fs-sm">1 March 2027</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Dress</span><span class="fs-sm">Whatever you like</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Children</span><span class="fs-sm">Very welcome</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Questions</span><span class="fs-sm"><a href="mailto:hello@marigold.example">Email us</a></span></div>
+        </div>
+
+        <div class="lg:col-8">
+          <div class="rsvp">
+            <form id="rsvpForm" data-demo-form data-bs-validate novalidate>
+              <div class="row g-3 mb-4">
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="rEmail">Your email</label>
+                    <input type="email" class="form-control" id="rEmail" required>
+                    <div class="invalid-feedback">So we can confirm we got this.</div>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="rPhone">Mobile (optional)</label>
+                    <input type="tel" class="form-control" id="rPhone">
+                  </div>
+                </div>
+              </div>
+
+              <p class="form-label mb-2">Your party</p>
+              <div id="guests"></div>
+
+              <!-- Cloned per guest by main.js. Kept in the markup rather than
+                   built from strings so it can be restyled without touching JS. -->
+              <template id="guestTpl">
+                <div class="guest">
+                  <div class="guest-head">
+                    <span class="guest-no" data-guest-no>Guest 1</span>
+                    <button class="btn-text btn-sm ms-auto p-0" type="button" data-remove hidden>Remove</button>
+                  </div>
+                  <div class="row g-3">
+                    <div class="md:col-6">
+                      <div class="form-field">
+                        <label class="form-label" for="gName">Name</label>
+                        <input type="text" class="form-control" id="gName" data-name="guest_name" required>
+                        <div class="invalid-feedback">Who is coming?</div>
+                      </div>
+                    </div>
+                    <div class="md:col-6">
+                      <p class="form-label mb-2">Can you make it?</p>
+                      <div class="d-flex flex-wrap gap-2">
+                        <label class="btn-check btn-outline theme-primary btn-sm"><input type="radio" data-name="guest_going" value="yes" checked> Joyfully</label>
+                        <label class="btn-check btn-outline theme-secondary btn-sm"><input type="radio" data-name="guest_going" value="no"> Sadly not</label>
+                      </div>
+                    </div>
+                    <div class="md:col-6">
+                      <label class="form-label" for="gMeal">Main course</label>
+                      <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-name="guest_meal" data-bs-placeholder="Choose a main…">
+            <span class="combobox-value">Choose a main…</span>
+            <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+          </button>
+          <div class="menu">
+            <button class="menu-item" type="button" data-bs-value="chicken">Herb-roast chicken</button>
+            <button class="menu-item" type="button" data-bs-value="hake">Hake, brown butter</button>
+            <button class="menu-item" type="button" data-bs-value="squash">Squash &amp; sage (vg)</button>
+            <button class="menu-item" type="button" data-bs-value="child">Children's portion</button>
+          </div>
+                    </div>
+                    <div class="md:col-6">
+                      <div class="form-field">
+                        <label class="form-label" for="gDiet">Allergies or dietary notes</label>
+                        <input type="text" class="form-control" id="gDiet" data-name="guest_diet" placeholder="Optional">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <button class="btn-outline theme-secondary btn-sm" type="button" id="addGuest">+ Add another guest</button>
+                <span class="fs-sm fg-3 align-self-center" id="guestCount">1 guest</span>
+              </div>
+
+              <div class="form-field mb-4">
+                <label class="form-label" for="rSong">A song that will get you dancing</label>
+                <input type="text" class="form-control" id="rSong" placeholder="Optional, but we will play it">
+              </div>
+
+              <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Thank you ✓">Send RSVP</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gifts -->
+  <section class="section" id="gifts">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-4">
+          <p class="eyebrow-rule mb-3">Gifts</p>
+          <h2 class="display-serif section-title fs-4xl mb-0">Genuinely,<br>please don't</h2>
+        </div>
+        <div class="lg:col-8">
+          <p class="fg-2 mb-5">
+            We have lived together for nine years and own two of most things. If
+            you would like to mark the day somehow, here are three ideas we would
+            actually be pleased about.
+          </p>
+          <div class="row g-4">
+            <div class="md:col-4">
+              <div class="gift-cell">
+                <p class="fw-semibold mb-2">Come to the wedding</p>
+                <p class="fg-2 fs-sm mb-0">Several of you are travelling a long way and staying over. That is the gift.</p>
+              </div>
+            </div>
+            <div class="md:col-4">
+              <div class="gift-cell">
+                <p class="fw-semibold mb-2">The honeymoon fund</p>
+                <p class="fg-2 fs-sm mb-0">We are going to Portugal in September. Contributions go towards that, not towards a toaster.</p>
+              </div>
+            </div>
+            <div class="md:col-4">
+              <div class="gift-cell">
+                <p class="fw-semibold mb-2">Openhands, Leeds</p>
+                <p class="fg-2 fs-sm mb-0">Jae has volunteered there for six years. A donation there means more to us than anything wrapped.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer section pb-5 bg-2">
+  <div class="container text-center">
+    <p class="display-serif fs-2xl mb-2">Rowan &amp; Jae</p>
+    <p class="fg-3 fs-sm mb-4">12 June 2027 &middot; Hebden Bridge</p>
+    <p class="fs-xs fg-3 mb-0">A free Bootstrap 6 template — the wedding is fictional.</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

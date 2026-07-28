@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Non-modal dialog — Bootstrap 6 Dialogs & Drawers</title>
+<meta name="description" content=".dialog-nonmodal has no backdrop and leaves the page usable underneath — impossible with a v5 modal. A free Bootstrap 6 dialog example.">
+<link rel="stylesheet" href="../assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="variant-bar">
+  <a class="btn-text btn-sm" href="../index.html">&#8592; All dialogs</a>
+  <span class="fs-sm fw-semibold ms-2">Non-modal dialog</span>
+  <span class="fs-xs fg-3 d-none md:d-inline">6 of 10</span>
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <a class="btn-icon btn-sm" href="../05-confirm/index.html" aria-label="Previous">&#8249;</a>
+    <a class="btn-icon btn-sm" href="../07-drawer-sides/index.html" aria-label="Next">&#8250;</a>
+    <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+  </div>
+</div>
+
+<main class="variant-stage">
+  <div class="variant-inner is-wide">
+    <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Non-modal dialog</h1>
+<p class="fg-2 mb-4">
+  Open it, then keep typing in the field below. The page stays live — no backdrop,
+  no inert content, no focus trap.
+</p>
+<div class="trigger-grid mb-4">
+  <button class="btn-solid theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#dlgNon">Open helper panel</button>
+</div>
+<div class="form-field mb-4" style="max-width:26rem">
+  <label class="form-label" for="nmProof">Type here while it is open</label>
+  <input type="text" class="form-control" id="nmProof" placeholder="Still works&#8230;">
+</div>
+<div class="note fs-sm">
+  <p class="mb-2">Good for inspectors, live help and anything a person needs
+  alongside their work rather than instead of it. In v5 this required building a
+  floating panel by hand, because a modal always blocked the page.</p>
+  <p class="mb-0"><strong>Two things are needed, not one.</strong>
+  <code>.dialog-nonmodal</code> is a style class — it removes the backdrop and
+  nothing more. Whether the browser calls <code>show()</code> or
+  <code>showModal()</code> comes from the <code>modal</code> option, so you also
+  need <code>data-bs-modal="false"</code>. With only the class you get a dialog
+  that looks non-modal and still blocks the page.</p>
+</div>
+<dialog class="dialog dialog-nonmodal dialog-sm" id="dlgNon" aria-labelledby="dlgNonLabel" data-bs-modal="false">
+  <div class="dialog-header">
+    <h2 class="dialog-title fs-lg" id="dlgNonLabel">Formatting help</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <div class="dialog-body">
+    <p class='fg-2 mb-2'>Use <code>**bold**</code>, <code>_italic_</code> and <code>`code`</code>.</p><p class='fg-2 mb-0'>Two blank lines start a new paragraph.</p>
+  </div>
+  <div class="dialog-footer">
+    <button type="button" class="btn-text" data-bs-dismiss="dialog">Close</button>
+  </div>
+</dialog>
+  </div>
+</main>
+
+<script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

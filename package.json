@@ -1,0 +1,18 @@
+{
+  "name": "bootstrap-templates",
+  "type": "module",
+  "scripts": {
+    "verify": "node _kit/verify.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.0"
+  },
+  "version": "1.0.0",
+  "description": "Free, self-contained website templates built on Bootstrap 6 \u2014 28 site templates and 6 component packs, MIT licensed.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ColorlibHQ/bootstrap-templates.git"
+  },
+  "homepage": "https://github.com/ColorlibHQ/bootstrap-templates#readme"
+}

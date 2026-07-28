@@ -1,0 +1,476 @@
+/*!
+ * Syllabus — Bootstrap 6 online course template
+ *
+ * Design language: a good textbook. Warm paper ground, a single ink-blue accent,
+ * a display serif for headings against a plain sans for everything functional,
+ * and rules rather than boxes wherever a rule will carry the structure.
+ *
+ * The structural idea carrying the identity is progress. Course pages list a
+ * curriculum and stop, leaving the two questions a student actually has — how
+ * much is left, and when would I finish — unanswered. Lessons here tick off and
+ * are remembered, and an hours-a-week slider turns what remains into a date.
+ */
+
+:root {
+  --brand: oklch(46% 0.12 258);
+  --kit-section-y: 4.5rem;
+  --sy-rule: color-mix(in oklab, var(--bs-fg-body), transparent 88%);
+  --sy-mark: oklch(72% 0.15 78);
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 6rem; } }
+
+[data-bs-theme="light"] {
+  --bs-bg-body: oklch(98.5% 0.006 85);
+  --bs-bg-2: oklch(96% 0.009 85);
+}
+
+[data-bs-theme="dark"] {
+  --bs-bg-body: oklch(19% 0.01 258);
+  --bs-bg-2: oklch(23% 0.012 258);
+}
+
+.display-serif,
+.hero-title,
+.section-title,
+.prose h2,
+.prose h3 {
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.hero-title,
+.section-title { text-wrap: balance; line-height: 1.08; }
+
+/* ---------------------------------------------------------------
+   Header + footer
+   --------------------------------------------------------------- */
+
+.site-header { border-bottom: 1px solid var(--sy-rule); }
+.site-footer { border-top: 1px solid var(--sy-rule); }
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--bs-fg-body);
+  text-decoration: none;
+  font-family: ui-serif, Georgia, serif;
+  font-size: 1.25rem;
+}
+
+.brand-glyph { color: var(--bs-primary-base); flex: none; }
+
+.site-header .nav-link,
+.site-header .btn-solid { text-decoration: none; }
+
+.link-list { list-style: none; padding-left: 0; margin-bottom: 0; }
+.link-list li { margin-bottom: 0.5rem; }
+.link-list a { color: var(--bs-fg-2, inherit); }
+
+/* ---------------------------------------------------------------
+   Hero + shared
+   --------------------------------------------------------------- */
+
+.pill {
+  display: inline-block;
+  padding-block: 0.35rem;
+  padding-inline: 0.85rem;
+  border: 1px solid var(--sy-rule);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--bs-fg-2, inherit);
+}
+
+.hero .btn-solid,
+.hero .btn-outline { text-decoration: none; }
+
+.framed { border-radius: var(--bs-radius-6); }
+
+.eyebrow-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.73rem;
+  font-weight: 650;
+  color: var(--bs-primary-fg);
+}
+
+.eyebrow-rule::before {
+  content: "";
+  width: 1.5rem;
+  height: 1px;
+  background-color: currentcolor;
+  flex: none;
+}
+
+.facts { margin-bottom: 0; border-top: 1px solid var(--sy-rule); }
+
+.facts > div {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-block: 0.7rem;
+  border-bottom: 1px solid var(--sy-rule);
+}
+
+.facts dt { font-weight: 600; margin-bottom: 0; }
+.facts dd { margin-bottom: 0; text-align: right; color: var(--bs-fg-2, inherit); }
+
+.tick-list { list-style: none; padding-left: 0; margin-bottom: 0; }
+
+.tick-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.6rem;
+  color: var(--bs-fg-2, inherit);
+}
+
+.tick-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.42rem;
+  width: 0.8rem;
+  height: 0.42rem;
+  border-left: 1.8px solid var(--bs-primary-base);
+  border-bottom: 1.8px solid var(--bs-primary-base);
+  transform: rotate(-45deg);
+}
+
+/* ---------------------------------------------------------------
+   Outcomes
+   --------------------------------------------------------------- */
+
+.outcome { position: relative; }
+
+.outcome-no {
+  display: block;
+  margin-bottom: 0.9rem;
+  font-family: ui-serif, Georgia, serif;
+  font-size: 1.5rem;
+  color: var(--bs-primary-base);
+  opacity: 0.55;
+}
+
+/* ---------------------------------------------------------------
+   Curriculum
+   --------------------------------------------------------------- */
+
+.modules { border-top: 1px solid var(--sy-rule); }
+
+.module { border-bottom: 1px solid var(--sy-rule); }
+
+.module > summary,
+.rail-module > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 1.15rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.module > summary::-webkit-details-marker,
+.rail-module > summary::-webkit-details-marker { display: none; }
+
+.module-no {
+  font-family: ui-serif, Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--bs-primary-base);
+  opacity: 0.6;
+  flex: none;
+}
+
+.module-head { flex: 1; }
+
+.module-title { display: block; font-weight: 600; font-size: 1.05rem; }
+
+.module-meta {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  color: var(--bs-fg-3, inherit);
+  font-variant-numeric: tabular-nums;
+}
+
+.module > summary::after {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  border-right: 1.6px solid currentcolor;
+  border-bottom: 1.6px solid currentcolor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  opacity: 0.45;
+  flex: none;
+  align-self: center;
+}
+
+.module[open] > summary::after { transform: rotate(-135deg); }
+
+.module-body { padding-bottom: 1.25rem; padding-left: 2.1rem; }
+
+.lesson-list { list-style: none; padding-left: 0; margin-bottom: 0; }
+
+.lesson {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding-block: 0.55rem;
+  border-top: 1px solid var(--sy-rule);
+}
+
+.lesson label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* Ticked lessons recede rather than disappear — you still want to find them. */
+.lesson:has(:checked) label { text-decoration: line-through; opacity: 0.55; }
+
+.lesson-kind {
+  padding-block: 0.08rem;
+  padding-inline: 0.4rem;
+  border-radius: 100px;
+  font-size: 0.65rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kind-video { background-color: color-mix(in oklab, var(--bs-primary-base), transparent 88%); color: var(--bs-primary-fg); }
+.kind-task { background-color: color-mix(in oklab, var(--sy-mark), transparent 82%); color: color-mix(in oklab, var(--sy-mark), black 32%); }
+
+[data-bs-theme="dark"] .kind-task { color: var(--sy-mark); }
+
+.lesson-min {
+  font-size: 0.8rem;
+  color: var(--bs-fg-3, inherit);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------
+   Tracker
+   --------------------------------------------------------------- */
+
+.tracker {
+  position: sticky;
+  top: 5.5rem;
+  padding: 1.6rem;
+  border: 1px solid var(--sy-rule);
+  border-radius: var(--bs-radius-6);
+  background-color: var(--bs-bg-body);
+}
+
+.tracker-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tracker-k { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--bs-fg-3, inherit); font-weight: 650; }
+.tracker-v { font-size: 1.15rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+
+.tracker .form-label { font-size: 0.8rem; font-weight: 650; margin-bottom: 0.15rem; }
+
+.tracker-out {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.3rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.tracker-eta {
+  padding-block: 0.75rem;
+  padding-inline: 0.95rem;
+  border-radius: var(--bs-radius-5);
+  background-color: color-mix(in oklab, var(--bs-primary-base), transparent 93%);
+  font-size: 0.9rem;
+}
+
+.tracker-reset { padding-left: 0; font-size: 0.85rem; }
+
+/* ---------------------------------------------------------------
+   Reviews, enrol, FAQ
+   --------------------------------------------------------------- */
+
+.review blockquote p { font-size: 1.02rem; text-wrap: pretty; }
+.review blockquote p::before { content: "“"; }
+.review blockquote p::after { content: "”"; }
+
+.enrol {
+  padding: 2rem;
+  border: 1px solid var(--sy-rule);
+  border-radius: var(--bs-radius-6);
+  background-color: var(--bs-bg-body);
+}
+
+.enrol-price { font-family: ui-serif, Georgia, serif; font-size: 2.75rem; line-height: 1; }
+.enrol-price small { font-family: var(--bs-font-sans-serif, system-ui); font-size: 0.85rem; color: var(--bs-fg-3, inherit); margin-left: 0.4rem; }
+
+.faq { border-top: 1px solid var(--sy-rule); }
+.faq details { border-bottom: 1px solid var(--sy-rule); }
+
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  border-right: 1.6px solid currentcolor;
+  border-bottom: 1.6px solid currentcolor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  opacity: 0.5;
+  flex: none;
+}
+
+.faq details[open] summary::after { transform: rotate(-135deg); }
+
+.faq-body { padding-bottom: 1.2rem; max-width: 46rem; }
+
+/* ---------------------------------------------------------------
+   Lesson page
+   --------------------------------------------------------------- */
+
+.lesson-page { padding-block: 2.5rem 4rem; }
+
+.player {
+  position: relative;
+  margin-bottom: 2.5rem;
+  border-radius: var(--bs-radius-6);
+  overflow: hidden;
+  background-color: oklch(20% 0.01 258);
+}
+
+.player img { display: block; width: 100%; height: auto; opacity: 0.72; }
+
+.player-btn {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  translate: -50% -50%;
+  display: grid;
+  place-items: center;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--bs-white);
+  color: oklch(20% 0.01 258);
+  cursor: pointer;
+  padding-left: 0.2rem;
+  transition: transform 0.2s ease;
+}
+
+.player-btn:hover { transform: scale(1.06); }
+
+.player-time {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  padding-block: 0.15rem;
+  padding-inline: 0.5rem;
+  border-radius: var(--bs-radius-3, 6px);
+  background-color: oklch(0% 0 0 / 65%);
+  color: var(--bs-white);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* .prose is a Bootstrap 6 component, not a name going spare: a flex column with
+   --bs-content-gap driving the rhythm and `margin-block: 0` on every child. Do
+   not reintroduce margins here — they add to the gap instead of replacing it,
+   and this file previously pushed the paragraph spacing to 44px that way. Style
+   colour, family and borders; leave spacing to the component. */
+.prose { max-width: 40rem; }
+.prose p { color: var(--bs-fg-2, inherit); text-wrap: pretty; }
+
+.prose blockquote {
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--bs-primary-base);
+}
+
+.prose blockquote p {
+  font-family: ui-serif, Georgia, serif;
+  font-size: 1.2rem;
+  color: var(--bs-fg-body);
+}
+
+.lesson-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--sy-rule);
+}
+
+.lesson-foot a { text-decoration: none; }
+
+.rail { position: sticky; top: 5.5rem; }
+
+.rail-card {
+  padding: 1.35rem;
+  border: 1px solid var(--sy-rule);
+  border-radius: var(--bs-radius-6);
+  background-color: var(--bs-bg-2);
+}
+
+.rail-module { border-bottom: 1px solid var(--sy-rule); }
+
+.rail-module > summary {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-block: 0.8rem;
+  display: block;
+}
+
+.rail-list { list-style: none; padding-left: 0; margin-bottom: 0.8rem; }
+
+.rail-list li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+  padding-block: 0.4rem;
+  font-size: 0.87rem;
+}
+
+.rail-list label { margin-bottom: 0; cursor: pointer; }
+
+.rail-list li:has(:checked) label { text-decoration: line-through; opacity: 0.55; }
+
+.rail-list li.is-current {
+  margin-inline: -0.6rem;
+  padding-inline: 0.6rem;
+  border-radius: var(--bs-radius-4);
+  background-color: color-mix(in oklab, var(--bs-primary-base), transparent 90%);
+}
+
+.rail-list li.is-current label { font-weight: 650; }

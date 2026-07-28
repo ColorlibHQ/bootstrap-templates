@@ -1,0 +1,30 @@
+Placeholder photography
+=======================
+
+Every photograph here is CC0 / Public Domain Mark, sourced via the
+Openverse API — no attribution required, commercial use fine. Where no
+public-domain photograph matched a slot, the file is a generated gradient
+instead; those are marked below and carry no rights at all.
+
+Either way these are placeholders: replace them with your own photography
+before launch. Provenance for each file follows.
+
+hero.jpg
+  Century City - Constellation station, construction site (Sept. 2024)
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=152991353
+
+proj-1.jpg
+  Peiligang Culture Excavation Site
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=114292399
+
+proj-2.jpg
+  Untitled
+  CC0 1.0
+  https://www.rawpixel.com/image/6049103/free-public-domain-cc0-photo
+
+proj-3.jpg
+  I-69 Construction Indiana (37931745345)
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=113476256

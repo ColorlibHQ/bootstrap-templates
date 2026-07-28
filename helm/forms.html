@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forms — Helm | Free Bootstrap 6 Admin Dashboard</title>
+<meta name="description" content="Form controls from the Helm Bootstrap 6 admin dashboard — Combobox, Datepicker, OTP, password strength and range.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="app" id="app">
+
+  <aside class="side" id="side">
+    <a class="side-brand" href="index.html">
+      <span class="side-mark" aria-hidden="true">H</span><span>Helm</span>
+    </a>
+    <p class="side-label mb-0">Workspace</p>
+    <a class="side-link" href="index.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Overview</span></a>
+        <a class="side-link" href="analytics.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 13h12M4 11V7M8 11V4M12 11V9"/></svg><span>Analytics</span></a>
+        <a class="side-link" href="orders.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M2 6.5h12M6.5 6.5V13"/></svg><span>Orders</span><span class="count">24</span></a>
+        <a class="side-link active" href="forms.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5h10M3 8h10M3 11.5h6"/></svg><span>Forms</span></a>
+        <a class="side-link" href="profile.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="5.5" r="2.75"/><path d="M2.75 13.5a5.25 5.25 0 0 1 10.5 0" stroke-linecap="round"/></svg><span>Profile</span></a>
+        <a class="side-link" href="settings.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.75M8 12.75v1.75M14.5 8h-1.75M3.25 8H1.5m11-4.6-1.25 1.25M4.75 11.25 3.5 12.5m0-9 1.25 1.25m6.5 6.5 1.25 1.25" stroke-linecap="round"/></svg><span>Settings</span></a>
+    <p class="side-label mb-0">Account</p>
+    <a class="side-link" href="login.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg><span>Sign out</span></a>
+  </aside>
+
+  <div>
+    <header class="topbar">
+      <button class="btn-icon lg:d-none" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <button class="btn-icon d-none lg:d-inline-flex" type="button" id="railToggle" aria-label="Collapse sidebar" aria-pressed="false">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M6.5 3v10"/></svg>
+      </button>
+
+      <div class="form-control form-adorn search-field d-none md:d-flex">
+        <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 4 4" stroke-linecap="round"/></svg></div>
+        <input type="search" class="form-ghost" placeholder="Search orders, customers…" aria-label="Search">
+      </div>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+        <button class="btn-icon" type="button" aria-label="Notifications"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6.5a4 4 0 0 1 8 0c0 3 1 4 1 4H3s1-1 1-4" stroke-linejoin="round"/><path d="M6.5 13a1.5 1.5 0 0 0 3 0"/></svg></button>
+        <button class="btn-icon p-0" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Account menu">
+          <span class="avatar avatar-sm"><span class="avatar-initials">PN</span></span>
+        </button>
+        <div class="menu">
+          <a class="menu-item" href="profile.html">Profile</a>
+          <a class="menu-item" href="settings.html">Settings</a>
+          <hr class="menu-divider">
+          <a class="menu-item" href="login.html">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content" id="main">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+        <div>
+          <h1 class="page-title mb-1">Forms</h1>
+          <p class="fg-3 fs-sm mb-0">Every Bootstrap 6 form control, in one place.</p>
+        </div>
+        <div class="d-flex flex-wrap gap-2"></div>
+      </div>
+
+      <div class="row g-3 xl:g-4">
+        <div class="lg:col-6">
+          <div class="panel"><div class="panel-head"><h2 class="fs-lg fw-semibold mb-0">Customer details</h2></div>
+            <form class="panel-body vstack gap-3" data-demo-form data-bs-validate novalidate>
+              <div class="form-field">
+                <label class="form-label" for="fName">Full name</label>
+                <input type="text" class="form-control" id="fName" required>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="fEmail">Email</label>
+                <input type="email" class="form-control" id="fEmail" required>
+                <div class="invalid-feedback">A valid email, please.</div>
+              </div>
+              <div>
+                <label class="form-label">Plan</label>
+                <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="plan" data-bs-placeholder="Choose a plan…">
+                  <span class="combobox-value">Choose a plan…</span>
+                  <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+                </button>
+                <div class="menu">
+                  <button class="menu-item" type="button" data-bs-value="starter">Starter</button>
+                  <button class="menu-item" type="button" data-bs-value="team">Team</button>
+                  <button class="menu-item" type="button" data-bs-value="scale">Scale</button>
+                </div>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="fStart">Start date</label>
+                <input type="text" class="form-control" id="fStart" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="fNotes">Notes</label>
+                <textarea class="form-control" id="fNotes" rows="3"></textarea>
+              </div>
+              <div><button class="btn-solid theme-primary" type="submit" data-done-text="Saved &#10003;">Save customer</button></div>
+            </form>
+          </div>
+        </div>
+
+        <div class="lg:col-6">
+          <div class="panel mb-3 xl:mb-4"><div class="panel-head"><h2 class="fs-lg fw-semibold mb-0">Choices</h2></div>
+            <div class="panel-body vstack gap-3">
+              <div class="form-field">
+                <input type="checkbox" class="check" id="cA" checked>
+                <label for="cA">Send order confirmations</label>
+              </div>
+              <div class="form-field">
+                <input type="checkbox" class="check" id="cB">
+                <label for="cB">Send weekly summaries</label>
+              </div>
+              <div class="form-field">
+                <div class="switch"><input type="checkbox" id="sA" role="switch" switch checked></div>
+                <label for="sA">Two-factor authentication</label>
+              </div>
+              <div class="form-field">
+                <input type="radio" class="radio" name="tier" id="rA" checked>
+                <label for="rA">Monthly billing</label>
+              </div>
+              <div class="form-field">
+                <input type="radio" class="radio" name="tier" id="rB">
+                <label for="rB">Annual billing &mdash; two months free</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel"><div class="panel-head"><h2 class="fs-lg fw-semibold mb-0">Security</h2></div>
+            <div class="panel-body vstack gap-3">
+              <div class="form-field">
+                <label class="form-label" for="pw">New password</label>
+                <input type="password" class="form-control" id="pw" data-bs-strength>
+              </div>
+              <div>
+                <label class="form-label d-block">Verification code</label>
+                <div data-bs-otp data-bs-length="6"></div>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="rng">Monthly budget</label>
+                <div class="form-range" data-bs-bubble>
+                  <input type="range" class="form-range-input" id="rng" min="0" max="5000" step="100" value="1800" aria-label="Monthly budget">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<dialog class="drawer drawer-start" id="navDrawer" aria-labelledby="navDrawerLabel">
+  <div class="drawer-header">
+    <h2 class="drawer-title fs-lg" id="navDrawerLabel">Helm</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+    <div class="d-grid gap-1">
+        <a class="side-link" href="index.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Overview</span></a>
+        <a class="side-link" href="analytics.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 13h12M4 11V7M8 11V4M12 11V9"/></svg><span>Analytics</span></a>
+        <a class="side-link" href="orders.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M2 6.5h12M6.5 6.5V13"/></svg><span>Orders</span><span class="count">24</span></a>
+        <a class="side-link" href="forms.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5h10M3 8h10M3 11.5h6"/></svg><span>Forms</span></a>
+        <a class="side-link" href="profile.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="5.5" r="2.75"/><path d="M2.75 13.5a5.25 5.25 0 0 1 10.5 0" stroke-linecap="round"/></svg><span>Profile</span></a>
+        <a class="side-link" href="settings.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.75M8 12.75v1.75M14.5 8h-1.75M3.25 8H1.5m11-4.6-1.25 1.25M4.75 11.25 3.5 12.5m0-9 1.25 1.25m6.5 6.5 1.25 1.25" stroke-linecap="round"/></svg><span>Settings</span></a>
+      <hr>
+      <a class="side-link" href="login.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg><span>Sign out</span></a>
+    </div>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

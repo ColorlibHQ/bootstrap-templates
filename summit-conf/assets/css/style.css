@@ -1,0 +1,146 @@
+/*!
+ * Summit — Bootstrap 6 conference template
+ *
+ * Design language: near-black canvas, one electric accent, oversized date block.
+ * The primary CTA is a fixed BOTTOM bar rather than a header button, and the
+ * schedule is a real table tabbed by day.
+ */
+
+:root {
+  --brand: oklch(72% 0.19 145);
+  --kit-section-y: 5rem;
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 7rem; } }
+
+/* Clear the fixed ticket bar from inside the footer, so the page still ends
+   flush at the footer's bottom edge (a body padding would leave a real gap). */
+.site-footer { padding-bottom: 5.5rem; }
+
+/* --------------------------------------------------------------- Header */
+
+.site-header {
+  background: color-mix(in oklab, var(--bs-bg-body), transparent 12%);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* --------------------------------------------------------------- Marquee hero */
+
+.marquee {
+  padding-block: clamp(3rem, 8vw, 6rem);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.marquee-title {
+  font-size: clamp(3rem, 1rem + 9vw, 8.5rem);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+
+.marquee-accent { color: var(--bs-primary-base); }
+
+/* Oversized date block — the thing people screenshot */
+.datebox {
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  border: 2px solid var(--bs-primary-base);
+  border-radius: var(--bs-radius-5);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.datebox b { font-size: 1.75rem; line-height: 1; }
+.datebox span { font-size: 0.8125rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.7; }
+
+/* Countdown */
+.countdown { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+.count-cell {
+  min-width: 5rem;
+  padding: 0.875rem 1rem;
+  border-radius: var(--bs-radius-5);
+  background: var(--bs-bg-2);
+  text-align: center;
+}
+
+.count-cell b { display: block; font-size: 1.75rem; font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
+.count-cell span { display: block; margin-top: 0.25rem; font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bs-fg-3); }
+
+/* --------------------------------------------------------------- Speakers */
+
+.speaker { position: relative; overflow: hidden; border-radius: var(--bs-radius-6); }
+.speaker .ph { transition: transform 0.45s ease; }
+.speaker:hover .ph { transform: scale(1.05); }
+
+.speaker-name {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1.25rem 1rem 1rem;
+  background: linear-gradient(to top, rgb(0 0 0 / 78%), transparent);
+  color: #fff;
+}
+
+/* --------------------------------------------------------------- Schedule */
+
+.sched { width: 100%; border-collapse: collapse; }
+
+.sched th,
+.sched td { padding: 1rem 0.75rem; border-bottom: 1px solid var(--bs-border-color); vertical-align: top; text-align: left; }
+
+.sched .time { white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 650; width: 8rem; }
+
+.sched tr:hover td { background: var(--bs-bg-2); }
+
+.track-tag { font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* --------------------------------------------------------------- Tickets */
+
+.ticket {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-radius-6);
+}
+
+.ticket.is-featured {
+  border-color: var(--bs-primary-base);
+  box-shadow: 0 0 0 1px var(--bs-primary-base);
+}
+
+.ticket-price { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+
+/* Fixed bottom CTA bar — this template's signature, in place of a header button */
+.ticket-bar {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 1040;
+  padding: 0.75rem 1rem;
+  background: color-mix(in oklab, var(--bs-bg-body), transparent 6%);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--bs-border-color);
+}
+
+/* --------------------------------------------------------------- Venue */
+
+.venue-map {
+  aspect-ratio: 16 / 10;
+  border-radius: var(--bs-radius-6);
+  background:
+    linear-gradient(color-mix(in oklab, var(--brand), transparent 92%), color-mix(in oklab, var(--brand), transparent 92%)),
+    repeating-linear-gradient(0deg, transparent 0 42px, color-mix(in oklab, var(--bs-fg-body), transparent 92%) 42px 43px),
+    repeating-linear-gradient(90deg, transparent 0 56px, color-mix(in oklab, var(--bs-fg-body), transparent 92%) 56px 57px),
+    var(--bs-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .speaker .ph { transition: none; }
+  .speaker:hover .ph { transform: none; }
+}

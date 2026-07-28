@@ -1,0 +1,35 @@
+{
+  "slug": "atelier",
+  "title": "Atelier — Free Bootstrap 6 Portfolio Website Template",
+  "excerpt": "A free two-page Bootstrap 6 portfolio template for designers and developers — work grid, case study page, timeline and a filtered contact form.",
+  "yoastTitle": "Atelier — Free Bootstrap 6 Portfolio Website Template",
+  "yoastDesc": "Free Bootstrap 6 personal portfolio template with a selected-work grid, full case study page, experience timeline and a contact form using Combobox, Datepicker and Range.",
+  "intro": "Atelier is a free, premium <strong>Bootstrap 6</strong> portfolio template for designers, developers and freelancers. It pairs a personal landing page — selected work, about, skills, an experience timeline and writing — with a complete case study page, so you can show the work rather than just list it.",
+  "note": "The contact form is more capable than a portfolio template usually gets: a Combobox for project type, the new Datepicker for an ideal start date, and a Range slider with a live value bubble for budget. None of those components exist in Bootstrap 5.",
+  "summary": "Atelier is a free, premium two-page Bootstrap 6 portfolio template for designers, developers and freelancers. The landing page covers selected work, about, skills, an experience timeline, writing and contact; the second page is a full case study layout with prose typography, result metrics and a sticky summary rail. The contact form uses the new Combobox, Datepicker and Range components. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — personal landing page and a full case study layout",
+    "Selected work grid with hover states and project metadata",
+    "Experience timeline and animated skill meters built on Progress",
+    "Case study page using .prose typography, result metrics and a sticky summary rail",
+    "Contact form with Combobox project type, Datepicker start date and a Range budget slider with live value bubble",
+    "ScrollSpy navigation rebuilt on IntersectionObserver, offset for the sticky header",
+    "Mobile navigation in a native <dialog> drawer — browser-supplied backdrop and focus trap",
+    "Retheme the whole template by changing a single --brand token",
+    "Full dark mode via data-bs-theme, remembered across visits",
+    "Native form validation with data-bs-validate and :user-invalid",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "portfolio"
+  ],
+  "images": [
+    {
+      "name": "portrait",
+      "q": "designer portrait studio natural light",
+      "w": 700,
+      "h": 933
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "slug": "lantern",
+  "title": "Lantern — Free Bootstrap 6 Hotel &amp; Resort Website Template",
+  "excerpt": "A free two-page Bootstrap 6 hotel template — full-bleed stay hero, a date-range booking bar that docks on scroll, room strip, gallery lightbox and a room detail page.",
+  "yoastTitle": "Lantern — Free Bootstrap 6 Hotel &amp; Resort Website Template",
+  "yoastDesc": "Free Bootstrap 6 hotel and resort website template with a check-in/check-out Datepicker booking bar, room strip, gallery lightbox, table reservation dialog and a room detail page with a sticky booking rail.",
+  "intro": "Lantern is a free, premium <strong>Bootstrap 6</strong> website template for hotels, guesthouses, B&amp;Bs and small resorts. It pairs a full property homepage — rooms, dining, gallery, offers, reviews and a getting-here panel — with a room detail page built around a sticky booking rail.",
+  "note": "Hotels live on the booking widget, so that is where the new components go. The bar under the hero uses two Datepickers for check-in and check-out and a searchable Combobox for room type, then docks itself to the top of the window as a compact bar once you scroll past it — with the length of stay recalculated as you pick dates. The table reservation dialog is a native <code>&lt;dialog&gt;</code>, and the mobile menu is a Drawer. Datepicker and Combobox have no Bootstrap 5 equivalent at all.",
+  "summary": "Lantern is a free, premium two-page Bootstrap 6 template for hotels, guesthouses and small resorts. The homepage runs a full-viewport photographic stay hero with a vertical meta rail, a date-range booking bar straddling the seam that docks on scroll, a horizontal room strip with rates, amenities, a dining section with a reservation dialog, a gallery mosaic with a native dialog lightbox, seasonal offers, guest reviews and a getting-here panel with an FAQ accordion. The room page adds a photo set, prose typography, in-room amenities and a sticky booking rail. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — property homepage and a room detail page",
+    "Date-range booking bar using two Datepickers, a Combobox room picker and a guest stepper",
+    "The booking bar docks to the top as a compact bar once scrolled past, via IntersectionObserver",
+    "Length of stay recalculated live from the two date fields",
+    "Full-viewport stay hero with a vertical meta rail up the edge",
+    "Horizontal scroll-snap room strip with rates over the photography",
+    "Gallery mosaic opening a native &lt;dialog&gt; lightbox",
+    "Table reservation dialog with Datepicker, Combobox and a switch",
+    "Sticky booking rail on the room page with rate Combobox",
+    "FAQ accordion, guest reviews, seasonal offers and a getting-here panel",
+    "Editorial serif display type over a warm cream palette — light and dark mode",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "hotel"
+  ],
+  "images": [
+    {
+      "name": "stay",
+      "q": "mediterranean cliff village sea",
+      "fallback": "cliff coast",
+      "w": 1800,
+      "h": 1200
+    },
+    {
+      "name": "house-1",
+      "q": "hotel terrace golden hour mediterranean",
+      "fallback": "terrace",
+      "w": 700,
+      "h": 933
+    },
+    {
+      "name": "house-2",
+      "q": "lemon tree",
+      "fallback": "lemons",
+      "w": 500,
+      "h": 500
+    },
+    {
+      "name": "house-3",
+      "q": "reading corner armchair window",
+      "fallback": "armchair",
+      "w": 500,
+      "h": 500
+    },
+    {
+      "name": "room-1",
+      "q": "hotel room sea view shutters",
+      "fallback": "bedroom",
+      "w": 800,
+      "h": 600
+    },
+    {
+      "name": "room-2",
+      "q": "hotel bedroom garden doors",
+      "fallback": "bedroom",
+      "w": 800,
+      "h": 600
+    },
+    {
+      "name": "room-3",
+      "q": "suite pergola terrace",
+      "fallback": "pergola",
+      "w": 800,
+      "h": 600
+    },
+    {
+      "name": "room-4",
+      "q": "attic room beams window",
+      "fallback": "attic",
+      "w": 800,
+      "h": 600
+    },
+    {
+      "name": "dining",
+      "q": "table laid terrace dusk restaurant",
+      "fallback": "restaurant",
+      "w": 900,
+      "h": 675
+    },
+    {
+      "name": "gal-1",
+      "q": "terrace evening",
+      "fallback": "terrace",
+      "w": 900,
+      "h": 900
+    },
+    {
+      "name": "gal-2",
+      "q": "stone stair down to sea",
+      "fallback": "stairs",
+      "w": 600,
+      "h": 600
+    },
+    {
+      "name": "gal-3",
+      "q": "hotel bed morning light",
+      "fallback": "bed",
+      "w": 600,
+      "h": 600
+    },
+    {
+      "name": "gal-4",
+      "q": "wine cellar bar bottles",
+      "fallback": "cellar",
+      "w": 600,
+      "h": 600
+    },
+    {
+      "name": "gal-5",
+      "q": "lemons",
+      "fallback": "citrus",
+      "w": 600,
+      "h": 600
+    }
+  ]
+}

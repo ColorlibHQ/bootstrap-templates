@@ -1,0 +1,36 @@
+Placeholder photography
+=======================
+
+Every photograph here is CC0 / Public Domain Mark, sourced via the
+Openverse API — no attribution required, commercial use fine. Where no
+public-domain photograph matched a slot, the file is a generated gradient
+instead; those are marked below and carry no rights at all.
+
+Either way these are placeholders: replace them with your own photography
+before launch. Provenance for each file follows.
+
+hero.jpg
+  (already present — see previous CREDITS.txt entry)
+
+welcome.jpg
+  Nat'l Council Congregational Churches, 4/24/25
+  CC0 1.0
+  https://www.rawpixel.com/image/6980384/natl-council-congregational-churches-42425
+
+life-kids.jpg
+  Children Calculating Gains Weight. blackboard
+  CC0 1.0
+  https://www.rawpixel.com/image/8763809/photo-image-kid-room-students
+
+life-pantry.jpg
+  (already present — see previous CREDITS.txt entry)
+
+life-choir.jpg
+  Music instrument made bamboo
+  CC0 1.0
+  https://www.rawpixel.com/image/6034232/photo-image-public-domain-plant-free
+
+building.jpg
+  Free Parish image
+  CC0 1.0
+  https://www.rawpixel.com/image/5911386/image-public-domain-trees-sky

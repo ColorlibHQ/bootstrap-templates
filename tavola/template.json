@@ -1,0 +1,35 @@
+{
+  "slug": "tavola",
+  "title": "Tavola — Free Bootstrap 6 Restaurant Website Template",
+  "excerpt": "A free two-page Bootstrap 6 restaurant template — service-time tabbed menu with printed-menu leader dots, table booking with Datepicker and Combobox, gallery, hours and a full menu and wine list.",
+  "yoastTitle": "Tavola — Free Bootstrap 6 Restaurant Website Template",
+  "yoastDesc": "Free Bootstrap 6 restaurant, cafe and bistro website template with a tabbed lunch/dinner/Sunday menu, leader-dot dish rows, table booking using Datepicker and Combobox, opening hours, gallery and a full menu and wine list page.",
+  "intro": "Tavola is a free, premium <strong>Bootstrap 6</strong> website template for restaurants, bistros, trattorias, cafés and gastropubs. It pairs a full restaurant homepage — a menu tabbed by service time, the kitchen, the room, booking, hours and an FAQ — with a complete menu and wine list page.",
+  "note": "For a restaurant the menu <em>is</em> the product, so it is the centre of the page rather than a link in the footer. It is tabbed by service using Bootstrap 6 tabs — lunch, dinner and Sunday are genuinely different menus, not one list with notes — and every dish row is set with <strong>leader dots</strong> the way a printed menu sets them. Those dots are a repeating gradient on a flexible middle cell, so they stretch to whatever gap is left and never wrap awkwardly. Booking uses the new Datepicker and two Comboboxes, and the FAQ is native <code>&lt;details&gt;</code>.",
+  "summary": "Tavola is a free, premium two-page Bootstrap 6 template for restaurants, bistros and cafés. The homepage leads with a photographic hero, then a menu tabbed by service time — lunch, dinner, Sunday — with dish rows set using printed-menu leader dots and dietary tags. Below that: the kitchen with a pull quote, a room gallery mosaic, a booking form built on Datepicker and Combobox with an opening-hours panel beside it, and a getting-here section with a native details FAQ. The menu page adds the full card across four courses plus a wine list by the glass and bottle. Deep green canvas with a terracotta accent and serif dish names. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — restaurant homepage and a full menu and wine list",
+    "Menu tabbed by service time using Bootstrap 6 tabs — lunch, dinner, Sunday",
+    "Dish rows set with printed-menu leader dots that stretch to any gap",
+    "Dietary tags (V, VG, GF) inline on dish names",
+    "Table booking with Datepicker, time and party-size Comboboxes",
+    "Opening hours panel with today's row highlighted",
+    "Room gallery mosaic with a feature tile",
+    "Native &lt;details&gt; FAQ covering allergies, private hire and service charge",
+    "Wine list by the glass and by the bottle on the menu page",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "restaurant"
+  ],
+  "images": [
+    { "name": "hero",    "q": "restaurant interior warm evening", "fallback": "restaurant", "w": 1800, "h": 1000 },
+    { "name": "kitchen", "q": "chef cooking open kitchen",        "fallback": "chef",       "w": 900,  "h": 675 },
+    { "name": "room-1",  "q": "restaurant dining room table",     "fallback": "dining",     "w": 900,  "h": 900 },
+    { "name": "room-2",  "q": "long wooden table",                "fallback": "table",      "w": 600,  "h": 600 },
+    { "name": "room-3",  "q": "fresh pasta making",               "fallback": "pasta",      "w": 600,  "h": 600 },
+    { "name": "room-4",  "q": "wine bottles shelf bar",           "fallback": "wine",       "w": 600,  "h": 600 },
+    { "name": "room-5",  "q": "plated dish restaurant",           "fallback": "food",       "w": 600,  "h": 600 }
+  ]
+}

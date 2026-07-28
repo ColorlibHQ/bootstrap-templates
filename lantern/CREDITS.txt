@@ -1,0 +1,54 @@
+Placeholder photography
+=======================
+
+Every photograph here is CC0 / Public Domain Mark, sourced via the
+Openverse API — no attribution required, commercial use fine. Where no
+public-domain photograph matched a slot, the file is a generated gradient
+instead; those are marked below and carry no rights at all.
+
+Either way these are placeholders: replace them with your own photography
+before launch. Provenance for each file follows.
+
+stay.jpg
+  Cliff by a beautiful sea
+  CC0 1.0
+  https://www.rawpixel.com/image/431945/view-from-cliff
+
+house-1.jpg
+  (already present — see previous CREDITS.txt entry)
+
+house-2.jpg
+  (already present — see previous CREDITS.txt entry)
+
+house-3.jpg
+  (already present — see previous CREDITS.txt entry)
+
+room-1.jpg
+  (already present — see previous CREDITS.txt entry)
+
+room-2.jpg
+  (already present — see previous CREDITS.txt entry)
+
+room-3.jpg
+  (already present — see previous CREDITS.txt entry)
+
+room-4.jpg
+  (already present — see previous CREDITS.txt entry)
+
+dining.jpg
+  (already present — see previous CREDITS.txt entry)
+
+gal-1.jpg
+  (already present — see previous CREDITS.txt entry)
+
+gal-2.jpg
+  (already present — see previous CREDITS.txt entry)
+
+gal-3.jpg
+  (already present — see previous CREDITS.txt entry)
+
+gal-4.jpg
+  (already present — see previous CREDITS.txt entry)
+
+gal-5.jpg
+  (already present — see previous CREDITS.txt entry)

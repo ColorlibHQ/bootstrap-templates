@@ -1,0 +1,202 @@
+/*!
+ * Marigold — Bootstrap 6 wedding template
+ *
+ * Design language: soft and hand-set. Warm off-white, muted sage and clay, a
+ * display serif for names and dates, and hairline rules instead of boxes.
+ *
+ * The structural idea carrying the identity is the RSVP. Wedding sites almost
+ * always ship an RSVP that handles one person — so guests reply twice, or email
+ * instead, and the couple ends up with a spreadsheet either way. This one takes
+ * a party: each named guest gets their own attendance answer, meal choice and
+ * dietary note, added and removed on the page.
+ */
+
+:root {
+  --brand: oklch(58% 0.09 25);
+  --kit-section-y: 4.5rem;
+  --mg-rule: color-mix(in oklab, var(--bs-fg-body), transparent 86%);
+  --mg-sage: oklch(62% 0.05 145);
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 6rem; } }
+
+[data-bs-theme="light"] {
+  --bs-bg-body: oklch(98% 0.008 70);
+  --bs-bg-2: oklch(95.5% 0.012 70);
+}
+
+.display-serif,
+.names,
+.section-title,
+.schedule-time {
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* ---------------------------------------------------------------
+   Header + hero
+   --------------------------------------------------------------- */
+
+.site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 30;
+  background: transparent;
+  backdrop-filter: none;
+  border: 0;
+  padding-block: 1rem;
+}
+
+.site-header .navbar { background: transparent; border: 0; }
+.site-header .nav-link,
+.site-header .wordmark,
+.site-header .btn-icon { color: var(--bs-white); }
+
+.wordmark {
+  font-family: ui-serif, Georgia, serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.vows {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 6rem clamp(1.25rem, 5vw, 4rem) 4rem;
+  color: var(--bs-white);
+  background: linear-gradient(160deg, #4a3f3a, #6b5b52 55%, #8a7466);
+  overflow: hidden;
+}
+
+.vows > .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vows::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgb(38 30 26 / 45%) 0%, rgb(38 30 26 / 28%) 40%, rgb(38 30 26 / 70%) 100%);
+}
+
+.vows-inner { position: relative; z-index: 2; max-width: 44rem; }
+
+.names { font-size: clamp(2.75rem, 1.4rem + 6vw, 6rem); line-height: 1.02; }
+
+.vows-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.vows-rule::before,
+.vows-rule::after {
+  content: "";
+  width: clamp(1.5rem, 6vw, 4rem);
+  height: 1px;
+  background: currentcolor;
+  opacity: 0.6;
+}
+
+/* Countdown, quieter than Liftoff's — this is not a launch. */
+.days { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1rem, 4vw, 2.5rem); }
+.days-value { font-family: ui-serif, Georgia, serif; font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.5rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.days-label { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.72; margin-top: 0.35rem; }
+
+/* ---------------------------------------------------------------
+   Schedule — vertical timeline
+   --------------------------------------------------------------- */
+
+.schedule { position: relative; }
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--mg-rule);
+}
+
+.schedule-item:last-child { border-bottom: 1px solid var(--mg-rule); }
+.schedule-time { font-size: 1.15rem; color: var(--bs-fg-primary); font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------
+   RSVP — the identity piece
+   --------------------------------------------------------------- */
+
+.rsvp {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--mg-rule);
+  background: var(--bs-bg-body);
+}
+
+/* One block per named guest. Added and removed on the page, because a party of
+   four should not have to submit the form four times. */
+.guest {
+  padding: 1.25rem;
+  border: 1px solid var(--mg-rule);
+  border-left: 3px solid var(--mg-sage);
+  background: var(--bs-bg-2);
+  margin-bottom: 0.85rem;
+}
+
+.guest-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.85rem; }
+.guest-no { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bs-fg-3); }
+
+/* ---------------------------------------------------------------
+   Story, gifts, misc
+   --------------------------------------------------------------- */
+
+.eyebrow-rule {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--bs-fg-primary);
+}
+
+.eyebrow-rule::before { content: ""; width: 2rem; height: 1px; background: currentcolor; }
+
+.gift-cell {
+  padding: 1.5rem;
+  border: 1px solid var(--mg-rule);
+  height: 100%;
+}
+
+.mosaic { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+@media (width >= 768px) { .mosaic { grid-template-columns: repeat(4, 1fr); } }
+.mosaic .ph { aspect-ratio: 1; }
+.mosaic > *:first-child { grid-column: span 2; grid-row: span 2; }
+
+.sub-head { padding-block: 8rem 3rem; background: var(--bs-bg-2); border-bottom: 1px solid var(--mg-rule); }
+.sub-head-page .site-header .nav-link,
+.sub-head-page .site-header .wordmark,
+.sub-head-page .site-header .btn-icon { color: var(--bs-fg-body); }
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--mg-rule);
+}
+
+.spec-row:last-child { border-bottom: 0; }

@@ -1,0 +1,29 @@
+{
+  "slug": "bs6-dialogs",
+  "kind": "pack",
+  "title": "Bootstrap 6 Dialogs &amp; Drawers — 10 Free Templates",
+  "excerpt": "Ten free Bootstrap 6 dialog and drawer templates — basic, scrollable, sizes, forms, destructive confirms, non-modal, four-sided drawers, bottom sheets, toasts and entry animations.",
+  "yoastTitle": "Bootstrap 6 Dialogs &amp; Drawers — 10 Free Templates",
+  "yoastDesc": "Ten free Bootstrap 6 dialog and drawer templates built on native dialog elements — sizes, scrollable bodies, form dialogs, static destructive confirms, non-modal panels, four-sided drawers, bottom sheets, toasts and motion classes. No build step.",
+  "intro": "Bootstrap 6 rebuilt this area completely: <strong>Modal became Dialog</strong>, <strong>Offcanvas became Drawer</strong>, and both are now native <code>&lt;dialog&gt;</code> elements rather than divs with a faked backdrop. This pack covers all ten shapes you actually need — sizes, scrolling, forms, destructive confirms, non-modal panels, drawers on four sides, bottom sheets, toasts and entry animations.",
+  "note": "Being a real <code>&lt;dialog&gt;</code> means the browser gives you the top layer (no z-index fights with sticky headers), focus trapping, focus restored to the trigger on close, Escape to dismiss and inert page content — all of which was hand-rolled JavaScript in v5. It also means the markup <em>must</em> be a <code>&lt;dialog&gt;</code>: a <code>&lt;div class=\"dialog\"&gt;</code> styles perfectly, looks finished, and never opens, with nothing logged. That single mistake accounts for most failed v5 ports, and the pack calls it out on the pages where it bites.",
+  "summary": "Ten free Bootstrap 6 dialog and drawer templates in one pack. Basic dialogs, scrollable bodies with fixed headers and footers, four sizes plus fullscreen, form dialogs submitting from the footer via the form attribute, static destructive confirms that resist backdrop dismissal, non-modal dialogs that leave the page interactive, drawers on all four edges, the mobile bottom-sheet pattern with drawer-sheet and drawer-fit-content, stacked toasts including the translucent variant, and the slide-up, slide-down and instant entry animations. Built on native dialog elements throughout, with porting notes for anyone coming from v5 modals and offcanvas. ESM-only, no build step, full light and dark mode.",
+  "features": [
+    "Ten standalone dialog pages plus an index gallery",
+    "Built on native &lt;dialog&gt; — top layer, focus trapping and Escape come from the browser",
+    "Non-modal dialogs that leave the page interactive — no v5 equivalent at all",
+    "Drawers on all four edges, replacing Offcanvas with the same element and JS",
+    "Mobile bottom sheet via .drawer-sheet with .drawer-fit-content",
+    "Static destructive confirms that resist backdrop dismissal",
+    "Form dialogs submitting from the footer using the form attribute",
+    "Four dialog sizes plus fullscreen takeover",
+    "Stacked toasts including the translucent variant",
+    "Slide-up, slide-down and instant entry animations, reduced-motion aware",
+    "Porting notes covering the div-instead-of-dialog trap that silently breaks v5 ports",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "ui-packs"
+  ]
+}

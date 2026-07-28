@@ -1,0 +1,52 @@
+{
+  "slug": "syllabus",
+  "title": "Syllabus — Free Bootstrap 6 Online Course &amp; E-Learning Template",
+  "excerpt": "A free two-page Bootstrap 6 e-learning template whose curriculum ticks off and stays ticked, then turns the hours you can spare each week into a real finish date.",
+  "yoastTitle": "Syllabus — Free Bootstrap 6 Online Course &amp; E-Learning Template",
+  "yoastDesc": "Free Bootstrap 6 online course and e-learning website template with a tickable curriculum that remembers your progress in the browser, a pace planner that computes a finish date, a sample lesson page and no account required.",
+  "intro": "Syllabus is a free, premium <strong>Bootstrap 6</strong> online course and e-learning website template. It pairs a course landing page — outcomes, a 34-lesson curriculum, instructor, reviews, enrolment and FAQ — with a full sample lesson page carrying notes, resources and the same course outline in a sidebar.",
+  "note": "Course pages list a curriculum and stop there, which leaves the two questions a student actually has unanswered: <em>how much is left</em>, and <em>when would I finish</em>. Here every lesson carries its own duration and ticks off, the ticks persist in the browser with no account to create, and an hours-a-week slider turns what remains into a real date — <strong>“about 5 weeks — finishing around 2 September”</strong>. The curriculum is declared once, so lesson counts, per-module durations and the 11h 26m total are all derived rather than typed twice and left to rot. The lesson page shares the same progress store, and because its sidebar only lists three modules the full lesson-to-minutes map travels on <code>&lt;body&gt;</code> — otherwise “time remaining” would be computed from whatever happened to be on screen.",
+  "summary": "Syllabus is a free, premium two-page Bootstrap 6 online course template. The landing page runs a split hero, six concrete outcomes, a seven-module curriculum of 34 tickable lessons built on native details, a sticky progress tracker with an hours-a-week pace planner, an instructor section, three reviews, an enrolment panel and a five-question FAQ. The sample lesson page carries a player placeholder, a properly set long-form article, a resources card and the course outline in a sticky sidebar — sharing one progress store with the landing page, kept in sync across tabs. Progress lives in localStorage only, with no account and no request, and the footer says so. Warm paper-and-ink design with a display serif and hairline rules. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — course landing page and a full sample lesson",
+    "34 tickable lessons across seven modules, progress kept in the browser",
+    "Pace planner: hours a week in, a real finish date out",
+    "Lesson counts, module durations and the 11h 26m total are all derived",
+    "Landing page and lesson page share one progress store, synced across tabs",
+    "No account, no request — and the footer states the trade honestly",
+    "Per-module completion counts update as you tick",
+    "Native details for both the curriculum and the FAQ, no accordion JS",
+    "Sticky tracker and sticky lesson sidebar",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "school-education"
+  ],
+  "images": [
+    {
+      "name": "hero",
+      "q": "letterpress metal type",
+      "cc0q": "letterpress type",
+      "fallback": "typography",
+      "w": 900,
+      "h": 675
+    },
+    {
+      "name": "teacher",
+      "q": "portrait woman designer studio",
+      "fallback": "portrait",
+      "w": 700,
+      "h": 933,
+      "cc0": false
+    },
+    {
+      "name": "lesson",
+      "q": "printed text page close up",
+      "cc0q": "printed page",
+      "fallback": "book page",
+      "w": 1200,
+      "h": 675
+    }
+  ]
+}

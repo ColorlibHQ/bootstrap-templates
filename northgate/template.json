@@ -1,0 +1,48 @@
+{
+  "slug": "northgate",
+  "title": "Northgate — Free Bootstrap 6 School Website Template",
+  "excerpt": "A free two-page Bootstrap 6 school and college template — programmes, an admissions stepper, key dates, staff and a visit-request form.",
+  "yoastTitle": "Northgate — Free Bootstrap 6 School Website Template",
+  "yoastDesc": "Free Bootstrap 6 school website template with programme cards, a four-step admissions stepper, key dates, staff profiles and a visit form using Combobox, Datepicker and Chip input.",
+  "intro": "Northgate is a free, premium <strong>Bootstrap 6</strong> website template for schools, colleges and academies. It pairs a full school homepage — programmes, admissions, school life, staff, news and contact — with a programme detail page, covering the pages a prospective parent actually reads before booking a visit.",
+  "note": "The admissions journey is built on Bootstrap 6's new Stepper component, and the visit-request form combines a Combobox entry-point picker, the new Datepicker and a Chip input for topics of interest. None of those exist in Bootstrap 5.",
+  "summary": "Northgate is a free, premium two-page Bootstrap 6 template for schools, colleges and academies. The homepage covers programmes with a Combobox filter, a four-step admissions Stepper, an accordion FAQ, key dates, tabbed school life, staff profiles, news and a visit-request form. The programme page adds prose typography, entry requirements and a sticky enquiry rail. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — school homepage and a programme detail page",
+    "Four-step admissions journey built on the new Stepper component",
+    "Programme cards with a searchable Combobox stage filter",
+    "Key dates list, tabbed school life section and staff profiles",
+    "Visit-request form with Combobox entry point, Datepicker and Chip input interests",
+    "Accordion FAQ on native <details> — exclusive groups, zero JavaScript",
+    "Utility bar for parent portal and staff login links",
+    "ScrollSpy navigation offset for the sticky header",
+    "Retheme the whole site by changing a single --brand token",
+    "Full dark mode via data-bs-theme, remembered across visits",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "school-education"
+  ],
+  "images": [
+    {
+      "name": "hero-science",
+      "q": "school science laboratory students",
+      "w": 700,
+      "h": 933
+    },
+    {
+      "name": "hero-library",
+      "q": "school library reading room books",
+      "w": 500,
+      "h": 500
+    },
+    {
+      "name": "hero-sports",
+      "q": "gymnasium interior",
+      "w": 500,
+      "h": 500,
+      "fallback": "basketball court"
+    }
+  ]
+}

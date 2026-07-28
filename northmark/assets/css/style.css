@@ -1,0 +1,196 @@
+/*!
+ * Northmark — Bootstrap 6 creative & brand agency template
+ *
+ * Design language: editorial monochrome. Near-black on off-white, one cobalt
+ * accent used sparingly, and an asymmetric grid that never centres anything.
+ *
+ * The structural idea carrying the identity is the work index: full-width rows
+ * rather than a card grid, each revealing its thumbnail on hover. Agencies are
+ * judged on the client list as much as the work, and a row puts the client name
+ * at full size where a card shrinks it to a caption.
+ */
+
+:root {
+  --brand: oklch(52% 0.2 262);
+  --kit-section-y: 5rem;
+  --nm-rule: color-mix(in oklab, var(--bs-fg-body), transparent 85%);
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 7.5rem; } }
+
+[data-bs-theme="light"] {
+  --bs-bg-body: oklch(97% 0 0);
+  --bs-bg-2: oklch(93.5% 0 0);
+}
+
+[data-bs-theme="dark"] {
+  --bs-bg-body: oklch(16% 0 0);
+  --bs-bg-2: oklch(20% 0 0);
+}
+
+.tight {
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.96;
+}
+
+/* ---------------------------------------------------------------
+   Header + hero
+   --------------------------------------------------------------- */
+
+.wordmark {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.hero {
+  padding-block: clamp(5rem, 12vw, 9rem) clamp(3rem, 7vw, 5rem);
+  border-bottom: 1px solid var(--nm-rule);
+}
+
+.hero-title { font-size: clamp(2.75rem, 1rem + 7.5vw, 7rem); text-wrap: balance; }
+
+/* Statement line that runs to the edge — the one place the grid breaks out. */
+.hero-meta {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+}
+
+@media (width >= 768px) { .hero-meta { grid-template-columns: repeat(3, 1fr); } }
+
+.hero-meta p { max-width: 22rem; }
+
+/* ---------------------------------------------------------------
+   Work index — the identity piece
+   --------------------------------------------------------------- */
+
+.work-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem 2rem;
+  align-items: center;
+  padding: clamp(1.25rem, 3vw, 2rem) 0;
+  border-bottom: 1px solid var(--nm-rule);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+@media (width >= 768px) {
+  .work-row { grid-template-columns: 3rem 1fr 12rem 5rem; gap: 2rem; }
+}
+
+.work-no { font-size: 0.8125rem; color: var(--bs-fg-3); font-variant-numeric: tabular-nums; }
+.work-client { font-size: clamp(1.5rem, 1rem + 2vw, 2.5rem); font-weight: 600; letter-spacing: -0.035em; }
+.work-disc { color: var(--bs-fg-3); font-size: 0.9rem; }
+.work-year { color: var(--bs-fg-3); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+
+.work-row:hover .work-client { color: var(--bs-fg-primary); }
+
+/* Thumbnail revealed on hover, following nothing — parked to the right of the
+   client name. Pointer-events off so it never interrupts the row's own hover. */
+.work-thumb {
+  position: absolute;
+  /* Must clear the discipline and year columns or it covers them: those are
+     12rem + 5rem with 2rem gutters, so anything under 19rem from the right
+     edge lands on top of the text. 20rem leaves a hair of breathing room. */
+  right: 20rem;
+  top: 50%;
+  translate: 0 -50%;
+  width: 12rem;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--bs-radius-3);
+  opacity: 0;
+  scale: 0.94;
+  pointer-events: none;
+  transition: opacity 0.22s ease, scale 0.22s ease;
+  display: none;
+}
+
+/* Only shown where there is genuinely room for it beside the longest client
+   name. Below this the row is just a row, which is the right outcome. */
+@media (width >= 1200px) { .work-thumb { display: block; } }
+
+.work-row:hover .work-thumb { opacity: 1; scale: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .work-thumb { transition: none; }
+}
+
+.work-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------------------------------------------------------------
+   Capabilities, approach
+   --------------------------------------------------------------- */
+
+.cap-row {
+  display: grid;
+  gap: 0.5rem 2rem;
+  grid-template-columns: 1fr;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--nm-rule);
+}
+
+@media (width >= 768px) { .cap-row { grid-template-columns: 16rem 1fr; } }
+
+.cap-name { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; }
+
+.step-no {
+  font-size: clamp(2.5rem, 2rem + 2vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: color-mix(in oklab, var(--bs-fg-body), transparent 82%);
+}
+
+.client-mark {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--nm-rule);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--bs-fg-3);
+  font-size: 1.05rem;
+}
+
+/* ---------------------------------------------------------------
+   People, contact, sub page
+   --------------------------------------------------------------- */
+
+.person .ph { aspect-ratio: 3 / 4; margin-bottom: 1rem; }
+.person-role { color: var(--bs-fg-3); font-size: 0.875rem; }
+
+.contact-panel {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--nm-rule);
+  background: var(--bs-bg-2);
+}
+
+.sub-head {
+  padding-block: clamp(4rem, 9vw, 6rem) clamp(2rem, 5vw, 3rem);
+  border-bottom: 1px solid var(--nm-rule);
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--nm-rule);
+}
+
+.spec-row:last-child { border-bottom: 0; }
+
+.result-figure {
+  font-size: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--bs-fg-primary);
+}

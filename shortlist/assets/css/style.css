@@ -1,0 +1,192 @@
+/*!
+ * Shortlist — Bootstrap 6 job board template
+ *
+ * Design language: functional and dense. This is a working tool, not a brochure,
+ * so information density beats whitespace and every row earns its height.
+ *
+ * The structural idea carrying the identity is salary transparency: every listing
+ * shows a real range, and the filter rail has a salary floor rather than a
+ * keyword box for it. "Competitive" is not a value the markup can express — the
+ * one job without a range is explicitly badged as hiding it, which is the point.
+ */
+
+:root {
+  --brand: oklch(52% 0.16 250);
+  --kit-section-y: 4rem;
+  --sl-rule: var(--bs-border-color);
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 5.5rem; } }
+
+/* ---------------------------------------------------------------
+   Search hero
+   --------------------------------------------------------------- */
+
+.find {
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+  background: var(--bs-bg-2);
+  border-bottom: 1px solid var(--sl-rule);
+}
+
+.find-title {
+  font-size: clamp(1.85rem, 1.2rem + 2.6vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.find-bar {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.6rem;
+  border-radius: var(--bs-radius-5);
+  background: var(--bs-bg-body);
+  border: 1px solid var(--sl-rule);
+  box-shadow: 0 1rem 2rem -1.25rem rgb(0 0 0 / 22%);
+}
+
+@media (width >= 992px) { .find-bar { grid-template-columns: 1.4fr 1fr auto; align-items: center; } }
+
+/* ---------------------------------------------------------------
+   Layout: filter rail + results
+   --------------------------------------------------------------- */
+
+.board {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (width >= 992px) { .board { grid-template-columns: 16rem minmax(0, 1fr); } }
+
+.rail {
+  position: sticky;
+  top: 5.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--sl-rule);
+  border-radius: var(--bs-radius-5);
+  background: var(--bs-bg-body);
+}
+
+.rail-group + .rail-group { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--sl-rule); }
+.rail-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bs-fg-3); margin-bottom: 0.75rem; }
+
+/* ---------------------------------------------------------------
+   Job rows
+   --------------------------------------------------------------- */
+
+.job {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid var(--sl-rule);
+  border-radius: var(--bs-radius-4);
+  background: var(--bs-bg-body);
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 0.75rem;
+}
+
+.job:hover { border-color: color-mix(in oklab, var(--brand), transparent 55%); }
+
+.job-head { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: flex-start; }
+
+.job-logo {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border-radius: var(--bs-radius-3);
+  background: var(--bs-bg-2);
+  border: 1px solid var(--sl-rule);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--bs-fg-2);
+}
+
+.job-title { font-size: 1.1rem; font-weight: 650; letter-spacing: -0.015em; }
+.job-co { color: var(--bs-fg-3); font-size: 0.875rem; }
+
+/* The salary is the loudest thing on the row, deliberately. */
+.job-pay {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--bs-fg-primary);
+  white-space: nowrap;
+}
+
+.job-pay-hidden { color: var(--bs-fg-3); font-weight: 500; font-style: italic; }
+
+.job-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; }
+
+.job-new {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--bs-fg-success);
+}
+
+/* ---------------------------------------------------------------
+   Categories, companies, CTA
+   --------------------------------------------------------------- */
+
+.cat-tile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--sl-rule);
+  border-radius: var(--bs-radius-4);
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.cat-tile:hover { border-color: color-mix(in oklab, var(--brand), transparent 55%); }
+.cat-count { font-variant-numeric: tabular-nums; color: var(--bs-fg-3); font-size: 0.875rem; }
+
+.co-tile {
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1rem;
+  border: 1px solid var(--sl-rule);
+  border-radius: var(--bs-radius-4);
+  text-align: center;
+  height: 100%;
+}
+
+.post-panel {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--sl-rule);
+  border-radius: var(--bs-radius-5);
+  background: var(--bs-bg-2);
+}
+
+/* ---------------------------------------------------------------
+   Job detail page
+   --------------------------------------------------------------- */
+
+.sub-head { padding-block: 2.5rem; background: var(--bs-bg-2); border-bottom: 1px solid var(--sl-rule); }
+
+.apply-rail {
+  position: sticky;
+  top: 5.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--sl-rule);
+  border-radius: var(--bs-radius-5);
+  background: var(--bs-bg-body);
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--sl-rule);
+}
+
+.spec-row:last-child { border-bottom: 0; }

@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forms — Stratos | Bootstrap 6 showcase</title>
+<meta name="description" content="Bootstrap 6 form controls including the new Combobox, Datepicker, Chip input, OTP input, password Strength meter and Range slider.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#tocNav" data-bs-top-margin="120px" data-bs-smooth-scroll="true">
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header" id="siteHeader">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+        <span class="brand-mark" aria-hidden="true">S</span> Stratos
+      </a>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="forms.html">Forms</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog-post.html">Blog</a></li>
+          </ul>
+        </div>
+      </dialog>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <span class="badge badge-subtle theme-primary mb-3">Bootstrap 6.0.0-alpha1</span>
+    <h1 class="fs-4xl fw-bold mb-2">Forms</h1>
+    <p class="fs-lg fg-2 mb-0" style="max-width:44rem">
+      Six form components in the alpha simply did not exist in Bootstrap 5 —
+      Combobox, Datepicker, Chip input, OTP input, password Strength and the
+      enhanced Range. They're all live below.
+    </p>
+  </div>
+</div>
+
+<main id="main" class="section">
+  <div class="container">
+    <div class="shell">
+
+      <aside class="shell-aside">
+        <p class="eyebrow fs-xs fg-3 mb-2">On this page</p>
+        <ul class="shell-nav nav" id="tocNav">
+          <li><a class="nav-link" href="#controls">Text controls</a></li>
+          <li><a class="nav-link" href="#field">Form field</a></li>
+          <li><a class="nav-link" href="#adorn">Form adorn</a></li>
+          <li><a class="nav-link" href="#inputgroup">Input group</a></li>
+          <li><a class="nav-link" href="#floating">Floating labels</a></li>
+          <li><a class="nav-link" href="#choice">Check, radio, switch</a></li>
+          <li><a class="nav-link" href="#range">Range</a></li>
+          <li><a class="nav-link" href="#combobox">Combobox</a></li>
+          <li><a class="nav-link" href="#datepicker">Datepicker</a></li>
+          <li><a class="nav-link" href="#chipinput">Chip input</a></li>
+          <li><a class="nav-link" href="#otp">OTP input</a></li>
+          <li><a class="nav-link" href="#strength">Password strength</a></li>
+          <li><a class="nav-link" href="#validation">Validation</a></li>
+          <li><a class="nav-link" href="#full">Complete form</a></li>
+        </ul>
+      </aside>
+
+      <div>
+
+        <!-- TEXT CONTROLS -->
+        <section class="demo-group" id="controls">
+          <h2>Text controls</h2>
+          <p class="demo-intro">
+            <code>.form-select</code> is gone — a <code>&lt;select&gt;</code> now takes
+            <code>.form-control</code> like every other control.
+          </p>
+          <div class="demo demo-stack">
+            <input type="text" class="form-control form-control-sm" placeholder="Small">
+            <input type="text" class="form-control" placeholder="Default">
+            <input type="text" class="form-control form-control-lg" placeholder="Large">
+            <select class="form-control">
+              <option selected>Select a project…</option>
+              <option>Payments</option>
+              <option>Search</option>
+            </select>
+            <textarea class="form-control" rows="3" placeholder="Release notes…"></textarea>
+            <input type="text" class="form-control" value="Disabled" disabled>
+          </div>
+        </section>
+
+        <!-- FORM FIELD -->
+        <section class="demo-group" id="field">
+          <h2>Form field</h2>
+          <p class="demo-intro">
+            <code>.form-field</code> is the grid wrapper that lays out a label, control,
+            help text and validation feedback.
+          </p>
+          <div class="demo">
+            <div class="form-field">
+              <label for="ffEmail" class="form-label">Work email</label>
+              <input type="email" class="form-control" id="ffEmail" placeholder="you@company.com">
+              <div class="form-text">We'll only email you about your workspace.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FORM ADORN -->
+        <section class="demo-group" id="adorn">
+          <h2>Form adorn <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">
+            Icons and text decorations inside the control. Note the inversion: the
+            <em>wrapper</em> carries <code>.form-control</code> and the input becomes
+            <code>.form-ghost</code>.
+          </p>
+          <div class="demo demo-stack">
+            <div class="form-control form-adorn">
+              <div class="form-adorn-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 4 4" stroke-linecap="round"/></svg>
+              </div>
+              <input type="search" class="form-ghost" placeholder="Search releases…">
+            </div>
+            <div class="form-control form-adorn form-adorn-end">
+              <div class="form-adorn-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="m2 4 6 4.5L14 4"/></svg>
+              </div>
+              <input type="email" class="form-ghost" placeholder="you@example.com">
+            </div>
+            <div class="form-control form-adorn">
+              <span class="form-adorn-text">https://</span>
+              <input type="text" class="form-ghost" placeholder="stratos.app/your-team">
+            </div>
+          </div>
+        </section>
+
+        <!-- INPUT GROUP -->
+        <section class="demo-group" id="inputgroup">
+          <h2>Input group</h2>
+          <div class="demo demo-stack">
+            <div class="input-group">
+              <span class="input-group-text">@</span>
+              <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Amount" aria-label="Amount">
+              <span class="input-group-text">USD</span>
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+              <button class="btn-solid theme-primary" type="button">Go</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- FLOATING LABELS -->
+        <section class="demo-group" id="floating">
+          <h2>Floating labels</h2>
+          <div class="demo demo-stack">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="floatEmail" placeholder="name@example.com">
+              <label for="floatEmail">Email address</label>
+            </div>
+            <div class="form-floating">
+              <select class="form-control" id="floatSelect">
+                <option selected>Open this select</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+              </select>
+              <label for="floatSelect">Works on selects</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- CHECK / RADIO / SWITCH -->
+        <section class="demo-group" id="choice">
+          <h2>Check, radio &amp; switch</h2>
+          <p class="demo-intro">
+            A real trap: <code>.check</code> and <code>.radio</code> go on the
+            <code>&lt;input&gt;</code>, but <code>.switch</code> goes on a
+            <strong>wrapper</strong> with a <code>switch</code> attribute on the input.
+          </p>
+          <div class="demo">
+            <span class="demo-label">Checkboxes</span>
+            <div class="demo-stack mb-4">
+              <div class="form-field">
+                <input type="checkbox" class="check" id="ck1" checked>
+                <label for="ck1">Email me when a release ships</label>
+              </div>
+              <div class="form-field">
+                <input type="checkbox" class="check theme-success" id="ck2" checked>
+                <label for="ck2">Themed checkbox</label>
+              </div>
+              <div class="form-field">
+                <input type="checkbox" class="check" id="ck3" disabled>
+                <label for="ck3">Disabled</label>
+              </div>
+              <div class="form-field">
+                <input type="checkbox" class="check" id="ck4">
+                <div class="form-field-content">
+                  <label for="ck4">With a description</label>
+                  <small class="form-text">Supporting copy sits under the label.</small>
+                </div>
+              </div>
+            </div>
+
+            <span class="demo-label">Radios</span>
+            <div class="demo-stack mb-4">
+              <div class="form-field">
+                <input type="radio" class="radio" name="plan" id="rd1" checked>
+                <label for="rd1">Monthly billing</label>
+              </div>
+              <div class="form-field">
+                <input type="radio" class="radio" name="plan" id="rd2">
+                <label for="rd2">Annual billing</label>
+              </div>
+            </div>
+
+            <span class="demo-label">Switches</span>
+            <div class="demo-stack">
+              <div class="form-field">
+                <div class="switch"><input type="checkbox" value="" id="sw1" role="switch" switch checked></div>
+                <label for="sw1">Slack notifications</label>
+              </div>
+              <div class="form-field">
+                <div class="switch switch-sm"><input type="checkbox" value="" id="sw2" role="switch" switch></div>
+                <label for="sw2">Small switch</label>
+              </div>
+              <div class="form-field">
+                <div class="switch"><input type="checkbox" value="" id="sw3" role="switch" switch disabled></div>
+                <label for="sw3">Disabled switch</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RANGE -->
+        <section class="demo-group" id="range">
+          <h2>Range <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">
+            The slider gained a wrapper and an optional value bubble
+            (<code>data-bs-bubble</code>).
+          </p>
+          <div class="demo demo-stack">
+            <div>
+              <label for="rng1" class="form-label">Seats</label>
+              <div class="form-range">
+                <input type="range" class="form-range-input" id="rng1" min="1" max="100" value="25">
+              </div>
+            </div>
+            <div>
+              <label for="rng2" class="form-label">With value bubble</label>
+              <div class="form-range" data-bs-bubble>
+                <input type="range" class="form-range-input" id="rng2" min="0" max="100" value="60">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- COMBOBOX -->
+        <section class="demo-group" id="combobox">
+          <h2>Combobox <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">
+            A searchable, optionally multi-select control built on top of Menu. There was
+            no equivalent in Bootstrap 5 — this is the single clearest reason to want v6.
+          </p>
+          <div class="demo">
+            <span class="demo-label">Single select, with search</span>
+            <button class="form-control combobox-toggle" type="button"
+                    data-bs-toggle="combobox" data-bs-search="true" data-bs-name="repo"
+                    data-bs-placeholder="Select a repository…">
+              <span class="combobox-value">Select a repository…</span>
+              <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+            </button>
+            <div class="menu">
+              <button class="menu-item" type="button" data-bs-value="core">stratos/core</button>
+              <button class="menu-item" type="button" data-bs-value="web">stratos/web</button>
+              <button class="menu-item" type="button" data-bs-value="api">stratos/api</button>
+              <button class="menu-item" type="button" data-bs-value="mobile">stratos/mobile</button>
+              <button class="menu-item" type="button" data-bs-value="docs">stratos/docs</button>
+              <button class="menu-item" type="button" data-bs-value="infra">stratos/infra</button>
+            </div>
+          </div>
+          <div class="demo">
+            <span class="demo-label">Multi-select</span>
+            <button class="form-control combobox-toggle" type="button"
+                    data-bs-toggle="combobox" data-bs-search="true" data-bs-multiple="true" data-bs-name="labels"
+                    data-bs-placeholder="Add labels…">
+              <span class="combobox-value">Add labels…</span>
+              <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+            </button>
+            <div class="menu">
+              <button class="menu-item" type="button" data-bs-value="bug">bug</button>
+              <button class="menu-item" type="button" data-bs-value="feature">feature</button>
+              <button class="menu-item" type="button" data-bs-value="chore">chore</button>
+              <button class="menu-item" type="button" data-bs-value="security">security</button>
+              <button class="menu-item" type="button" data-bs-value="docs">documentation</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- DATEPICKER -->
+        <section class="demo-group" id="datepicker">
+          <h2>Datepicker <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">
+            A wrapper around Vanilla Calendar Pro, which is <strong>bundled into
+            <code>bootstrap.bundle.js</code></strong> — no extra script tag needed.
+          </p>
+          <div class="demo demo-stack">
+            <div class="form-field">
+              <label for="dp1" class="form-label">Release date</label>
+              <input type="text" class="form-control" id="dp1" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose date…">
+            </div>
+            <div class="form-field">
+              <label for="dp2" class="form-label">Date range</label>
+              <input type="text" class="form-control" id="dp2" data-bs-toggle="datepicker" data-bs-selection-dates="multiple-ranged" autocomplete="off" placeholder="Choose a range…">
+            </div>
+          </div>
+        </section>
+
+        <!-- CHIP INPUT -->
+        <section class="demo-group" id="chipinput">
+          <h2>Chip input <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">Type and press Enter to add a token; Backspace removes the last one.</p>
+          <div class="demo">
+            <div class="chip-input" data-bs-chips>
+              <label class="chip-input-label" for="chipsInput">Reviewers:</label>
+              <span class="chip">priya</span>
+              <span class="chip">marcus</span>
+              <input type="text" class="form-ghost" id="chipsInput" placeholder="Add more…">
+            </div>
+          </div>
+        </section>
+
+        <!-- OTP -->
+        <section class="demo-group" id="otp">
+          <h2>OTP input <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">
+            One-time-code entry with per-character boxes, paste handling and
+            <code>autocomplete="one-time-code"</code> behaviour.
+          </p>
+          <div class="demo">
+            <label class="form-label" for="otpInput">Verification code</label>
+            <div class="otp" data-bs-otp>
+              <input type="text" class="otp-input" maxlength="6" id="otpInput" aria-label="Verification code">
+            </div>
+          </div>
+        </section>
+
+        <!-- STRENGTH -->
+        <section class="demo-group" id="strength">
+          <h2>Password strength <span class="badge badge-subtle theme-success">New</span></h2>
+          <p class="demo-intro">Type in the field to see the segments fill.</p>
+          <div class="demo">
+            <div class="form-field">
+              <label for="pw1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="pw1" placeholder="Enter a password">
+              <div class="strength" data-bs-strength>
+                <div class="strength-segment"></div>
+                <div class="strength-segment"></div>
+                <div class="strength-segment"></div>
+                <div class="strength-segment"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VALIDATION -->
+        <section class="demo-group" id="validation">
+          <h2>Validation</h2>
+          <p class="demo-intro">
+            <code>.needs-validation</code> and <code>.was-validated</code> are gone. Add
+            <code>data-bs-validate</code> to the form and native <code>:user-invalid</code>
+            does the work — styling only appears <em>after</em> the user interacts.
+            Add <code>data-bs-validate="valid"</code> to also show success styling.
+          </p>
+          <div class="demo">
+            <form class="demo-stack" data-bs-validate="valid" novalidate id="validationDemo">
+              <div class="form-field">
+                <label for="vaName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="vaName" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+                <div class="valid-feedback">Looks good.</div>
+              </div>
+              <div class="form-field">
+                <label for="vaEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="vaEmail" required>
+                <div class="invalid-feedback">That doesn't look like an email address.</div>
+                <div class="valid-feedback">Looks good.</div>
+              </div>
+              <div class="form-field">
+                <input type="checkbox" class="check" id="vaTerms" required>
+                <label for="vaTerms">I accept the terms</label>
+              </div>
+              <div><button class="btn-solid theme-primary" type="submit">Validate</button></div>
+            </form>
+          </div>
+          <div class="demo">
+            <span class="demo-label">Server-side state — <code>.is-invalid</code> / <code>.is-valid</code> need no interaction</span>
+            <div class="demo-stack">
+              <div class="form-field">
+                <label for="svInvalid" class="form-label">Workspace URL</label>
+                <input type="text" class="form-control is-invalid" id="svInvalid" value="stratos app">
+                <div class="invalid-feedback">URLs can't contain spaces.</div>
+              </div>
+              <div class="form-field">
+                <label for="svValid" class="form-label">Workspace URL</label>
+                <input type="text" class="form-control is-valid" id="svValid" value="stratos-app">
+                <div class="valid-feedback">That URL is available.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- COMPLETE FORM -->
+        <section class="demo-group" id="full">
+          <h2>Complete form</h2>
+          <p class="demo-intro">Everything above, assembled the way you'd actually ship it.</p>
+          <div class="demo">
+            <form class="row g-4" novalidate data-bs-validate>
+              <div class="md:col-6">
+                <div class="form-field">
+                  <label for="cfName" class="form-label">Full name</label>
+                  <input type="text" class="form-control" id="cfName" required>
+                  <div class="invalid-feedback">Required.</div>
+                </div>
+              </div>
+              <div class="md:col-6">
+                <div class="form-field">
+                  <label for="cfEmail" class="form-label">Work email</label>
+                  <div class="form-control form-adorn">
+                    <div class="form-adorn-icon">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="m2 4 6 4.5L14 4"/></svg>
+                    </div>
+                    <input type="email" class="form-ghost" id="cfEmail" required>
+                  </div>
+                </div>
+              </div>
+              <div class="md:col-6">
+                <div class="form-field">
+                  <label class="form-label" for="cfDate">Target ship date</label>
+                  <input type="text" class="form-control" id="cfDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose date…">
+                </div>
+              </div>
+              <div class="md:col-6">
+                <label class="form-label">Repository</label>
+                <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="cfRepo" data-bs-placeholder="Select…">
+                  <span class="combobox-value">Select…</span>
+                  <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+                </button>
+                <div class="menu">
+                  <button class="menu-item" type="button" data-bs-value="core">stratos/core</button>
+                  <button class="menu-item" type="button" data-bs-value="web">stratos/web</button>
+                  <button class="menu-item" type="button" data-bs-value="api">stratos/api</button>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-field">
+                  <label for="cfNotes" class="form-label">Release notes</label>
+                  <textarea class="form-control" id="cfNotes" rows="4"></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-field">
+                  <div class="switch"><input type="checkbox" value="" id="cfNotify" role="switch" switch checked></div>
+                  <label for="cfNotify">Announce in #releases when this ships</label>
+                </div>
+              </div>
+              <div class="col-12 d-flex gap-2">
+                <button type="submit" class="btn-solid theme-primary">Create release</button>
+                <button type="reset" class="btn-text">Reset</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer bg-2 py-6 mt-9">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="fg-3 fs-xs mb-0">&copy; <span id="year">2026</span> Stratos. A free template for uicookies.</p>
+    <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

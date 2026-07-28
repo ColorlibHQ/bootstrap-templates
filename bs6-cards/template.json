@@ -1,0 +1,28 @@
+{
+  "slug": "bs6-cards",
+  "kind": "pack",
+  "title": "Bootstrap 6 Cards — 10 Free Card Templates",
+  "excerpt": "Ten free Bootstrap 6 card templates — content, media, horizontal, pricing, profile, metric with sparkline, product, article, whole-card link and a responsive auto-fill grid.",
+  "yoastTitle": "Bootstrap 6 Cards — 10 Free Card Templates",
+  "yoastDesc": "Ten free Bootstrap 6 card templates covering content, media, horizontal, pricing, profile, dashboard metrics, product, article and clickable cards, plus a grid that reflows without breakpoint classes. No images to license, no build step.",
+  "intro": "Ten <strong>Bootstrap 6</strong> card patterns covering what projects actually reach for — content and media cards, horizontal layouts, pricing tiers, profile cards, dashboard metrics with a CSS sparkline, commerce product cards, editorial article cards, properly-built clickable cards and a grid that reflows without breakpoint classes.",
+  "note": "Every media area in this pack is a CSS gradient rather than a bundled photograph, so there is nothing to re-license and nothing to replace before you ship. The pack also settles the clickable-card question properly: wrapping a card in an anchor swallows any button inside it and gives the link an accessible name made of the card's entire text, so the whole-card variant stretches a single title link with a pseudo-element instead — the full surface stays clickable while the tab order and the announced name stay sensible.",
+  "summary": "Ten free Bootstrap 6 card templates in one pack. Content cards with header body and footer, media cards, horizontal cards that stack below the breakpoint, a three-tier pricing row with an outlined featured card, profile cards using the v6 Avatar and Chip components, dashboard metric tiles with direction-of-travel deltas and a CSS-only sparkline, commerce product cards with badges ratings and struck-through prices, editorial article cards with author footers, a correctly-built whole-card link using a stretched title, and a responsive auto-fill grid. No photography, no chart library, no build step, full light and dark mode.",
+  "features": [
+    "Ten standalone card pages plus an index gallery",
+    "Zero image dependencies — every media area is a CSS gradient",
+    "Dashboard metric tiles with a sparkline built from flex spans, no chart library",
+    "Three-tier pricing row with the featured card outlined rather than scaled",
+    "Product cards with sale badges, star ratings and struck-through was-prices",
+    "Whole-card links done properly — stretched title link, not a wrapping anchor",
+    "Profile cards using the v6 Avatar and Chip components",
+    "Equal-height card rows via h-100 with mt-auto actions",
+    "Responsive grid using repeat(auto-fill, minmax()) — no breakpoint classes",
+    "Notes on avoiding layout shift with aspect-ratio and object-fit",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "ui-packs"
+  ]
+}

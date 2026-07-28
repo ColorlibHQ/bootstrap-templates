@@ -1,0 +1,34 @@
+{
+  "slug": "northmark",
+  "title": "Northmark — Free Bootstrap 6 Creative &amp; Brand Agency Template",
+  "excerpt": "A free two-page Bootstrap 6 agency template — full-width work index with hover-revealed thumbnails, capabilities matrix, four-step process, studio team and a project enquiry form.",
+  "yoastTitle": "Northmark — Free Bootstrap 6 Creative &amp; Brand Agency Template",
+  "yoastDesc": "Free Bootstrap 6 creative, branding and digital agency website template with a full-width work index, capabilities matrix, process steps, team profiles and a project enquiry form using multi-select Combobox. Editorial monochrome design.",
+  "intro": "Northmark is a free, premium <strong>Bootstrap 6</strong> website template for creative studios, brand consultancies, digital agencies and design practices. It pairs a full agency homepage — work, capabilities, approach, clients, studio and enquiry — with a project case study carrying real results figures.",
+  "note": "The work index is the piece doing the work. Agencies get judged on the client list as much as the output, so it is built as <strong>full-width rows rather than a card grid</strong> — a row puts the client name at display size where a card shrinks it to a caption. Each row reveals its thumbnail on hover in pure CSS, with no JavaScript, so on touch it degrades to a clean readable list rather than to a broken interaction. The enquiry form uses a multi-select Combobox and a budget picker, neither of which has a Bootstrap 5 equivalent.",
+  "summary": "Northmark is a free, premium two-page Bootstrap 6 template for creative and brand agencies. The homepage opens with an oversized editorial statement and a three-column position summary, then a full-width work index where each row reveals a thumbnail on hover, a four-item capabilities matrix, a numbered four-step process, a client mark grid, studio profiles and a project enquiry form built on Combobox. The case study page adds a brief, approach, results figures and a sticky project facts rail. Editorial monochrome with a single cobalt accent and an asymmetric grid that never centres anything. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — agency homepage and a project case study",
+    "Full-width work index with CSS-only hover thumbnail reveal, no JavaScript",
+    "Degrades to a clean readable list on touch rather than a broken interaction",
+    "Capabilities matrix and a numbered four-step process",
+    "Project enquiry with budget picker and multi-select Combobox",
+    "Case study with results figures and a sticky facts rail",
+    "Client mark grid and studio team profiles",
+    "Editorial monochrome design with one cobalt accent",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": ["bootstrap-6", "agency"],
+  "images": [
+    { "name": "work-1",   "q": "brand identity design print",  "fallback": "design",   "w": 1400, "h": 788 },
+    { "name": "work-2",   "q": "printed brochure design",      "fallback": "brochure", "w": 600,  "h": 450 },
+    { "name": "work-3",   "q": "website design on laptop",     "fallback": "laptop",   "w": 600,  "h": 450 },
+    { "name": "work-4",   "q": "design studio workspace",      "fallback": "studio",   "w": 520,  "h": 390 },
+    { "name": "work-5",   "q": "interior design showroom",     "fallback": "interior", "w": 520,  "h": 390 },
+    { "name": "work-6",   "q": "signage building exterior",    "fallback": "signage",  "w": 520,  "h": 390 },
+    { "name": "person-1", "q": "woman portrait professional",  "fallback": "portrait", "w": 600,  "h": 800 },
+    { "name": "person-2", "q": "man portrait creative",        "fallback": "portrait", "w": 600,  "h": 800 },
+    { "name": "person-3", "q": "designer portrait studio",     "fallback": "portrait", "w": 600,  "h": 800 },
+    { "name": "person-4", "q": "person portrait office",       "fallback": "portrait", "w": 600,  "h": 800 }
+  ]
+}

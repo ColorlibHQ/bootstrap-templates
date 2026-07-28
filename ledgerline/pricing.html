@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing — Ledgerline Bootstrap 6 Fintech Template</title>
+<meta name="description" content="Move two sliders and see what each plan actually costs at your volume, which is cheapest, and the exact payment count where the next plan up takes over.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="wordmark" href="index.html"><svg class="brand-glyph" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6.5" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M7 16.5V7.5M7 16.5h5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M17 7.5v9M14 11h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity=".5"/>
+</svg><span>Ledgerline</span></a>
+
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-4">
+            <li class="nav-item"><a class="nav-link" href="index.html#product">Product</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#developers">Developers</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#security">Security</a></li>
+          </ul>
+        </div>
+      </dialog>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+        <a class="btn-text theme-secondary sign-in" href="#developers">Sign in</a>
+        <a class="btn-solid theme-primary" href="pricing.html">Start building</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow fs-xs mb-3"><a href="index.html">Ledgerline</a> &middot; Pricing</p>
+    <h1 class="hero-title fs-5xl mb-4">Work out what you'd pay.</h1>
+    <p class="hero-lede fs-lg fg-2 mb-0">
+      Every plan is a monthly base plus a fee on each payment, so the cheapest
+      one depends on your volume and your average basket. Set both below.
+    </p>
+  </div>
+</section>
+
+<main id="main">
+
+  <section class="section">
+    <div class="container">
+
+      <div class="calc" data-calc data-plans='[{"key":"starter","name":"Starter","base":0,"pct":0.014,"fixed":0.2},{"key":"growth","name":"Growth","base":39,"pct":0.011,"fixed":0.15},{"key":"scale","name":"Scale","base":299,"pct":0.0075,"fixed":0.1}]'>
+        <div class="calc-controls">
+          <div class="calc-field">
+            <label class="form-label" for="calcCount">Payments a month</label>
+            <output class="calc-out" id="calcCountOut" for="calcCount">1,000</output>
+            <div class="form-range">
+              <input type="range" class="form-range-input" id="calcCount" min="50" max="20000" step="50" value="1000">
+            </div>
+          </div>
+          <div class="calc-field">
+            <label class="form-label" for="calcAvg">Average payment</label>
+            <output class="calc-out" id="calcAvgOut" for="calcAvg">£40</output>
+            <div class="form-range">
+              <input type="range" class="form-range-input" id="calcAvg" min="3" max="500" step="1" value="40">
+            </div>
+          </div>
+          <p class="calc-volume mb-0">Processing <strong data-volume>£40,000</strong> a month</p>
+        </div>
+
+        <div class="plan-grid">
+          <article class="plan" data-plan="starter">
+            <div class="plan-flag" data-best hidden>Cheapest for you</div>
+            <h3 class="plan-name">Starter</h3>
+            <p class="plan-rate mb-3">£0/mo &middot; 1.4% + 20p</p>
+            <p class="plan-total mb-1"><span data-total>—</span><small>/month</small></p>
+            <p class="plan-eff fg-3 fs-sm mb-4">Effective rate <span data-eff>—</span></p>
+            <p class="fg-2 fs-sm mb-4">Everything working, nothing to sign. Card payments, payouts and the ledger API from your first request.</p>
+            <a class="btn-outline theme-secondary plan-cta" href="#start">Choose Starter</a>
+          </article>
+          <article class="plan" data-plan="growth">
+            <div class="plan-flag" data-best hidden>Cheapest for you</div>
+            <h3 class="plan-name">Growth</h3>
+            <p class="plan-rate mb-3">£39/mo &middot; 1.1% + 15p</p>
+            <p class="plan-total mb-1"><span data-total>—</span><small>/month</small></p>
+            <p class="plan-eff fg-3 fs-sm mb-4">Effective rate <span data-eff>—</span></p>
+            <p class="fg-2 fs-sm mb-4">For businesses past the experiment stage: multi-currency, saved cards, and a real settlement schedule.</p>
+            <a class="btn-outline theme-secondary plan-cta" href="#start">Choose Growth</a>
+          </article>
+          <article class="plan" data-plan="scale">
+            <div class="plan-flag" data-best hidden>Cheapest for you</div>
+            <h3 class="plan-name">Scale</h3>
+            <p class="plan-rate mb-3">£299/mo &middot; 0.75% + 10p</p>
+            <p class="plan-total mb-1"><span data-total>—</span><small>/month</small></p>
+            <p class="plan-eff fg-3 fs-sm mb-4">Effective rate <span data-eff>—</span></p>
+            <p class="fg-2 fs-sm mb-4">Interchange-adjusted rates, dedicated infrastructure, and a named engineer who answers in your Slack.</p>
+            <a class="btn-outline theme-secondary plan-cta" href="#start">Choose Scale</a>
+          </article>
+        </div>
+
+        <p class="calc-note mb-0" data-crossover></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-2">
+    <div class="container">
+      <div class="row g-5 mb-6 align-items-end">
+        <div class="lg:col-7">
+          <p class="eyebrow-rule mb-3">Comparison</p>
+          <h2 class="section-title fs-4xl mb-0">What you get, line by line</h2>
+        </div>
+        <div class="lg:col-5">
+          <p class="fg-2 mb-0">No asterisks, and nothing that turns out to be an add-on once you are live.</p>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table md:table-stacked align-middle plan-table">
+          <thead><tr><th scope="col">Feature</th><th scope="col">Starter</th><th scope="col">Growth</th><th scope="col">Scale</th></tr></thead>
+          <tbody>
+            <tr>
+              <th scope="row">Card payments</th><td data-cell="Starter">✓</td><td data-cell="Growth">✓</td><td data-cell="Scale">✓</td>
+            </tr>
+            <tr>
+              <th scope="row">Payouts &amp; transfers</th><td data-cell="Starter">✓</td><td data-cell="Growth">✓</td><td data-cell="Scale">✓</td>
+            </tr>
+            <tr>
+              <th scope="row">Double-entry ledger API</th><td data-cell="Starter">✓</td><td data-cell="Growth">✓</td><td data-cell="Scale">✓</td>
+            </tr>
+            <tr>
+              <th scope="row">Settlement</th><td data-cell="Starter">Weekly</td><td data-cell="Growth">Daily</td><td data-cell="Scale">Same day</td>
+            </tr>
+            <tr>
+              <th scope="row">Currencies</th><td data-cell="Starter">GBP</td><td data-cell="Growth">GBP, EUR, USD</td><td data-cell="Scale">38 currencies</td>
+            </tr>
+            <tr>
+              <th scope="row">Saved cards &amp; subscriptions</th><td data-cell="Starter">—</td><td data-cell="Growth">✓</td><td data-cell="Scale">✓</td>
+            </tr>
+            <tr>
+              <th scope="row">Sandbox environments</th><td data-cell="Starter">1</td><td data-cell="Growth">5</td><td data-cell="Scale">Unlimited</td>
+            </tr>
+            <tr>
+              <th scope="row">Chargeback handling</th><td data-cell="Starter">Self-serve</td><td data-cell="Growth">Assisted</td><td data-cell="Scale">Managed</td>
+            </tr>
+            <tr>
+              <th scope="row">Support</th><td data-cell="Starter">Email, 2 days</td><td data-cell="Growth">Email, 4 hours</td><td data-cell="Scale">Shared Slack, 30 min</td>
+            </tr>
+            <tr>
+              <th scope="row">Uptime SLA</th><td data-cell="Starter">—</td><td data-cell="Growth">99.9%</td><td data-cell="Scale">99.99%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-5">
+          <p class="eyebrow-rule mb-3">Fees, plainly</p>
+          <h2 class="section-title fs-4xl mb-4">The questions that decide the bill</h2>
+          <p class="fg-2 mb-0">
+            If something here is still unclear, that is our fault — write to
+            <a href="mailto:pricing@ledgerline.dev">pricing@ledgerline.dev</a> and
+            we will fix the wording.
+          </p>
+        </div>
+        <div class="lg:col-7">
+          <div class="faq">
+            <details name="fees">
+              <summary>Is the percentage taken before or after the fixed fee?</summary>
+              <div class="faq-body"><p class="fg-2 mb-0">Neither — they are added together. A £40 payment on Growth costs 1.1% (44p) plus 15p, so 59p in total. The calculator above does exactly this arithmetic and shows you the effective rate it works out to.</p></div>
+            </details>
+            <details name="fees">
+              <summary>What happens on a refund?</summary>
+              <div class="faq-body"><p class="fg-2 mb-0">You get the percentage back and we keep the fixed fee. That is the part the card networks charge us whether the payment stands or not, and pretending otherwise would just mean pricing it in elsewhere.</p></div>
+            </details>
+            <details name="fees">
+              <summary>Are there setup fees, minimums or exit fees?</summary>
+              <div class="faq-body"><p class="fg-2 mb-0">No, none, and no. Cancelling is a button, your data exports as CSV and JSON, and we do not hold settlement back as leverage.</p></div>
+            </details>
+            <details name="fees">
+              <summary>What does a chargeback cost?</summary>
+              <div class="faq-body"><p class="fg-2 mb-0">£12 per case on Starter and Growth, waived on Scale. If you win the dispute you get the £12 back.</p></div>
+            </details>
+            <details name="fees">
+              <summary>Do unused payments roll over?</summary>
+              <div class="faq-body"><p class="fg-2 mb-0">There is nothing to roll over — you are not buying a bundle. The monthly base is for the platform and every payment is priced individually.</p></div>
+            </details>
+            <details name="fees">
+              <summary>Can I change plan mid-month?</summary>
+              <div class="faq-body"><p class="fg-2 mb-0">Yes, and the base fee is prorated to the day. Moving down takes effect immediately rather than at renewal, because a plan you have outgrown downwards should stop costing you straight away.</p></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer section pb-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="lg:col-4">
+        <p class="wordmark mb-3"><svg class="brand-glyph" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6.5" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M7 16.5V7.5M7 16.5h5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M17 7.5v9M14 11h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity=".5"/>
+</svg><span>Ledgerline</span></p>
+        <p class="fg-2 fs-sm mb-0" style="max-width:22rem">
+          Payments, payouts and a double-entry ledger behind one API. Priced so
+          you can work out the bill yourself.
+        </p>
+      </div>
+      <div class="md:col-4 lg:col-2">
+        <p class="eyebrow fs-xs fg-3 mb-3">Product</p>
+        <ul class="link-list"><li><a href="index.html#product">Payments</a></li><li><a href="index.html#product">Payouts</a></li><li><a href="index.html#product">Ledger API</a></li><li><a href="pricing.html">Pricing</a></li></ul>
+      </div>
+      <div class="md:col-4 lg:col-2">
+        <p class="eyebrow fs-xs fg-3 mb-3">Developers</p>
+        <ul class="link-list"><li><a href="index.html#developers">Quickstart</a></li><li><a href="index.html#developers">API reference</a></li><li><a href="index.html#developers">Status</a></li><li><a href="index.html#security">Security</a></li></ul>
+      </div>
+      <div class="md:col-4 lg:col-4">
+        <p class="eyebrow fs-xs fg-3 mb-3">Regulatory</p>
+        <p class="fg-2 fs-sm mb-0">
+          Ledgerline is a fictional company in a free website template. Nothing
+          here is a real financial product, a real rate, or regulated by anyone.
+        </p>
+      </div>
+    </div>
+
+    <hr class="my-5">
+
+    <p class="fs-xs fg-3 mb-0">&copy; <span data-year>2026</span> Ledgerline &mdash; a free Bootstrap 6 template.</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

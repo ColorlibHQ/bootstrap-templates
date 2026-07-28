@@ -1,0 +1,35 @@
+{
+  "slug": "meridian",
+  "title": "Meridian — Free Bootstrap 6 Medical &amp; Clinic Website Template",
+  "excerpt": "A free two-page Bootstrap 6 medical template — services, clinicians, online appointment booking and a patient portal with OTP sign-in.",
+  "yoastTitle": "Meridian — Free Bootstrap 6 Medical &amp; Clinic Website Template",
+  "yoastDesc": "Free Bootstrap 6 medical and clinic website template with an appointment booking form, Datepicker, service pages, clinician profiles and a patient portal using OTP input and password strength.",
+  "intro": "Meridian is a free, premium <strong>Bootstrap 6</strong> website template for clinics, GP surgeries, dental practices and private healthcare. It pairs a full clinic homepage — services, clinicians, opening hours and an inline appointment booking form — with a service detail page covering what to expect, preparation and costs.",
+  "note": "Healthcare sites live or die on booking, and this is where Bootstrap 6 earns its keep. The appointment form uses the new Datepicker and a searchable Combobox for service type, and the patient portal demonstrates the OTP input for two-factor sign-in and the password Strength meter for registration. None of those components exist in Bootstrap 5.",
+  "summary": "Meridian is a free, premium two-page Bootstrap 6 template for clinics, GP surgeries and private healthcare. The homepage combines an inline appointment booking card built on Datepicker and Combobox with services, clinician profiles, insurers, opening hours and an accordion FAQ. A patient portal dialog demonstrates OTP sign-in and the password Strength meter. The service page adds prose typography, costs and a sticky booking rail. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — clinic homepage and a service detail page",
+    "Inline appointment booking with the new Datepicker, Combobox service picker and time-slot toggles",
+    "Patient portal dialog using OTP input for two-factor sign-in and the password Strength meter",
+    "Service cards, clinician profiles with specialism chips and an insurers strip",
+    "Opening hours panel and an accordion FAQ on native <details>",
+    "Emergency information bar above the header",
+    "Service page with prose typography, preparation notes, published costs and a sticky booking rail",
+    "Retheme the whole clinic by changing a single --brand token",
+    "Full dark mode via data-bs-theme, remembered across visits",
+    "Native form validation with data-bs-validate and :user-invalid",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "medical"
+  ],
+  "images": [
+    {
+      "name": "hero",
+      "q": "bright modern medical clinic interior",
+      "w": 1800,
+      "h": 1000
+    }
+  ]
+}

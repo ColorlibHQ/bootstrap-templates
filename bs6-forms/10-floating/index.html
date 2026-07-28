@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Floating labels — Bootstrap 6 Forms</title>
+<meta name="description" content="Floating labels with adorned inputs and a native select, for dense forms where every row counts. A free Bootstrap 6 form example.">
+<link rel="stylesheet" href="../assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="variant-bar">
+  <a class="btn-text btn-sm" href="../index.html">&#8592; All forms</a>
+  <span class="fs-sm fw-semibold ms-2">Floating labels</span>
+  <span class="fs-xs fg-3 d-none md:d-inline">10 of 10</span>
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <a class="btn-icon btn-sm" href="../09-range/index.html" aria-label="Previous form">&#8249;</a>
+    <a class="btn-icon btn-sm" href="../01-stacked/index.html" aria-label="Next form">&#8250;</a>
+    <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+  </div>
+</div>
+
+<main class="variant-stage">
+  <div class="variant-inner">
+    <div class="form-shell">
+  <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Billing details</h1>
+  <p class="fg-2 mb-5">Labels float out of the way once a field has content.</p>
+  <form class="vstack gap-3" data-demo-form data-bs-validate novalidate>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="s10name" placeholder="Full name" required>
+      <label for="s10name">Full name</label>
+    </div>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="s10email" placeholder="you@example.com" required>
+      <label for="s10email">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="s10addr" placeholder="Address" required>
+      <label for="s10addr">Address</label>
+    </div>
+    <div class="row g-3">
+      <div class="col-7">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="s10city" placeholder="City" required>
+          <label for="s10city">City</label>
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="s10post" placeholder="Postcode" required>
+          <label for="s10post">Postcode</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-floating">
+      <select class="form-control" id="s10country">
+        <option selected>United Kingdom</option><option>Ireland</option><option>Germany</option><option>France</option>
+      </select>
+      <label for="s10country">Country</label>
+    </div>
+    <div class="mt-2"><button class="btn-solid theme-primary w-100 btn-lg" type="submit" data-done-text="Saved &#10003;">Save details</button></div>
+  </form>
+</div>
+  </div>
+</main>
+
+<script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+Placeholder photography
+=======================
+
+Every photograph here is CC0 / Public Domain Mark, sourced via the
+Openverse API — no attribution required, commercial use fine. Where no
+public-domain photograph matched a slot, the file is a generated gradient
+instead; those are marked below and carry no rights at all.
+
+Either way these are placeholders: replace them with your own photography
+before launch. Provenance for each file follows.
+
+hero.jpg
+  Restaurants, Place du Tertre, Paris 30 September 2019
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=88797813
+
+kitchen.jpg
+  Open kitchen fancy restaurant
+  CC0 1.0
+  https://www.rawpixel.com/image/447785/free-photo-image-restaurant-chef-kitchen
+
+room-1.jpg
+  Dinner table
+  CC0 1.0
+  https://www.rawpixel.com/image/3343093/free-photo-image-living-room-table-restaurant-interior-design
+
+room-2.jpg
+  Residence Breckenridge Long (Interior), 2829
+  CC0 1.0
+  https://www.rawpixel.com/image/6992644/residence-breckenridge-long-interior-2829-16th-street-nw-wash-dc
+
+room-3.jpg
+  Fresh homemade pasta food photography
+  CC0 1.0
+  https://www.rawpixel.com/image/448262/person-making-fresh-homemade-pasta
+
+room-4.jpg
+  <div class='fn'> Wine Cups (Jue)</div>
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=76008485
+
+room-5.jpg
+  Seafood Dish Plate
+  CC0 1.0
+  https://www.rawpixel.com/image/5966551/seafood-dish-plate

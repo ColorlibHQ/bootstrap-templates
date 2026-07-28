@@ -1,0 +1,35 @@
+{
+  "slug": "locale",
+  "title": "Locale — Free Bootstrap 6 Directory Website Template",
+  "excerpt": "A free two-page Bootstrap 6 directory and listings template — searchable filters, map rail, listing grid and a full business detail page.",
+  "yoastTitle": "Locale — Free Bootstrap 6 Directory Website Template",
+  "yoastDesc": "Free Bootstrap 6 directory template with searchable Combobox filters, chip tags, a collapsing category nav, map rail and a full listing detail page with reviews and opening hours.",
+  "intro": "Locale is a free, premium <strong>Bootstrap 6</strong> directory and listings template for city guides, local business directories and marketplaces. It pairs a filterable results page — search bar, category nav, map rail and listing grid — with a complete business detail page covering reviews, opening hours, photos and a review form.",
+  "note": "This is the template that makes the strongest case for Bootstrap 6. The search bar uses searchable and multi-select Comboboxes, the category nav uses Nav overflow to fold extra items into a menu as the viewport narrows, and the filter drawer combines Chip input, Range with a value bubble and the new Datepicker. Not one of those components exists in Bootstrap 5.",
+  "summary": "Locale is a free, premium two-page Bootstrap 6 directory and listings template for city guides and local business directories. The results page combines a Combobox-driven search bar, a Nav overflow category strip, a sticky map rail with synced pins, and a filter drawer built from Chip input, Range and Datepicker. The detail page covers tabs, reviews, opening hours, a photo grid and a review form. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — filterable results page and a full listing detail page",
+    "Search bar built on Combobox, including a searchable multi-select for categories",
+    "Category nav using Nav overflow — extra items fold into a menu automatically",
+    "Filter drawer combining Chip input, Range with live value bubble and the new Datepicker",
+    "Sticky map rail with pins that highlight as you hover or focus a listing",
+    "Listing detail page with tabs, reviews, opening hours, photo grid and a review form",
+    "Native <dialog> drawers for filters and mobile navigation",
+    "Retheme the whole directory by changing a single --brand token",
+    "Full dark mode via data-bs-theme, remembered across visits",
+    "Native form validation with data-bs-validate and :user-invalid",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "business-services"
+  ],
+  "images": [
+    {
+      "name": "hero",
+      "q": "ghent belgium canal old town",
+      "w": 1800,
+      "h": 900
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "liftoff",
+  "title": "Liftoff — Free Bootstrap 6 Coming Soon Template",
+  "excerpt": "A free Bootstrap 6 coming-soon template in three layouts — full-bleed photographic countdown, split screen and stripped-back minimal. Live countdown, notify form and build progress.",
+  "yoastTitle": "Liftoff — Free Bootstrap 6 Coming Soon Template",
+  "yoastDesc": "Free Bootstrap 6 coming soon and under construction template with three switchable layouts, a live countdown that reads its target from the markup, an email notify form with native validation and a build-progress bar.",
+  "intro": "Liftoff is a free <strong>Bootstrap 6</strong> coming-soon and under-construction template, shipped as <strong>three complete layouts</strong> rather than one: a full-bleed photographic countdown, a split screen with the form on a solid panel, and a stripped-back centred version with no imagery at all. A switcher in the header moves between them so you can see all three before choosing.",
+  "note": "Coming-soon is a niche where people pick by layout rather than by feature list, so shipping one layout would be shipping a third of a product. Every variant is built to fit <code>100svh</code> without scrolling on a laptop — a holding page that scrolls has already failed at the job. The countdown reads its target from a <code>data-countdown</code> attribute rather than a constant in the script, so changing the launch date is an HTML edit and the three layouts cannot disagree about when it is. Its <code>aria-live</code> is deliberately off: a region that updates every second is unusable with a screen reader, so the date is stated in text instead.",
+  "summary": "Liftoff is a free Bootstrap 6 coming-soon template in three complete layouts. Full-bleed pairs a photographic backdrop with a centred countdown and notify form; split screen puts a photo panel beside a solid form panel with a build-progress bar; minimal drops imagery entirely for a fast centred holding page. Shared across all three: a live countdown reading its target from the markup, an email capture form using native :user-invalid validation, a build-progress bar, social links and a layout switcher. Each fits one viewport without scrolling. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Three complete layouts — full-bleed photographic, split screen and minimal",
+    "Layout switcher in the header so all three are reachable from any of them",
+    "Live countdown reading its target date from a data-countdown attribute",
+    "aria-live deliberately off on the timer — a per-second live region is unusable",
+    "Email notify form using native :user-invalid, no validation library",
+    "Build-progress bar, because a number is more convincing than 'coming soon'",
+    "Every layout fits 100svh without scrolling on a laptop",
+    "Minimal layout ships with no photography at all — nothing to load",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "landing-page"
+  ],
+  "images": [
+    { "name": "backdrop", "q": "mountain sunrise fog landscape", "fallback": "landscape", "w": 1800, "h": 1200 }
+  ]
+}

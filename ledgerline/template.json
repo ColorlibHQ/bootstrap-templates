@@ -1,0 +1,60 @@
+{
+  "slug": "ledgerline",
+  "title": "Ledgerline — Free Bootstrap 6 Fintech &amp; SaaS Website Template",
+  "excerpt": "A free two-page Bootstrap 6 fintech template with a pricing calculator that works out which plan is genuinely cheapest at your volume — and names the exact payment count where the next one takes over.",
+  "yoastTitle": "Ledgerline — Free Bootstrap 6 Fintech &amp; SaaS Website Template",
+  "yoastDesc": "Free Bootstrap 6 fintech and SaaS website template with a working plan calculator, computed crossover points, a CSS-built payments feed, code sample, comparison table and fee FAQ.",
+  "intro": "Ledgerline is a free, premium <strong>Bootstrap 6</strong> fintech and SaaS website template. It pairs a payments-infrastructure homepage — product pillars, a code sample, security detail and figures — with a pricing page built around a calculator that tells you which plan actually costs you least.",
+  "note": "Every SaaS pricing page puts three tiers side by side and leaves the visitor to do the arithmetic, which is convenient when the honest answer is the free one. Here each plan is a monthly base plus a per-payment fee, and two sliders — payments per month, average payment — drive a live comparison: total bill per plan, the <strong>effective percentage</strong> of money processed, and a badge on whichever is cheapest. It also computes the <strong>crossover</strong> from the plan definitions rather than hardcoding it, so the page can say <em>“Starter is cheapest for you — Growth takes over above 1,148 payments, at this average”</em> and be right for any pricing you put in. The plan list is emitted once and feeds the cards, the comparison table and the maths, so the page cannot quote two different numbers for the same plan.",
+  "summary": "Ledgerline is a free, premium two-page Bootstrap 6 fintech and SaaS template. The homepage runs a split hero with a live payments feed built entirely in CSS rather than a screenshot, a logo band, three product pillars, a syntax-highlighted API sample, an embedded pricing calculator, a figures band, a security section with a compliance list and three testimonials. The pricing page carries the full calculator, a ten-row plan comparison table that stacks properly on small screens, and a six-question fee FAQ on native details. The calculator computes each plan's monthly total, its effective rate as a share of volume, which plan is cheapest, and the exact payment count where the next plan up overtakes it — all derived from one plan definition. Cool indigo instrument-panel design with tabular numerals throughout. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — fintech homepage and a pricing page",
+    "Pricing calculator: two sliders drive live totals across every plan",
+    "Badges whichever plan is genuinely cheapest, including the free one",
+    "Computes crossover points from the plan definitions, never hardcoded",
+    "Shows the effective rate as a percentage of money processed",
+    "One plan list feeds the cards, the comparison table and the maths",
+    "Live payments feed built in CSS — sharp at any size, no screenshot to date",
+    "Syntax-highlighted API sample with a request and its response",
+    "Ten-row comparison table that stacks correctly on mobile",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "business-services"
+  ],
+  "images": [
+    {
+      "name": "security",
+      "q": "server room engineer infrastructure",
+      "cc0q": "server room",
+      "fallback": "data centre",
+      "w": 900,
+      "h": 675
+    },
+    {
+      "name": "face-1",
+      "q": "portrait man office headshot",
+      "fallback": "portrait",
+      "w": 400,
+      "h": 400,
+      "cc0": false
+    },
+    {
+      "name": "face-2",
+      "q": "portrait woman smiling professional",
+      "fallback": "portrait",
+      "w": 400,
+      "h": 400,
+      "cc0": false
+    },
+    {
+      "name": "face-3",
+      "q": "portrait person glasses professional",
+      "fallback": "headshot",
+      "w": 400,
+      "h": 400,
+      "cc0": false
+    }
+  ]
+}

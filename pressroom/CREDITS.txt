@@ -1,0 +1,34 @@
+Placeholder photography
+=======================
+
+All images are CC0 / Public Domain Mark, sourced via the Openverse API.
+No attribution is required and they may be used commercially, but the
+provenance of each is recorded below. Replace them with your own
+photography before launch.
+
+lead.jpg
+  (already present — see previous CREDITS.txt entry)
+
+post-1.jpg
+  (already present — see previous CREDITS.txt entry)
+
+post-2.jpg
+  (already present — see previous CREDITS.txt entry)
+
+post-4.jpg
+  (already present — see previous CREDITS.txt entry)
+
+post-5.jpg
+  (already present — see previous CREDITS.txt entry)
+
+post-6.jpg
+  (already present — see previous CREDITS.txt entry)
+
+article.jpg
+  (already present — see previous CREDITS.txt entry)
+
+author-1.jpg
+  (already present — see previous CREDITS.txt entry)
+
+author-2.jpg
+  (already present — see previous CREDITS.txt entry)

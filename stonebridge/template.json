@@ -1,0 +1,74 @@
+{
+  "slug": "stonebridge",
+  "title": "Stonebridge — Free Bootstrap 6 Church Website Template",
+  "excerpt": "A free two-page Bootstrap 6 church template whose service times work out their own next occurrence — “On now”, “Today, 6.00pm”, “Sunday, 10.30am” — so the page never goes stale.",
+  "yoastTitle": "Stonebridge — Free Bootstrap 6 Church Website Template",
+  "yoastDesc": "Free Bootstrap 6 church website template with self-updating service times, a what's-on page grouped by day, dated events that mark themselves as passed, a filterable talk archive and a plain-spoken first-visit FAQ.",
+  "intro": "Stonebridge is a free, premium <strong>Bootstrap 6</strong> church website template. It pairs a full church homepage — service times, first-visit answers, midweek groups, a talk archive and honest giving figures — with a what's-on page carrying the whole week grouped by day, dated events and room hire rates.",
+  "note": "Every church template states its services statically — <em>Sundays, 10.30am</em> — which is correct and no use at all to somebody checking their phone on a Wednesday evening wondering whether anything is on tonight. Here each gathering declares a recurring rule in <code>data-when=\"wed 18:00 90\"</code> and the page computes its own next occurrence: <strong>On now</strong>, <strong>Starts in 40 min</strong>, <strong>Today, 6.00pm</strong>, <strong>Sunday, 10.30am</strong>. Duration is part of the rule, so a service in progress says so rather than advertising next week. The homepage cards and the what's-on rows run the same engine off the same attribute, so the two pages cannot disagree, and the static human line stays in the markup — with JavaScript off nothing is lost, the page just stops volunteering what is on tonight.",
+  "summary": "Stonebridge is a free, premium two-page Bootstrap 6 church template. The homepage runs a photographic hero carrying a live “next up” line, four weekly gatherings that each compute their own next occurrence, a welcome section with congregation facts, a seven-question first-visit FAQ built on native details, six midweek activities, a talk archive filterable by series, a giving breakdown showing where money actually goes, and a contact form with practical directions. The what's-on page lays the whole week out grouped by day using the same timing engine, adds dated one-off events that grey themselves out once they have passed, and a room-hire table that stacks correctly on small screens. Limestone and deep-green design with a display serif and hairline rules. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — church homepage and a full what's-on page",
+    "Service times compute their own next occurrence from data-when=\"wed 18:00 90\"",
+    "Says “On now” while a service is running, because duration is part of the rule",
+    "Live “next up” line in the hero, picking whichever gathering is soonest",
+    "Homepage cards and what's-on rows share one engine, so they cannot disagree",
+    "Static human times stay in the markup — nothing is lost with JavaScript off",
+    "Dated events grey themselves out once passed, so nothing looks abandoned",
+    "Talk archive filterable by sermon series",
+    "Seven-question first-visit FAQ on native details, plus room-hire table",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "church"
+  ],
+  "images": [
+    {
+      "name": "hero",
+      "q": "old stone church interior light",
+      "fallback": "church",
+      "w": 1800,
+      "h": 1200
+    },
+    {
+      "name": "welcome",
+      "q": "friends talking coffee cup",
+      "fallback": "congregation",
+      "w": 700,
+      "h": 933,
+      "cc0q": "church congregation people"
+    },
+    {
+      "name": "life-kids",
+      "q": "children craft table drawing",
+      "fallback": "playground",
+      "w": 600,
+      "h": 600,
+      "cc0q": "school children classroom"
+    },
+    {
+      "name": "life-pantry",
+      "q": "volunteers packing food boxes",
+      "fallback": "volunteers",
+      "w": 600,
+      "h": 600
+    },
+    {
+      "name": "life-choir",
+      "q": "choir singing rehearsal",
+      "fallback": "organ",
+      "w": 600,
+      "h": 600,
+      "cc0q": "church pipe organ"
+    },
+    {
+      "name": "building",
+      "q": "stone church exterior street",
+      "fallback": "church tower",
+      "w": 900,
+      "h": 506,
+      "cc0q": "parish church tower"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+/*!
+ * Northgate — Bootstrap 6 school / education template
+ */
+
+/* Brand — base.css rebuilds the whole --bs-primary-* family from this token. */
+:root {
+  --brand: oklch(45% 0.15 250);
+  --kit-section-y: 4.5rem;
+}
+
+@media (width >= 768px) {
+  :root { --kit-section-y: 6rem; }
+}
+
+/* Top utility bar */
+.util-bar {
+  background: var(--bs-bg-3);
+  padding-block: 0.5rem;
+  font-size: 0.8125rem;
+}
+
+.util-bar a { color: var(--bs-fg-2); text-decoration: none; }
+.util-bar a:hover { color: var(--bs-fg-1); text-decoration: underline; }
+
+/* Notice strip */
+.notice {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--bs-radius-5);
+  background: color-mix(in oklab, var(--bs-warning-base), transparent 90%);
+  border: 1px solid color-mix(in oklab, var(--bs-warning-base), transparent 70%);
+  font-size: 0.875rem;
+}
+
+/* Programme cards */
+.programme {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.programme-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+
+.programme-title {
+  font-size: 1.125rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5rem;
+}
+
+.programme-title a { color: inherit; text-decoration: none; }
+.programme-title a:hover { text-decoration: underline; }
+
+.programme-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--bs-fg-3);
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.programme-facts span { display: inline-flex; align-items: center; gap: 0.3125rem; }
+.programme-facts svg { width: 0.875rem; height: 0.875rem; }
+
+/* Staff */
+.staff-photo { border-radius: var(--bs-radius-6); overflow: hidden; margin-bottom: 0.875rem; }
+
+/* Key dates */
+.date-item {
+  display: flex;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.date-item:last-child { border-bottom: 0; }
+
+.date-badge {
+  flex: none;
+  width: 3.5rem;
+  text-align: center;
+  border-radius: var(--bs-radius-4);
+  background: color-mix(in oklab, var(--brand), transparent 90%);
+  color: var(--bs-primary-fg);
+  padding: 0.5rem 0.25rem;
+}
+
+.date-badge b { display: block; font-size: 1.125rem; line-height: 1; }
+.date-badge span { display: block; font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* Facts band */
+.facts { display: grid; gap: 1.5rem; grid-template-columns: repeat(2, minmax(0,1fr)); }
+@media (width >= 768px) { .facts { grid-template-columns: repeat(4, minmax(0,1fr)); } }

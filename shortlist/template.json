@@ -1,0 +1,24 @@
+{
+  "slug": "shortlist",
+  "kind": "template",
+  "title": "Shortlist — Free Bootstrap 6 Job Board Website Template",
+  "excerpt": "A free two-page Bootstrap 6 job board template — sticky filter rail with a salary-floor Range, listings that all show a real salary range, sector browse and a job detail page with an apply dialog.",
+  "yoastTitle": "Shortlist — Free Bootstrap 6 Job Board Website Template",
+  "yoastDesc": "Free Bootstrap 6 job board and careers website template with a sticky filter rail, salary-floor Range slider, Combobox sector filters, dismissible filter chips, job listings, a post-a-job form and a job detail page with an apply dialog.",
+  "intro": "Shortlist is a free, premium <strong>Bootstrap 6</strong> website template for job boards, careers sites, recruitment agencies and internal vacancy pages. It pairs a full board — search, sticky filter rail, listings, sectors, hiring companies and a post-a-job form — with a job detail page built around a sticky apply rail.",
+  "note": "The template takes a position, and the design carries it: <strong>every listing shows a real salary range</strong>. The filter rail leads with a salary <em>floor</em> Range rather than a keyword box, the post-a-job form makes both salary fields required, and the single role without a range is explicitly badged \"salary not disclosed\" rather than quietly styled the same as the rest. It is a small thing that makes the board look like it has an editorial standard, which is what job boards actually compete on. Range, Combobox, Chip and Datepicker are all new in v6.",
+  "summary": "Shortlist is a free, premium two-page Bootstrap 6 job board template. The homepage opens with a two-field search bar, then a sticky filter rail — salary-floor Range slider, working-pattern and contract checkboxes, a multi-select sector Combobox and a salary-only switch — beside a listing column where every row shows company, location, pattern, contract type and a real salary range. Below: sector tiles with counts, hiring companies, and a post-a-job form where both salary fields are required. The job page adds a full description, process outline and a sticky apply rail opening a native dialog application form. Dense, functional design where every row earns its height. ESM-only vanilla JavaScript, no build step, full light and dark mode.",
+  "features": [
+    "Two pages — job board and a job detail page",
+    "Every listing shows a real salary range; the one that doesn't is explicitly badged",
+    "Sticky filter rail led by a salary-floor Range slider, formatted as money not a raw number",
+    "Multi-select sector Combobox, pattern and contract checkboxes, salary-only switch",
+    "Dismissible filter chips showing the active query",
+    "Post-a-job form where both salary fields are required to submit",
+    "Job detail page with a sticky apply rail and a native dialog application form",
+    "Sector tiles with live counts and a hiring-companies grid",
+    "Job data lives in one place and renders both pages, so salaries cannot disagree",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": ["bootstrap-6", "business-services"]
+}

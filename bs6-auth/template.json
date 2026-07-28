@@ -1,0 +1,25 @@
+{
+  "slug": "bs6-auth",
+  "kind": "pack",
+  "title": "Bootstrap 6 Auth Pages — 8 Free Login &amp; Sign-up Templates",
+  "excerpt": "Eight free Bootstrap 6 authentication pages — sign in, register, forgot and reset password, two-factor, magic link, SSO and a lock screen.",
+  "yoastTitle": "Bootstrap 6 Auth Pages — 8 Free Login &amp; Sign-up Templates",
+  "yoastDesc": "Eight free Bootstrap 6 login and sign-up page templates covering the whole account journey — 2FA with the new OTP input and registration with the password Strength meter.",
+  "intro": "A pack of eight <strong>Bootstrap 6</strong> authentication screens covering the whole account journey &#8212; sign in, register, forgot password, reset, two-factor verification, passwordless magic link, SSO and a lock screen. Each is a standalone page you can lift the markup straight out of.",
+  "note": "Two of these were genuinely awkward in Bootstrap 5. Two-factor verification uses v6&#8217;s new OTP input, with per-character boxes, paste handling and <code>one-time-code</code> autofill; registration and password reset use the new Strength meter, which fills as the password improves. Neither needed a third-party plugin.",
+  "summary": "Bootstrap 6 Auth Pages is a pack of eight authentication screens: classic sign in, registration with the password Strength meter, forgot password, set a new password, two-factor verification built on the new OTP input, passwordless magic link, SSO with provider buttons and a workspace Combobox, and an idle lock screen. All use native :user-invalid validation via data-bs-validate. ESM-only, no build step, full light and dark mode.",
+  "features": [
+    "Eight authentication screens, each on its own page with prev/next navigation",
+    "Classic sign in with adorned email input and remember-me",
+    "Registration using Bootstrap 6's new password Strength meter",
+    "Forgot password and set-new-password, the two halves of a reset flow",
+    "Two-factor verification built on the new OTP input, with one-time-code autofill",
+    "Passwordless magic-link sign in with an inline sent state",
+    "SSO screen with provider buttons and a searchable workspace Combobox",
+    "Idle lock screen that keeps the identity and asks only for the password",
+    "Native :user-invalid validation throughout via data-bs-validate",
+    "Full dark mode via data-bs-theme, remembered across visits",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step"
+  ],
+  "categories": ["bootstrap-6", "ui-packs"]
+}

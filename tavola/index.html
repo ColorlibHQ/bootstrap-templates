@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tavola — Free Bootstrap 6 Restaurant Website Template</title>
+<meta name="description" content="Tavola is a free Bootstrap 6 restaurant template — service-time tabbed menu with leader dots, table booking with Datepicker, gallery, opening hours and a full menu page.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navScroll" data-bs-top-margin="110px" data-bs-smooth-scroll="true">
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="top-note">
+  Kitchen open until 22:30 tonight · <a href="#book">Book a table</a>
+</div>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="wordmark" href="index.html">Tavola</a>
+
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-3" id="navScroll">
+            <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">The kitchen</a></li>
+            <li class="nav-item"><a class="nav-link" href="#room">The room</a></li>
+            <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
+            <li class="nav-item"><a class="nav-link" href="#find">Find us</a></li>
+          </ul>
+        </div>
+      </dialog>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <a class="btn-solid theme-primary d-none md:d-inline-flex" href="#book">Book a table</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <img class="hero-bg" src="img/hero.jpg" alt="" width="1800" height="1000" loading="eager">
+  <div class="container">
+    <div class="row">
+      <div class="lg:col-7">
+        <p class="eyebrow-rule mb-4">Trattoria · Stokes Croft, Bristol</p>
+        <h1 class="display-serif hero-title mb-4">Twelve things, cooked properly</h1>
+        <p class="fs-lg fg-2 mb-5" style="max-width:34rem">
+          A short menu that changes when the market changes. Pasta rolled each
+          morning, one fish, one bird, and whatever the allotment sent us.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a class="btn-solid theme-primary btn-lg" href="#book">Book a table</a>
+          <a class="btn-outline theme-secondary btn-lg" href="#menu">See tonight's menu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+
+  <!-- Menu — tabbed by service -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="text-center mb-6">
+        <p class="eyebrow-rule mb-3">The menu</p>
+        <h2 class="display-serif section-title fs-4xl mb-2">Today, 24 July</h2>
+        <p class="fg-3 fs-sm mb-0">Rewritten each morning after the market. Allergen list on request.</p>
+      </div>
+
+      <ul class="nav nav-underline justify-content-center mb-5" role="tablist">
+        <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#svcLunch" type="button" role="tab" aria-selected="true">Lunch</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#svcDinner" type="button" role="tab" aria-selected="false">Dinner</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#svcSunday" type="button" role="tab" aria-selected="false">Sunday</button></li>
+      </ul>
+
+      <div class="tab-content">
+
+        <div class="tab-pane active" id="svcLunch" role="tabpanel">
+          <div class="menu-card">
+            <div class="row g-6">
+              <div class="md:col-6">
+                <p class="course-label">To start</p>
+                <div class="dish"><span class="dish-name">Focaccia, new oil</span><span class="dish-leader"></span><span class="dish-price">&pound;5</span></div>
+                <p class="dish-note">Rosemary, coarse salt. Baked at eleven.</p>
+                <div class="dish"><span class="dish-name">Whipped cod roe<span class="dish-tags"><span class="dish-tag">GF</span></span></span><span class="dish-leader"></span><span class="dish-price">&pound;9</span></div>
+                <p class="dish-note">Grilled sourdough, pickled fennel.</p>
+                <div class="dish"><span class="dish-name">Tomatoes, stracciatella<span class="dish-tags"><span class="dish-tag">V</span></span></span><span class="dish-leader"></span><span class="dish-price">&pound;11</span></div>
+                <p class="dish-note">Isle of Wight tomatoes while they last, basil oil.</p>
+              </div>
+              <div class="md:col-6">
+                <p class="course-label">Pasta &amp; mains</p>
+                <div class="dish"><span class="dish-name">Cacio e pepe<span class="dish-tags"><span class="dish-tag">V</span></span></span><span class="dish-leader"></span><span class="dish-price">&pound;14</span></div>
+                <p class="dish-note">Tonnarelli rolled this morning, Pecorino Romano.</p>
+                <div class="dish"><span class="dish-name">Hake, brown butter</span><span class="dish-leader"></span><span class="dish-price">&pound;21</span></div>
+                <p class="dish-note">Cornish day boat, capers, potatoes.</p>
+                <div class="dish"><span class="dish-name">Allotment plate<span class="dish-tags"><span class="dish-tag">VG</span></span></span><span class="dish-leader"></span><span class="dish-price">&pound;16</span></div>
+                <p class="dish-note">Whatever arrived this week, cooked three ways.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="svcDinner" role="tabpanel">
+          <div class="menu-card">
+            <div class="row g-6">
+              <div class="md:col-6">
+                <p class="course-label">To start</p>
+                <div class="dish"><span class="dish-name">Focaccia, new oil</span><span class="dish-leader"></span><span class="dish-price">&pound;5</span></div>
+                <p class="dish-note">Rosemary, coarse salt.</p>
+                <div class="dish"><span class="dish-name">Veal tonnato</span><span class="dish-leader"></span><span class="dish-price">&pound;13</span></div>
+                <p class="dish-note">Rose veal, tuna emulsion, capers.</p>
+                <div class="dish"><span class="dish-name">Grilled octopus<span class="dish-tags"><span class="dish-tag">GF</span></span></span><span class="dish-leader"></span><span class="dish-price">&pound;14</span></div>
+                <p class="dish-note">Ink potatoes, salsa verde.</p>
+              </div>
+              <div class="md:col-6">
+                <p class="course-label">Larger</p>
+                <div class="dish"><span class="dish-name">Pappardelle, ox cheek</span><span class="dish-leader"></span><span class="dish-price">&pound;19</span></div>
+                <p class="dish-note">Braised eight hours, gremolata.</p>
+                <div class="dish"><span class="dish-name">Guinea fowl for two</span><span class="dish-leader"></span><span class="dish-price">&pound;46</span></div>
+                <p class="dish-note">Whole bird, bread sauce, greens. Forty minutes.</p>
+                <div class="dish"><span class="dish-name">Aubergine, 'nduja butter<span class="dish-tags"><span class="dish-tag">V</span></span></span><span class="dish-leader"></span><span class="dish-price">&pound;17</span></div>
+                <p class="dish-note">Charred over coals, ricotta salata.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="svcSunday" role="tabpanel">
+          <div class="menu-card">
+            <div class="row g-6">
+              <div class="md:col-6">
+                <p class="course-label">Sunday, one sitting</p>
+                <div class="dish"><span class="dish-name">Three courses</span><span class="dish-leader"></span><span class="dish-price">&pound;38</span></div>
+                <p class="dish-note">Served 12:30 to 16:00. One menu, no choices beyond the main.</p>
+                <div class="dish"><span class="dish-name">Children under 10</span><span class="dish-leader"></span><span class="dish-price">&pound;14</span></div>
+                <p class="dish-note">Smaller version of the same thing, not a separate menu.</p>
+              </div>
+              <div class="md:col-6">
+                <p class="course-label">This Sunday</p>
+                <div class="dish"><span class="dish-name">Onion soup, Gruyère toast</span><span class="dish-leader"></span><span class="dish-price"></span></div>
+                <p class="dish-note">To start.</p>
+                <div class="dish"><span class="dish-name">Sirloin, or squash &amp; sage<span class="dish-tags"><span class="dish-tag">VG option</span></span></span><span class="dish-leader"></span><span class="dish-price"></span></div>
+                <p class="dish-note">Roast potatoes, greens, gravy from the bones.</p>
+                <div class="dish"><span class="dish-name">Burnt basque cheesecake</span><span class="dish-leader"></span><span class="dish-price"></span></div>
+                <p class="dish-note">To finish.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <a class="btn-outline theme-secondary btn-lg" href="menu.html">See the full menu &amp; wine list</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kitchen -->
+  <section class="section bg-2" id="about">
+    <div class="container">
+      <div class="row g-6 align-items-center">
+        <div class="lg:col-6">
+          <div class="ph ph-4x3"><img src="img/kitchen.jpg" alt="The open kitchen at service" width="900" height="675" loading="lazy"></div>
+        </div>
+        <div class="lg:col-6">
+          <p class="eyebrow-rule mb-3">The kitchen</p>
+          <h2 class="display-serif section-title fs-4xl mb-4">Twelve things, because thirty would be a lie</h2>
+          <p class="fg-2 mb-4">
+            A long menu means a big freezer. Ours is short because everything on
+            it was bought this week and is cooked to order by four people who can
+            all see each other.
+          </p>
+          <p class="fg-2 mb-5">
+            Sofia trained in Bologna and then spent six years in a pub kitchen in
+            Somerset, which is why the pasta is serious and the gravy is better
+            than it needs to be.
+          </p>
+          <blockquote class="quote-block mb-0">
+            "The kind of place you end up going to on a Tuesday because you
+            couldn't be bothered to cook, and then talk about all week."
+            <cite class="d-block fs-sm fg-3 mt-3 fst-normal" style="font-family:inherit">— Bristol Food Review</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Room / gallery -->
+  <section class="section" id="room">
+    <div class="container mb-5">
+      <p class="eyebrow-rule mb-3">The room</p>
+      <h2 class="display-serif section-title fs-4xl mb-0">Thirty-four covers, one long table</h2>
+    </div>
+    <div class="container-fluid px-4 lg:px-5">
+      <div class="mosaic">
+        <div class="ph"><img src="img/room-1.jpg" alt="The dining room at dusk" width="900" height="900" loading="lazy"></div>
+        <div class="ph"><img src="img/room-2.jpg" alt="The long communal table" width="600" height="600" loading="lazy"></div>
+        <div class="ph"><img src="img/room-3.jpg" alt="Pasta being rolled" width="600" height="600" loading="lazy"></div>
+        <div class="ph"><img src="img/room-4.jpg" alt="The bar and wine shelf" width="600" height="600" loading="lazy"></div>
+        <div class="ph"><img src="img/room-5.jpg" alt="A plated dish" width="600" height="600" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="section bg-2" id="book">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-5">
+          <p class="eyebrow-rule mb-3">Book</p>
+          <h2 class="display-serif section-title fs-4xl mb-4">Reserve a table</h2>
+          <p class="fg-2 mb-4">
+            We hold a third of the room back for walk-ins every service, so if
+            there is nothing online it is still worth putting your head round the
+            door.
+          </p>
+          <div class="hours-row"><span class="fg-3 fs-sm">Monday</span><span class="fs-sm">Closed</span></div>
+          <div class="hours-row"><span class="fg-3 fs-sm">Tuesday — Thursday</span><span class="fs-sm">12:00—14:30 · 18:00—22:00</span></div>
+          <div class="hours-row is-today"><span class="fs-sm">Friday — Saturday</span><span class="fs-sm">12:00—15:00 · 17:30—22:30</span></div>
+          <div class="hours-row"><span class="fg-3 fs-sm">Sunday</span><span class="fs-sm">12:30—16:00, one sitting</span></div>
+          <p class="fs-xs fg-3 mt-4 mb-0">Last orders thirty minutes before close. Kitchen closes when it closes.</p>
+        </div>
+
+        <div class="lg:col-7">
+          <div class="book-card">
+            <form id="bookForm" data-demo-form data-bs-validate novalidate>
+              <div class="row g-3">
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="bkDate">Date</label>
+                    <input type="text" class="form-control" id="bkDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…" required>
+                    <div class="invalid-feedback">Pick a date.</div>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <label class="form-label" for="bkTime">Time</label>
+                  <button class="form-control combobox-toggle" type="button" id="bkTime" data-bs-toggle="combobox" data-bs-name="time" data-bs-placeholder="Choose a time…">
+                    <span class="combobox-value">Choose a time…</span>
+                    <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+                  </button>
+                  <div class="menu">
+                    <button class="menu-item" type="button" data-bs-value="1200">12:00</button>
+                    <button class="menu-item" type="button" data-bs-value="1230">12:30</button>
+                    <button class="menu-item" type="button" data-bs-value="1800">18:00</button>
+                    <button class="menu-item" type="button" data-bs-value="1900">19:00</button>
+                    <button class="menu-item" type="button" data-bs-value="2000">20:00</button>
+                    <button class="menu-item" type="button" data-bs-value="2100">21:00</button>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <label class="form-label" for="bkParty">Party size</label>
+                  <button class="form-control combobox-toggle" type="button" id="bkParty" data-bs-toggle="combobox" data-bs-name="party" data-bs-placeholder="How many?">
+                    <span class="combobox-value">How many?</span>
+                    <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+                  </button>
+                  <div class="menu">
+                    <button class="menu-item" type="button" data-bs-value="1">1</button>
+                    <button class="menu-item" type="button" data-bs-value="2">2</button>
+                    <button class="menu-item" type="button" data-bs-value="3">3</button>
+                    <button class="menu-item" type="button" data-bs-value="4">4</button>
+                    <button class="menu-item" type="button" data-bs-value="6">6</button>
+                    <button class="menu-item" type="button" data-bs-value="8">8 or more — call us</button>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="bkName">Name</label>
+                    <input type="text" class="form-control" id="bkName" required>
+                    <div class="invalid-feedback">We need a name for the book.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-field">
+                    <label class="form-label" for="bkNotes">Anything we should know?</label>
+                    <textarea class="form-control" id="bkNotes" rows="3" placeholder="Allergies, high chair, celebrating something…"></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-field">
+                    <div class="switch"><input type="checkbox" id="bkNews" role="switch" switch></div>
+                    <label for="bkNews">Email me when the menu changes — about once a month</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Table requested ✓">Request the table</button>
+                  <p class="fs-xs fg-3 mt-3 mb-0">We confirm by email within a couple of hours. For six or more, please call <a href="tel:01179000000">0117 900 0000</a>.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Find us -->
+  <section class="section" id="find">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-6">
+          <p class="eyebrow-rule mb-3">Find us</p>
+          <h2 class="display-serif section-title fs-4xl mb-4">Getting here</h2>
+          <p class="fg-2 mb-4">118 Stokes Croft, Bristol BS1 3RU</p>
+          <div class="hours-row"><span class="fg-3 fs-sm">Nearest station</span><span class="fs-sm">Bristol Temple Meads, 20 min walk</span></div>
+          <div class="hours-row"><span class="fg-3 fs-sm">Parking</span><span class="fs-sm">Portland Square, 4 min</span></div>
+          <div class="hours-row"><span class="fg-3 fs-sm">Step-free</span><span class="fs-sm">Yes, and an accessible WC</span></div>
+          <div class="hours-row"><span class="fg-3 fs-sm">Dogs</span><span class="fs-sm">In the front two tables</span></div>
+        </div>
+        <div class="lg:col-6">
+          <div class="accordion">
+            <details class="accordion-item" name="tfaq" open>
+              <summary class="accordion-header">Do you cater for allergies?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body fg-2">Yes, and we would rather know when you book than when you sit down. The kitchen is small and handles nuts, gluten and shellfish, so we will tell you honestly what we can and cannot guarantee.</div>
+            </details>
+            <details class="accordion-item" name="tfaq">
+              <summary class="accordion-header">Can we book the whole room?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body fg-2">Thirty-four covers, Sunday evenings and Mondays only. Set menu, minimum spend, and we will cook whatever you actually want rather than making you choose from the card.</div>
+            </details>
+            <details class="accordion-item" name="tfaq">
+              <summary class="accordion-header">Is there a service charge?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body fg-2">A discretionary 12.5%, split evenly across the whole team including the kitchen, paid through payroll. Remove it if you would rather — nobody will be odd about it.</div>
+            </details>
+            <details class="accordion-item" name="tfaq">
+              <summary class="accordion-header">Do you take walk-ins?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body fg-2">Always. About a third of the room is held back every service, plus six seats at the counter that are never bookable.</div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer section pb-5 bg-2">
+  <div class="container">
+    <div class="row g-5">
+      <div class="md:col-4">
+        <p class="wordmark d-inline-block mb-3">Tavola</p>
+        <p class="fg-3 fs-sm mb-0">118 Stokes Croft<br>Bristol BS1 3RU<br>United Kingdom</p>
+      </div>
+      <div class="md:col-2">
+        <p class="fw-semibold fs-sm mb-3">Eat</p>
+        <ul class="list-unstyled fs-sm fg-3 mb-0">
+          <li class="mb-2"><a href="#menu">Today's menu</a></li>
+          <li class="mb-2"><a href="menu.html">Full menu</a></li>
+          <li class="mb-2"><a href="#book">Book a table</a></li>
+        </ul>
+      </div>
+      <div class="md:col-2">
+        <p class="fw-semibold fs-sm mb-3">About</p>
+        <ul class="list-unstyled fs-sm fg-3 mb-0">
+          <li class="mb-2"><a href="#about">The kitchen</a></li>
+          <li class="mb-2"><a href="#room">The room</a></li>
+          <li class="mb-2"><a href="#find">Find us</a></li>
+        </ul>
+      </div>
+      <div class="md:col-4">
+        <p class="fw-semibold fs-sm mb-3">Reservations</p>
+        <p class="fs-sm fg-3 mb-1"><a href="tel:01179000000">0117 900 0000</a></p>
+        <p class="fs-sm fg-3 mb-0"><a href="mailto:book@tavola.example">book@tavola.example</a></p>
+      </div>
+    </div>
+    <hr class="my-5">
+    <p class="fs-xs fg-3 mb-0">&copy; <span data-year></span> Tavola. A free Bootstrap 6 template — the restaurant is fictional.</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

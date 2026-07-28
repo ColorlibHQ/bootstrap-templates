@@ -1,0 +1,47 @@
+{
+  "slug": "commerce",
+  "title": "Commerce — Free Bootstrap 6 E-commerce Website Template",
+  "excerpt": "A free three-page Bootstrap 6 online store template — filterable storefront, product detail page and a multi-step checkout.",
+  "yoastTitle": "Commerce — Free Bootstrap 6 E-commerce Website Template",
+  "yoastDesc": "Free Bootstrap 6 e-commerce template with a filterable product grid, product detail page and multi-step checkout using the new Combobox, Range, Chip input and OTP components.",
+  "intro": "Commerce is a free, premium three-page <strong>Bootstrap 6</strong> online store template for small-batch and direct-to-consumer shops. It pairs a filterable storefront with a full product detail page and a three-step checkout, so you get the whole buying journey rather than a single landing page.",
+  "note": "The product filters, checkout and promo fields are built on components that simply did not exist in Bootstrap 5 — Combobox for category and country pickers, Range with a value bubble for price, Chip input for materials and promo codes, OTP input for payment verification, and the new Stepper to drive the checkout flow.",
+  "summary": "Commerce is a free, premium three-page Bootstrap 6 online store template for small-batch and direct-to-consumer shops. It pairs a filterable storefront with a full product detail page and a three-step checkout covering delivery, payment and confirmation. Filters use the new Combobox, Range and Chip input components; the checkout uses the Stepper and OTP input. Everything is ESM-only vanilla JavaScript with no build step and full light/dark mode.",
+  "features": [
+    "Three pages — storefront, product detail and a three-step checkout",
+    "Filterable product grid using Combobox (multi-select), Range with value bubble, and Chip input",
+    "Product page with gallery thumbnails, variant options, quantity stepper and tabbed detail",
+    "Multi-step checkout driven by the new Stepper component, with OTP payment verification",
+    "Cart and search in native <dialog> drawers — browser-supplied backdrop and focus trap",
+    "Accordion built on native <details>, no JavaScript required",
+    "Composable theme tokens — retheme the whole store by overriding --bs-primary-base",
+    "Full dark mode via data-bs-theme, remembered across visits",
+    "Native form validation with data-bs-validate and :user-invalid",
+    "ESM-only vanilla JavaScript — no jQuery, no bundler, no build step",
+    "Verified to render with zero console errors on every page"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "e-commerce"
+  ],
+  "images": [
+    {
+      "name": "hero-kettle",
+      "q": "copper kettle stovetop kitchen",
+      "w": 700,
+      "h": 933
+    },
+    {
+      "name": "hero-linen",
+      "q": "folded linen fabric natural",
+      "w": 500,
+      "h": 500
+    },
+    {
+      "name": "hero-stoneware",
+      "q": "stoneware ceramic bowls handmade",
+      "w": 500,
+      "h": 500
+    }
+  ]
+}

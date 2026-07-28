@@ -1,0 +1,50 @@
+Placeholder photography
+=======================
+
+Every photograph here is CC0 / Public Domain Mark, sourced via the
+Openverse API — no attribution required, commercial use fine. Where no
+public-domain photograph matched a slot, the file is a generated gradient
+instead; those are marked below and carry no rights at all.
+
+Either way these are placeholders: replace them with your own photography
+before launch. Provenance for each file follows.
+
+stage.jpg
+  Oktyabrskiy Grand Concert Hall
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=14641198
+
+sleeve.jpg
+  Wikidata Texture
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=68301793
+
+video-1.jpg
+  File:Concert (201072367).jpeg
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=71467257
+
+video-2.jpg
+  Nickelodeon Animation Studio Olive Burbank
+  CC0 1.0
+  https://commons.wikimedia.org/w/index.php?curid=32025175
+
+merch-1.jpg
+  Vintage vinyl record player
+  CC0 1.0
+  https://www.rawpixel.com/image/3292727/free-photo-image-sun-music-background-vintage-table
+
+merch-2.jpg
+  Stack of folded t-shirts
+  CC0 1.0
+  https://www.rawpixel.com/image/11515803/stack-folded-t-shirts
+
+merch-3.jpg
+  See America. Welcome Montana /
+  CC0 1.0
+  https://www.rawpixel.com/image/7726016/see-america-welcome-montana-weitzman
+
+merch-4.jpg
+  Cassette tape png sticker, music
+  CC0 1.0
+  https://www.rawpixel.com/image/6482509/png-sticker-tape

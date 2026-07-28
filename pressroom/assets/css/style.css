@@ -1,0 +1,132 @@
+/*!
+ * Pressroom — Bootstrap 6 blog / magazine template
+ *
+ * Design language: a real front page. One lead story at editorial scale, a
+ * secondary rail beside it, then section blocks — not a uniform card grid.
+ * Serif display type, a thin rule system, and a masthead with the date line.
+ */
+
+:root {
+  --brand: oklch(45% 0.16 22);
+  --kit-section-y: 3.5rem;
+}
+
+@media (width >= 768px) { :root { --kit-section-y: 4.5rem; } }
+
+/* --------------------------------------------------------------- Masthead */
+
+.masthead-top {
+  border-bottom: 1px solid var(--bs-fg-body);
+  padding-block: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.masthead-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 1rem + 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-header { border-bottom: 1px solid var(--bs-border-color); }
+
+/* --------------------------------------------------------------- Editorial type */
+
+.headline {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.headline a { color: inherit; text-decoration: none; }
+.headline a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.kicker {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bs-primary-base);
+}
+
+.byline { font-size: 0.8125rem; color: var(--bs-fg-3); }
+
+.rule-top { border-top: 2px solid var(--bs-fg-body); padding-top: 0.75rem; }
+
+.section-rule {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 2px solid var(--bs-fg-body);
+  padding-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-rule h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------- Cards */
+
+.story-media { border-radius: var(--bs-radius-4); overflow: hidden; margin-bottom: 0.875rem; }
+.story-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.story:hover .story-media img { transform: scale(1.04); }
+
+.story-lead .story-media { margin-bottom: 1.25rem; }
+
+/* Secondary rail: text-only items separated by rules */
+.rail-item { padding-block: 1rem; border-bottom: 1px solid var(--bs-border-color); }
+.rail-item:first-child { padding-top: 0; }
+.rail-item:last-child { border-bottom: 0; padding-bottom: 0; }
+
+/* Most-read numbered list */
+.ranked { list-style: none; margin: 0; padding: 0; counter-reset: r; }
+.ranked li { counter-increment: r; display: flex; gap: 1rem; padding-block: 0.875rem; border-bottom: 1px solid var(--bs-border-color); }
+.ranked li:last-child { border-bottom: 0; }
+.ranked li::before {
+  content: counter(r);
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: color-mix(in oklab, var(--bs-primary-base), transparent 45%);
+  flex: none;
+  width: 1.5rem;
+}
+
+.author-chip { width: 1.75rem; height: 1.75rem; border-radius: var(--bs-radius-pill); object-fit: cover; }
+
+/* --------------------------------------------------------------- Article */
+
+.article-hero img { width: 100%; border-radius: var(--bs-radius-5); display: block; }
+
+.article-body { font-size: 1.0625rem; }
+.article-body p { line-height: 1.75; }
+
+figure.inset { margin-block: 2rem; }
+figure.inset img { width: 100%; border-radius: var(--bs-radius-5); display: block; }
+figure.inset figcaption { font-size: 0.8125rem; color: var(--bs-fg-3); margin-top: 0.625rem; }
+
+.toc { position: sticky; top: 5.5rem; }
+.toc a {
+  display: block; padding: 0.3125rem 0 0.3125rem 0.75rem;
+  border-left: 2px solid var(--bs-border-color);
+  color: var(--bs-fg-3); font-size: 0.875rem; text-decoration: none;
+}
+.toc a:hover { color: var(--bs-fg-1); }
+.toc a.active { color: var(--bs-primary-base); border-left-color: var(--bs-primary-base); font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) {
+  .story-media img { transition: none; }
+  .story:hover .story-media img { transform: none; }
+}

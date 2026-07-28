@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caseworth — Free Bootstrap 6 Law Firm &amp; Accountancy Website Template</title>
+<meta name="description" content="Caseworth is a free Bootstrap 6 law and accountancy template — numbered practice index, people with credentials, a published fee table, insights and an enquiry form.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navScroll" data-bs-top-margin="110px" data-bs-smooth-scroll="true">
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="util-bar">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <span class="fg-3">Regulated by the SRA · No. 604118</span>
+    <span class="fg-3"><a href="tel:01612000000">0161 200 0000</a> · <a href="mailto:enquiries@caseworth.example">enquiries@caseworth.example</a></span>
+  </div>
+</div>
+
+<header class="site-header">
+  <nav class="navbar lg:navbar-expand" aria-label="Main">
+    <div class="container">
+      <a class="wordmark" href="index.html">Caseworth<span>.</span></a>
+      <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+        </div>
+        <div class="drawer-body mb-2 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-3" id="navScroll">
+            <li class="nav-item"><a class="nav-link" href="#practices">Practices</a></li>
+            <li class="nav-item"><a class="nav-link" href="#people">People</a></li>
+            <li class="nav-item"><a class="nav-link" href="#fees">Fees</a></li>
+            <li class="nav-item"><a class="nav-link" href="#insights">Insights</a></li>
+            <li class="nav-item"><a class="nav-link" href="#enquiry">Enquiry</a></li>
+          </ul>
+        </div>
+      </dialog>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+        </button>
+        <a class="btn-solid theme-primary d-none md:d-inline-flex" href="#enquiry">Make an enquiry</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="masthead">
+  <div class="container">
+    <div class="row g-6 align-items-center">
+      <div class="lg:col-7">
+        <p class="eyebrow fs-sm fg-primary mb-3">Solicitors &amp; chartered accountants · Manchester</p>
+        <h1 class="serif masthead-title mb-4">Advice you can act on, in writing, with a price on it</h1>
+        <p class="lede fg-2 mb-5" style="max-width:36rem">
+          Caseworth is a twelve-partner firm covering commercial law, private
+          client work and accountancy. We publish our fees, we answer the phone,
+          and we tell you when you do not need us.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a class="btn-solid theme-primary btn-lg" href="#enquiry">Make an enquiry</a>
+          <a class="btn-outline theme-secondary btn-lg" href="#fees">See our fees</a>
+        </div>
+      </div>
+      <div class="lg:col-5">
+        <div class="masthead-figure">
+          <div class="ph"><img src="img/office.jpg" alt="The Caseworth offices on King Street" width="700" height="875" loading="eager"></div>
+          <p class="figure-note mb-0">King Street, Manchester — the firm has occupied the second floor since 1998.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+
+  <!-- Practice index -->
+  <section class="section" id="practices">
+    <div class="container">
+      <div class="row g-6 mb-5">
+        <div class="lg:col-5">
+          <p class="eyebrow fs-sm fg-primary mb-2">Practices</p>
+          <h2 class="serif section-title fs-4xl mb-0">What we are<br>instructed on</h2>
+        </div>
+        <div class="lg:col-7">
+          <p class="fg-2 mb-0">
+            Ten practice areas across two disciplines. If your matter sits outside
+            them we will say so at the first call and, where we can, name someone
+            who does it properly.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-0 lg:gx-6">
+        <div class="lg:col-6">
+          <div class="practice-index">
+            <a class="practice-item" href="practice.html"><span class="idx">01</span><span><span class="practice-name d-block">Commercial contracts</span><span class="fs-sm fg-3">Drafting, review and negotiation</span></span><span class="go">→</span></a>
+            <a class="practice-item" href="practice.html"><span class="idx">02</span><span><span class="practice-name d-block">Corporate &amp; M&amp;A</span><span class="fs-sm fg-3">Share and asset sales, investment rounds</span></span><span class="go">→</span></a>
+            <a class="practice-item" href="practice.html"><span class="idx">03</span><span><span class="practice-name d-block">Employment</span><span class="fs-sm fg-3">Both sides — advisory and tribunal</span></span><span class="go">→</span></a>
+            <a class="practice-item" href="practice.html"><span class="idx">04</span><span><span class="practice-name d-block">Commercial property</span><span class="fs-sm fg-3">Leases, acquisitions and disposals</span></span><span class="go">→</span></a>
+            <a class="practice-item" href="practice.html"><span class="idx">05</span><span><span class="practice-name d-block">Dispute resolution</span><span class="fs-sm fg-3">Mediation first, litigation when needed</span></span><span class="go">→</span></a>
+          </div>
+        </div>
+        <div class="lg:col-6">
+          <div class="practice-index">
+            <a class="practice-item" href="practice.html"><span class="idx">06</span><span><span class="practice-name d-block">Wills &amp; probate</span><span class="fs-sm fg-3">Estate planning and administration</span></span><span class="go">→</span></a>
+            <a class="practice-item" href="practice.html"><span class="idx">07</span><span><span class="practice-name d-block">Audit &amp; assurance</span><span class="fs-sm fg-3">Statutory audit and independent examination</span></span><span class="go">→</span></a>
+            <a class="practice-item" href="practice.html"><span class="idx">08</span><span><span class="practice-name d-block">Tax</span><span class="fs-sm fg-3">Corporate, personal and R&amp;D claims</span></span><span class="go">→</span></a>
+            <a class="practice-item" href="practice.html"><span class="idx">09</span><span><span class="practice-name d-block">Outsourced finance</span><span class="fs-sm fg-3">Bookkeeping, payroll and management accounts</span></span><span class="go">→</span></a>
+            <a class="practice-item" href="practice.html"><span class="idx">10</span><span><span class="practice-name d-block">Restructuring</span><span class="fs-sm fg-3">Solvent wind-downs and turnaround</span></span><span class="go">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- People -->
+  <section class="section bg-2" id="people">
+    <div class="container">
+      <div class="row g-6 mb-5">
+        <div class="lg:col-5">
+          <p class="eyebrow fs-sm fg-primary mb-2">People</p>
+          <h2 class="serif section-title fs-4xl mb-0">Who you<br>will deal with</h2>
+        </div>
+        <div class="lg:col-7">
+          <p class="fg-2 mb-0">
+            The partner you meet is the partner who does the work. We do not run a
+            model where the pitch team disappears after instruction.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="sm:col-6 lg:col-3">
+          <div class="person">
+            <div class="ph"><img src="img/person-1.jpg" alt="Portrait of Adaeze Nwosu" width="500" height="500" loading="lazy"></div>
+            <p class="cred mb-1">Solicitor · Partner</p>
+            <p class="serif fs-lg mb-1">Adaeze Nwosu</p>
+            <p class="person-role mb-0">Corporate &amp; M&amp;A. Admitted 2009. Leads the transactional team.</p>
+          </div>
+        </div>
+        <div class="sm:col-6 lg:col-3">
+          <div class="person">
+            <div class="ph"><img src="img/person-2.jpg" alt="Portrait of Rhys Callaghan" width="500" height="500" loading="lazy"></div>
+            <p class="cred mb-1">FCA · Partner</p>
+            <p class="serif fs-lg mb-1">Rhys Callaghan</p>
+            <p class="person-role mb-0">Audit &amp; assurance. Twenty-two years, mostly owner-managed businesses.</p>
+          </div>
+        </div>
+        <div class="sm:col-6 lg:col-3">
+          <div class="person">
+            <div class="ph"><img src="img/person-3.jpg" alt="Portrait of Marta Kowalczyk" width="500" height="500" loading="lazy"></div>
+            <p class="cred mb-1">Solicitor · Partner</p>
+            <p class="serif fs-lg mb-1">Marta Kowalczyk</p>
+            <p class="person-role mb-0">Employment, both sides. Accredited workplace mediator.</p>
+          </div>
+        </div>
+        <div class="sm:col-6 lg:col-3">
+          <div class="person">
+            <div class="ph"><img src="img/person-4.jpg" alt="Portrait of Idris Bello" width="500" height="500" loading="lazy"></div>
+            <p class="cred mb-1">CTA · Partner</p>
+            <p class="serif fs-lg mb-1">Idris Bello</p>
+            <p class="person-role mb-0">Tax. Chartered Tax Adviser, R&amp;D and corporate reorganisations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fees -->
+  <section class="section" id="fees">
+    <div class="container">
+      <div class="row g-6 mb-5">
+        <div class="lg:col-5">
+          <p class="eyebrow fs-sm fg-primary mb-2">Fees</p>
+          <h2 class="serif section-title fs-4xl mb-0">Published,<br>not quoted on request</h2>
+        </div>
+        <div class="lg:col-7">
+          <p class="fg-2 mb-4">
+            Fixed fees where a matter can be scoped, hourly where it genuinely
+            cannot. You get an engagement letter with the number in it before we
+            open a file.
+          </p>
+          <p class="fee-note fg-2 mb-0">
+            Figures exclude VAT and disbursements. Hourly rates apply only where a
+            fixed fee is impossible, and we will tell you which you are on.
+          </p>
+        </div>
+      </div>
+
+      <div class="form-control form-adorn mb-4" style="max-width:24rem">
+        <div class="form-adorn-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 4 4" stroke-linecap="round"/></svg>
+        </div>
+        <input type="search" class="form-ghost" id="feeFilter" placeholder="Filter matters…" aria-label="Filter fee table by matter">
+      </div>
+
+      <div class="table-responsive">
+        <table class="table md:table-stacked" id="feeTable">
+          <caption class="fs-sm fg-3">Indicative fees, reviewed each April</caption>
+          <thead>
+            <tr>
+              <th scope="col">Matter</th>
+              <th scope="col">Basis</th>
+              <th scope="col" class="text-end">From</th>
+              <th scope="col">Typical timescale</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr>
+              <th scope="row" class="fw-normal">Shareholders' agreement</th>
+              <td data-cell="Basis">Fixed</td>
+              <td data-cell="From" class="text-end">£2,400</td>
+              <td data-cell="Timescale" class="fg-3">3—4 weeks</td>
+            </tr>
+            <tr>
+              <th scope="row" class="fw-normal">Share sale, owner-managed</th>
+              <td data-cell="Basis">Fixed + value element</td>
+              <td data-cell="From" class="text-end">£14,000</td>
+              <td data-cell="Timescale" class="fg-3">8—14 weeks</td>
+            </tr>
+            <tr>
+              <th scope="row" class="fw-normal">Settlement agreement (employee)</th>
+              <td data-cell="Basis">Fixed</td>
+              <td data-cell="From" class="text-end">£550</td>
+              <td data-cell="Timescale" class="fg-3">2—5 days</td>
+            </tr>
+            <tr>
+              <th scope="row" class="fw-normal">Commercial lease, new letting</th>
+              <td data-cell="Basis">Fixed</td>
+              <td data-cell="From" class="text-end">£1,850</td>
+              <td data-cell="Timescale" class="fg-3">4—6 weeks</td>
+            </tr>
+            <tr>
+              <th scope="row" class="fw-normal">Statutory audit, turnover under £10m</th>
+              <td data-cell="Basis">Fixed</td>
+              <td data-cell="From" class="text-end">£8,500</td>
+              <td data-cell="Timescale" class="fg-3">6—9 weeks</td>
+            </tr>
+            <tr>
+              <th scope="row" class="fw-normal">Grant of probate, no IHT</th>
+              <td data-cell="Basis">Fixed</td>
+              <td data-cell="From" class="text-end">£1,600</td>
+              <td data-cell="Timescale" class="fg-3">10—16 weeks</td>
+            </tr>
+            <tr>
+              <th scope="row" class="fw-normal">Contentious matters</th>
+              <td data-cell="Basis">Hourly</td>
+              <td data-cell="From" class="text-end">£190—£340/hr</td>
+              <td data-cell="Timescale" class="fg-3">Scoped per stage</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fg-3 fs-sm mt-3 mb-0" id="feeEmpty" hidden>No matter matches that. Ask us — the table is indicative, not exhaustive.</p>
+    </div>
+  </section>
+
+  <!-- Insights -->
+  <section class="section bg-2" id="insights">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-4">
+          <p class="eyebrow fs-sm fg-primary mb-2">Insights</p>
+          <h2 class="serif section-title fs-4xl mb-3">Written for<br>clients, not<br>for search</h2>
+          <p class="fg-2 mb-0">Short notes when something changes that actually affects the people we act for.</p>
+        </div>
+        <div class="lg:col-8">
+          <a class="insight" href="practice.html">
+            <p class="fs-xs fg-3 mb-2">14 July 2026 · Employment</p>
+            <p class="insight-title mb-2">The new duty to prevent sexual harassment: what a reasonable step actually looks like</p>
+            <p class="fg-2 fs-sm mb-0">Tribunals have started applying the uplift. Three things every employer should have documented by now.</p>
+          </a>
+          <a class="insight" href="practice.html">
+            <p class="fs-xs fg-3 mb-2">2 July 2026 · Tax</p>
+            <p class="insight-title mb-2">R&amp;D claims after the merged scheme: fewer claims, longer enquiries</p>
+            <p class="fg-2 fs-sm mb-0">HMRC is opening enquiries on roughly one in five. What contemporaneous record-keeping now needs to include.</p>
+          </a>
+          <a class="insight" href="practice.html">
+            <p class="fs-xs fg-3 mb-2">19 June 2026 · Corporate</p>
+            <p class="insight-title mb-2">Earn-outs are back, and they are being drafted badly</p>
+            <p class="fg-2 fs-sm mb-0">Most earn-out disputes come down to one clause about how the business is run after completion.</p>
+          </a>
+          <a class="insight" href="practice.html">
+            <p class="fs-xs fg-3 mb-2">3 June 2026 · Private client</p>
+            <p class="insight-title mb-2">If your will predates 2020, read it again</p>
+            <p class="fg-2 fs-sm mb-0">Residence nil-rate band interactions catch out a surprising number of otherwise sensible wills.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enquiry -->
+  <section class="section" id="enquiry">
+    <div class="container">
+      <div class="row g-6">
+        <div class="lg:col-5">
+          <p class="eyebrow fs-sm fg-primary mb-2">Enquiry</p>
+          <h2 class="serif section-title fs-4xl mb-4">Tell us what<br>has happened</h2>
+          <p class="fg-2 mb-4">
+            A partner reads every enquiry. You will get either a first view and a
+            fee estimate, or an honest note that this is not one for us.
+          </p>
+          <div class="spec-row"><span class="fg-3 fs-sm">First response</span><span class="fs-sm">One working day</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Initial call</span><span class="fs-sm">Thirty minutes, no charge</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Conflict check</span><span class="fs-sm">Before any advice is given</span></div>
+          <div class="spec-row"><span class="fg-3 fs-sm">Regulated by</span><span class="fs-sm">SRA · ICAEW</span></div>
+
+          <div class="accordion mt-5">
+            <details class="accordion-item" name="cwfaq" open>
+              <summary class="accordion-header">Is the first conversation privileged?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body fg-2">Legal advice privilege attaches once a solicitor–client relationship exists. The initial call is confidential in any event, and we run a conflict check before discussing anything substantive.</div>
+            </details>
+            <details class="accordion-item" name="cwfaq">
+              <summary class="accordion-header">Do you act on a no-win-no-fee basis?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body fg-2">For some employment and commercial disputes, yes — damages-based or conditional fee agreements, assessed case by case. We will tell you at the outset whether yours is suitable.</div>
+            </details>
+            <details class="accordion-item" name="cwfaq">
+              <summary class="accordion-header">Can you act for both the company and its directors?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+              </summary>
+              <div class="accordion-body fg-2">Sometimes, and only where interests genuinely align and both parties consent in writing. Where they diverge — which is common in a sale — one of you will need separate advice, and we will say so early.</div>
+            </details>
+          </div>
+        </div>
+
+        <div class="lg:col-7">
+          <div class="enquiry">
+            <form id="enqForm" data-demo-form data-bs-validate novalidate>
+              <div class="row g-3">
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="eqName">Your name</label>
+                    <input type="text" class="form-control" id="eqName" required>
+                    <div class="invalid-feedback">Required.</div>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="eqEmail">Email</label>
+                    <input type="email" class="form-control" id="eqEmail" required>
+                    <div class="invalid-feedback">A valid email, please.</div>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <label class="form-label">Practice area</label>
+                  <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="area" data-bs-placeholder="Choose one…">
+                    <span class="combobox-value">Choose one…</span>
+                    <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+                  </button>
+                  <div class="menu">
+                    <button class="menu-item" type="button" data-bs-value="contracts">Commercial contracts</button>
+                    <button class="menu-item" type="button" data-bs-value="corporate">Corporate &amp; M&amp;A</button>
+                    <button class="menu-item" type="button" data-bs-value="employment">Employment</button>
+                    <button class="menu-item" type="button" data-bs-value="property">Commercial property</button>
+                    <button class="menu-item" type="button" data-bs-value="dispute">Dispute resolution</button>
+                    <button class="menu-item" type="button" data-bs-value="probate">Wills &amp; probate</button>
+                    <button class="menu-item" type="button" data-bs-value="audit">Audit &amp; assurance</button>
+                    <button class="menu-item" type="button" data-bs-value="tax">Tax</button>
+                    <button class="menu-item" type="button" data-bs-value="finance">Outsourced finance</button>
+                    <button class="menu-item" type="button" data-bs-value="restructure">Restructuring</button>
+                  </div>
+                </div>
+                <div class="md:col-6">
+                  <div class="form-field">
+                    <label class="form-label" for="eqDeadline">Any deadline?</label>
+                    <input type="text" class="form-control" id="eqDeadline" data-bs-toggle="datepicker" autocomplete="off" placeholder="Optional">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-field">
+                    <label class="form-label" for="eqDetail">What has happened?</label>
+                    <textarea class="form-control" id="eqDetail" rows="5" placeholder="A few sentences is plenty at this stage. Please don't send documents until we've run a conflict check." required></textarea>
+                    <div class="invalid-feedback">Please give us the outline.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-field">
+                    <input type="checkbox" class="check" id="eqOk" required>
+                    <label for="eqOk">I understand no solicitor–client relationship arises until we are formally instructed</label>
+                    <div class="invalid-feedback">Please confirm to continue.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Enquiry sent ✓">Send enquiry</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer section pb-5 bg-2">
+  <div class="container">
+    <div class="row g-5">
+      <div class="md:col-4">
+        <p class="wordmark d-inline-block mb-3">Caseworth<span>.</span></p>
+        <p class="fg-3 fs-sm mb-0">Second floor, 44 King Street<br>Manchester M2 6BA<br>United Kingdom</p>
+      </div>
+      <div class="md:col-2">
+        <p class="fw-semibold fs-sm mb-3">Firm</p>
+        <ul class="list-unstyled fs-sm fg-3 mb-0">
+          <li class="mb-2"><a href="#practices">Practices</a></li>
+          <li class="mb-2"><a href="#people">People</a></li>
+          <li class="mb-2"><a href="practice.html">Practice detail</a></li>
+        </ul>
+      </div>
+      <div class="md:col-2">
+        <p class="fw-semibold fs-sm mb-3">Clients</p>
+        <ul class="list-unstyled fs-sm fg-3 mb-0">
+          <li class="mb-2"><a href="#fees">Fees</a></li>
+          <li class="mb-2"><a href="#insights">Insights</a></li>
+          <li class="mb-2"><a href="#enquiry">Enquiry</a></li>
+        </ul>
+      </div>
+      <div class="md:col-4">
+        <p class="fw-semibold fs-sm mb-3">Regulatory</p>
+        <p class="fs-xs fg-3 mb-0">
+          Caseworth LLP is authorised and regulated by the Solicitors Regulation
+          Authority, No. 604118. Accountancy services are provided by Caseworth
+          Advisory Ltd, registered to carry on audit work by the ICAEW.
+        </p>
+      </div>
+    </div>
+    <hr class="my-5">
+    <p class="fs-xs fg-3 mb-0">&copy; <span data-year></span> Caseworth LLP. A free Bootstrap 6 template — the firm is fictional.</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
