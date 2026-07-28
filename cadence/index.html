@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview — Cadence Bootstrap 6 CRM Dashboard</title>
+<meta name="description" content="Cadence is a free Bootstrap 6 CRM dashboard template with a weighted pipeline board, contacts, reports and settings.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="app">
+
+  <aside class="side" id="side">
+    <a class="side-brand" href="index.html">
+      <span class="side-mark" aria-hidden="true">C</span><span>Cadence</span>
+    </a>
+    <p class="side-label mb-0">Sell</p>
+      <a class="side-link is-active" href="index.html" aria-current="page"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Overview</span></a>
+      <a class="side-link" href="pipeline.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2.5" width="3.5" height="11" rx="1"/><rect x="6.5" y="2.5" width="3.5" height="7" rx="1"/><rect x="11" y="2.5" width="3" height="9" rx="1"/></svg><span>Pipeline</span></a>
+      <a class="side-link" href="contacts.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6" cy="5.5" r="2.5"/><path d="M1.5 14a4.5 4.5 0 0 1 9 0"/><path d="M11 3.2a2.5 2.5 0 0 1 0 4.6M12 14a4.5 4.5 0 0 0-1.6-3.4"/></svg><span>Contacts</span></a>
+      <a class="side-link" href="reports.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 13.5V9M6 13.5V4M10 13.5V7M14 13.5V2.5"/></svg><span>Reports</span></a>
+      <a class="side-link" href="settings.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.6M8 12.9v1.6M14.5 8h-1.6M3.1 8H1.5m10.1-4.6-1.1 1.1M5.5 10.5l-1.1 1.1m0-8.2 1.1 1.1m5 5 1.1 1.1"/></svg><span>Settings</span></a>
+    <div class="side-foot">
+      <span class="avatar avatar-sm"><span class="avatar-initials">DA</span></span>
+      <span class="side-who"><strong>Dilan Aksoy</strong><small>Account executive</small></span>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="btn-icon lg:d-none" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <button class="btn-icon d-none lg:d-inline-flex" type="button" id="railToggle" aria-label="Collapse sidebar" aria-pressed="false">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M6.5 3v10"/></svg>
+      </button>
+
+      <div class="form-control form-adorn search-field d-none md:d-flex">
+        <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14" stroke-linecap="round"/></svg></div>
+        <input type="search" class="form-ghost" placeholder="Search deals, companies, people…" aria-label="Search">
+      </div>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+        <button class="btn-icon" type="button" aria-label="Notifications"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6.5a4 4 0 0 1 8 0c0 3 1 4 1 4H3s1-1 1-4Z"/><path d="M6.5 13a1.6 1.6 0 0 0 3 0"/></svg></button>
+        <button class="btn-icon p-0" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Account menu">
+          <span class="avatar avatar-sm"><span class="avatar-initials">DA</span></span>
+        </button>
+        <div class="menu">
+          <a class="menu-item" href="settings.html">Settings</a>
+          <a class="menu-item" href="reports.html">My reports</a>
+          <hr class="menu-divider">
+          <a class="menu-item" href="index.html">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <div class="page-head">
+        <div>
+          <h1 class="page-title">Overview</h1>
+          <p class="page-sub mb-0">Your pipeline at a glance, Monday 28 July.</p>
+        </div>
+        <div class="page-actions"><button class="btn-solid theme-primary" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3.5v9M3.5 8h9"/></svg> New deal</button></div>
+      </div>
+
+      <div class="kpi-row">
+      <article class="kpi">
+        <p class="kpi-label mb-1">Open pipeline</p>
+        <p class="kpi-figure mb-1">£595k</p>
+        <p class="kpi-delta mb-0 is-up"><span aria-hidden="true">▲</span> 8.2% <span class="fg-3">vs last month</span></p>
+      </article>
+      <article class="kpi">
+        <p class="kpi-label mb-1">Weighted forecast</p>
+        <p class="kpi-figure mb-1">£247k</p>
+        <p class="kpi-delta mb-0 is-up"><span aria-hidden="true">▲</span> 3.1% <span class="fg-3">at current stage odds</span></p>
+      </article>
+      <article class="kpi">
+        <p class="kpi-label mb-1">Closed this month</p>
+        <p class="kpi-figure mb-1">£116k</p>
+        <p class="kpi-delta mb-0 is-up"><span aria-hidden="true">▲</span> 12.4% <span class="fg-3">2 deals</span></p>
+      </article>
+      <article class="kpi">
+        <p class="kpi-label mb-1">Average cycle</p>
+        <p class="kpi-figure mb-1">38 days</p>
+        <p class="kpi-delta mb-0 is-down"><span aria-hidden="true">▼</span> 4 days <span class="fg-3">lead to close</span></p>
+      </article>
+      </div>
+
+      <div class="grid-2">
+        <section class="card">
+          <header class="card-head">
+            <div><h2 class="card-title">Weighted pipeline</h2><p class="card-sub mb-0">Last twelve weeks</p></div>
+            <span class="chip">Rolling</span>
+          </header>
+          <div class="card-body">
+            <svg class="chart" viewBox="0 0 620 180" role="img" aria-label="Weighted pipeline over the last twelve weeks" preserveAspectRatio="none">
+        <defs><linearGradient id="cadFill" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="var(--bs-primary-base)" stop-opacity=".28"/>
+          <stop offset="100%" stop-color="var(--bs-primary-base)" stop-opacity="0"/>
+        </linearGradient></defs>
+        <path d="M6.0,174.0 L61.3,154.2 L116.5,159.4 L171.8,126.1 L227.1,106.3 L282.4,114.6 L337.6,90.7 L392.9,63.6 L448.2,81.3 L503.5,48.0 L558.7,21.9 L614.0,8.4 L614.0,180 L6.0,180 Z" fill="url(#cadFill)"/>
+        <path d="M6.0,174.0 L61.3,154.2 L116.5,159.4 L171.8,126.1 L227.1,106.3 L282.4,114.6 L337.6,90.7 L392.9,63.6 L448.2,81.3 L503.5,48.0 L558.7,21.9 L614.0,8.4" fill="none" stroke="var(--bs-primary-base)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      </svg>
+            <div class="chart-axis"><span>12w ago</span><span>8w</span><span>4w</span><span>Now</span></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <header class="card-head">
+            <div><h2 class="card-title">Pipeline by stage</h2><p class="card-sub mb-0">Value and win probability</p></div>
+            <a class="btn-text theme-secondary btn-sm" href="pipeline.html">Open board</a>
+          </header>
+          <div class="card-body">
+            <div class="funnel">
+        <div class="funnel-row">
+          <p class="funnel-label mb-0">Lead<span class="fg-3"> · 4</span></p>
+          <div class="funnel-track"><div class="funnel-bar" style="--w:76%"></div></div>
+          <p class="funnel-value mb-0">£133k</p>
+          <p class="funnel-prob mb-0 fg-3">10%</p>
+        </div>
+        <div class="funnel-row">
+          <p class="funnel-label mb-0">Qualified<span class="fg-3"> · 3</span></p>
+          <div class="funnel-track"><div class="funnel-bar" style="--w:94%"></div></div>
+          <p class="funnel-value mb-0">£164k</p>
+          <p class="funnel-prob mb-0 fg-3">25%</p>
+        </div>
+        <div class="funnel-row">
+          <p class="funnel-label mb-0">Proposal<span class="fg-3"> · 3</span></p>
+          <div class="funnel-track"><div class="funnel-bar" style="--w:72%"></div></div>
+          <p class="funnel-value mb-0">£124k</p>
+          <p class="funnel-prob mb-0 fg-3">50%</p>
+        </div>
+        <div class="funnel-row">
+          <p class="funnel-label mb-0">Negotiation<span class="fg-3"> · 2</span></p>
+          <div class="funnel-track"><div class="funnel-bar" style="--w:100%"></div></div>
+          <p class="funnel-value mb-0">£174k</p>
+          <p class="funnel-prob mb-0 fg-3">75%</p>
+        </div>
+        <div class="funnel-row">
+          <p class="funnel-label mb-0">Closed won<span class="fg-3"> · 2</span></p>
+          <div class="funnel-track"><div class="funnel-bar" style="--w:67%"></div></div>
+          <p class="funnel-value mb-0">£116k</p>
+          <p class="funnel-prob mb-0 fg-3">100%</p>
+        </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="grid-2">
+        <section class="card">
+          <header class="card-head">
+            <div><h2 class="card-title">Recent activity</h2><p class="card-sub mb-0">Across your accounts</p></div>
+          </header>
+          <div class="card-body">
+            <ul class="act-list">
+        <li class="act">
+          <span class="act-icon act-call" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3.5c0-.6.4-1 1-1h1.6c.4 0 .8.3.9.7l.6 2c.1.4 0 .8-.4 1l-1 .7a8 8 0 0 0 3.4 3.4l.7-1c.2-.3.6-.5 1-.4l2 .6c.4.1.7.5.7.9V12c0 .6-.4 1-1 1A10 10 0 0 1 3 3.5Z"/></svg></span>
+          <div>
+            <p class="act-head mb-1"><strong>Rae Whitcombe</strong> <span class="fg-3">· Kettle & Co</span></p>
+            <p class="act-text mb-1">Walked through the proposal. Wants the annual option costed before Thursday.</p>
+            <p class="act-when mb-0">12 minutes ago</p>
+          </div>
+        </li>
+        <li class="act">
+          <span class="act-icon act-email" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5"/><path d="m2 4.5 6 4 6-4"/></svg></span>
+          <div>
+            <p class="act-head mb-1"><strong>Tom Beckwith</strong> <span class="fg-3">· Palisade Health</span></p>
+            <p class="act-text mb-1">Sent revised terms — legal has the redlines back.</p>
+            <p class="act-when mb-0">1 hour ago</p>
+          </div>
+        </li>
+        <li class="act">
+          <span class="act-icon act-stage" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 8h9M8 4.5 11.5 8 8 11.5M13 4v8"/></svg></span>
+          <div>
+            <p class="act-head mb-1"><strong>Nadia Osei</strong> <span class="fg-3">· Meridian Labs</span></p>
+            <p class="act-text mb-1">Moved from Lead to Qualified.</p>
+            <p class="act-when mb-0">3 hours ago</p>
+          </div>
+        </li>
+        <li class="act">
+          <span class="act-icon act-note" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 2.5h7L13 5.5v8H3z"/><path d="M5.5 8h5M5.5 10.5h3"/></svg></span>
+          <div>
+            <p class="act-head mb-1"><strong>Josephine Marr</strong> <span class="fg-3">· Brightsea Marine</span></p>
+            <p class="act-text mb-1">Budget confirmed but the decision slips to next quarter.</p>
+            <p class="act-when mb-0">Yesterday</p>
+          </div>
+        </li>
+        <li class="act">
+          <span class="act-icon act-meeting" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg></span>
+          <div>
+            <p class="act-head mb-1"><strong>Marit Halvorsen</strong> <span class="fg-3">· Fenwick Partners</span></p>
+            <p class="act-text mb-1">Discovery call booked for Tuesday, 30 minutes.</p>
+            <p class="act-when mb-0">Yesterday</p>
+          </div>
+        </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card">
+          <header class="card-head">
+            <div><h2 class="card-title">Today and next</h2><p class="card-sub mb-0"><span data-task-open>0</span> still open</p></div>
+            <button class="btn-outline theme-secondary btn-sm" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3.5v9M3.5 8h9"/></svg> Task</button>
+          </header>
+          <div class="card-body">
+            <ul class="task-list" data-tasks>
+              <li class="task">
+                <input type="checkbox" class="check" id="t0">
+                <label for="t0"><span class="task-text">Cost the annual option for Kettle & Co</span><span class="task-when is-due">Today, 4:00pm</span></label>
+              </li>
+              <li class="task">
+                <input type="checkbox" class="check" id="t1">
+                <label for="t1"><span class="task-text">Chase legal on Palisade redlines</span><span class="task-when is-due">Today, 5:30pm</span></label>
+              </li>
+              <li class="task">
+                <input type="checkbox" class="check" id="t2">
+                <label for="t2"><span class="task-text">Discovery call — Fenwick Partners</span><span class="task-when">Tomorrow, 10:00am</span></label>
+              </li>
+              <li class="task">
+                <input type="checkbox" class="check" id="t3">
+                <label for="t3"><span class="task-text">Send case study to Ashgrove</span><span class="task-when">Thursday</span></label>
+              </li>
+              <li class="task">
+                <input type="checkbox" class="check" id="t4">
+                <label for="t4"><span class="task-text">Quarterly review with Northwind</span><span class="task-when">Friday, 2:00pm</span></label>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<dialog class="drawer drawer-start" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="navDrawerLabel">Cadence</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+      <a class="drawer-link is-active" href="index.html" aria-current="page"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Overview</span></a>
+      <a class="drawer-link" href="pipeline.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2.5" width="3.5" height="11" rx="1"/><rect x="6.5" y="2.5" width="3.5" height="7" rx="1"/><rect x="11" y="2.5" width="3" height="9" rx="1"/></svg><span>Pipeline</span></a>
+      <a class="drawer-link" href="contacts.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6" cy="5.5" r="2.5"/><path d="M1.5 14a4.5 4.5 0 0 1 9 0"/><path d="M11 3.2a2.5 2.5 0 0 1 0 4.6M12 14a4.5 4.5 0 0 0-1.6-3.4"/></svg><span>Contacts</span></a>
+      <a class="drawer-link" href="reports.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 13.5V9M6 13.5V4M10 13.5V7M14 13.5V2.5"/></svg><span>Reports</span></a>
+      <a class="drawer-link" href="settings.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.6M8 12.9v1.6M14.5 8h-1.6M3.1 8H1.5m10.1-4.6-1.1 1.1M5.5 10.5l-1.1 1.1m0-8.2 1.1 1.1m5 5 1.1 1.1"/></svg><span>Settings</span></a>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacts — Cadence Bootstrap 6 CRM Dashboard</title>
+<meta name="description" content="A filterable CRM contacts table that stacks properly on small screens.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="app">
+
+  <aside class="side" id="side">
+    <a class="side-brand" href="index.html">
+      <span class="side-mark" aria-hidden="true">C</span><span>Cadence</span>
+    </a>
+    <p class="side-label mb-0">Sell</p>
+      <a class="side-link" href="index.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Overview</span></a>
+      <a class="side-link" href="pipeline.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2.5" width="3.5" height="11" rx="1"/><rect x="6.5" y="2.5" width="3.5" height="7" rx="1"/><rect x="11" y="2.5" width="3" height="9" rx="1"/></svg><span>Pipeline</span></a>
+      <a class="side-link is-active" href="contacts.html" aria-current="page"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6" cy="5.5" r="2.5"/><path d="M1.5 14a4.5 4.5 0 0 1 9 0"/><path d="M11 3.2a2.5 2.5 0 0 1 0 4.6M12 14a4.5 4.5 0 0 0-1.6-3.4"/></svg><span>Contacts</span></a>
+      <a class="side-link" href="reports.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 13.5V9M6 13.5V4M10 13.5V7M14 13.5V2.5"/></svg><span>Reports</span></a>
+      <a class="side-link" href="settings.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.6M8 12.9v1.6M14.5 8h-1.6M3.1 8H1.5m10.1-4.6-1.1 1.1M5.5 10.5l-1.1 1.1m0-8.2 1.1 1.1m5 5 1.1 1.1"/></svg><span>Settings</span></a>
+    <div class="side-foot">
+      <span class="avatar avatar-sm"><span class="avatar-initials">DA</span></span>
+      <span class="side-who"><strong>Dilan Aksoy</strong><small>Account executive</small></span>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="btn-icon lg:d-none" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <button class="btn-icon d-none lg:d-inline-flex" type="button" id="railToggle" aria-label="Collapse sidebar" aria-pressed="false">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M6.5 3v10"/></svg>
+      </button>
+
+      <div class="form-control form-adorn search-field d-none md:d-flex">
+        <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14" stroke-linecap="round"/></svg></div>
+        <input type="search" class="form-ghost" placeholder="Search deals, companies, people…" aria-label="Search">
+      </div>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+        <button class="btn-icon" type="button" aria-label="Notifications"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6.5a4 4 0 0 1 8 0c0 3 1 4 1 4H3s1-1 1-4Z"/><path d="M6.5 13a1.6 1.6 0 0 0 3 0"/></svg></button>
+        <button class="btn-icon p-0" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Account menu">
+          <span class="avatar avatar-sm"><span class="avatar-initials">DA</span></span>
+        </button>
+        <div class="menu">
+          <a class="menu-item" href="settings.html">Settings</a>
+          <a class="menu-item" href="reports.html">My reports</a>
+          <hr class="menu-divider">
+          <a class="menu-item" href="index.html">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <div class="page-head">
+        <div>
+          <h1 class="page-title">Contacts</h1>
+          <p class="page-sub mb-0">12 people across 12 companies.</p>
+        </div>
+        <div class="page-actions"></div>
+      </div>
+
+      <section class="card">
+        <header class="card-head">
+          <div class="form-control form-adorn" style="max-width:20rem">
+            <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14" stroke-linecap="round"/></svg></div>
+            <input type="search" class="form-ghost" placeholder="Filter contacts…" aria-label="Filter contacts" data-filter="#contactTable">
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn-outline theme-secondary btn-sm" type="button">Export</button>
+            <button class="btn-solid theme-primary btn-sm" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3.5v9M3.5 8h9"/></svg> Contact</button>
+          </div>
+        </header>
+        <div class="table-responsive">
+          <table class="table lg:table-stacked align-middle" id="contactTable">
+            <thead>
+              <tr><th scope="col">Name</th><th scope="col">Company</th><th scope="col">Email</th><th scope="col">Phone</th><th scope="col">Status</th><th scope="col">Owner</th></tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">PR</span></span>
+                  <span><strong>Priya Raman</strong><small class="fg-3 d-block">Head of Ops</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Northwind Logistics</td>
+              <td data-cell="Email"><a href="mailto:priya@northwind.example">priya@northwind.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 161 496 0118</td>
+              <td data-cell="Status"><span class="chip chip-customer">Customer</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Dilan Aksoy"><span class="avatar-initials">DA</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">TB</span></span>
+                  <span><strong>Tom Beckwith</strong><small class="fg-3 d-block">CTO</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Palisade Health</td>
+              <td data-cell="Email"><a href="mailto:tom@palisade.example">tom@palisade.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 20 7946 0332</td>
+              <td data-cell="Status"><span class="chip chip-opportunity">Opportunity</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Rae Whitcombe"><span class="avatar-initials">RW</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">RW</span></span>
+                  <span><strong>Rae Whitcombe</strong><small class="fg-3 d-block">Founder</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Kettle & Co</td>
+              <td data-cell="Email"><a href="mailto:rae@kettleco.example">rae@kettleco.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 113 496 0771</td>
+              <td data-cell="Status"><span class="chip chip-opportunity">Opportunity</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Dilan Aksoy"><span class="avatar-initials">DA</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">JM</span></span>
+                  <span><strong>Josephine Marr</strong><small class="fg-3 d-block">Procurement</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Brightsea Marine</td>
+              <td data-cell="Email"><a href="mailto:j.marr@brightsea.example">j.marr@brightsea.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 1752 496 220</td>
+              <td data-cell="Status"><span class="chip chip-opportunity">Opportunity</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Josephine Marr"><span class="avatar-initials">JM</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">WT</span></span>
+                  <span><strong>Wes Tremayne</strong><small class="fg-3 d-block">Product Lead</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Ordinal Systems</td>
+              <td data-cell="Email"><a href="mailto:wes@ordinal.example">wes@ordinal.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 131 496 0904</td>
+              <td data-cell="Status"><span class="chip chip-opportunity">Opportunity</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Rae Whitcombe"><span class="avatar-initials">RW</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">NO</span></span>
+                  <span><strong>Nadia Osei</strong><small class="fg-3 d-block">Design Lead</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Meridian Labs</td>
+              <td data-cell="Email"><a href="mailto:nadia@meridianlabs.example">nadia@meridianlabs.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 20 7946 0518</td>
+              <td data-cell="Status"><span class="chip chip-lead">Lead</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Dilan Aksoy"><span class="avatar-initials">DA</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">IK</span></span>
+                  <span><strong>Ivan Kazlouski</strong><small class="fg-3 d-block">Owner</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Halden Brewing</td>
+              <td data-cell="Email"><a href="mailto:ivan@halden.example">ivan@halden.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 191 496 0663</td>
+              <td data-cell="Status"><span class="chip chip-lead">Lead</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Josephine Marr"><span class="avatar-initials">JM</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">MH</span></span>
+                  <span><strong>Marit Halvorsen</strong><small class="fg-3 d-block">Finance Director</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Fenwick Partners</td>
+              <td data-cell="Email"><a href="mailto:marit@fenwick.example">marit@fenwick.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 20 7946 0140</td>
+              <td data-cell="Status"><span class="chip chip-opportunity">Opportunity</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Rae Whitcombe"><span class="avatar-initials">RW</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">DA</span></span>
+                  <span><strong>Dilan Aksoy</strong><small class="fg-3 d-block">Studio Manager</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Cobalt Interiors</td>
+              <td data-cell="Email"><a href="mailto:dilan@cobalt.example">dilan@cobalt.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 161 496 0287</td>
+              <td data-cell="Status"><span class="chip chip-lead">Lead</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Josephine Marr"><span class="avatar-initials">JM</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">AO</span></span>
+                  <span><strong>Anna Oyelaran</strong><small class="fg-3 d-block">Business Manager</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Ashgrove Schools</td>
+              <td data-cell="Email"><a href="mailto:a.oyelaran@ashgrove.example">a.oyelaran@ashgrove.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 121 496 0455</td>
+              <td data-cell="Status"><span class="chip chip-lead">Lead</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Dilan Aksoy"><span class="avatar-initials">DA</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">SM</span></span>
+                  <span><strong>Sofia Marchetti</strong><small class="fg-3 d-block">Buyer</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Trent & Vale</td>
+              <td data-cell="Email"><a href="mailto:sofia@trentvale.example">sofia@trentvale.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 115 496 0910</td>
+              <td data-cell="Status"><span class="chip chip-lead">Lead</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Rae Whitcombe"><span class="avatar-initials">RW</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="cell-who">
+                  <span class="avatar avatar-sm"><span class="avatar-initials">GF</span></span>
+                  <span><strong>Gregor Fyfe</strong><small class="fg-3 d-block">Head of Retail</small></span>
+                </span>
+              </th>
+              <td data-cell="Company">Latimer Retail</td>
+              <td data-cell="Email"><a href="mailto:gregor@latimer.example">gregor@latimer.example</a></td>
+              <td data-cell="Phone" class="tabular">+44 141 496 0362</td>
+              <td data-cell="Status"><span class="chip chip-lead">Lead</span></td>
+              <td data-cell="Owner"><span class="avatar avatar-xs" title="Josephine Marr"><span class="avatar-initials">JM</span></span></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="card-foot">
+          <p class="fs-sm fg-3 mb-0"><span data-filter-count>12</span> of 12 contacts</p>
+        </footer>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<dialog class="drawer drawer-start" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="navDrawerLabel">Cadence</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+      <a class="drawer-link" href="index.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Overview</span></a>
+      <a class="drawer-link" href="pipeline.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2.5" width="3.5" height="11" rx="1"/><rect x="6.5" y="2.5" width="3.5" height="7" rx="1"/><rect x="11" y="2.5" width="3" height="9" rx="1"/></svg><span>Pipeline</span></a>
+      <a class="drawer-link is-active" href="contacts.html" aria-current="page"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6" cy="5.5" r="2.5"/><path d="M1.5 14a4.5 4.5 0 0 1 9 0"/><path d="M11 3.2a2.5 2.5 0 0 1 0 4.6M12 14a4.5 4.5 0 0 0-1.6-3.4"/></svg><span>Contacts</span></a>
+      <a class="drawer-link" href="reports.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 13.5V9M6 13.5V4M10 13.5V7M14 13.5V2.5"/></svg><span>Reports</span></a>
+      <a class="drawer-link" href="settings.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.6M8 12.9v1.6M14.5 8h-1.6M3.1 8H1.5m10.1-4.6-1.1 1.1M5.5 10.5l-1.1 1.1m0-8.2 1.1 1.1m5 5 1.1 1.1"/></svg><span>Settings</span></a>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

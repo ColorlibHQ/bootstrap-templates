@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settings — Cadence Bootstrap 6 CRM Dashboard</title>
+<meta name="description" content="Settings for a Bootstrap 6 CRM dashboard: editable pipeline stages, profile and notification switches.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="app">
+
+  <aside class="side" id="side">
+    <a class="side-brand" href="index.html">
+      <span class="side-mark" aria-hidden="true">C</span><span>Cadence</span>
+    </a>
+    <p class="side-label mb-0">Sell</p>
+      <a class="side-link" href="index.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Overview</span></a>
+      <a class="side-link" href="pipeline.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2.5" width="3.5" height="11" rx="1"/><rect x="6.5" y="2.5" width="3.5" height="7" rx="1"/><rect x="11" y="2.5" width="3" height="9" rx="1"/></svg><span>Pipeline</span></a>
+      <a class="side-link" href="contacts.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6" cy="5.5" r="2.5"/><path d="M1.5 14a4.5 4.5 0 0 1 9 0"/><path d="M11 3.2a2.5 2.5 0 0 1 0 4.6M12 14a4.5 4.5 0 0 0-1.6-3.4"/></svg><span>Contacts</span></a>
+      <a class="side-link" href="reports.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 13.5V9M6 13.5V4M10 13.5V7M14 13.5V2.5"/></svg><span>Reports</span></a>
+      <a class="side-link is-active" href="settings.html" aria-current="page"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.6M8 12.9v1.6M14.5 8h-1.6M3.1 8H1.5m10.1-4.6-1.1 1.1M5.5 10.5l-1.1 1.1m0-8.2 1.1 1.1m5 5 1.1 1.1"/></svg><span>Settings</span></a>
+    <div class="side-foot">
+      <span class="avatar avatar-sm"><span class="avatar-initials">DA</span></span>
+      <span class="side-who"><strong>Dilan Aksoy</strong><small>Account executive</small></span>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="btn-icon lg:d-none" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <button class="btn-icon d-none lg:d-inline-flex" type="button" id="railToggle" aria-label="Collapse sidebar" aria-pressed="false">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M6.5 3v10"/></svg>
+      </button>
+
+      <div class="form-control form-adorn search-field d-none md:d-flex">
+        <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14" stroke-linecap="round"/></svg></div>
+        <input type="search" class="form-ghost" placeholder="Search deals, companies, people…" aria-label="Search">
+      </div>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+        <button class="btn-icon" type="button" aria-label="Notifications"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6.5a4 4 0 0 1 8 0c0 3 1 4 1 4H3s1-1 1-4Z"/><path d="M6.5 13a1.6 1.6 0 0 0 3 0"/></svg></button>
+        <button class="btn-icon p-0" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Account menu">
+          <span class="avatar avatar-sm"><span class="avatar-initials">DA</span></span>
+        </button>
+        <div class="menu">
+          <a class="menu-item" href="settings.html">Settings</a>
+          <a class="menu-item" href="reports.html">My reports</a>
+          <hr class="menu-divider">
+          <a class="menu-item" href="index.html">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <div class="page-head">
+        <div>
+          <h1 class="page-title">Settings</h1>
+          <p class="page-sub mb-0">Stages, your details, and what you get told about.</p>
+        </div>
+        <div class="page-actions"></div>
+      </div>
+
+      <div class="grid-2">
+        <section class="card">
+          <header class="card-head"><div><h2 class="card-title">Pipeline stages</h2><p class="card-sub mb-0">Probability drives the weighted forecast</p></div></header>
+          <div class="card-body">
+            <form data-demo-form novalidate>
+              <div class="stage-row">
+                <span class="stage-grip" aria-hidden="true">⠿</span>
+                <input class="form-control" type="text" value="Lead" aria-label="Stage 1 name">
+                <div class="form-adorn form-control" style="max-width:7rem">
+                  <input type="number" class="form-ghost tabular" value="10" min="0" max="100" aria-label="Lead win probability">
+                  <span class="form-adorn-text">%</span>
+                </div>
+              </div>
+              <div class="stage-row">
+                <span class="stage-grip" aria-hidden="true">⠿</span>
+                <input class="form-control" type="text" value="Qualified" aria-label="Stage 2 name">
+                <div class="form-adorn form-control" style="max-width:7rem">
+                  <input type="number" class="form-ghost tabular" value="25" min="0" max="100" aria-label="Qualified win probability">
+                  <span class="form-adorn-text">%</span>
+                </div>
+              </div>
+              <div class="stage-row">
+                <span class="stage-grip" aria-hidden="true">⠿</span>
+                <input class="form-control" type="text" value="Proposal" aria-label="Stage 3 name">
+                <div class="form-adorn form-control" style="max-width:7rem">
+                  <input type="number" class="form-ghost tabular" value="50" min="0" max="100" aria-label="Proposal win probability">
+                  <span class="form-adorn-text">%</span>
+                </div>
+              </div>
+              <div class="stage-row">
+                <span class="stage-grip" aria-hidden="true">⠿</span>
+                <input class="form-control" type="text" value="Negotiation" aria-label="Stage 4 name">
+                <div class="form-adorn form-control" style="max-width:7rem">
+                  <input type="number" class="form-ghost tabular" value="75" min="0" max="100" aria-label="Negotiation win probability">
+                  <span class="form-adorn-text">%</span>
+                </div>
+              </div>
+              <div class="stage-row">
+                <span class="stage-grip" aria-hidden="true">⠿</span>
+                <input class="form-control" type="text" value="Closed won" aria-label="Stage 5 name">
+                <div class="form-adorn form-control" style="max-width:7rem">
+                  <input type="number" class="form-ghost tabular" value="100" min="0" max="100" aria-label="Closed won win probability">
+                  <span class="form-adorn-text">%</span>
+                </div>
+              </div>
+              <button class="btn-solid theme-primary mt-3" type="submit" data-done-text="Saved ✓">Save stages</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="card">
+          <header class="card-head"><div><h2 class="card-title">Your details</h2><p class="card-sub mb-0">Visible to your team</p></div></header>
+          <div class="card-body">
+            <form data-demo-form novalidate>
+              <div class="row g-3">
+                <div class="md:col-6">
+                  <label class="form-label" for="sName">Full name</label>
+                  <input class="form-control" type="text" id="sName" value="Dilan Aksoy" required>
+                </div>
+                <div class="md:col-6">
+                  <label class="form-label" for="sEmail">Email</label>
+                  <input class="form-control" type="email" id="sEmail" value="dilan@cadence.example" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="sRole">Role</label>
+                  <select class="form-control form-control-caret" id="sRole">
+                    <option selected>Account executive</option>
+                    <option>Sales manager</option>
+                    <option>Administrator</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="sSig">Email signature</label>
+                  <textarea class="form-control" id="sSig" rows="3">Dilan Aksoy — Cadence
++44 161 496 0100</textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn-solid theme-primary" type="submit" data-done-text="Saved ✓">Save details</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <section class="card">
+        <header class="card-head"><div><h2 class="card-title">Notifications</h2><p class="card-sub mb-0">What reaches you, and how</p></div></header>
+        <div class="card-body">
+          <div class="switch-row">
+            <div><p class="mb-0 fw-semibold">A deal stalls</p><p class="fg-3 fs-sm mb-0">When a deal passes the expected age for its stage.</p></div>
+            <div class="switch"><input type="checkbox" role="switch" switch id="n0" checked aria-label="A deal stalls"></div>
+          </div>
+          <div class="switch-row">
+            <div><p class="mb-0 fw-semibold">Stage changes on my accounts</p><p class="fg-3 fs-sm mb-0">Someone else moves one of your deals.</p></div>
+            <div class="switch"><input type="checkbox" role="switch" switch id="n1" checked aria-label="Stage changes on my accounts"></div>
+          </div>
+          <div class="switch-row">
+            <div><p class="mb-0 fw-semibold">Weekly forecast summary</p><p class="fg-3 fs-sm mb-0">Monday morning, weighted pipeline and what moved.</p></div>
+            <div class="switch"><input type="checkbox" role="switch" switch id="n2" checked aria-label="Weekly forecast summary"></div>
+          </div>
+          <div class="switch-row">
+            <div><p class="mb-0 fw-semibold">Mentions</p><p class="fg-3 fs-sm mb-0">Someone @s you in a note.</p></div>
+            <div class="switch"><input type="checkbox" role="switch" switch id="n3"  aria-label="Mentions"></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<dialog class="drawer drawer-start" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="navDrawerLabel">Cadence</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+      <a class="drawer-link" href="index.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Overview</span></a>
+      <a class="drawer-link" href="pipeline.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2.5" width="3.5" height="11" rx="1"/><rect x="6.5" y="2.5" width="3.5" height="7" rx="1"/><rect x="11" y="2.5" width="3" height="9" rx="1"/></svg><span>Pipeline</span></a>
+      <a class="drawer-link" href="contacts.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6" cy="5.5" r="2.5"/><path d="M1.5 14a4.5 4.5 0 0 1 9 0"/><path d="M11 3.2a2.5 2.5 0 0 1 0 4.6M12 14a4.5 4.5 0 0 0-1.6-3.4"/></svg><span>Contacts</span></a>
+      <a class="drawer-link" href="reports.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 13.5V9M6 13.5V4M10 13.5V7M14 13.5V2.5"/></svg><span>Reports</span></a>
+      <a class="drawer-link is-active" href="settings.html" aria-current="page"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.6M8 12.9v1.6M14.5 8h-1.6M3.1 8H1.5m10.1-4.6-1.1 1.1M5.5 10.5l-1.1 1.1m0-8.2 1.1 1.1m5 5 1.1 1.1"/></svg><span>Settings</span></a>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "slug": "cadence",
+  "title": "Cadence — Free Bootstrap 6 CRM Admin Dashboard Template",
+  "excerpt": "A free five-page Bootstrap 6 CRM dashboard whose pipeline board actually does the maths — move a deal and the weighted forecast recalculates from that stage's win probability.",
+  "yoastTitle": "Cadence — Free Bootstrap 6 CRM Admin Dashboard Template",
+  "yoastDesc": "Free Bootstrap 6 CRM dashboard template with a weighted pipeline board you can drag or keyboard-move, stalled-deal detection, contacts, SVG reports and settings. No chart library, no build step.",
+  "intro": "Cadence is a free, premium <strong>Bootstrap 6</strong> CRM admin dashboard template. Five pages — overview, a weighted pipeline board, contacts, reports and settings — built on a collapsing sidebar shell with full light and dark mode.",
+  "note": "Every CRM template ships a kanban board with a pipeline total printed above it that never changes, because the number is typed into the HTML. Here each stage carries a <strong>win probability</strong> and each deal a value, so the forecast is derived: move a deal and the open pipeline, the weighted forecast, the deal count and the stalled count all follow. Deals also carry how long they have sat in their current stage, and each stage its expected age — so a deal is flagged <strong>stalled</strong> against wherever it is now, not wherever it started. Deals move by drag <em>or</em> by keyboard, via the arrow buttons on each card or the left and right arrow keys when a card has focus; kanban demos almost universally ship drag-only, which makes the central feature unusable without a mouse. Charts are hand-built SVG and CSS — no chart library to rip out.",
+  "summary": "Cadence is a free, premium five-page Bootstrap 6 CRM admin dashboard. The overview carries four KPIs, a twelve-week weighted-pipeline area chart, a stage funnel, an activity feed and a task list with a live open count. The pipeline page is the centrepiece: a five-stage board where each stage declares a win probability and an expected deal age, so the header figures — open pipeline, weighted forecast, open deals, stalled — recalculate the moment a deal changes column by drag or by keyboard. Contacts is a filterable table that stacks properly on small screens; reports adds pipeline by owner and stage conversion; settings has editable stages, profile and notification switches. Collapsing sidebar remembered in localStorage, drawer navigation on phones, hand-built SVG charts, full light and dark mode, ESM-only vanilla JavaScript, no build step.",
+  "features": [
+    "Five pages — overview, pipeline board, contacts, reports, settings",
+    "Weighted forecast derived from each stage's win probability, never typed in",
+    "Drag a deal or move it with the keyboard — arrow buttons and arrow keys",
+    "Open pipeline, forecast, deal count and stalled count all recalculate live",
+    "Stalled deals judged against the expected age of the stage they are in now",
+    "Closed-won column excluded from open pipeline, as it should be",
+    "Filterable contacts table that stacks correctly on mobile",
+    "Charts hand-built in SVG and CSS — no chart library to strip out",
+    "Sidebar collapses to an icon rail, remembered between pages",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": [
+    "bootstrap-6",
+    "admin-dashboard"
+  ],
+  "images": []
+}

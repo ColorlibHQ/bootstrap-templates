@@ -1,0 +1,556 @@
+/*!
+ * Cadence — Bootstrap 6 CRM dashboard
+ *
+ * Design language: quiet instrument. Cool grey-green ground, one teal accent
+ * used only where a number needs weight, hairline borders instead of shadows.
+ *
+ * The structural idea carrying the identity is the weighted pipeline. CRM
+ * templates ship a kanban board with a total printed above it that never moves,
+ * because the number is typed into the HTML. Here each stage carries a win
+ * probability and each deal a value, so the forecast is derived — and it
+ * recalculates the moment a deal changes column, by drag or by keyboard.
+ *
+ * Charts are hand-built: inline SVG for the area, CSS for the bars. A dashboard
+ * template that drags in a chart library stops being a Bootstrap template.
+ */
+
+:root {
+  --brand: oklch(52% 0.105 178);
+  --cad-side: 15.5rem;
+  --cad-rail: 4.25rem;
+  --cad-rule: color-mix(in oklab, var(--bs-fg-body), transparent 90%);
+  --cad-warn: oklch(66% 0.15 55);
+  --cad-good: oklch(60% 0.13 155);
+}
+
+[data-bs-theme="light"] {
+  --bs-bg-body: oklch(99% 0.003 180);
+  --bs-bg-2: oklch(96.5% 0.006 180);
+}
+
+[data-bs-theme="dark"] {
+  --bs-bg-body: oklch(18% 0.008 200);
+  --bs-bg-2: oklch(21.5% 0.01 200);
+}
+
+.tabular,
+.kpi-figure,
+.deal-value,
+.bf-v,
+.funnel-value,
+.stage-prob { font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------
+   Shell
+   --------------------------------------------------------------- */
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100svh;
+}
+
+/* minmax(0, 1fr) is load-bearing: without it the board and any wide table blow
+   the grid out and the whole page scrolls sideways. */
+@media (width >= 992px) {
+  .app { grid-template-columns: var(--cad-side) minmax(0, 1fr); }
+  body.is-rail .app { grid-template-columns: var(--cad-rail) minmax(0, 1fr); }
+}
+
+.main-col { min-width: 0; }
+
+.side {
+  display: none;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.75rem;
+  background-color: var(--bs-bg-2);
+  border-right: 1px solid var(--cad-rule);
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow-y: auto;
+}
+
+@media (width >= 992px) { .side { display: flex; } }
+
+.side-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 0.5rem 1rem;
+  color: var(--bs-fg-body);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.side-mark {
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: var(--bs-radius-4);
+  background-color: var(--bs-primary-base);
+  color: var(--bs-white);
+  font-size: 0.95rem;
+  flex: none;
+}
+
+.side-label {
+  padding: 0.9rem 0.6rem 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bs-fg-3, inherit);
+  opacity: 0.75;
+}
+
+.side-link,
+.drawer-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0.6rem;
+  border-radius: var(--bs-radius-4);
+  color: var(--bs-fg-2, inherit);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.side-link:hover,
+.drawer-link:hover { background-color: color-mix(in oklab, var(--bs-fg-body), transparent 94%); }
+
+.side-link.is-active,
+.drawer-link.is-active {
+  background-color: color-mix(in oklab, var(--bs-primary-base), transparent 88%);
+  color: var(--bs-primary-fg-emphasis);
+  font-weight: 650;
+}
+
+.side-foot {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding: 0.75rem 0.5rem 0.25rem;
+  border-top: 1px solid var(--cad-rule);
+}
+
+.side-who { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.side-who strong { font-size: 0.88rem; }
+.side-who small { font-size: 0.72rem; color: var(--bs-fg-3, inherit); }
+
+/* Rail: icons only. Labels are hidden rather than removed so the accessible
+   name of every link survives the collapse. */
+body.is-rail .side-brand span:not(.side-mark),
+body.is-rail .side-link span:not(.side-mark),
+body.is-rail .side-label,
+body.is-rail .side-who {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+body.is-rail .side-link,
+body.is-rail .side-brand,
+body.is-rail .side-foot { justify-content: center; padding-inline: 0; }
+
+/* ---------------------------------------------------------------
+   Topbar + page
+   --------------------------------------------------------------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: color-mix(in oklab, var(--bs-bg-body), transparent 15%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--cad-rule);
+}
+
+.search-field { max-width: 24rem; }
+
+.page { padding: 1.25rem 1rem 3rem; }
+
+@media (width >= 768px) { .page { padding-inline: 1.75rem; } }
+
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.page-title { font-size: 1.5rem; font-weight: 650; letter-spacing: -0.025em; margin-bottom: 0.15rem; }
+.page-sub { color: var(--bs-fg-3, inherit); font-size: 0.9rem; }
+.page-actions { display: flex; gap: 0.5rem; }
+.page-actions .btn-solid,
+.page-actions .btn-outline { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+/* ---------------------------------------------------------------
+   Cards + KPIs
+   --------------------------------------------------------------- */
+
+.card {
+  border: 1px solid var(--cad-rule);
+  border-radius: var(--bs-radius-6);
+  background-color: var(--bs-bg-body);
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+.card-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--cad-rule);
+}
+
+.card-title { font-size: 1rem; font-weight: 650; margin-bottom: 0.1rem; }
+.card-sub { font-size: 0.8rem; color: var(--bs-fg-3, inherit); }
+.card-body { padding: 1.25rem; }
+.card-foot { padding: 0.85rem 1.25rem; border-top: 1px solid var(--cad-rule); background-color: var(--bs-bg-2); }
+
+.grid-2 { display: grid; gap: 1.25rem; }
+@media (width >= 992px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+.kpi-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  margin-bottom: 1.25rem;
+}
+
+.kpi {
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--cad-rule);
+  border-radius: var(--bs-radius-6);
+  background-color: var(--bs-bg-body);
+}
+
+.kpi-label { font-size: 0.78rem; font-weight: 600; color: var(--bs-fg-3, inherit); }
+.kpi-figure { font-size: 1.75rem; font-weight: 650; letter-spacing: -0.03em; line-height: 1.1; }
+.kpi-delta { font-size: 0.78rem; font-weight: 600; }
+.kpi-delta.is-up { color: var(--cad-good); }
+.kpi-delta.is-down { color: var(--cad-warn); }
+.kpi-delta .fg-3 { font-weight: 400; }
+
+/* ---------------------------------------------------------------
+   Charts
+   --------------------------------------------------------------- */
+
+.chart { display: block; width: 100%; height: 11rem; }
+
+.chart-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  color: var(--bs-fg-3, inherit);
+}
+
+.funnel { display: grid; gap: 0.85rem; }
+
+.funnel-row {
+  display: grid;
+  grid-template-columns: 9rem 1fr 4.5rem 3rem;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+@media (width < 768px) {
+  .funnel-row { grid-template-columns: 1fr auto; }
+  .funnel-track { grid-column: 1 / -1; order: 3; }
+  .funnel-prob { display: none; }
+}
+
+.funnel-track {
+  height: 0.55rem;
+  border-radius: 100px;
+  background-color: color-mix(in oklab, var(--bs-fg-body), transparent 92%);
+  overflow: hidden;
+}
+
+.funnel-bar {
+  width: var(--w, 0%);
+  height: 100%;
+  border-radius: inherit;
+  background-color: var(--bs-primary-base);
+}
+
+.funnel-label { font-weight: 600; }
+.funnel-value { text-align: right; font-weight: 650; }
+.funnel-prob { text-align: right; font-size: 0.78rem; }
+
+/* ---------------------------------------------------------------
+   Board
+   --------------------------------------------------------------- */
+
+.board-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--cad-rule);
+  border-radius: var(--bs-radius-6);
+  background-color: var(--bs-bg-2);
+}
+
+.board-figs { display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; }
+
+.bf-k { font-size: 0.72rem; font-weight: 650; text-transform: uppercase; letter-spacing: 0.07em; color: var(--bs-fg-3, inherit); }
+.bf-v { font-size: 1.35rem; font-weight: 650; letter-spacing: -0.025em; line-height: 1.2; }
+.bf-v.is-brand { color: var(--bs-primary-fg-emphasis); }
+.bf-v.is-warn { color: var(--cad-warn); }
+
+.board-hint { font-size: 0.82rem; color: var(--bs-fg-3, inherit); max-width: 26rem; }
+
+/* Retint through the component's own variables, not raw properties. v6's kbd is
+   light text on a dark ground (--bs-kbd-color: var(--bs-bg-body)); setting only
+   background-color here left the text the same colour as its new background and
+   the keys rendered as empty boxes. */
+.board-hint kbd {
+  --bs-kbd-color: var(--bs-fg-body);
+  --bs-kbd-bg: var(--bs-bg-body);
+  border: 1px solid var(--cad-rule);
+  border-bottom-width: 2px;
+}
+
+/* The board scrolls sideways inside itself. The page never does. */
+.board {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(15.5rem, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  scroll-snap-type: x proximity;
+}
+
+.col-stage {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--cad-rule);
+  border-radius: var(--bs-radius-6);
+  background-color: var(--bs-bg-2);
+  min-width: 0;
+}
+
+.col-stage.is-closed { background-color: color-mix(in oklab, var(--cad-good), transparent 94%); }
+
+.stage-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.85rem 0.9rem;
+  border-bottom: 1px solid var(--cad-rule);
+}
+
+.stage-name { font-size: 0.9rem; font-weight: 650; margin-bottom: 0.1rem; }
+.stage-meta { font-size: 0.76rem; color: var(--bs-fg-3, inherit); }
+
+.stage-prob {
+  padding: 0.1rem 0.45rem;
+  border-radius: 100px;
+  background-color: color-mix(in oklab, var(--bs-primary-base), transparent 88%);
+  color: var(--bs-primary-fg-emphasis);
+  font-size: 0.72rem;
+  font-weight: 700;
+  flex: none;
+}
+
+.stage-drop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  flex: 1;
+  min-height: 5rem;
+  border-radius: 0 0 var(--bs-radius-6) var(--bs-radius-6);
+  transition: background-color 0.15s ease;
+}
+
+.stage-drop.is-over {
+  background-color: color-mix(in oklab, var(--bs-primary-base), transparent 88%);
+  outline: 2px dashed color-mix(in oklab, var(--bs-primary-base), transparent 45%);
+  outline-offset: -4px;
+}
+
+.deal {
+  padding: 0.75rem 0.8rem;
+  border: 1px solid var(--cad-rule);
+  border-radius: var(--bs-radius-5);
+  background-color: var(--bs-bg-body);
+  cursor: grab;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.deal:hover { border-color: color-mix(in oklab, var(--bs-primary-base), transparent 60%); }
+
+.deal:focus-visible {
+  outline: 2px solid var(--bs-primary-base);
+  outline-offset: 2px;
+  border-color: transparent;
+}
+
+.deal.is-dragging { opacity: 0.4; cursor: grabbing; }
+
+.deal-top { display: flex; align-items: start; justify-content: space-between; gap: 0.5rem; }
+.deal-co { font-size: 0.88rem; font-weight: 650; margin-bottom: 0.2rem; }
+.deal-value { font-size: 1.05rem; font-weight: 700; letter-spacing: -0.02em; }
+.deal-contact { font-size: 0.78rem; color: var(--bs-fg-3, inherit); }
+
+.deal-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--cad-rule);
+}
+
+.deal-age { font-size: 0.72rem; color: var(--bs-fg-3, inherit); }
+
+.deal-age.is-stalled {
+  padding: 0.05rem 0.4rem;
+  border-radius: 100px;
+  background-color: color-mix(in oklab, var(--cad-warn), transparent 85%);
+  color: color-mix(in oklab, var(--cad-warn), black 25%);
+  font-weight: 650;
+}
+
+[data-bs-theme="dark"] .deal-age.is-stalled { color: var(--cad-warn); }
+
+.deal-move { display: flex; gap: 0.2rem; }
+
+.deal-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--cad-rule);
+  border-radius: var(--bs-radius-3, 5px);
+  background-color: transparent;
+  color: var(--bs-fg-2, inherit);
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.deal-btn:hover {
+  background-color: var(--bs-primary-base);
+  border-color: transparent;
+  color: var(--bs-white);
+}
+
+/* ---------------------------------------------------------------
+   Activity + tasks
+   --------------------------------------------------------------- */
+
+.act-list, .task-list { list-style: none; padding-left: 0; margin-bottom: 0; }
+
+.act { display: flex; gap: 0.85rem; padding-block: 0.85rem; border-bottom: 1px solid var(--cad-rule); }
+.act:last-child { border-bottom: 0; padding-bottom: 0; }
+.act:first-child { padding-top: 0; }
+
+.act-icon {
+  display: grid;
+  place-items: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 50%;
+  flex: none;
+  background-color: color-mix(in oklab, var(--bs-fg-body), transparent 93%);
+  color: var(--bs-fg-2, inherit);
+}
+
+.act-icon.act-won { background-color: color-mix(in oklab, var(--cad-good), transparent 85%); color: var(--cad-good); }
+.act-icon.act-stage { background-color: color-mix(in oklab, var(--bs-primary-base), transparent 87%); color: var(--bs-primary-fg-emphasis); }
+
+.act-head { font-size: 0.88rem; }
+.act-text { font-size: 0.85rem; color: var(--bs-fg-2, inherit); }
+.act-when { font-size: 0.74rem; color: var(--bs-fg-3, inherit); }
+
+.task { display: flex; align-items: center; gap: 0.7rem; padding-block: 0.6rem; border-bottom: 1px solid var(--cad-rule); }
+.task:last-child { border-bottom: 0; }
+
+.task label {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+
+.task:has(:checked) .task-text { text-decoration: line-through; opacity: 0.5; }
+
+.task-when { font-size: 0.76rem; color: var(--bs-fg-3, inherit); white-space: nowrap; }
+.task-when.is-due { color: var(--cad-warn); font-weight: 650; }
+
+/* ---------------------------------------------------------------
+   Table bits
+   --------------------------------------------------------------- */
+
+.cell-who { display: flex; align-items: center; gap: 0.6rem; }
+
+.chip {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 100px;
+  background-color: color-mix(in oklab, var(--bs-fg-body), transparent 92%);
+  font-size: 0.72rem;
+  font-weight: 650;
+}
+
+.chip-customer { background-color: color-mix(in oklab, var(--cad-good), transparent 85%); color: color-mix(in oklab, var(--cad-good), black 20%); }
+.chip-opportunity { background-color: color-mix(in oklab, var(--bs-primary-base), transparent 87%); color: var(--bs-primary-fg-emphasis); }
+.chip-lead { background-color: color-mix(in oklab, var(--cad-warn), transparent 87%); color: color-mix(in oklab, var(--cad-warn), black 25%); }
+
+[data-bs-theme="dark"] .chip-lead { color: var(--cad-warn); }
+
+[data-bs-theme="dark"] .chip-customer { color: var(--cad-good); }
+
+/* ---------------------------------------------------------------
+   Settings
+   --------------------------------------------------------------- */
+
+.stage-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+.stage-grip { color: var(--bs-fg-3, inherit); cursor: grab; flex: none; }
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 0.9rem;
+  border-bottom: 1px solid var(--cad-rule);
+}
+
+.switch-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.switch-row:first-child { padding-top: 0; }

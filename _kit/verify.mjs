@@ -74,12 +74,15 @@ for (const page of pages) {
   const real = errs.filter((e) => !e.includes('more than one instance'))
 
   const gap = await p.evaluate(() => {
-    // `querySelector('.site-footer, footer')` returns whichever matches FIRST in
-    // document order — so a perfectly correct <footer> inside a <blockquote>
-    // citation wins over the real page footer and the gap is measured against
-    // the middle of the page. Prefer the explicit class, then the LAST <footer>.
+    // `.site-footer` first, then the last <footer> that is genuinely page-level.
+    // Both fallbacks matter: `querySelector('.site-footer, footer')` returns
+    // whichever matches first in DOCUMENT ORDER, and a semantically correct
+    // <footer> inside a blockquote citation or a dashboard card is not the
+    // bottom of the page — measuring from one reports the entire rest of the
+    // document as a trailing gap.
     const f = document.querySelector('.site-footer')
-      ?? [...document.querySelectorAll('footer')].pop()
+      ?? [...document.querySelectorAll('footer')]
+           .filter((el) => !el.closest('article, section, aside, blockquote, table, .card')).pop()
     if (!f) return 0
     // scrollHeight floors at the viewport height, so a page shorter than the
     // window always looks like it has a trailing gap. Only a page that actually

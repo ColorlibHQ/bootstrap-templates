@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pipeline — Cadence Bootstrap 6 CRM Dashboard</title>
+<meta name="description" content="A weighted CRM pipeline board: drag or keyboard-move a deal and the forecast recalculates from each stage's win probability.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<div class="app">
+
+  <aside class="side" id="side">
+    <a class="side-brand" href="index.html">
+      <span class="side-mark" aria-hidden="true">C</span><span>Cadence</span>
+    </a>
+    <p class="side-label mb-0">Sell</p>
+      <a class="side-link" href="index.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Overview</span></a>
+      <a class="side-link is-active" href="pipeline.html" aria-current="page"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2.5" width="3.5" height="11" rx="1"/><rect x="6.5" y="2.5" width="3.5" height="7" rx="1"/><rect x="11" y="2.5" width="3" height="9" rx="1"/></svg><span>Pipeline</span></a>
+      <a class="side-link" href="contacts.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6" cy="5.5" r="2.5"/><path d="M1.5 14a4.5 4.5 0 0 1 9 0"/><path d="M11 3.2a2.5 2.5 0 0 1 0 4.6M12 14a4.5 4.5 0 0 0-1.6-3.4"/></svg><span>Contacts</span></a>
+      <a class="side-link" href="reports.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 13.5V9M6 13.5V4M10 13.5V7M14 13.5V2.5"/></svg><span>Reports</span></a>
+      <a class="side-link" href="settings.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.6M8 12.9v1.6M14.5 8h-1.6M3.1 8H1.5m10.1-4.6-1.1 1.1M5.5 10.5l-1.1 1.1m0-8.2 1.1 1.1m5 5 1.1 1.1"/></svg><span>Settings</span></a>
+    <div class="side-foot">
+      <span class="avatar avatar-sm"><span class="avatar-initials">DA</span></span>
+      <span class="side-who"><strong>Dilan Aksoy</strong><small>Account executive</small></span>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="btn-icon lg:d-none" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <button class="btn-icon d-none lg:d-inline-flex" type="button" id="railToggle" aria-label="Collapse sidebar" aria-pressed="false">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M6.5 3v10"/></svg>
+      </button>
+
+      <div class="form-control form-adorn search-field d-none md:d-flex">
+        <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14" stroke-linecap="round"/></svg></div>
+        <input type="search" class="form-ghost" placeholder="Search deals, companies, people…" aria-label="Search">
+      </div>
+
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+        <button class="btn-icon" type="button" aria-label="Notifications"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6.5a4 4 0 0 1 8 0c0 3 1 4 1 4H3s1-1 1-4Z"/><path d="M6.5 13a1.6 1.6 0 0 0 3 0"/></svg></button>
+        <button class="btn-icon p-0" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Account menu">
+          <span class="avatar avatar-sm"><span class="avatar-initials">DA</span></span>
+        </button>
+        <div class="menu">
+          <a class="menu-item" href="settings.html">Settings</a>
+          <a class="menu-item" href="reports.html">My reports</a>
+          <hr class="menu-divider">
+          <a class="menu-item" href="index.html">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <div class="page-head">
+        <div>
+          <h1 class="page-title">Pipeline</h1>
+          <p class="page-sub mb-0">Five stages, weighted by the odds of each one closing.</p>
+        </div>
+        <div class="page-actions"><button class="btn-solid theme-primary" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3.5v9M3.5 8h9"/></svg> New deal</button></div>
+      </div>
+
+      <div class="board-bar">
+        <div class="board-figs">
+          <div><p class="bf-k mb-0">Open pipeline</p><p class="bf-v mb-0" data-board-total>—</p></div>
+          <div><p class="bf-k mb-0">Weighted forecast</p><p class="bf-v is-brand mb-0" data-board-weighted>—</p></div>
+          <div><p class="bf-k mb-0">Open deals</p><p class="bf-v mb-0" data-board-count>—</p></div>
+          <div><p class="bf-k mb-0">Stalled</p><p class="bf-v is-warn mb-0" data-board-stalled>—</p></div>
+        </div>
+        <p class="board-hint mb-0">
+          Drag a deal between stages, or focus one and use <kbd>&larr;</kbd> <kbd>&rarr;</kbd>.
+          Every figure above recalculates as it moves.
+        </p>
+      </div>
+
+      <div class="board" data-board>
+      <section class="col-stage" data-stage="lead" data-prob="10" data-expected="14">
+        <header class="stage-head">
+          <div>
+            <h2 class="stage-name">Lead</h2>
+            <p class="stage-meta mb-0"><span data-stage-count>0</span> deals &middot; <span data-stage-sum>—</span></p>
+          </div>
+          <span class="stage-prob" title="Win probability applied to this stage">10%</span>
+        </header>
+        <div class="stage-drop" data-drop>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d8" data-value="21000" data-days="2" aria-label="Cobalt Interiors, £21,000">
+            <div class="deal-top">
+              <h3 class="deal-co">Cobalt Interiors</h3>
+              <span class="avatar avatar-xs" title="Josephine Marr"><span class="avatar-initials">JM</span></span>
+            </div>
+            <p class="deal-value mb-2">£21,000</p>
+            <p class="deal-contact mb-0">Dilan Aksoy</p>
+            <div class="deal-foot">
+              <span class="deal-age">2d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Cobalt Interiors back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Cobalt Interiors forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d9" data-value="39500" data-days="17" aria-label="Ashgrove Schools, £39,500">
+            <div class="deal-top">
+              <h3 class="deal-co">Ashgrove Schools</h3>
+              <span class="avatar avatar-xs" title="Dilan Aksoy"><span class="avatar-initials">DA</span></span>
+            </div>
+            <p class="deal-value mb-2">£39,500</p>
+            <p class="deal-contact mb-0">Anna Oyelaran</p>
+            <div class="deal-foot">
+              <span class="deal-age is-stalled">17d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Ashgrove Schools back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Ashgrove Schools forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d10" data-value="8400" data-days="1" aria-label="Trent & Vale, £8,400">
+            <div class="deal-top">
+              <h3 class="deal-co">Trent & Vale</h3>
+              <span class="avatar avatar-xs" title="Rae Whitcombe"><span class="avatar-initials">RW</span></span>
+            </div>
+            <p class="deal-value mb-2">£8,400</p>
+            <p class="deal-contact mb-0">Sofia Marchetti</p>
+            <div class="deal-foot">
+              <span class="deal-age">1d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Trent & Vale back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Trent & Vale forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d11" data-value="64000" data-days="9" aria-label="Latimer Retail, £64,000">
+            <div class="deal-top">
+              <h3 class="deal-co">Latimer Retail</h3>
+              <span class="avatar avatar-xs" title="Josephine Marr"><span class="avatar-initials">JM</span></span>
+            </div>
+            <p class="deal-value mb-2">£64,000</p>
+            <p class="deal-contact mb-0">Gregor Fyfe</p>
+            <div class="deal-foot">
+              <span class="deal-age">9d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Latimer Retail back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Latimer Retail forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="col-stage" data-stage="qualified" data-prob="25" data-expected="21">
+        <header class="stage-head">
+          <div>
+            <h2 class="stage-name">Qualified</h2>
+            <p class="stage-meta mb-0"><span data-stage-count>0</span> deals &middot; <span data-stage-sum>—</span></p>
+          </div>
+          <span class="stage-prob" title="Win probability applied to this stage">25%</span>
+        </header>
+        <div class="stage-drop" data-drop>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d5" data-value="96000" data-days="8" aria-label="Meridian Labs, £96,000">
+            <div class="deal-top">
+              <h3 class="deal-co">Meridian Labs</h3>
+              <span class="avatar avatar-xs" title="Dilan Aksoy"><span class="avatar-initials">DA</span></span>
+            </div>
+            <p class="deal-value mb-2">£96,000</p>
+            <p class="deal-contact mb-0">Nadia Osei</p>
+            <div class="deal-foot">
+              <span class="deal-age">8d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Meridian Labs back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Meridian Labs forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d6" data-value="12750" data-days="30" aria-label="Halden Brewing, £12,750">
+            <div class="deal-top">
+              <h3 class="deal-co">Halden Brewing</h3>
+              <span class="avatar avatar-xs" title="Josephine Marr"><span class="avatar-initials">JM</span></span>
+            </div>
+            <p class="deal-value mb-2">£12,750</p>
+            <p class="deal-contact mb-0">Ivan Kazlouski</p>
+            <div class="deal-foot">
+              <span class="deal-age is-stalled">30d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Halden Brewing back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Halden Brewing forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d7" data-value="55000" data-days="3" aria-label="Fenwick Partners, £55,000">
+            <div class="deal-top">
+              <h3 class="deal-co">Fenwick Partners</h3>
+              <span class="avatar avatar-xs" title="Rae Whitcombe"><span class="avatar-initials">RW</span></span>
+            </div>
+            <p class="deal-value mb-2">£55,000</p>
+            <p class="deal-contact mb-0">Marit Halvorsen</p>
+            <div class="deal-foot">
+              <span class="deal-age">3d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Fenwick Partners back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Fenwick Partners forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="col-stage" data-stage="proposal" data-prob="50" data-expected="21">
+        <header class="stage-head">
+          <div>
+            <h2 class="stage-name">Proposal</h2>
+            <p class="stage-meta mb-0"><span data-stage-count>0</span> deals &middot; <span data-stage-sum>—</span></p>
+          </div>
+          <span class="stage-prob" title="Win probability applied to this stage">50%</span>
+        </header>
+        <div class="stage-drop" data-drop>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d2" data-value="18500" data-days="4" aria-label="Kettle & Co, £18,500">
+            <div class="deal-top">
+              <h3 class="deal-co">Kettle & Co</h3>
+              <span class="avatar avatar-xs" title="Dilan Aksoy"><span class="avatar-initials">DA</span></span>
+            </div>
+            <p class="deal-value mb-2">£18,500</p>
+            <p class="deal-contact mb-0">Rae Whitcombe</p>
+            <div class="deal-foot">
+              <span class="deal-age">4d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Kettle & Co back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Kettle & Co forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d3" data-value="74000" data-days="27" aria-label="Brightsea Marine, £74,000">
+            <div class="deal-top">
+              <h3 class="deal-co">Brightsea Marine</h3>
+              <span class="avatar avatar-xs" title="Josephine Marr"><span class="avatar-initials">JM</span></span>
+            </div>
+            <p class="deal-value mb-2">£74,000</p>
+            <p class="deal-contact mb-0">Josephine Marr</p>
+            <div class="deal-foot">
+              <span class="deal-age is-stalled">27d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Brightsea Marine back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Brightsea Marine forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d4" data-value="32000" data-days="11" aria-label="Ordinal Systems, £32,000">
+            <div class="deal-top">
+              <h3 class="deal-co">Ordinal Systems</h3>
+              <span class="avatar avatar-xs" title="Rae Whitcombe"><span class="avatar-initials">RW</span></span>
+            </div>
+            <p class="deal-value mb-2">£32,000</p>
+            <p class="deal-contact mb-0">Wes Tremayne</p>
+            <div class="deal-foot">
+              <span class="deal-age">11d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Ordinal Systems back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Ordinal Systems forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="col-stage" data-stage="negotiation" data-prob="75" data-expected="14">
+        <header class="stage-head">
+          <div>
+            <h2 class="stage-name">Negotiation</h2>
+            <p class="stage-meta mb-0"><span data-stage-count>0</span> deals &middot; <span data-stage-sum>—</span></p>
+          </div>
+          <span class="stage-prob" title="Win probability applied to this stage">75%</span>
+        </header>
+        <div class="stage-drop" data-drop>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d0" data-value="48000" data-days="6" aria-label="Northwind Logistics, £48,000">
+            <div class="deal-top">
+              <h3 class="deal-co">Northwind Logistics</h3>
+              <span class="avatar avatar-xs" title="Dilan Aksoy"><span class="avatar-initials">DA</span></span>
+            </div>
+            <p class="deal-value mb-2">£48,000</p>
+            <p class="deal-contact mb-0">Priya Raman</p>
+            <div class="deal-foot">
+              <span class="deal-age">6d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Northwind Logistics back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Northwind Logistics forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d1" data-value="126000" data-days="19" aria-label="Palisade Health, £126,000">
+            <div class="deal-top">
+              <h3 class="deal-co">Palisade Health</h3>
+              <span class="avatar avatar-xs" title="Rae Whitcombe"><span class="avatar-initials">RW</span></span>
+            </div>
+            <p class="deal-value mb-2">£126,000</p>
+            <p class="deal-contact mb-0">Tom Beckwith</p>
+            <div class="deal-foot">
+              <span class="deal-age is-stalled">19d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Palisade Health back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Palisade Health forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="col-stage is-closed" data-stage="won" data-prob="100" data-expected="0" data-closed>
+        <header class="stage-head">
+          <div>
+            <h2 class="stage-name">Closed won</h2>
+            <p class="stage-meta mb-0"><span data-stage-count>0</span> deals &middot; <span data-stage-sum>—</span></p>
+          </div>
+          <span class="stage-prob" title="Win probability applied to this stage">100%</span>
+        </header>
+        <div class="stage-drop" data-drop>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d12" data-value="87000" data-days="2" aria-label="Silverbrook Foods, £87,000">
+            <div class="deal-top">
+              <h3 class="deal-co">Silverbrook Foods</h3>
+              <span class="avatar avatar-xs" title="Dilan Aksoy"><span class="avatar-initials">DA</span></span>
+            </div>
+            <p class="deal-value mb-2">£87,000</p>
+            <p class="deal-contact mb-0">Elena Popova</p>
+            <div class="deal-foot">
+              <span class="deal-age">2d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Silverbrook Foods back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Silverbrook Foods forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+          <article class="deal" draggable="true" tabindex="0" data-deal="d13" data-value="29000" data-days="5" aria-label="Windmill Studios, £29,000">
+            <div class="deal-top">
+              <h3 class="deal-co">Windmill Studios</h3>
+              <span class="avatar avatar-xs" title="Rae Whitcombe"><span class="avatar-initials">RW</span></span>
+            </div>
+            <p class="deal-value mb-2">£29,000</p>
+            <p class="deal-contact mb-0">Casey Nolan</p>
+            <div class="deal-foot">
+              <span class="deal-age">5d in stage</span>
+              <span class="deal-move">
+                <button class="deal-btn" type="button" data-move="-1" aria-label="Move Windmill Studios back a stage">&larr;</button>
+                <button class="deal-btn" type="button" data-move="1" aria-label="Move Windmill Studios forward a stage">&rarr;</button>
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<dialog class="drawer drawer-start" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+  <div class="drawer-header">
+    <h5 class="drawer-title" id="navDrawerLabel">Cadence</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+  </div>
+  <div class="drawer-body">
+      <a class="drawer-link" href="index.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Overview</span></a>
+      <a class="drawer-link is-active" href="pipeline.html" aria-current="page"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2.5" width="3.5" height="11" rx="1"/><rect x="6.5" y="2.5" width="3.5" height="7" rx="1"/><rect x="11" y="2.5" width="3" height="9" rx="1"/></svg><span>Pipeline</span></a>
+      <a class="drawer-link" href="contacts.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6" cy="5.5" r="2.5"/><path d="M1.5 14a4.5 4.5 0 0 1 9 0"/><path d="M11 3.2a2.5 2.5 0 0 1 0 4.6M12 14a4.5 4.5 0 0 0-1.6-3.4"/></svg><span>Contacts</span></a>
+      <a class="drawer-link" href="reports.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 13.5V9M6 13.5V4M10 13.5V7M14 13.5V2.5"/></svg><span>Reports</span></a>
+      <a class="drawer-link" href="settings.html"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="2.25"/><path d="M8 1.5v1.6M8 12.9v1.6M14.5 8h-1.6M3.1 8H1.5m10.1-4.6-1.1 1.1M5.5 10.5l-1.1 1.1m0-8.2 1.1 1.1m5 5 1.1 1.1"/></svg><span>Settings</span></a>
+  </div>
+</dialog>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
