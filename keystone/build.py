@@ -247,7 +247,7 @@ def page(file, title, desc, body, current="index.html"):
 
 
 def page_index():
-    stats = "".join(f'<div><p class="stat-v mb-0">{v}</p><p class="stat-k mb-0">{k}</p></div>' for v, k in STATS)
+    stats = "".join(f'<div class="figure"><p class="figure-v mb-0">{v}</p><p class="figure-k mb-0">{k}</p></div>' for v, k in STATS)
 
     services = "\n".join(f"""        <article class="svc">
           <h3 class="svc-name mb-2">{name}</h3>
@@ -285,7 +285,7 @@ def page_index():
     </div>
   </section>
 
-  <div class="stat-band"><div class="wrap stat-in">{stats}</div></div>
+  <div class="figure-band"><div class="wrap figures">{stats}</div></div>
 
   <section class="band" id="services">
     <div class="wrap">

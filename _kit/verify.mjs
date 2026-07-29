@@ -177,17 +177,44 @@ if (stylesheets.length) {
 
    Informational, not fatal — overriding a component on purpose is legitimate.
    The point is to know you are doing it. */
-const own = existsSync(join(DIR, 'assets/css/style.css'))
-  ? readFileSync(join(DIR, 'assets/css/style.css'), 'utf8') : ''
-const vendor = existsSync(join(DIR, 'assets/vendor/bootstrap6/css/bootstrap.min.css'))
-  ? readFileSync(join(DIR, 'assets/vendor/bootstrap6/css/bootstrap.min.css'), 'utf8') : ''
+const read = (rel) => (existsSync(join(DIR, rel)) ? readFileSync(join(DIR, rel), 'utf8') : '')
+const own = read('assets/css/style.css')
 
-if (own && vendor) {
-  const bs = classesIn(vendor)
+if (own) {
   const mine = classesIn(own)
-  const clash = [...mine].filter((c) => bs.has(c)).sort()
-  if (clash.length) {
-    log(`  · ${clash.length} class(es) also defined by Bootstrap — you are restyling components, not naming your own: ${clash.slice(0, 10).join(', ')}${clash.length > 10 ? ' …' : ''}`)
+
+  // Bootstrap's own components. Restyling one is legitimate and common, so this
+  // is informational — the point is knowing that is what you are doing.
+  const bs = classesIn(read('assets/vendor/bootstrap6/css/bootstrap.min.css'))
+  const bsClash = [...mine].filter((c) => bs.has(c)).sort()
+  if (bsClash.length) {
+    log(`  · ${bsClash.length} class(es) also defined by Bootstrap — restyling components, not naming your own: ${bsClash.slice(0, 10).join(', ')}${bsClash.length > 10 ? ' …' : ''}`)
+  }
+
+  // The shared kit is a different matter, but only in one specific way.
+  // Templates are MEANT to extend .hero, .site-header and friends — base.css
+  // provides a base and each template customises it. That is not a collision.
+  //
+  // The dangerous case is narrower: base.css sets `display` on a class, and the
+  // template restyles that class WITHOUT setting `display` — so the kit's
+  // layout model silently applies to markup never designed for it. .stat-band
+  // cost real debugging exactly this way: base.css makes it a four-column grid,
+  // a template reused the name for a full-width coloured band, and the band's
+  // inner wrapper became a grid item stuck in the first quarter-track.
+  const ruleFor = (css, cls) => {
+    const re = new RegExp(`(^|[},])\\s*\\.${cls.replace(/[.*+?^$()|[\]\\]/g, '\\$&')}\\s*\\{([^}]*)\\}`, 'm')
+    return css.match(re)?.[2] ?? ''
+  }
+  const kitCss = read('assets/css/base.css')
+  const kit = classesIn(kitCss)
+  const risky = [...mine].filter((c) => kit.has(c))
+    .filter((c) => /(^|;)\s*display\s*:/.test(ruleFor(kitCss, c)))
+    .filter((c) => !/(^|;)\s*display\s*:/.test(ruleFor(own, c)))
+    .sort()
+
+  if (risky.length) {
+    problems += 1
+    log(`  ✗ ${risky.length} class(es) where the shared kit sets \`display\` and this template does not — the kit's layout will leak in. Rename yours: ${risky.join(', ')}`)
   }
 }
 

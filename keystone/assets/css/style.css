@@ -32,7 +32,7 @@
 .hero-title,
 .band-title { letter-spacing: -0.028em; text-wrap: balance; font-weight: 650; line-height: 1.1; }
 
-.stat-v { font-variant-numeric: tabular-nums; }
+.figure-v { font-variant-numeric: tabular-nums; }
 
 /* ---------------------------------------------------------------
    Header + mega menu
@@ -209,11 +209,22 @@
 
 .eyebrow-rule::before { content: ""; width: 1.6rem; height: 2px; background-color: var(--ks-accent); flex: none; }
 
-.stat-band { background-color: var(--bs-primary-base); color: var(--bs-white); padding-block: 1.75rem; }
+ /* NOT .stat-band — _kit/base.css already defines that as a four-column grid,
+   and reusing the name made this wrapper a grid ITEM stuck in the first
+   quarter-track instead of a full-width band. */
+.figure-band { background-color: var(--bs-primary-base); color: var(--bs-white); padding-block: 2rem; }
 
-.stat-in { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); }
-.stat-v { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
-.stat-k { font-size: 0.8rem; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.07em; }
+.figures {
+  display: grid;
+  gap: 1.75rem 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  text-align: center;
+}
+
+@media (width >= 768px) { .figures { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+.figure-v { font-size: clamp(1.8rem, 1.2rem + 1.6vw, 2.3rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+.figure-k { font-size: 0.78rem; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.08em; }
 
 .band { padding-block: 4.5rem; }
 .band-alt { background-color: var(--bs-bg-2); }

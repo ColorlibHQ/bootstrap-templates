@@ -143,7 +143,26 @@
    --------------------------------------------------------------- */
 
 .logo-band { padding-block: 2rem; border-block: 1px solid var(--th-rule); background-color: var(--bs-bg-2); }
-.logo-row { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; align-items: center; font-weight: 700; opacity: 0.45; letter-spacing: -0.01em; }
+/* Client logos. A grid rather than a flex row so the marks fill the field in
+   equal columns AND centre inside them — a wrapped flex row leaves an obviously
+   short last line. Monochrome via currentColor, so one set works in both modes. */
+.logo-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 1.25rem 1rem;
+  place-items: center;
+  opacity: 0.62;
+}
+
+.logo { display: inline-flex; align-items: center; gap: 0.5rem; }
+.logo-mark { flex: none; }
+
+.logo-word {
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
 
 .band { padding-block: 4.5rem; }
 .band-alt { background-color: var(--bs-bg-2); }
