@@ -191,30 +191,24 @@ if (own) {
     log(`  · ${bsClash.length} class(es) also defined by Bootstrap — restyling components, not naming your own: ${bsClash.slice(0, 10).join(', ')}${bsClash.length > 10 ? ' …' : ''}`)
   }
 
-  // The shared kit is a different matter, but only in one specific way.
-  // Templates are MEANT to extend .hero, .site-header and friends — base.css
-  // provides a base and each template customises it. That is not a collision.
+  // Classes the shared kit also defines. REPORTED, NOT FAILED — and the first
+  // version of this check got that wrong, which briefly blocked a catalogue-wide
+  // redeploy.
   //
-  // The dangerous case is narrower: base.css sets `display` on a class, and the
-  // template restyles that class WITHOUT setting `display` — so the kit's
-  // layout model silently applies to markup never designed for it. .stat-band
-  // cost real debugging exactly this way: base.css makes it a four-column grid,
-  // a template reused the name for a full-width coloured band, and the band's
-  // inner wrapper became a grid item stuck in the first quarter-track.
-  const ruleFor = (css, cls) => {
-    const re = new RegExp(`(^|[},])\\s*\\.${cls.replace(/[.*+?^$()|[\]\\]/g, '\\$&')}\\s*\\{([^}]*)\\}`, 'm')
-    return css.match(re)?.[2] ?? ''
-  }
-  const kitCss = read('assets/css/base.css')
-  const kit = classesIn(kitCss)
-  const risky = [...mine].filter((c) => kit.has(c))
-    .filter((c) => /(^|;)\s*display\s*:/.test(ruleFor(kitCss, c)))
-    .filter((c) => !/(^|;)\s*display\s*:/.test(ruleFor(own, c)))
-    .sort()
-
-  if (risky.length) {
-    problems += 1
-    log(`  ✗ ${risky.length} class(es) where the shared kit sets \`display\` and this template does not — the kit's layout will leak in. Rename yours: ${risky.join(', ')}`)
+  // The tempting heuristic is "base.css sets `display` and the template does
+  // not, so the kit's layout leaks in". That is exactly what went wrong with
+  // .stat-band — base.css makes it a four-column grid, a template reused the
+  // name for a full-width band, and the band's wrapper became a grid item in
+  // the first quarter-track. But it is ALSO the shape of every legitimate
+  // extension: .ph and .brand-mark are kit components that templates are meant
+  // to restyle while keeping the kit's display. The two are distinguishable
+  // only by intent, which no static check can see.
+  //
+  // So: surface the overlap and let a screenshot decide.
+  const kit = classesIn(read('assets/css/base.css'))
+  const kitClash = [...mine].filter((c) => kit.has(c)).sort()
+  if (kitClash.length) {
+    log(`  · ${kitClash.length} class(es) also in the shared kit — fine when extending, wrong when the name means something different: ${kitClash.slice(0, 8).join(', ')}${kitClash.length > 8 ? ' …' : ''}`)
   }
 }
 

@@ -104,6 +104,42 @@ HEAD = """<!doctype html>
 """
 
 
+
+# The hero product shot, as data. col, row, span, kind, label.
+# Rows are 15-minute-ish bands; a Focus block spans three.
+WEEK_DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+WEEK = [
+    (1, 1, 1, "meet", "Standup"),   (1, 2, 3, "focus", "Focus"),
+    (2, 1, 1, "meet", "Standup"),   (2, 2, 3, "focus", "Focus"),  (2, 5, 1, "meet", "1:1"),
+    (3, 1, 1, "meet", "Standup"),   (3, 2, 3, "focus", "Focus"),  (3, 5, 1, "dec", "Declined"),
+    (4, 1, 1, "meet", "Standup"),   (4, 2, 3, "focus", "Focus"),  (4, 6, 1, "meet", "Review"),
+    (5, 1, 1, "meet", "Standup"),   (5, 2, 3, "focus", "Focus"),
+]
+
+# Two slots in one cell overlap silently — the browser just draws one over the
+# other and both labels become unreadable. That shipped once; assert instead.
+_seen = {}
+for _c, _r, _h, _kind, _label in WEEK:
+    for _row in range(_r, _r + _h):
+        _key = (_c, _row)
+        assert _key not in _seen, (
+            f"week grid: {_label!r} overlaps {_seen[_key]!r} at column {_c}, row {_row}")
+        _seen[_key] = _label
+
+
+def week_grid():
+    head = "".join(f"<span>{d}</span>" for d in WEEK_DAYS)
+    slots = "\n          ".join(
+        f'<div class="slot slot-{kind}" style="--r:{r};--c:{c}' + (f';--h:{h}' if h > 1 else '') + f'">{label}</div>'
+        for c, r, h, kind, label in WEEK)
+    return f"""<div class="week" aria-hidden="true">
+        <div class="week-head">{head}</div>
+        <div class="week-grid">
+          {slots}
+        </div>
+      </div>"""
+
+
 def signup(where, *, big=False):
     """The capture form, rendered twice — hero and sticky bar. Both carry
     data-signup, and the script keeps their value in step, so a half-typed
@@ -207,26 +243,7 @@ def page_index():
 
       <p class="hero-note mb-0">Free for one calendar. No card. Revoke access from Google or Microsoft whenever you like.</p>
 
-      <!-- Product shot, built rather than photographed: stays sharp, weighs
-           nothing, and never dates the way a screenshot of a UI does. -->
-      <div class="week" aria-hidden="true">
-        <div class="week-head"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div>
-        <div class="week-grid">
-          <div class="slot slot-meet" style="--r:1;--c:1">Standup</div>
-          <div class="slot slot-focus" style="--r:2;--c:1;--h:3">Focus</div>
-          <div class="slot slot-meet" style="--r:1;--c:2">Standup</div>
-          <div class="slot slot-focus" style="--r:2;--c:2;--h:3">Focus</div>
-          <div class="slot slot-meet" style="--r:5;--c:2">1:1</div>
-          <div class="slot slot-meet" style="--r:1;--c:3">Standup</div>
-          <div class="slot slot-focus" style="--r:2;--c:3;--h:3">Focus</div>
-          <div class="slot slot-dec" style="--r:3;--c:3">Declined</div>
-          <div class="slot slot-meet" style="--r:1;--c:4">Standup</div>
-          <div class="slot slot-focus" style="--r:2;--c:4;--h:3">Focus</div>
-          <div class="slot slot-meet" style="--r:6;--c:4">Review</div>
-          <div class="slot slot-meet" style="--r:1;--c:5">Standup</div>
-          <div class="slot slot-focus" style="--r:2;--c:5;--h:3">Focus</div>
-        </div>
-      </div>
+      {week_grid()}
     </div>
   </section>
 

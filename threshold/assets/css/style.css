@@ -134,9 +134,18 @@
 
 .slot-meet { background-color: color-mix(in oklab, var(--bs-fg-body), transparent 90%); color: var(--bs-fg-3, inherit); }
 .slot-focus { background-color: var(--bs-primary-base); color: var(--bs-white); }
-.slot-dec { background-color: color-mix(in oklab, var(--th-warn), transparent 82%); color: color-mix(in oklab, var(--th-warn), black 30%); text-decoration: line-through; }
+/* A refused invitation, not a booking: dashed rather than solid, and struck
+   through. Opaque, because a translucent fill over a Focus block let both
+   labels show at once and neither could be read. */
+.slot-dec {
+  background-color: var(--bs-bg-body);
+  border: 1px dashed color-mix(in oklab, var(--th-warn), transparent 35%);
+  color: color-mix(in oklab, var(--th-warn), black 30%);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
 
-[data-bs-theme="dark"] .slot-dec { color: var(--th-warn); }
+[data-bs-theme="dark"] .slot-dec { color: var(--th-warn); background-color: var(--bs-bg-2); }
 
 /* ---------------------------------------------------------------
    Bands
