@@ -76,6 +76,14 @@ def logo(key, word):
     return (f'<span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" '
             f'aria-hidden="true">{MARKS[key]}</svg><span class="logo-word">{word}</span></span>')
 
+
+# Six, not five: six divides evenly into the 2, 3 and 6 column counts the grid
+# resolves to across breakpoints, so no width leaves a short last row.
+CLIENTS = [("northwind", "Northwind"), ("palisade", "Palisade"), ("ordinal", "Ordinal"),
+           ("meridian", "Meridian Labs"), ("kettle", "Kettle &amp; Co"), ("brightsea", "Brightsea")]
+
+LOGO_ROW = '<div class="logo-row">' + "".join(logo(k, w) for k, w in CLIENTS) + '</div>' 
+
 TOGGLE = """<button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
   <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
   <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
@@ -225,7 +233,7 @@ def page_index():
   <div class="logo-band">
     <div class="wrap">
       <p class="fs-xs eyebrow fg-3 mb-3">Protecting time at</p>
-      <div class="logo-row"><span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2 15 12 12 22 9 12Z" fill="currentColor"/><path d="M2 12 12 9l10 3-10 3Z" fill="currentColor" opacity=".45"/></svg><span class="logo-word">Northwind</span></span><span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 22V9.5L6 6l2 3.5V22M11 22V5.5L13 2l2 3.5V22M18 22V10.5L20 7l2 3.5V22" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linejoin="round"/></svg><span class="logo-word">Palisade</span></span><span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2.5" transform="rotate(45 12 12)" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="12" r="2.8" fill="currentColor"/></svg><span class="logo-word">Ordinal</span></span><span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7" fill="none"/><ellipse cx="12" cy="12" rx="4" ry="9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M3.2 12h17.6" stroke="currentColor" stroke-width="1.5"/></svg><span class="logo-word">Meridian Labs</span></span><span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 11h12v4.5A4.5 4.5 0 0 1 11.5 20h-3A4.5 4.5 0 0 1 4 15.5Z" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linejoin="round"/><path d="M16 12.5h1.6a2.4 2.4 0 0 1 0 4.8H16" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M7.5 3.5v3M11.5 2.5v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span class="logo-word">Kettle &amp; Co</span></span></div>
+      {LOGO_ROW}
     </div>
   </div>
 
