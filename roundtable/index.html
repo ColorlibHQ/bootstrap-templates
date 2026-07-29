@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roundtable — Free Bootstrap 6 Community Forum Template</title>
+<meta name="description" content="Roundtable is a free Bootstrap 6 forum template whose Hot, New and Top tabs genuinely reorder the board from a real ranking formula.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap head-in">
+    <a class="wordmark" href="index.html">
+      <span class="wordmark-mark" aria-hidden="true">◍</span>Roundtable
+    </a>
+    <nav class="head-nav d-none md:d-flex" aria-label="Main">
+        <a class="head-link is-active" href="index.html">Threads</a>
+        <a class="head-link" href="thread.html">A thread</a>
+        <a class="head-link" href="categories.html">Categories</a>
+    </nav>
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="form-control form-adorn search-field d-none lg:d-flex">
+        <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14" stroke-linecap="round"/></svg></div>
+        <input type="search" class="form-ghost" placeholder="Search the forum…" aria-label="Search">
+      </div>
+      <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+      <a class="btn-solid theme-primary btn-sm" href="thread.html">New thread</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <div class="wrap board">
+
+    <div class="board-main">
+      <div class="sorter" role="group" aria-label="Sort threads">
+        <button class="sort-btn is-on" type="button" data-sort="hot" aria-pressed="true">Hot</button>
+        <button class="sort-btn" type="button" data-sort="new" aria-pressed="false">New</button>
+        <button class="sort-btn" type="button" data-sort="top" aria-pressed="false">Top</button>
+        <label class="sort-show">
+          <input type="checkbox" class="check" id="showRank">
+          <span>Show the ranking maths</span>
+        </label>
+      </div>
+
+      <ul class="thread-list" data-threads>
+        <li class="thread" data-thread data-votes="148" data-hours="5" data-replies="34">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: Why does `text-wrap: balance` do nothing on my headings?" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>148</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">Why does `text-wrap: balance` do nothing on my headings?</a><span class="flag flag-solved">solved</span></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">NO</span></span>
+              <span>Nadia Osei</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">CSS</a>
+              <span class="fg-3">&middot; 5h ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>34</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+        <li class="thread" data-thread data-votes="96" data-hours="2" data-replies="21">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: Show: I rebuilt our design tokens as plain custom properties" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>96</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">Show: I rebuilt our design tokens as plain custom properties</a></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">WT</span></span>
+              <span>Wes Tremayne</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">Show &amp; tell</a>
+              <span class="fg-3">&middot; 2h ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>21</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+        <li class="thread" data-thread data-votes="312" data-hours="46" data-replies="187">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: The case against utility classes, five years on" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>312</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">The case against utility classes, five years on</a><span class="flag flag-hot">hot</span></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">MH</span></span>
+              <span>Marit Halvorsen</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">Discussion</a>
+              <span class="fg-3">&middot; 2d ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>187</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+        <li class="thread" data-thread data-votes="41" data-hours="1" data-replies="12">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: Anyone else seeing Safari 17 ignore `content-visibility`?" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>41</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">Anyone else seeing Safari 17 ignore `content-visibility`?</a></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">DA</span></span>
+              <span>Dilan Aksoy</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">Bugs</a>
+              <span class="fg-3">&middot; 1h ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>12</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+        <li class="thread" data-thread data-votes="58" data-hours="18" data-replies="96">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: Monthly thread: what are you shipping in August?" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>58</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">Monthly thread: what are you shipping in August?</a><span class="flag flag-pinned">pinned</span></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">RW</span></span>
+              <span>Rae Whitcombe</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">Meta</a>
+              <span class="fg-3">&middot; 18h ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>96</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+        <li class="thread" data-thread data-votes="204" data-hours="30" data-replies="63">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: How do you test focus order without losing your mind?" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>204</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">How do you test focus order without losing your mind?</a></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">JM</span></span>
+              <span>Josephine Marr</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">Accessibility</a>
+              <span class="fg-3">&middot; 1d ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>63</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+        <li class="thread" data-thread data-votes="176" data-hours="11" data-replies="44">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: A 2KB alternative to the date picker you are about to install" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>176</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">A 2KB alternative to the date picker you are about to install</a></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">IK</span></span>
+              <span>Ivan Kazlouski</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">Show &amp; tell</a>
+              <span class="fg-3">&middot; 11h ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>44</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+        <li class="thread" data-thread data-votes="267" data-hours="62" data-replies="71">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: Container queries finally clicked for me and here is what did it" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>267</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">Container queries finally clicked for me and here is what did it</a></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">PR</span></span>
+              <span>Priya Raman</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">CSS</a>
+              <span class="fg-3">&middot; 3d ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>71</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+        <li class="thread" data-thread data-votes="33" data-hours="4" data-replies="28">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: Is anyone actually using `@scope` in production?" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>33</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">Is anyone actually using `@scope` in production?</a></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">TB</span></span>
+              <span>Tom Beckwith</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">CSS</a>
+              <span class="fg-3">&middot; 4h ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>28</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+        <li class="thread" data-thread data-votes="421" data-hours="90" data-replies="112">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: We removed 340KB of JavaScript and nothing broke" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>421</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">We removed 340KB of JavaScript and nothing broke</a><span class="flag flag-hot">hot</span></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">SM</span></span>
+              <span>Sofia Marchetti</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">Performance</a>
+              <span class="fg-3">&middot; 4d ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>112</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+        <li class="thread" data-thread data-votes="87" data-hours="26" data-replies="154">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: Naming things: a thread that will solve nothing" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>87</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">Naming things: a thread that will solve nothing</a></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">GF</span></span>
+              <span>Gregor Fyfe</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">Discussion</a>
+              <span class="fg-3">&middot; 1d ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>154</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+        <li class="thread" data-thread data-votes="189" data-hours="8" data-replies="39">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote: PSA: `:user-invalid` is not `:invalid` and the difference matters" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>189</span>
+          </div>
+          <div class="thread-main">
+            <h3 class="thread-title mb-1"><a href="thread.html">PSA: `:user-invalid` is not `:invalid` and the difference matters</a><span class="flag flag-solved">solved</span></h3>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">EP</span></span>
+              <span>Elena Popova</span>
+              <span class="fg-3">in</span> <a class="thread-cat" href="categories.html">Forms</a>
+              <span class="fg-3">&middot; 8h ago</span>
+            </p>
+          </div>
+          <p class="thread-replies mb-0"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14 12.5a5.5 5.5 0 0 0-5.5-5.5H4M6.5 4 3.5 7l3 3"/></svg> <span>39</span></p>
+          <p class="thread-rank mb-0" data-rank-out hidden></p>
+        </li>
+      </ul>
+
+      <p class="board-note mb-0">
+        Hot is <code>(votes − 1) ÷ (hours + 2)<sup>1.5</sup></code> — the same
+        shape of decay Hacker News uses. Tick the box above to see each thread's
+        score, and watch a 46-hour-old thread with 312 votes lose to a 5-hour-old
+        one with 148.
+      </p>
+    </div>
+
+    <aside class="rail">
+      <section class="rail-card">
+        <h2 class="rail-title">Categories</h2>
+        <ul class="rail-list">
+          <li><a href="categories.html">CSS</a><span class="fg-3">1,284</span></li>
+          <li><a href="categories.html">Accessibility</a><span class="fg-3">612</span></li>
+          <li><a href="categories.html">Performance</a><span class="fg-3">498</span></li>
+          <li><a href="categories.html">Show &amp; tell</a><span class="fg-3">907</span></li>
+          <li><a href="categories.html">Forms</a><span class="fg-3">341</span></li>
+          <li><a href="categories.html">Discussion</a><span class="fg-3">1,552</span></li>
+        </ul>
+        <a class="btn-outline theme-secondary btn-sm w-100 mt-3" href="categories.html">All categories</a>
+      </section>
+
+      <section class="rail-card">
+        <h2 class="rail-title">House rules</h2>
+        <ol class="rail-rules">
+          <li>Assume the other person has a reason.</li>
+          <li>A reduced test case beats a description.</li>
+          <li>“Just use X” is not an answer to “why does Y do this”.</li>
+          <li>Mark it solved when it is solved.</li>
+        </ol>
+      </section>
+
+      <section class="rail-card">
+        <h2 class="rail-title">This week</h2>
+        <dl class="rail-stats">
+          <div><dt>Threads</dt><dd>142</dd></div>
+          <div><dt>Replies</dt><dd>1,908</dd></div>
+          <div><dt>New members</dt><dd>63</dd></div>
+          <div><dt>Solved</dt><dd>71%</dd></div>
+        </dl>
+      </section>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="fs-sm fg-3 mb-0">
+      &copy; <span data-year>2026</span> Roundtable &mdash; a free Bootstrap 6 template.
+      Every member, thread and reply here is fictional.
+    </p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

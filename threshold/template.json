@@ -1,0 +1,24 @@
+{
+  "slug": "threshold",
+  "title": "Threshold — Free Bootstrap 6 Landing Page Template",
+  "excerpt": "A free two-page Bootstrap 6 landing page whose sticky conversion bar shares its value with the hero form — so a half-typed email is never lost when you scroll.",
+  "yoastTitle": "Threshold — Free Bootstrap 6 Landing Page Template",
+  "yoastDesc": "Free Bootstrap 6 landing page template with a sticky signup bar that shares state with the hero form, a CSS-built product shot, comparison table, FAQ and a thank-you page with referral copy.",
+  "intro": "Threshold is a free, premium <strong>Bootstrap 6</strong> landing page template. One long page doing one job — hero, product shot, features, how it works, social proof, an honest comparison table, questions and a closer — plus a thank-you page with a queue position and a referral link.",
+  "note": "A landing page puts an email field in the hero, another in the closer, and a third in a sticky bar — and in every template they are three unrelated inputs. So somebody types half an address, scrolls, and the sticky bar hands them an empty box. Here <strong>all three share one value</strong>: type anywhere and every copy has it. The sticky bar itself is honest too — it appears only once the hero form has genuinely left the viewport, and <strong>hides again over the closer</strong>, because a second call to action stacked on top of the real one is just clutter. Both use <code>IntersectionObserver</code> rather than a scroll handler, so nothing runs on frames where nothing changed. The product shot is a week grid built in CSS rather than a screenshot: sharp at any size, weighs nothing, and never dates.",
+  "summary": "Threshold is a free, premium two-page Bootstrap 6 landing page template. The page runs a centred hero with the capture form and a calendar-week product shot built entirely in CSS, a logo band, four features, a three-step setup, three testimonials, a comparison table that stacks on mobile and concedes the honest column, a six-question FAQ on native details, and a closer. A sticky conversion bar appears once the hero form scrolls away and shares its value with it, so a part-typed address survives the scroll; it hides again over the closer to avoid stacking two calls to action. The thank-you page carries a queue position, a referral link with copy-to-clipboard that falls back on insecure origins, and something useful to do while waiting. Full light and dark mode, ESM-only vanilla JavaScript, no build step.",
+  "features": [
+    "Two pages — long-form landing page and a thank-you page",
+    "Hero, closer and sticky forms share one value — a half-typed email survives",
+    "Sticky bar appears only when the hero form has left the viewport",
+    "It hides again over the closer, so two calls to action never stack",
+    "IntersectionObserver throughout, not a scroll handler",
+    "Product shot is a calendar week built in CSS — sharp, weightless, undateable",
+    "Comparison table that concedes the honest column and stacks on mobile",
+    "Copy-to-clipboard with a fallback for insecure origins like file://",
+    "Native details FAQ, no accordion JavaScript",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": ["bootstrap-6", "landing-page"],
+  "images": []
+}

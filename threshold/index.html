@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Threshold — Free Bootstrap 6 Landing Page Template</title>
+<meta name="description" content="Threshold is a free Bootstrap 6 landing page template with a sticky conversion bar that shares state with the hero form, so a half-typed email is never lost.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap head-in">
+    <a class="wordmark" href="index.html"><span class="wordmark-mark" aria-hidden="true">◤</span>Threshold</a>
+    <nav class="head-nav d-none md:d-flex" aria-label="Main">
+      <a class="head-link" href="#how">How it works</a>
+      <a class="head-link" href="#compare">Compare</a>
+      <a class="head-link" href="#faq">Questions</a>
+    </nav>
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+      <a class="btn-outline theme-secondary btn-sm" href="#get">Get early access</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="get">
+    <div class="wrap hero-in">
+      <p class="pill mb-4"><span class="pill-dot" aria-hidden="true"></span> Private beta &middot; 1,400 on the list</p>
+      <h1 class="hero-title mb-4">Your calendar defends<br>your afternoons.</h1>
+      <p class="hero-lede mb-5">
+        Threshold blocks the focus time you keep meaning to protect, and declines
+        what lands on it with a real alternative. One rule, no settings screen,
+        and nobody else on your team has to install anything.
+      </p>
+
+      <form class="signup" data-signup data-demo-form novalidate>
+        <label class="visually-hidden" for="email-hero">Work email</label>
+        <input class="form-control form-control-lg" type="email" id="email-hero" name="email"
+               placeholder="you@company.com" autocomplete="email" required data-signup-input>
+        <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Check your inbox ✓">Get early access</button>
+        <div class="invalid-feedback">A work email, so we can tell you when your calendar is supported.</div>
+      </form>
+
+      <p class="hero-note mb-0">Free for one calendar. No card. Revoke access from Google or Microsoft whenever you like.</p>
+
+      <!-- Product shot, built rather than photographed: stays sharp, weighs
+           nothing, and never dates the way a screenshot of a UI does. -->
+      <div class="week" aria-hidden="true">
+        <div class="week-head"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div>
+        <div class="week-grid">
+          <div class="slot slot-meet" style="--r:1;--c:1">Standup</div>
+          <div class="slot slot-focus" style="--r:2;--c:1;--h:3">Focus</div>
+          <div class="slot slot-meet" style="--r:1;--c:2">Standup</div>
+          <div class="slot slot-focus" style="--r:2;--c:2;--h:3">Focus</div>
+          <div class="slot slot-meet" style="--r:5;--c:2">1:1</div>
+          <div class="slot slot-meet" style="--r:1;--c:3">Standup</div>
+          <div class="slot slot-focus" style="--r:2;--c:3;--h:3">Focus</div>
+          <div class="slot slot-dec" style="--r:3;--c:3">Declined</div>
+          <div class="slot slot-meet" style="--r:1;--c:4">Standup</div>
+          <div class="slot slot-focus" style="--r:2;--c:4;--h:3">Focus</div>
+          <div class="slot slot-meet" style="--r:6;--c:4">Review</div>
+          <div class="slot slot-meet" style="--r:1;--c:5">Standup</div>
+          <div class="slot slot-focus" style="--r:2;--c:5;--h:3">Focus</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="logo-band">
+    <div class="wrap">
+      <p class="fs-xs eyebrow fg-3 mb-3">Protecting time at</p>
+      <div class="logo-row"><span>NORTHWIND</span><span>Palisade</span><span>ORDINAL</span><span>Meridian Labs</span><span>KETTLE&amp;CO</span></div>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <h2 class="band-title mb-5">Four things it does, and nothing else</h2>
+      <div class="feat-grid">
+        <article class="feat">
+          <span class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M2 8h12M8 2v12"/></svg></span>
+          <h3 class="feat-name mb-2">Reads your calendar, not your mind</h3>
+          <p class="fg-2 fs-sm mb-0">Threshold blocks the focus time you said you wanted before someone else books it. No meeting is cancelled without you.</p>
+        </article>
+        <article class="feat">
+          <span class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M3 8h10M3 4.5h10M3 11.5h6"/></svg></span>
+          <h3 class="feat-name mb-2">One rule, not forty settings</h3>
+          <p class="fg-2 fs-sm mb-0">You get four hours a day and a lunch break. That is the whole configuration, and it is why people actually keep it on.</p>
+        </article>
+        <article class="feat">
+          <span class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg></span>
+          <h3 class="feat-name mb-2">It says no on your behalf</h3>
+          <p class="fg-2 fs-sm mb-0">Declines land with a real alternative time, so the person asking gets an answer rather than silence and a follow-up.</p>
+        </article>
+        <article class="feat">
+          <span class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 2v6l4 2"/></svg></span>
+          <h3 class="feat-name mb-2">Honest about what it broke</h3>
+          <p class="fg-2 fs-sm mb-0">Weekly note tells you what it moved, what it declined, and where it got it wrong. Turn any of it back with one click.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-alt" id="how">
+    <div class="wrap">
+      <h2 class="band-title mb-5">Set up once, in under a minute</h2>
+      <ol class="step-list">
+        <li class="step">
+          <span class="step-n" aria-hidden="true">1</span>
+          <div>
+            <h3 class="step-name mb-2">Connect a calendar</h3>
+            <p class="fg-2 mb-0">Google or Microsoft. Read and write, nothing else, revocable from your own account settings.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-n" aria-hidden="true">2</span>
+          <div>
+            <h3 class="step-name mb-2">Say when you think</h3>
+            <p class="fg-2 mb-0">Two questions: which hours, and how long a block is worth having. Takes about forty seconds.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-n" aria-hidden="true">3</span>
+          <div>
+            <h3 class="step-name mb-2">Leave it alone</h3>
+            <p class="fg-2 mb-0">It defends those blocks from the next booking. You will notice within a week, mostly by not being interrupted.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2 class="band-title mb-5">People who kept it on</h2>
+      <div class="quote-grid">
+        <figure class="quote">
+          <blockquote class="mb-3"><p class="mb-0">We got 6 hours a week back per engineer, measured properly rather than surveyed.</p></blockquote>
+          <figcaption><strong>Wes Tremayne</strong><span class="fg-3 d-block">VP Engineering, Ordinal Systems</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote class="mb-3"><p class="mb-0">The declines going out with an alternative time is the whole product. Everything else is packaging.</p></blockquote>
+          <figcaption><strong>Nadia Osei</strong><span class="fg-3 d-block">Design Director, Meridian Labs</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote class="mb-3"><p class="mb-0">I turned it off for a fortnight as a test and asked to have it back on day four.</p></blockquote>
+          <figcaption><strong>Priya Raman</strong><span class="fg-3 d-block">Head of Ops, Northwind Logistics</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-alt" id="compare">
+    <div class="wrap">
+      <h2 class="band-title mb-2">Against the two things you are doing now</h2>
+      <p class="fg-2 mb-5">Honest columns. Doing it by hand genuinely works — it just does not survive a busy fortnight.</p>
+      <div class="table-responsive">
+        <table class="table md:table-stacked align-middle compare">
+          <thead><tr><th scope="col">&nbsp;</th><th scope="col">Threshold</th><th scope="col">Blocking apps</th><th scope="col">By hand</th></tr></thead>
+          <tbody>
+            <tr>
+              <th scope="row">Blocks focus time automatically</th>
+              <td data-cell="Threshold"><span class="yes" aria-label="Yes">✓</span></td>
+              <td data-cell="Calendar blocking apps"><span class="no" aria-label="No">—</span></td>
+              <td data-cell="Doing it by hand"><span class="no" aria-label="No">—</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Declines with an alternative time</th>
+              <td data-cell="Threshold"><span class="yes" aria-label="Yes">✓</span></td>
+              <td data-cell="Calendar blocking apps"><span class="no" aria-label="No">—</span></td>
+              <td data-cell="Doing it by hand"><span class="no" aria-label="No">—</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Works without asking your team to adopt it</th>
+              <td data-cell="Threshold"><span class="yes" aria-label="Yes">✓</span></td>
+              <td data-cell="Calendar blocking apps"><span class="yes" aria-label="Yes">✓</span></td>
+              <td data-cell="Doing it by hand"><span class="no" aria-label="No">—</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Configuration under a minute</th>
+              <td data-cell="Threshold"><span class="yes" aria-label="Yes">✓</span></td>
+              <td data-cell="Calendar blocking apps"><span class="no" aria-label="No">—</span></td>
+              <td data-cell="Doing it by hand"><span class="yes" aria-label="Yes">✓</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Weekly report of what it changed</th>
+              <td data-cell="Threshold"><span class="yes" aria-label="Yes">✓</span></td>
+              <td data-cell="Calendar blocking apps"><span class="no" aria-label="No">—</span></td>
+              <td data-cell="Doing it by hand"><span class="no" aria-label="No">—</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Free for one calendar</th>
+              <td data-cell="Threshold"><span class="yes" aria-label="Yes">✓</span></td>
+              <td data-cell="Calendar blocking apps"><span class="yes" aria-label="Yes">✓</span></td>
+              <td data-cell="Doing it by hand"><span class="yes" aria-label="Yes">✓</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="faq">
+    <div class="wrap faq-wrap">
+      <h2 class="band-title mb-5">The questions people actually ask</h2>
+      <div class="faq">
+          <details name="faq">
+            <summary>What does it actually have access to?</summary>
+            <div class="faq-body"><p class="fg-2 mb-0">Read and write on your calendar events, and nothing else. Not your mail, not your files, not your contacts. You can revoke it from Google or Microsoft directly without telling us.</p></div>
+          </details>
+          <details name="faq">
+            <summary>Will it cancel meetings I care about?</summary>
+            <div class="faq-body"><p class="fg-2 mb-0">It never cancels. It declines new invitations that land on a protected block, and only when you have more than one such block that day — so a single unavoidable meeting still gets through.</p></div>
+          </details>
+          <details name="faq">
+            <summary>What happens to the declines?</summary>
+            <div class="faq-body"><p class="fg-2 mb-0">The organiser gets a normal decline with the next two times you are genuinely free. Most people rebook into one of them, which is the point.</p></div>
+          </details>
+          <details name="faq">
+            <summary>Does everyone on my team need it?</summary>
+            <div class="faq-body"><p class="fg-2 mb-0">No, and that is deliberate. It works entirely from your side of the calendar. Nobody else installs anything or changes how they book.</p></div>
+          </details>
+          <details name="faq">
+            <summary>What does it cost?</summary>
+            <div class="faq-body"><p class="fg-2 mb-0">Free for one calendar, for as long as you like. £6 a month if you want more than one, or the weekly report by email.</p></div>
+          </details>
+          <details name="faq">
+            <summary>How do I turn it off?</summary>
+            <div class="faq-body"><p class="fg-2 mb-0">One switch, and every protected block disappears immediately. Disconnecting the calendar deletes what we hold within 24 hours.</p></div>
+          </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="closer">
+    <div class="wrap">
+      <h2 class="closer-title mb-3">Get your afternoons back</h2>
+      <p class="fg-2 mb-5">Free for one calendar. Takes under a minute. Turn it off with one switch.</p>
+      <form class="signup" data-signup data-demo-form novalidate>
+        <label class="visually-hidden" for="email-closer">Work email</label>
+        <input class="form-control form-control-lg" type="email" id="email-closer" name="email"
+               placeholder="you@company.com" autocomplete="email" required data-signup-input>
+        <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Check your inbox ✓">Get early access</button>
+        <div class="invalid-feedback">A work email, so we can tell you when your calendar is supported.</div>
+      </form>
+      <p class="hero-note mb-0">1,400 people on the list. We are letting in about 80 a week.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Sticky bar. Appears only once the hero form has scrolled away, and shares
+     its value, so a half-typed address is never lost. -->
+<div class="sticky-bar" data-sticky hidden>
+  <div class="wrap sticky-in">
+    <p class="sticky-copy mb-0"><strong>Get your afternoons back.</strong> <span class="fg-3">Free for one calendar.</span></p>
+    <form class="signup" data-signup data-demo-form novalidate>
+        <label class="visually-hidden" for="email-sticky">Work email</label>
+        <input class="form-control" type="email" id="email-sticky" name="email"
+               placeholder="you@company.com" autocomplete="email" required data-signup-input>
+        <button class="btn-solid theme-primary" type="submit" data-done-text="Check your inbox ✓">Get early access</button>
+        <div class="invalid-feedback">A work email, so we can tell you when your calendar is supported.</div>
+      </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <p class="fs-sm fg-3 mb-0">
+      &copy; <span data-year>2026</span> Threshold &mdash; a free Bootstrap 6 template.
+      The product, the people quoted and every figure here are fictional.
+    </p>
+    <p class="fs-sm fg-3 mb-0"><a href="index.html">Privacy</a> &middot; <a href="index.html">Terms</a> &middot; <a href="thanks.html">Status</a></p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

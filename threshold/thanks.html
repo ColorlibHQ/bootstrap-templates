@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You are on the list — Threshold Bootstrap 6 Landing Page Template</title>
+<meta name="description" content="A thank-you page with queue position, a referral link with copy-to-clipboard, and something useful to do while waiting.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap head-in">
+    <a class="wordmark" href="index.html"><span class="wordmark-mark" aria-hidden="true">◤</span>Threshold</a>
+    <nav class="head-nav d-none md:d-flex" aria-label="Main">
+      <a class="head-link" href="#how">How it works</a>
+      <a class="head-link" href="#compare">Compare</a>
+      <a class="head-link" href="#faq">Questions</a>
+    </nav>
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+      <a class="btn-outline theme-secondary btn-sm" href="#get">Get early access</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="thanks">
+  <div class="wrap thanks-in">
+    <span class="thanks-tick" aria-hidden="true">✓</span>
+    <h1 class="hero-title mb-3">You are on the list.</h1>
+    <p class="hero-lede mb-5">
+      Position <strong>1,401</strong>. We let in about eighty people a week, so
+      that is roughly a fortnight. You will get one email when it is your turn
+      and nothing before it.
+    </p>
+
+    <div class="thanks-grid">
+      <div class="thanks-card">
+        <h2 class="feat-name mb-2">Move up the list</h2>
+        <p class="fg-2 fs-sm mb-3">Anyone who joins through your link puts you five places forward. Ten of them and you are in this week.</p>
+        <div class="copy-row">
+          <input class="form-control" type="text" value="threshold.example/r/9K4D2" readonly aria-label="Your referral link" id="refLink">
+          <button class="btn-solid theme-primary" type="button" data-copy="#refLink" data-done-text="Copied ✓">Copy</button>
+        </div>
+      </div>
+
+      <div class="thanks-card">
+        <h2 class="feat-name mb-2">While you wait</h2>
+        <p class="fg-2 fs-sm mb-3">The manual version of this works. Block two hours tomorrow afternoon and decline anything that lands on it with an alternative time.</p>
+        <a class="btn-outline theme-secondary" href="index.html#how">Read how it works</a>
+      </div>
+    </div>
+
+    <p class="fs-sm fg-3 mt-5 mb-0">
+      Wrong address, or changed your mind? <a href="index.html">Start again</a> —
+      we have not stored anything a delete cannot remove.
+    </p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <p class="fs-sm fg-3 mb-0">
+      &copy; <span data-year>2026</span> Threshold &mdash; a free Bootstrap 6 template.
+      The product, the people quoted and every figure here are fictional.
+    </p>
+    <p class="fs-sm fg-3 mb-0"><a href="index.html">Privacy</a> &middot; <a href="index.html">Terms</a> &middot; <a href="thanks.html">Status</a></p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

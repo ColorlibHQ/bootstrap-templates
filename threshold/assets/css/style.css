@@ -1,0 +1,309 @@
+/*!
+ * Threshold — Bootstrap 6 landing page
+ *
+ * Design language: one page, one job. A single warm green accent, a centred
+ * measure, and nothing competing with the email field.
+ *
+ * The structural idea carrying the identity is the capture form. A landing page
+ * has one in the hero, one in the closer and one in a sticky bar, and in every
+ * template they are three unrelated inputs — so a half-typed address is lost
+ * the moment the hero scrolls away. Here they share a value, and the sticky bar
+ * only appears once the hero form has genuinely left the viewport.
+ */
+
+:root {
+  --brand: oklch(52% 0.14 155);
+  --th-rule: color-mix(in oklab, var(--bs-fg-body), transparent 88%);
+  --th-warn: oklch(66% 0.15 45);
+}
+
+[data-bs-theme="light"] {
+  --bs-bg-body: oklch(99% 0.004 150);
+  --bs-bg-2: oklch(96.5% 0.008 150);
+}
+
+[data-bs-theme="dark"] {
+  --bs-bg-body: oklch(17.5% 0.01 160);
+  --bs-bg-2: oklch(21% 0.012 160);
+}
+
+.wrap { max-width: 68rem; margin-inline: auto; padding-inline: 1.25rem; }
+
+.hero-title,
+.band-title,
+.closer-title { letter-spacing: -0.032em; text-wrap: balance; font-weight: 680; line-height: 1.05; }
+
+/* ---------------------------------------------------------------
+   Header
+   --------------------------------------------------------------- */
+
+.site-header { border-bottom: 1px solid var(--th-rule); }
+.head-in { display: flex; align-items: center; gap: 1rem; padding-block: 0.7rem; }
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--bs-fg-body);
+  text-decoration: none;
+  font-weight: 750;
+  font-size: 1.1rem;
+  letter-spacing: -0.03em;
+}
+
+.wordmark-mark { color: var(--bs-primary-base); }
+
+.head-nav { gap: 1.25rem; margin-left: 1.5rem; }
+.head-link { color: var(--bs-fg-2, inherit); text-decoration: none; font-size: 0.9rem; }
+.head-link:hover { color: var(--bs-primary-fg); }
+.head-in .btn-outline { text-decoration: none; white-space: nowrap; }
+
+/* ---------------------------------------------------------------
+   Hero
+   --------------------------------------------------------------- */
+
+.hero { padding-block: 4rem 0; overflow: hidden; }
+.hero-in { text-align: center; }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--th-rule);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--bs-fg-2, inherit);
+}
+
+.pill-dot { width: 0.45rem; height: 0.45rem; border-radius: 50%; background-color: var(--bs-primary-base); }
+
+.hero-title { font-size: clamp(2.4rem, 6.5vw, 4.2rem); }
+.hero-lede { font-size: 1.15rem; color: var(--bs-fg-2, inherit); max-width: 38rem; margin-inline: auto; text-wrap: pretty; }
+.hero-note { font-size: 0.82rem; color: var(--bs-fg-3, inherit); margin-top: 0.9rem; }
+
+/* ---------------------------------------------------------------
+   Signup form
+   --------------------------------------------------------------- */
+
+.signup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 30rem;
+  margin-inline: auto;
+}
+
+.signup .form-control { flex: 1 1 14rem; min-width: 0; }
+.signup .btn-solid { flex: none; text-decoration: none; }
+.signup .invalid-feedback { flex-basis: 100%; text-align: left; }
+
+/* ---------------------------------------------------------------
+   Week grid — a product shot built in CSS
+   --------------------------------------------------------------- */
+
+.week {
+  max-width: 46rem;
+  margin: 3.5rem auto -1px;
+  padding: 1rem 1rem 0;
+  border: 1px solid var(--th-rule);
+  border-bottom: 0;
+  border-radius: var(--bs-radius-6) var(--bs-radius-6) 0 0;
+  background-color: var(--bs-bg-2);
+  text-align: left;
+}
+
+.week-head, .week-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.4rem; }
+
+.week-head { margin-bottom: 0.5rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--bs-fg-3, inherit); }
+
+.week-grid { grid-template-rows: repeat(7, 1.5rem); }
+
+.slot {
+  grid-column: var(--c);
+  grid-row: var(--r) / span var(--h, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--bs-radius-3, 5px);
+  font-size: 0.68rem;
+  font-weight: 650;
+  overflow: hidden;
+}
+
+.slot-meet { background-color: color-mix(in oklab, var(--bs-fg-body), transparent 90%); color: var(--bs-fg-3, inherit); }
+.slot-focus { background-color: var(--bs-primary-base); color: var(--bs-white); }
+.slot-dec { background-color: color-mix(in oklab, var(--th-warn), transparent 82%); color: color-mix(in oklab, var(--th-warn), black 30%); text-decoration: line-through; }
+
+[data-bs-theme="dark"] .slot-dec { color: var(--th-warn); }
+
+/* ---------------------------------------------------------------
+   Bands
+   --------------------------------------------------------------- */
+
+.logo-band { padding-block: 2rem; border-block: 1px solid var(--th-rule); background-color: var(--bs-bg-2); }
+.logo-row { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; align-items: center; font-weight: 700; opacity: 0.45; letter-spacing: -0.01em; }
+
+.band { padding-block: 4.5rem; }
+.band-alt { background-color: var(--bs-bg-2); }
+.band-title { font-size: clamp(1.6rem, 3.5vw, 2.4rem); text-align: center; }
+
+.feat-grid { display: grid; gap: 1.5rem; }
+
+@media (width >= 768px) { .feat-grid { grid-template-columns: 1fr 1fr; } }
+
+.feat { padding: 1.6rem; border: 1px solid var(--th-rule); border-radius: var(--bs-radius-6); background-color: var(--bs-bg-body); }
+
+.feat-icon {
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-bottom: 1rem;
+  border-radius: var(--bs-radius-4);
+  background-color: color-mix(in oklab, var(--bs-primary-base), transparent 88%);
+  color: var(--bs-primary-base);
+}
+
+.feat-name { font-size: 1.05rem; font-weight: 650; }
+
+.step-list { list-style: none; padding-left: 0; margin-bottom: 0; display: grid; gap: 1.75rem; max-width: 44rem; margin-inline: auto; }
+.step { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1.25rem; }
+
+.step-n {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--bs-primary-base);
+  color: var(--bs-white);
+  font-weight: 700;
+}
+
+.step-name { font-size: 1.05rem; font-weight: 650; }
+
+.quote-grid { display: grid; gap: 1.5rem; }
+
+@media (width >= 992px) { .quote-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.quote { padding: 1.6rem; border-left: 3px solid var(--bs-primary-base); background-color: var(--bs-bg-2); border-radius: 0 var(--bs-radius-6) var(--bs-radius-6) 0; }
+.quote blockquote p { font-size: 0.98rem; text-wrap: pretty; }
+.quote figcaption { font-size: 0.85rem; }
+.quote figcaption .fg-3 { font-size: 0.8rem; }
+
+.band-alt .quote { background-color: var(--bs-bg-body); }
+
+/* ---------------------------------------------------------------
+   Compare + FAQ
+   --------------------------------------------------------------- */
+
+.compare thead th:not(:first-child), .compare tbody td { text-align: center; }
+.compare thead th:nth-child(2) { color: var(--bs-primary-fg-emphasis); }
+.yes { color: var(--bs-primary-base); font-weight: 700; }
+.no { color: var(--bs-fg-3, inherit); opacity: 0.5; }
+
+@media (width < 768px) { .compare tbody td { text-align: left; } }
+
+.faq-wrap { max-width: 46rem; }
+.faq { border-top: 1px solid var(--th-rule); }
+.faq details { border-bottom: 1px solid var(--th-rule); }
+
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  border-right: 1.6px solid currentcolor;
+  border-bottom: 1.6px solid currentcolor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  opacity: 0.5;
+  flex: none;
+}
+
+.faq details[open] summary::after { transform: rotate(-135deg); }
+.faq-body { padding-bottom: 1.2rem; }
+
+/* ---------------------------------------------------------------
+   Closer + sticky bar
+   --------------------------------------------------------------- */
+
+.closer { padding-block: 5rem; text-align: center; border-top: 1px solid var(--th-rule); background-color: var(--bs-bg-2); }
+.closer-title { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+
+.sticky-bar {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 50;
+  padding-block: 0.75rem;
+  background-color: color-mix(in oklab, var(--bs-bg-body), transparent 6%);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--th-rule);
+  box-shadow: 0 -0.5rem 1.5rem -0.5rem rgb(0 0 0 / 12%);
+  animation: th-rise 0.22s ease-out;
+}
+
+@keyframes th-rise { from { transform: translateY(100%); } to { transform: none; } }
+
+@media (prefers-reduced-motion: reduce) { .sticky-bar { animation: none; } }
+
+.sticky-in { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; align-items: center; justify-content: space-between; }
+.sticky-copy { font-size: 0.92rem; }
+.sticky-in .signup { margin-inline: 0; flex: 1 1 22rem; max-width: 26rem; }
+.sticky-in .invalid-feedback { display: none; }
+
+@media (width < 576px) { .sticky-copy { display: none; } }
+
+/* ---------------------------------------------------------------
+   Thanks page
+   --------------------------------------------------------------- */
+
+.thanks { padding-block: 4.5rem 5rem; }
+.thanks-in { max-width: 42rem; text-align: center; }
+
+.thanks-tick {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--bs-primary-base);
+  color: var(--bs-white);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.thanks-grid { display: grid; gap: 1.25rem; text-align: left; }
+
+@media (width >= 768px) { .thanks-grid { grid-template-columns: 1fr 1fr; } }
+
+.thanks-card { padding: 1.5rem; border: 1px solid var(--th-rule); border-radius: var(--bs-radius-6); background-color: var(--bs-bg-2); }
+.thanks-card .btn-outline { text-decoration: none; }
+
+.copy-row { display: flex; gap: 0.5rem; }
+.copy-row .form-control { min-width: 0; font-size: 0.85rem; }
+.copy-row .btn-solid { flex: none; }
+
+/* ---------------------------------------------------------------
+   Footer
+   --------------------------------------------------------------- */
+
+.site-footer { padding-block: 2rem 5rem; border-top: 1px solid var(--th-rule); }
+.foot-in { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; }
+.site-footer a { color: inherit; }

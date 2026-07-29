@@ -1,0 +1,24 @@
+{
+  "slug": "roundtable",
+  "title": "Roundtable — Free Bootstrap 6 Forum &amp; Community Website Template",
+  "excerpt": "A free three-page Bootstrap 6 forum template whose Hot, New and Top controls genuinely reorder the board from a real ranking formula — and will show you the maths.",
+  "yoastTitle": "Roundtable — Free Bootstrap 6 Forum &amp; Community Website Template",
+  "yoastDesc": "Free Bootstrap 6 community forum template with a computed Hot ranking, working vote buttons that re-sort the board, threaded replies from a flat list, and a category index.",
+  "intro": "Roundtable is a free, premium <strong>Bootstrap 6</strong> forum and community website template. Three pages — the board, a full thread with nested replies, and a category index — with a sticky header, right rail and full light and dark mode.",
+  "note": "Forum templates ship Hot, New and Top as three tabs over one hardcoded order, so switching them moves the underline and nothing else. Here every thread carries its votes and its age, and the sort is computed: <code>hot = (votes − 1) ÷ (hours + 2)<sup>1.5</sup></code>, the same shape of decay Hacker News uses. The <code>+2</code> stops a brand-new thread with a single vote dividing by nearly zero and pinning itself to the top; the exponent is what lets a young thread overtake an older, better-voted one. A checkbox prints each thread's score on its row, which is the honest way to show a control is doing something — and the <strong>vote buttons re-rank the board as you use them</strong>. Replies are threaded by a single <code>--depth</code> custom property, so a flat list renders as a nested conversation with no wrapper per level.",
+  "summary": "Roundtable is a free, premium three-page Bootstrap 6 forum and community template. The board lists twelve threads with vote controls, category links and reply counts, sorted by a genuinely computed Hot ranking with New and Top as real alternatives; a checkbox reveals each thread's score so the formula can be checked rather than taken on trust. Voting re-sorts the board underneath you. The thread page carries the original post, six nested replies threaded by a single depth custom property rather than a wrapper per level, and a reply composer. A category index lists eight sections with thread counts and plain descriptions. Sticky header, sticky right rail with house rules and weekly stats, full light and dark mode, ESM-only vanilla JavaScript, no build step.",
+  "features": [
+    "Three pages — board, single thread, category index",
+    "Hot / New / Top genuinely reorder the board; they are not decorative tabs",
+    "Hot is (votes − 1) ÷ (hours + 2)^1.5, the Hacker News decay shape",
+    "A checkbox prints each thread's score, so the ranking can be verified",
+    "Vote buttons toggle and re-rank the board as you use them",
+    "Threaded replies from a flat list via one --depth custom property",
+    "Thread age stored in hours, so the demo never reads as years stale",
+    "Sticky right rail with categories, house rules and weekly stats",
+    "Reply composer with native validation and a frontend-only submit",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": ["bootstrap-6", "forum-community"],
+  "images": []
+}

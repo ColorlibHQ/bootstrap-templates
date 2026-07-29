@@ -1,0 +1,24 @@
+{
+  "slug": "keystone",
+  "title": "Keystone — Free Bootstrap 6 Corporate &amp; Business Website Template",
+  "excerpt": "A free three-page Bootstrap 6 corporate template built around a real mega menu — keyboard-navigable panels on desktop, a nested drawer on mobile, both from one declaration.",
+  "yoastTitle": "Keystone — Free Bootstrap 6 Corporate &amp; Business Website Template",
+  "yoastDesc": "Free Bootstrap 6 corporate and business website template with an accessible mega menu, services, case studies, four offices and a validating enquiry form. No build step.",
+  "intro": "Keystone is a free, premium <strong>Bootstrap 6</strong> corporate and business website template. Three pages — homepage, services and contact — designed for an organisation with more than five things to say about itself.",
+  "note": "Corporate sites have deep information architecture: four sections, several columns each, forty-odd destinations. Almost every Bootstrap template ships a flat five-item navbar that falls apart the moment a real company uses it. Keystone's <strong>mega menu is declared once</strong> and rendered twice — as full-width panels on desktop, as nested <code>&lt;details&gt;</code> in the drawer on mobile — so the two navigations cannot drift apart. It is also built to work without a mouse, which hover menus never are: click or <kbd>Enter</kbd> opens a panel, <kbd>Esc</kbd> closes it and returns focus to its button, tabbing out closes it, and hover only switches panels when one is <em>already</em> open — so a pointer crossing the bar on its way somewhere else never triggers anything. The mobile menu needs no JavaScript at all.",
+  "summary": "Keystone is a free, premium three-page Bootstrap 6 corporate and business template. The homepage carries a sober hero, a statistics band, four services with concrete deliverables rather than abstractions, three case studies described plainly, and four commitments the firm makes in writing. A services page expands each discipline; a contact page pairs a validating enquiry form with four office addresses and named direct contacts. Its distinguishing feature is the navigation: a mega menu declared once and rendered as desktop panels and a mobile nested-details drawer, fully keyboard operable, with hover that only follows once a panel is already open. Deep navy corporate design, full light and dark mode, ESM-only vanilla JavaScript, no build step.",
+  "features": [
+    "Three pages — homepage, services, contact",
+    "A real mega menu: four sections, multiple columns, forty destinations",
+    "Declared once, rendered as desktop panels and a mobile nested drawer",
+    "Keyboard operable: Enter opens, Esc closes and restores focus, Tab out closes",
+    "Hover only switches panels when one is already open, so nothing fires by accident",
+    "The mobile menu is nested <details> — a disclosure widget with no script",
+    "Services list concrete deliverables, not “strategic support”",
+    "Validating enquiry form, four offices, named press contact",
+    "Statistics band and case studies driven from one declaration",
+    "Bootstrap 6 vendored at a pinned commit, ESM-only, no build step"
+  ],
+  "categories": ["bootstrap-6", "business-services"],
+  "images": []
+}

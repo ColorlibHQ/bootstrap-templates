@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why does `text-wrap: balance` do nothing on my headings? — Roundtable Bootstrap 6 Forum Template</title>
+<meta name="description" content="A forum thread page with nested replies rendered from a flat list by depth, vote controls and a reply composer.">
+<link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap head-in">
+    <a class="wordmark" href="index.html">
+      <span class="wordmark-mark" aria-hidden="true">◍</span>Roundtable
+    </a>
+    <nav class="head-nav d-none md:d-flex" aria-label="Main">
+        <a class="head-link" href="index.html">Threads</a>
+        <a class="head-link is-active" href="thread.html">A thread</a>
+        <a class="head-link" href="categories.html">Categories</a>
+    </nav>
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="form-control form-adorn search-field d-none lg:d-flex">
+        <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14" stroke-linecap="round"/></svg></div>
+        <input type="search" class="form-ghost" placeholder="Search the forum…" aria-label="Search">
+      </div>
+      <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
+  <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
+  <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+</button>
+      <a class="btn-solid theme-primary btn-sm" href="thread.html">New thread</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <div class="wrap board">
+
+    <div class="board-main">
+      <p class="crumbs mb-3"><a href="index.html">Threads</a> <span class="fg-3">/</span> <a href="categories.html">CSS</a></p>
+
+      <article class="op">
+        <div class="op-head">
+          <div class="vote">
+            <button class="vote-btn" type="button" aria-label="Upvote this thread" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+            <span class="vote-n" data-vote-n>148</span>
+          </div>
+          <div>
+            <h1 class="op-title mb-2">Why does `text-wrap: balance` do nothing on my headings?<span class="flag flag-solved">solved</span></h1>
+            <p class="thread-meta mb-0">
+              <span class="avatar avatar-xs"><span class="avatar-initials">NO</span></span>
+              <span>Nadia Osei</span> <span class="fg-3">&middot; 5h ago &middot; 34 replies</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="prose op-body">
+          <p>
+            I have a heading that wraps to five or six lines on mobile and
+            <code>text-wrap: balance</code> appears to do absolutely nothing.
+            Same heading at three lines and it balances perfectly.
+          </p>
+          <p>
+            No overrides that I can find, no flex weirdness, and it behaves the
+            same in Chrome and Safari. Reduced test case is in the reply below.
+            Am I misreading what the property is for?
+          </p>
+        </div>
+      </article>
+
+      <h2 class="replies-title">6 replies</h2>
+      <ul class="reply-list">
+          <li class="reply" style="--depth:0">
+            <div class="vote vote-sm">
+              <button class="vote-btn" type="button" aria-label="Upvote reply from Wes Tremayne" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+              <span class="vote-n" data-vote-n>62</span>
+            </div>
+            <div class="reply-main">
+              <p class="reply-meta mb-2">
+                <span class="avatar avatar-xs"><span class="avatar-initials">WT</span></span>
+                <strong>Wes Tremayne</strong>
+                <span class="fg-3">&middot; 4h ago</span>
+              </p>
+              <p class="reply-body mb-2">The property only balances up to four lines — past that browsers bail out because the line-breaking cost is quadratic. If your heading is wrapping to five, you will get nothing and no warning.</p>
+              <p class="reply-actions mb-0"><button class="link-btn" type="button">Reply</button><button class="link-btn" type="button">Share</button></p>
+            </div>
+          </li>
+          <li class="reply" style="--depth:1">
+            <div class="vote vote-sm">
+              <button class="vote-btn" type="button" aria-label="Upvote reply from Nadia Osei" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+              <span class="vote-n" data-vote-n>18</span>
+            </div>
+            <div class="reply-main">
+              <p class="reply-meta mb-2">
+                <span class="avatar avatar-xs"><span class="avatar-initials">NO</span></span>
+                <strong>Nadia Osei</strong>
+                <span class="fg-3">&middot; 4h ago</span>
+              </p>
+              <p class="reply-body mb-2">That is exactly it, mine was six lines. Shortening the heading fixed it, which is probably the real lesson.</p>
+              <p class="reply-actions mb-0"><button class="link-btn" type="button">Reply</button><button class="link-btn" type="button">Share</button></p>
+            </div>
+          </li>
+          <li class="reply" style="--depth:1">
+            <div class="vote vote-sm">
+              <button class="vote-btn" type="button" aria-label="Upvote reply from Marit Halvorsen" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+              <span class="vote-n" data-vote-n>41</span>
+            </div>
+            <div class="reply-main">
+              <p class="reply-meta mb-2">
+                <span class="avatar avatar-xs"><span class="avatar-initials">MH</span></span>
+                <strong>Marit Halvorsen</strong>
+                <span class="fg-3">&middot; 3h ago</span>
+              </p>
+              <p class="reply-body mb-2">Worth adding: it is <code>balance</code> for headings and <code>pretty</code> for body copy. <code>pretty</code> has no line limit because it only fixes the last line, so it is the safe one to apply broadly.</p>
+              <p class="reply-actions mb-0"><button class="link-btn" type="button">Reply</button><button class="link-btn" type="button">Share</button></p>
+            </div>
+          </li>
+          <li class="reply" style="--depth:2">
+            <div class="vote vote-sm">
+              <button class="vote-btn" type="button" aria-label="Upvote reply from Wes Tremayne" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+              <span class="vote-n" data-vote-n>12</span>
+            </div>
+            <div class="reply-main">
+              <p class="reply-meta mb-2">
+                <span class="avatar avatar-xs"><span class="avatar-initials">WT</span></span>
+                <strong>Wes Tremayne</strong>
+                <span class="fg-3">&middot; 3h ago</span>
+              </p>
+              <p class="reply-body mb-2">Yes — and <code>pretty</code> is cheap enough that I set it on <code>p</code> globally now.</p>
+              <p class="reply-actions mb-0"><button class="link-btn" type="button">Reply</button><button class="link-btn" type="button">Share</button></p>
+            </div>
+          </li>
+          <li class="reply" style="--depth:0">
+            <div class="vote vote-sm">
+              <button class="vote-btn" type="button" aria-label="Upvote reply from Dilan Aksoy" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+              <span class="vote-n" data-vote-n>9</span>
+            </div>
+            <div class="reply-main">
+              <p class="reply-meta mb-2">
+                <span class="avatar avatar-xs"><span class="avatar-initials">DA</span></span>
+                <strong>Dilan Aksoy</strong>
+                <span class="fg-3">&middot; 2h ago</span>
+              </p>
+              <p class="reply-body mb-2">Unrelated but related: it also does nothing inside a flex or grid item that has not been given a width, because there is no line box to balance against yet.</p>
+              <p class="reply-actions mb-0"><button class="link-btn" type="button">Reply</button><button class="link-btn" type="button">Share</button></p>
+            </div>
+          </li>
+          <li class="reply" style="--depth:0">
+            <div class="vote vote-sm">
+              <button class="vote-btn" type="button" aria-label="Upvote reply from Josephine Marr" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12.5v-9M4 7.5 8 3.5l4 4"/></svg></button>
+              <span class="vote-n" data-vote-n>4</span>
+            </div>
+            <div class="reply-main">
+              <p class="reply-meta mb-2">
+                <span class="avatar avatar-xs"><span class="avatar-initials">JM</span></span>
+                <strong>Josephine Marr</strong>
+                <span class="fg-3">&middot; 1h ago</span>
+              </p>
+              <p class="reply-body mb-2">Marking this solved. The four-line limit is not in the MDN summary and it should be.</p>
+              <p class="reply-actions mb-0"><button class="link-btn" type="button">Reply</button><button class="link-btn" type="button">Share</button></p>
+            </div>
+          </li>
+      </ul>
+
+      <section class="composer">
+        <h2 class="rail-title mb-3">Add a reply</h2>
+        <form data-demo-form novalidate>
+          <label class="form-label visually-hidden" for="replyBody">Your reply</label>
+          <textarea class="form-control mb-3" id="replyBody" rows="4" placeholder="Be the person you needed when you were stuck." required></textarea>
+          <div class="invalid-feedback mb-2">A reply needs some text in it.</div>
+          <div class="d-flex flex-wrap gap-2 align-items-center">
+            <button class="btn-solid theme-primary" type="submit" data-done-text="Posted ✓">Post reply</button>
+            <p class="fs-xs fg-3 mb-0">Markdown works. Be kind; rule one applies.</p>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <aside class="rail">
+      <section class="rail-card">
+        <h2 class="rail-title">About this thread</h2>
+        <dl class="rail-stats">
+          <div><dt>Category</dt><dd>CSS</dd></div>
+          <div><dt>Started</dt><dd>5h ago</dd></div>
+          <div><dt>Replies</dt><dd>34</dd></div>
+          <div><dt>Status</dt><dd>Solved</dd></div>
+        </dl>
+      </section>
+
+      <section class="rail-card">
+        <h2 class="rail-title">Related</h2>
+        <ul class="rail-list">
+          <li><a href="index.html">Container queries finally clicked for me</a></li>
+          <li><a href="index.html">PSA: <code>:user-invalid</code> is not <code>:invalid</code></a></li>
+          <li><a href="index.html">Is anyone actually using <code>@scope</code>?</a></li>
+        </ul>
+      </section>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="fs-sm fg-3 mb-0">
+      &copy; <span data-year>2026</span> Roundtable &mdash; a free Bootstrap 6 template.
+      Every member, thread and reply here is fictional.
+    </p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
