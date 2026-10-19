@@ -96,3 +96,9 @@
 /* Facts band */
 .facts { display: grid; gap: 1.5rem; grid-template-columns: repeat(2, minmax(0,1fr)); }
 @media (width >= 768px) { .facts { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+
+/* Stage filter state */
+.programme.lift { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, opacity 0.2s ease; }
+.programme.is-dimmed { opacity: 0.4; }
+.programme.is-picked { box-shadow: 0 0 0 2px var(--bs-primary-base); }
+@media (prefers-reduced-motion: reduce) { .programme.lift { transition: none; } }
