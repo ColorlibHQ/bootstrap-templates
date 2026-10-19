@@ -139,11 +139,11 @@ VARIANTS = [
      '<div class="grid4"><i></i><i></i><i></i><i></i></div><div class="grid4"><i></i><i></i><i></i><i></i></div>'
      '<div class="grid4"><i></i><i></i><i></i><i></i></div>',
      False, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Invoices</h1>
-<p class="fg-2 mb-4">A plain striped table. Everything else in this pack builds on this markup.</p>
+<p class="fg-2 mb-5">A plain striped table. Everything else in this pack builds on this markup.</p>
 <div class="table-shell">
   <div class="table-responsive">
     <table class="table table-striped">
-      <caption class="fs-sm fg-3 px-3">Outstanding and settled invoices, June&#8211;July 2026</caption>
+      <caption class="fs-sm fg-3 px-4">Outstanding and settled invoices, June&#8211;July 2026</caption>
       <thead>
         <tr>
 {head_html()}
@@ -162,7 +162,7 @@ VARIANTS = [
      '<div class="grid4"><i></i><i></i><i></i><i></i></div><div class="grid4"><i></i><i></i><i></i><i></i></div>'
      '<div class="grid4"><i></i><i></i><i></i><i></i></div><div class="grid4"><i></i><i></i><i></i><i></i></div>',
      False, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Compact ledger</h1>
-<p class="fg-2 mb-4">Ruled and dense. Hover highlighting makes long rows readable across.</p>
+<p class="fg-2 mb-5">Ruled and dense. Hover highlighting makes long rows readable across.</p>
 <div class="table-responsive">
   <table class="table table-bordered table-sm table-hover">
     <thead>
@@ -180,7 +180,7 @@ VARIANTS = [
      "<code>.md:table-stacked</code> is new in v6 &#8212; below the breakpoint each row becomes a labelled block instead of forcing a horizontal scroll. Narrow the window to see it.",
      '<i class="tall"></i><i class="tall"></i><i class="tall"></i>',
      False, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Reflowing table</h1>
-<p class="fg-2 mb-4">
+<p class="fg-2 mb-5">
   On a phone this stops being a grid and becomes a stack of labelled rows, with
   no horizontal scrolling and no truncation. Resize the window to watch it change.
 </p>
@@ -196,7 +196,7 @@ VARIANTS = [
       </tbody>
   </table>
 </div>
-<p class="fs-sm fg-3 mt-3 mb-0">
+<p class="fs-sm fg-3 mt-4 mb-0">
   Two things catch people out. The class is <code>md:table-stacked</code> &#8212; the bare
   <code>.table-stacked</code> stacks at <em>every</em> width. And the labels come from a
   <code>data-cell</code> attribute on each cell, not from the hidden <code>&lt;thead&gt;</code>.
@@ -208,7 +208,7 @@ VARIANTS = [
      '<div class="grid4"><i></i><i></i><i></i><i></i></div><div class="grid4"><i></i><i></i><i></i><i></i></div>'
      '<div class="grid4"><i></i><i></i><i></i><i></i></div>',
      False, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Sortable columns</h1>
-<p class="fg-2 mb-4">Click any header. Sorting is done on the DOM rows &#8212; fine to a few hundred rows.</p>
+<p class="fg-2 mb-5">Click any header. Sorting is done on the DOM rows &#8212; fine to a few hundred rows.</p>
 <div class="table-shell">
   <div class="table-responsive">
     <table class="table table-hover" data-sortable>
@@ -223,7 +223,7 @@ VARIANTS = [
     </table>
   </div>
 </div>
-<p class="fs-sm fg-3 mt-3 mb-0">
+<p class="fs-sm fg-3 mt-4 mb-0">
   Amount sorts numerically because the header carries <code>data-sort-type="num"</code>;
   everything else sorts as text.
 </p>"""),
@@ -234,7 +234,7 @@ VARIANTS = [
      '<div class="grid4"><i class="head"></i><i class="head"></i><i class="head"></i><i class="head"></i></div>'
      '<div class="grid4"><i></i><i></i><i></i><i></i></div><div class="grid4"><i></i><i></i><i></i><i></i></div>',
      True, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Filterable ledger</h1>
-<p class="fg-2 mb-4">Text search across every cell, plus a status filter. Both narrow the same row set.</p>
+<p class="fg-2 mb-5">Text search across every cell, plus a status filter. Both narrow the same row set.</p>
 <div class="table-shell" data-filterable>
   <div class="table-head">
     <div class="form-control form-adorn" style="flex:1 1 14rem">
@@ -258,7 +258,7 @@ VARIANTS = [
       </tbody>
     </table>
   </div>
-  <p class="p-4 mb-0 fg-3 text-center" data-filter-empty hidden>Nothing matches that search.</p>
+  <p class="p-5 mb-0 fg-3 text-center" data-filter-empty hidden>Nothing matches that search.</p>
 </div>"""),
 
     ("06-paginated", "Paginated", "Client-side pagination",
@@ -267,7 +267,7 @@ VARIANTS = [
      '<div class="grid4"><i></i><i></i><i></i><i></i></div><div class="grid4"><i></i><i></i><i></i><i></i></div>'
      '<div class="row2"><i class="cta" style="width:2rem"></i><i class="cta" style="width:2rem"></i></div>',
      False, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Paginated ledger</h1>
-<p class="fg-2 mb-4">Deliberately three per page so the paging is visible with only eight rows.</p>
+<p class="fg-2 mb-5">Deliberately three per page so the paging is visible with only eight rows.</p>
 <div class="table-shell" data-paginate="3">
   <div class="table-responsive">
     <table class="table">
@@ -295,11 +295,11 @@ VARIANTS = [
      '<div class="grid4"><i class="cta" style="width:100%;height:.5rem"></i><i></i><i></i><i></i></div>'
      '<div class="grid4"><i></i><i></i><i></i><i></i></div>',
      True, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Selectable rows</h1>
-<p class="fg-2 mb-4">Tick some rows. The header checkbox reflects a partial selection as indeterminate.</p>
+<p class="fg-2 mb-5">Tick some rows. The header checkbox reflects a partial selection as indeterminate.</p>
 <div class="table-shell" data-selectable>
   <div class="bulk-bar" data-bulk-bar hidden>
     <strong class="fs-sm" data-bulk-count>0 selected</strong>
-    <div class="d-flex flex-wrap gap-2 ms-auto">
+    <div class="d-flex flex-wrap gap-3 ms-auto">
       <button class="btn-outline theme-secondary btn-sm" type="button">Export</button>
       <button class="btn-outline theme-secondary btn-sm" type="button">Send reminder</button>
       <button class="btn-solid theme-danger btn-sm" type="button">Void</button>
@@ -325,7 +325,7 @@ VARIANTS = [
      '<div class="grid3"><i class="tall"></i><i class="tall"></i><i class="tall"></i></div>'
      '<div class="grid3"><i class="tall"></i><i class="tall"></i><i class="tall"></i></div>',
      True, """<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Rich cells</h1>
-<p class="fg-2 mb-4">A cell can hold a small layout. It should still be one idea per column.</p>
+<p class="fg-2 mb-5">A cell can hold a small layout. It should still be one idea per column.</p>
 <div class="table-shell">
   <div class="table-responsive">
     <table class="table table-hover align-middle">
@@ -344,7 +344,7 @@ VARIANTS = [
             <span class="d-block fw-semibold">Northwind Trading</span>
             <span class="fs-xs fg-3">Renewal &middot; 14 seats</span>
           </th>
-          <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">PN</span></span> Priya N.</span></td>
+          <td><span class="d-inline-flex align-items-center gap-3"><span class="avatar avatar-sm"><span class="avatar-initials">PN</span></span> Priya N.</span></td>
           <td><span class="badge badge-subtle theme-success">Won</span></td>
           <td>
             <div class="progress" role="progressbar" aria-label="Completion" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
@@ -359,7 +359,7 @@ VARIANTS = [
             <span class="d-block fw-semibold">Pemberton Civils</span>
             <span class="fs-xs fg-3">New business &middot; 60 seats</span>
           </th>
-          <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">ML</span></span> Marcus L.</span></td>
+          <td><span class="d-inline-flex align-items-center gap-3"><span class="avatar avatar-sm"><span class="avatar-initials">ML</span></span> Marcus L.</span></td>
           <td><span class="badge badge-subtle theme-warning">Negotiation</span></td>
           <td>
             <div class="progress" role="progressbar" aria-label="Completion" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
@@ -374,7 +374,7 @@ VARIANTS = [
             <span class="d-block fw-semibold">Sable Interiors</span>
             <span class="fs-xs fg-3">Expansion &middot; 8 seats</span>
           </th>
-          <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">DR</span></span> Dana R.</span></td>
+          <td><span class="d-inline-flex align-items-center gap-3"><span class="avatar avatar-sm"><span class="avatar-initials">DR</span></span> Dana R.</span></td>
           <td><span class="badge badge-subtle theme-primary">Proposal</span></td>
           <td>
             <div class="progress" role="progressbar" aria-label="Completion" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
@@ -389,7 +389,7 @@ VARIANTS = [
             <span class="d-block fw-semibold">Halden &amp; Co</span>
             <span class="fs-xs fg-3">New business &middot; 3 seats</span>
           </th>
-          <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">TB</span></span> Tomas B.</span></td>
+          <td><span class="d-inline-flex align-items-center gap-3"><span class="avatar avatar-sm"><span class="avatar-initials">TB</span></span> Tomas B.</span></td>
           <td><span class="badge badge-subtle theme-secondary">Qualifying</span></td>
           <td>
             <div class="progress" role="progressbar" aria-label="Completion" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
@@ -411,7 +411,7 @@ VARIANTS = [
      '<div class="grid4"><i class="head"></i><i></i><i></i><i></i></div>'
      '<div class="grid4"><i class="head"></i><i></i><i></i><i></i></div>',
      True, """<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Sticky header, pinned column</h1>
-<p class="fg-2 mb-4">Scroll the box in both directions &#8212; the header row and the reference column stay put.</p>
+<p class="fg-2 mb-5">Scroll the box in both directions &#8212; the header row and the reference column stay put.</p>
 <div class="table-shell">
   <div class="table-scroll table-pin">
     <table class="table table-sm table-hover mb-0" style="min-width:60rem">
@@ -433,7 +433,7 @@ VARIANTS = [
     </table>
   </div>
 </div>
-<p class="fs-sm fg-3 mt-3 mb-0">
+<p class="fs-sm fg-3 mt-4 mb-0">
   Rows are generated by the page script purely to make the box tall enough to
   scroll &#8212; the sticky behaviour itself is pure CSS.
 </p>"""),
@@ -445,11 +445,11 @@ VARIANTS = [
      '<div class="grid4"><i class="w75"></i><i></i><i></i><i></i></div>'
      '<div class="grid4"><i class="w75"></i><i></i><i></i><i></i></div>',
      True, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Feature comparison</h1>
-<p class="fg-2 mb-4">Ticks and crosses carry visually-hidden text, so the meaning survives without the icon.</p>
+<p class="fg-2 mb-5">Ticks and crosses carry visually-hidden text, so the meaning survives without the icon.</p>
 <div class="table-shell">
   <div class="table-responsive">
     <table class="table table-hover align-middle mb-0">
-      <caption class="fs-sm fg-3 px-3">All plans billed annually. Prices exclude VAT.</caption>
+      <caption class="fs-sm fg-3 px-4">All plans billed annually. Prices exclude VAT.</caption>
       <thead>
         <tr>
           <th scope="col" style="min-width:12rem">Feature</th>
@@ -487,9 +487,9 @@ def write_variant(i, folder, nav, card, blurb, sketch, wide, body):
     html += f"""
 <div class="variant-bar">
   <a class="btn-text btn-sm" href="../index.html">&#8592; All tables</a>
-  <span class="fs-sm fw-semibold ms-2">{card}</span>
+  <span class="fs-sm fw-semibold ms-3">{card}</span>
   <span class="fs-xs fg-3 d-none md:d-inline">{i + 1} of {len(VARIANTS)}</span>
-  <div class="d-flex align-items-center gap-2 ms-auto">
+  <div class="d-flex align-items-center gap-3 ms-auto">
     <a class="btn-icon btn-sm" href="../{VARIANTS[prev_i][0]}/index.html" aria-label="Previous table">&#8249;</a>
     <a class="btn-icon btn-sm" href="../{VARIANTS[next_i][0]}/index.html" aria-label="Next table">&#8250;</a>
     {TOGGLE}
@@ -528,14 +528,14 @@ def write_index():
         desc="Ten free Bootstrap 6 table templates — striped, bordered, mobile-reflowing, sortable, filterable, paginated, selectable, rich cells, sticky header and a comparison matrix. No build step, no datatable library.",
         p="")
     html += f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#tables">Skip to the tables</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#tables">Skip to the tables</a>
 
 <div class="pack-head">
   <div class="container">
-    <div class="d-flex flex-wrap align-items-start gap-3">
+    <div class="d-flex flex-wrap align-items-start gap-4">
       <div class="me-auto" style="max-width:44rem">
-        <span class="badge badge-subtle theme-primary mb-3">Bootstrap 6.0.0-alpha1</span>
-        <h1 class="fs-4xl fw-bold mb-3" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
+        <span class="badge badge-subtle theme-primary mb-4">Bootstrap 6.0.0-alpha1</span>
+        <h1 class="fs-4xl fw-bold mb-4" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
         <p class="fs-lg fg-2 mb-0">
           Ten table layouts covering what real admin and reporting screens need &#8212;
           sorting, filtering, pagination, row selection and a pinned-column matrix.
@@ -554,8 +554,8 @@ def write_index():
 {chr(10).join(cards)}
     </div>
 
-    <section class="mt-9" style="max-width:46rem">
-      <h2 class="fs-2xl fw-bold mb-4" style="letter-spacing:-.02em">Using these</h2>
+    <section class="mt-12" style="max-width:46rem">
+      <h2 class="fs-2xl fw-bold mb-5" style="letter-spacing:-.02em">Using these</h2>
       <div class="prose">
         <p>Each table is a standalone page. Copy the markup out of the one you want
         and drop it into your project. The static variants need only Bootstrap 6&#8217;s
@@ -597,8 +597,8 @@ def write_index():
   </div>
 </main>
 
-<footer class="site-footer bg-2 py-6 mt-9">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+<footer class="site-footer bg-2 py-7 mt-12">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
     <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> {PACK_TITLE}. A free pack for uicookies.</p>
     <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
   </div>

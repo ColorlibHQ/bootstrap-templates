@@ -97,7 +97,7 @@ MARK = """<svg class="brand-glyph" width="24" height="24" viewBox="0 0 24 24" fi
 def chrome(home=True):
     p = "" if home else "index.html"
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <nav class="navbar lg:navbar-expand" aria-label="Main">
@@ -109,8 +109,8 @@ def chrome(home=True):
           <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
         </div>
-        <div class="drawer-body mb-2 lg:mb-0">
-          <ul class="nav navbar-nav ms-auto lg:gap-4">
+        <div class="drawer-body mb-3 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-5">
             <li class="nav-item"><a class="nav-link" href="{p}#product">Product</a></li>
             <li class="nav-item"><a class="nav-link" href="{p}#developers">Developers</a></li>
             <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
@@ -119,7 +119,7 @@ def chrome(home=True):
         </div>
       </dialog>
 
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         {TOGGLE}
         <a class="btn-text theme-secondary sign-in" href="#developers">Sign in</a>
         <a class="btn-solid theme-primary" href="pricing.html">Start building</a>
@@ -134,26 +134,26 @@ def chrome(home=True):
 
 
 FOOTER = """
-<footer class="site-footer section pb-5">
+<footer class="site-footer section pb-6">
   <div class="container">
-    <div class="row g-5">
+    <div class="row g-6">
       <div class="lg:col-4">
-        <p class="wordmark mb-3">""" + MARK + """<span>Ledgerline</span></p>
+        <p class="wordmark mb-4">""" + MARK + """<span>Ledgerline</span></p>
         <p class="fg-2 fs-sm mb-0" style="max-width:22rem">
           Payments, payouts and a double-entry ledger behind one API. Priced so
           you can work out the bill yourself.
         </p>
       </div>
       <div class="md:col-4 lg:col-2">
-        <p class="eyebrow fs-xs fg-3 mb-3">Product</p>
+        <p class="eyebrow fs-xs fg-3 mb-4">Product</p>
         <ul class="link-list"><li><a href="index.html#product">Payments</a></li><li><a href="index.html#product">Payouts</a></li><li><a href="index.html#product">Ledger API</a></li><li><a href="pricing.html">Pricing</a></li></ul>
       </div>
       <div class="md:col-4 lg:col-2">
-        <p class="eyebrow fs-xs fg-3 mb-3">Developers</p>
+        <p class="eyebrow fs-xs fg-3 mb-4">Developers</p>
         <ul class="link-list"><li><a href="index.html#developers">Quickstart</a></li><li><a href="index.html#developers">API reference</a></li><li><a href="index.html#developers">Status</a></li><li><a href="index.html#security">Security</a></li></ul>
       </div>
       <div class="md:col-4 lg:col-4">
-        <p class="eyebrow fs-xs fg-3 mb-3">Regulatory</p>
+        <p class="eyebrow fs-xs fg-3 mb-4">Regulatory</p>
         <p class="fg-2 fs-sm mb-0">
           Ledgerline is a fictional company in a free website template. Nothing
           here is a real financial product, a real rate, or regulated by anyone.
@@ -161,7 +161,7 @@ FOOTER = """
       </div>
     </div>
 
-    <hr class="my-5">
+    <hr class="my-6">
 
     <p class="fs-xs fg-3 mb-0">&copy; <span data-year>2026</span> Ledgerline &mdash; a free Bootstrap 6 template.</p>
   </div>
@@ -186,10 +186,10 @@ def calculator(compact=False):
     cards = "\n".join(f"""          <article class="plan" data-plan="{k}">
             <div class="plan-flag" data-best hidden>Cheapest for you</div>
             <h3 class="plan-name">{n}</h3>
-            <p class="plan-rate mb-3">{money(b)}/mo &middot; {p * 100:.4g}% + {int(f * 100)}p</p>
+            <p class="plan-rate mb-4">{money(b)}/mo &middot; {p * 100:.4g}% + {int(f * 100)}p</p>
             <p class="plan-total mb-1"><span data-total>—</span><small>/month</small></p>
-            <p class="plan-eff fg-3 fs-sm mb-4">Effective rate <span data-eff>—</span></p>
-            <p class="fg-2 fs-sm mb-4">{blurb}</p>
+            <p class="plan-eff fg-3 fs-sm mb-5">Effective rate <span data-eff>—</span></p>
+            <p class="fg-2 fs-sm mb-5">{blurb}</p>
             <a class="btn-outline theme-secondary plan-cta" href="#start">Choose {n}</a>
           </article>""" for k, n, b, p, f, blurb in PLANS)
 
@@ -228,16 +228,16 @@ def page_index():
     ) + chrome() + f"""
 <section class="hero">
   <div class="container">
-    <div class="row g-6 align-items-center">
+    <div class="row g-7 align-items-center">
       <div class="lg:col-6">
-        <p class="pill mb-4"><span class="pill-dot" aria-hidden="true"></span> Ledger API v3 is out of beta</p>
-        <h1 class="hero-title fs-5xl mb-4">Payments infrastructure that shows its working.</h1>
-        <p class="hero-lede fs-lg fg-2 mb-5">
+        <p class="pill mb-5"><span class="pill-dot" aria-hidden="true"></span> Ledger API v3 is out of beta</p>
+        <h1 class="hero-title fs-5xl mb-5">Payments infrastructure that shows its working.</h1>
+        <p class="hero-lede fs-lg fg-2 mb-6">
           Card payments, payouts and a proper double-entry ledger behind one API.
           Our pricing page does the arithmetic for you and will happily tell you
           the free plan is the right one.
         </p>
-        <div class="d-flex flex-wrap gap-3 mb-5">
+        <div class="d-flex flex-wrap gap-4 mb-6">
           <a class="btn-solid theme-primary btn-lg" href="pricing.html">Work out your cost</a>
           <a class="btn-outline theme-secondary btn-lg" href="#developers">Read the docs</a>
         </div>
@@ -271,7 +271,7 @@ def page_index():
 
 <div class="logo-band">
   <div class="container">
-    <p class="fs-xs eyebrow fg-3 mb-4">Handling money for</p>
+    <p class="fs-xs eyebrow fg-3 mb-5">Handling money for</p>
     <div class="logo-row">
       <span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2 15 12 12 22 9 12Z" fill="currentColor"/><path d="M2 12 12 9l10 3-10 3Z" fill="currentColor" opacity=".45"/></svg><span class="logo-word">Northwind</span></span><span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 22V9.5L6 6l2 3.5V22M11 22V5.5L13 2l2 3.5V22M18 22V10.5L20 7l2 3.5V22" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linejoin="round"/></svg><span class="logo-word">Palisade</span></span><span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 11h12v4.5A4.5 4.5 0 0 1 11.5 20h-3A4.5 4.5 0 0 1 4 15.5Z" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linejoin="round"/><path d="M16 12.5h1.6a2.4 2.4 0 0 1 0 4.8H16" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M7.5 3.5v3M11.5 2.5v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span class="logo-word">Kettle &amp; Co</span></span><span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M2.5 16.5c2.5-2 4.5 0 7 0s4.5-2 7 0 3.5 0 4-.5" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M2.5 20.5c2.5-2 4.5 0 7 0s4.5-2 7 0 3.5 0 4-.5" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".5"/><circle cx="17" cy="7" r="4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg><span class="logo-word">Brightsea</span></span><span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2.5" transform="rotate(45 12 12)" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="12" r="2.8" fill="currentColor"/></svg><span class="logo-word">Ordinal</span></span><span class="logo"><svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7" fill="none"/><ellipse cx="12" cy="12" rx="4" ry="9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M3.2 12h17.6" stroke="currentColor" stroke-width="1.5"/></svg><span class="logo-word">Meridian Labs</span></span>
     </div>
@@ -283,9 +283,9 @@ def page_index():
   <!-- Product -->
   <section class="section" id="product">
     <div class="container">
-      <div class="row g-5 mb-6 align-items-end">
+      <div class="row g-6 mb-7 align-items-end">
         <div class="lg:col-7">
-          <p class="eyebrow-rule mb-3">Product</p>
+          <p class="eyebrow-rule mb-4">Product</p>
           <h2 class="section-title fs-4xl mb-0">Three primitives, one balance you can reconcile</h2>
         </div>
         <div class="lg:col-5">
@@ -296,28 +296,28 @@ def page_index():
         </div>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-5">
         <div class="md:col-6 lg:col-4">
           <article class="surface surface-pad lift h-100">
-            <div class="icon-tile mb-4"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="1.75" y="4.25" width="16.5" height="11.5" rx="2.5"/><path d="M1.75 8.25h16.5M5 12.5h3"/></svg></div>
-            <h3 class="fs-xl mb-2">Payments</h3>
-            <p class="fg-2 fs-sm mb-3">Cards, Apple Pay, Google Pay, direct debit and open banking through one intent object. 3-D Secure only when the risk engine asks for it.</p>
+            <div class="icon-tile mb-5"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="1.75" y="4.25" width="16.5" height="11.5" rx="2.5"/><path d="M1.75 8.25h16.5M5 12.5h3"/></svg></div>
+            <h3 class="fs-xl mb-3">Payments</h3>
+            <p class="fg-2 fs-sm mb-4">Cards, Apple Pay, Google Pay, direct debit and open banking through one intent object. 3-D Secure only when the risk engine asks for it.</p>
             <p class="fg-3 fs-xs mb-0">Auth rate 94.1% across all merchants, last 30 days.</p>
           </article>
         </div>
         <div class="md:col-6 lg:col-4">
           <article class="surface surface-pad lift h-100">
-            <div class="icon-tile mb-4"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 7h14M13 3.5 16.5 7 13 10.5M17 13H3M7 9.5 3.5 13 7 16.5"/></svg></div>
-            <h3 class="fs-xl mb-2">Payouts</h3>
-            <p class="fg-2 fs-sm mb-3">Pay out to sellers, contractors or your own accounts on a schedule you set. Failed payouts come back with the bank's actual reason, not a generic code.</p>
+            <div class="icon-tile mb-5"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 7h14M13 3.5 16.5 7 13 10.5M17 13H3M7 9.5 3.5 13 7 16.5"/></svg></div>
+            <h3 class="fs-xl mb-3">Payouts</h3>
+            <p class="fg-2 fs-sm mb-4">Pay out to sellers, contractors or your own accounts on a schedule you set. Failed payouts come back with the bank's actual reason, not a generic code.</p>
             <p class="fg-3 fs-xs mb-0">Faster Payments in seconds, SEPA and SWIFT where it has to be.</p>
           </article>
         </div>
         <div class="md:col-6 lg:col-4">
           <article class="surface surface-pad lift h-100">
-            <div class="icon-tile mb-4"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M10 2.5v15M4.5 6 2 11.5h5L4.5 6ZM15.5 6 13 11.5h5L15.5 6ZM5.5 4.5h9"/></svg></div>
-            <h3 class="fs-xl mb-2">Ledger API</h3>
-            <p class="fg-2 fs-sm mb-3">Real double-entry accounts with immutable postings. Every movement has two sides and the whole thing balances or the write is rejected.</p>
+            <div class="icon-tile mb-5"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M10 2.5v15M4.5 6 2 11.5h5L4.5 6ZM15.5 6 13 11.5h5L15.5 6ZM5.5 4.5h9"/></svg></div>
+            <h3 class="fs-xl mb-3">Ledger API</h3>
+            <p class="fg-2 fs-sm mb-4">Real double-entry accounts with immutable postings. Every movement has two sides and the whole thing balances or the write is rejected.</p>
             <p class="fg-3 fs-xs mb-0">Idempotency keys on every endpoint, held for 24 hours.</p>
           </article>
         </div>
@@ -328,16 +328,16 @@ def page_index():
   <!-- Developers -->
   <section class="section bg-2" id="developers">
     <div class="container">
-      <div class="row g-6 align-items-center">
+      <div class="row g-7 align-items-center">
         <div class="lg:col-5">
-          <p class="eyebrow-rule mb-3">Developers</p>
-          <h2 class="section-title fs-4xl mb-4">One request to take a payment</h2>
-          <p class="fg-2 mb-4">
+          <p class="eyebrow-rule mb-4">Developers</p>
+          <h2 class="section-title fs-4xl mb-5">One request to take a payment</h2>
+          <p class="fg-2 mb-5">
             No SDK required and no six-step handshake. Post an intent, get a
             client secret, confirm it. The ledger postings are created for you
             and appear in the same response.
           </p>
-          <ul class="tick-list mb-5">
+          <ul class="tick-list mb-6">
             <li>Idempotent by default — retries cannot double-charge</li>
             <li>Webhooks signed with a rotating secret, replayable for 30 days</li>
             <li>Test and live keys differ by one character, so mistakes are loud</li>
@@ -376,9 +376,9 @@ def page_index():
   <!-- Pricing teaser -->
   <section class="section" id="cost">
     <div class="container">
-      <div class="row g-5 mb-6 align-items-end">
+      <div class="row g-6 mb-7 align-items-end">
         <div class="lg:col-7">
-          <p class="eyebrow-rule mb-3">Pricing</p>
+          <p class="eyebrow-rule mb-4">Pricing</p>
           <h2 class="section-title fs-4xl mb-0">Move the sliders. We'll tell you if the free plan wins.</h2>
         </div>
         <div class="lg:col-5">
@@ -390,7 +390,7 @@ def page_index():
         </div>
       </div>
 {calculator()}
-      <p class="text-center mt-5 mb-0"><a class="btn-outline theme-secondary" href="pricing.html">Full plan comparison</a></p>
+      <p class="text-center mt-6 mb-0"><a class="btn-outline theme-secondary" href="pricing.html">Full plan comparison</a></p>
     </div>
   </section>
 
@@ -409,14 +409,14 @@ def page_index():
   <!-- Security -->
   <section class="section" id="security">
     <div class="container">
-      <div class="row g-6 align-items-center">
+      <div class="row g-7 align-items-center">
         <div class="lg:col-6">
           <div class="ph ph-4x3 framed"><img src="img/security.jpg" alt="Engineers reviewing infrastructure" width="900" height="675" loading="lazy"></div>
         </div>
         <div class="lg:col-6">
-          <p class="eyebrow-rule mb-3">Security</p>
-          <h2 class="section-title fs-4xl mb-4">Boring, on purpose</h2>
-          <p class="fg-2 mb-4">
+          <p class="eyebrow-rule mb-4">Security</p>
+          <h2 class="section-title fs-4xl mb-5">Boring, on purpose</h2>
+          <p class="fg-2 mb-5">
             Card data never reaches your servers — the client collects it against
             a single-use token and we hold the scope. Everything else is the
             unglamorous work: least privilege, signed webhooks, and an audit log
@@ -436,10 +436,10 @@ def page_index():
   <!-- Testimonials -->
   <section class="section bg-2">
     <div class="container">
-      <div class="row g-4">
+      <div class="row g-5">
         <div class="lg:col-4">
           <figure class="quote surface surface-pad h-100">
-            <blockquote class="mb-4"><p class="mb-0">We moved because the reconciliation job we ran every night stopped being necessary. That job had been someone's whole Tuesday.</p></blockquote>
+            <blockquote class="mb-5"><p class="mb-0">We moved because the reconciliation job we ran every night stopped being necessary. That job had been someone's whole Tuesday.</p></blockquote>
             <figcaption class="quote-by">
               <div class="ph ph-1x1 quote-face"><img src="img/face-1.jpg" alt="" width="400" height="400" loading="lazy"></div>
               <div><p class="mb-0 fw-semibold">Dilan Aksoy</p><p class="fg-3 fs-sm mb-0">CTO, Palisade</p></div>
@@ -448,7 +448,7 @@ def page_index():
         </div>
         <div class="lg:col-4">
           <figure class="quote surface surface-pad h-100">
-            <blockquote class="mb-4"><p class="mb-0">Their pricing page told us to stay on the free plan for another eight months. I have never had a vendor do that.</p></blockquote>
+            <blockquote class="mb-5"><p class="mb-0">Their pricing page told us to stay on the free plan for another eight months. I have never had a vendor do that.</p></blockquote>
             <figcaption class="quote-by">
               <div class="ph ph-1x1 quote-face"><img src="img/face-2.jpg" alt="" width="400" height="400" loading="lazy"></div>
               <div><p class="mb-0 fw-semibold">Rae Whitcombe</p><p class="fg-3 fs-sm mb-0">Founder, Kettle &amp; Co</p></div>
@@ -457,7 +457,7 @@ def page_index():
         </div>
         <div class="lg:col-4">
           <figure class="quote surface surface-pad h-100">
-            <blockquote class="mb-4"><p class="mb-0">Failed payouts come back with the bank's real reason. That sounds small until you have spent a year guessing at error code 91.</p></blockquote>
+            <blockquote class="mb-5"><p class="mb-0">Failed payouts come back with the bank's real reason. That sounds small until you have spent a year guessing at error code 91.</p></blockquote>
             <figcaption class="quote-by">
               <div class="ph ph-1x1 quote-face"><img src="img/face-3.jpg" alt="" width="400" height="400" loading="lazy"></div>
               <div><p class="mb-0 fw-semibold">Josephine Marr</p><p class="fg-3 fs-sm mb-0">Head of Ops, Northwind</p></div>
@@ -472,12 +472,12 @@ def page_index():
   <section class="section" id="start">
     <div class="container">
       <div class="cta">
-        <h2 class="section-title fs-4xl mb-3">Take your first payment this afternoon</h2>
-        <p class="fg-2 fs-lg mb-5 mx-auto" style="max-width:34rem">
+        <h2 class="section-title fs-4xl mb-4">Take your first payment this afternoon</h2>
+        <p class="fg-2 fs-lg mb-6 mx-auto" style="max-width:34rem">
           Test keys are instant. Live keys follow once checks clear, usually the
           same day.
         </p>
-        <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <div class="d-flex flex-wrap gap-4 justify-content-center">
           <a class="btn-solid theme-primary btn-lg" href="pricing.html">Work out your cost</a>
           <a class="btn-outline theme-secondary btn-lg" href="#developers">Talk to an engineer</a>
         </div>
@@ -508,8 +508,8 @@ def page_pricing():
     ) + chrome(home=False) + f"""
 <section class="page-head">
   <div class="container">
-    <p class="eyebrow fs-xs mb-3"><a href="index.html">Ledgerline</a> &middot; Pricing</p>
-    <h1 class="hero-title fs-5xl mb-4">Work out what you'd pay.</h1>
+    <p class="eyebrow fs-xs mb-4"><a href="index.html">Ledgerline</a> &middot; Pricing</p>
+    <h1 class="hero-title fs-5xl mb-5">Work out what you'd pay.</h1>
     <p class="hero-lede fs-lg fg-2 mb-0">
       Every plan is a monthly base plus a fee on each payment, so the cheapest
       one depends on your volume and your average basket. Set both below.
@@ -527,9 +527,9 @@ def page_pricing():
 
   <section class="section bg-2">
     <div class="container">
-      <div class="row g-5 mb-6 align-items-end">
+      <div class="row g-6 mb-7 align-items-end">
         <div class="lg:col-7">
-          <p class="eyebrow-rule mb-3">Comparison</p>
+          <p class="eyebrow-rule mb-4">Comparison</p>
           <h2 class="section-title fs-4xl mb-0">What you get, line by line</h2>
         </div>
         <div class="lg:col-5">
@@ -550,10 +550,10 @@ def page_pricing():
 
   <section class="section">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-5">
-          <p class="eyebrow-rule mb-3">Fees, plainly</p>
-          <h2 class="section-title fs-4xl mb-4">The questions that decide the bill</h2>
+          <p class="eyebrow-rule mb-4">Fees, plainly</p>
+          <h2 class="section-title fs-4xl mb-5">The questions that decide the bill</h2>
           <p class="fg-2 mb-0">
             If something here is still unclear, that is our fault — write to
             <a href="mailto:pricing@ledgerline.dev">pricing@ledgerline.dev</a> and

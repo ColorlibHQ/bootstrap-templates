@@ -103,7 +103,7 @@ def chrome(current):
         f'<a class="head-link{" is-active" if h == current else ""}" href="{h}">{label}</a>'
         for h, label in NAV)
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <div class="wrap head-in">
@@ -113,7 +113,7 @@ def chrome(current):
     <nav class="head-nav d-none md:d-flex" aria-label="Main">
         {links}
     </nav>
-    <div class="d-flex align-items-center gap-2 ms-auto">
+    <div class="d-flex align-items-center gap-3 ms-auto">
       <div class="form-control form-adorn search-field d-none lg:d-flex">
         <div class="form-adorn-icon">{ICON['search']}</div>
         <input type="search" class="form-ghost" placeholder="Search the forum…" aria-label="Search">
@@ -175,12 +175,12 @@ def reply_blocks():
               <span class="vote-n" data-vote-n>{votes}</span>
             </div>
             <div class="reply-main">
-              <p class="reply-meta mb-2">
+              <p class="reply-meta mb-3">
                 <span class="avatar avatar-xs"><span class="avatar-initials">{ini}</span></span>
                 <strong>{author}</strong>
                 <span class="fg-3">&middot; {ago(hours)}</span>
               </p>
-              <p class="reply-body mb-2">{body}</p>
+              <p class="reply-body mb-3">{body}</p>
               <p class="reply-actions mb-0"><button class="link-btn" type="button">Reply</button><button class="link-btn" type="button">Share</button></p>
             </div>
           </li>""")
@@ -224,7 +224,7 @@ def page_index():
         <ul class="rail-list">
 {cats}
         </ul>
-        <a class="btn-outline theme-secondary btn-sm w-100 mt-3" href="categories.html">All categories</a>
+        <a class="btn-outline theme-secondary btn-sm w-100 mt-4" href="categories.html">All categories</a>
       </section>
 
       <section class="rail-card">
@@ -264,7 +264,7 @@ def page_thread():
   <div class="wrap board">
 
     <div class="board-main">
-      <p class="crumbs mb-3"><a href="index.html">Threads</a> <span class="fg-3">/</span> <a href="categories.html">{t[3]}</a></p>
+      <p class="crumbs mb-4"><a href="index.html">Threads</a> <span class="fg-3">/</span> <a href="categories.html">{t[3]}</a></p>
 
       <article class="op">
         <div class="op-head">
@@ -273,7 +273,7 @@ def page_thread():
             <span class="vote-n" data-vote-n>{t[4]}</span>
           </div>
           <div>
-            <h1 class="op-title mb-2">{t[0]}<span class="flag flag-solved">solved</span></h1>
+            <h1 class="op-title mb-3">{t[0]}<span class="flag flag-solved">solved</span></h1>
             <p class="thread-meta mb-0">
               <span class="avatar avatar-xs"><span class="avatar-initials">{t[2]}</span></span>
               <span>{t[1]}</span> <span class="fg-3">&middot; {ago(t[6])} &middot; {t[5]} replies</span>
@@ -301,12 +301,12 @@ def page_thread():
       </ul>
 
       <section class="composer">
-        <h2 class="rail-title mb-3">Add a reply</h2>
+        <h2 class="rail-title mb-4">Add a reply</h2>
         <form data-demo-form novalidate>
           <label class="form-label visually-hidden" for="replyBody">Your reply</label>
-          <textarea class="form-control mb-3" id="replyBody" rows="4" placeholder="Be the person you needed when you were stuck." required></textarea>
-          <div class="invalid-feedback mb-2">A reply needs some text in it.</div>
-          <div class="d-flex flex-wrap gap-2 align-items-center">
+          <textarea class="form-control mb-4" id="replyBody" rows="4" placeholder="Be the person you needed when you were stuck." required></textarea>
+          <div class="invalid-feedback mb-3">A reply needs some text in it.</div>
+          <div class="d-flex flex-wrap gap-3 align-items-center">
             <button class="btn-solid theme-primary" type="submit" data-done-text="Posted ✓">Post reply</button>
             <p class="fs-xs fg-3 mb-0">Markdown works. Be kind; rule one applies.</p>
           </div>
@@ -356,8 +356,8 @@ def page_categories():
     body = f"""
 <main id="main" class="page">
   <div class="wrap">
-    <h1 class="page-title mb-2">Categories</h1>
-    <p class="page-sub mb-5">{len(CATEGORIES)} of them, and the honest description of each.</p>
+    <h1 class="page-title mb-3">Categories</h1>
+    <p class="page-sub mb-6">{len(CATEGORIES)} of them, and the honest description of each.</p>
     <ul class="cat-list">
 {rows}
     </ul>

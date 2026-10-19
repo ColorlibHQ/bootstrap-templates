@@ -114,7 +114,7 @@ def car_card(c):
 def chrome(home=True):
     p = "" if home else "index.html"
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <nav class="navbar lg:navbar-expand" aria-label="Main">
@@ -126,8 +126,8 @@ def chrome(home=True):
           <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
         </div>
-        <div class="drawer-body mb-2 lg:mb-0">
-          <ul class="nav navbar-nav ms-auto lg:gap-3">
+        <div class="drawer-body mb-3 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-4">
             <li class="nav-item"><a class="nav-link" href="{p}#stock">Used cars</a></li>
             <li class="nav-item"><a class="nav-link" href="{p}#finance">Finance</a></li>
             <li class="nav-item"><a class="nav-link" href="{p}#partex">Part exchange</a></li>
@@ -136,7 +136,7 @@ def chrome(home=True):
         </div>
       </dialog>
 
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         {TOGGLE}
         <a class="btn-solid theme-primary d-none md:d-inline-flex" href="tel:01138000000">0113 800 0000</a>
         <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
@@ -150,37 +150,37 @@ def chrome(home=True):
 
 
 FOOTER = """
-<footer class="site-footer section pb-5 bg-2">
+<footer class="site-footer section pb-6 bg-2">
   <div class="container">
-    <div class="row g-5">
+    <div class="row g-6">
       <div class="md:col-4">
-        <p class="fw-bold fs-lg mb-3" style="letter-spacing:-.02em">Forecourt</p>
+        <p class="fw-bold fs-lg mb-4" style="letter-spacing:-.02em">Forecourt</p>
         <p class="fg-3 fs-sm mb-0">Three branches across West Yorkshire. Every car HPI-checked, every price the price.</p>
       </div>
       <div class="md:col-2">
-        <p class="fw-semibold fs-sm mb-3">Buying</p>
+        <p class="fw-semibold fs-sm mb-4">Buying</p>
         <ul class="list-unstyled fs-sm fg-3 mb-0">
-          <li class="mb-2"><a href="index.html#stock">Used cars</a></li>
-          <li class="mb-2"><a href="vehicle.html">Example listing</a></li>
-          <li class="mb-2"><a href="index.html#finance">Finance</a></li>
+          <li class="mb-3"><a href="index.html#stock">Used cars</a></li>
+          <li class="mb-3"><a href="vehicle.html">Example listing</a></li>
+          <li class="mb-3"><a href="index.html#finance">Finance</a></li>
         </ul>
       </div>
       <div class="md:col-2">
-        <p class="fw-semibold fs-sm mb-3">Selling</p>
+        <p class="fw-semibold fs-sm mb-4">Selling</p>
         <ul class="list-unstyled fs-sm fg-3 mb-0">
-          <li class="mb-2"><a href="index.html#partex">Part exchange</a></li>
-          <li class="mb-2"><a href="index.html#branches">Branches</a></li>
+          <li class="mb-3"><a href="index.html#partex">Part exchange</a></li>
+          <li class="mb-3"><a href="index.html#branches">Branches</a></li>
         </ul>
       </div>
       <div class="md:col-4">
-        <p class="fw-semibold fs-sm mb-3">Regulatory</p>
+        <p class="fw-semibold fs-sm mb-4">Regulatory</p>
         <p class="fs-xs fg-3 mb-0">
           Forecourt Motor Group is authorised and regulated by the Financial Conduct Authority.
           Finance subject to status. Figures shown are illustrative flat-rate estimates, not a quotation.
         </p>
       </div>
     </div>
-    <hr class="my-5">
+    <hr class="my-6">
     <p class="fs-xs fg-3 mb-0">&copy; <span data-year></span> Forecourt. A free Bootstrap 6 template — the dealership is fictional.</p>
   </div>
 </footer>
@@ -203,9 +203,9 @@ def page_index():
   <div class="container">
     <div class="row">
       <div class="lg:col-7">
-        <p class="fs-sm fg-primary mb-3" style="letter-spacing:.14em;text-transform:uppercase">218 cars in stock</p>
-        <h1 class="showroom-title mb-4">The price you see is the price you pay</h1>
-        <p class="fs-lg fg-2 mb-5" style="max-width:34rem">
+        <p class="fs-sm fg-primary mb-4" style="letter-spacing:.14em;text-transform:uppercase">218 cars in stock</p>
+        <h1 class="showroom-title mb-5">The price you see is the price you pay</h1>
+        <p class="fs-lg fg-2 mb-6" style="max-width:34rem">
           No admin fee, no delivery fee, no "preparation" line appearing at
           signing. Every car HPI-checked and priced against the market weekly.
         </p>
@@ -233,7 +233,7 @@ def page_index():
   <!-- Stock -->
   <section class="section" id="stock">
     <div class="container">
-      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-4 mb-5">
         <div>
           <h2 class="fs-3xl fw-bold mb-1" style="letter-spacing:-.03em">Latest arrivals</h2>
           <p class="fg-3 fs-sm mb-0">Monthly figures assume {DEPOSIT_PCT}% deposit over {TERM} months at {APR}% APR.</p>
@@ -241,7 +241,7 @@ def page_index():
         <a class="btn-outline theme-secondary" href="#stock">View all 218</a>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-5">
 {cards}
       </div>
     </div>
@@ -250,10 +250,10 @@ def page_index():
   <!-- Finance calculator -->
   <section class="section bg-2" id="finance">
     <div class="container">
-      <div class="row g-6 align-items-center">
+      <div class="row g-7 align-items-center">
         <div class="lg:col-5">
-          <h2 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.03em">What it actually costs</h2>
-          <p class="fg-2 mb-4">
+          <h2 class="fs-3xl fw-bold mb-4" style="letter-spacing:-.03em">What it actually costs</h2>
+          <p class="fg-2 mb-5">
             Move the sliders and every monthly figure on this page updates with
             them — including the cards above. A calculator that does not change
             the listings is decoration.
@@ -267,9 +267,9 @@ def page_index():
 
         <div class="lg:col-7">
           <div class="calc">
-            <div class="row g-4">
+            <div class="row g-5">
               <div class="md:col-7">
-                <div class="mb-4">
+                <div class="mb-5">
                   <div class="d-flex justify-content-between mb-1">
                     <label class="form-label mb-0" for="cDep">Deposit</label>
                     <strong id="cDepOut">10%</strong>
@@ -279,7 +279,7 @@ def page_index():
                   </div>
                 </div>
 
-                <div class="mb-4">
+                <div class="mb-5">
                   <div class="d-flex justify-content-between mb-1">
                     <label class="form-label mb-0" for="cTerm">Term</label>
                     <strong id="cTermOut">48 months</strong>
@@ -302,11 +302,11 @@ def page_index():
 
               <div class="md:col-5">
                 <p class="fs-xs fg-3 mb-1" style="letter-spacing:.12em;text-transform:uppercase">BMW 3 Series, &pound;24,990</p>
-                <p class="calc-figure mb-4" id="cMonthly" data-cash="24990">&pound;{sample}<span class="fs-sm fg-3 fw-normal">/mo</span></p>
+                <p class="calc-figure mb-5" id="cMonthly" data-cash="24990">&pound;{sample}<span class="fs-sm fg-3 fw-normal">/mo</span></p>
                 <div class="calc-row"><span class="fg-3 fs-sm">Deposit</span><span class="fs-sm" id="cDepAmt">&pound;2,499</span></div>
                 <div class="calc-row"><span class="fg-3 fs-sm">Amount financed</span><span class="fs-sm" id="cFin">&pound;22,491</span></div>
                 <div class="calc-row"><span class="fg-3 fs-sm">Total payable</span><span class="fs-sm" id="cTotal">&pound;31,388</span></div>
-                <a class="btn-solid theme-primary w-100 mt-4" href="vehicle.html">See this car</a>
+                <a class="btn-solid theme-primary w-100 mt-5" href="vehicle.html">See this car</a>
               </div>
             </div>
           </div>
@@ -318,10 +318,10 @@ def page_index():
   <!-- Part exchange -->
   <section class="section" id="partex">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-5">
-          <h2 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.03em">Part exchange</h2>
-          <p class="fg-2 mb-4">
+          <h2 class="fs-3xl fw-bold mb-4" style="letter-spacing:-.03em">Part exchange</h2>
+          <p class="fg-2 mb-5">
             Give us the registration and we will come back with a figure inside
             two hours during opening times. If we cannot beat the online buyers
             we will tell you that too.
@@ -334,7 +334,7 @@ def page_index():
         <div class="lg:col-7">
           <div class="calc">
             <form data-demo-form data-bs-validate novalidate>
-              <div class="row g-3">
+              <div class="row g-4">
                 <div class="md:col-6">
                   <div class="form-field">
                     <label class="form-label" for="pxReg">Registration</label>
@@ -379,36 +379,36 @@ def page_index():
   <!-- Branches -->
   <section class="section bg-2" id="branches">
     <div class="container">
-      <h2 class="fs-3xl fw-bold mb-5" style="letter-spacing:-.03em">Three branches</h2>
-      <div class="row g-4">
+      <h2 class="fs-3xl fw-bold mb-6" style="letter-spacing:-.03em">Three branches</h2>
+      <div class="row g-5">
         <div class="md:col-4">
           <div class="branch">
             <p class="fw-semibold mb-1">Leeds</p>
-            <p class="fg-3 fs-sm mb-3">Kirkstall Road, LS4 2AZ</p>
+            <p class="fg-3 fs-sm mb-4">Kirkstall Road, LS4 2AZ</p>
             <div class="spec-row"><span class="fg-3 fs-sm">Mon — Fri</span><span class="fs-sm">08:30 — 18:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Saturday</span><span class="fs-sm">09:00 — 17:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Sunday</span><span class="fs-sm">11:00 — 16:00</span></div>
-            <p class="fs-sm mt-3 mb-0"><a href="tel:01138000000">0113 800 0000</a></p>
+            <p class="fs-sm mt-4 mb-0"><a href="tel:01138000000">0113 800 0000</a></p>
           </div>
         </div>
         <div class="md:col-4">
           <div class="branch">
             <p class="fw-semibold mb-1">Bradford</p>
-            <p class="fg-3 fs-sm mb-3">Canal Road, BD1 4SG</p>
+            <p class="fg-3 fs-sm mb-4">Canal Road, BD1 4SG</p>
             <div class="spec-row"><span class="fg-3 fs-sm">Mon — Fri</span><span class="fs-sm">08:30 — 18:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Saturday</span><span class="fs-sm">09:00 — 17:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Sunday</span><span class="fs-sm">Closed</span></div>
-            <p class="fs-sm mt-3 mb-0"><a href="tel:01274000000">01274 000 000</a></p>
+            <p class="fs-sm mt-4 mb-0"><a href="tel:01274000000">01274 000 000</a></p>
           </div>
         </div>
         <div class="md:col-4">
           <div class="branch">
             <p class="fw-semibold mb-1">Wakefield</p>
-            <p class="fg-3 fs-sm mb-3">Denby Dale Road, WF2 7AW</p>
+            <p class="fg-3 fs-sm mb-4">Denby Dale Road, WF2 7AW</p>
             <div class="spec-row"><span class="fg-3 fs-sm">Mon — Fri</span><span class="fs-sm">09:00 — 18:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Saturday</span><span class="fs-sm">09:00 — 17:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Sunday</span><span class="fs-sm">11:00 — 16:00</span></div>
-            <p class="fs-sm mt-3 mb-0"><a href="tel:01924000000">01924 000 000</a></p>
+            <p class="fs-sm mt-4 mb-0"><a href="tel:01924000000">01924 000 000</a></p>
           </div>
         </div>
       </div>
@@ -428,7 +428,7 @@ def page_vehicle():
     ) + chrome(home=False) + f"""
 <div class="sub-head">
   <div class="container">
-    <nav aria-label="Breadcrumb" class="mb-3">
+    <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html">Forecourt</a></li>
         <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html#stock">Used cars</a></li>
@@ -443,7 +443,7 @@ def page_vehicle():
 <main id="main">
   <section class="section">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-8">
           <div class="ph ph-16x9 rounded-4">
             <img src="img/car-3.jpg" alt="BMW 3 Series 320d M Sport" width="1200" height="675" loading="eager">
@@ -455,8 +455,8 @@ def page_vehicle():
             <div class="ph"><img src="img/car-5.jpg" alt="Boot space" width="300" height="225" loading="lazy"></div>
           </div>
 
-          <div class="prose mt-6">
-            <h2 class="fs-2xl fw-bold mb-3" style="letter-spacing:-.02em">About this car</h2>
+          <div class="prose mt-7">
+            <h2 class="fs-2xl fw-bold mb-4" style="letter-spacing:-.02em">About this car</h2>
             <p class="fg-2">
               One owner from new, full BMW service history with the last stamp at
               24,900 miles. Bought and part-exchanged at our Leeds branch, so we
@@ -468,8 +468,8 @@ def page_vehicle():
               as you would expect for the mileage.
             </p>
 
-            <h2 class="fs-2xl fw-bold mb-3 mt-6">Specification</h2>
-            <div class="row g-0 lg:gx-5">
+            <h2 class="fs-2xl fw-bold mb-4 mt-7">Specification</h2>
+            <div class="row g-0 lg:gx-6">
               <div class="md:col-6">
                 <div class="spec-row"><span class="fg-3 fs-sm">Registered</span><span class="fs-sm">March 2022</span></div>
                 <div class="spec-row"><span class="fg-3 fs-sm">Mileage</span><span class="fs-sm">27,850</span></div>
@@ -491,10 +491,10 @@ def page_vehicle():
         <div class="lg:col-4">
           <div class="buy-rail">
             <p class="calc-figure mb-1" id="cMonthly" data-cash="{cash}">&pound;{pm}<span class="fs-sm fg-3 fw-normal">/mo</span></p>
-            <p class="fg-3 fs-sm mb-4">&pound;{cash:,} cash &middot; {DEPOSIT_PCT}% deposit, {TERM} months, {APR}% APR</p>
+            <p class="fg-3 fs-sm mb-5">&pound;{cash:,} cash &middot; {DEPOSIT_PCT}% deposit, {TERM} months, {APR}% APR</p>
 
-            <button class="btn-solid theme-primary w-100 mb-2" type="button" data-bs-toggle="dialog" data-bs-target="#bookDialog">Book a viewing</button>
-            <button class="btn-outline theme-secondary w-100 mb-4" type="button">Reserve for &pound;99</button>
+            <button class="btn-solid theme-primary w-100 mb-3" type="button" data-bs-toggle="dialog" data-bs-target="#bookDialog">Book a viewing</button>
+            <button class="btn-outline theme-secondary w-100 mb-5" type="button">Reserve for &pound;99</button>
 
             <div class="spec-row"><span class="fg-3 fs-sm">Location</span><span class="fs-sm">Leeds</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Stock number</span><span class="fs-sm">FC-4821</span></div>
@@ -502,7 +502,7 @@ def page_vehicle():
             <div class="spec-row"><span class="fg-3 fs-sm">Warranty</span><span class="fs-sm">12 months</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Part exchange</span><span class="fs-sm">Welcome</span></div>
 
-            <p class="fs-xs fg-3 mt-4 mb-0">Illustrative flat-rate figure, not a quotation. Finance subject to status.</p>
+            <p class="fs-xs fg-3 mt-5 mb-0">Illustrative flat-rate figure, not a quotation. Finance subject to status.</p>
           </div>
         </div>
       </div>
@@ -515,7 +515,7 @@ def page_vehicle():
     <h2 class="dialog-title fs-lg" id="bookLabel">Book a viewing</h2>
     <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
   </div>
-  <form class="dialog-body vstack gap-3" id="bookForm" data-demo-form data-bs-validate novalidate>
+  <form class="dialog-body vstack gap-4" id="bookForm" data-demo-form data-bs-validate novalidate>
     <div class="form-field">
       <label class="form-label" for="bkName">Your name</label>
       <input type="text" class="form-control" id="bkName" required>

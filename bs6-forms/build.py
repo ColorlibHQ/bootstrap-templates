@@ -75,8 +75,8 @@ VARIANTS = [
      '<i class="w40"></i><i class="tall"></i><i class="w40"></i><i class="tall"></i><i class="w60"></i><i class="tall"></i><i class="cta"></i>',
      False, """<div class="form-shell">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Get in touch</h1>
-  <p class="fg-2 mb-5">We reply to everything within one working day.</p>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <p class="fg-2 mb-6">We reply to everything within one working day.</p>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div class="form-field">
       <label class="form-label" for="s1name">Full name</label>
       <input type="text" class="form-control" id="s1name" required>
@@ -109,18 +109,18 @@ VARIANTS = [
      True, """<div class="split-form">
   <div class="split-brand">
     <div>
-      <p class="fs-xs mb-4" style="letter-spacing:.16em;text-transform:uppercase;opacity:.8">Start free</p>
-      <h1 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.03em">Fourteen days, no card</h1>
+      <p class="fs-xs mb-5" style="letter-spacing:.16em;text-transform:uppercase;opacity:.8">Start free</p>
+      <h1 class="fs-3xl fw-bold mb-4" style="letter-spacing:-.03em">Fourteen days, no card</h1>
       <p class="mb-0" style="opacity:.85">Full access to everything. If it isn&#8217;t for you, do nothing and it simply stops.</p>
     </div>
-    <ul class="vstack gap-2 fs-sm list-unstyled mb-0" style="opacity:.9">
+    <ul class="vstack gap-3 fs-sm list-unstyled mb-0" style="opacity:.9">
       <li>&#10003; Unlimited projects</li>
       <li>&#10003; Cancel from settings</li>
       <li>&#10003; No sales call</li>
     </ul>
   </div>
   <div class="split-body">
-    <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+    <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
       <div class="form-field">
         <label class="form-label" for="s2name">Full name</label>
         <input type="text" class="form-control" id="s2name" required>
@@ -146,15 +146,15 @@ VARIANTS = [
      "Long forms split across steps with Bootstrap 6&#8217;s new Stepper marking progress.",
      '<div class="row2"><i></i><i></i><i></i></div><i class="w40"></i><i class="tall"></i><i class="w60"></i><i class="tall"></i><i class="cta"></i>',
      False, """<div class="form-shell">
-  <div class="contains-inline mb-5">
+  <div class="contains-inline mb-6">
     <ol class="stepper sm:stepper-horizontal">
       <li class="stepper-item active">Details</li>
       <li class="stepper-item active">Project</li>
       <li class="stepper-item">Budget</li>
     </ol>
   </div>
-  <h1 class="fs-xl fw-semibold mb-4">About the project</h1>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <h1 class="fs-xl fw-semibold mb-5">About the project</h1>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div>
       <label class="form-label">What do you need?</label>
       """ + combobox("need", "Select one or more…",
@@ -170,7 +170,7 @@ VARIANTS = [
       <textarea class="form-control" id="s3brief" rows="3" required></textarea>
       <div class="invalid-feedback">Required.</div>
     </div>
-    <div class="d-flex gap-2">
+    <div class="d-flex gap-3">
       <button class="btn-text" type="button">Back</button>
       <button class="btn-solid theme-primary ms-auto" type="submit" data-done-text="Saved &#10003;">Continue</button>
     </div>
@@ -182,8 +182,8 @@ VARIANTS = [
      '<div class="row2"><i class="tall"></i><i class="tall"></i><i class="tall"></i></div><div class="row2"><i class="w40"></i><i class="w40"></i></div>',
      True, """<div class="w-100">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Filter results</h1>
-  <p class="fg-2 mb-4">Search, area and category in a single row, collapsing to a stack on small screens.</p>
-  <form class="toolbar mb-4" role="search" onsubmit="return false">
+  <p class="fg-2 mb-5">Search, area and category in a single row, collapsing to a stack on small screens.</p>
+  <form class="toolbar mb-5" role="search" onsubmit="return false">
     <div class="form-control form-adorn">
       <div class="form-adorn-icon">""" + SEARCH + """</div>
       <input type="search" class="form-ghost" placeholder="Search by keyword…" aria-label="Search">
@@ -192,7 +192,7 @@ VARIANTS = [
     """ + combobox("cat", "All categories", [("a", "Design"), ("b", "Engineering"), ("c", "Marketing"), ("d", "Operations")], search=True, multiple=True) + """
     <button class="btn-solid theme-primary" type="submit">Search</button>
   </form>
-  <div class="d-flex flex-wrap gap-2">
+  <div class="d-flex flex-wrap gap-3">
     <span class="chip">North <button type="button" class="chip-dismiss" aria-label="Remove North"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg></button></span>
     <span class="chip">Design <button type="button" class="chip-dismiss" aria-label="Remove Design"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg></button></span>
     <button class="btn-text btn-sm" type="button">Clear all</button>
@@ -204,8 +204,8 @@ VARIANTS = [
      '<i class="w40"></i><i class="tall" style="min-height:3.5rem"></i><div class="row2"><i></i><i></i><i></i><i></i></div><i class="cta"></i>',
      False, """<div class="form-shell">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Book an appointment</h1>
-  <p class="fg-2 mb-5">Same-week slots, cancel free up to 24 hours before.</p>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <p class="fg-2 mb-6">Same-week slots, cancel free up to 24 hours before.</p>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div>
       <label class="form-label">Service</label>
       """ + combobox("service", "Choose a service…",
@@ -238,8 +238,8 @@ VARIANTS = [
      '<i class="w40"></i><i class="tall"></i><i class="w40"></i><i class="tall"></i><div class="row2"><i></i><i></i><i></i><i></i></div><i class="cta"></i>',
      False, """<div class="form-shell">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Create your account</h1>
-  <p class="fg-2 mb-5">Type into the password field to watch the meter fill.</p>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <p class="fg-2 mb-6">Type into the password field to watch the meter fill.</p>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div class="form-field">
       <label class="form-label" for="s6email">Email</label>
       <div class="form-control form-adorn">
@@ -268,10 +268,10 @@ VARIANTS = [
      "One-time-code entry with the new OTP input: per-character boxes, paste handling and one-time-code autofill.",
      '<i class="w60" style="margin-inline:auto"></i><div class="row2"><i class="tall"></i><i class="tall"></i><i class="tall"></i><i class="tall"></i><i class="tall"></i><i class="tall"></i></div><i class="cta" style="margin-inline:auto"></i>',
      False, """<div class="form-shell text-center">
-  <span class="icon-tile mx-auto mb-4">""" + MAIL + """</span>
+  <span class="icon-tile mx-auto mb-5">""" + MAIL + """</span>
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Check your phone</h1>
-  <p class="fg-2 mb-5">We sent a six-digit code to the number ending 4417.</p>
-  <form class="vstack gap-4" data-demo-form novalidate>
+  <p class="fg-2 mb-6">We sent a six-digit code to the number ending 4417.</p>
+  <form class="vstack gap-5" data-demo-form novalidate>
     <div>
       <label class="form-label visually-hidden" for="s7otp">Verification code</label>
       <div class="otp d-inline-flex" data-bs-otp>
@@ -288,8 +288,8 @@ VARIANTS = [
      '<i class="w40"></i><i class="tall"></i><div class="row2"><i></i><i></i><i></i></div><i class="w60"></i><i class="cta"></i>',
      False, """<div class="form-shell">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Tell us what you&#8217;re into</h1>
-  <p class="fg-2 mb-5">Type and press Enter to add. Backspace removes the last one.</p>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <p class="fg-2 mb-6">Type and press Enter to add. Backspace removes the last one.</p>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div>
       <label class="form-label" for="s8topics">Topics</label>
       <div class="chip-input" data-bs-chips>
@@ -321,8 +321,8 @@ VARIANTS = [
      '<i class="w40"></i><i></i><i class="w40"></i><i></i><i class="w75"></i><i class="cta"></i>',
      False, """<div class="form-shell">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Estimate your project</h1>
-  <p class="fg-2 mb-5">Rough numbers. We&#8217;ll confirm everything before anything is agreed.</p>
-  <form class="vstack gap-4" data-demo-form novalidate>
+  <p class="fg-2 mb-6">Rough numbers. We&#8217;ll confirm everything before anything is agreed.</p>
+  <form class="vstack gap-5" data-demo-form novalidate>
     <div>
       <label class="form-label" for="s9pages">Number of pages</label>
       <div class="form-range" data-bs-bubble>
@@ -356,8 +356,8 @@ VARIANTS = [
      '<i class="tall"></i><i class="tall"></i><div class="row2"><i class="tall"></i><i class="tall"></i></div><i class="cta"></i>',
      False, """<div class="form-shell">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Billing details</h1>
-  <p class="fg-2 mb-5">Labels float out of the way once a field has content.</p>
-  <form class="vstack gap-3" data-demo-form data-bs-validate novalidate>
+  <p class="fg-2 mb-6">Labels float out of the way once a field has content.</p>
+  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
     <div class="form-floating">
       <input type="text" class="form-control" id="s10name" placeholder="Full name" required>
       <label for="s10name">Full name</label>
@@ -370,7 +370,7 @@ VARIANTS = [
       <input type="text" class="form-control" id="s10addr" placeholder="Address" required>
       <label for="s10addr">Address</label>
     </div>
-    <div class="row g-3">
+    <div class="row g-4">
       <div class="col-7">
         <div class="form-floating">
           <input type="text" class="form-control" id="s10city" placeholder="City" required>
@@ -390,7 +390,7 @@ VARIANTS = [
       </select>
       <label for="s10country">Country</label>
     </div>
-    <div class="mt-2"><button class="btn-solid theme-primary w-100 btn-lg" type="submit" data-done-text="Saved &#10003;">Save details</button></div>
+    <div class="mt-3"><button class="btn-solid theme-primary w-100 btn-lg" type="submit" data-done-text="Saved &#10003;">Save details</button></div>
   </form>
 </div>"""),
 ]
@@ -406,9 +406,9 @@ def write_variant(i, folder, nav, card, blurb, sketch, wide, body):
     html += f"""
 <div class="variant-bar">
   <a class="btn-text btn-sm" href="../index.html">&#8592; All forms</a>
-  <span class="fs-sm fw-semibold ms-2">{card}</span>
+  <span class="fs-sm fw-semibold ms-3">{card}</span>
   <span class="fs-xs fg-3 d-none md:d-inline">{i + 1} of {len(VARIANTS)}</span>
-  <div class="d-flex align-items-center gap-2 ms-auto">
+  <div class="d-flex align-items-center gap-3 ms-auto">
     <a class="btn-icon btn-sm" href="../{VARIANTS[prev_i][0]}/index.html" aria-label="Previous form">&#8249;</a>
     <a class="btn-icon btn-sm" href="../{VARIANTS[next_i][0]}/index.html" aria-label="Next form">&#8250;</a>
     {TOGGLE}
@@ -447,14 +447,14 @@ def write_index():
         desc="Ten free Bootstrap 6 form templates — contact, sign-up, booking, multi-step, OTP verification, chips, range and floating labels. No build step.",
         p="")
     html += f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#forms">Skip to the forms</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#forms">Skip to the forms</a>
 
 <div class="pack-head">
   <div class="container">
-    <div class="d-flex flex-wrap align-items-start gap-3">
+    <div class="d-flex flex-wrap align-items-start gap-4">
       <div class="me-auto" style="max-width:44rem">
-        <span class="badge badge-subtle theme-primary mb-3">Bootstrap 6.0.0-alpha1</span>
-        <h1 class="fs-4xl fw-bold mb-3" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
+        <span class="badge badge-subtle theme-primary mb-4">Bootstrap 6.0.0-alpha1</span>
+        <h1 class="fs-4xl fw-bold mb-4" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
         <p class="fs-lg fg-2 mb-0">
           Ten form layouts covering the shapes real projects need &#8212; contact,
           sign-up, booking, multi-step, verification and filtering. Between them they
@@ -472,8 +472,8 @@ def write_index():
 {chr(10).join(cards)}
     </div>
 
-    <section class="mt-9" style="max-width:46rem">
-      <h2 class="fs-2xl fw-bold mb-4" style="letter-spacing:-.02em">Using these</h2>
+    <section class="mt-12" style="max-width:46rem">
+      <h2 class="fs-2xl fw-bold mb-5" style="letter-spacing:-.02em">Using these</h2>
       <div class="prose">
         <p>Each form is a standalone page. Copy the markup out of the one you want and
         drop it into your project &#8212; the only requirements are Bootstrap 6&#8217;s CSS and, if
@@ -498,8 +498,8 @@ def write_index():
   </div>
 </main>
 
-<footer class="site-footer bg-2 py-6 mt-9">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+<footer class="site-footer bg-2 py-7 mt-12">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
     <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> {PACK_TITLE}. A free pack for uicookies.</p>
     <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
   </div>

@@ -13,11 +13,11 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navScroll" data-bs-top-margin="96px" data-bs-smooth-scroll="true">
 
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <nav class="navbar lg:navbar-expand" aria-label="Main">
-    <div class="container-fluid px-4 lg:px-5">
+    <div class="container-fluid px-5 lg:px-6">
       <a class="wordmark" href="index.html">Soundstage</a>
 
       <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
@@ -25,8 +25,8 @@
           <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
         </div>
-        <div class="drawer-body mb-2 lg:mb-0">
-          <ul class="nav navbar-nav ms-auto lg:gap-4" id="navScroll">
+        <div class="drawer-body mb-3 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-5" id="navScroll">
             <li class="nav-item"><a class="nav-link" href="#release">Release</a></li>
             <li class="nav-item"><a class="nav-link" href="#tour">Tour</a></li>
             <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
@@ -36,7 +36,7 @@
         </div>
       </dialog>
 
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
           <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
           <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
@@ -52,13 +52,13 @@
 <section class="stage">
   <img class="hero-bg" src="img/stage.jpg" alt="" width="1800" height="1100" loading="eager">
   <div class="stage-inner">
-    <p class="stage-meta mb-4"><span>New album</span><span>Out 12 September</span><span>UK &amp; EU tour</span></p>
-    <h1 class="slab stage-title mb-4">Low Pressure<br>System</h1>
-    <p class="fs-lg mb-5" style="max-width:32rem;opacity:.88">
+    <p class="stage-meta mb-5"><span>New album</span><span>Out 12 September</span><span>UK &amp; EU tour</span></p>
+    <h1 class="slab stage-title mb-5">Low Pressure<br>System</h1>
+    <p class="fs-lg mb-6" style="max-width:32rem;opacity:.88">
       Fourth record from the Leeds four-piece. Recorded live to tape over eleven
       days in a converted chapel, mostly at night.
     </p>
-    <div class="d-flex flex-wrap gap-3">
+    <div class="d-flex flex-wrap gap-4">
       <a class="btn-solid theme-primary btn-lg" href="#release">Listen now</a>
       <a class="btn-outline theme-secondary btn-lg" href="#tour">Tour dates</a>
     </div>
@@ -70,33 +70,33 @@
   <!-- Release -->
   <section class="section" id="release">
     <div class="container">
-      <p class="rule-label mb-6">The record</p>
-      <div class="row g-6">
+      <p class="rule-label mb-7">The record</p>
+      <div class="row g-7">
         <div class="lg:col-5">
-          <div class="ph sleeve mb-4"><img src="img/sleeve.jpg" alt="Low Pressure System album artwork" width="800" height="800" loading="lazy"></div>
-          <p class="slab fs-2xl mb-2">Low Pressure System</p>
-          <p class="fg-3 fs-sm mb-4">LP · 11 tracks · 44 minutes · Chapel Tapes</p>
-          <div class="d-flex flex-wrap gap-2">
+          <div class="ph sleeve mb-5"><img src="img/sleeve.jpg" alt="Low Pressure System album artwork" width="800" height="800" loading="lazy"></div>
+          <p class="slab fs-2xl mb-3">Low Pressure System</p>
+          <p class="fg-3 fs-sm mb-5">LP · 11 tracks · 44 minutes · Chapel Tapes</p>
+          <div class="d-flex flex-wrap gap-3">
             <a class="btn-solid theme-primary" href="release.html">Album page</a>
             <a class="btn-outline theme-secondary" href="#">Vinyl pre-order</a>
           </div>
         </div>
         <div class="lg:col-7">
-          <div class="d-flex align-items-center justify-content-between mb-3">
+          <div class="d-flex align-items-center justify-content-between mb-4">
             <p class="fw-bold mb-0">Tracklist</p>
             <p class="fg-3 fs-sm mb-0">Click any track to preview the play state</p>
           </div>
           <div id="tracklist">
-            <div class="track"><span class="track-no">01</span><span class="track-name">Harbour Wall</span><span class="d-flex align-items-center gap-3"><span class="track-len">3:42</span><button class="track-play" type="button" aria-label="Play Harbour Wall"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
-            <div class="track"><span class="track-no">02</span><span class="track-name">Nightshift</span><span class="d-flex align-items-center gap-3"><span class="track-len">4:18</span><button class="track-play" type="button" aria-label="Play Nightshift"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
-            <div class="track"><span class="track-no">03</span><span class="track-name">Low Pressure System</span><span class="d-flex align-items-center gap-3"><span class="track-len">5:07</span><button class="track-play" type="button" aria-label="Play Low Pressure System"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
-            <div class="track"><span class="track-no">04</span><span class="track-name">Aveiro</span><span class="d-flex align-items-center gap-3"><span class="track-len">3:29</span><button class="track-play" type="button" aria-label="Play Aveiro"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
-            <div class="track"><span class="track-no">05</span><span class="track-name">Chapel Tapes</span><span class="d-flex align-items-center gap-3"><span class="track-len">2:55</span><button class="track-play" type="button" aria-label="Play Chapel Tapes"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
-            <div class="track"><span class="track-no">06</span><span class="track-name">Quarry Road</span><span class="d-flex align-items-center gap-3"><span class="track-len">4:44</span><button class="track-play" type="button" aria-label="Play Quarry Road"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
-            <div class="track"><span class="track-no">07</span><span class="track-name">Ferry, Last Light</span><span class="d-flex align-items-center gap-3"><span class="track-len">6:12</span><button class="track-play" type="button" aria-label="Play Ferry, Last Light"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
-            <div class="track"><span class="track-no">08</span><span class="track-name">Rooftops, Winter</span><span class="d-flex align-items-center gap-3"><span class="track-len">3:58</span><button class="track-play" type="button" aria-label="Play Rooftops, Winter"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
+            <div class="track"><span class="track-no">01</span><span class="track-name">Harbour Wall</span><span class="d-flex align-items-center gap-4"><span class="track-len">3:42</span><button class="track-play" type="button" aria-label="Play Harbour Wall"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
+            <div class="track"><span class="track-no">02</span><span class="track-name">Nightshift</span><span class="d-flex align-items-center gap-4"><span class="track-len">4:18</span><button class="track-play" type="button" aria-label="Play Nightshift"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
+            <div class="track"><span class="track-no">03</span><span class="track-name">Low Pressure System</span><span class="d-flex align-items-center gap-4"><span class="track-len">5:07</span><button class="track-play" type="button" aria-label="Play Low Pressure System"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
+            <div class="track"><span class="track-no">04</span><span class="track-name">Aveiro</span><span class="d-flex align-items-center gap-4"><span class="track-len">3:29</span><button class="track-play" type="button" aria-label="Play Aveiro"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
+            <div class="track"><span class="track-no">05</span><span class="track-name">Chapel Tapes</span><span class="d-flex align-items-center gap-4"><span class="track-len">2:55</span><button class="track-play" type="button" aria-label="Play Chapel Tapes"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
+            <div class="track"><span class="track-no">06</span><span class="track-name">Quarry Road</span><span class="d-flex align-items-center gap-4"><span class="track-len">4:44</span><button class="track-play" type="button" aria-label="Play Quarry Road"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
+            <div class="track"><span class="track-no">07</span><span class="track-name">Ferry, Last Light</span><span class="d-flex align-items-center gap-4"><span class="track-len">6:12</span><button class="track-play" type="button" aria-label="Play Ferry, Last Light"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
+            <div class="track"><span class="track-no">08</span><span class="track-name">Rooftops, Winter</span><span class="d-flex align-items-center gap-4"><span class="track-len">3:58</span><button class="track-play" type="button" aria-label="Play Rooftops, Winter"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3v10l8-5z"/></svg></button></span></div>
           </div>
-          <p class="fs-xs fg-3 mt-3 mb-0">
+          <p class="fs-xs fg-3 mt-4 mb-0">
             The play button is a state demonstration only &mdash; no audio ships with the template.
           </p>
         </div>
@@ -107,9 +107,9 @@
   <!-- Tour -->
   <section class="section bg-2" id="tour">
     <div class="container">
-      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-6">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-4 mb-7">
         <div>
-          <p class="rule-label d-inline-block mb-3">On tour</p>
+          <p class="rule-label d-inline-block mb-4">On tour</p>
           <h2 class="slab fs-4xl mb-0">Autumn 2026</h2>
         </div>
         <p class="fg-3 fs-sm mb-0">Sold-out shows stay listed. They count.</p>
@@ -129,20 +129,20 @@
   <!-- Video -->
   <section class="section" id="video">
     <div class="container">
-      <p class="rule-label mb-6">Watch</p>
-      <div class="row g-4">
+      <p class="rule-label mb-7">Watch</p>
+      <div class="row g-5">
         <div class="md:col-7">
           <button class="video-tile" type="button" data-bs-toggle="dialog" data-bs-target="#videoDialog" data-cap="Harbour Wall — official video">
             <div class="ph"><img src="img/video-1.jpg" alt="Still from the Harbour Wall video" width="900" height="506" loading="lazy"></div>
           </button>
-          <p class="fw-bold mt-3 mb-0">Harbour Wall</p>
+          <p class="fw-bold mt-4 mb-0">Harbour Wall</p>
           <p class="fg-3 fs-sm mb-0">Official video &middot; dir. Nadia Berger</p>
         </div>
         <div class="md:col-5">
           <button class="video-tile" type="button" data-bs-toggle="dialog" data-bs-target="#videoDialog" data-cap="Chapel Tapes — live session">
             <div class="ph"><img src="img/video-2.jpg" alt="Still from the Chapel Tapes live session" width="700" height="394" loading="lazy"></div>
           </button>
-          <p class="fw-bold mt-3 mb-0">Chapel Tapes</p>
+          <p class="fw-bold mt-4 mb-0">Chapel Tapes</p>
           <p class="fg-3 fs-sm mb-0">Live session &middot; one take</p>
         </div>
       </div>
@@ -152,8 +152,8 @@
   <!-- Merch -->
   <section class="section bg-2" id="merch">
     <div class="container">
-      <p class="rule-label mb-6">Merch</p>
-      <div class="row g-4">
+      <p class="rule-label mb-7">Merch</p>
+      <div class="row g-5">
         <div class="sm:col-6 lg:col-3">
           <a class="merch-item" href="#">
             <div class="ph"><img src="img/merch-1.jpg" alt="Low Pressure System vinyl" width="500" height="500" loading="lazy"></div>
@@ -191,10 +191,10 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="lg:col-7 text-center">
-          <p class="rule-label d-inline-block mb-4">Mailing list</p>
-          <h2 class="slab fs-3xl mb-3">Tour dates before<br>they go on sale</h2>
-          <p class="fg-2 mb-5">Two or three emails a year. Presales, new records, nothing else.</p>
-          <form class="d-flex flex-wrap justify-content-center gap-3" data-demo-form data-bs-validate novalidate>
+          <p class="rule-label d-inline-block mb-5">Mailing list</p>
+          <h2 class="slab fs-3xl mb-4">Tour dates before<br>they go on sale</h2>
+          <p class="fg-2 mb-6">Two or three emails a year. Presales, new records, nothing else.</p>
+          <form class="d-flex flex-wrap justify-content-center gap-4" data-demo-form data-bs-validate novalidate>
             <div class="form-field" style="min-width:min(100%,22rem)">
               <label class="visually-hidden" for="nlEmail">Email address</label>
               <input type="email" class="form-control" id="nlEmail" placeholder="you@example.com" required>
@@ -209,35 +209,35 @@
 
 </main>
 
-<footer class="site-footer section pb-5 bg-2">
+<footer class="site-footer section pb-6 bg-2">
   <div class="container">
-    <div class="row g-5">
+    <div class="row g-6">
       <div class="md:col-4">
-        <p class="wordmark fg-1 d-inline-block mb-3">Soundstage</p>
+        <p class="wordmark fg-1 d-inline-block mb-4">Soundstage</p>
         <p class="fg-3 fs-sm mb-0">Leeds, United Kingdom<br>Chapel Tapes</p>
       </div>
       <div class="md:col-2">
-        <p class="fw-semibold fs-sm mb-3">Music</p>
+        <p class="fw-semibold fs-sm mb-4">Music</p>
         <ul class="list-unstyled fs-sm fg-3 mb-0">
-          <li class="mb-2"><a href="#release">Latest release</a></li>
-          <li class="mb-2"><a href="release.html">Album page</a></li>
-          <li class="mb-2"><a href="#video">Videos</a></li>
+          <li class="mb-3"><a href="#release">Latest release</a></li>
+          <li class="mb-3"><a href="release.html">Album page</a></li>
+          <li class="mb-3"><a href="#video">Videos</a></li>
         </ul>
       </div>
       <div class="md:col-2">
-        <p class="fw-semibold fs-sm mb-3">Live</p>
+        <p class="fw-semibold fs-sm mb-4">Live</p>
         <ul class="list-unstyled fs-sm fg-3 mb-0">
-          <li class="mb-2"><a href="#tour">Tour dates</a></li>
-          <li class="mb-2"><a href="#merch">Merch</a></li>
+          <li class="mb-3"><a href="#tour">Tour dates</a></li>
+          <li class="mb-3"><a href="#merch">Merch</a></li>
         </ul>
       </div>
       <div class="md:col-4">
-        <p class="fw-semibold fs-sm mb-3">Bookings</p>
+        <p class="fw-semibold fs-sm mb-4">Bookings</p>
         <p class="fs-sm fg-3 mb-1"><a href="mailto:live@soundstage.example">live@soundstage.example</a></p>
         <p class="fs-xs fg-3 mb-0">Press enquiries via Chapel Tapes.</p>
       </div>
     </div>
-    <hr class="my-5">
+    <hr class="my-6">
     <p class="fs-xs fg-3 mb-0">&copy; <span data-year></span> Soundstage. A free Bootstrap 6 template — the band is fictional.</p>
   </div>
 </footer>
@@ -249,7 +249,7 @@
   </div>
   <div class="dialog-body">
     <div class="ph" style="aspect-ratio:16/9"><img id="videoStill" src="img/video-1.jpg" alt="" width="900" height="506"></div>
-    <p class="fg-3 fs-sm mt-3 mb-0">
+    <p class="fg-3 fs-sm mt-4 mb-0">
       Drop your embed in here — an <code>&lt;iframe&gt;</code> or a
       <code>&lt;video&gt;</code>. The dialog is a native
       <code>&lt;dialog&gt;</code>, so Escape and focus trapping come from the browser.

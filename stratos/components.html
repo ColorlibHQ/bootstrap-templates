@@ -12,12 +12,12 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#tocNav" data-bs-top-margin="120px" data-bs-smooth-scroll="true">
 
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header" id="siteHeader">
   <nav class="navbar lg:navbar-expand" aria-label="Main">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+      <a class="navbar-brand d-flex align-items-center gap-3 fw-semibold" href="index.html">
         <span class="brand-mark" aria-hidden="true">S</span> Stratos
       </a>
       <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
@@ -25,7 +25,7 @@
           <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
         </div>
-        <div class="drawer-body mb-2 lg:mb-0">
+        <div class="drawer-body mb-3 lg:mb-0">
           <ul class="nav navbar-nav me-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="components.html">Components</a></li>
@@ -36,7 +36,7 @@
           </ul>
         </div>
       </dialog>
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
           <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
           <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
@@ -51,8 +51,8 @@
 
 <div class="page-head">
   <div class="container">
-    <span class="badge badge-subtle theme-primary mb-3">Bootstrap 6.0.0-alpha1</span>
-    <h1 class="fs-4xl fw-bold mb-2">Components</h1>
+    <span class="badge badge-subtle theme-primary mb-4">Bootstrap 6.0.0-alpha1</span>
+    <h1 class="fs-4xl fw-bold mb-3">Components</h1>
     <p class="fs-lg fg-2 mb-0" style="max-width:44rem">
       Every component in the alpha, rendered live. Renamed ones are flagged, and
       the six that didn't exist in Bootstrap 5 are marked <span class="badge badge-subtle theme-success">New</span>.
@@ -65,7 +65,7 @@
     <div class="shell">
 
       <aside class="shell-aside">
-        <p class="eyebrow fs-xs fg-3 mb-2">On this page</p>
+        <p class="eyebrow fs-xs fg-3 mb-3">On this page</p>
         <ul class="shell-nav nav" id="tocNav">
           <li><a class="nav-link" href="#buttons">Buttons</a></li>
           <li><a class="nav-link" href="#badges">Badges</a></li>
@@ -131,7 +131,7 @@
           </div>
           <div class="demo">
             <span class="demo-label">Sizes, icons, states &amp; groups</span>
-            <div class="demo-row mb-3">
+            <div class="demo-row mb-4">
               <button type="button" class="btn-solid theme-primary btn-sm">Small</button>
               <button type="button" class="btn-solid theme-primary">Default</button>
               <button type="button" class="btn-solid theme-primary btn-lg">Large</button>
@@ -162,7 +162,7 @@
           <h2>Badges</h2>
           <p class="demo-intro">Three variants, composed with the same theme tokens.</p>
           <div class="demo">
-            <div class="demo-row mb-3">
+            <div class="demo-row mb-4">
               <span class="badge theme-primary">Solid</span>
               <span class="badge badge-subtle theme-primary">Subtle</span>
               <span class="badge badge-outline theme-primary">Outline</span>
@@ -194,7 +194,7 @@
             <div class="alert theme-warning" role="alert">
               Your trial ends in 3 days. <a href="pricing.html" class="alert-link">Choose a plan</a>.
             </div>
-            <div class="alert theme-danger d-flex align-items-start gap-2" role="alert">
+            <div class="alert theme-danger d-flex align-items-start gap-3" role="alert">
               <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" class="flex-shrink-0 mt-1" aria-hidden="true"><path d="M8 1.5 15 14H1zM7.25 6v3.5h1.5V6zm0 4.75v1.5h1.5v-1.5z"/></svg>
               <div>
                 <strong>Deploy failed.</strong> The build exited with code 1 on step <code>test:e2e</code>.
@@ -209,7 +209,7 @@
           <p class="demo-intro">CSS-only. Sizes, status dots, and overlapping stacks.</p>
           <div class="demo">
             <span class="demo-label">Sizes &amp; status</span>
-            <div class="demo-row mb-4">
+            <div class="demo-row mb-5">
               <span class="avatar avatar-sm"><span class="avatar-initials">SM</span></span>
               <span class="avatar"><span class="avatar-initials">MD</span></span>
               <span class="avatar avatar-lg"><span class="avatar-initials">LG</span></span>
@@ -257,7 +257,7 @@
         <section class="demo-group" id="cards">
           <h2>Cards</h2>
           <div class="demo">
-            <div class="row g-4">
+            <div class="row g-5">
               <div class="md:col-6">
                 <section class="card h-100">
                   <div class="card-body">
@@ -391,7 +391,7 @@
           <h2>Nav &amp; tabs</h2>
           <div class="demo">
             <span class="demo-label">Pills</span>
-            <ul class="nav nav-pills mb-4">
+            <ul class="nav nav-pills mb-5">
               <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Overview</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Activity</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
@@ -410,7 +410,7 @@
                 <button class="nav-link" id="t3-tab" data-bs-toggle="tab" data-bs-target="#t3" type="button" role="tab" aria-controls="t3" aria-selected="false">Design</button>
               </li>
             </ul>
-            <div class="tab-content pt-4">
+            <div class="tab-content pt-5">
               <div class="tab-pane fade show active" id="t1" role="tabpanel" aria-labelledby="t1-tab" tabindex="0">
                 <p class="fg-2 mb-0">Cycle time, review latency and carryover — measured from real events rather than board columns.</p>
               </div>
@@ -483,7 +483,7 @@
                   <div class="d-flex align-items-center justify-content-center fs-2xl fw-bold text-white" style="height:260px;background:linear-gradient(135deg,#0e9f6e,#5fd6ab)">Releases</div>
                 </div>
               </div>
-              <div class="d-flex justify-content-end gap-2 mt-3">
+              <div class="d-flex justify-content-end gap-3 mt-4">
                 <button class="btn-icon" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
                   <span class="carousel-icon-prev" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -501,7 +501,7 @@
         <section class="demo-group" id="collapse">
           <h2>Collapse</h2>
           <div class="demo">
-            <button class="btn-outline theme-secondary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#demoCollapse" aria-expanded="false" aria-controls="demoCollapse">
+            <button class="btn-outline theme-secondary mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#demoCollapse" aria-expanded="false" aria-controls="demoCollapse">
               Toggle details
             </button>
             <div class="collapse" id="demoCollapse">
@@ -518,10 +518,10 @@
           <h2>Toasts</h2>
           <div class="demo">
             <button class="btn-solid theme-primary" type="button" id="toastBtn">Show toast</button>
-            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div class="toast-container position-fixed bottom-0 end-0 p-4">
               <div class="toast" id="demoToast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
-                  <span class="badge theme-success me-2">✓</span>
+                  <span class="badge theme-success me-3">✓</span>
                   <strong class="me-auto">Stratos</strong>
                   <small class="fg-3">just now</small>
                   <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
@@ -553,7 +553,7 @@
           <h2>Toggler <span class="badge badge-subtle theme-success">New</span></h2>
           <p class="demo-intro">A generic class/attribute toggler — no custom JavaScript needed.</p>
           <div class="demo">
-            <div class="w-100 p-4 rounded-5 border" data-bs-toggle="toggler" data-bs-value="theme-primary" data-bs-attribute="class" role="button" tabindex="0">
+            <div class="w-100 p-5 rounded-5 border" data-bs-toggle="toggler" data-bs-value="theme-primary" data-bs-attribute="class" role="button" tabindex="0">
               Click to toggle <code>theme-primary</code> on this box.
             </div>
           </div>
@@ -645,7 +645,7 @@
         <section class="demo-group" id="placeholder">
           <h2>Placeholders</h2>
           <div class="demo">
-            <div class="row g-4">
+            <div class="row g-5">
               <div class="md:col-6">
                 <div class="card" aria-hidden="true">
                   <div class="card-body">
@@ -675,19 +675,19 @@
                 <tbody>
                   <tr>
                     <th scope="row">v2.4.0</th>
-                    <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">PN</span></span> Priya N.</span></td>
+                    <td><span class="d-inline-flex align-items-center gap-3"><span class="avatar avatar-sm"><span class="avatar-initials">PN</span></span> Priya N.</span></td>
                     <td>2.1 days</td>
                     <td><span class="badge badge-subtle theme-success">Shipped</span></td>
                   </tr>
                   <tr>
                     <th scope="row">v2.3.9</th>
-                    <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">ML</span></span> Marcus L.</span></td>
+                    <td><span class="d-inline-flex align-items-center gap-3"><span class="avatar avatar-sm"><span class="avatar-initials">ML</span></span> Marcus L.</span></td>
                     <td>3.4 days</td>
                     <td><span class="badge badge-subtle theme-warning">In review</span></td>
                   </tr>
                   <tr>
                     <th scope="row">v2.3.8</th>
-                    <td><span class="d-inline-flex align-items-center gap-2"><span class="avatar avatar-sm"><span class="avatar-initials">DR</span></span> Dana R.</span></td>
+                    <td><span class="d-inline-flex align-items-center gap-3"><span class="avatar avatar-sm"><span class="avatar-initials">DR</span></span> Dana R.</span></td>
                     <td>1.8 days</td>
                     <td><span class="badge badge-subtle theme-success">Shipped</span></td>
                   </tr>
@@ -705,15 +705,15 @@
             <code>lg</code> and above are fluid <code>clamp()</code> values that scale with the viewport.
           </p>
           <div class="demo">
-            <p class="fs-6xl fw-bold mb-2">fs-6xl</p>
-            <p class="fs-5xl fw-bold mb-2">fs-5xl</p>
-            <p class="fs-4xl fw-bold mb-2">fs-4xl</p>
-            <p class="fs-3xl fw-semibold mb-2">fs-3xl</p>
-            <p class="fs-2xl fw-semibold mb-2">fs-2xl</p>
-            <p class="fs-xl mb-2">fs-xl</p>
-            <p class="fs-lg mb-2">fs-lg</p>
-            <p class="fs-md mb-2">fs-md</p>
-            <p class="fs-sm mb-2">fs-sm</p>
+            <p class="fs-6xl fw-bold mb-3">fs-6xl</p>
+            <p class="fs-5xl fw-bold mb-3">fs-5xl</p>
+            <p class="fs-4xl fw-bold mb-3">fs-4xl</p>
+            <p class="fs-3xl fw-semibold mb-3">fs-3xl</p>
+            <p class="fs-2xl fw-semibold mb-3">fs-2xl</p>
+            <p class="fs-xl mb-3">fs-xl</p>
+            <p class="fs-lg mb-3">fs-lg</p>
+            <p class="fs-md mb-3">fs-md</p>
+            <p class="fs-sm mb-3">fs-sm</p>
             <p class="fs-xs mb-0">fs-xs</p>
           </div>
           <div class="demo">
@@ -733,8 +733,8 @@
   </div>
 </main>
 
-<footer class="site-footer bg-2 py-6 mt-9">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+<footer class="site-footer bg-2 py-7 mt-12">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
     <p class="fg-3 fs-xs mb-0">&copy; <span id="year">2026</span> Stratos. A free template for uicookies.</p>
     <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
   </div>

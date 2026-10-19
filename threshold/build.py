@@ -158,7 +158,7 @@ def signup(where, *, big=False):
 
 def chrome():
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <div class="wrap head-in">
@@ -168,7 +168,7 @@ def chrome():
       <a class="head-link" href="#compare">Compare</a>
       <a class="head-link" href="#faq">Questions</a>
     </nav>
-    <div class="d-flex align-items-center gap-2 ms-auto">
+    <div class="d-flex align-items-center gap-3 ms-auto">
       {TOGGLE}
       <a class="btn-outline theme-secondary btn-sm" href="#get">Get early access</a>
     </div>
@@ -197,20 +197,20 @@ FOOTER = """
 def page_index():
     features = "\n".join(f"""        <article class="feat">
           <span class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="{path}"/></svg></span>
-          <h3 class="feat-name mb-2">{name}</h3>
+          <h3 class="feat-name mb-3">{name}</h3>
           <p class="fg-2 fs-sm mb-0">{blurb}</p>
         </article>""" for name, blurb, path in FEATURES)
 
     steps = "\n".join(f"""        <li class="step">
           <span class="step-n" aria-hidden="true">{i + 1}</span>
           <div>
-            <h3 class="step-name mb-2">{name}</h3>
+            <h3 class="step-name mb-3">{name}</h3>
             <p class="fg-2 mb-0">{blurb}</p>
           </div>
         </li>""" for i, (name, blurb) in enumerate(STEPS))
 
     proof = "\n".join(f"""        <figure class="quote">
-          <blockquote class="mb-3"><p class="mb-0">{q}</p></blockquote>
+          <blockquote class="mb-4"><p class="mb-0">{q}</p></blockquote>
           <figcaption><strong>{who}</strong><span class="fg-3 d-block">{role}</span></figcaption>
         </figure>""" for q, who, role in PROOF)
 
@@ -233,9 +233,9 @@ def page_index():
 
   <section class="hero" id="get">
     <div class="wrap hero-in">
-      <p class="pill mb-4"><span class="pill-dot" aria-hidden="true"></span> Private beta &middot; 1,400 on the list</p>
-      <h1 class="hero-title mb-4">Your calendar defends<br>your afternoons.</h1>
-      <p class="hero-lede mb-5">
+      <p class="pill mb-5"><span class="pill-dot" aria-hidden="true"></span> Private beta &middot; 1,400 on the list</p>
+      <h1 class="hero-title mb-5">Your calendar defends<br>your afternoons.</h1>
+      <p class="hero-lede mb-6">
         Threshold blocks the focus time you keep meaning to protect, and declines
         what lands on it with a real alternative. One rule, no settings screen,
         and nobody else on your team has to install anything.
@@ -251,14 +251,14 @@ def page_index():
 
   <div class="logo-band">
     <div class="wrap">
-      <p class="fs-xs eyebrow fg-3 mb-3">Protecting time at</p>
+      <p class="fs-xs eyebrow fg-3 mb-4">Protecting time at</p>
       {LOGO_ROW}
     </div>
   </div>
 
   <section class="band">
     <div class="wrap">
-      <h2 class="band-title mb-5">Four things it does, and nothing else</h2>
+      <h2 class="band-title mb-6">Four things it does, and nothing else</h2>
       <div class="feat-grid">
 {features}
       </div>
@@ -267,7 +267,7 @@ def page_index():
 
   <section class="band band-alt" id="how">
     <div class="wrap">
-      <h2 class="band-title mb-5">Set up once, in under a minute</h2>
+      <h2 class="band-title mb-6">Set up once, in under a minute</h2>
       <ol class="step-list">
 {steps}
       </ol>
@@ -276,7 +276,7 @@ def page_index():
 
   <section class="band">
     <div class="wrap">
-      <h2 class="band-title mb-5">People who kept it on</h2>
+      <h2 class="band-title mb-6">People who kept it on</h2>
       <div class="quote-grid">
 {proof}
       </div>
@@ -285,8 +285,8 @@ def page_index():
 
   <section class="band band-alt" id="compare">
     <div class="wrap">
-      <h2 class="band-title mb-2">Against the two things you are doing now</h2>
-      <p class="fg-2 mb-5">Honest columns. Doing it by hand genuinely works — it just does not survive a busy fortnight.</p>
+      <h2 class="band-title mb-3">Against the two things you are doing now</h2>
+      <p class="fg-2 mb-6">Honest columns. Doing it by hand genuinely works — it just does not survive a busy fortnight.</p>
       <div class="table-responsive">
         <table class="table md:table-stacked align-middle compare">
           <thead><tr><th scope="col">&nbsp;</th><th scope="col">{TITLE}</th><th scope="col">Blocking apps</th><th scope="col">By hand</th></tr></thead>
@@ -300,7 +300,7 @@ def page_index():
 
   <section class="band" id="faq">
     <div class="wrap faq-wrap">
-      <h2 class="band-title mb-5">The questions people actually ask</h2>
+      <h2 class="band-title mb-6">The questions people actually ask</h2>
       <div class="faq">
 {faq}
       </div>
@@ -309,8 +309,8 @@ def page_index():
 
   <section class="closer">
     <div class="wrap">
-      <h2 class="closer-title mb-3">Get your afternoons back</h2>
-      <p class="fg-2 mb-5">Free for one calendar. Takes under a minute. Turn it off with one switch.</p>
+      <h2 class="closer-title mb-4">Get your afternoons back</h2>
+      <p class="fg-2 mb-6">Free for one calendar. Takes under a minute. Turn it off with one switch.</p>
       {signup('closer', big=True)}
       <p class="hero-note mb-0">1,400 people on the list. We are letting in about 80 a week.</p>
     </div>
@@ -338,8 +338,8 @@ def page_thanks():
 <main id="main" class="thanks">
   <div class="wrap thanks-in">
     <span class="thanks-tick" aria-hidden="true">✓</span>
-    <h1 class="hero-title mb-3">You are on the list.</h1>
-    <p class="hero-lede mb-5">
+    <h1 class="hero-title mb-4">You are on the list.</h1>
+    <p class="hero-lede mb-6">
       Position <strong>1,401</strong>. We let in about eighty people a week, so
       that is roughly a fortnight. You will get one email when it is your turn
       and nothing before it.
@@ -347,8 +347,8 @@ def page_thanks():
 
     <div class="thanks-grid">
       <div class="thanks-card">
-        <h2 class="feat-name mb-2">Move up the list</h2>
-        <p class="fg-2 fs-sm mb-3">Anyone who joins through your link puts you five places forward. Ten of them and you are in this week.</p>
+        <h2 class="feat-name mb-3">Move up the list</h2>
+        <p class="fg-2 fs-sm mb-4">Anyone who joins through your link puts you five places forward. Ten of them and you are in this week.</p>
         <div class="copy-row">
           <input class="form-control" type="text" value="threshold.example/r/9K4D2" readonly aria-label="Your referral link" id="refLink">
           <button class="btn-solid theme-primary" type="button" data-copy="#refLink" data-done-text="Copied ✓">Copy</button>
@@ -356,13 +356,13 @@ def page_thanks():
       </div>
 
       <div class="thanks-card">
-        <h2 class="feat-name mb-2">While you wait</h2>
-        <p class="fg-2 fs-sm mb-3">The manual version of this works. Block two hours tomorrow afternoon and decline anything that lands on it with an alternative time.</p>
+        <h2 class="feat-name mb-3">While you wait</h2>
+        <p class="fg-2 fs-sm mb-4">The manual version of this works. Block two hours tomorrow afternoon and decline anything that lands on it with an alternative time.</p>
         <a class="btn-outline theme-secondary" href="index.html#how">Read how it works</a>
       </div>
     </div>
 
-    <p class="fs-sm fg-3 mt-5 mb-0">
+    <p class="fs-sm fg-3 mt-6 mb-0">
       Wrong address, or changed your mind? <a href="index.html">Start again</a> —
       we have not stored anything a delete cannot remove.
     </p>

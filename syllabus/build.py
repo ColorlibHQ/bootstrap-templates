@@ -145,7 +145,7 @@ MARK = """<svg class="brand-glyph" width="24" height="24" viewBox="0 0 24 24" fi
 def chrome(home=True):
     p = "" if home else "index.html"
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <nav class="navbar lg:navbar-expand" aria-label="Main">
@@ -157,8 +157,8 @@ def chrome(home=True):
           <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
         </div>
-        <div class="drawer-body mb-2 lg:mb-0">
-          <ul class="nav navbar-nav ms-auto lg:gap-4">
+        <div class="drawer-body mb-3 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-5">
             <li class="nav-item"><a class="nav-link" href="{p}#outcomes">What you'll learn</a></li>
             <li class="nav-item"><a class="nav-link" href="{p}#curriculum">Curriculum</a></li>
             <li class="nav-item"><a class="nav-link" href="lesson.html">Sample lesson</a></li>
@@ -167,7 +167,7 @@ def chrome(home=True):
         </div>
       </dialog>
 
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         {TOGGLE}
         <a class="btn-solid theme-primary" href="{p}#enrol">Enrol &mdash; &pound;180</a>
         <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
@@ -181,22 +181,22 @@ def chrome(home=True):
 
 
 FOOTER = """
-<footer class="site-footer section pb-5">
+<footer class="site-footer section pb-6">
   <div class="container">
-    <div class="row g-5">
+    <div class="row g-6">
       <div class="lg:col-5">
-        <p class="wordmark mb-3">""" + MARK + """<span>Syllabus</span></p>
+        <p class="wordmark mb-4">""" + MARK + """<span>Syllabus</span></p>
         <p class="fg-2 fs-sm mb-0" style="max-width:24rem">
           One course, taught properly, by someone who does the work. No cohort,
           no deadline, no expiry.
         </p>
       </div>
       <div class="md:col-6 lg:col-3">
-        <p class="eyebrow fs-xs fg-3 mb-3">Course</p>
+        <p class="eyebrow fs-xs fg-3 mb-4">Course</p>
         <ul class="link-list"><li><a href="index.html#outcomes">What you'll learn</a></li><li><a href="index.html#curriculum">Curriculum</a></li><li><a href="lesson.html">Sample lesson</a></li><li><a href="index.html#faq">Questions</a></li></ul>
       </div>
       <div class="md:col-6 lg:col-4">
-        <p class="eyebrow fs-xs fg-3 mb-3">Your progress</p>
+        <p class="eyebrow fs-xs fg-3 mb-4">Your progress</p>
         <p class="fg-2 fs-sm mb-0">
           Ticks are stored in this browser only — nothing is sent anywhere and
           there is no account. Clearing site data clears your progress, which is
@@ -205,7 +205,7 @@ FOOTER = """
       </div>
     </div>
 
-    <hr class="my-5">
+    <hr class="my-6">
 
     <p class="fs-xs fg-3 mb-0">&copy; <span data-year>2026</span> Syllabus &mdash; a free Bootstrap 6 template. The course, its teacher and every review here are fictional.</p>
   </div>
@@ -245,7 +245,7 @@ def curriculum(interactive=True):
             </span>
           </summary>
           <div class="module-body">
-            <p class="fg-2 fs-sm mb-3">{blurb}</p>
+            <p class="fg-2 fs-sm mb-4">{blurb}</p>
             <ul class="lesson-list">
 {chr(10).join(rows)}
             </ul>
@@ -269,24 +269,24 @@ def progress_panel():
           </div>
         </div>
 
-        <div class="progress mb-4" role="progressbar" aria-label="Course progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" data-bar-wrap>
+        <div class="progress mb-5" role="progressbar" aria-label="Course progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" data-bar-wrap>
           <div class="progress-bar" style="width:0%" data-bar></div>
         </div>
 
         <label class="form-label" for="paceHours">Hours you can give it a week</label>
         <output class="tracker-out" id="paceOut" for="paceHours">3 hours</output>
-        <div class="form-range mb-3">
+        <div class="form-range mb-4">
           <input type="range" class="form-range-input" id="paceHours" min="1" max="20" step="1" value="3">
         </div>
 
-        <p class="tracker-eta mb-3" data-eta></p>
+        <p class="tracker-eta mb-4" data-eta></p>
         <button class="btn-text theme-secondary tracker-reset" type="button" data-reset>Clear my progress</button>
       </div>"""
 
 
 def page_index():
     reviews = "\n".join(f"""        <div class="lg:col-4"><figure class="review surface surface-pad h-100">
-          <blockquote class="mb-4"><p class="mb-0">{q}</p></blockquote>
+          <blockquote class="mb-5"><p class="mb-0">{q}</p></blockquote>
           <figcaption><p class="fw-semibold mb-0">{name}</p><p class="fg-3 fs-sm mb-0">{role}</p></figcaption>
         </figure></div>""" for q, name, role in REVIEWS)
 
@@ -301,16 +301,16 @@ def page_index():
     ) + BODY + chrome() + f"""
 <section class="hero">
   <div class="container">
-    <div class="row g-6 align-items-center">
+    <div class="row g-7 align-items-center">
       <div class="lg:col-7">
-        <p class="pill mb-4">A single course &middot; no cohort, no expiry</p>
-        <h1 class="hero-title display-serif fs-5xl mb-4">Typography for interfaces.</h1>
-        <p class="hero-lede fs-lg fg-2 mb-5">
+        <p class="pill mb-5">A single course &middot; no cohort, no expiry</p>
+        <h1 class="hero-title display-serif fs-5xl mb-5">Typography for interfaces.</h1>
+        <p class="hero-lede fs-lg fg-2 mb-6">
           {TOTAL_LESSONS} lessons and {hhmm(TOTAL_MIN)} on the part of interface work
           nobody taught you: choosing type for a reason, building a scale that
           survives real content, and setting text that people can actually read.
         </p>
-        <div class="d-flex flex-wrap gap-3 mb-4">
+        <div class="d-flex flex-wrap gap-4 mb-5">
           <a class="btn-solid theme-primary btn-lg" href="#enrol">Enrol &mdash; &pound;180</a>
           <a class="btn-outline theme-secondary btn-lg" href="lesson.html">Watch a lesson free</a>
         </div>
@@ -329,9 +329,9 @@ def page_index():
   <!-- Outcomes -->
   <section class="section" id="outcomes">
     <div class="container">
-      <div class="row g-5 mb-6 align-items-end">
+      <div class="row g-6 mb-7 align-items-end">
         <div class="lg:col-7">
-          <p class="eyebrow-rule mb-3">What you'll learn</p>
+          <p class="eyebrow-rule mb-4">What you'll learn</p>
           <h2 class="section-title display-serif fs-4xl mb-0">Six things you will be able to do afterwards</h2>
         </div>
         <div class="lg:col-5">
@@ -342,13 +342,13 @@ def page_index():
         </div>
       </div>
 
-      <div class="row g-4">
-        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">01</span><h3 class="fs-lg mb-2">Pick a typeface you can defend</h3><p class="fg-2 fs-sm mb-0">Work from the brief and the content rather than the mood board, and say out loud why this one and not that one.</p></article></div>
-        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">02</span><h3 class="fs-lg mb-2">Build a scale that holds up</h3><p class="fg-2 fs-sm mb-0">Set a modular scale in code, then know exactly where to break it when a real screen demands it.</p></article></div>
-        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">03</span><h3 class="fs-lg mb-2">Set long text properly</h3><p class="fg-2 fs-sm mb-0">Measure, leading, hyphenation and the punctuation you have been getting wrong since school.</p></article></div>
-        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">04</span><h3 class="fs-lg mb-2">Make dense screens readable</h3><p class="fg-2 fs-sm mb-0">Tables, labels, numerals and truncation — where typography stops being decoration and starts being load-bearing.</p></article></div>
-        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">05</span><h3 class="fs-lg mb-2">Meet accessibility properly</h3><p class="fg-2 fs-sm mb-0">Contrast against strokes not boxes, spacing requirements, and reflow at 400% without a horizontal scrollbar.</p></article></div>
-        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">06</span><h3 class="fs-lg mb-2">Ship it and keep it</h3><p class="fg-2 fs-sm mb-0">Subsetting, fallback stacks that do not shift the layout, and writing the type section of a design system.</p></article></div>
+      <div class="row g-5">
+        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">01</span><h3 class="fs-lg mb-3">Pick a typeface you can defend</h3><p class="fg-2 fs-sm mb-0">Work from the brief and the content rather than the mood board, and say out loud why this one and not that one.</p></article></div>
+        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">02</span><h3 class="fs-lg mb-3">Build a scale that holds up</h3><p class="fg-2 fs-sm mb-0">Set a modular scale in code, then know exactly where to break it when a real screen demands it.</p></article></div>
+        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">03</span><h3 class="fs-lg mb-3">Set long text properly</h3><p class="fg-2 fs-sm mb-0">Measure, leading, hyphenation and the punctuation you have been getting wrong since school.</p></article></div>
+        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">04</span><h3 class="fs-lg mb-3">Make dense screens readable</h3><p class="fg-2 fs-sm mb-0">Tables, labels, numerals and truncation — where typography stops being decoration and starts being load-bearing.</p></article></div>
+        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">05</span><h3 class="fs-lg mb-3">Meet accessibility properly</h3><p class="fg-2 fs-sm mb-0">Contrast against strokes not boxes, spacing requirements, and reflow at 400% without a horizontal scrollbar.</p></article></div>
+        <div class="md:col-6 lg:col-4"><article class="outcome surface surface-pad lift h-100"><span class="outcome-no">06</span><h3 class="fs-lg mb-3">Ship it and keep it</h3><p class="fg-2 fs-sm mb-0">Subsetting, fallback stacks that do not shift the layout, and writing the type section of a design system.</p></article></div>
       </div>
     </div>
   </section>
@@ -356,9 +356,9 @@ def page_index():
   <!-- Curriculum -->
   <section class="section bg-2" id="curriculum">
     <div class="container">
-      <div class="row g-5 mb-6 align-items-end">
+      <div class="row g-6 mb-7 align-items-end">
         <div class="lg:col-7">
-          <p class="eyebrow-rule mb-3">Curriculum</p>
+          <p class="eyebrow-rule mb-4">Curriculum</p>
           <h2 class="section-title display-serif fs-4xl mb-0">{len(MODULES)} modules, {TOTAL_LESSONS} lessons, {hhmm(TOTAL_MIN)}</h2>
         </div>
         <div class="lg:col-5">
@@ -369,7 +369,7 @@ def page_index():
         </div>
       </div>
 
-      <div class="row g-5">
+      <div class="row g-6">
         <div class="lg:col-8">
           <div class="modules" data-curriculum>
 {curriculum()}
@@ -385,19 +385,19 @@ def page_index():
   <!-- Teacher -->
   <section class="section" id="teacher">
     <div class="container">
-      <div class="row g-6 align-items-center">
+      <div class="row g-7 align-items-center">
         <div class="lg:col-5">
           <div class="ph ph-3x4 framed"><img src="img/teacher.jpg" alt="Marit Halvorsen" width="700" height="933" loading="lazy"></div>
         </div>
         <div class="lg:col-7">
-          <p class="eyebrow-rule mb-3">Who teaches it</p>
-          <h2 class="section-title display-serif fs-4xl mb-4">Marit Halvorsen</h2>
-          <p class="fg-2 mb-4">
+          <p class="eyebrow-rule mb-4">Who teaches it</p>
+          <h2 class="section-title display-serif fs-4xl mb-5">Marit Halvorsen</h2>
+          <p class="fg-2 mb-5">
             Marit has spent eighteen years setting type on screens — six of them
             on a banking app used by nine million people, where a 13px label
             being wrong meant someone misread their balance.
           </p>
-          <p class="fg-2 mb-4">
+          <p class="fg-2 mb-5">
             She is not a type designer and says so early. This is a course about
             <em>using</em> type well, taught by someone who has had to defend
             every decision in it to an engineer, a lawyer and a brand team, often
@@ -417,7 +417,7 @@ def page_index():
   <!-- Reviews -->
   <section class="section bg-2">
     <div class="container">
-      <div class="row g-4">
+      <div class="row g-5">
 {reviews}
       </div>
     </div>
@@ -426,10 +426,10 @@ def page_index():
   <!-- Enrol -->
   <section class="section" id="enrol">
     <div class="container">
-      <div class="row g-5 align-items-center">
+      <div class="row g-6 align-items-center">
         <div class="lg:col-6">
-          <p class="eyebrow-rule mb-3">Enrol</p>
-          <h2 class="section-title display-serif fs-4xl mb-4">One price, everything in it</h2>
+          <p class="eyebrow-rule mb-4">Enrol</p>
+          <h2 class="section-title display-serif fs-4xl mb-5">One price, everything in it</h2>
           <ul class="tick-list mb-0">
             <li>All {TOTAL_LESSONS} lessons, {hhmm(TOTAL_MIN)} of material</li>
             <li>Seven exercises with worked examples</li>
@@ -441,14 +441,14 @@ def page_index():
         <div class="lg:col-6">
           <div class="enrol">
             <p class="enrol-price mb-1">&pound;180<small> one payment</small></p>
-            <p class="fg-3 fs-sm mb-4">Or three payments of &pound;62. Students and anyone between jobs pay &pound;90 — just ask, no proof needed.</p>
+            <p class="fg-3 fs-sm mb-5">Or three payments of &pound;62. Students and anyone between jobs pay &pound;90 — just ask, no proof needed.</p>
             <form id="enrolForm" data-demo-form novalidate>
               <label class="form-label" for="enrolEmail">Email address</label>
-              <input class="form-control mb-3" type="email" id="enrolEmail" name="email" required>
-              <div class="invalid-feedback mb-3">We need an address to send access to.</div>
+              <input class="form-control mb-4" type="email" id="enrolEmail" name="email" required>
+              <div class="invalid-feedback mb-4">We need an address to send access to.</div>
               <button class="btn-solid theme-primary btn-lg w-100" type="submit" data-done-text="Check your inbox ✓">Enrol now</button>
             </form>
-            <p class="fs-xs fg-3 mt-3 mb-0">Frontend-only demo form — nothing is sent anywhere.</p>
+            <p class="fs-xs fg-3 mt-4 mb-0">Frontend-only demo form — nothing is sent anywhere.</p>
           </div>
         </div>
       </div>
@@ -458,10 +458,10 @@ def page_index():
   <!-- FAQ -->
   <section class="section bg-2" id="faq">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-5">
-          <p class="eyebrow-rule mb-3">Questions</p>
-          <h2 class="section-title display-serif fs-4xl mb-4">Asked often enough to answer here</h2>
+          <p class="eyebrow-rule mb-4">Questions</p>
+          <h2 class="section-title display-serif fs-4xl mb-5">Asked often enough to answer here</h2>
           <p class="fg-2 mb-0">
             Anything else, write to
             <a href="mailto:marit@syllabus.example">marit@syllabus.example</a> —
@@ -510,12 +510,12 @@ def page_lesson():
     ) + BODY + chrome(home=False) + f"""
 <main id="main" class="lesson-page">
   <div class="container">
-    <div class="row g-5">
+    <div class="row g-6">
 
       <div class="lg:col-8">
-        <p class="eyebrow fs-xs mb-3"><a href="index.html">Typography for Interfaces</a> &middot; Module 01 &middot; Lesson 3</p>
-        <h1 class="display-serif fs-4xl mb-3">Seeing rhythm, colour and texture</h1>
-        <p class="fg-3 fs-sm mb-4">17 minutes &middot; Free sample &middot; Updated March 2026</p>
+        <p class="eyebrow fs-xs mb-4"><a href="index.html">Typography for Interfaces</a> &middot; Module 01 &middot; Lesson 3</p>
+        <h1 class="display-serif fs-4xl mb-4">Seeing rhythm, colour and texture</h1>
+        <p class="fg-3 fs-sm mb-5">17 minutes &middot; Free sample &middot; Updated March 2026</p>
 
         <!-- Player stand-in. Deliberately not an <iframe> to a real service:
              the template ships with nothing to embed and a dead embed looks
@@ -591,17 +591,17 @@ def page_lesson():
 
       <aside class="lg:col-4">
         <div class="rail">
-          <div class="rail-card mb-4">
+          <div class="rail-card mb-5">
             <p class="tracker-k mb-1">Your progress</p>
-            <p class="tracker-v mb-3"><span data-done>0</span> of {TOTAL_LESSONS} lessons</p>
+            <p class="tracker-v mb-4"><span data-done>0</span> of {TOTAL_LESSONS} lessons</p>
             <div class="progress" role="progressbar" aria-label="Course progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" data-bar-wrap>
               <div class="progress-bar" style="width:0%" data-bar></div>
             </div>
-            <p class="fs-sm fg-3 mt-3 mb-0"><span data-remaining>{hhmm(TOTAL_MIN)}</span> left to watch</p>
+            <p class="fs-sm fg-3 mt-4 mb-0"><span data-remaining>{hhmm(TOTAL_MIN)}</span> left to watch</p>
           </div>
 
-          <div class="rail-card mb-4">
-            <p class="eyebrow fs-xs fg-3 mb-3">Resources for this lesson</p>
+          <div class="rail-card mb-5">
+            <p class="eyebrow fs-xs fg-3 mb-4">Resources for this lesson</p>
             <ul class="link-list mb-0">
               <li><a href="lesson.html">Squint-test worksheet (PDF)</a></li>
               <li><a href="lesson.html">Specimen set used in the video</a></li>
@@ -609,11 +609,11 @@ def page_lesson():
             </ul>
           </div>
 
-          <p class="eyebrow fs-xs fg-3 mb-3">Course outline</p>
+          <p class="eyebrow fs-xs fg-3 mb-4">Course outline</p>
           <div data-curriculum>
 {chr(10).join(nav)}
           </div>
-          <p class="fs-sm mt-3 mb-0"><a href="index.html#curriculum">See all {len(MODULES)} modules</a></p>
+          <p class="fs-sm mt-4 mb-0"><a href="index.html#curriculum">See all {len(MODULES)} modules</a></p>
         </div>
       </aside>
 

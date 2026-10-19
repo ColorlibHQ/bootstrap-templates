@@ -74,7 +74,7 @@ def nav_links(current, in_drawer=False):
 def shell(current, title, subtitle, body, *, actions=""):
     """Wraps page content in the sidebar + topbar chrome."""
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <div class="app" id="app">
 
@@ -102,7 +102,7 @@ def shell(current, title, subtitle, body, *, actions=""):
         <input type="search" class="form-ghost" placeholder="Search orders, customers…" aria-label="Search">
       </div>
 
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         {TOGGLE}
         <button class="btn-icon" type="button" aria-label="Notifications">{ICON['bell']}</button>
         <button class="btn-icon p-0" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Account menu">
@@ -118,12 +118,12 @@ def shell(current, title, subtitle, body, *, actions=""):
     </header>
 
     <main class="content" id="main">
-      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-4 mb-5">
         <div>
           <h1 class="page-title mb-1">{title}</h1>
           <p class="fg-3 fs-sm mb-0">{subtitle}</p>
         </div>
-        <div class="d-flex flex-wrap gap-2">{actions}</div>
+        <div class="d-flex flex-wrap gap-3">{actions}</div>
       </div>
 {body}
     </main>
@@ -195,7 +195,7 @@ def stat(label, figure, delta, direction, note):
     arrow = ICON["up"] if direction == "up" else ICON["down"]
     return f"""<div class="sm:col-6 xl:col-3">
           <div class="panel"><div class="panel-body">
-            <p class="stat-label mb-2">{label}</p>
+            <p class="stat-label mb-3">{label}</p>
             <p class="stat-figure mb-1">{figure}</p>
             <p class="stat-delta {direction} mb-0">{arrow} {delta} <span class="fg-3 fw-normal">{note}</span></p>
           </div></div>
@@ -234,14 +234,14 @@ def order_rows(limit=None, checkbox=False):
 
 def page_index():
     return shell("index.html", "Overview", "Trading summary for the last twelve weeks.", f"""
-      <div class="row g-3 xl:g-4 mb-4">
+      <div class="row g-4 xl:g-5 mb-5">
         {stat("Revenue", "&pound;48,204", "12.4%", "up", "vs last month")}
         {stat("Orders", "1,284", "4.1%", "up", "vs last month")}
         {stat("Refund rate", "2.1%", "0.4pp", "down", "vs last month")}
         {stat("Avg. order", "&pound;37.54", "1.8%", "up", "vs last month")}
       </div>
 
-      <div class="row g-3 xl:g-4 mb-4">
+      <div class="row g-4 xl:g-5 mb-5">
         <div class="xl:col-8">
           <div class="panel">
             <div class="panel-head">
@@ -266,13 +266,13 @@ def page_index():
               <div class="donut" style="--value:68" role="img" aria-label="68 percent of sessions converted">
                 <span class="donut-value">68%</span>
               </div>
-              <p class="fg-3 fs-sm mt-3 mb-0">2,184 of 3,212 sessions reached checkout.</p>
+              <p class="fg-3 fs-sm mt-4 mb-0">2,184 of 3,212 sessions reached checkout.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row g-3 xl:g-4">
+      <div class="row g-4 xl:g-5">
         <div class="xl:col-7">
           <div class="panel">
             <div class="panel-head">
@@ -302,7 +302,7 @@ def page_index():
             <div class="panel-head"><h2 class="fs-lg fw-semibold mb-0">Orders by weekday</h2></div>
             <div class="panel-body">
               {bars([42, 55, 61, 58, 74, 39, 24], ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], highlight=4)}
-              <p class="fg-3 fs-sm mt-3 mb-0">Friday is consistently the strongest day; weekends are worth staffing lower.</p>
+              <p class="fg-3 fs-sm mt-4 mb-0">Friday is consistently the strongest day; weekends are worth staffing lower.</p>
             </div>
           </div>
         </div>
@@ -313,14 +313,14 @@ def page_index():
 
 def page_analytics():
     return shell("analytics.html", "Analytics", "Traffic, acquisition and behaviour.", f"""
-      <div class="row g-3 xl:g-4 mb-4">
+      <div class="row g-4 xl:g-5 mb-5">
         {stat("Sessions", "82,410", "6.2%", "up", "vs last month")}
         {stat("Bounce rate", "38.4%", "2.1pp", "down", "vs last month")}
         {stat("Avg. session", "3m 12s", "14s", "up", "vs last month")}
         {stat("New visitors", "61.8%", "3.4pp", "up", "vs last month")}
       </div>
 
-      <div class="row g-3 xl:g-4 mb-4">
+      <div class="row g-4 xl:g-5 mb-5">
         <div class="xl:col-7">
           <div class="panel">
             <div class="panel-head"><h2 class="fs-lg fw-semibold mb-0">Sessions</h2></div>
@@ -334,11 +334,11 @@ def page_analytics():
             <div class="panel-head"><h2 class="fs-lg fw-semibold mb-0">Acquisition</h2></div>
             <div class="panel-body">
               <div class="d-flex justify-content-between mb-1"><span class="fs-sm">Organic search</span><span class="fs-sm fw-semibold">46%</span></div>
-              <div class="progress mb-3" role="progressbar" aria-label="Organic search" aria-valuenow="46" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:46%"></div></div>
+              <div class="progress mb-4" role="progressbar" aria-label="Organic search" aria-valuenow="46" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:46%"></div></div>
               <div class="d-flex justify-content-between mb-1"><span class="fs-sm">Direct</span><span class="fs-sm fw-semibold">24%</span></div>
-              <div class="progress mb-3" role="progressbar" aria-label="Direct" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar theme-success" style="width:24%"></div></div>
+              <div class="progress mb-4" role="progressbar" aria-label="Direct" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar theme-success" style="width:24%"></div></div>
               <div class="d-flex justify-content-between mb-1"><span class="fs-sm">Referral</span><span class="fs-sm fw-semibold">18%</span></div>
-              <div class="progress mb-3" role="progressbar" aria-label="Referral" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar theme-warning" style="width:18%"></div></div>
+              <div class="progress mb-4" role="progressbar" aria-label="Referral" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar theme-warning" style="width:18%"></div></div>
               <div class="d-flex justify-content-between mb-1"><span class="fs-sm">Social</span><span class="fs-sm fw-semibold">12%</span></div>
               <div class="progress mb-0" role="progressbar" aria-label="Social" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar theme-secondary" style="width:12%"></div></div>
             </div>
@@ -375,14 +375,14 @@ def page_orders():
             <input type="search" class="form-ghost" data-filter-text placeholder="Search orders…" aria-label="Search orders">
           </div>
           <span class="fs-sm fg-3" data-filter-count>8 of 8</span>
-          <div class="ms-auto d-flex gap-2">
+          <div class="ms-auto d-flex gap-3">
             <button class="btn-outline theme-secondary btn-sm" type="button">Filters</button>
             <button class="btn-outline theme-secondary btn-sm" type="button">Export</button>
           </div>
         </div>
         <div class="bulk-bar" data-bulk-bar hidden>
           <strong class="fs-sm" data-bulk-count>0 selected</strong>
-          <div class="d-flex flex-wrap gap-2 ms-auto">
+          <div class="d-flex flex-wrap gap-3 ms-auto">
             <button class="btn-outline theme-secondary btn-sm" type="button">Mark paid</button>
             <button class="btn-solid theme-danger btn-sm" type="button">Refund</button>
           </div>
@@ -403,7 +403,7 @@ def page_orders():
               </tbody>
             </table>
           </div>
-          <p class="p-4 mb-0 fg-3 text-center" data-filter-empty hidden>No order matches that search.</p>
+          <p class="p-5 mb-0 fg-3 text-center" data-filter-empty hidden>No order matches that search.</p>
         </div>
       </div>
 """, actions='<button class="btn-solid theme-primary" type="button">New order</button>')
@@ -411,10 +411,10 @@ def page_orders():
 
 def page_forms():
     return shell("forms.html", "Forms", "Every Bootstrap 6 form control, in one place.", """
-      <div class="row g-3 xl:g-4">
+      <div class="row g-4 xl:g-5">
         <div class="lg:col-6">
           <div class="panel"><div class="panel-head"><h2 class="fs-lg fw-semibold mb-0">Customer details</h2></div>
-            <form class="panel-body vstack gap-3" data-demo-form data-bs-validate novalidate>
+            <form class="panel-body vstack gap-4" data-demo-form data-bs-validate novalidate>
               <div class="form-field">
                 <label class="form-label" for="fName">Full name</label>
                 <input type="text" class="form-control" id="fName" required>
@@ -451,8 +451,8 @@ def page_forms():
         </div>
 
         <div class="lg:col-6">
-          <div class="panel mb-3 xl:mb-4"><div class="panel-head"><h2 class="fs-lg fw-semibold mb-0">Choices</h2></div>
-            <div class="panel-body vstack gap-3">
+          <div class="panel mb-4 xl:mb-5"><div class="panel-head"><h2 class="fs-lg fw-semibold mb-0">Choices</h2></div>
+            <div class="panel-body vstack gap-4">
               <div class="form-field">
                 <input type="checkbox" class="check" id="cA" checked>
                 <label for="cA">Send order confirmations</label>
@@ -477,7 +477,7 @@ def page_forms():
           </div>
 
           <div class="panel"><div class="panel-head"><h2 class="fs-lg fw-semibold mb-0">Security</h2></div>
-            <div class="panel-body vstack gap-3">
+            <div class="panel-body vstack gap-4">
               <div class="form-field">
                 <label class="form-label" for="pw">New password</label>
                 <input type="password" class="form-control" id="pw" data-bs-strength>
@@ -501,26 +501,26 @@ def page_forms():
 
 def page_profile():
     return shell("profile.html", "Profile", "Priya Nandakumar &middot; Administrator", """
-      <div class="row g-3 xl:g-4">
+      <div class="row g-4 xl:g-5">
         <div class="lg:col-4">
           <div class="panel"><div class="panel-body text-center">
-            <span class="avatar avatar-lg mb-3"><span class="avatar-initials">PN</span></span>
+            <span class="avatar avatar-lg mb-4"><span class="avatar-initials">PN</span></span>
             <h2 class="fs-xl fw-semibold mb-1">Priya Nandakumar</h2>
-            <p class="fg-3 fs-sm mb-3">Administrator &middot; joined March 2021</p>
-            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+            <p class="fg-3 fs-sm mb-4">Administrator &middot; joined March 2021</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
               <span class="chip">Billing</span><span class="chip">Support</span><span class="chip">Deploys</span>
             </div>
             <button class="btn-solid theme-primary w-100" type="button">Edit profile</button>
           </div></div>
         </div>
         <div class="lg:col-8">
-          <div class="panel mb-3 xl:mb-4">
+          <div class="panel mb-4 xl:mb-5">
             <div class="panel-head"><h2 class="fs-lg fw-semibold mb-0">Details</h2></div>
             <div class="panel-body">
-              <div class="d-flex justify-content-between py-2" style="border-bottom:1px solid var(--bs-border-color)"><span class="fg-3 fs-sm">Email</span><span class="fs-sm">priya@example.com</span></div>
-              <div class="d-flex justify-content-between py-2" style="border-bottom:1px solid var(--bs-border-color)"><span class="fg-3 fs-sm">Role</span><span class="fs-sm">Administrator</span></div>
-              <div class="d-flex justify-content-between py-2" style="border-bottom:1px solid var(--bs-border-color)"><span class="fg-3 fs-sm">Two-factor</span><span class="fs-sm"><span class="badge badge-subtle theme-success">Enabled</span></span></div>
-              <div class="d-flex justify-content-between py-2"><span class="fg-3 fs-sm">Last sign-in</span><span class="fs-sm">Today at 08:12 from Manchester</span></div>
+              <div class="d-flex justify-content-between py-3" style="border-bottom:1px solid var(--bs-border-color)"><span class="fg-3 fs-sm">Email</span><span class="fs-sm">priya@example.com</span></div>
+              <div class="d-flex justify-content-between py-3" style="border-bottom:1px solid var(--bs-border-color)"><span class="fg-3 fs-sm">Role</span><span class="fs-sm">Administrator</span></div>
+              <div class="d-flex justify-content-between py-3" style="border-bottom:1px solid var(--bs-border-color)"><span class="fg-3 fs-sm">Two-factor</span><span class="fs-sm"><span class="badge badge-subtle theme-success">Enabled</span></span></div>
+              <div class="d-flex justify-content-between py-3"><span class="fg-3 fs-sm">Last sign-in</span><span class="fs-sm">Today at 08:12 from Manchester</span></div>
             </div>
           </div>
           <div class="panel">
@@ -540,7 +540,7 @@ def page_profile():
 def page_settings():
     return shell("settings.html", "Settings", "Workspace configuration.", """
       <div class="panel">
-        <div class="panel-head p-0 px-3">
+        <div class="panel-head p-0 px-4">
           <ul class="nav nav-underline" role="tablist">
             <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabGeneral" type="button" role="tab" aria-selected="true">General</button></li>
             <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabBilling" type="button" role="tab" aria-selected="false">Billing</button></li>
@@ -551,7 +551,7 @@ def page_settings():
         <div class="panel-body">
           <div class="tab-content">
             <div class="tab-pane active" id="tabGeneral" role="tabpanel">
-              <form class="vstack gap-3" style="max-width:32rem" data-demo-form data-bs-validate novalidate>
+              <form class="vstack gap-4" style="max-width:32rem" data-demo-form data-bs-validate novalidate>
                 <div class="form-field">
                   <label class="form-label" for="wsName">Workspace name</label>
                   <input type="text" class="form-control" id="wsName" value="Northwind Trading">
@@ -568,8 +568,8 @@ def page_settings():
               </form>
             </div>
             <div class="tab-pane" id="tabBilling" role="tabpanel">
-              <p class="fg-2 mb-3">You are on the <strong>Team</strong> plan at &pound;29 per month, renewing on 1 August 2026.</p>
-              <div class="d-flex flex-wrap gap-2"><button class="btn-outline theme-secondary" type="button">Change plan</button><button class="btn-text" type="button">Download invoices</button></div>
+              <p class="fg-2 mb-4">You are on the <strong>Team</strong> plan at &pound;29 per month, renewing on 1 August 2026.</p>
+              <div class="d-flex flex-wrap gap-3"><button class="btn-outline theme-secondary" type="button">Change plan</button><button class="btn-text" type="button">Download invoices</button></div>
             </div>
             <div class="tab-pane" id="tabTeam" role="tabpanel">
               <div class="table-responsive">
@@ -586,7 +586,7 @@ def page_settings():
             <div class="tab-pane" id="tabDanger" role="tabpanel">
               <div class="alert theme-danger" role="alert">
                 <h3 class="alert-heading fs-lg">Delete this workspace</h3>
-                <p class="mb-3">This removes all 1,284 orders and cannot be undone.</p>
+                <p class="mb-4">This removes all 1,284 orders and cannot be undone.</p>
                 <button class="btn-solid theme-danger" type="button" data-bs-toggle="dialog" data-bs-target="#delDialog">Delete workspace</button>
               </div>
             </div>
@@ -615,12 +615,12 @@ def page_login():
                        desc="Sign-in page from the Helm Bootstrap 6 admin dashboard template.") + """
 <main class="auth-stage">
   <div class="auth-card">
-    <div class="text-center mb-4">
-      <span class="side-mark mx-auto mb-3" aria-hidden="true">H</span>
+    <div class="text-center mb-5">
+      <span class="side-mark mx-auto mb-4" aria-hidden="true">H</span>
       <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Sign in to Helm</h1>
       <p class="fg-3 fs-sm mb-0">Welcome back. Use your work account.</p>
     </div>
-    <div class="panel"><form class="panel-body vstack gap-3" data-demo-form data-bs-validate novalidate>
+    <div class="panel"><form class="panel-body vstack gap-4" data-demo-form data-bs-validate novalidate>
       <div class="form-field">
         <label class="form-label" for="liEmail">Email</label>
         <input type="email" class="form-control" id="liEmail" required>
@@ -640,8 +640,8 @@ def page_login():
       </div>
       <button class="btn-solid theme-primary w-100" type="submit" data-done-text="Signed in &#10003;">Sign in</button>
     </form></div>
-    <p class="text-center fs-sm fg-3 mt-4 mb-0">Not registered? <a href="#">Create an account</a></p>
-    <p class="text-center fs-sm mt-3 mb-0"><a href="index.html">&#8592; Back to the dashboard</a></p>
+    <p class="text-center fs-sm fg-3 mt-5 mb-0">Not registered? <a href="#">Create an account</a></p>
+    <p class="text-center fs-sm mt-4 mb-0"><a href="index.html">&#8592; Back to the dashboard</a></p>
   </div>
 </main>
 
@@ -656,10 +656,10 @@ def page_404():
                        desc="404 page from the Helm Bootstrap 6 admin dashboard template.") + """
 <main class="auth-stage text-center">
   <div style="max-width:26rem">
-    <p class="fg-primary fw-bold mb-2" style="font-size:4rem;letter-spacing:-.04em;line-height:1">404</p>
-    <h1 class="fs-2xl fw-bold mb-3" style="letter-spacing:-.02em">We cannot find that page</h1>
-    <p class="fg-2 mb-4">It may have been moved, or the link that brought you here may be out of date.</p>
-    <div class="d-flex flex-wrap justify-content-center gap-2">
+    <p class="fg-primary fw-bold mb-3" style="font-size:4rem;letter-spacing:-.04em;line-height:1">404</p>
+    <h1 class="fs-2xl fw-bold mb-4" style="letter-spacing:-.02em">We cannot find that page</h1>
+    <p class="fg-2 mb-5">It may have been moved, or the link that brought you here may be out of date.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
       <a class="btn-solid theme-primary" href="index.html">Back to the dashboard</a>
       <a class="btn-outline theme-secondary" href="orders.html">View orders</a>
     </div>

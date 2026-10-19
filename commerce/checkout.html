@@ -13,16 +13,16 @@
 </head>
 <body>
 
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <nav class="navbar" aria-label="Checkout">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+      <a class="navbar-brand d-flex align-items-center gap-3 fw-semibold" href="index.html">
         <span class="brand-mark" aria-hidden="true">C</span> Commerce
       </a>
-      <div class="d-flex align-items-center gap-2 ms-auto">
-        <span class="d-none md:d-inline-flex align-items-center gap-2 fs-xs fg-3">
+      <div class="d-flex align-items-center gap-3 ms-auto">
+        <span class="d-none md:d-inline-flex align-items-center gap-3 fs-xs fg-3">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>
           Secure checkout
         </span>
@@ -38,9 +38,9 @@
 <main id="main" class="section">
   <div class="container">
 
-    <h1 class="fs-3xl fw-bold mb-6">Checkout</h1>
+    <h1 class="fs-3xl fw-bold mb-7">Checkout</h1>
 
-    <div class="contains-inline mb-7">
+    <div class="contains-inline mb-9">
       <ol class="stepper md:stepper-horizontal" id="checkoutStepper">
         <li class="stepper-item">Delivery</li>
         <li class="stepper-item">Payment</li>
@@ -48,13 +48,13 @@
       </ol>
     </div>
 
-    <div class="row g-6">
+    <div class="row g-7">
       <div class="lg:col-7">
 
         <!-- Step 1 -->
         <section class="checkout-step">
-          <h2 class="fs-xl fw-semibold mb-4">Delivery address</h2>
-          <form class="row g-4" id="deliveryForm" data-bs-validate novalidate>
+          <h2 class="fs-xl fw-semibold mb-5">Delivery address</h2>
+          <form class="row g-5" id="deliveryForm" data-bs-validate novalidate>
             <div class="md:col-6">
               <div class="form-field">
                 <label class="form-label" for="ckFirst">First name</label>
@@ -129,7 +129,7 @@
               </div>
             </div>
           </form>
-          <div class="d-flex flex-wrap gap-2 mt-5">
+          <div class="d-flex flex-wrap gap-3 mt-6">
             <button class="btn-solid theme-primary" type="button" data-checkout-next>Continue to payment</button>
             <a class="btn-text" href="index.html#shop">Keep shopping</a>
           </div>
@@ -137,10 +137,10 @@
 
         <!-- Step 2 -->
         <section class="checkout-step" hidden>
-          <h2 class="fs-xl fw-semibold mb-4">Payment</h2>
-          <form class="row g-4" id="paymentForm" data-bs-validate novalidate>
+          <h2 class="fs-xl fw-semibold mb-5">Payment</h2>
+          <form class="row g-5" id="paymentForm" data-bs-validate novalidate>
             <div class="col-12">
-              <p class="fw-semibold fs-sm mb-2">Method</p>
+              <p class="fw-semibold fs-sm mb-3">Method</p>
               <div class="option-row">
                 <label class="btn-check btn-outline theme-primary"><input type="radio" name="pay" checked> Card</label>
                 <label class="btn-check btn-outline theme-primary"><input type="radio" name="pay"> PayPal</label>
@@ -173,7 +173,7 @@
             <div class="col-12">
               <div class="surface surface-pad">
                 <p class="fw-semibold fs-sm mb-1">Verify it's you</p>
-                <p class="fg-2 fs-sm mb-3">Your bank sent a six-digit code. This is Bootstrap 6's new OTP input.</p>
+                <p class="fg-2 fs-sm mb-4">Your bank sent a six-digit code. This is Bootstrap 6's new OTP input.</p>
                 <div class="otp" data-bs-otp>
                   <input type="text" class="otp-input" maxlength="6" id="ckOtp" aria-label="Verification code" autocomplete="one-time-code">
                 </div>
@@ -186,7 +186,7 @@
               </div>
             </div>
           </form>
-          <div class="d-flex flex-wrap gap-2 mt-5">
+          <div class="d-flex flex-wrap gap-3 mt-6">
             <button class="btn-solid theme-primary" type="button" data-checkout-next>Review order</button>
             <button class="btn-text" type="button" data-checkout-back>Back</button>
           </div>
@@ -194,14 +194,14 @@
 
         <!-- Step 3 -->
         <section class="checkout-step" hidden>
-          <h2 class="fs-xl fw-semibold mb-4">Confirm your order</h2>
+          <h2 class="fs-xl fw-semibold mb-5">Confirm your order</h2>
 
-          <div class="alert theme-success mb-5" role="alert">
+          <div class="alert theme-success mb-6" role="alert">
             Everything checks out. Nothing is charged in this template — it's frontend only.
           </div>
 
-          <div class="surface surface-pad mb-4">
-            <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+          <div class="surface surface-pad mb-5">
+            <div class="d-flex justify-content-between align-items-start gap-4 mb-4">
               <div>
                 <p class="fw-semibold fs-sm mb-1">Delivery</p>
                 <p class="fg-2 fs-sm mb-0">18 Kiln Lane, Sheffield S1 4TG<br>United Kingdom</p>
@@ -209,7 +209,7 @@
               <button class="btn-text btn-sm" type="button" data-checkout-back>Edit</button>
             </div>
             <hr>
-            <div class="d-flex justify-content-between align-items-start gap-3">
+            <div class="d-flex justify-content-between align-items-start gap-4">
               <div>
                 <p class="fw-semibold fs-sm mb-1">Payment</p>
                 <p class="fg-2 fs-sm mb-0">Card ending 4242</p>
@@ -221,7 +221,7 @@
           <form id="placeOrderForm" data-demo-form novalidate>
             <button class="btn-solid theme-primary btn-lg w-100" type="submit" data-done-text="Order placed ✓">Place order · $333</button>
           </form>
-          <p class="fs-xs fg-3 text-center mt-3 mb-0">You'll get a receipt by email. Returns are free for 30 days.</p>
+          <p class="fs-xs fg-3 text-center mt-4 mb-0">You'll get a receipt by email. Returns are free for 30 days.</p>
         </section>
 
       </div>
@@ -229,9 +229,9 @@
       <!-- Summary -->
       <aside class="lg:col-5">
         <div class="summary surface surface-pad">
-          <h2 class="fs-lg fw-semibold mb-4">Order summary</h2>
+          <h2 class="fs-lg fw-semibold mb-5">Order summary</h2>
 
-          <div class="vstack gap-4 mb-4">
+          <div class="vstack gap-5 mb-5">
             <div class="mini-item">
               <div class="ph ph-1x1">Kettle</div>
               <div class="flex-grow-1">
@@ -258,7 +258,7 @@
             </div>
           </div>
 
-          <div class="chip-input mb-4" data-bs-chips>
+          <div class="chip-input mb-5" data-bs-chips>
             <label class="chip-input-label" for="promoInput">Promo:</label>
             <span class="chip">AUTUMN10</span>
             <input type="text" class="form-ghost" id="promoInput" placeholder="Add code…">
@@ -270,7 +270,7 @@
           <div class="summary-line"><span class="fg-2">Tax</span><span>$33</span></div>
           <div class="summary-line summary-total"><span>Total</span><span>$333</span></div>
 
-          <div class="d-flex align-items-start gap-2 mt-4 fs-xs fg-3">
+          <div class="d-flex align-items-start gap-3 mt-5 fs-xs fg-3">
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" class="flex-shrink-0 mt-1" aria-hidden="true"><path d="M8 1.5 2.5 4v4c0 3.2 2.3 5.6 5.5 6.5 3.2-.9 5.5-3.3 5.5-6.5V4z" stroke-linejoin="round"/></svg>
             Payments are encrypted end to end. We never store card details.
           </div>
@@ -280,8 +280,8 @@
   </div>
 </main>
 
-<footer class="site-footer bg-2 py-6 mt-9">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+<footer class="site-footer bg-2 py-7 mt-12">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
     <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Commerce. A free template for uicookies.</p>
     <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
   </div>

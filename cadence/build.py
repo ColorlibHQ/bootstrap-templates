@@ -148,7 +148,7 @@ def nav_links(current, drawer=False):
 
 def shell(current, title, subtitle, body, *, actions=""):
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <div class="app">
 
@@ -178,7 +178,7 @@ def shell(current, title, subtitle, body, *, actions=""):
         <input type="search" class="form-ghost" placeholder="Search deals, companies, people…" aria-label="Search">
       </div>
 
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         {TOGGLE}
         <button class="btn-icon" type="button" aria-label="Notifications">{ICON['bell']}</button>
         <button class="btn-icon p-0" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Account menu">
@@ -249,7 +249,7 @@ def deal_card(company, contact, value, stage, days, owner, idx):
               <h3 class="deal-co">{company}</h3>
               <span class="avatar avatar-xs" title="{OWNERS[owner]}"><span class="avatar-initials">{owner}</span></span>
             </div>
-            <p class="deal-value mb-2">{gbp(value)}</p>
+            <p class="deal-value mb-3">{gbp(value)}</p>
             <p class="deal-contact mb-0">{contact}</p>
             <div class="deal-foot">
               <span class="deal-age{' is-stalled' if stalled else ''}">{days}d in stage</span>
@@ -455,7 +455,7 @@ def page_contacts():
             <div class="form-adorn-icon">{ICON['search']}</div>
             <input type="search" class="form-ghost" placeholder="Filter contacts…" aria-label="Filter contacts" data-filter="#contactTable">
           </div>
-          <div class="d-flex gap-2">
+          <div class="d-flex gap-3">
             <button class="btn-outline theme-secondary btn-sm" type="button">Export</button>
             <button class="btn-solid theme-primary btn-sm" type="button">{ICON['plus']} Contact</button>
           </div>
@@ -543,7 +543,7 @@ def page_settings():
                   <span class="form-adorn-text">%</span>
                 </div>
               </div>''' for i, (key, label, prob, exp) in enumerate(STAGES))}
-              <button class="btn-solid theme-primary mt-3" type="submit" data-done-text="Saved ✓">Save stages</button>
+              <button class="btn-solid theme-primary mt-4" type="submit" data-done-text="Saved ✓">Save stages</button>
             </form>
           </div>
         </section>
@@ -552,7 +552,7 @@ def page_settings():
           <header class="card-head"><div><h2 class="card-title">Your details</h2><p class="card-sub mb-0">Visible to your team</p></div></header>
           <div class="card-body">
             <form data-demo-form novalidate>
-              <div class="row g-3">
+              <div class="row g-4">
                 <div class="md:col-6">
                   <label class="form-label" for="sName">Full name</label>
                   <input class="form-control" type="text" id="sName" value="Dilan Aksoy" required>

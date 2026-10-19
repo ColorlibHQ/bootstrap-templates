@@ -15,9 +15,9 @@
 
 <div class="variant-bar">
   <a class="btn-text btn-sm" href="../index.html">&#8592; All forms</a>
-  <span class="fs-sm fw-semibold ms-2">ScrollSpy contents</span>
+  <span class="fs-sm fw-semibold ms-3">ScrollSpy contents</span>
   <span class="fs-xs fg-3 d-none md:d-inline">8 of 8</span>
-  <div class="d-flex align-items-center gap-2 ms-auto">
+  <div class="d-flex align-items-center gap-3 ms-auto">
     <a class="btn-icon btn-sm" href="../07-crumbs/index.html" aria-label="Previous form">&#8249;</a>
     <a class="btn-icon btn-sm" href="../01-navbar/index.html" aria-label="Next form">&#8250;</a>
     <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
@@ -32,7 +32,7 @@
     <div class="demo-frame">
   <div class="rail-demo">
     <aside class="rail-side">
-      <p class="fw-semibold fs-sm mb-3">On this page</p>
+      <p class="fw-semibold fs-sm mb-4">On this page</p>
       <nav class="nav" id="spyNav">
         <a class="nav-link" href="#sp1">Introduction</a>
         <a class="nav-link" href="#sp2">Getting started</a>
@@ -42,14 +42,14 @@
     </aside>
     <div data-bs-spy="scroll" data-bs-target="#spyNav" data-bs-top-margin="10%" data-bs-smooth-scroll="true"
          style="height:22rem;overflow-y:auto;padding:1.5rem">
-      <h3 id="sp1" class="fs-lg fw-semibold mb-2">Introduction</h3>
+      <h3 id="sp1" class="fs-lg fw-semibold mb-3">Introduction</h3>
       <p class="fg-2">Scroll this panel and watch the rail on the left follow. Detection is driven by an activation line rather than scroll-position polling, so the highlighted item is the one you are actually reading.</p>
-      <p class="fg-2 mb-5">Because it uses IntersectionObserver there is no scroll listener at all.</p>
-      <h3 id="sp2" class="fs-lg fw-semibold mb-2">Getting started</h3>
-      <p class="fg-2 mb-5">Put <code>data-bs-spy=&quot;scroll&quot;</code> on the scroll container and point <code>data-bs-target</code> at a nav. Only <code>.nav-link</code> elements are activated &#8212; a custom table of contents needs that class or nothing highlights.</p>
-      <h3 id="sp3" class="fs-lg fw-semibold mb-2">Configuration</h3>
-      <p class="fg-2 mb-5">The deprecated <code>offset</code> and <code>method</code> options were removed. Use <code>top-margin</code> (default 12%) to position the activation line &#8212; for example <code>96px</code> to sit below a sticky header.</p>
-      <h3 id="sp4" class="fs-lg fw-semibold mb-2">Troubleshooting</h3>
+      <p class="fg-2 mb-6">Because it uses IntersectionObserver there is no scroll listener at all.</p>
+      <h3 id="sp2" class="fs-lg fw-semibold mb-3">Getting started</h3>
+      <p class="fg-2 mb-6">Put <code>data-bs-spy=&quot;scroll&quot;</code> on the scroll container and point <code>data-bs-target</code> at a nav. Only <code>.nav-link</code> elements are activated &#8212; a custom table of contents needs that class or nothing highlights.</p>
+      <h3 id="sp3" class="fs-lg fw-semibold mb-3">Configuration</h3>
+      <p class="fg-2 mb-6">The deprecated <code>offset</code> and <code>method</code> options were removed. Use <code>top-margin</code> (default 12%) to position the activation line &#8212; for example <code>96px</code> to sit below a sticky header.</p>
+      <h3 id="sp4" class="fs-lg fw-semibold mb-3">Troubleshooting</h3>
       <p class="fg-2 mb-0">With <code>smooth-scroll</code> on, clicking a link restores the URL hash and moves focus to the target once the scroll settles, which keyboard and screen-reader users need.</p>
     </div>
   </div>

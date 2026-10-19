@@ -84,7 +84,7 @@ HEAD = """<!doctype html>
 
 def chrome(current):
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header no-print">
   <div class="wrap head-in">
@@ -95,7 +95,7 @@ def chrome(current):
       <a class="head-link{' is-active' if current == 'project.html' else ''}" href="project.html">Case study</a>
       <a class="head-link" href="index.html#contact">Contact</a>
     </nav>
-    <div class="d-flex align-items-center gap-2">
+    <div class="d-flex align-items-center gap-3">
       {TOGGLE}
       <button class="btn-solid theme-primary btn-sm" type="button" data-print>Print CV</button>
     </div>
@@ -128,8 +128,8 @@ def roles_html():
           <p class="role-when mb-0"><span>{start}</span><span class="role-dash" aria-hidden="true">–</span><span>{end}</span></p>
           <div class="role-body">
             <h3 class="role-title mb-1">{title}</h3>
-            <p class="role-org mb-2">{org}<span class="fg-3"> · {place}</span></p>
-            <p class="fg-2 mb-{'2' if bullets else '0'}">{blurb}</p>
+            <p class="role-org mb-3">{org}<span class="fg-3"> · {place}</span></p>
+            <p class="fg-2 mb-{'3' if bullets else '0'}">{blurb}</p>
             {f'<ul class="role-points mb-0">{items}</ul>' if bullets else ''}
           </div>
         </article>""")
@@ -138,7 +138,7 @@ def roles_html():
 
 def page_index():
     skills = "\n".join(f"""          <div class="skill-group">
-            <p class="skill-k mb-2">{group}</p>
+            <p class="skill-k mb-3">{group}</p>
             <ul class="skill-list mb-0">{''.join(f'<li>{s}</li>' for s in items)}</ul>
           </div>""" for group, items in SKILLS)
 
@@ -167,9 +167,9 @@ def page_index():
     <div class="wrap">
       <div class="intro-grid">
         <div>
-          <h1 class="intro-name mb-2">{ME['name']}</h1>
-          <p class="intro-role mb-4">{ME['role']} &middot; {ME['where']}</p>
-          <p class="intro-lede mb-4">
+          <h1 class="intro-name mb-3">{ME['name']}</h1>
+          <p class="intro-role mb-5">{ME['role']} &middot; {ME['where']}</p>
+          <p class="intro-lede mb-5">
             Twelve years making interfaces that hold up: type that stays readable
             at 13px, layouts that survive 400% zoom, and front ends that load on
             the phone somebody actually owns.
@@ -233,16 +233,16 @@ def page_index():
   <!-- Contact -->
   <section class="band no-print" id="contact">
     <div class="wrap contact">
-      <h2 class="band-title mb-3">Say hello</h2>
-      <p class="fg-2 mb-4" style="max-width:34rem">
+      <h2 class="band-title mb-4">Say hello</h2>
+      <p class="fg-2 mb-5" style="max-width:34rem">
         The fastest way to reach me is email. I reply to everything that is not
         a recruiter template, and to about half of those.
       </p>
-      <div class="d-flex flex-wrap gap-3">
+      <div class="d-flex flex-wrap gap-4">
         <a class="btn-solid theme-primary btn-lg" href="mailto:{ME['email']}">{ME['email']}</a>
         <button class="btn-outline theme-secondary btn-lg" type="button" data-print>Print this as a CV</button>
       </div>
-      <p class="fs-sm fg-3 mt-4 mb-0">
+      <p class="fs-sm fg-3 mt-5 mb-0">
         That button opens your browser's print dialogue. The page has a print
         stylesheet, so what comes out is a one-page CV — not a screenshot of a
         website with a navigation bar across the top.
@@ -261,11 +261,11 @@ def page_project():
     ) + chrome("project.html") + f"""
 <main id="main" class="case">
   <div class="wrap">
-    <p class="eyebrow fs-xs mb-3"><a href="index.html">{ME['name']}</a> &middot; Case study</p>
-    <h1 class="case-title mb-3">Rebuilding checkout without a freeze</h1>
-    <p class="case-sub mb-5">Kettle &amp; Co &middot; 2017 &middot; Completion 61% &rarr; 74%</p>
+    <p class="eyebrow fs-xs mb-4"><a href="index.html">{ME['name']}</a> &middot; Case study</p>
+    <h1 class="case-title mb-4">Rebuilding checkout without a freeze</h1>
+    <p class="case-sub mb-6">Kettle &amp; Co &middot; 2017 &middot; Completion 61% &rarr; 74%</p>
 
-    <dl class="case-facts mb-5">
+    <dl class="case-facts mb-6">
       <div><dt>Role</dt><dd>Front-end engineer, and for four months the only one</dd></div>
       <div><dt>Team</dt><dd>Me, a designer two days a week, one back-end engineer</dd></div>
       <div><dt>Constraint</dt><dd>No code freeze. The shop took orders throughout.</dd></div>

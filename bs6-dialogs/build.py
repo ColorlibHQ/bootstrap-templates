@@ -99,8 +99,8 @@ VARIANTS = [
      "The default. A native <code>&lt;dialog&gt;</code> with header, body and footer — focus trapping and Escape come from the browser.",
      '<div class="page"><i></i><i class="w60"></i><i></i><div class="panel p-centre"><i></i><i class="mute"></i><i class="w60 mute"></i></div></div>',
      False, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Basic dialog</h1>
-<p class="fg-2 mb-4">Everything else in this pack is a variation on this markup.</p>
-<div class="trigger-grid mb-4">
+<p class="fg-2 mb-5">Everything else in this pack is a variation on this markup.</p>
+<div class="trigger-grid mb-5">
   {trig("dlgBasic", "Open dialog", style="btn-solid theme-primary")}
 </div>
 <div class="note fs-sm">
@@ -114,8 +114,8 @@ VARIANTS = [
      "<code>.dialog-scrollable</code> keeps the header and footer fixed while only the body scrolls, so the actions never leave the screen.",
      '<div class="page"><i></i><i class="w60"></i><div class="panel p-tall"><i></i><i class="mute"></i><i class="mute"></i><i class="mute"></i><i class="w60"></i></div></div>',
      False, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Scrollable dialog</h1>
-<p class="fg-2 mb-4">Long content, fixed actions. Compare with the basic dialog, where the whole box grows.</p>
-<div class="trigger-grid mb-4">
+<p class="fg-2 mb-5">Long content, fixed actions. Compare with the basic dialog, where the whole box grows.</p>
+<div class="trigger-grid mb-5">
   {trig("dlgScroll", "Open scrollable", style="btn-solid theme-primary")}
   {trig("dlgUnscroll", "Open non-scrollable")}
 </div>
@@ -131,8 +131,8 @@ VARIANTS = [
      "<code>.dialog-sm</code> through <code>.dialog-xl</code>, plus <code>.dialog-fullscreen</code> for the takeover pattern.",
      '<div class="page"><i></i><i class="w60"></i><div class="panel p-small"><i></i><i class="mute"></i></div></div>',
      True, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Sizes</h1>
-<p class="fg-2 mb-4">Four widths and a fullscreen takeover.</p>
-<div class="trigger-grid mb-4">
+<p class="fg-2 mb-5">Four widths and a fullscreen takeover.</p>
+<div class="trigger-grid mb-5">
   {trig("dlgSm", "Small")}
   {trig("dlgMd", "Default")}
   {trig("dlgLg", "Large")}
@@ -154,8 +154,8 @@ VARIANTS = [
      "A form inside a dialog, submitted from the footer using <code>form=</code> so the button can live outside the form element.",
      '<div class="page"><i></i><div class="panel p-centre"><i class="mute"></i><i></i><i class="mute"></i><i class="w40"></i></div></div>',
      False, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Form dialog</h1>
-<p class="fg-2 mb-4">The submit button sits in the footer, outside the form, wired up with <code>form="…"</code>.</p>
-<div class="trigger-grid mb-4">
+<p class="fg-2 mb-5">The submit button sits in the footer, outside the form, wired up with <code>form="…"</code>.</p>
+<div class="trigger-grid mb-5">
   {trig("dlgForm", "Invite a teammate", style="btn-solid theme-primary")}
 </div>
 <div class="note fs-sm">
@@ -169,7 +169,7 @@ VARIANTS = [
     <h2 class="dialog-title fs-lg" id="dlgFormLabel">Invite a teammate</h2>
     <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
   </div>
-  <form class="dialog-body vstack gap-3" id="inviteForm" data-demo-form data-bs-validate novalidate>
+  <form class="dialog-body vstack gap-4" id="inviteForm" data-demo-form data-bs-validate novalidate>
     <div class="form-field">
       <label class="form-label" for="invEmail">Email address</label>
       <input type="email" class="form-control" id="invEmail" required>
@@ -198,8 +198,8 @@ VARIANTS = [
      "<code>data-bs-static</code> stops a backdrop click dismissing it, so a destructive action needs a deliberate answer.",
      '<div class="page"><i></i><i class="w60"></i><div class="panel p-small"><i></i><i class="mute"></i></div></div>',
      False, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Destructive confirm</h1>
-<p class="fg-2 mb-4">Try clicking the backdrop on the static one — it stays put.</p>
-<div class="trigger-grid mb-4">
+<p class="fg-2 mb-5">Try clicking the backdrop on the static one — it stays put.</p>
+<div class="trigger-grid mb-5">
   {trig("dlgDanger", "Delete project", style="btn-solid theme-danger")}
   {trig("dlgSoft", "Dismissible version")}
 </div>
@@ -208,26 +208,26 @@ VARIANTS = [
   just trains people to hunt for the close button, and Escape still works
   regardless — the browser owns that.</p>
 </div>
-{dlg("dlgDanger", "Delete this project?", "<p class='fg-2 mb-2'>This removes <strong>Kestrel Logistics</strong> and all 1,284 of its records.</p><p class='fg-3 fs-sm mb-0'>This cannot be undone.</p>", cls="dialog-sm", static=True, footer='<button type="button" class="btn-text" data-bs-dismiss="dialog">Keep it</button><button type="button" class="btn-solid theme-danger" data-bs-dismiss="dialog">Delete permanently</button>')}
+{dlg("dlgDanger", "Delete this project?", "<p class='fg-2 mb-3'>This removes <strong>Kestrel Logistics</strong> and all 1,284 of its records.</p><p class='fg-3 fs-sm mb-0'>This cannot be undone.</p>", cls="dialog-sm", static=True, footer='<button type="button" class="btn-text" data-bs-dismiss="dialog">Keep it</button><button type="button" class="btn-solid theme-danger" data-bs-dismiss="dialog">Delete permanently</button>')}
 {dlg("dlgSoft", "Discard changes?", "<p class='fg-2 mb-0'>Your edits since 14:20 will be lost.</p>", cls="dialog-sm", footer='<button type="button" class="btn-text" data-bs-dismiss="dialog">Keep editing</button><button type="button" class="btn-solid theme-primary" data-bs-dismiss="dialog">Discard</button>')}"""),
 
     ("06-nonmodal", "Non-modal", "Non-modal dialog",
      "<code>.dialog-nonmodal</code> has no backdrop and leaves the page usable underneath — impossible with a v5 modal.",
      '<div class="page"><i></i><i class="w60"></i><i></i><div class="panel p-corner"><i></i><i class="mute"></i></div></div>',
      True, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Non-modal dialog</h1>
-<p class="fg-2 mb-4">
+<p class="fg-2 mb-5">
   Open it, then keep typing in the field below. The page stays live — no backdrop,
   no inert content, no focus trap.
 </p>
-<div class="trigger-grid mb-4">
+<div class="trigger-grid mb-5">
   {trig("dlgNon", "Open helper panel", style="btn-solid theme-primary")}
 </div>
-<div class="form-field mb-4" style="max-width:26rem">
+<div class="form-field mb-5" style="max-width:26rem">
   <label class="form-label" for="nmProof">Type here while it is open</label>
   <input type="text" class="form-control" id="nmProof" placeholder="Still works&#8230;">
 </div>
 <div class="note fs-sm">
-  <p class="mb-2">Good for inspectors, live help and anything a person needs
+  <p class="mb-3">Good for inspectors, live help and anything a person needs
   alongside their work rather than instead of it. In v5 this required building a
   floating panel by hand, because a modal always blocked the page.</p>
   <p class="mb-0"><strong>Two things are needed, not one.</strong>
@@ -237,14 +237,14 @@ VARIANTS = [
   need <code>data-bs-modal="false"</code>. With only the class you get a dialog
   that looks non-modal and still blocks the page.</p>
 </div>
-{dlg("dlgNon", "Formatting help", "<p class='fg-2 mb-2'>Use <code>**bold**</code>, <code>_italic_</code> and <code>`code`</code>.</p><p class='fg-2 mb-0'>Two blank lines start a new paragraph.</p>", cls="dialog-nonmodal dialog-sm", nonmodal=True, footer='<button type="button" class="btn-text" data-bs-dismiss="dialog">Close</button>')}"""),
+{dlg("dlgNon", "Formatting help", "<p class='fg-2 mb-3'>Use <code>**bold**</code>, <code>_italic_</code> and <code>`code`</code>.</p><p class='fg-2 mb-0'>Two blank lines start a new paragraph.</p>", cls="dialog-nonmodal dialog-sm", nonmodal=True, footer='<button type="button" class="btn-text" data-bs-dismiss="dialog">Close</button>')}"""),
 
     ("07-drawer-sides", "Drawer sides", "Drawers, four sides",
      "<code>.drawer-start</code>, <code>-end</code>, <code>-top</code> and <code>-bottom</code>. Offcanvas is gone; a drawer is a <code>&lt;dialog&gt;</code> too.",
      '<div class="page"><i></i><i class="w60"></i><div class="panel p-end"><i></i><i class="mute"></i><i class="mute"></i></div></div>',
      True, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Drawers</h1>
-<p class="fg-2 mb-4">Same element, same JavaScript, four positions.</p>
-<div class="trigger-grid mb-4">
+<p class="fg-2 mb-5">Same element, same JavaScript, four positions.</p>
+<div class="trigger-grid mb-5">
   {trig("drwStart", "From the start", "drawer")}
   {trig("drwEnd", "From the end", "drawer", "btn-solid theme-primary")}
   {trig("drwTop", "From the top", "drawer")}
@@ -265,8 +265,8 @@ VARIANTS = [
      "<code>.drawer-sheet</code> with <code>.drawer-fit-content</code> — the mobile sheet pattern, sized to its content.",
      '<div class="page"><i></i><i class="w60"></i><i></i><div class="panel p-bottom"><i class="w40"></i><i class="mute"></i><i class="mute"></i></div></div>',
      False, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Bottom sheet</h1>
-<p class="fg-2 mb-4">Rounded top corners, sized to its content rather than the viewport.</p>
-<div class="trigger-grid mb-4">
+<p class="fg-2 mb-5">Rounded top corners, sized to its content rather than the viewport.</p>
+<div class="trigger-grid mb-5">
   {trig("drwSheet", "Open sheet", "drawer", "btn-solid theme-primary")}
   {trig("drwSheetTall", "Taller sheet", "drawer")}
 </div>
@@ -275,15 +275,15 @@ VARIANTS = [
   to full height. Pair it with <code>.drawer-sheet</code> for the rounded top
   edge that signals the thing is draggable-looking even though it is not.</p>
 </div>
-{drw("drwSheet", "Share", "<div class='d-grid gap-2'><button class='btn-outline theme-secondary' type='button'>Copy link</button><button class='btn-outline theme-secondary' type='button'>Email</button><button class='btn-outline theme-secondary' type='button'>Export as PDF</button></div>", cls="drawer-bottom drawer-sheet drawer-fit-content")}
+{drw("drwSheet", "Share", "<div class='d-grid gap-3'><button class='btn-outline theme-secondary' type='button'>Copy link</button><button class='btn-outline theme-secondary' type='button'>Email</button><button class='btn-outline theme-secondary' type='button'>Export as PDF</button></div>", cls="drawer-bottom drawer-sheet drawer-fit-content")}
 {drw("drwSheetTall", "Choose a plan", FILLER, cls="drawer-bottom drawer-sheet")}"""),
 
     ("09-toasts", "Toasts", "Toasts",
      "Stacked notifications in a <code>.toast-container</code>, including the translucent variant. Markup plus a class, no component to construct.",
      '<div class="page"><i></i><i class="w60"></i><i></i><div class="panel p-corner"><i class="w60"></i><i class="mute"></i></div></div>',
      True, """<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Toasts</h1>
-<p class="fg-2 mb-4">Non-blocking confirmations. They auto-dismiss after four seconds here.</p>
-<div class="trigger-grid mb-4">
+<p class="fg-2 mb-5">Non-blocking confirmations. They auto-dismiss after four seconds here.</p>
+<div class="trigger-grid mb-5">
   <button class="btn-solid theme-primary" type="button" data-toast-show="toastSaved">Show success</button>
   <button class="btn-outline theme-secondary" type="button" data-toast-show="toastWarn">Show warning</button>
   <button class="btn-outline theme-secondary" type="button" data-toast-show="toastGlass">Show translucent</button>
@@ -295,14 +295,14 @@ VARIANTS = [
 </div>
 
 <div class="toast-container" style="position:fixed;bottom:1rem;right:1rem;z-index:1090">
-  <div class="toast mb-2" id="toastSaved" role="status" hidden>
+  <div class="toast mb-3" id="toastSaved" role="status" hidden>
     <div class="toast-header">
       <strong class="me-auto">Saved</strong>
       <button type="button" class="btn-close" data-toast-dismiss aria-label="Close"></button>
     </div>
     <div class="toast-body">Your changes were saved to the draft.</div>
   </div>
-  <div class="toast mb-2" id="toastWarn" role="status" hidden>
+  <div class="toast mb-3" id="toastWarn" role="status" hidden>
     <div class="toast-header">
       <strong class="me-auto">Heads up</strong>
       <button type="button" class="btn-close" data-toast-dismiss aria-label="Close"></button>
@@ -322,15 +322,15 @@ VARIANTS = [
      "<code>.dialog-slide-up</code>, <code>.dialog-slide-down</code> and <code>.dialog-instant</code> — and why the last one matters.",
      '<div class="page"><i></i><i class="w60"></i><div class="panel p-centre"><i></i><i class="mute"></i></div></div>',
      True, f"""<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Entry animations</h1>
-<p class="fg-2 mb-4">Three entrances, plus the escape hatch.</p>
-<div class="trigger-grid mb-4">
+<p class="fg-2 mb-5">Three entrances, plus the escape hatch.</p>
+<div class="trigger-grid mb-5">
   {trig("dlgUp", "Slide up", style="btn-solid theme-primary")}
   {trig("dlgDown", "Slide down")}
   {trig("dlgInstant", "Instant")}
   {trig("drwInstant", "Instant drawer", "drawer")}
 </div>
 <div class="note fs-sm">
-  <p class="mb-2"><code>.dialog-instant</code> and <code>.drawer-instant</code>
+  <p class="mb-3"><code>.dialog-instant</code> and <code>.drawer-instant</code>
   skip the transition entirely. That is the right choice when a dialog opens in
   response to something already in motion — a drag, a swipe, a second dialog —
   where an entry animation reads as lag rather than polish.</p>
@@ -354,9 +354,9 @@ def write_variant(i, folder, nav, card, blurb, sketch, wide, body):
     html += f"""
 <div class="variant-bar">
   <a class="btn-text btn-sm" href="../index.html">&#8592; All dialogs</a>
-  <span class="fs-sm fw-semibold ms-2">{card}</span>
+  <span class="fs-sm fw-semibold ms-3">{card}</span>
   <span class="fs-xs fg-3 d-none md:d-inline">{i + 1} of {len(VARIANTS)}</span>
-  <div class="d-flex align-items-center gap-2 ms-auto">
+  <div class="d-flex align-items-center gap-3 ms-auto">
     <a class="btn-icon btn-sm" href="../{VARIANTS[prev_i][0]}/index.html" aria-label="Previous">&#8249;</a>
     <a class="btn-icon btn-sm" href="../{VARIANTS[next_i][0]}/index.html" aria-label="Next">&#8250;</a>
     {TOGGLE}
@@ -395,14 +395,14 @@ def write_index():
         desc="Ten free Bootstrap 6 dialog and drawer templates — basic, scrollable, sizes, forms, destructive confirms, non-modal, four-sided drawers, bottom sheets, toasts and entry animations. Native dialog elements, no build step.",
         p="")
     html += f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#dialogs">Skip to the dialogs</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#dialogs">Skip to the dialogs</a>
 
 <div class="pack-head">
   <div class="container">
-    <div class="d-flex flex-wrap align-items-start gap-3">
+    <div class="d-flex flex-wrap align-items-start gap-4">
       <div class="me-auto" style="max-width:44rem">
-        <span class="badge badge-subtle theme-primary mb-3">Bootstrap 6.0.0-alpha1</span>
-        <h1 class="fs-4xl fw-bold mb-3" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
+        <span class="badge badge-subtle theme-primary mb-4">Bootstrap 6.0.0-alpha1</span>
+        <h1 class="fs-4xl fw-bold mb-4" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
         <p class="fs-lg fg-2 mb-0">
           v6 rebuilt this area completely: Modal became Dialog, Offcanvas became
           Drawer, and both are now native <code>&lt;dialog&gt;</code> elements.
@@ -421,8 +421,8 @@ def write_index():
 {chr(10).join(cards)}
     </div>
 
-    <section class="mt-9" style="max-width:46rem">
-      <h2 class="fs-2xl fw-bold mb-4" style="letter-spacing:-.02em">Porting from v5</h2>
+    <section class="mt-12" style="max-width:46rem">
+      <h2 class="fs-2xl fw-bold mb-5" style="letter-spacing:-.02em">Porting from v5</h2>
       <div class="prose">
         <p>The renames are the easy part: <code>Modal</code> is
         <code>Dialog</code>, <code>Offcanvas</code> is <code>Drawer</code>, and
@@ -458,8 +458,8 @@ def write_index():
   </div>
 </main>
 
-<footer class="site-footer bg-2 py-6 mt-9">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+<footer class="site-footer bg-2 py-7 mt-12">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
     <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> {PACK_TITLE}. A free pack for uicookies.</p>
     <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
   </div>

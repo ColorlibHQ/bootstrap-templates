@@ -107,7 +107,7 @@ RANGE = """      <div class="ranger" role="group" aria-label="Date range">
 
 def shell(current, title, subtitle, body, *, ranger=True):
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="topbar">
   <div class="topbar-in">
@@ -122,7 +122,7 @@ def shell(current, title, subtitle, body, *, ranger=True):
         {top_nav(current)}
     </nav>
 
-    <div class="d-flex align-items-center gap-2 ms-auto">
+    <div class="d-flex align-items-center gap-3 ms-auto">
       <div class="form-control form-adorn search-field d-none md:d-flex">
         <div class="form-adorn-icon">{ICON['search']}</div>
         <input type="search" class="form-ghost" placeholder="Search customers…" aria-label="Search">
@@ -422,7 +422,7 @@ def page_settings():
           <header class="card-head"><div><h2 class="card-title">Workspace</h2><p class="card-sub mb-0">Applies to everyone on the account</p></div></header>
           <div class="card-body">
             <form data-demo-form novalidate>
-              <div class="row g-3">
+              <div class="row g-4">
                 <div class="md:col-6">
                   <label class="form-label" for="wName">Workspace name</label>
                   <input class="form-control" type="text" id="wName" value="Northstar" required>

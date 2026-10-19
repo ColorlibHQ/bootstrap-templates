@@ -110,7 +110,7 @@ def job_row(j, href="job.html"):
 def chrome_header(active_home=True):
     prefix = "" if active_home else "index.html"
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <nav class="navbar lg:navbar-expand" aria-label="Main">
@@ -122,8 +122,8 @@ def chrome_header(active_home=True):
           <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
         </div>
-        <div class="drawer-body mb-2 lg:mb-0">
-          <ul class="nav navbar-nav ms-auto lg:gap-3">
+        <div class="drawer-body mb-3 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-4">
             <li class="nav-item"><a class="nav-link" href="{prefix}#jobs">Browse jobs</a></li>
             <li class="nav-item"><a class="nav-link" href="{prefix}#sectors">Sectors</a></li>
             <li class="nav-item"><a class="nav-link" href="{prefix}#companies">Companies</a></li>
@@ -132,7 +132,7 @@ def chrome_header(active_home=True):
         </div>
       </dialog>
 
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         {TOGGLE}
         <a class="btn-solid theme-primary d-none md:d-inline-flex" href="{prefix}#post">Post a job</a>
         <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
@@ -146,34 +146,34 @@ def chrome_header(active_home=True):
 
 
 FOOTER = """
-<footer class="site-footer section pb-5 bg-2">
+<footer class="site-footer section pb-6 bg-2">
   <div class="container">
-    <div class="row g-5">
+    <div class="row g-6">
       <div class="md:col-4">
-        <p class="fw-bold fs-lg mb-3" style="letter-spacing:-.02em">Shortlist</p>
+        <p class="fw-bold fs-lg mb-4" style="letter-spacing:-.02em">Shortlist</p>
         <p class="fg-3 fs-sm mb-0">Every job on this board shows a salary range. It is a condition of listing, not a preference.</p>
       </div>
       <div class="md:col-2">
-        <p class="fw-semibold fs-sm mb-3">Candidates</p>
+        <p class="fw-semibold fs-sm mb-4">Candidates</p>
         <ul class="list-unstyled fs-sm fg-3 mb-0">
-          <li class="mb-2"><a href="index.html#jobs">Browse jobs</a></li>
-          <li class="mb-2"><a href="index.html#sectors">By sector</a></li>
-          <li class="mb-2"><a href="job.html">Example listing</a></li>
+          <li class="mb-3"><a href="index.html#jobs">Browse jobs</a></li>
+          <li class="mb-3"><a href="index.html#sectors">By sector</a></li>
+          <li class="mb-3"><a href="job.html">Example listing</a></li>
         </ul>
       </div>
       <div class="md:col-2">
-        <p class="fw-semibold fs-sm mb-3">Employers</p>
+        <p class="fw-semibold fs-sm mb-4">Employers</p>
         <ul class="list-unstyled fs-sm fg-3 mb-0">
-          <li class="mb-2"><a href="index.html#post">Post a job</a></li>
-          <li class="mb-2"><a href="index.html#companies">Companies</a></li>
+          <li class="mb-3"><a href="index.html#post">Post a job</a></li>
+          <li class="mb-3"><a href="index.html#companies">Companies</a></li>
         </ul>
       </div>
       <div class="md:col-4">
-        <p class="fw-semibold fs-sm mb-3">Job alerts</p>
+        <p class="fw-semibold fs-sm mb-4">Job alerts</p>
         <p class="fs-sm fg-3 mb-0">One email a week, only roles matching your filters. Unsubscribe in one click.</p>
       </div>
     </div>
-    <hr class="my-5">
+    <hr class="my-6">
     <p class="fs-xs fg-3 mb-0">&copy; <span data-year></span> Shortlist. A free Bootstrap 6 template — every role here is fictional.</p>
   </div>
 </footer>
@@ -195,9 +195,9 @@ def page_index():
     ) + chrome_header() + f"""
 <section class="find">
   <div class="container">
-    <div class="row justify-content-center text-center mb-4">
+    <div class="row justify-content-center text-center mb-5">
       <div class="lg:col-8">
-        <h1 class="find-title mb-3">Jobs that tell you what they pay</h1>
+        <h1 class="find-title mb-4">Jobs that tell you what they pay</h1>
         <p class="fs-lg fg-2 mb-0">
           1,284 open roles across the north of England. Every one shows a real
           salary range, because a listing without one wastes everybody's afternoon.
@@ -217,7 +217,7 @@ def page_index():
       <button class="btn-solid theme-primary btn-lg" type="submit">Search</button>
     </form>
 
-    <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-5">
       <span class="fs-sm fg-3 me-1">Popular:</span>
       <a class="chip" href="#jobs">Remote</a>
       <a class="chip" href="#jobs">Frontend</a>
@@ -236,7 +236,7 @@ def page_index():
         <aside class="rail">
           <form onsubmit="return false">
             <div class="rail-group">
-              <p class="rail-label mb-2">Salary floor</p>
+              <p class="rail-label mb-3">Salary floor</p>
               <div class="form-range" data-bs-bubble>
                 <input type="range" class="form-range-input" id="payFloor" min="20000" max="120000" step="5000" value="45000"
                        data-range-out="payOut" data-range-prefix="&pound;" aria-label="Minimum salary">
@@ -246,14 +246,14 @@ def page_index():
 
             <div class="rail-group">
               <p class="rail-label">Working pattern</p>
-              <div class="form-field mb-2"><input type="checkbox" class="check" id="fRemote" checked><label for="fRemote">Remote</label></div>
-              <div class="form-field mb-2"><input type="checkbox" class="check" id="fHybrid" checked><label for="fHybrid">Hybrid</label></div>
+              <div class="form-field mb-3"><input type="checkbox" class="check" id="fRemote" checked><label for="fRemote">Remote</label></div>
+              <div class="form-field mb-3"><input type="checkbox" class="check" id="fHybrid" checked><label for="fHybrid">Hybrid</label></div>
               <div class="form-field mb-0"><input type="checkbox" class="check" id="fOnsite"><label for="fOnsite">On-site</label></div>
             </div>
 
             <div class="rail-group">
               <p class="rail-label">Contract</p>
-              <div class="form-field mb-2"><input type="checkbox" class="check" id="fPerm" checked><label for="fPerm">Permanent</label></div>
+              <div class="form-field mb-3"><input type="checkbox" class="check" id="fPerm" checked><label for="fPerm">Permanent</label></div>
               <div class="form-field mb-0"><input type="checkbox" class="check" id="fCon"><label for="fCon">Contract</label></div>
             </div>
 
@@ -272,9 +272,9 @@ def page_index():
         </aside>
 
         <div>
-          <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+          <div class="d-flex flex-wrap align-items-center gap-4 mb-4">
             <p class="fw-semibold mb-0">{len(JOBS)} roles</p>
-            <div class="d-flex flex-wrap gap-2">
+            <div class="d-flex flex-wrap gap-3">
               <span class="chip">Remote <button type="button" class="chip-dismiss" aria-label="Remove remote filter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg></button></span>
               <span class="chip">&pound;45k+ <button type="button" class="chip-dismiss" aria-label="Remove salary filter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg></button></span>
             </div>
@@ -285,7 +285,7 @@ def page_index():
 
 {rows}
 
-          <div class="d-flex justify-content-center mt-4">
+          <div class="d-flex justify-content-center mt-5">
             <nav aria-label="Job pages">
               <ul class="pagination mb-0">
                 <li class="page-item disabled"><button class="page-link" type="button" disabled>&lsaquo;</button></li>
@@ -305,8 +305,8 @@ def page_index():
   <!-- Sectors -->
   <section class="section bg-2" id="sectors">
     <div class="container">
-      <h2 class="fs-3xl fw-bold mb-5" style="letter-spacing:-.03em">Browse by sector</h2>
-      <div class="row g-3">
+      <h2 class="fs-3xl fw-bold mb-6" style="letter-spacing:-.03em">Browse by sector</h2>
+      <div class="row g-4">
         <div class="sm:col-6 lg:col-4"><a class="cat-tile" href="#jobs"><span class="fw-semibold">Engineering</span><span class="cat-count">418</span></a></div>
         <div class="sm:col-6 lg:col-4"><a class="cat-tile" href="#jobs"><span class="fw-semibold">Design</span><span class="cat-count">162</span></a></div>
         <div class="sm:col-6 lg:col-4"><a class="cat-tile" href="#jobs"><span class="fw-semibold">Data &amp; analytics</span><span class="cat-count">204</span></a></div>
@@ -320,11 +320,11 @@ def page_index():
   <!-- Companies -->
   <section class="section" id="companies">
     <div class="container">
-      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-4 mb-6">
         <h2 class="fs-3xl fw-bold mb-0" style="letter-spacing:-.03em">Hiring now</h2>
         <p class="fg-3 fs-sm mb-0">Companies that publish salaries on every role</p>
       </div>
-      <div class="row g-3">
+      <div class="row g-4">
         <div class="col-6 md:col-4 lg:col-2"><div class="co-tile"><span class="job-logo">NT</span><span class="fs-sm fw-semibold">Northwind</span><span class="cat-count">12 roles</span></div></div>
         <div class="col-6 md:col-4 lg:col-2"><div class="co-tile"><span class="job-logo">LS</span><span class="fs-sm fw-semibold">Lumen</span><span class="cat-count">4 roles</span></div></div>
         <div class="col-6 md:col-4 lg:col-2"><div class="co-tile"><span class="job-logo">KL</span><span class="fs-sm fw-semibold">Kestrel</span><span class="cat-count">9 roles</span></div></div>
@@ -338,10 +338,10 @@ def page_index():
   <!-- Post a job -->
   <section class="section bg-2" id="post">
     <div class="container">
-      <div class="row g-6 align-items-center">
+      <div class="row g-7 align-items-center">
         <div class="lg:col-5">
-          <h2 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.03em">Post a job</h2>
-          <p class="fg-2 mb-4">
+          <h2 class="fs-3xl fw-bold mb-4" style="letter-spacing:-.03em">Post a job</h2>
+          <p class="fg-2 mb-5">
             &pound;180 for thirty days. One condition: the listing carries a
             salary range. We will not publish "competitive" and we will not make
             an exception for you.
@@ -354,7 +354,7 @@ def page_index():
         <div class="lg:col-7">
           <div class="post-panel">
             <form data-demo-form data-bs-validate novalidate>
-              <div class="row g-3">
+              <div class="row g-4">
                 <div class="md:col-6">
                   <div class="form-field">
                     <label class="form-label" for="pjTitle">Job title</label>
@@ -395,7 +395,7 @@ def page_index():
                 </div>
                 <div class="col-12">
                   <button class="btn-solid theme-primary btn-lg" type="submit" data-done-text="Listing drafted ✓">Continue</button>
-                  <p class="fs-xs fg-3 mt-3 mb-0">You will preview the listing before paying.</p>
+                  <p class="fs-xs fg-3 mt-4 mb-0">You will preview the listing before paying.</p>
                 </div>
               </div>
             </form>
@@ -420,14 +420,14 @@ def page_job():
     ) + chrome_header(active_home=False) + f"""
 <div class="sub-head">
   <div class="container">
-    <nav aria-label="Breadcrumb" class="mb-3">
+    <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html">Shortlist</a></li>
         <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html#jobs">Engineering</a></li>
         <li class="breadcrumb-item active" aria-current="page">Senior Frontend Engineer</li>
       </ol>
     </nav>
-    <div class="d-flex flex-wrap align-items-start gap-3">
+    <div class="d-flex flex-wrap align-items-start gap-4">
       <span class="job-logo" aria-hidden="true">NT</span>
       <div>
         <h1 class="fs-3xl fw-bold mb-1" style="letter-spacing:-.03em">Senior Frontend Engineer</h1>
@@ -440,10 +440,10 @@ def page_job():
 <main id="main">
   <section class="section">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-8">
           <div class="prose">
-            <h2 class="fs-2xl fw-bold mb-3" style="letter-spacing:-.02em">The role</h2>
+            <h2 class="fs-2xl fw-bold mb-4" style="letter-spacing:-.02em">The role</h2>
             <p class="fg-2">
               You would be the fourth engineer on a team that owns the customer-facing
               side of a logistics platform used by about 4,000 people a day. Most of
@@ -451,22 +451,22 @@ def page_job():
               ourselves rather than pulling off the shelf.
             </p>
 
-            <h2 class="fs-2xl fw-bold mb-3 mt-6">What you would actually do</h2>
+            <h2 class="fs-2xl fw-bold mb-4 mt-7">What you would actually do</h2>
             <ul class="fg-2">
-              <li class="mb-2">Own features end to end, from the design conversation to the deploy</li>
-              <li class="mb-2">Maintain and extend the design system — roughly a day a week</li>
-              <li class="mb-2">Pair with the two mid-level engineers, deliberately and often</li>
+              <li class="mb-3">Own features end to end, from the design conversation to the deploy</li>
+              <li class="mb-3">Maintain and extend the design system — roughly a day a week</li>
+              <li class="mb-3">Pair with the two mid-level engineers, deliberately and often</li>
               <li>Take part in the on-call rota, one week in six, rarely called</li>
             </ul>
 
-            <h2 class="fs-2xl fw-bold mb-3 mt-6">What we are looking for</h2>
+            <h2 class="fs-2xl fw-bold mb-4 mt-7">What we are looking for</h2>
             <p class="fg-2">
               Several years building production front-ends, comfort with TypeScript,
               and an opinion about accessibility that you can defend. We do not
               require a degree and we do not run a take-home test.
             </p>
 
-            <h2 class="fs-2xl fw-bold mb-3 mt-6">Process</h2>
+            <h2 class="fs-2xl fw-bold mb-4 mt-7">Process</h2>
             <p class="fg-2 mb-0">
               A 30-minute call, then a two-hour paired session on our actual codebase
               (paid at day rate), then a conversation with the team you would join.
@@ -478,10 +478,10 @@ def page_job():
         <div class="lg:col-4">
           <div class="apply-rail">
             <p class="job-pay fs-2xl mb-1">&pound;65,000 — &pound;78,000</p>
-            <p class="fg-3 fs-sm mb-4">Plus 8% pension and a &pound;1,500 annual learning budget.</p>
+            <p class="fg-3 fs-sm mb-5">Plus 8% pension and a &pound;1,500 annual learning budget.</p>
 
-            <button class="btn-solid theme-primary w-100 mb-2" type="button" data-bs-toggle="dialog" data-bs-target="#applyDialog">Apply now</button>
-            <button class="btn-outline theme-secondary w-100 mb-4" type="button">Save for later</button>
+            <button class="btn-solid theme-primary w-100 mb-3" type="button" data-bs-toggle="dialog" data-bs-target="#applyDialog">Apply now</button>
+            <button class="btn-outline theme-secondary w-100 mb-5" type="button">Save for later</button>
 
             <div class="spec-row"><span class="fg-3 fs-sm">Location</span><span class="fs-sm">Leeds</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Pattern</span><span class="fs-sm">Hybrid, 2 days in</span></div>
@@ -501,7 +501,7 @@ def page_job():
     <h2 class="dialog-title fs-lg" id="applyLabel">Apply — Senior Frontend Engineer</h2>
     <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
   </div>
-  <form class="dialog-body vstack gap-3" id="applyForm" data-demo-form data-bs-validate novalidate>
+  <form class="dialog-body vstack gap-4" id="applyForm" data-demo-form data-bs-validate novalidate>
     <div class="form-field">
       <label class="form-label" for="apName">Your name</label>
       <input type="text" class="form-control" id="apName" required>

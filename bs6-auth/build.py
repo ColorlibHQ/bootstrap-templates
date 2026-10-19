@@ -75,8 +75,8 @@ VARIANTS = [
      '<i class="w40"></i><i class="tall"></i><i class="w40"></i><i class="tall"></i><div class="row2"><i class="w40"></i><i class="w40"></i></div><i class="cta"></i>',
      False, """<div class="form-shell">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Welcome back</h1>
-  <p class="fg-2 mb-5">Sign in to pick up where you left off.</p>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <p class="fg-2 mb-6">Sign in to pick up where you left off.</p>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div class="form-field">
       <label class="form-label" for="a1email">Email</label>
       <div class="form-control form-adorn">
@@ -90,7 +90,7 @@ VARIANTS = [
       <input type="password" class="form-control" id="a1pw" autocomplete="current-password" required>
       <div class="invalid-feedback">Required.</div>
     </div>
-    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
       <div class="form-field mb-0">
         <input type="checkbox" class="check" id="a1keep" checked>
         <label for="a1keep">Keep me signed in</label>
@@ -107,8 +107,8 @@ VARIANTS = [
      '<i class="w40"></i><i class="tall"></i><i class="w40"></i><i class="tall"></i><div class="row2"><i></i><i></i><i></i><i></i></div><i class="cta"></i>',
      False, """<div class="form-shell">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Create your account</h1>
-  <p class="fg-2 mb-5">Free for 14 days. No card needed.</p>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <p class="fg-2 mb-6">Free for 14 days. No card needed.</p>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div class="form-field">
       <label class="form-label" for="a2name">Full name</label>
       <input type="text" class="form-control" id="a2name" autocomplete="name" required>
@@ -142,10 +142,10 @@ VARIANTS = [
      "A single field and an honest message — deliberately vague about whether the address exists.",
      '<i class="w60" style="margin-inline:auto"></i><i class="tall"></i><i class="cta" style="margin-inline:auto"></i>',
      False, """<div class="form-shell text-center">
-  <span class="icon-tile mx-auto mb-4">""" + MAIL + """</span>
+  <span class="icon-tile mx-auto mb-5">""" + MAIL + """</span>
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Reset your password</h1>
-  <p class="fg-2 mb-5">Enter your email and we&#8217;ll send a reset link. It expires in an hour.</p>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <p class="fg-2 mb-6">Enter your email and we&#8217;ll send a reset link. It expires in an hour.</p>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div class="form-field text-start">
       <label class="form-label" for="a3email">Email</label>
       <div class="form-control form-adorn">
@@ -163,8 +163,8 @@ VARIANTS = [
      '<i class="w60" style="margin-inline:auto"></i><i class="tall"></i><div class="row2"><i></i><i></i><i></i><i></i></div><i class="tall"></i><i class="cta"></i>',
      False, """<div class="form-shell">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Choose a new password</h1>
-  <p class="fg-2 mb-5">Signing in on every device will be required again afterwards.</p>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <p class="fg-2 mb-6">Signing in on every device will be required again afterwards.</p>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div class="form-field">
       <label class="form-label" for="a4pw">New password</label>
       <input type="password" class="form-control" id="a4pw" autocomplete="new-password" required>
@@ -187,8 +187,8 @@ VARIANTS = [
      '<i class="w60" style="margin-inline:auto"></i><div class="row2"><i class="tall"></i><i class="tall"></i><i class="tall"></i><i class="tall"></i><i class="tall"></i><i class="tall"></i></div><i class="cta" style="margin-inline:auto"></i>',
      False, """<div class="form-shell text-center">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Two-step verification</h1>
-  <p class="fg-2 mb-5">Enter the six-digit code from your authenticator app.</p>
-  <form class="vstack gap-4" data-demo-form novalidate>
+  <p class="fg-2 mb-6">Enter the six-digit code from your authenticator app.</p>
+  <form class="vstack gap-5" data-demo-form novalidate>
     <div>
       <label class="form-label visually-hidden" for="a5otp">Verification code</label>
       <div class="otp d-inline-flex" data-bs-otp>
@@ -209,8 +209,8 @@ VARIANTS = [
      '<i class="w60" style="margin-inline:auto"></i><i class="tall"></i><i class="cta"></i><i class="w75" style="margin-inline:auto"></i>',
      False, """<div class="form-shell">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Sign in without a password</h1>
-  <p class="fg-2 mb-5">We&#8217;ll email you a link that signs you straight in.</p>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <p class="fg-2 mb-6">We&#8217;ll email you a link that signs you straight in.</p>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div class="form-field">
       <label class="form-label" for="a6email">Email</label>
       <div class="form-control form-adorn">
@@ -220,10 +220,10 @@ VARIANTS = [
     </div>
     <div><button class="btn-solid theme-primary w-100 btn-lg" type="submit" data-done-text="Link sent &#10003;">Email me a link</button></div>
   </form>
-  <div class="alert theme-info mt-4 mb-0" role="alert">
+  <div class="alert theme-info mt-5 mb-0" role="alert">
     <strong>Already requested one?</strong> Links last 15 minutes and only work once.
   </div>
-  <hr class="my-4">
+  <hr class="my-5">
   <p class="fs-sm fg-3 text-center mb-0">Prefer a password? <a href="../01-signin/index.html">Sign in normally</a></p>
 </div>"""),
 
@@ -232,16 +232,16 @@ VARIANTS = [
      '<div class="row2"><i class="tall"></i><i class="tall"></i></div><i class="w40" style="margin-inline:auto"></i><i class="tall"></i><i class="cta"></i>',
      False, """<div class="form-shell">
   <h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Sign in to your workspace</h1>
-  <p class="fg-2 mb-5">Use your company account, or pick a provider.</p>
-  <div class="vstack gap-2 mb-4">
+  <p class="fg-2 mb-6">Use your company account, or pick a provider.</p>
+  <div class="vstack gap-3 mb-5">
     <button class="btn-outline theme-secondary w-100" type="button">Continue with Google</button>
     <button class="btn-outline theme-secondary w-100" type="button">Continue with Microsoft</button>
     <button class="btn-outline theme-secondary w-100" type="button">Continue with GitHub</button>
   </div>
-  <div class="d-flex align-items-center gap-3 mb-4">
+  <div class="d-flex align-items-center gap-4 mb-5">
     <hr class="flex-grow-1 my-0"><span class="fs-xs fg-3">OR SAML SSO</span><hr class="flex-grow-1 my-0">
   </div>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div>
       <label class="form-label">Workspace</label>
       """ + combobox("workspace", "Find your workspace…", [("a","northwind.app"),("b","kestrel.io"),("c","lumen.co")], search=True) + """
@@ -254,10 +254,10 @@ VARIANTS = [
      "The return-from-idle screen: identity already known, so only the password is asked for.",
      '<i class="tall" style="min-height:3rem;width:3rem;border-radius:99px;margin-inline:auto"></i><i class="w40" style="margin-inline:auto"></i><i class="tall"></i><i class="cta"></i>',
      False, """<div class="form-shell text-center">
-  <span class="avatar avatar-lg mx-auto mb-3"><span class="avatar-initials">PN</span></span>
+  <span class="avatar avatar-lg mx-auto mb-4"><span class="avatar-initials">PN</span></span>
   <h1 class="fs-xl fw-semibold mb-1">Priya Nadkarni</h1>
-  <p class="fg-3 fs-sm mb-5">Locked after 15 minutes idle</p>
-  <form class="vstack gap-4" data-demo-form data-bs-validate novalidate>
+  <p class="fg-3 fs-sm mb-6">Locked after 15 minutes idle</p>
+  <form class="vstack gap-5" data-demo-form data-bs-validate novalidate>
     <div class="form-field text-start">
       <label class="form-label" for="a8pw">Password</label>
       <input type="password" class="form-control" id="a8pw" autocomplete="current-password" required>
@@ -280,9 +280,9 @@ def write_variant(i, folder, nav, card, blurb, sketch, wide, body):
     html += f"""
 <div class="variant-bar">
   <a class="btn-text btn-sm" href="../index.html">&#8592; All forms</a>
-  <span class="fs-sm fw-semibold ms-2">{card}</span>
+  <span class="fs-sm fw-semibold ms-3">{card}</span>
   <span class="fs-xs fg-3 d-none md:d-inline">{i + 1} of {len(VARIANTS)}</span>
-  <div class="d-flex align-items-center gap-2 ms-auto">
+  <div class="d-flex align-items-center gap-3 ms-auto">
     <a class="btn-icon btn-sm" href="../{VARIANTS[prev_i][0]}/index.html" aria-label="Previous form">&#8249;</a>
     <a class="btn-icon btn-sm" href="../{VARIANTS[next_i][0]}/index.html" aria-label="Next form">&#8250;</a>
     {TOGGLE}
@@ -321,14 +321,14 @@ def write_index():
         desc="Ten free Bootstrap 6 form templates — contact, sign-up, booking, multi-step, OTP verification, chips, range and floating labels. No build step.",
         p="")
     html += f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#forms">Skip to the forms</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#forms">Skip to the forms</a>
 
 <div class="pack-head">
   <div class="container">
-    <div class="d-flex flex-wrap align-items-start gap-3">
+    <div class="d-flex flex-wrap align-items-start gap-4">
       <div class="me-auto" style="max-width:44rem">
-        <span class="badge badge-subtle theme-primary mb-3">Bootstrap 6.0.0-alpha1</span>
-        <h1 class="fs-4xl fw-bold mb-3" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
+        <span class="badge badge-subtle theme-primary mb-4">Bootstrap 6.0.0-alpha1</span>
+        <h1 class="fs-4xl fw-bold mb-4" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
         <p class="fs-lg fg-2 mb-0">
           Ten form layouts covering the shapes real projects need &#8212; contact,
           sign-up, booking, multi-step, verification and filtering. Between them they
@@ -346,8 +346,8 @@ def write_index():
 {chr(10).join(cards)}
     </div>
 
-    <section class="mt-9" style="max-width:46rem">
-      <h2 class="fs-2xl fw-bold mb-4" style="letter-spacing:-.02em">Using these</h2>
+    <section class="mt-12" style="max-width:46rem">
+      <h2 class="fs-2xl fw-bold mb-5" style="letter-spacing:-.02em">Using these</h2>
       <div class="prose">
         <p>Each form is a standalone page. Copy the markup out of the one you want and
         drop it into your project &#8212; the only requirements are Bootstrap 6&#8217;s CSS and, if
@@ -372,8 +372,8 @@ def write_index():
   </div>
 </main>
 
-<footer class="site-footer bg-2 py-6 mt-9">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+<footer class="site-footer bg-2 py-7 mt-12">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
     <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> {PACK_TITLE}. A free pack for uicookies.</p>
     <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
   </div>

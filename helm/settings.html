@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <div class="app" id="app">
 
@@ -46,7 +46,7 @@
         <input type="search" class="form-ghost" placeholder="Search orders, customers…" aria-label="Search">
       </div>
 
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
   <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
   <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
@@ -65,16 +65,16 @@
     </header>
 
     <main class="content" id="main">
-      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-4 mb-5">
         <div>
           <h1 class="page-title mb-1">Settings</h1>
           <p class="fg-3 fs-sm mb-0">Workspace configuration.</p>
         </div>
-        <div class="d-flex flex-wrap gap-2"></div>
+        <div class="d-flex flex-wrap gap-3"></div>
       </div>
 
       <div class="panel">
-        <div class="panel-head p-0 px-3">
+        <div class="panel-head p-0 px-4">
           <ul class="nav nav-underline" role="tablist">
             <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabGeneral" type="button" role="tab" aria-selected="true">General</button></li>
             <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabBilling" type="button" role="tab" aria-selected="false">Billing</button></li>
@@ -85,7 +85,7 @@
         <div class="panel-body">
           <div class="tab-content">
             <div class="tab-pane active" id="tabGeneral" role="tabpanel">
-              <form class="vstack gap-3" style="max-width:32rem" data-demo-form data-bs-validate novalidate>
+              <form class="vstack gap-4" style="max-width:32rem" data-demo-form data-bs-validate novalidate>
                 <div class="form-field">
                   <label class="form-label" for="wsName">Workspace name</label>
                   <input type="text" class="form-control" id="wsName" value="Northwind Trading">
@@ -102,8 +102,8 @@
               </form>
             </div>
             <div class="tab-pane" id="tabBilling" role="tabpanel">
-              <p class="fg-2 mb-3">You are on the <strong>Team</strong> plan at &pound;29 per month, renewing on 1 August 2026.</p>
-              <div class="d-flex flex-wrap gap-2"><button class="btn-outline theme-secondary" type="button">Change plan</button><button class="btn-text" type="button">Download invoices</button></div>
+              <p class="fg-2 mb-4">You are on the <strong>Team</strong> plan at &pound;29 per month, renewing on 1 August 2026.</p>
+              <div class="d-flex flex-wrap gap-3"><button class="btn-outline theme-secondary" type="button">Change plan</button><button class="btn-text" type="button">Download invoices</button></div>
             </div>
             <div class="tab-pane" id="tabTeam" role="tabpanel">
               <div class="table-responsive">
@@ -120,7 +120,7 @@
             <div class="tab-pane" id="tabDanger" role="tabpanel">
               <div class="alert theme-danger" role="alert">
                 <h3 class="alert-heading fs-lg">Delete this workspace</h3>
-                <p class="mb-3">This removes all 1,284 orders and cannot be undone.</p>
+                <p class="mb-4">This removes all 1,284 orders and cannot be undone.</p>
                 <button class="btn-solid theme-danger" type="button" data-bs-toggle="dialog" data-bs-target="#delDialog">Delete workspace</button>
               </div>
             </div>

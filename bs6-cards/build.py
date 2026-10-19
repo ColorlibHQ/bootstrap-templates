@@ -66,13 +66,13 @@ VARIANTS = [
     <h2 class="fs-lg fw-semibold mb-0">Weekly summary</h2>
   </div>
   <div class="card-body">
-    <p class="fg-2 mb-3">
+    <p class="fg-2 mb-4">
       Eleven issues closed, four opened, and the release went out on Thursday
       without anyone staying late. Deployment time is down to just under six minutes.
     </p>
     <p class="fg-3 fs-sm mb-0">Compiled automatically every Friday at 17:00.</p>
   </div>
-  <div class="card-footer d-flex flex-wrap gap-2">
+  <div class="card-footer d-flex flex-wrap gap-3">
     <button class="btn-solid theme-primary btn-sm" type="button">Open report</button>
     <button class="btn-text btn-sm" type="button">Dismiss</button>
   </div>
@@ -84,16 +84,16 @@ VARIANTS = [
      False, """<div class="card">
   <div class="card-media">Media</div>
   <div class="card-body">
-    <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Field notes</p>
-    <h2 class="fs-xl fw-semibold mb-2">What we learned shipping on Fridays</h2>
-    <p class="fg-2 mb-3">
+    <p class="fs-xs fg-3 text-uppercase mb-3" style="letter-spacing:.12em">Field notes</p>
+    <h2 class="fs-xl fw-semibold mb-3">What we learned shipping on Fridays</h2>
+    <p class="fg-2 mb-4">
       We moved releases to Friday morning for six months to see what would break.
       Mostly it was our assumptions about who was on call.
     </p>
     <a class="btn-outline theme-secondary btn-sm" href="#">Read the write-up</a>
   </div>
 </div>
-<p class="fs-sm fg-3 mt-3 mb-0">
+<p class="fs-sm fg-3 mt-4 mb-0">
   Swap <code>.card-media</code> for an <code>&lt;img&gt;</code> with
   <code>object-fit: cover</code> and keep the aspect ratio to avoid layout shift.
 </p>"""),
@@ -104,34 +104,34 @@ VARIANTS = [
      True, """<div class="card card-row">
   <div class="card-media">Media</div>
   <div class="card-body">
-    <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Case study</p>
-    <h2 class="fs-xl fw-semibold mb-2">Kestrel Logistics</h2>
-    <p class="fg-2 mb-3">
+    <p class="fs-xs fg-3 text-uppercase mb-3" style="letter-spacing:.12em">Case study</p>
+    <h2 class="fs-xl fw-semibold mb-3">Kestrel Logistics</h2>
+    <p class="fg-2 mb-4">
       Cut their dispatch reconciliation from four hours a day to about twenty
       minutes, mostly by deleting steps rather than automating them.
     </p>
-    <div class="d-flex flex-wrap gap-2">
+    <div class="d-flex flex-wrap gap-3">
       <span class="badge badge-subtle theme-primary">Logistics</span>
       <span class="badge badge-subtle theme-secondary">8 min read</span>
     </div>
   </div>
 </div>
-<p class="fs-sm fg-3 mt-3 mb-0">
+<p class="fs-sm fg-3 mt-4 mb-0">
   Below <code>576px</code> the grid drops to one column, so the media returns to the top.
 </p>"""),
 
     ("04-pricing", "Pricing", "Pricing cards",
      "Three tiers with the middle one marked. The featured card is outlined rather than scaled, so nothing shifts on hover.",
      '<div class="grid3"><div class="box"><i></i><i class="w60"></i><i class="cta" style="width:100%"></i></div><div class="box"><i></i><i class="w60"></i><i class="cta" style="width:100%"></i></div><div class="box"><i></i><i class="w60"></i><i class="cta" style="width:100%"></i></div></div>',
-     True, f"""<div class="row g-4">
+     True, f"""<div class="row g-5">
   <div class="md:col-4">
     <div class="card h-100">
       <div class="card-body d-flex flex-column">
         <p class="fw-semibold mb-1">Starter</p>
-        <p class="fg-3 fs-sm mb-4">For one person and a side project.</p>
+        <p class="fg-3 fs-sm mb-5">For one person and a side project.</p>
         <p class="price-figure mb-1">&pound;12<span class="fs-sm fg-3 fw-normal">/mo</span></p>
-        <p class="fg-3 fs-xs mb-4">billed annually</p>
-        <ul class="price-list fs-sm fg-2 mb-4">
+        <p class="fg-3 fs-xs mb-5">billed annually</p>
+        <ul class="price-list fs-sm fg-2 mb-5">
           <li>{TICK} Three projects</li>
           <li>{TICK} 7-day history</li>
           <li>{TICK} Community support</li>
@@ -147,10 +147,10 @@ VARIANTS = [
           <p class="fw-semibold mb-0">Team</p>
           <span class="badge badge-subtle theme-primary">Most chosen</span>
         </div>
-        <p class="fg-3 fs-sm mb-4">For a team that ships together.</p>
+        <p class="fg-3 fs-sm mb-5">For a team that ships together.</p>
         <p class="price-figure mb-1">&pound;29<span class="fs-sm fg-3 fw-normal">/mo</span></p>
-        <p class="fg-3 fs-xs mb-4">billed annually</p>
-        <ul class="price-list fs-sm fg-2 mb-4">
+        <p class="fg-3 fs-xs mb-5">billed annually</p>
+        <ul class="price-list fs-sm fg-2 mb-5">
           <li>{TICK} Unlimited projects</li>
           <li>{TICK} 90-day history</li>
           <li>{TICK} Custom domains</li>
@@ -164,10 +164,10 @@ VARIANTS = [
     <div class="card h-100">
       <div class="card-body d-flex flex-column">
         <p class="fw-semibold mb-1">Scale</p>
-        <p class="fg-3 fs-sm mb-4">When procurement gets involved.</p>
+        <p class="fg-3 fs-sm mb-5">When procurement gets involved.</p>
         <p class="price-figure mb-1">&pound;79<span class="fs-sm fg-3 fw-normal">/mo</span></p>
-        <p class="fg-3 fs-xs mb-4">billed annually</p>
-        <ul class="price-list fs-sm fg-2 mb-4">
+        <p class="fg-3 fs-xs mb-5">billed annually</p>
+        <ul class="price-list fs-sm fg-2 mb-5">
           <li>{TICK} Everything in Team</li>
           <li>{TICK} SSO &amp; SCIM</li>
           <li>{TICK} Audit log</li>
@@ -184,7 +184,7 @@ VARIANTS = [
      '<div class="box"><div class="row2" style="align-items:center"><i class="dot"></i><div style="flex:1;display:grid;gap:.3rem"><i class="w75"></i><i class="w40"></i></div></div><i></i><i class="w60"></i><div class="row2"><i class="cta" style="width:100%"></i><i class="cta" style="width:100%;background:transparent;border:1px solid currentColor;opacity:.3"></i></div></div>',
      False, """<div class="card">
   <div class="card-body">
-    <div class="d-flex align-items-center gap-3 mb-4">
+    <div class="d-flex align-items-center gap-4 mb-5">
       <span class="avatar avatar-lg"><span class="avatar-initials">AN</span></span>
       <div>
         <h2 class="fs-lg fw-semibold mb-0">Adaeze Nwosu</h2>
@@ -192,16 +192,16 @@ VARIANTS = [
       </div>
       <span class="badge badge-subtle theme-success ms-auto">Available</span>
     </div>
-    <p class="fg-2 fs-sm mb-4">
+    <p class="fg-2 fs-sm mb-5">
       Works on the deployment pipeline and the bits of the API nobody else wants
       to touch. Mentors two of the graduate intake.
     </p>
-    <div class="d-flex flex-wrap gap-2 mb-4">
+    <div class="d-flex flex-wrap gap-3 mb-5">
       <span class="chip">Go</span>
       <span class="chip">Postgres</span>
       <span class="chip">Terraform</span>
     </div>
-    <div class="d-flex flex-wrap gap-2">
+    <div class="d-flex flex-wrap gap-3">
       <button class="btn-solid theme-primary btn-sm" type="button">Message</button>
       <button class="btn-outline theme-secondary btn-sm" type="button">View profile</button>
     </div>
@@ -211,41 +211,41 @@ VARIANTS = [
     ("06-metric", "Metric", "Metric cards",
      "Dashboard tiles with a figure, a direction-of-travel delta and a CSS sparkline &#8212; no chart library.",
      '<div class="grid2"><div class="box"><i class="w40"></i><i class="tall"></i><i class="w60"></i></div><div class="box"><i class="w40"></i><i class="tall"></i><i class="w60"></i></div></div>',
-     True, f"""<div class="row g-4">
+     True, f"""<div class="row g-5">
   <div class="sm:col-6 lg:col-3">
     <div class="card h-100"><div class="card-body">
-      <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Revenue</p>
+      <p class="fs-xs fg-3 text-uppercase mb-3" style="letter-spacing:.12em">Revenue</p>
       <p class="metric-figure mb-1">&pound;48.2k</p>
-      <p class="metric-delta metric-up mb-3">{ARROW_UP} 12.4% vs last month</p>
+      <p class="metric-delta metric-up mb-4">{ARROW_UP} 12.4% vs last month</p>
       {spark([12, 15, 13, 18, 17, 21, 19, 24, 22, 27, 26, 31])}
     </div></div>
   </div>
   <div class="sm:col-6 lg:col-3">
     <div class="card h-100"><div class="card-body">
-      <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Active users</p>
+      <p class="fs-xs fg-3 text-uppercase mb-3" style="letter-spacing:.12em">Active users</p>
       <p class="metric-figure mb-1">3,918</p>
-      <p class="metric-delta metric-up mb-3">{ARROW_UP} 4.1% vs last month</p>
+      <p class="metric-delta metric-up mb-4">{ARROW_UP} 4.1% vs last month</p>
       {spark([20, 21, 19, 22, 24, 23, 26, 25, 28, 27, 30, 31])}
     </div></div>
   </div>
   <div class="sm:col-6 lg:col-3">
     <div class="card h-100"><div class="card-body">
-      <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Churn</p>
+      <p class="fs-xs fg-3 text-uppercase mb-3" style="letter-spacing:.12em">Churn</p>
       <p class="metric-figure mb-1">2.1%</p>
-      <p class="metric-delta metric-down mb-3">{ARROW_DOWN} 0.4pp vs last month</p>
+      <p class="metric-delta metric-down mb-4">{ARROW_DOWN} 0.4pp vs last month</p>
       {spark([31, 29, 30, 27, 28, 25, 24, 22, 23, 20, 18, 17])}
     </div></div>
   </div>
   <div class="sm:col-6 lg:col-3">
     <div class="card h-100"><div class="card-body">
-      <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Avg. deploy</p>
+      <p class="fs-xs fg-3 text-uppercase mb-3" style="letter-spacing:.12em">Avg. deploy</p>
       <p class="metric-figure mb-1">5m 48s</p>
-      <p class="metric-delta metric-up mb-3">{ARROW_UP} 38s faster</p>
+      <p class="metric-delta metric-up mb-4">{ARROW_UP} 38s faster</p>
       {spark([30, 28, 29, 26, 24, 25, 22, 20, 21, 18, 17, 15])}
     </div></div>
   </div>
 </div>
-<p class="fs-sm fg-3 mt-4 mb-0">
+<p class="fs-sm fg-3 mt-5 mb-0">
   The sparkline is a flex row of <code>&lt;span&gt;</code> elements with percentage
   heights, labelled with <code>role="img"</code> so it is not read as noise.
 </p>"""),
@@ -253,7 +253,7 @@ VARIANTS = [
     ("07-product", "Product", "Product card",
      "Commerce shape &#8212; media, sale badge, rating, struck-through was-price and an add-to-basket action.",
      '<div class="box"><i class="media"></i><i class="w75"></i><div class="row2"><i class="w40"></i><i class="w40"></i></div><i class="cta" style="width:100%"></i></div>',
-     True, f"""<div class="row g-4">
+     True, f"""<div class="row g-5">
   <div class="sm:col-6 lg:col-4">
     <div class="card h-100">
       <div class="position-relative">
@@ -262,14 +262,14 @@ VARIANTS = [
       </div>
       <div class="card-body d-flex flex-column">
         <p class="fs-xs fg-3 mb-1">Kitchen</p>
-        <h2 class="fs-lg fw-semibold mb-2">Hammered copper kettle</h2>
-        <div class="d-flex align-items-center gap-2 mb-3">
+        <h2 class="fs-lg fw-semibold mb-3">Hammered copper kettle</h2>
+        <div class="d-flex align-items-center gap-3 mb-4">
           <span class="stars" role="img" aria-label="Rated 4.5 out of 5">{STAR}{STAR}{STAR}{STAR}{STAR}</span>
           <span class="fs-xs fg-3">4.5 (128)</span>
         </div>
-        <p class="mb-3">
+        <p class="mb-4">
           <span class="product-price fs-lg">&pound;68.00</span>
-          <span class="product-was fs-sm ms-2">&pound;85.00</span>
+          <span class="product-was fs-sm ms-3">&pound;85.00</span>
         </p>
         <button class="btn-solid theme-primary w-100 mt-auto" type="button">Add to basket</button>
       </div>
@@ -280,12 +280,12 @@ VARIANTS = [
       <div class="card-media card-media-sq">Product</div>
       <div class="card-body d-flex flex-column">
         <p class="fs-xs fg-3 mb-1">Textiles</p>
-        <h2 class="fs-lg fw-semibold mb-2">Washed linen throw</h2>
-        <div class="d-flex align-items-center gap-2 mb-3">
+        <h2 class="fs-lg fw-semibold mb-3">Washed linen throw</h2>
+        <div class="d-flex align-items-center gap-3 mb-4">
           <span class="stars" role="img" aria-label="Rated 4.8 out of 5">{STAR}{STAR}{STAR}{STAR}{STAR}</span>
           <span class="fs-xs fg-3">4.8 (64)</span>
         </div>
-        <p class="mb-3"><span class="product-price fs-lg">&pound;120.00</span></p>
+        <p class="mb-4"><span class="product-price fs-lg">&pound;120.00</span></p>
         <button class="btn-solid theme-primary w-100 mt-auto" type="button">Add to basket</button>
       </div>
     </div>
@@ -298,12 +298,12 @@ VARIANTS = [
       </div>
       <div class="card-body d-flex flex-column">
         <p class="fs-xs fg-3 mb-1">Tableware</p>
-        <h2 class="fs-lg fw-semibold mb-2">Stoneware serving bowl</h2>
-        <div class="d-flex align-items-center gap-2 mb-3">
+        <h2 class="fs-lg fw-semibold mb-3">Stoneware serving bowl</h2>
+        <div class="d-flex align-items-center gap-3 mb-4">
           <span class="stars" role="img" aria-label="Rated 4.2 out of 5">{STAR}{STAR}{STAR}{STAR}</span>
           <span class="fs-xs fg-3">4.2 (39)</span>
         </div>
-        <p class="mb-3"><span class="product-price fs-lg fg-3">&pound;42.00</span></p>
+        <p class="mb-4"><span class="product-price fs-lg fg-3">&pound;42.00</span></p>
         <button class="btn-outline theme-secondary w-100 mt-auto" type="button" disabled>Notify me</button>
       </div>
     </div>
@@ -313,19 +313,19 @@ VARIANTS = [
     ("08-article", "Article", "Article card",
      "Editorial shape with a kicker, author row and reading time. Meta goes in the footer so cards in a row stay aligned.",
      '<div class="box"><i class="media"></i><i class="w40"></i><i class="w75"></i><i></i><div class="row2" style="align-items:center"><i class="dot" style="height:1rem;width:1rem"></i><i class="w60"></i></div></div>',
-     True, """<div class="row g-4">
+     True, """<div class="row g-5">
   <div class="md:col-6">
     <article class="card h-100">
       <div class="card-media">Cover</div>
       <div class="card-body">
-        <p class="fs-xs fg-primary text-uppercase mb-2" style="letter-spacing:.12em">Engineering</p>
-        <h2 class="fs-xl fw-semibold mb-2">The migration we did not need to do</h2>
+        <p class="fs-xs fg-primary text-uppercase mb-3" style="letter-spacing:.12em">Engineering</p>
+        <h2 class="fs-xl fw-semibold mb-3">The migration we did not need to do</h2>
         <p class="fg-2 fs-sm mb-0">
           Eight months of planning, three of execution, and a retrospective that
           concluded the original system would have been fine for another four years.
         </p>
       </div>
-      <div class="card-footer d-flex align-items-center gap-2">
+      <div class="card-footer d-flex align-items-center gap-3">
         <span class="avatar avatar-sm"><span class="avatar-initials">ML</span></span>
         <span class="fs-sm">Marcus L.</span>
         <span class="fs-xs fg-3 ms-auto">14 Jul &middot; 11 min</span>
@@ -336,14 +336,14 @@ VARIANTS = [
     <article class="card h-100">
       <div class="card-media">Cover</div>
       <div class="card-body">
-        <p class="fs-xs fg-primary text-uppercase mb-2" style="letter-spacing:.12em">Design</p>
-        <h2 class="fs-xl fw-semibold mb-2">Nobody reads the empty state, so write it anyway</h2>
+        <p class="fs-xs fg-primary text-uppercase mb-3" style="letter-spacing:.12em">Design</p>
+        <h2 class="fs-xl fw-semibold mb-3">Nobody reads the empty state, so write it anyway</h2>
         <p class="fg-2 fs-sm mb-0">
           Empty states are the only screen guaranteed to be seen by every new user,
           and they are almost always written last by whoever is left.
         </p>
       </div>
-      <div class="card-footer d-flex align-items-center gap-2">
+      <div class="card-footer d-flex align-items-center gap-3">
         <span class="avatar avatar-sm"><span class="avatar-initials">DR</span></span>
         <span class="fs-sm">Dana R.</span>
         <span class="fs-xs fg-3 ms-auto">2 Jul &middot; 6 min</span>
@@ -355,12 +355,12 @@ VARIANTS = [
     ("09-linked", "Whole-card link", "Clickable card",
      "The entire surface is clickable, but only the title is in the tab order &#8212; one link, stretched with a pseudo-element.",
      '<div class="box"><i class="w60"></i><i></i><i class="w75"></i><i class="w40"></i></div>',
-     True, """<div class="row g-4">
+     True, """<div class="row g-5">
   <div class="md:col-6">
     <div class="card card-linked h-100">
       <div class="card-body">
-        <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Documentation</p>
-        <h2 class="fs-lg fw-semibold mb-2">
+        <p class="fs-xs fg-3 text-uppercase mb-3" style="letter-spacing:.12em">Documentation</p>
+        <h2 class="fs-lg fw-semibold mb-3">
           <a class="stretched-title" href="#" style="color:inherit;text-decoration:none">Getting started with the API</a>
         </h2>
         <p class="fg-2 fs-sm mb-0">Authentication, your first request, and the three mistakes everyone makes on day one.</p>
@@ -370,8 +370,8 @@ VARIANTS = [
   <div class="md:col-6">
     <div class="card card-linked h-100">
       <div class="card-body">
-        <p class="fs-xs fg-3 text-uppercase mb-2" style="letter-spacing:.12em">Documentation</p>
-        <h2 class="fs-lg fw-semibold mb-2">
+        <p class="fs-xs fg-3 text-uppercase mb-3" style="letter-spacing:.12em">Documentation</p>
+        <h2 class="fs-lg fw-semibold mb-3">
           <a class="stretched-title" href="#" style="color:inherit;text-decoration:none">Webhooks and retries</a>
         </h2>
         <p class="fg-2 fs-sm mb-0">Delivery guarantees, signature verification and what happens when your endpoint is down.</p>
@@ -379,7 +379,7 @@ VARIANTS = [
     </div>
   </div>
 </div>
-<p class="fs-sm fg-3 mt-4 mb-0">
+<p class="fs-sm fg-3 mt-5 mb-0">
   Wrapping the whole card in an anchor would swallow any button inside it and
   read the entire card as one enormous link name. Stretching a single title link
   with <code>::after</code> keeps the accessible name short and leaves room for
@@ -390,36 +390,36 @@ VARIANTS = [
      "Cards in an auto-filling grid that reflows without breakpoint classes &#8212; <code>repeat(auto-fill, minmax())</code> doing the work.",
      '<div class="grid3"><i class="tall"></i><i class="tall"></i><i class="tall"></i><i class="tall"></i><i class="tall"></i><i class="tall"></i></div>',
      True, """<h1 class="fs-2xl fw-bold mb-1" style="letter-spacing:-.02em">Card grid</h1>
-<p class="fg-2 mb-4">No column classes. The grid decides how many fit and reflows as the window changes.</p>
+<p class="fg-2 mb-5">No column classes. The grid decides how many fit and reflows as the window changes.</p>
 <div class="card-grid">
   <div class="card"><div class="card-body">
-    <span class="badge badge-subtle theme-primary mb-3">Guide</span>
-    <h2 class="fs-lg fw-semibold mb-2">Deploying to production</h2>
+    <span class="badge badge-subtle theme-primary mb-4">Guide</span>
+    <h2 class="fs-lg fw-semibold mb-3">Deploying to production</h2>
     <p class="fg-2 fs-sm mb-0">Environments, secrets and the rollback you hope never to use.</p>
   </div></div>
   <div class="card"><div class="card-body">
-    <span class="badge badge-subtle theme-success mb-3">Tutorial</span>
-    <h2 class="fs-lg fw-semibold mb-2">Your first integration</h2>
+    <span class="badge badge-subtle theme-success mb-4">Tutorial</span>
+    <h2 class="fs-lg fw-semibold mb-3">Your first integration</h2>
     <p class="fg-2 fs-sm mb-0">Forty minutes end to end, assuming the credentials arrive on time.</p>
   </div></div>
   <div class="card"><div class="card-body">
-    <span class="badge badge-subtle theme-warning mb-3">Reference</span>
-    <h2 class="fs-lg fw-semibold mb-2">Rate limits</h2>
+    <span class="badge badge-subtle theme-warning mb-4">Reference</span>
+    <h2 class="fs-lg fw-semibold mb-3">Rate limits</h2>
     <p class="fg-2 fs-sm mb-0">What the headers mean and how to back off politely.</p>
   </div></div>
   <div class="card"><div class="card-body">
-    <span class="badge badge-subtle theme-secondary mb-3">Concept</span>
-    <h2 class="fs-lg fw-semibold mb-2">Idempotency keys</h2>
+    <span class="badge badge-subtle theme-secondary mb-4">Concept</span>
+    <h2 class="fs-lg fw-semibold mb-3">Idempotency keys</h2>
     <p class="fg-2 fs-sm mb-0">Why retrying a payment twice should only charge once.</p>
   </div></div>
   <div class="card"><div class="card-body">
-    <span class="badge badge-subtle theme-danger mb-3">Troubleshooting</span>
-    <h2 class="fs-lg fw-semibold mb-2">Common 4xx responses</h2>
+    <span class="badge badge-subtle theme-danger mb-4">Troubleshooting</span>
+    <h2 class="fs-lg fw-semibold mb-3">Common 4xx responses</h2>
     <p class="fg-2 fs-sm mb-0">Each one, what causes it, and the fix that usually works.</p>
   </div></div>
   <div class="card"><div class="card-body">
-    <span class="badge badge-subtle theme-primary mb-3">Guide</span>
-    <h2 class="fs-lg fw-semibold mb-2">Migrating from v1</h2>
+    <span class="badge badge-subtle theme-primary mb-4">Guide</span>
+    <h2 class="fs-lg fw-semibold mb-3">Migrating from v1</h2>
     <p class="fg-2 fs-sm mb-0">Breaking changes, the compatibility shim and the deprecation dates.</p>
   </div></div>
 </div>"""),
@@ -436,9 +436,9 @@ def write_variant(i, folder, nav, card, blurb, sketch, wide, body):
     html += f"""
 <div class="variant-bar">
   <a class="btn-text btn-sm" href="../index.html">&#8592; All cards</a>
-  <span class="fs-sm fw-semibold ms-2">{card}</span>
+  <span class="fs-sm fw-semibold ms-3">{card}</span>
   <span class="fs-xs fg-3 d-none md:d-inline">{i + 1} of {len(VARIANTS)}</span>
-  <div class="d-flex align-items-center gap-2 ms-auto">
+  <div class="d-flex align-items-center gap-3 ms-auto">
     <a class="btn-icon btn-sm" href="../{VARIANTS[prev_i][0]}/index.html" aria-label="Previous card">&#8249;</a>
     <a class="btn-icon btn-sm" href="../{VARIANTS[next_i][0]}/index.html" aria-label="Next card">&#8250;</a>
     {TOGGLE}
@@ -477,14 +477,14 @@ def write_index():
         desc="Ten free Bootstrap 6 card templates — content, media, horizontal, pricing, profile, metric with sparkline, product, article, whole-card link and a responsive auto-fill grid. No images to license, no build step.",
         p="")
     html += f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#cards">Skip to the cards</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#cards">Skip to the cards</a>
 
 <div class="pack-head">
   <div class="container">
-    <div class="d-flex flex-wrap align-items-start gap-3">
+    <div class="d-flex flex-wrap align-items-start gap-4">
       <div class="me-auto" style="max-width:44rem">
-        <span class="badge badge-subtle theme-primary mb-3">Bootstrap 6.0.0-alpha1</span>
-        <h1 class="fs-4xl fw-bold mb-3" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
+        <span class="badge badge-subtle theme-primary mb-4">Bootstrap 6.0.0-alpha1</span>
+        <h1 class="fs-4xl fw-bold mb-4" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
         <p class="fs-lg fg-2 mb-0">
           Ten card patterns covering what projects actually reach for &#8212; content,
           media, horizontal, pricing, profile, dashboard metrics, product, article,
@@ -503,8 +503,8 @@ def write_index():
 {chr(10).join(cards)}
     </div>
 
-    <section class="mt-9" style="max-width:46rem">
-      <h2 class="fs-2xl fw-bold mb-4" style="letter-spacing:-.02em">Using these</h2>
+    <section class="mt-12" style="max-width:46rem">
+      <h2 class="fs-2xl fw-bold mb-5" style="letter-spacing:-.02em">Using these</h2>
       <div class="prose">
         <p>Each card is a standalone page. Copy the markup out of the one you want
         and drop it in &#8212; every variant needs only Bootstrap 6&#8217;s CSS. The only
@@ -539,8 +539,8 @@ def write_index():
   </div>
 </main>
 
-<footer class="site-footer bg-2 py-6 mt-9">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+<footer class="site-footer bg-2 py-7 mt-12">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
     <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> {PACK_TITLE}. A free pack for uicookies.</p>
     <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
   </div>

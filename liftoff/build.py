@@ -105,7 +105,7 @@ def page_index():
 
   <header class="screen-head">
     {wordmark()}
-    <div class="ms-auto d-flex align-items-center gap-2">
+    <div class="ms-auto d-flex align-items-center gap-3">
       {switcher("index.html")}
       {TOGGLE}
     </div>
@@ -113,14 +113,14 @@ def page_index():
 
   <main class="screen-body">
     <div class="text-center" style="max-width:44rem">
-      <span class="badge badge-subtle theme-primary mb-4">Launching 1 March</span>
-      <h1 class="headline mb-4">Something worth the wait</h1>
-      <p class="fs-lg mb-5 fg-2">
+      <span class="badge badge-subtle theme-primary mb-5">Launching 1 March</span>
+      <h1 class="headline mb-5">Something worth the wait</h1>
+      <p class="fs-lg mb-6 fg-2">
         We are rebuilding from the ground up. Same team, same prices, considerably
         fewer things that annoy you.
       </p>
       {countdown()}
-      <div class="mt-5 mb-4">
+      <div class="mt-6 mb-5">
         {notify("fb")}
       </div>
       <p class="fs-xs fg-3 mb-0">No launch spam. One email when we go live, and that is it.</p>
@@ -151,23 +151,23 @@ def page_split():
   </div>
 
   <div class="split-panel">
-    <header class="d-flex flex-wrap align-items-center gap-3 mb-auto">
+    <header class="d-flex flex-wrap align-items-center gap-4 mb-auto">
       {wordmark()}
-      <div class="ms-auto d-flex align-items-center gap-2">
+      <div class="ms-auto d-flex align-items-center gap-3">
         {switcher("split.html")}
         {TOGGLE}
       </div>
     </header>
 
-    <main class="split-panel-body py-5">
-      <span class="badge badge-subtle theme-primary mb-4 align-self-start">Launching 1 March</span>
-      <h1 class="headline mb-4">Something worth the wait</h1>
-      <p class="fs-lg fg-2 mb-5" style="max-width:32rem">
+    <main class="split-panel-body py-6">
+      <span class="badge badge-subtle theme-primary mb-5 align-self-start">Launching 1 March</span>
+      <h1 class="headline mb-5">Something worth the wait</h1>
+      <p class="fs-lg fg-2 mb-6" style="max-width:32rem">
         We are rebuilding from the ground up. Same team, same prices, considerably
         fewer things that annoy you.
       </p>
 
-      <div class="mb-5" style="max-width:34rem">
+      <div class="mb-6" style="max-width:34rem">
         <div class="countdown justify-content-start" role="timer" aria-live="off" data-countdown="{LAUNCH}">
           <div class="count-cell"><span class="count-value" id="cdD">--</span><span class="count-label">Days</span></div>
           <div class="count-cell"><span class="count-value" id="cdH">--</span><span class="count-label">Hours</span></div>
@@ -177,14 +177,14 @@ def page_split():
       </div>
 
       <div style="max-width:28rem">
-        <div class="mb-3">
+        <div class="mb-4">
           {notify("sp", start=True)}
         </div>
         {build_bar()}
       </div>
     </main>
 
-    <footer class="d-flex flex-wrap align-items-center gap-3 mt-auto pt-4">
+    <footer class="d-flex flex-wrap align-items-center gap-4 mt-auto pt-5">
       <p class="fs-xs fg-3 mb-0">&copy; <span data-year></span> Liftoff.</p>
       <span class="ms-auto">{social()}</span>
     </footer>
@@ -206,7 +206,7 @@ def page_minimal():
 <div class="screen">
   <header class="screen-head">
     {wordmark()}
-    <div class="ms-auto d-flex align-items-center gap-2">
+    <div class="ms-auto d-flex align-items-center gap-3">
       {switcher("minimal.html")}
       {TOGGLE}
     </div>
@@ -214,14 +214,14 @@ def page_minimal():
 
   <main class="screen-body">
     <div class="text-center" style="max-width:38rem">
-      <p class="fs-xs fg-3 mb-4" style="letter-spacing:.22em;text-transform:uppercase">Liftoff &middot; 1 March 2027</p>
-      <h1 class="headline mb-4">Something worth the wait</h1>
-      <p class="fs-lg fg-2 mb-5">
+      <p class="fs-xs fg-3 mb-5" style="letter-spacing:.22em;text-transform:uppercase">Liftoff &middot; 1 March 2027</p>
+      <h1 class="headline mb-5">Something worth the wait</h1>
+      <p class="fs-lg fg-2 mb-6">
         No photography, no gradient, nothing to load. Sometimes a holding page
         should just hold.
       </p>
       {countdown()}
-      <div class="mt-5 mb-4">
+      <div class="mt-6 mb-5">
         {notify("mn")}
       </div>
       {build_bar()}

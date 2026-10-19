@@ -118,7 +118,7 @@ MARK = """<svg class="brand-glyph" width="26" height="30" viewBox="0 0 26 30" fi
 def chrome(home=True):
     p = "" if home else "index.html"
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <nav class="navbar lg:navbar-expand" aria-label="Main">
@@ -133,8 +133,8 @@ def chrome(home=True):
           <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
         </div>
-        <div class="drawer-body mb-2 lg:mb-0">
-          <ul class="nav navbar-nav ms-auto lg:gap-4">
+        <div class="drawer-body mb-3 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-5">
             <li class="nav-item"><a class="nav-link" href="{p}#times">Times</a></li>
             <li class="nav-item"><a class="nav-link" href="{p}#visiting">First visit</a></li>
             <li class="nav-item"><a class="nav-link" href="whats-on.html">What's on</a></li>
@@ -144,7 +144,7 @@ def chrome(home=True):
         </div>
       </dialog>
 
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         {TOGGLE}
         <a class="btn-solid theme-primary give-btn" href="{p}#giving">Give</a>
         <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
@@ -158,11 +158,11 @@ def chrome(home=True):
 
 
 FOOTER = """
-<footer class="site-footer section pb-5 bg-2">
+<footer class="site-footer section pb-6 bg-2">
   <div class="container">
-    <div class="row g-5">
+    <div class="row g-6">
       <div class="lg:col-5">
-        <p class="display-serif fs-2xl mb-2">Stonebridge Church</p>
+        <p class="display-serif fs-2xl mb-3">Stonebridge Church</p>
         <p class="fg-2 mb-0">
           Market Street, Stonebridge STB1 2QA<br>
           <a href="tel:+441632960117">01632 960117</a> &middot;
@@ -170,11 +170,11 @@ FOOTER = """
         </p>
       </div>
       <div class="md:col-6 lg:col-3">
-        <p class="eyebrow fs-xs fg-3 mb-3">Church office</p>
+        <p class="eyebrow fs-xs fg-3 mb-4">Church office</p>
         <p class="fg-2 mb-0">Tuesday to Friday, 9.30am&ndash;2.30pm.<br>Otherwise leave a message — we do return them.</p>
       </div>
       <div class="md:col-6 lg:col-4">
-        <p class="eyebrow fs-xs fg-3 mb-3">Safeguarding</p>
+        <p class="eyebrow fs-xs fg-3 mb-4">Safeguarding</p>
         <p class="fg-2 mb-0">
           Our safeguarding officer is Priya Raman, reachable directly on
           <a href="tel:+441632960118">01632 960118</a>. Concerns are taken seriously
@@ -183,7 +183,7 @@ FOOTER = """
       </div>
     </div>
 
-    <hr class="my-5">
+    <hr class="my-6">
 
     <p class="fs-xs fg-3 mb-0">
       &copy; <span data-year>2027</span> Stonebridge Church &mdash; a free Bootstrap 6 template.
@@ -207,7 +207,7 @@ def gathering_card(g):
     return f"""        <article class="gathering surface surface-pad lift" {gathering_attrs(day, start, mins)}>
           <p class="gathering-status" data-status hidden></p>
           <h3 class="display-serif fs-xl mb-1">{name}</h3>
-          <p class="gathering-when mb-3">{DAY_NAMES[day]}s, {human_time(start)}<span class="fg-3"> &middot; {where}</span></p>
+          <p class="gathering-when mb-4">{DAY_NAMES[day]}s, {human_time(start)}<span class="fg-3"> &middot; {where}</span></p>
           <p class="fg-2 fs-sm mb-0">{blurb}</p>
         </article>"""
 
@@ -238,9 +238,9 @@ def page_index():
 <section class="welcome-hero">
   <img class="hero-bg" src="img/hero.jpg" alt="" width="1800" height="1200" loading="eager">
   <div class="container welcome-hero-inner">
-    <p class="eyebrow fs-xs mb-3">Market Street &middot; Stonebridge</p>
-    <h1 class="display-serif hero-title mb-4">There is a place<br>for you on Sunday.</h1>
-    <p class="hero-lede fs-lg mb-5">
+    <p class="eyebrow fs-xs mb-4">Market Street &middot; Stonebridge</p>
+    <h1 class="display-serif hero-title mb-5">There is a place<br>for you on Sunday.</h1>
+    <p class="hero-lede fs-lg mb-6">
       A church in the middle of town. Three gatherings a week, a hot meal on
       Wednesdays, and no expectation whatsoever that you know what you are doing.
     </p>
@@ -250,7 +250,7 @@ def page_index():
       <p class="mb-0"><strong data-next-label></strong> <span data-next-name></span></p>
     </div>
 
-    <div class="d-flex flex-wrap gap-3">
+    <div class="d-flex flex-wrap gap-4">
       <a class="btn-solid theme-primary btn-lg" href="#visiting">Coming for the first time</a>
       <a class="btn-outline theme-secondary btn-lg" href="whats-on.html">Everything that's on</a>
     </div>
@@ -262,9 +262,9 @@ def page_index():
   <!-- Times -->
   <section class="section" id="times">
     <div class="container">
-      <div class="row g-5 mb-5 align-items-end">
+      <div class="row g-6 mb-6 align-items-end">
         <div class="lg:col-7">
-          <p class="eyebrow-rule mb-3">When we meet</p>
+          <p class="eyebrow-rule mb-4">When we meet</p>
           <h2 class="display-serif section-title fs-4xl mb-0">Four gatherings, every week, whatever the weather</h2>
         </div>
         <div class="lg:col-5">
@@ -279,7 +279,7 @@ def page_index():
 """ + cards + """
       </div>
 
-      <p class="fs-sm fg-3 mt-4 mb-0">
+      <p class="fs-sm fg-3 mt-5 mb-0">
         Times shown against your own clock. Everything happens at Market Street
         unless it says otherwise.
       </p>
@@ -289,21 +289,21 @@ def page_index():
   <!-- Welcome -->
   <section class="section bg-2">
     <div class="container">
-      <div class="row g-6 align-items-center">
+      <div class="row g-7 align-items-center">
         <div class="lg:col-6">
           <div class="ph ph-3x4 framed"><img src="img/welcome.jpg" alt="People talking over coffee after a service" width="700" height="933" loading="lazy"></div>
         </div>
         <div class="lg:col-6">
-          <p class="eyebrow-rule mb-3">Who we are</p>
-          <h2 class="display-serif section-title fs-4xl mb-4">A fairly ordinary church, on purpose</h2>
-          <p class="fg-2 mb-4">
+          <p class="eyebrow-rule mb-4">Who we are</p>
+          <h2 class="display-serif section-title fs-4xl mb-5">A fairly ordinary church, on purpose</h2>
+          <p class="fg-2 mb-5">
             There has been a church on this corner since 1847, and a bridge over
             the beck for a good while before that. About two hundred and forty of
             us come on a normal Sunday — students, families, people who have been
             here sixty years, and a steady handful who are quietly working out
             what they think.
           </p>
-          <p class="fg-2 mb-4">
+          <p class="fg-2 mb-5">
             We are not a slick operation. The heating is temperamental, the coffee
             has improved, and somebody will almost certainly say hello to you
             twice by accident.
@@ -323,11 +323,11 @@ def page_index():
   <!-- First visit -->
   <section class="section" id="visiting">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-5">
-          <p class="eyebrow-rule mb-3">First time here</p>
-          <h2 class="display-serif section-title fs-4xl mb-4">The questions people are too polite to ask</h2>
-          <p class="fg-2 mb-4">
+          <p class="eyebrow-rule mb-4">First time here</p>
+          <h2 class="display-serif section-title fs-4xl mb-5">The questions people are too polite to ask</h2>
+          <p class="fg-2 mb-5">
             Walking into a church you have never been to is genuinely awkward.
             Here is everything we would want to know first, answered plainly.
           </p>
@@ -377,9 +377,9 @@ def page_index():
   <!-- Life -->
   <section class="section bg-2" id="life">
     <div class="container">
-      <div class="row g-5 mb-5 align-items-end">
+      <div class="row g-6 mb-6 align-items-end">
         <div class="lg:col-7">
-          <p class="eyebrow-rule mb-3">The rest of the week</p>
+          <p class="eyebrow-rule mb-4">The rest of the week</p>
           <h2 class="display-serif section-title fs-4xl mb-0">Most of what we do happens Monday to Saturday</h2>
         </div>
         <div class="lg:col-5">
@@ -390,12 +390,12 @@ def page_index():
         </div>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-5">
         <div class="md:col-6 lg:col-4">
           <article class="life-card surface lift">
             <div class="ph ph-1x1"><img src="img/life-kids.jpg" alt="Children at a craft table" width="600" height="600" loading="lazy"></div>
             <div class="surface-pad">
-              <h3 class="display-serif fs-lg mb-2">Children &amp; youth</h3>
+              <h3 class="display-serif fs-lg mb-3">Children &amp; youth</h3>
               <p class="fg-2 fs-sm mb-0">Groups from crawling to sixth form: Little Steps on Wednesdays, Sunday groups by age, and youth on Friday nights.</p>
             </div>
           </article>
@@ -404,7 +404,7 @@ def page_index():
           <article class="life-card surface lift">
             <div class="ph ph-1x1"><img src="img/life-pantry.jpg" alt="Volunteers packing food boxes" width="600" height="600" loading="lazy"></div>
             <div class="surface-pad">
-              <h3 class="display-serif fs-lg mb-2">Community pantry</h3>
+              <h3 class="display-serif fs-lg mb-3">Community pantry</h3>
               <p class="fg-2 fs-sm mb-0">Tuesdays, 10am to noon. Food, toiletries and a cup of tea. No referral, no questions, no means test.</p>
             </div>
           </article>
@@ -413,26 +413,26 @@ def page_index():
           <article class="life-card surface lift">
             <div class="ph ph-1x1"><img src="img/life-choir.jpg" alt="A choir rehearsing" width="600" height="600" loading="lazy"></div>
             <div class="surface-pad">
-              <h3 class="display-serif fs-lg mb-2">Music &amp; choir</h3>
+              <h3 class="display-serif fs-lg mb-3">Music &amp; choir</h3>
               <p class="fg-2 fs-sm mb-0">Thursday rehearsals for Sunday and the carol service. You do not need to read music, only to turn up twice in a row.</p>
             </div>
           </article>
         </div>
         <div class="md:col-6 lg:col-4">
           <article class="life-card surface lift surface-pad">
-            <h3 class="display-serif fs-lg mb-2">The Wednesday Table</h3>
+            <h3 class="display-serif fs-lg mb-3">The Wednesday Table</h3>
             <p class="fg-2 fs-sm mb-0">A free hot meal at six for anybody at all, then twenty minutes of something worth chewing over. Around ninety people most weeks.</p>
           </article>
         </div>
         <div class="md:col-6 lg:col-4">
           <article class="life-card surface lift surface-pad">
-            <h3 class="display-serif fs-lg mb-2">Home groups</h3>
+            <h3 class="display-serif fs-lg mb-3">Home groups</h3>
             <p class="fg-2 fs-sm mb-0">Eleven groups across town meeting midweek in living rooms. The office will point you at whichever one is nearest.</p>
           </article>
         </div>
         <div class="md:col-6 lg:col-4">
           <article class="life-card surface lift surface-pad">
-            <h3 class="display-serif fs-lg mb-2">Bereavement café</h3>
+            <h3 class="display-serif fs-lg mb-3">Bereavement café</h3>
             <p class="fg-2 fs-sm mb-0">Tuesday afternoons, for anyone who has lost someone — this year or thirty years ago. Tea, cake, and no pressure to speak.</p>
           </article>
         </div>
@@ -443,9 +443,9 @@ def page_index():
   <!-- Talks -->
   <section class="section" id="talks">
     <div class="container">
-      <div class="row g-5 mb-5 align-items-end">
+      <div class="row g-6 mb-6 align-items-end">
         <div class="lg:col-7">
-          <p class="eyebrow-rule mb-3">Talks</p>
+          <p class="eyebrow-rule mb-4">Talks</p>
           <h2 class="display-serif section-title fs-4xl mb-0">Every Sunday talk, recorded and kept</h2>
         </div>
         <div class="lg:col-5">
@@ -464,23 +464,23 @@ def page_index():
       <ul class="talk-list" data-talk-list>
 """ + talks + """
       </ul>
-      <p class="fs-sm fg-3 mt-4 mb-0" data-talk-empty hidden>Nothing in that series yet.</p>
+      <p class="fs-sm fg-3 mt-5 mb-0" data-talk-empty hidden>Nothing in that series yet.</p>
     </div>
   </section>
 
   <!-- Giving -->
   <section class="section bg-2" id="giving">
     <div class="container">
-      <div class="row g-6 align-items-center">
+      <div class="row g-7 align-items-center">
         <div class="lg:col-6">
-          <p class="eyebrow-rule mb-3">Giving</p>
-          <h2 class="display-serif section-title fs-4xl mb-4">Where the money actually goes</h2>
-          <p class="fg-2 mb-4">
+          <p class="eyebrow-rule mb-4">Giving</p>
+          <h2 class="display-serif section-title fs-4xl mb-5">Where the money actually goes</h2>
+          <p class="fg-2 mb-5">
             We are funded almost entirely by people who come here. There is no
             collection plate passed down the rows on a Sunday, because being put
             on the spot in front of strangers is a rotten way to be asked.
           </p>
-          <p class="fg-2 mb-4">
+          <p class="fg-2 mb-5">
             If you are visiting, please do not give. Genuinely — we would rather
             you had a coffee on us.
           </p>
@@ -509,7 +509,7 @@ def page_index():
               <div class="split-bar" style="--pct:5%"></div>
               <p class="split-label mb-0"><span>Children &amp; youth</span><strong>5%</strong></p>
             </div>
-            <p class="fs-xs fg-3 mt-4 mb-0">Year to December 2026. Full accounts are on the noticeboard and available on request.</p>
+            <p class="fs-xs fg-3 mt-5 mb-0">Year to December 2026. Full accounts are on the noticeboard and available on request.</p>
           </div>
         </div>
       </div>
@@ -519,12 +519,12 @@ def page_index():
   <!-- Find us -->
   <section class="section" id="find-us">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-6">
-          <p class="eyebrow-rule mb-3">Find us</p>
-          <h2 class="display-serif section-title fs-4xl mb-4">On the corner of Market Street and Beck Lane</h2>
+          <p class="eyebrow-rule mb-4">Find us</p>
+          <h2 class="display-serif section-title fs-4xl mb-5">On the corner of Market Street and Beck Lane</h2>
 
-          <div class="ph ph-16x9 framed mb-4"><img src="img/building.jpg" alt="The church seen from Market Street" width="900" height="506" loading="lazy"></div>
+          <div class="ph ph-16x9 framed mb-5"><img src="img/building.jpg" alt="The church seen from Market Street" width="900" height="506" loading="lazy"></div>
 
           <dl class="facts">
             <div><dt>Address</dt><dd>Market Street, Stonebridge STB1 2QA</dd></div>
@@ -536,14 +536,14 @@ def page_index():
 
         <div class="lg:col-6">
           <div class="surface surface-pad">
-            <h3 class="display-serif fs-xl mb-2">Send us a message</h3>
-            <p class="fg-2 fs-sm mb-4">
+            <h3 class="display-serif fs-xl mb-3">Send us a message</h3>
+            <p class="fg-2 fs-sm mb-5">
               It reaches the office, and a person reads it. If it is urgent or
               about a bereavement, please ring instead — <a href="tel:+441632960117">01632 960117</a>.
             </p>
 
             <form id="contactForm" data-demo-form novalidate>
-              <div class="row g-3">
+              <div class="row g-4">
                 <div class="md:col-6">
                   <label class="form-label" for="cfName">Your name</label>
                   <input class="form-control" type="text" id="cfName" name="name" required>
@@ -620,7 +620,7 @@ def page_whats_on():
           </div>
           <div>
             <h3 class="display-serif fs-xl mb-1">{title} <span class="event-flag" data-passed hidden>Passed</span></h3>
-            <p class="fg-3 fs-sm mb-2">{human_time(when[11:16])} &middot; {where}</p>
+            <p class="fg-3 fs-sm mb-3">{human_time(when[11:16])} &middot; {where}</p>
             <p class="fg-2 fs-sm mb-0">{blurb}</p>
           </div>
         </li>""" for when, title, where, blurb in EVENTS)
@@ -638,8 +638,8 @@ def page_whats_on():
     ) + chrome(home=False) + f"""
 <section class="page-head">
   <div class="container">
-    <p class="eyebrow fs-xs mb-3"><a href="index.html">Stonebridge</a> &middot; What's on</p>
-    <h1 class="display-serif hero-title mb-4">The whole week,<br>as it actually runs</h1>
+    <p class="eyebrow fs-xs mb-4"><a href="index.html">Stonebridge</a> &middot; What's on</p>
+    <h1 class="display-serif hero-title mb-5">The whole week,<br>as it actually runs</h1>
     <p class="hero-lede fs-lg mb-0">
       Everything below happens every week without needing to be announced. Dated
       one-offs are further down, and anything that has already happened says so.
@@ -659,9 +659,9 @@ def page_whats_on():
   <!-- Dated events -->
   <section class="section bg-2" id="events">
     <div class="container">
-      <div class="row g-5 mb-5 align-items-end">
+      <div class="row g-6 mb-6 align-items-end">
         <div class="lg:col-7">
-          <p class="eyebrow-rule mb-3">Coming up</p>
+          <p class="eyebrow-rule mb-4">Coming up</p>
           <h2 class="display-serif section-title fs-4xl mb-0">One-offs, festivals and the fête</h2>
         </div>
         <div class="lg:col-5">
@@ -681,9 +681,9 @@ def page_whats_on():
   <!-- Room hire -->
   <section class="section" id="hire">
     <div class="container">
-      <div class="row g-5 mb-5 align-items-end">
+      <div class="row g-6 mb-6 align-items-end">
         <div class="lg:col-7">
-          <p class="eyebrow-rule mb-3">Room hire</p>
+          <p class="eyebrow-rule mb-4">Room hire</p>
           <h2 class="display-serif section-title fs-4xl mb-0">The building is for the town, not just for Sundays</h2>
         </div>
         <div class="lg:col-5">
@@ -711,7 +711,7 @@ def page_whats_on():
         </table>
       </div>
 
-      <p class="fs-sm fg-2 mt-4 mb-0">
+      <p class="fs-sm fg-2 mt-5 mb-0">
         To book anything, ring the office on <a href="tel:+441632960117">01632 960117</a>
         or email <a href="mailto:office@stonebridge.example">office@stonebridge.example</a>.
       </p>

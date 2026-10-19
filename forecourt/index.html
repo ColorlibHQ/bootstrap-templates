@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <nav class="navbar lg:navbar-expand" aria-label="Main">
@@ -25,8 +25,8 @@
           <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
         </div>
-        <div class="drawer-body mb-2 lg:mb-0">
-          <ul class="nav navbar-nav ms-auto lg:gap-3">
+        <div class="drawer-body mb-3 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-4">
             <li class="nav-item"><a class="nav-link" href="#stock">Used cars</a></li>
             <li class="nav-item"><a class="nav-link" href="#finance">Finance</a></li>
             <li class="nav-item"><a class="nav-link" href="#partex">Part exchange</a></li>
@@ -35,7 +35,7 @@
         </div>
       </dialog>
 
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
   <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
   <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
@@ -54,9 +54,9 @@
   <div class="container">
     <div class="row">
       <div class="lg:col-7">
-        <p class="fs-sm fg-primary mb-3" style="letter-spacing:.14em;text-transform:uppercase">218 cars in stock</p>
-        <h1 class="showroom-title mb-4">The price you see is the price you pay</h1>
-        <p class="fs-lg fg-2 mb-5" style="max-width:34rem">
+        <p class="fs-sm fg-primary mb-4" style="letter-spacing:.14em;text-transform:uppercase">218 cars in stock</p>
+        <h1 class="showroom-title mb-5">The price you see is the price you pay</h1>
+        <p class="fs-lg fg-2 mb-6" style="max-width:34rem">
           No admin fee, no delivery fee, no "preparation" line appearing at
           signing. Every car HPI-checked and priced against the market weekly.
         </p>
@@ -103,7 +103,7 @@
   <!-- Stock -->
   <section class="section" id="stock">
     <div class="container">
-      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-4 mb-5">
         <div>
           <h2 class="fs-3xl fw-bold mb-1" style="letter-spacing:-.03em">Latest arrivals</h2>
           <p class="fg-3 fs-sm mb-0">Monthly figures assume 10% deposit over 48 months at 9.9% APR.</p>
@@ -111,7 +111,7 @@
         <a class="btn-outline theme-secondary" href="#stock">View all 218</a>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-5">
         <div class="sm:col-6 lg:col-4">
           <a class="car" href="vehicle.html">
             <div class="car-media">
@@ -233,10 +233,10 @@
   <!-- Finance calculator -->
   <section class="section bg-2" id="finance">
     <div class="container">
-      <div class="row g-6 align-items-center">
+      <div class="row g-7 align-items-center">
         <div class="lg:col-5">
-          <h2 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.03em">What it actually costs</h2>
-          <p class="fg-2 mb-4">
+          <h2 class="fs-3xl fw-bold mb-4" style="letter-spacing:-.03em">What it actually costs</h2>
+          <p class="fg-2 mb-5">
             Move the sliders and every monthly figure on this page updates with
             them — including the cards above. A calculator that does not change
             the listings is decoration.
@@ -250,9 +250,9 @@
 
         <div class="lg:col-7">
           <div class="calc">
-            <div class="row g-4">
+            <div class="row g-5">
               <div class="md:col-7">
-                <div class="mb-4">
+                <div class="mb-5">
                   <div class="d-flex justify-content-between mb-1">
                     <label class="form-label mb-0" for="cDep">Deposit</label>
                     <strong id="cDepOut">10%</strong>
@@ -262,7 +262,7 @@
                   </div>
                 </div>
 
-                <div class="mb-4">
+                <div class="mb-5">
                   <div class="d-flex justify-content-between mb-1">
                     <label class="form-label mb-0" for="cTerm">Term</label>
                     <strong id="cTermOut">48 months</strong>
@@ -285,11 +285,11 @@
 
               <div class="md:col-5">
                 <p class="fs-xs fg-3 mb-1" style="letter-spacing:.12em;text-transform:uppercase">BMW 3 Series, &pound;24,990</p>
-                <p class="calc-figure mb-4" id="cMonthly" data-cash="24990">&pound;654<span class="fs-sm fg-3 fw-normal">/mo</span></p>
+                <p class="calc-figure mb-5" id="cMonthly" data-cash="24990">&pound;654<span class="fs-sm fg-3 fw-normal">/mo</span></p>
                 <div class="calc-row"><span class="fg-3 fs-sm">Deposit</span><span class="fs-sm" id="cDepAmt">&pound;2,499</span></div>
                 <div class="calc-row"><span class="fg-3 fs-sm">Amount financed</span><span class="fs-sm" id="cFin">&pound;22,491</span></div>
                 <div class="calc-row"><span class="fg-3 fs-sm">Total payable</span><span class="fs-sm" id="cTotal">&pound;31,388</span></div>
-                <a class="btn-solid theme-primary w-100 mt-4" href="vehicle.html">See this car</a>
+                <a class="btn-solid theme-primary w-100 mt-5" href="vehicle.html">See this car</a>
               </div>
             </div>
           </div>
@@ -301,10 +301,10 @@
   <!-- Part exchange -->
   <section class="section" id="partex">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-5">
-          <h2 class="fs-3xl fw-bold mb-3" style="letter-spacing:-.03em">Part exchange</h2>
-          <p class="fg-2 mb-4">
+          <h2 class="fs-3xl fw-bold mb-4" style="letter-spacing:-.03em">Part exchange</h2>
+          <p class="fg-2 mb-5">
             Give us the registration and we will come back with a figure inside
             two hours during opening times. If we cannot beat the online buyers
             we will tell you that too.
@@ -317,7 +317,7 @@
         <div class="lg:col-7">
           <div class="calc">
             <form data-demo-form data-bs-validate novalidate>
-              <div class="row g-3">
+              <div class="row g-4">
                 <div class="md:col-6">
                   <div class="form-field">
                     <label class="form-label" for="pxReg">Registration</label>
@@ -371,36 +371,36 @@
   <!-- Branches -->
   <section class="section bg-2" id="branches">
     <div class="container">
-      <h2 class="fs-3xl fw-bold mb-5" style="letter-spacing:-.03em">Three branches</h2>
-      <div class="row g-4">
+      <h2 class="fs-3xl fw-bold mb-6" style="letter-spacing:-.03em">Three branches</h2>
+      <div class="row g-5">
         <div class="md:col-4">
           <div class="branch">
             <p class="fw-semibold mb-1">Leeds</p>
-            <p class="fg-3 fs-sm mb-3">Kirkstall Road, LS4 2AZ</p>
+            <p class="fg-3 fs-sm mb-4">Kirkstall Road, LS4 2AZ</p>
             <div class="spec-row"><span class="fg-3 fs-sm">Mon — Fri</span><span class="fs-sm">08:30 — 18:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Saturday</span><span class="fs-sm">09:00 — 17:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Sunday</span><span class="fs-sm">11:00 — 16:00</span></div>
-            <p class="fs-sm mt-3 mb-0"><a href="tel:01138000000">0113 800 0000</a></p>
+            <p class="fs-sm mt-4 mb-0"><a href="tel:01138000000">0113 800 0000</a></p>
           </div>
         </div>
         <div class="md:col-4">
           <div class="branch">
             <p class="fw-semibold mb-1">Bradford</p>
-            <p class="fg-3 fs-sm mb-3">Canal Road, BD1 4SG</p>
+            <p class="fg-3 fs-sm mb-4">Canal Road, BD1 4SG</p>
             <div class="spec-row"><span class="fg-3 fs-sm">Mon — Fri</span><span class="fs-sm">08:30 — 18:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Saturday</span><span class="fs-sm">09:00 — 17:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Sunday</span><span class="fs-sm">Closed</span></div>
-            <p class="fs-sm mt-3 mb-0"><a href="tel:01274000000">01274 000 000</a></p>
+            <p class="fs-sm mt-4 mb-0"><a href="tel:01274000000">01274 000 000</a></p>
           </div>
         </div>
         <div class="md:col-4">
           <div class="branch">
             <p class="fw-semibold mb-1">Wakefield</p>
-            <p class="fg-3 fs-sm mb-3">Denby Dale Road, WF2 7AW</p>
+            <p class="fg-3 fs-sm mb-4">Denby Dale Road, WF2 7AW</p>
             <div class="spec-row"><span class="fg-3 fs-sm">Mon — Fri</span><span class="fs-sm">09:00 — 18:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Saturday</span><span class="fs-sm">09:00 — 17:00</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Sunday</span><span class="fs-sm">11:00 — 16:00</span></div>
-            <p class="fs-sm mt-3 mb-0"><a href="tel:01924000000">01924 000 000</a></p>
+            <p class="fs-sm mt-4 mb-0"><a href="tel:01924000000">01924 000 000</a></p>
           </div>
         </div>
       </div>
@@ -409,37 +409,37 @@
 
 </main>
 
-<footer class="site-footer section pb-5 bg-2">
+<footer class="site-footer section pb-6 bg-2">
   <div class="container">
-    <div class="row g-5">
+    <div class="row g-6">
       <div class="md:col-4">
-        <p class="fw-bold fs-lg mb-3" style="letter-spacing:-.02em">Forecourt</p>
+        <p class="fw-bold fs-lg mb-4" style="letter-spacing:-.02em">Forecourt</p>
         <p class="fg-3 fs-sm mb-0">Three branches across West Yorkshire. Every car HPI-checked, every price the price.</p>
       </div>
       <div class="md:col-2">
-        <p class="fw-semibold fs-sm mb-3">Buying</p>
+        <p class="fw-semibold fs-sm mb-4">Buying</p>
         <ul class="list-unstyled fs-sm fg-3 mb-0">
-          <li class="mb-2"><a href="index.html#stock">Used cars</a></li>
-          <li class="mb-2"><a href="vehicle.html">Example listing</a></li>
-          <li class="mb-2"><a href="index.html#finance">Finance</a></li>
+          <li class="mb-3"><a href="index.html#stock">Used cars</a></li>
+          <li class="mb-3"><a href="vehicle.html">Example listing</a></li>
+          <li class="mb-3"><a href="index.html#finance">Finance</a></li>
         </ul>
       </div>
       <div class="md:col-2">
-        <p class="fw-semibold fs-sm mb-3">Selling</p>
+        <p class="fw-semibold fs-sm mb-4">Selling</p>
         <ul class="list-unstyled fs-sm fg-3 mb-0">
-          <li class="mb-2"><a href="index.html#partex">Part exchange</a></li>
-          <li class="mb-2"><a href="index.html#branches">Branches</a></li>
+          <li class="mb-3"><a href="index.html#partex">Part exchange</a></li>
+          <li class="mb-3"><a href="index.html#branches">Branches</a></li>
         </ul>
       </div>
       <div class="md:col-4">
-        <p class="fw-semibold fs-sm mb-3">Regulatory</p>
+        <p class="fw-semibold fs-sm mb-4">Regulatory</p>
         <p class="fs-xs fg-3 mb-0">
           Forecourt Motor Group is authorised and regulated by the Financial Conduct Authority.
           Finance subject to status. Figures shown are illustrative flat-rate estimates, not a quotation.
         </p>
       </div>
     </div>
-    <hr class="my-5">
+    <hr class="my-6">
     <p class="fs-xs fg-3 mb-0">&copy; <span data-year></span> Forecourt. A free Bootstrap 6 template — the dealership is fictional.</p>
   </div>
 </footer>

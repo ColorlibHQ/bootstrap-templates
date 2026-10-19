@@ -77,10 +77,10 @@ VARIANTS = [
      False, """<div class="demo-frame">
   <nav class="navbar lg:navbar-expand" aria-label="Example">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="#"><span class="brand-mark" aria-hidden="true">N</span> Northwind</a>
+      <a class="navbar-brand d-flex align-items-center gap-3 fw-semibold" href="#"><span class="brand-mark" aria-hidden="true">N</span> Northwind</a>
       <dialog class="drawer drawer-end" tabindex="-1" id="d1" aria-labelledby="d1l">
         <div class="drawer-header"><h5 class="drawer-title" id="d1l">Menu</h5><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button></div>
-        <div class="drawer-body mb-2 lg:mb-0">
+        <div class="drawer-body mb-3 lg:mb-0">
           <ul class="nav navbar-nav me-auto">
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Product</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
@@ -89,7 +89,7 @@ VARIANTS = [
           </ul>
         </div>
       </dialog>
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         <a class="btn-text d-none md:d-inline-flex" href="#">Sign in</a>
         <button class="btn-solid theme-primary" type="button">Start free</button>
         <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#d1" aria-controls="d1" aria-label="Open navigation"><span class="navbar-toggler-icon" aria-hidden="true"></span></button>
@@ -107,7 +107,7 @@ VARIANTS = [
   <nav class="navbar lg:navbar-expand" aria-label="Example">
     <div class="container-fluid">
       <a class="navbar-brand fw-semibold" href="#">Kestrel</a>
-      <ul class="nav navbar-nav ms-4 me-auto d-none lg:d-flex">
+      <ul class="nav navbar-nav ms-5 me-auto d-none lg:d-flex">
         <li class="nav-item">
           <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">Product
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg>
@@ -126,7 +126,7 @@ VARIANTS = [
           </div>
         </li>
       </ul>
-      <div class="d-flex gap-2 ms-auto">
+      <div class="d-flex gap-3 ms-auto">
         <button class="btn-icon" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Account"><span class="avatar avatar-sm"><span class="avatar-initials">PN</span></span></button>
         <div class="menu"><a class="menu-item" href="#">Profile</a><a class="menu-item" href="#">Preferences</a><hr class="menu-divider"><a class="menu-item" href="#">Sign out</a></div>
       </div>
@@ -140,7 +140,7 @@ VARIANTS = [
      "New in v6, no equivalent in Bootstrap 5. Items that do not fit fold into a menu automatically as the viewport narrows.",
      '<div class="row2"><i></i><i></i><i></i><i></i><i class="w40"></i></div><i class="tall"></i>',
      False, """<div class="demo-frame">
-  <div class="p-3">
+  <div class="p-4">
     <div class="nav-overflow" data-bs-toggle="nav-overflow">
     <ul class="nav nav-pills">
       <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Overview</a></li>
@@ -162,18 +162,18 @@ VARIANTS = [
     ("04-tabs", "Tabs", "Tabs and pills",
      "Tab panels with fade transitions, plus the pill variant. Markup and the JS API are unchanged from v5.",
      '<div class="row2"><i></i><i></i><i></i></div><i class="tall" style="min-height:3rem"></i><i class="w75"></i>',
-     False, """<div class="demo-frame p-3">
+     False, """<div class="demo-frame p-4">
   <ul class="nav nav-tabs" id="t1" role="tablist">
     <li class="nav-item" role="presentation"><button class="nav-link active" id="t1a" data-bs-toggle="tab" data-bs-target="#t1ap" type="button" role="tab" aria-controls="t1ap" aria-selected="true">Engineering</button></li>
     <li class="nav-item" role="presentation"><button class="nav-link" id="t1b" data-bs-toggle="tab" data-bs-target="#t1bp" type="button" role="tab" aria-controls="t1bp" aria-selected="false">Product</button></li>
     <li class="nav-item" role="presentation"><button class="nav-link" id="t1c" data-bs-toggle="tab" data-bs-target="#t1cp" type="button" role="tab" aria-controls="t1cp" aria-selected="false">Design</button></li>
   </ul>
-  <div class="tab-content pt-4">
+  <div class="tab-content pt-5">
     <div class="tab-pane fade show active" id="t1ap" role="tabpanel" aria-labelledby="t1a" tabindex="0"><p class="fg-2 mb-0">Cycle time, review latency and carryover, measured from repository events rather than board columns.</p></div>
     <div class="tab-pane fade" id="t1bp" role="tabpanel" aria-labelledby="t1b" tabindex="0"><p class="fg-2 mb-0">Specs link to the work that implements them, so a closed ticket updates the doc describing it.</p></div>
     <div class="tab-pane fade" id="t1cp" role="tabpanel" aria-labelledby="t1c" tabindex="0"><p class="fg-2 mb-0">Frames attach to initiatives and version alongside the release they ship in.</p></div>
   </div>
-  <hr class="my-4">
+  <hr class="my-5">
   <ul class="nav nav-pills">
     <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">All</a></li>
     <li class="nav-item"><a class="nav-link" href="#">Open</a></li>
@@ -189,15 +189,15 @@ VARIANTS = [
      False, """<div class="demo-frame">
   <div class="rail-demo">
     <aside class="rail-side">
-      <p class="fw-semibold fs-sm mb-3">Workspace</p>
+      <p class="fw-semibold fs-sm mb-4">Workspace</p>
       <ul class="nav">
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Overview</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Roadmap</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Releases</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Documents</a></li>
       </ul>
-      <hr class="my-3">
-      <p class="fw-semibold fs-sm mb-3">Account</p>
+      <hr class="my-4">
+      <p class="fw-semibold fs-sm mb-4">Account</p>
       <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="#">Members</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Billing</a></li>
@@ -213,13 +213,13 @@ VARIANTS = [
      "Editorial masthead: brand centred with the navigation split either side. Common on magazines and portfolios.",
      '<div class="row2"><i class="w40"></i><i class="w60"></i><i class="w40"></i></div><i class="tall"></i>',
      False, """<div class="demo-frame">
-  <div class="p-3" style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem">
-    <ul class="nav gap-3" style="flex-direction:row">
+  <div class="p-4" style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem">
+    <ul class="nav gap-4" style="flex-direction:row">
       <li class="nav-item"><a class="nav-link" href="#">Work</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Series</a></li>
     </ul>
     <a class="fw-semibold text-decoration-none" href="#" style="letter-spacing:.26em;text-transform:uppercase;color:inherit;padding-inline-start:.26em">Aperture</a>
-    <ul class="nav gap-3 justify-content-end" style="flex-direction:row">
+    <ul class="nav gap-4 justify-content-end" style="flex-direction:row">
       <li class="nav-item"><a class="nav-link" href="#">About</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
     </ul>
@@ -231,8 +231,8 @@ VARIANTS = [
     ("07-crumbs", "Breadcrumbs", "Breadcrumbs and pagination",
      "Both changed in v6: links take .breadcrumb-link, and separators are real .breadcrumb-divider elements rather than ::before pseudo-elements.",
      '<div class="row2"><i class="w40"></i><i class="w40"></i><i class="w40"></i></div><i class="tall"></i><div class="row2"><i></i><i></i><i></i></div>',
-     False, """<div class="demo-frame p-4">
-  <nav aria-label="breadcrumb" class="mb-4">
+     False, """<div class="demo-frame p-5">
+  <nav aria-label="breadcrumb" class="mb-5">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
       <li class="breadcrumb-divider">/</li>
@@ -243,7 +243,7 @@ VARIANTS = [
       <li class="breadcrumb-item" aria-current="page"><a class="breadcrumb-link active" href="#">v2.4.0</a></li>
     </ol>
   </nav>
-  <div class="fake-page rounded-4 mb-4"><div class="fake-line" style="width:60%"></div><div class="fake-line" style="width:45%"></div></div>
+  <div class="fake-page rounded-4 mb-5"><div class="fake-line" style="width:60%"></div><div class="fake-line" style="width:45%"></div></div>
   <nav aria-label="Pages">
     <ul class="pagination mb-0">
       <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -262,7 +262,7 @@ VARIANTS = [
      False, """<div class="demo-frame">
   <div class="rail-demo">
     <aside class="rail-side">
-      <p class="fw-semibold fs-sm mb-3">On this page</p>
+      <p class="fw-semibold fs-sm mb-4">On this page</p>
       <nav class="nav" id="spyNav">
         <a class="nav-link" href="#sp1">Introduction</a>
         <a class="nav-link" href="#sp2">Getting started</a>
@@ -272,14 +272,14 @@ VARIANTS = [
     </aside>
     <div data-bs-spy="scroll" data-bs-target="#spyNav" data-bs-top-margin="10%" data-bs-smooth-scroll="true"
          style="height:22rem;overflow-y:auto;padding:1.5rem">
-      <h3 id="sp1" class="fs-lg fw-semibold mb-2">Introduction</h3>
+      <h3 id="sp1" class="fs-lg fw-semibold mb-3">Introduction</h3>
       <p class="fg-2">Scroll this panel and watch the rail on the left follow. Detection is driven by an activation line rather than scroll-position polling, so the highlighted item is the one you are actually reading.</p>
-      <p class="fg-2 mb-5">Because it uses IntersectionObserver there is no scroll listener at all.</p>
-      <h3 id="sp2" class="fs-lg fw-semibold mb-2">Getting started</h3>
-      <p class="fg-2 mb-5">Put <code>data-bs-spy=&quot;scroll&quot;</code> on the scroll container and point <code>data-bs-target</code> at a nav. Only <code>.nav-link</code> elements are activated &#8212; a custom table of contents needs that class or nothing highlights.</p>
-      <h3 id="sp3" class="fs-lg fw-semibold mb-2">Configuration</h3>
-      <p class="fg-2 mb-5">The deprecated <code>offset</code> and <code>method</code> options were removed. Use <code>top-margin</code> (default 12%) to position the activation line &#8212; for example <code>96px</code> to sit below a sticky header.</p>
-      <h3 id="sp4" class="fs-lg fw-semibold mb-2">Troubleshooting</h3>
+      <p class="fg-2 mb-6">Because it uses IntersectionObserver there is no scroll listener at all.</p>
+      <h3 id="sp2" class="fs-lg fw-semibold mb-3">Getting started</h3>
+      <p class="fg-2 mb-6">Put <code>data-bs-spy=&quot;scroll&quot;</code> on the scroll container and point <code>data-bs-target</code> at a nav. Only <code>.nav-link</code> elements are activated &#8212; a custom table of contents needs that class or nothing highlights.</p>
+      <h3 id="sp3" class="fs-lg fw-semibold mb-3">Configuration</h3>
+      <p class="fg-2 mb-6">The deprecated <code>offset</code> and <code>method</code> options were removed. Use <code>top-margin</code> (default 12%) to position the activation line &#8212; for example <code>96px</code> to sit below a sticky header.</p>
+      <h3 id="sp4" class="fs-lg fw-semibold mb-3">Troubleshooting</h3>
       <p class="fg-2 mb-0">With <code>smooth-scroll</code> on, clicking a link restores the URL hash and moves focus to the target once the scroll settles, which keyboard and screen-reader users need.</p>
     </div>
   </div>
@@ -298,9 +298,9 @@ def write_variant(i, folder, nav, card, blurb, sketch, wide, body):
     html += f"""
 <div class="variant-bar">
   <a class="btn-text btn-sm" href="../index.html">&#8592; All forms</a>
-  <span class="fs-sm fw-semibold ms-2">{card}</span>
+  <span class="fs-sm fw-semibold ms-3">{card}</span>
   <span class="fs-xs fg-3 d-none md:d-inline">{i + 1} of {len(VARIANTS)}</span>
-  <div class="d-flex align-items-center gap-2 ms-auto">
+  <div class="d-flex align-items-center gap-3 ms-auto">
     <a class="btn-icon btn-sm" href="../{VARIANTS[prev_i][0]}/index.html" aria-label="Previous form">&#8249;</a>
     <a class="btn-icon btn-sm" href="../{VARIANTS[next_i][0]}/index.html" aria-label="Next form">&#8250;</a>
     {TOGGLE}
@@ -339,14 +339,14 @@ def write_index():
         desc="Ten free Bootstrap 6 form templates — contact, sign-up, booking, multi-step, OTP verification, chips, range and floating labels. No build step.",
         p="")
     html += f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#forms">Skip to the forms</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#forms">Skip to the forms</a>
 
 <div class="pack-head">
   <div class="container">
-    <div class="d-flex flex-wrap align-items-start gap-3">
+    <div class="d-flex flex-wrap align-items-start gap-4">
       <div class="me-auto" style="max-width:44rem">
-        <span class="badge badge-subtle theme-primary mb-3">Bootstrap 6.0.0-alpha1</span>
-        <h1 class="fs-4xl fw-bold mb-3" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
+        <span class="badge badge-subtle theme-primary mb-4">Bootstrap 6.0.0-alpha1</span>
+        <h1 class="fs-4xl fw-bold mb-4" style="letter-spacing:-.03em">{PACK_TITLE}</h1>
         <p class="fs-lg fg-2 mb-0">
           Ten form layouts covering the shapes real projects need &#8212; contact,
           sign-up, booking, multi-step, verification and filtering. Between them they
@@ -364,8 +364,8 @@ def write_index():
 {chr(10).join(cards)}
     </div>
 
-    <section class="mt-9" style="max-width:46rem">
-      <h2 class="fs-2xl fw-bold mb-4" style="letter-spacing:-.02em">Using these</h2>
+    <section class="mt-12" style="max-width:46rem">
+      <h2 class="fs-2xl fw-bold mb-5" style="letter-spacing:-.02em">Using these</h2>
       <div class="prose">
         <p>Each form is a standalone page. Copy the markup out of the one you want and
         drop it into your project &#8212; the only requirements are Bootstrap 6&#8217;s CSS and, if
@@ -390,8 +390,8 @@ def write_index():
   </div>
 </main>
 
-<footer class="site-footer bg-2 py-6 mt-9">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+<footer class="site-footer bg-2 py-7 mt-12">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
     <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> {PACK_TITLE}. A free pack for uicookies.</p>
     <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
   </div>

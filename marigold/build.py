@@ -50,7 +50,7 @@ CARET = ('<svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16"
 def chrome(home=True):
     p = "" if home else "index.html"
     return f"""
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <nav class="navbar lg:navbar-expand" aria-label="Main">
@@ -62,8 +62,8 @@ def chrome(home=True):
           <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
         </div>
-        <div class="drawer-body mb-2 lg:mb-0">
-          <ul class="nav navbar-nav ms-auto lg:gap-4">
+        <div class="drawer-body mb-3 lg:mb-0">
+          <ul class="nav navbar-nav ms-auto lg:gap-5">
             <li class="nav-item"><a class="nav-link" href="{p}#story">Our story</a></li>
             <li class="nav-item"><a class="nav-link" href="{p}#day">The day</a></li>
             <li class="nav-item"><a class="nav-link" href="travel.html">Travel &amp; stay</a></li>
@@ -73,7 +73,7 @@ def chrome(home=True):
         </div>
       </dialog>
 
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         {TOGGLE}
         <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">
           <span class="navbar-toggler-icon" aria-hidden="true"></span>
@@ -86,10 +86,10 @@ def chrome(home=True):
 
 
 FOOTER = """
-<footer class="site-footer section pb-5 bg-2">
+<footer class="site-footer section pb-6 bg-2">
   <div class="container text-center">
-    <p class="display-serif fs-2xl mb-2">Rowan &amp; Jae</p>
-    <p class="fg-3 fs-sm mb-4">12 June 2027 &middot; Hebden Bridge</p>
+    <p class="display-serif fs-2xl mb-3">Rowan &amp; Jae</p>
+    <p class="fg-3 fs-sm mb-5">12 June 2027 &middot; Hebden Bridge</p>
     <p class="fs-xs fg-3 mb-0">A free Bootstrap 6 template — the wedding is fictional.</p>
   </div>
 </footer>
@@ -121,9 +121,9 @@ def page_index():
 <section class="vows">
   <img class="hero-bg" src="img/hero.jpg" alt="" width="1800" height="1200" loading="eager">
   <div class="vows-inner">
-    <p class="vows-rule mb-4">Saturday 12 June 2027</p>
-    <h1 class="names mb-4">Rowan<br>&amp; Jae</h1>
-    <p class="fs-lg mb-5" style="opacity:.9">Hardcastle Barn, Hebden Bridge</p>
+    <p class="vows-rule mb-5">Saturday 12 June 2027</p>
+    <h1 class="names mb-5">Rowan<br>&amp; Jae</h1>
+    <p class="fs-lg mb-6" style="opacity:.9">Hardcastle Barn, Hebden Bridge</p>
 
     <div class="days" role="timer" aria-live="off" data-countdown="{WEDDING}">
       <div><p class="days-value mb-0" id="cdD">--</p><p class="days-label mb-0">Days</p></div>
@@ -131,7 +131,7 @@ def page_index():
       <div><p class="days-value mb-0" id="cdM">--</p><p class="days-label mb-0">Minutes</p></div>
     </div>
 
-    <a class="btn-solid theme-primary btn-lg mt-5" href="#rsvp">RSVP</a>
+    <a class="btn-solid theme-primary btn-lg mt-6" href="#rsvp">RSVP</a>
   </div>
 </section>
 
@@ -140,19 +140,19 @@ def page_index():
   <!-- Story -->
   <section class="section" id="story">
     <div class="container">
-      <div class="row g-6 align-items-center">
+      <div class="row g-7 align-items-center">
         <div class="lg:col-6">
           <div class="ph ph-3x4"><img src="img/story.jpg" alt="Rowan and Jae" width="700" height="933" loading="lazy"></div>
         </div>
         <div class="lg:col-6">
-          <p class="eyebrow-rule mb-3">How we got here</p>
-          <h2 class="display-serif section-title fs-4xl mb-4">Eleven years, one very slow decision</h2>
-          <p class="fg-2 mb-4">
+          <p class="eyebrow-rule mb-4">How we got here</p>
+          <h2 class="display-serif section-title fs-4xl mb-5">Eleven years, one very slow decision</h2>
+          <p class="fg-2 mb-5">
             We met in 2016 queuing for a fire door at a gig neither of us
             especially wanted to be at. Jae was holding two coats. Rowan was
             holding a pint of something that had gone warm.
           </p>
-          <p class="fg-2 mb-4">
+          <p class="fg-2 mb-5">
             There was a flat in Sheffield, then a dog called Biscuit, then a
             slightly bigger flat because of the dog. Jae proposed on a walk above
             Hardcastle Crags in the rain, which is why we are getting married
@@ -170,10 +170,10 @@ def page_index():
   <!-- The day -->
   <section class="section bg-2" id="day">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-4">
-          <p class="eyebrow-rule mb-3">The day</p>
-          <h2 class="display-serif section-title fs-4xl mb-4">Saturday,<br>from one</h2>
+          <p class="eyebrow-rule mb-4">The day</p>
+          <h2 class="display-serif section-title fs-4xl mb-5">Saturday,<br>from one</h2>
           <p class="fg-2 mb-0">
             Hardcastle Barn, Midgehole Road, Hebden Bridge HX7 7AA. Parking on
             site, and the last bus back into town is at 23:40.
@@ -218,11 +218,11 @@ def page_index():
 
   <!-- Gallery -->
   <section class="section">
-    <div class="container mb-5">
-      <p class="eyebrow-rule mb-3">Us, mostly outdoors</p>
+    <div class="container mb-6">
+      <p class="eyebrow-rule mb-4">Us, mostly outdoors</p>
       <h2 class="display-serif section-title fs-4xl mb-0">A few photographs</h2>
     </div>
-    <div class="container-fluid px-4 lg:px-5">
+    <div class="container-fluid px-5 lg:px-6">
       <div class="mosaic">
         <div class="ph"><img src="img/gal-1.jpg" alt="Rowan and Jae on a hillside" width="900" height="900" loading="lazy"></div>
         <div class="ph"><img src="img/gal-2.jpg" alt="The barn" width="600" height="600" loading="lazy"></div>
@@ -236,11 +236,11 @@ def page_index():
   <!-- RSVP -->
   <section class="section bg-2" id="rsvp">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-4">
-          <p class="eyebrow-rule mb-3">RSVP</p>
-          <h2 class="display-serif section-title fs-4xl mb-4">Please reply<br>by 1 March</h2>
-          <p class="fg-2 mb-4">
+          <p class="eyebrow-rule mb-4">RSVP</p>
+          <h2 class="display-serif section-title fs-4xl mb-5">Please reply<br>by 1 March</h2>
+          <p class="fg-2 mb-5">
             Add everyone in your party — each person gets their own answer and
             their own meal, so nobody has to submit this twice.
           </p>
@@ -253,7 +253,7 @@ def page_index():
         <div class="lg:col-8">
           <div class="rsvp">
             <form id="rsvpForm" data-demo-form data-bs-validate novalidate>
-              <div class="row g-3 mb-4">
+              <div class="row g-4 mb-5">
                 <div class="md:col-6">
                   <div class="form-field">
                     <label class="form-label" for="rEmail">Your email</label>
@@ -269,7 +269,7 @@ def page_index():
                 </div>
               </div>
 
-              <p class="form-label mb-2">Your party</p>
+              <p class="form-label mb-3">Your party</p>
               <div id="guests"></div>
 
               <!-- Cloned per guest by main.js. Kept in the markup rather than
@@ -280,7 +280,7 @@ def page_index():
                     <span class="guest-no" data-guest-no>Guest 1</span>
                     <button class="btn-text btn-sm ms-auto p-0" type="button" data-remove hidden>Remove</button>
                   </div>
-                  <div class="row g-3">
+                  <div class="row g-4">
                     <div class="md:col-6">
                       <div class="form-field">
                         <label class="form-label" for="gName">Name</label>
@@ -289,8 +289,8 @@ def page_index():
                       </div>
                     </div>
                     <div class="md:col-6">
-                      <p class="form-label mb-2">Can you make it?</p>
-                      <div class="d-flex flex-wrap gap-2">
+                      <p class="form-label mb-3">Can you make it?</p>
+                      <div class="d-flex flex-wrap gap-3">
                         <label class="btn-check btn-outline theme-primary btn-sm"><input type="radio" data-name="guest_going" value="yes" checked> Joyfully</label>
                         <label class="btn-check btn-outline theme-secondary btn-sm"><input type="radio" data-name="guest_going" value="no"> Sadly not</label>
                       </div>
@@ -309,12 +309,12 @@ def page_index():
                 </div>
               </template>
 
-              <div class="d-flex flex-wrap gap-2 mb-4">
+              <div class="d-flex flex-wrap gap-3 mb-5">
                 <button class="btn-outline theme-secondary btn-sm" type="button" id="addGuest">+ Add another guest</button>
                 <span class="fs-sm fg-3 align-self-center" id="guestCount">1 guest</span>
               </div>
 
-              <div class="form-field mb-4">
+              <div class="form-field mb-5">
                 <label class="form-label" for="rSong">A song that will get you dancing</label>
                 <input type="text" class="form-control" id="rSong" placeholder="Optional, but we will play it">
               </div>
@@ -330,33 +330,33 @@ def page_index():
   <!-- Gifts -->
   <section class="section" id="gifts">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-4">
-          <p class="eyebrow-rule mb-3">Gifts</p>
+          <p class="eyebrow-rule mb-4">Gifts</p>
           <h2 class="display-serif section-title fs-4xl mb-0">Genuinely,<br>please don't</h2>
         </div>
         <div class="lg:col-8">
-          <p class="fg-2 mb-5">
+          <p class="fg-2 mb-6">
             We have lived together for nine years and own two of most things. If
             you would like to mark the day somehow, here are three ideas we would
             actually be pleased about.
           </p>
-          <div class="row g-4">
+          <div class="row g-5">
             <div class="md:col-4">
               <div class="gift-cell">
-                <p class="fw-semibold mb-2">Come to the wedding</p>
+                <p class="fw-semibold mb-3">Come to the wedding</p>
                 <p class="fg-2 fs-sm mb-0">Several of you are travelling a long way and staying over. That is the gift.</p>
               </div>
             </div>
             <div class="md:col-4">
               <div class="gift-cell">
-                <p class="fw-semibold mb-2">The honeymoon fund</p>
+                <p class="fw-semibold mb-3">The honeymoon fund</p>
                 <p class="fg-2 fs-sm mb-0">We are going to Portugal in September. Contributions go towards that, not towards a toaster.</p>
               </div>
             </div>
             <div class="md:col-4">
               <div class="gift-cell">
-                <p class="fw-semibold mb-2">Openhands, Leeds</p>
+                <p class="fw-semibold mb-3">Openhands, Leeds</p>
                 <p class="fg-2 fs-sm mb-0">Jae has volunteered there for six years. A donation there means more to us than anything wrapped.</p>
               </div>
             </div>
@@ -378,14 +378,14 @@ def page_travel():
     ) + chrome(home=False) + """
 <div class="sub-head">
   <div class="container">
-    <nav aria-label="Breadcrumb" class="mb-3">
+    <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html">Rowan &amp; Jae</a></li>
         <li class="breadcrumb-item active" aria-current="page">Travel &amp; stay</li>
       </ol>
     </nav>
-    <p class="eyebrow-rule mb-3">Hebden Bridge</p>
-    <h1 class="display-serif fs-5xl mb-3">Travel &amp; stay</h1>
+    <p class="eyebrow-rule mb-4">Hebden Bridge</p>
+    <h1 class="display-serif fs-5xl mb-4">Travel &amp; stay</h1>
     <p class="fs-lg fg-2 mb-0" style="max-width:38rem">
       The barn is up a single-track road with no pavement, so please do not plan
       to walk from town in the dark.
@@ -396,10 +396,10 @@ def page_travel():
 <main id="main">
   <section class="section">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-7">
           <div class="prose">
-            <h2 class="display-serif section-title fs-2xl mb-3">Getting there</h2>
+            <h2 class="display-serif section-title fs-2xl mb-4">Getting there</h2>
             <p class="fg-2">
               Hardcastle Barn, Midgehole Road, Hebden Bridge HX7 7AA. There is
               parking for about forty cars on the field beside the barn, which is
@@ -411,14 +411,14 @@ def page_travel():
             <div class="spec-row"><span class="fg-3 fs-sm">From Leeds</span><span class="fs-sm text-end">45 min by car, 45 min by train</span></div>
             <div class="spec-row"><span class="fg-3 fs-sm">Last bus to town</span><span class="fs-sm text-end">23:40 from the top of the lane</span></div>
 
-            <h2 class="display-serif section-title fs-2xl mb-3 mt-6">Taxis</h2>
+            <h2 class="display-serif section-title fs-2xl mb-4 mt-7">Taxis</h2>
             <p class="fg-2 mb-0">
               Book these in advance — on a Saturday night in June you will not get
               one on the day. Calder Cars 01422 000 111, Bridge Taxis 01422 000 222.
               Both know the barn.
             </p>
 
-            <h2 class="display-serif section-title fs-2xl mb-3 mt-6">Questions</h2>
+            <h2 class="display-serif section-title fs-2xl mb-4 mt-7">Questions</h2>
             <div class="accordion">
               <details class="accordion-item" name="wfaq" open>
                 <summary class="accordion-header">Can I bring my children?
@@ -450,8 +450,8 @@ def page_travel():
 
         <div class="lg:col-5">
           <div class="rsvp">
-            <h2 class="display-serif fs-2xl mb-4">Where to stay</h2>
-            <p class="fg-2 fs-sm mb-4">
+            <h2 class="display-serif fs-2xl mb-5">Where to stay</h2>
+            <p class="fg-2 fs-sm mb-5">
               We have held rooms at the first two until 1 April. Mention "Rowan
               and Jae" when you book.
             </p>
@@ -460,12 +460,12 @@ def page_travel():
             <div class="spec-row"><span><strong class="d-block fs-sm">The Hebden Townhouse</strong><span class="fg-3 fs-xs">Hebden Bridge, 8 min</span></span><span class="fs-sm">From &pound;130</span></div>
             <div class="spec-row"><span><strong class="d-block fs-sm">Camping at the barn</strong><span class="fg-3 fs-xs">On site, bring your own</span></span><span class="fs-sm">Free</span></div>
 
-            <p class="fs-xs fg-3 mt-4 mb-0">
+            <p class="fs-xs fg-3 mt-5 mb-0">
               June is peak season in the valley and things book up early. If you
               are coming a long way, sort this before Christmas.
             </p>
 
-            <a class="btn-solid theme-primary w-100 mt-4" href="index.html#rsvp">RSVP</a>
+            <a class="btn-solid theme-primary w-100 mt-5" href="index.html#rsvp">RSVP</a>
           </div>
         </div>
       </div>

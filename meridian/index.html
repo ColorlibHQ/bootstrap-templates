@@ -13,12 +13,12 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navScroll" data-bs-top-margin="110px" data-bs-smooth-scroll="true">
 
-<a class="visually-hidden-focusable btn-solid theme-primary m-2" href="#main">Skip to main content</a>
+<a class="visually-hidden-focusable btn-solid theme-primary m-3" href="#main">Skip to main content</a>
 
 <div class="info-bar">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
     <span><strong>Emergency:</strong> call 999 &middot; <strong>NHS 111</strong> for urgent advice</span>
-    <div class="d-flex flex-wrap gap-3">
+    <div class="d-flex flex-wrap gap-4">
       <a href="#contact">020 7000 0000</a>
       <button class="btn-text btn-sm p-0" type="button" data-bs-toggle="dialog" data-bs-target="#portalDialog" style="color:inherit">Patient portal</button>
     </div>
@@ -28,7 +28,7 @@
 <header class="site-header">
   <nav class="navbar lg:navbar-expand" aria-label="Main">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+      <a class="navbar-brand d-flex align-items-center gap-3 fw-semibold" href="index.html">
         <span class="brand-mark" aria-hidden="true">M</span> Meridian
       </a>
       <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
@@ -36,7 +36,7 @@
           <h5 class="drawer-title" id="navDrawerLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
         </div>
-        <div class="drawer-body mb-2 lg:mb-0">
+        <div class="drawer-body mb-3 lg:mb-0">
           <ul class="nav navbar-nav me-auto" id="navScroll">
             <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="#doctors">Our team</a></li>
@@ -46,7 +46,7 @@
           </ul>
         </div>
       </dialog>
-      <div class="d-flex align-items-center gap-2 ms-auto">
+      <div class="d-flex align-items-center gap-3 ms-auto">
         <button class="btn-icon" type="button" id="themeToggle" aria-label="Toggle color mode">
           <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.25"/><path d="M8 1v1.5M8 13.5V15M15 8h-1.5M2.5 8H1m11-4-1 1M5 11l-1 1m0-8 1 1m6 6 1 1"/></svg>
           <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
@@ -66,20 +66,20 @@
   <section class="hero has-hero-img">
   <img class="hero-bg" src="img/hero.jpg" alt="" width="1800" height="1000" loading="eager">
     <div class="container">
-      <div class="row align-items-start g-6">
+      <div class="row align-items-start g-7">
         <div class="lg:col-7">
-          <span class="badge badge-subtle theme-success mb-4">Accepting new patients</span>
-          <h1 class="hero-title fs-6xl fw-bold mb-4">Care that remembers you</h1>
-          <p class="hero-lede fs-lg fg-2 mb-6">
+          <span class="badge badge-subtle theme-success mb-5">Accepting new patients</span>
+          <h1 class="hero-title fs-6xl fw-bold mb-5">Care that remembers you</h1>
+          <p class="hero-lede fs-lg fg-2 mb-7">
             A GP-led clinic in central Bristol with same-week appointments,
             on-site diagnostics, and clinicians who read your notes before
             you sit down.
           </p>
-          <div class="d-flex flex-wrap gap-3 mb-6">
+          <div class="d-flex flex-wrap gap-4 mb-7">
             <a class="btn-solid theme-primary btn-lg" href="#booking">Book an appointment</a>
             <a class="btn-outline theme-secondary btn-lg" href="#services">See our services</a>
           </div>
-          <div class="row g-4">
+          <div class="row g-5">
             <div class="col-6 md:col-3"><p class="fs-2xl fw-bold mb-0 fg-primary">2.1</p><p class="fs-xs fg-3 mb-0">days average wait</p></div>
             <div class="col-6 md:col-3"><p class="fs-2xl fw-bold mb-0 fg-primary">14</p><p class="fs-xs fg-3 mb-0">clinicians on site</p></div>
             <div class="col-6 md:col-3"><p class="fs-2xl fw-bold mb-0 fg-primary">98%</p><p class="fs-xs fg-3 mb-0">would recommend</p></div>
@@ -90,10 +90,10 @@
         <div class="lg:col-5" id="booking">
           <div class="booking">
             <h2 class="fs-lg fw-semibold mb-1">Book an appointment</h2>
-            <p class="fg-2 fs-sm mb-4">Same-week slots for registered patients.</p>
+            <p class="fg-2 fs-sm mb-5">Same-week slots for registered patients.</p>
 
             <form id="bookForm" data-demo-form data-bs-validate novalidate>
-              <div class="mb-3">
+              <div class="mb-4">
                 <label class="form-label">Appointment type</label>
                 <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-search="true" data-bs-name="apptype" data-bs-placeholder="Select a service…">
                   <span class="combobox-value">Select a service…</span>
@@ -108,13 +108,13 @@
                 </div>
               </div>
 
-              <div class="form-field mb-3">
+              <div class="form-field mb-4">
                 <label class="form-label" for="bkDate">Preferred date</label>
                 <input type="text" class="form-control" id="bkDate" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose a date…" required>
                 <div class="invalid-feedback">Please pick a date.</div>
               </div>
 
-              <div class="mb-3">
+              <div class="mb-4">
                 <label class="form-label d-block">Available times</label>
                 <div class="slots">
                   <label class="btn-check btn-outline theme-primary btn-sm"><input type="radio" name="slot"> 09:20</label>
@@ -124,13 +124,13 @@
                 </div>
               </div>
 
-              <div class="form-field mb-3">
+              <div class="form-field mb-4">
                 <label class="form-label" for="bkName">Full name</label>
                 <input type="text" class="form-control" id="bkName" required>
                 <div class="invalid-feedback">Required.</div>
               </div>
 
-              <div class="form-field mb-4">
+              <div class="form-field mb-5">
                 <label class="form-label" for="bkPhone">Phone</label>
                 <div class="form-control form-adorn">
                   <div class="form-adorn-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 2.5h2.5l1 3-1.6 1.2a9 9 0 0 0 4.4 4.4l1.2-1.6 3 1V13a1.5 1.5 0 0 1-1.6 1.5A11.5 11.5 0 0 1 1.5 4.1 1.5 1.5 0 0 1 3 2.5" stroke-linejoin="round"/></svg></div>
@@ -138,13 +138,13 @@
                 </div>
               </div>
 
-              <div class="form-field mb-4">
+              <div class="form-field mb-5">
                 <input type="checkbox" class="check" id="bkConsent" required>
                 <label for="bkConsent">I consent to being contacted about this appointment</label>
               </div>
 
               <button class="btn-solid theme-primary w-100" type="submit" data-done-text="Requested ✓">Request appointment</button>
-              <p class="fs-xs fg-3 text-center mt-3 mb-0">Frontend-only demo — no data is sent anywhere.</p>
+              <p class="fs-xs fg-3 text-center mt-4 mb-0">Frontend-only demo — no data is sent anywhere.</p>
             </form>
           </div>
         </div>
@@ -155,51 +155,51 @@
   <!-- Services -->
   <section class="section bg-2" id="services">
     <div class="container">
-      <div class="section-narrow text-center mb-7">
-        <p class="eyebrow fs-sm fg-primary mb-2">Services</p>
-        <h2 class="fs-4xl fw-bold mb-3" style="letter-spacing:-.03em">What we treat</h2>
+      <div class="section-narrow text-center mb-9">
+        <p class="eyebrow fs-sm fg-primary mb-3">Services</p>
+        <h2 class="fs-4xl fw-bold mb-4" style="letter-spacing:-.03em">What we treat</h2>
         <p class="fs-lg fg-2 mb-0">General practice plus on-site diagnostics, so most things are resolved in one visit.</p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-5">
         <div class="md:col-6 lg:col-4">
           <article class="service surface surface-pad lift">
-            <span class="icon-tile mb-3"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke-linecap="round"/></svg></span>
+            <span class="icon-tile mb-4"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke-linecap="round"/></svg></span>
             <h3 class="service-title"><a href="service.html">General practice</a></h3>
             <p class="fg-2 fs-sm mb-0">Routine and urgent GP appointments, 15 minutes as standard rather than 8.</p>
           </article>
         </div>
         <div class="md:col-6 lg:col-4">
           <article class="service surface surface-pad lift">
-            <span class="icon-tile mb-3"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 9h3l1.5-4 2.5 7 1.5-3h3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="icon-tile mb-4"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 9h3l1.5-4 2.5 7 1.5-3h3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <h3 class="service-title"><a href="service.html">Cardiology</a></h3>
             <p class="fg-2 fs-sm mb-0">ECG, 24-hour monitoring and echocardiography, reported within 48 hours.</p>
           </article>
         </div>
         <div class="md:col-6 lg:col-4">
           <article class="service surface surface-pad lift">
-            <span class="icon-tile mb-3"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="2" width="10" height="12" rx="2"/><path d="M6 6h4M6 9h4" stroke-linecap="round"/></svg></span>
+            <span class="icon-tile mb-4"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="2" width="10" height="12" rx="2"/><path d="M6 6h4M6 9h4" stroke-linecap="round"/></svg></span>
             <h3 class="service-title"><a href="service.html">Diagnostics</a></h3>
             <p class="fg-2 fs-sm mb-0">Bloods, ultrasound and X-ray on site. Most results back the same day.</p>
           </article>
         </div>
         <div class="md:col-6 lg:col-4">
           <article class="service surface surface-pad lift">
-            <span class="icon-tile mb-3"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="5" r="2.5"/><path d="M3 13.5c0-2.2 2.2-3.5 5-3.5s5 1.3 5 3.5"/></svg></span>
+            <span class="icon-tile mb-4"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="5" r="2.5"/><path d="M3 13.5c0-2.2 2.2-3.5 5-3.5s5 1.3 5 3.5"/></svg></span>
             <h3 class="service-title"><a href="service.html">Women's health</a></h3>
             <p class="fg-2 fs-sm mb-0">Contraception, menopause care, cervical screening and fertility advice.</p>
           </article>
         </div>
         <div class="md:col-6 lg:col-4">
           <article class="service surface surface-pad lift">
-            <span class="icon-tile mb-3"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 14V7l3-4 3 4v7" stroke-linejoin="round"/><path d="M3 14h10" stroke-linecap="round"/></svg></span>
+            <span class="icon-tile mb-4"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 14V7l3-4 3 4v7" stroke-linejoin="round"/><path d="M3 14h10" stroke-linecap="round"/></svg></span>
             <h3 class="service-title"><a href="service.html">Physiotherapy</a></h3>
             <p class="fg-2 fs-sm mb-0">Musculoskeletal assessment and rehab, with a gym on the lower floor.</p>
           </article>
         </div>
         <div class="md:col-6 lg:col-4">
           <article class="service surface surface-pad lift">
-            <span class="icon-tile mb-3"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></span>
+            <span class="icon-tile mb-4"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13.5S2 10 2 6.2A2.7 2.7 0 0 1 8 4.6 2.7 2.7 0 0 1 14 6.2C14 10 8 13.5 8 13.5" stroke-linejoin="round"/></svg></span>
             <h3 class="service-title"><a href="service.html">Mental health</a></h3>
             <p class="fg-2 fs-sm mb-0">Talking therapies and psychiatry, with no waiting list for a first assessment.</p>
           </article>
@@ -211,33 +211,33 @@
   <!-- Doctors -->
   <section class="section" id="doctors">
     <div class="container">
-      <div class="section-narrow text-center mb-7">
-        <p class="eyebrow fs-sm fg-primary mb-2">Our team</p>
+      <div class="section-narrow text-center mb-9">
+        <p class="eyebrow fs-sm fg-primary mb-3">Our team</p>
         <h2 class="fs-4xl fw-bold mb-0" style="letter-spacing:-.03em">Clinicians, not a rota</h2>
       </div>
-      <div class="row g-4">
+      <div class="row g-5">
         <div class="sm:col-6 lg:col-3">
           <div class="doctor-photo"><div class="ph ph-1x1">Dr Okafor</div></div>
           <h3 class="fs-md fw-semibold mb-1">Dr Amara Okafor</h3>
-          <p class="fg-3 fs-sm mb-2">GP Partner · MBBS, MRCGP</p>
+          <p class="fg-3 fs-sm mb-3">GP Partner · MBBS, MRCGP</p>
           <div class="d-flex flex-wrap gap-1"><span class="chip">Diabetes</span><span class="chip">Women's health</span></div>
         </div>
         <div class="sm:col-6 lg:col-3">
           <div class="doctor-photo"><div class="ph ph-1x1">Dr Lindqvist</div></div>
           <h3 class="fs-md fw-semibold mb-1">Dr Erik Lindqvist</h3>
-          <p class="fg-3 fs-sm mb-2">Cardiologist · MD, FRCP</p>
+          <p class="fg-3 fs-sm mb-3">Cardiologist · MD, FRCP</p>
           <div class="d-flex flex-wrap gap-1"><span class="chip">Cardiology</span><span class="chip">Hypertension</span></div>
         </div>
         <div class="sm:col-6 lg:col-3">
           <div class="doctor-photo"><div class="ph ph-1x1">Dr Reyes</div></div>
           <h3 class="fs-md fw-semibold mb-1">Dr Camila Reyes</h3>
-          <p class="fg-3 fs-sm mb-2">GP · MBChB, DRCOG</p>
+          <p class="fg-3 fs-sm mb-3">GP · MBChB, DRCOG</p>
           <div class="d-flex flex-wrap gap-1"><span class="chip">Paediatrics</span><span class="chip">Dermatology</span></div>
         </div>
         <div class="sm:col-6 lg:col-3">
           <div class="doctor-photo"><div class="ph ph-1x1">Ms Whitmore</div></div>
           <h3 class="fs-md fw-semibold mb-1">Ms Joy Whitmore</h3>
-          <p class="fg-3 fs-sm mb-2">Lead Physiotherapist · MSc</p>
+          <p class="fg-3 fs-sm mb-3">Lead Physiotherapist · MSc</p>
           <div class="d-flex flex-wrap gap-1"><span class="chip">MSK</span><span class="chip">Sports injury</span></div>
         </div>
       </div>
@@ -245,9 +245,9 @@
   </section>
 
   <!-- Insurers -->
-  <section class="pb-9">
+  <section class="pb-12">
     <div class="container">
-      <p class="text-center fs-sm fg-3 eyebrow mb-5">We work with</p>
+      <p class="text-center fs-sm fg-3 eyebrow mb-6">We work with</p>
       <div class="insurers">
         <span class="insurer">Bupa</span><span class="insurer">AXA Health</span><span class="insurer">Vitality</span>
         <span class="insurer">Aviva</span><span class="insurer">WPA</span><span class="insurer">Self-pay</span>
@@ -258,10 +258,10 @@
   <!-- Patient info -->
   <section class="section bg-2" id="faq">
     <div class="container">
-      <div class="row g-6">
+      <div class="row g-7">
         <div class="lg:col-7">
-          <p class="eyebrow fs-sm fg-primary mb-2">Patient information</p>
-          <h2 class="fs-3xl fw-bold mb-5" style="letter-spacing:-.02em">Questions we get every week</h2>
+          <p class="eyebrow fs-sm fg-primary mb-3">Patient information</p>
+          <h2 class="fs-3xl fw-bold mb-6" style="letter-spacing:-.02em">Questions we get every week</h2>
           <div class="accordion">
             <details class="accordion-item" name="pfaq" open>
               <summary class="accordion-header">Do I need to be registered to book?
@@ -292,8 +292,8 @@
 
         <div class="lg:col-5" id="contact">
           <div class="surface surface-pad">
-            <h2 class="fs-lg fw-semibold mb-4">Opening hours</h2>
-            <div class="mb-4">
+            <h2 class="fs-lg fw-semibold mb-5">Opening hours</h2>
+            <div class="mb-5">
               <div class="hours-row is-today"><span>Monday</span><span>07:30 – 19:00</span></div>
               <div class="hours-row"><span>Tuesday</span><span>07:30 – 19:00</span></div>
               <div class="hours-row"><span>Wednesday</span><span>07:30 – 19:00</span></div>
@@ -302,13 +302,13 @@
               <div class="hours-row"><span>Saturday</span><span>09:00 – 13:00</span></div>
               <div class="hours-row"><span>Sunday</span><span class="fg-3">Closed</span></div>
             </div>
-            <hr class="mb-4">
-            <ul class="vstack gap-3 list-unstyled mb-4">
-              <li class="d-flex align-items-center gap-3">
+            <hr class="mb-5">
+            <ul class="vstack gap-4 list-unstyled mb-5">
+              <li class="d-flex align-items-center gap-4">
                 <span class="icon-tile"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="7" r="2.5"/><path d="M8 1.5c2.5 0 4.5 2 4.5 4.5 0 3.2-4.5 8.5-4.5 8.5S3.5 9.2 3.5 6c0-2.5 2-4.5 4.5-4.5" stroke-linejoin="round"/></svg></span>
                 <span><span class="d-block fs-xs fg-3">Clinic</span><span class="fw-semibold fs-sm">42 Meridian Street, Bristol BS1 5TR</span></span>
               </li>
-              <li class="d-flex align-items-center gap-3">
+              <li class="d-flex align-items-center gap-4">
                 <span class="icon-tile"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 2.5h2.5l1 3-1.6 1.2a9 9 0 0 0 4.4 4.4l1.2-1.6 3 1V13a1.5 1.5 0 0 1-1.6 1.5A11.5 11.5 0 0 1 1.5 4.1 1.5 1.5 0 0 1 3 2.5" stroke-linejoin="round"/></svg></span>
                 <span><span class="d-block fs-xs fg-3">Reception</span><span class="fw-semibold fs-sm">020 7000 0000</span></span>
               </li>
@@ -322,8 +322,8 @@
 
 </main>
 
-<footer class="site-footer bg-2 py-6">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+<footer class="site-footer bg-2 py-7">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
     <p class="fg-3 fs-xs mb-0">&copy; <span data-year>2026</span> Meridian Clinic. A free template for uicookies.</p>
     <p class="fg-3 fs-xs mb-0">Built with Bootstrap 6.0.0-alpha1</p>
   </div>
@@ -336,13 +336,13 @@
     <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
   </div>
   <div class="dialog-body">
-    <ul class="nav nav-tabs mb-4" role="tablist">
+    <ul class="nav nav-tabs mb-5" role="tablist">
       <li class="nav-item" role="presentation"><button class="nav-link active" id="si-tab" data-bs-toggle="tab" data-bs-target="#si" type="button" role="tab" aria-controls="si" aria-selected="true">Sign in</button></li>
       <li class="nav-item" role="presentation"><button class="nav-link" id="su-tab" data-bs-toggle="tab" data-bs-target="#su" type="button" role="tab" aria-controls="su" aria-selected="false">Register</button></li>
     </ul>
     <div class="tab-content">
       <div class="tab-pane fade show active" id="si" role="tabpanel" aria-labelledby="si-tab" tabindex="0">
-        <form class="vstack gap-3" id="portalSignin" data-demo-form data-bs-validate novalidate>
+        <form class="vstack gap-4" id="portalSignin" data-demo-form data-bs-validate novalidate>
           <div class="form-field">
             <label class="form-label" for="ptEmail">Email</label>
             <input type="email" class="form-control" id="ptEmail" required>
@@ -358,7 +358,7 @@
         </form>
       </div>
       <div class="tab-pane fade" id="su" role="tabpanel" aria-labelledby="su-tab" tabindex="0">
-        <form class="vstack gap-3" id="portalRegister" data-demo-form data-bs-validate novalidate>
+        <form class="vstack gap-4" id="portalRegister" data-demo-form data-bs-validate novalidate>
           <div class="form-field">
             <label class="form-label" for="rgName">Full name</label>
             <input type="text" class="form-control" id="rgName" required>
