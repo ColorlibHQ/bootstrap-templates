@@ -14,7 +14,7 @@ const initCountdown = () => {
   }
   if (!cells.d) return
 
-  const TARGET = new Date('2026-10-14T09:00:00Z').getTime()
+  const TARGET = new Date('2027-10-13T08:00:00Z').getTime()
   const pad = (n) => String(Math.max(0, n)).padStart(2, '0')
 
   const tick = () => {
