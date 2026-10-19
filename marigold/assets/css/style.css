@@ -53,6 +53,12 @@
 .site-header .wordmark,
 .site-header .btn-icon { color: var(--bs-white); }
 
+/* Below lg the links sit in the drawer on the page background, not on the
+   photograph, so white would vanish. */
+@media (max-width: 1023.98px) {
+  .site-header .drawer .nav-link { color: var(--bs-fg-body); }
+}
+
 .wordmark {
   font-family: ui-serif, Georgia, serif;
   font-size: 1.15rem;
