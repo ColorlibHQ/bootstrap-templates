@@ -11,7 +11,7 @@ drift apart.
 import pathlib
 
 ROOT = pathlib.Path(__file__).parent
-LAUNCH = "2026-10-01T09:00:00Z"
+LAUNCH = "2027-03-01T09:00:00Z"
 
 HEAD = """<!doctype html>
 <html lang="en" data-bs-theme="{theme}">
@@ -111,7 +111,7 @@ def page_index():
 
   <main class="screen-body">
     <div class="text-center" style="max-width:44rem">
-      <span class="badge badge-subtle theme-primary mb-4">Launching 1 October</span>
+      <span class="badge badge-subtle theme-primary mb-4">Launching 1 March</span>
       <h1 class="headline mb-4">Something worth the wait</h1>
       <p class="fs-lg mb-5 fg-2">
         We are rebuilding from the ground up. Same team, same prices, considerably
@@ -158,7 +158,7 @@ def page_split():
     </header>
 
     <main class="split-panel-body py-5">
-      <span class="badge badge-subtle theme-primary mb-4 align-self-start">Launching 1 October</span>
+      <span class="badge badge-subtle theme-primary mb-4 align-self-start">Launching 1 March</span>
       <h1 class="headline mb-4">Something worth the wait</h1>
       <p class="fs-lg fg-2 mb-5" style="max-width:32rem">
         We are rebuilding from the ground up. Same team, same prices, considerably
@@ -212,7 +212,7 @@ def page_minimal():
 
   <main class="screen-body">
     <div class="text-center" style="max-width:38rem">
-      <p class="fs-xs fg-3 mb-4" style="letter-spacing:.22em;text-transform:uppercase">Liftoff &middot; 1 October 2026</p>
+      <p class="fs-xs fg-3 mb-4" style="letter-spacing:.22em;text-transform:uppercase">Liftoff &middot; 1 March 2027</p>
       <h1 class="headline mb-4">Something worth the wait</h1>
       <p class="fs-lg fg-2 mb-5">
         No photography, no gradient, nothing to load. Sometimes a holding page

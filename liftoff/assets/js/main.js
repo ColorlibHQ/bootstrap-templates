@@ -34,11 +34,12 @@ const initCountdown = () => {
     cells.H.textContent = pad(Math.floor(s / 3600) % 24)
     cells.M.textContent = pad(Math.floor(s / 60) % 60)
     cells.S.textContent = pad(s % 60)
-    if (left === 0) clearInterval(timer)
+    return left > 0
   }
 
-  tick()
-  const timer = setInterval(tick, 1000)
+  // Only start ticking if the launch is still ahead: past dates render zeros once.
+  if (!tick()) return
+  const timer = setInterval(() => { if (!tick()) clearInterval(timer) }, 1000)
 }
 
 onReady(() => {
