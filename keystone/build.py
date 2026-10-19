@@ -117,6 +117,7 @@ HEAD = """<!doctype html>
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="stylesheet" href="assets/vendor/bootstrap6/css/bootstrap.min.css">
+<script type="importmap">{{"imports": {{"bootstrap": "./assets/vendor/bootstrap6/js/bootstrap.bundle.min.js"}}}}</script>
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>

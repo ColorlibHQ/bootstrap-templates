@@ -8,7 +8,7 @@
  * (data-bs-toggle="dialog", "drawer", "menu", …).
  */
 
-import { Tooltip, Popover, Toast } from '../vendor/bootstrap6/js/bootstrap.bundle.min.js'
+import { Tooltip, Popover, Toast } from 'bootstrap'
 
 /* ---------------------------------------------------------------
    Opt-in plugins

@@ -8,7 +8,7 @@
  * Tooltip, Popover and Toast stay opt-in and must be constructed.
  */
 
-import { Tooltip, Popover, Toast } from '../vendor/bootstrap6/js/bootstrap.bundle.min.js'
+import { Tooltip, Popover, Toast } from 'bootstrap'
 
 /* Color mode — v6 has no $enable-dark-mode Sass flag; dark is always compiled
    and switched at runtime with data-bs-theme on <html>. */

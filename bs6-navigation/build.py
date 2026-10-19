@@ -22,6 +22,7 @@ HEAD = """<!doctype html>
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="stylesheet" href="{p}assets/vendor/bootstrap6/css/bootstrap.min.css">
+<script type="importmap">{{"imports": {{"bootstrap": "./{p}assets/vendor/bootstrap6/js/bootstrap.bundle.min.js"}}}}</script>
 <link rel="stylesheet" href="{p}assets/css/base.css">
 <link rel="stylesheet" href="{p}assets/css/style.css">
 </head>
