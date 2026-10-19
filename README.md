@@ -1,21 +1,19 @@
 # Bootstrap Templates
 
-Free, self-contained website templates built on **Bootstrap 6 (6.0.0-alpha1)** —
+Free, self-contained website templates built on **Bootstrap 6 (6.0.0-alpha.1)**:
 28 full site templates and 6 component packs, all MIT licensed.
 
 Every template is a plain folder of HTML, CSS and ES modules. No build step, no
 bundler, no npm install to look at one. Open `index.html` and it works.
 
 > [!IMPORTANT]
-> **Bootstrap 6 has not been released.** `npm i bootstrap@6` does not work — the
-> v6 docs preview publishes that command ahead of the release, but npm `latest`
-> is still 5.3.8. The framework is vendored into each template from the `v6-dev`
-> branch at a pinned commit, so nothing here drifts when upstream moves. Treat
-> these as a head start on learning v6, not as a foundation for a production
-> site you need to maintain today.
+> **Bootstrap 6 is in alpha.** 6.0.0-alpha.1 shipped on 8 October 2026
+> (`npm i bootstrap@6.0.0-alpha.1`), and the Bootstrap team expects more
+> breaking changes before beta. Each template bundles the exact build it was
+> tested against, so nothing changes under you when upstream moves.
 >
-> Bootstrap 6 is built on `oklch()` and `color-mix()`, so these target evergreen
-> browsers only: **Safari 16.4+, Chrome 111+, Firefox 113+**.
+> Bootstrap 6 supports **Chrome and Edge 130+, Firefox 132+ and Safari 18+**,
+> with no polyfills for older browsers.
 
 ---
 
@@ -77,6 +75,28 @@ open index.html          # or: python3 -m http.server
 
 Each folder carries its own `assets/vendor/bootstrap6/`, so it is independent of
 this repo and of every other template. Delete the rest and nothing breaks.
+
+### Loading Bootstrap from a CDN or npm instead
+
+Every page loads Bootstrap in two lines in `<head>`: the stylesheet and an
+[import map](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap)
+that tells the scripts where `bootstrap` lives. The JavaScript only ever does
+`import … from 'bootstrap'`, so those two lines are the only place to change.
+
+**jsDelivr:** point both at the CDN and delete `assets/vendor/`:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css">
+<script type="importmap">{"imports": {"bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"}}</script>
+```
+
+**npm with a bundler (Vite etc.):** `npm i bootstrap@6.0.0-alpha.1`, import
+`bootstrap/dist/css/bootstrap.min.css` from your entry file, and remove the
+import map; the bundler resolves `import … from 'bootstrap'` itself.
+
+Pin an exact version either way. A floating tag such as `bootstrap@6` or
+`@next` will pick up the next alpha, and alphas break markup: alpha.1 changed
+how `nav-overflow` is written, for example.
 
 Some templates have a `build.py` that generates their pages from one source of
 truth — a menu, a curriculum, a pricing table — so the same figure can't end up
@@ -140,8 +160,8 @@ Bug reports and fixes are welcome. Before opening a PR:
 node _kit/verify.mjs <template>    # must pass
 ```
 
-Please keep templates self-contained — no shared runtime, no CDN links, no
-external JS dependencies beyond the vendored framework.
+Please keep templates self-contained: no shared runtime, no CDN links, no
+external JS dependencies beyond the bundled framework.
 
 ## Licence
 
