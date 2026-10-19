@@ -139,7 +139,8 @@ VARIANTS = [
      '<div class="row2"><i></i><i></i><i></i><i></i><i class="w40"></i></div><i class="tall"></i>',
      False, """<div class="demo-frame">
   <div class="p-3">
-    <ul class="nav nav-pills" data-bs-toggle="nav-overflow">
+    <div class="nav-overflow" data-bs-toggle="nav-overflow">
+    <ul class="nav nav-pills">
       <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Overview</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Roadmap</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Releases</a></li>
@@ -150,10 +151,11 @@ VARIANTS = [
       <li class="nav-item"><a class="nav-link" href="#">Billing</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
     </ul>
+    </div>
   </div>
   <div class="fake-page"><div class="fake-line" style="width:65%"></div><div class="fake-line" style="width:40%"></div></div>
 </div>
-<p class="demo-note">Narrow the window and watch items collapse into a &#8220;More&#8221; menu. Previously this needed a custom ResizeObserver and a lot of measuring; here it is one attribute.</p>"""),
+<p class="demo-note">Narrow the window and watch items collapse into a &#8220;More&#8221; menu. Previously this needed a custom ResizeObserver and a lot of measuring; here it is one wrapper and one attribute.</p>"""),
 
     ("04-tabs", "Tabs", "Tabs and pills",
      "Tab panels with fade transitions, plus the pill variant. Markup and the JS API are unchanged from v5.",
