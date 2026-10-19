@@ -122,6 +122,9 @@
 .slot small { display: block; font-weight: 400; color: var(--bs-fg-3); }
 
 .slot-full { opacity: 0.45; }
+.slot-dim { opacity: 0.18; }
+.slot { transition: opacity 0.2s ease; }
+@media (prefers-reduced-motion: reduce) { .slot { transition: none; } }
 
 /* --------------------------------------------------------------- Coaches */
 

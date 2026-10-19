@@ -124,7 +124,7 @@
         <div class="d-flex flex-wrap justify-content-between align-items-end gap-4 mb-6">
           <h2 class="fs-3xl fw-bold text-uppercase mb-0" style="letter-spacing:-.03em">Timetable</h2>
           <div style="min-width:14rem">
-            <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-name="class" data-bs-placeholder="All classes">
+            <button class="form-control combobox-toggle" type="button" id="timetableFilter" aria-controls="timetableGrid" data-bs-toggle="combobox" data-bs-name="class" data-bs-placeholder="All classes">
               <span class="combobox-value">All classes</span>
               <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
             </button>
@@ -138,7 +138,8 @@
         </div>
 
         <div class="table-responsive">
-          <table class="timetable">
+          <p class="visually-hidden" id="timetableStatus" aria-live="polite"></p>
+          <table class="timetable" id="timetableGrid">
             <caption class="visually-hidden">Weekly class timetable</caption>
             <thead>
               <tr><th scope="col">Time</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th><th scope="col">Sat</th></tr>
@@ -146,46 +147,46 @@
             <tbody>
               <tr>
                 <th scope="row" class="time">06:00</th>
-                <td><span class="slot">Barbell<small>3 left</small></span></td>
-                <td><span class="slot">Conditioning<small>7 left</small></span></td>
-                <td><span class="slot">Barbell<small>1 left</small></span></td>
-                <td><span class="slot">Conditioning<small>9 left</small></span></td>
-                <td><span class="slot">Barbell<small>5 left</small></span></td>
+                <td><span class="slot" data-class="barbell">Barbell<small>3 left</small></span></td>
+                <td><span class="slot" data-class="cond">Conditioning<small>7 left</small></span></td>
+                <td><span class="slot" data-class="barbell">Barbell<small>1 left</small></span></td>
+                <td><span class="slot" data-class="cond">Conditioning<small>9 left</small></span></td>
+                <td><span class="slot" data-class="barbell">Barbell<small>5 left</small></span></td>
                 <td class="fg-3">—</td>
               </tr>
               <tr>
                 <th scope="row" class="time">07:15</th>
-                <td><span class="slot slot-full">Conditioning<small>Full</small></span></td>
-                <td><span class="slot">Olympic<small>4 left</small></span></td>
-                <td><span class="slot slot-full">Conditioning<small>Full</small></span></td>
-                <td><span class="slot">Olympic<small>6 left</small></span></td>
-                <td><span class="slot">Conditioning<small>2 left</small></span></td>
-                <td><span class="slot">Barbell<small>8 left</small></span></td>
+                <td><span class="slot slot-full" data-class="cond">Conditioning<small>Full</small></span></td>
+                <td><span class="slot" data-class="oly">Olympic<small>4 left</small></span></td>
+                <td><span class="slot slot-full" data-class="cond">Conditioning<small>Full</small></span></td>
+                <td><span class="slot" data-class="oly">Olympic<small>6 left</small></span></td>
+                <td><span class="slot" data-class="cond">Conditioning<small>2 left</small></span></td>
+                <td><span class="slot" data-class="barbell">Barbell<small>8 left</small></span></td>
               </tr>
               <tr>
                 <th scope="row" class="time">12:30</th>
-                <td><span class="slot">Open gym</span></td>
-                <td><span class="slot">Open gym</span></td>
-                <td><span class="slot">Open gym</span></td>
-                <td><span class="slot">Open gym</span></td>
-                <td><span class="slot">Open gym</span></td>
-                <td><span class="slot">Open gym</span></td>
+                <td><span class="slot" data-class="open">Open gym</span></td>
+                <td><span class="slot" data-class="open">Open gym</span></td>
+                <td><span class="slot" data-class="open">Open gym</span></td>
+                <td><span class="slot" data-class="open">Open gym</span></td>
+                <td><span class="slot" data-class="open">Open gym</span></td>
+                <td><span class="slot" data-class="open">Open gym</span></td>
               </tr>
               <tr>
                 <th scope="row" class="time">17:30</th>
-                <td><span class="slot">Barbell<small>2 left</small></span></td>
-                <td><span class="slot slot-full">Conditioning<small>Full</small></span></td>
-                <td><span class="slot">Barbell<small>6 left</small></span></td>
-                <td><span class="slot slot-full">Olympic<small>Full</small></span></td>
-                <td><span class="slot">Conditioning<small>4 left</small></span></td>
+                <td><span class="slot" data-class="barbell">Barbell<small>2 left</small></span></td>
+                <td><span class="slot slot-full" data-class="cond">Conditioning<small>Full</small></span></td>
+                <td><span class="slot" data-class="barbell">Barbell<small>6 left</small></span></td>
+                <td><span class="slot slot-full" data-class="oly">Olympic<small>Full</small></span></td>
+                <td><span class="slot" data-class="cond">Conditioning<small>4 left</small></span></td>
                 <td class="fg-3">—</td>
               </tr>
               <tr>
                 <th scope="row" class="time">18:45</th>
-                <td><span class="slot">Conditioning<small>5 left</small></span></td>
-                <td><span class="slot">Barbell<small>3 left</small></span></td>
-                <td><span class="slot">Olympic<small>7 left</small></span></td>
-                <td><span class="slot">Barbell<small>1 left</small></span></td>
+                <td><span class="slot" data-class="cond">Conditioning<small>5 left</small></span></td>
+                <td><span class="slot" data-class="barbell">Barbell<small>3 left</small></span></td>
+                <td><span class="slot" data-class="oly">Olympic<small>7 left</small></span></td>
+                <td><span class="slot" data-class="barbell">Barbell<small>1 left</small></span></td>
                 <td class="fg-3">—</td>
                 <td class="fg-3">—</td>
               </tr>
