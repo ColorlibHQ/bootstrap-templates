@@ -25,9 +25,9 @@ frame-2.jpg
   https://commons.wikimedia.org/w/index.php?curid=10367035
 
 frame-3.jpg
-  <div class='fn'> [Studio Portrait of Plains Indian]</div>
+  Alone Girl, by Anthony Tran
   CC0 1.0
-  https://commons.wikimedia.org/w/index.php?curid=84617558
+  https://stocksnap.io/photo/alone-girl-KIMNXEYKOM
 
 frame-4.jpg
   (already present — see previous CREDITS.txt entry)
