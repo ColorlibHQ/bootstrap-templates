@@ -14,9 +14,12 @@ const initLightbox = () => {
 
   document.querySelectorAll('.frame').forEach((frame) => {
     frame.addEventListener('click', () => {
-      const label = frame.querySelector('.ph')?.textContent?.trim() ?? ''
-      img.textContent = label
-      cap.textContent = frame.dataset.cap ?? label
+      const photo = frame.querySelector('.ph img')
+      const label = frame.dataset.cap ?? photo?.alt ?? ''
+      // Clone the thumbnail's <img> so the dialog shows the same file, whatever
+      // its src is; fall back to the label for frames without a photo.
+      img.replaceChildren(photo ? photo.cloneNode() : document.createTextNode(label))
+      cap.textContent = label
     })
   })
 }

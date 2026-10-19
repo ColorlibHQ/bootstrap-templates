@@ -223,6 +223,10 @@
 #lightbox { max-width: min(92vw, 68rem); width: 100%; padding: 0; }
 #lightbox .dialog-body { padding: 0; }
 #lightbox .ph { aspect-ratio: 3 / 2; font-size: 1.25rem; }
+/* Absolutely placed so a tall or square photo can't stretch the 3:2 box past
+   the viewport; contain shows the whole frame, uncropped. */
+#lightbox .ph { max-height: 78vh; margin-inline: auto; background: var(--bs-black); }
+#lightbox .ph > img { position: absolute; inset: 0; object-fit: contain; }
 
 /* --------------------------------------------------------------- Pricing */
 
